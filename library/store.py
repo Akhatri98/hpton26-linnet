@@ -15,6 +15,7 @@ from pathlib import Path
 from typing import Protocol
 
 from .review import _get, _items
+from .review_queue import write_json
 
 
 class Store(Protocol):
@@ -39,6 +40,6 @@ class LocalJsonStore:
             if iid == item_id:
                 doc = json.loads(path.read_text(encoding="utf-8"))
                 _get(doc, ptr)["verified"] = bool(value)
-                path.write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+                write_json(path, doc)  # atomic
                 return {"id": iid, "verified": bool(value), "file": path.relative_to(self.root).as_posix()}
         raise KeyError(item_id)

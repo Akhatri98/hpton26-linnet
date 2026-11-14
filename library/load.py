@@ -73,6 +73,10 @@ def _read(path: Path, model):
         return model.model_validate(json.load(f))
 
 
+def _rejected(item) -> bool:
+    return bool(item.review) and item.review.get("decision") == "rejected"
+
+
 def load(root: Path) -> Library:
     root = Path(root)
     ingredients = {}
@@ -80,6 +84,8 @@ def load(root: Path) -> Library:
         f = _read(p, IngredientFile)
         if f.ingredient in ingredients:
             raise ValueError(f"two files for ingredient {f.ingredient}")
+        # A rule a reviewer rejected stays in the file (audit trail) but is never applied.
+        f = f.model_copy(update={"rules": [r for r in f.rules if not _rejected(r)]})
         ingredients[f.ingredient] = f
     products = {}
     for p in sorted((root / "products").glob("*.json")):
@@ -87,6 +93,9 @@ def load(root: Path) -> Library:
         products[f.name] = f
     groups_path = root / "groups.json"
     groups = _read(groups_path, GroupsFile) if groups_path.exists() else GroupsFile(groups={})
+    groups = groups.model_copy(update={"groups": {
+        name: g.model_copy(update={"members": [m for m in g.members if not _rejected(m)]})
+        for name, g in groups.groups.items()}})
     lib = Library(ingredients, products, groups)
     _cross_check(lib)
     return lib

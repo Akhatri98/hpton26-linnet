@@ -29,6 +29,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, ValidationError
 
 from library.load import load
+from library import review_queue as rq
 from library.store import LocalJsonStore
 
 from . import isolated
@@ -36,7 +37,6 @@ from .patient import Patient
 
 DATA = Path(os.environ.get("LINNET_DATA", "data"))
 WEB = Path(__file__).resolve().parent.parent / "web"
-TIMEOUT_MS = 10_000
 
 app = FastAPI(title="LINNET", docs_url="/api/docs", openapi_url="/api/openapi.json")
 store = LocalJsonStore(DATA)
@@ -108,6 +108,29 @@ def _extracted():
 @app.get("/api/library")
 def library():
     return {"items": store.items(), "extracted": _extracted()}
+
+
+@app.get("/api/review/queue")
+def review_queue():
+    return rq.queue(DATA)
+
+
+class Decision(BaseModel):
+    id: str
+    decision: str  # "approved" | "rejected"
+    by: str
+    role: str = ""
+
+
+@app.post("/api/review/decide")
+def review_decide(d: Decision):
+    # Written to disk (atomically) before this returns: stopping the server never loses a decision.
+    try:
+        return rq.decide(DATA, d.id, d.decision, d.by, d.role)
+    except KeyError:
+        raise HTTPException(404, [{"where": "id", "problem": f"no review item {d.id} (already decided?)"}])
+    except ValueError as e:
+        raise HTTPException(422, [{"where": "decision", "problem": str(e)}])
 
 
 class Verify(BaseModel):

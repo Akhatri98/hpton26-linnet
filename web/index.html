@@ -120,6 +120,11 @@ blockquote { margin: 6px 0; padding: 6px 10px; border-left: 3px solid var(--line
 .kv { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; }
 .spin { display: inline-block; width: 12px; height: 12px; border: 2px solid #fff8; border-top-color: #fff; border-radius: 50%; animation: s .7s linear infinite; vertical-align: -2px; }
 @keyframes s { to { transform: rotate(360deg); } }
+mark { background: var(--honey); color: var(--ink); padding: 0 3px; border-radius: 3px; font-weight: 700; }
+.rv-sentence { font-size: 14px; line-height: 1.6; }
+.rv-rule { font-size: 14px; font-weight: 700; color: var(--walnut); margin: 8px 0 4px; }
+.btn.danger { background: var(--persimmon); border-color: var(--persimmon); color: #fff; font-weight: 600; }
+.btn u { text-decoration-thickness: 2px; }
 </style>
 </head>
 <body>
@@ -424,18 +429,126 @@ function rulesApplied(r) {
 }
 
 /* ---------- library (metadata) ---------- */
-let LIB = null, LIBTAB = "signoff", ONLY_UNV = false;
+let LIB = null, LIBTAB = "review", ONLY_UNV = false, QUEUE = [], LAST = "";
 const PRIO = {1: "b-p1", 2: "b-p2"};
-async function loadLibrary() { LIB = await api("/api/library"); renderLibrary(); }
+async function loadLibrary() {
+  [LIB, QUEUE] = await Promise.all([api("/api/library"), api("/api/review/queue")]);
+  renderLibrary();
+}
+
+/* ---------- review: one card at a time; every decision is saved by the server before the next card ---------- */
+const store = {
+  get(k) { try { return localStorage.getItem(k) || ""; } catch (e) { return ""; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} },
+};
+const WORDS = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight", 9: "nine", 10: "ten", 11: "eleven", 12: "twelve"};
+const VALUE_KEYS = ["hours", "before", "after", "amount", "before_meal", "after_meal", "earliest", "latest", "within",
+  "dose", "dose_max", "every_hours", "times_per_day", "duration_days", "count"];
+
+function highlight(sentence, rec) {
+  const pats = new Set();
+  VALUE_KEYS.forEach(k => {
+    const v = Number(rec[k]); if (rec[k] == null || !isFinite(v) || v === 0) return;
+    pats.add(String(v)); pats.add(v.toLocaleString("en-US"));
+    if (WORDS[v]) pats.add(WORDS[v]);
+    if (k === "times_per_day" && v === 1) pats.add("once");
+    if (k === "times_per_day" && v === 2) pats.add("twice");
+    if (v < 3 && v * 60 === Math.round(v * 60)) { pats.add(String(v * 60) + " minutes"); }
+    if (v === 0.5) { pats.add("one-half"); pats.add("half"); }
+  });
+  let out = esc(sentence);
+  if (!pats.size) return out;
+  const alt = [...pats].sort((a, b) => b.length - a.length).map(p => p.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|");
+  return out.replace(new RegExp(`(?<![\\w.,])(${alt})(?![\\w]|[.,]\\d)`, "gi"), "<mark>$1</mark>");
+}
+
+function plain(c) {
+  const r = c.record, n = x => x == null ? "" : String(Number(x));
+  if (c.kind === "rule" || c.kind === "administration") {
+    if (r.family === "min_interval") return `doses at least ${n(r.hours)} h apart`;
+    if (r.family === "separation") {
+      const t = r.target === "*" ? "any other drug" : String(r.target).replace("group:", "group ");
+      return [r.before ? `${n(r.before)} h before` : "", r.after ? `${n(r.after)} h after` : ""].filter(Boolean).join(" / ") + ` ${t}`;
+    }
+    if (r.family === "daily_max") return `at most ${n(r.amount)} ${r.unit || ""} per day`;
+    if (r.family === "food") {
+      if (r.mode === "empty_stomach") return `empty stomach: ${n(r.before_meal)} h before / ${n(r.after_meal)} h after ${r.meal || "meals"}`;
+      if (r.mode === "before_meal_window") return `${n(r.earliest)} to ${n(r.latest)} h before ${r.meal || "a meal"}`;
+      return `with food`;
+    }
+    return r.family;
+  }
+  if (c.kind === "dosing") return `${n(r.dose)}${r.dose_max ? "-" + n(r.dose_max) : ""} ${r.unit || ""}` +
+    (r.every_hours ? ` every ${n(r.every_hours)} h` : r.times_per_day ? ` ${n(r.times_per_day)}x/day` : "") +
+    (r.duration_days ? ` for ${n(r.duration_days)} days` : "") + (r.as_needed ? " as needed" : "") +
+    ` - ${r.condition || "general"}, ${r.population || "general"}`;
+  if (c.kind === "limits") return `${String(r.kind).replace("_", " ")}: ${n(r.amount)} ${r.unit || ""} - ${r.population || "general"}`;
+  if (c.kind === "memberships") return `${r.ingredient} is in group ${r.group}`;
+  if (c.kind === "member") return `${c.id.split(":")[2]} is in group ${c.id.split(":")[1]}`;
+  if (c.kind === "max") return `as-needed maximum ${n(r.count)} doses per day`;
+  if (c.kind === "product") return `${r.display_name}: ` + Object.entries(r.ingredients).map(([k, v]) => `${k.replace(/_/g, " ")} ${v.amount} ${v.unit}`).join(" + ") +
+    (r.dose_note ? ` (dose: ${r.dose_note})` : "");
+  return c.id;
+}
+
+const KIND = {rule: "library rule", administration: "timing rule", dosing: "dosing", limits: "limit", memberships: "group member",
+  member: "group member", max: "as-needed max", product: "product"};
+
+function review() {
+  const who = store.get("linnet.reviewer"), role = store.get("linnet.role") || "pharmacist";
+  const top = `<div class="panel"><div class="body row-actions">
+      <label>Reviewer <input type="text" id="rv-by" size="22" value="${esc(who)}"></label>
+      <label>Role <select id="rv-role">${["pharmacist", "physician", "other"].map(x => `<option ${x === role ? "selected" : ""}>${x}</option>`).join("")}</select></label>
+      <span class="spacer"></span><b>${QUEUE.length}</b>&nbsp;left</div></div>`;
+  if (!QUEUE.length) return top + `<div class="panel"><div class="empty">Nothing left to review.</div></div>`;
+  const c = QUEUE[0], r = c.record;
+  const agree = c.origin === "library" ? `<span class="badge b-code">in library</span>`
+    : `<span class="badge ${c.agree === c.runs ? "b-ok" : c.agree <= 1 ? "b-p1" : "b-p2"}">${c.agree}/${c.runs} runs agree</span>`;
+  const prov = r.provenance ? (r.provenance === "quoted" ? '<span class="badge b-quoted">quoted</span>' : '<span class="badge b-interp">interpreted</span>') : "";
+  const sentence = c.sentence ? `<blockquote class="rv-sentence">${highlight(c.sentence, r)}</blockquote>` : "";
+  return top + `<div class="panel rv-card"><h2>${esc(KIND[c.kind] || c.kind)}${c.ingredient ? " &middot; " + esc(c.ingredient) : ""}
+      <span class="r">${agree} ${prov}</span></h2>
+    <div class="body">${sentence}
+      <div class="rv-rule">${esc(plain(c))}</div>
+      <div class="quote-meta">${esc(c.section || "")}${c.url ? " &middot; " + link(c.url, "DailyMed") : ""}</div>
+      <div class="row-actions" style="margin-top:10px">
+        <button class="btn primary" data-rv="approved"><u>A</u>pprove</button>
+        <button class="btn danger" data-rv="rejected"><u>R</u>eject</button>
+        <button class="btn" data-rv="skip"><u>S</u>kip</button>
+        <span class="small muted" id="rv-last">${esc(LAST)}</span></div></div></div>`;
+}
+
+async function decideCard(decision) {
+  if (!QUEUE.length || decideCard.busy) return;
+  const by = ($("#rv-by")?.value || "").trim(), role = $("#rv-role")?.value || "";
+  if (!by) { $("#rv-by").focus(); $("#rv-last").textContent = "enter your name first"; return; }
+  store.set("linnet.reviewer", by); store.set("linnet.role", role);
+  const c = QUEUE[0];
+  if (decision === "skip") { QUEUE.push(QUEUE.shift()); LAST = "skipped"; renderLibrary(); return; }
+  decideCard.busy = true;
+  try {
+    const out = await api("/api/review/decide", {body: JSON.stringify({id: c.id, decision, by, role})});
+    QUEUE.shift(); LAST = out.result;  // saved on disk before we move on
+  } catch (e) {
+    LAST = "NOT SAVED: " + (Array.isArray(e.detail) ? e.detail.map(x => x.problem).join("; ") : e.message);
+  } finally { decideCard.busy = false; renderLibrary(); }
+}
+document.addEventListener("keydown", e => {
+  if (LIBTAB !== "review" || !$("#v-library").classList.contains("on")) return;
+  if (e.target.closest("input, select, textarea") || e.ctrlKey || e.metaKey || e.altKey) return;
+  const k = e.key.toLowerCase();
+  if (k === "a") decideCard("approved"); else if (k === "r") decideCard("rejected"); else if (k === "s" || k === "arrowright") decideCard("skip");
+});
 
 function renderLibrary() {
   const ex = LIB.extracted, unv = LIB.items.filter(i => !i.verified).length;
-  const tabs = [["signoff", "Sign-off", `${unv} unverified`], ["unaccounted", "Review queue", ex.unaccounted.length],
+  const tabs = [["review", "Review", QUEUE.length], ["signoff", "Sign-off", `${unv} unverified`], ["unaccounted", "Unused sentences", ex.unaccounted.length],
     ["administration", "Timing rows", ex.administration.length], ["dosing", "Dosing", ex.dosing.length],
     ["limits", "Limits", ex.limits.length], ["memberships", "Group members", ex.memberships.length], ["rejected", "Rejected by checks", ex.rejected.length]];
   $("#libtabs").innerHTML = tabs.map(([k, t, n]) => `<button data-t="${k}" class="${k === LIBTAB ? "on" : ""}">${t}<span class="n">${n}</span></button>`).join("");
-  $("#libtabs").querySelectorAll("button").forEach(b => b.onclick = () => { LIBTAB = b.dataset.t; renderLibrary(); });
-  $("#libbody").innerHTML = ({signoff, unaccounted, administration, dosing, limits, memberships, rejected})[LIBTAB]();
+  $("#libtabs").querySelectorAll("button").forEach(b => b.onclick = () => { LIBTAB = b.dataset.t; loadLibrary(); });
+  $("#libbody").innerHTML = ({review, signoff, unaccounted, administration, dosing, limits, memberships, rejected})[LIBTAB]();
+  $("#libbody").querySelectorAll("button[data-rv]").forEach(b => b.onclick = () => decideCard(b.dataset.rv));
   $("#libbody").querySelectorAll("tr[data-toggle]").forEach(tr => tr.onclick = e => { if (e.target.closest("button,a,input")) return; const d = tr.nextElementSibling; d.hidden = !d.hidden; });
   $("#libbody").querySelectorAll("button[data-verify]").forEach(b => b.onclick = async () => {
     b.disabled = true;

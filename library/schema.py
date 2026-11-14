@@ -49,6 +49,7 @@ class _RuleBase(Strict):
     loosest: Optional[dict[str, Number]] = None  # param -> loosest defensible value
     note: str = ""  # reviewer remarks; JSON has no comments
     verified: bool = False  # set true only after a human checked it against the label
+    review: Optional[dict] = None  # who signed it off, their role, when (library/review_queue.py)
 
     @model_validator(mode="after")
     def _loosest_matches_provenance(self):
@@ -171,6 +172,7 @@ class MaxDoses(Strict):
     source: Source
     note: str = ""
     verified: bool = False
+    review: Optional[dict] = None
 
 
 class ProductFile(Strict):
@@ -184,6 +186,7 @@ class ProductFile(Strict):
     dose_note: str = ""  # what one dose is, e.g. "2 caplets", and where that comes from
     note: str = ""
     verified: bool = False
+    review: Optional[dict] = None
 
     @field_validator("ingredients")
     @classmethod
@@ -199,6 +202,7 @@ class Membership(Strict):
     basis: str = Field(min_length=10)  # the label wording that puts it in the set
     source_spl: str = ""
     verified: bool = False
+    review: Optional[dict] = None
     matched: str = ""  # set when the label names only the element (see library/moieties.py)
 
 
