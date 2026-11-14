@@ -1,0 +1,34 @@
+{
+ "name": "random regimen 63",
+ "constructed": true,
+ "items": [
+  {
+   "product": "ciprofloxacin-500mg",
+   "prescribed_count": 2,
+   "every_hours": 12
+  },
+  {
+   "product": "tums-es-750",
+   "reported_count": 2
+  },
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  },
+  {
+   "product": "acetaminophen-500-otc",
+   "reported_count": 3
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "09:45",
+   "lunch": "13:15",
+   "dinner": "19:00"
+  },
+  "sleep": {
+   "start": "01:00",
+   "end": "08:30"
+  }
+ }
+}

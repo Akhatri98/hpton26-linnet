@@ -1,0 +1,29 @@
+{
+ "name": "random regimen 49",
+ "constructed": true,
+ "items": [
+  {
+   "product": "colestipol-1g-tab",
+   "prescribed_count": 1
+  },
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  },
+  {
+   "product": "apap-codeine-300-30",
+   "prescribed_count": 3
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "07:15",
+   "lunch": "12:00",
+   "dinner": "17:45"
+  },
+  "sleep": {
+   "start": "22:45",
+   "end": "06:15"
+  }
+ }
+}
