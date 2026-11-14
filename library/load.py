@@ -105,9 +105,9 @@ def load(root: Path) -> Library:
 def _cross_check(lib: Library) -> None:
     for ing in lib.ingredients.values():
         for r in ing.rules:
-            if isinstance(r, SeparationRule) and r.target.startswith("group:"):
-                if r.target.removeprefix("group:") not in lib.groups.groups:
-                    raise ValueError(f"{r.id}: unknown group {r.target}")
+            if (isinstance(r, SeparationRule) and r.target.startswith("group:")
+                    and r.target.removeprefix("group:") not in lib.groups.groups):
+                raise ValueError(f"{r.id}: unknown group {r.target}")
 
 
 # --- resolution ------------------------------------------------------------------

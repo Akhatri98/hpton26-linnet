@@ -103,8 +103,10 @@ def main(argv=None) -> int:
             print(f"   memberships  found {r['members_found']}  missed {r['members_missed']}  extra {r['members_extra']}")
         for k, t in (("exact", "exact"), ("partial", "partial"), ("missed", "missed"), ("extra", "extra")):
             tot[t] += len(r[k])
-        tot["pa"] += r["provenance_agree"]; tot["pt"] += r["provenance_total"]
-        tot["rej"] += r["rejected_by_checks"]; tot["gu"] += r["gold_unverified"]
+        tot["pa"] += r["provenance_agree"]
+        tot["pt"] += r["provenance_total"]
+        tot["rej"] += r["rejected_by_checks"]
+        tot["gu"] += r["gold_unverified"]
     gold_n = tot["exact"] + tot["partial"] + tot["missed"]
     print(f"\nTOTAL  exact {tot['exact']}/{gold_n} gold rules, partial {tot['partial']}, missed {tot['missed']}, "
           f"extra {tot['extra']}, provenance {tot['pa']}/{tot['pt']}, rejected by checks {tot['rej']}")

@@ -1,0 +1,13 @@
+# Lint: .venv/Scripts/python -m ruff check .
+line-length = 130
+target-version = "py312"
+extend-exclude = ["data", "documents"]
+
+[lint]
+select = ["E", "F", "W", "B", "UP035"]
+
+[lint.per-file-ignores]
+# The extraction prompt is text the model reads; re-wrapping it would change what is extracted.
+"library/extract.py" = ["E501"]
+# Label sentences quoted verbatim in tests.
+"tests/*" = ["E501"]

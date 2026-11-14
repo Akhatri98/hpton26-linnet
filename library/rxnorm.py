@@ -23,7 +23,8 @@ import urllib.parse
 import urllib.request
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
-from typing import Callable, Optional
+from typing import Optional
+from collections.abc import Callable
 
 BASE = "https://rxnav.nlm.nih.gov/REST"
 CACHE = Path("data/cache/rxnorm")

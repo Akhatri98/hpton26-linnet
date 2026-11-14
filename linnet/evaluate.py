@@ -40,7 +40,6 @@ from solver.model import DAY
 from solver.verify import violations
 
 from .baseline import STEP, run_greedy
-from .conflicts import is_count
 from .patient import Patient, fmt_hhmm
 from .tiers import run
 
@@ -136,7 +135,8 @@ def awake_slots(bed: Fraction, wake: Fraction) -> list[Fraction]:
 def evaluate(n: int, seed: int, bf_max: int, data: Path, routines: list | None = None) -> dict:
     lib = load(data)
     rng = random.Random(seed)
-    out = {"n": n, "seed": seed, "routines": "NHANES 2017-18 (real)" if routines else "random", "grid_minutes": 15, "tiers": {}, "times_ms": [],
+    out = {"n": n, "seed": seed, "routines": "NHANES 2017-18 (real)" if routines else "random", "grid_minutes": 15,
+           "tiers": {}, "times_ms": [],
            "greedy": {"ok": 0, "gave_up": 0, "false_alarms": 0, "greedy_ok_linnet_not_tier0": 0},
            "grid": {"checked": 0, "agree": 0, "off_grid_only": 0, "too_large": 0, "BUGS": []},
            "conflicts": {"checked": 0, "minimal": 0, "not_minimal": []},
@@ -238,7 +238,8 @@ def summary(r: dict) -> str:
         "",
         f"Conflict minimality: {c['minimal']} of {c['checked']} conflicts minimal (every rule needed)",
         "",
-        f"Speed per full check: median {r['speed_ms']['median']} ms, p95 {r['speed_ms']['p95']} ms, max {r['speed_ms']['max']} ms",
+        f"Speed per full check: median {r['speed_ms']['median']} ms, p95 {r['speed_ms']['p95']} ms, "
+        f"max {r['speed_ms']['max']} ms",
         f"Checks where a solve hit its time limit: {len(r['unfinished'])}"
         + (f"  {r['unfinished']}" if r["unfinished"] else ""),
     ]
@@ -257,7 +258,8 @@ def main(argv=None) -> int:
     routines = json.loads((a.data / "nhanes" / "routines.json").read_text(encoding="utf-8")) if a.nhanes_routines else None
     r = evaluate(a.n, a.seed, a.bf_max_doses, a.data, routines)
     (a.data / "eval").mkdir(parents=True, exist_ok=True)
-    (a.data / "eval" / ("solver-nhanes.json" if routines else "solver.json")).write_text(json.dumps(r, indent=1) + "\n", encoding="utf-8")
+    out = a.data / "eval" / ("solver-nhanes.json" if routines else "solver.json")
+    out.write_text(json.dumps(r, indent=1) + "\n", encoding="utf-8")
     print(summary(r))
     return 0
 

@@ -175,7 +175,7 @@ def _rules_applied(report: Report, lib: Library) -> list[str]:
         out += _wrap(f"{_name(lib, prod)}: {text}", 3, "- ")
         out.append("       [prescription]")
     seen = set()
-    for sid, (rid, ing, res) in report.built.origin.items():
+    for sid, (rid, _ing, res) in report.built.origin.items():
         if rid in seen:
             continue
         seen.add(rid)

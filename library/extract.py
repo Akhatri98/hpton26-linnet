@@ -345,7 +345,7 @@ def write_record(ingredient: str, spl: str, sents: list[Sentence], results: dict
     from .passes import uncited
     text_to_sid = {s.text: s.sid for s in sents}
     cited = set()
-    for name, c in results.items():
+    for c in results.values():
         for r in c.rules:
             cited.add(r["source"].get("sentence_id") or text_to_sid.get(r["source"]["sentence"], ""))
         for m in c.memberships:

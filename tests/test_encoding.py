@@ -51,14 +51,16 @@ def test_verifier_rejects_the_naive_midnight_schedule():
 
 def test_separation_wraps_midnight():
     """A at 23:00 and B at 01:00 are 2 h apart, not 22."""
-    window = lambda end: Regimen(
-        products=(Product("A", 1, True), Product("B", 1, True)),
-        rules=(
-            Separation("a-b", "A", "B", before=4, after=4),
-            Window("a-late", "A", ((23, 23),)),
-            Window("b-early", "B", ((0, end),)),
-        ),
-    )
+    def window(end):
+        return Regimen(
+            products=(Product("A", 1, True), Product("B", 1, True)),
+            rules=(
+                Separation("a-b", "A", "B", before=4, after=4),
+                Window("a-late", "A", ((23, 23),)),
+                Window("b-early", "B", ((0, end),)),
+            ),
+        )
+
     assert solve(window(2)).status == "unsat"
     assert violations(window(2), {"A": [F(23)], "B": [F(1)]}) != []
     # 03:00 is exactly 4 h after 23:00 across midnight: allowed, and the only option.
@@ -165,7 +167,7 @@ def test_ingredient_interval_spans_products():
     r2 = solve(roomy)
     assert_valid(roomy, r2)
     all_ing = sorted(r2.schedule["Single"] + r2.schedule["Combo"])
-    assert all(b - a >= 4 for a, b in zip(all_ing, all_ing[1:]))
+    assert all(b - a >= 4 for a, b in zip(all_ing, all_ing[1:], strict=False))
 
 
 # --- Optimize (tier 1 will build on this) ----------------------------------------

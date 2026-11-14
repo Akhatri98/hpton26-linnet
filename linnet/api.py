@@ -10,12 +10,14 @@ Privacy by construction:
 
 Endpoints:
   GET  /api/products              library products, for the intake picker
-  GET  /api/patients              demo (constructed) patients
+  GET  /api/patients              saved patients (demo and NHANES), for the switcher
   GET  /api/patients/tiers        tier of each saved patient (cached), for the switcher's dots
   GET  /api/patients/{name}
   POST /api/check                 patient JSON -> tier report (+ greedy comparison)
   GET  /api/library               sign-off items + extracted rows (metadata view)
   POST /api/library/verify        {"id": ..., "verified": true|false}
+  GET  /api/review/queue          cards to review, one at a time (+ any peer opinion)
+  POST /api/review/decide         approve / reject / flag one card; saved at once
 """
 
 from __future__ import annotations
@@ -108,7 +110,7 @@ def check(body: dict, compare: bool = True):
     try:
         p = Patient.model_validate(body)
     except ValidationError as e:
-        raise HTTPException(422, [{"where": ".".join(map(str, x["loc"])), "problem": x["msg"]} for x in e.errors()])
+        raise HTTPException(422, [{"where": ".".join(map(str, x["loc"])), "problem": x["msg"]} for x in e.errors()]) from e
     lib = _lib()
     unknown = [it.product for it in p.items if it.product not in lib.products]
     if unknown:
@@ -117,7 +119,7 @@ def check(body: dict, compare: bool = True):
         # Fresh worker process per check: identical results every run, and a hard time limit.
         return isolated.check(p.model_dump(mode="json"), DATA, compare)
     except isolated.CheckTimeout as e:
-        raise HTTPException(504, [{"where": "solver", "problem": str(e)}])
+        raise HTTPException(504, [{"where": "solver", "problem": str(e)}]) from e
 
 
 def _extracted():
@@ -157,10 +159,10 @@ def review_decide(d: Decision):
     # Written to disk (atomically) before this returns: stopping the server never loses a decision.
     try:
         return rq.decide(DATA, d.id, d.decision, d.by, d.role, d.note)
-    except KeyError:
-        raise HTTPException(404, [{"where": "id", "problem": f"no review item {d.id} (already decided?)"}])
+    except KeyError as e:
+        raise HTTPException(404, [{"where": "id", "problem": f"no review item {d.id} (already decided?)"}]) from e
     except ValueError as e:
-        raise HTTPException(422, [{"where": "decision", "problem": str(e)}])
+        raise HTTPException(422, [{"where": "decision", "problem": str(e)}]) from e
 
 
 class Verify(BaseModel):
@@ -172,8 +174,8 @@ class Verify(BaseModel):
 def verify(v: Verify):
     try:
         return store.set_verified(v.id, v.verified)
-    except KeyError:
-        raise HTTPException(404, f"no library item {v.id}")
+    except KeyError as e:
+        raise HTTPException(404, f"no library item {v.id}") from e
 
 
 if WEB.is_dir():

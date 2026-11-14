@@ -2,9 +2,10 @@
 
 Why: Z3 keeps global state across solves in one process. After hundreds of
 solves the same regimen can run far slower, hit per-solve timeouts, and so
-return fewer tier-1 options than it does from a clean start (measured: 0.6 s
-fresh vs 52 s late in a 500-regimen sweep). A fresh process per check makes
-results identical run to run, and lets a stuck check be killed outright.
+return fewer tier-1 options than it does from a clean start (measured with the
+C++ core: 0.04 s fresh vs over 40 s late in a 500-regimen sweep). A fresh process
+per check makes results identical run to run, and lets a stuck check be killed
+outright.
 """
 
 from __future__ import annotations
@@ -57,7 +58,7 @@ def check(patient: dict, data: Path, compare: bool = True, limit_s: float = LIMI
             proc.kill()
         _pool.shutdown(wait=False, cancel_futures=True)
         _pool = None
-        raise CheckTimeout(f"the check did not finish within {limit_s:g} s")
+        raise CheckTimeout(f"the check did not finish within {limit_s:g} s") from None
 
 
 def _outcome(patient: dict, data: str) -> str:

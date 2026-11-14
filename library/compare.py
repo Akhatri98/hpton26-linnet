@@ -25,7 +25,6 @@ from __future__ import annotations
 
 import json
 import sys
-from fractions import Fraction
 from itertools import combinations
 from pathlib import Path
 
@@ -188,7 +187,8 @@ def main(argv=None) -> int:
     results = {name: score_set(path) for name, path in sets.items()}
 
     print("EXTRACTION EVALUATION  (7 labels; gold = curated library rules citing the same label)\n")
-    hdr = f"{'answer set':38} {'exact':>6} {'part':>5} {'miss':>5} {'extra':>6} {'prov':>6} {'rej/prop':>9} {'net':>5} {'memb f/m/x':>11} {'dose':>5} {'lim':>4}"
+    hdr = (f"{'answer set':38} {'exact':>6} {'part':>5} {'miss':>5} {'extra':>6} {'prov':>6} {'rej/prop':>9} "
+           f"{'net':>5} {'memb f/m/x':>11} {'dose':>5} {'lim':>4}")
     print(hdr)
     print("-" * len(hdr))
     for name, r in results.items():
@@ -219,8 +219,9 @@ def main(argv=None) -> int:
         print(f"\nRepeatability (Haiku runs, {len(haiku)} sets): identical timing-rule set for a label in "
               f"{same}/{total} pairwise comparisons ({100 * same / max(1, total):.0f}%)")
 
-    out = {n: {k: v for k, v in r.items() if k != "labels"} | {"labels": {i: {k: v for k, v in l.items() if k != "signature"}
-           for i, l in r["labels"].items()}} for n, r in results.items()}
+    out = {n: {k: v for k, v in r.items() if k != "labels"}
+           | {"labels": {i: {k: v for k, v in lab.items() if k != "signature"} for i, lab in r["labels"].items()}}
+           for n, r in results.items()}
     (DATA / "eval").mkdir(parents=True, exist_ok=True)
     (DATA / "eval" / "extraction.json").write_text(json.dumps(out, indent=1, default=str) + "\n", encoding="utf-8")
     print("\nwrote data/eval/extraction.json")

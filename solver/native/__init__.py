@@ -13,7 +13,8 @@ import os
 import sys
 from ctypes import POINTER, byref, c_char_p, c_int, c_uint, c_void_p
 from fractions import Fraction
-from typing import Iterable, Optional
+from typing import Optional
+from collections.abc import Iterable
 
 STATUS = ("sat", "unsat", "unknown")
 

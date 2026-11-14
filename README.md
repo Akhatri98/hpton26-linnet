@@ -168,6 +168,11 @@ py -m venv .venv
 .venv/Scripts/python -m uvicorn linnet.api:app --port 8000      # UI at http://localhost:8000
 .venv/Scripts/python -m linnet data/patients/tier2-nimodipine-colestipol.json --compare-baseline   # CLI
 .venv/Scripts/python -m pytest                                   # tests
+.venv/Scripts/python -m ruff check .                             # lint (pip install -r requirements-dev.txt)
+.venv/Scripts/python -m linnet.evaluate [--nhanes-routines]      # solver evaluation (about 20 min each)
+.venv/Scripts/python -m library.compare                          # extraction scoring
+.venv/Scripts/python -m library.review_queue flagged             # cards flagged in review
+.venv/Scripts/python -m linnet.nhanes                            # rebuild NHANES patients (raw files: see linnet/nhanes.py)
 ```
 
 The solver core is C++ (`solver/native/linnet_solver.cpp`). It is compiled on first use and needs a C++17 compiler: `g++` or `clang++` on PATH (MSYS2 on Windows), or set `CXX`. To build it by hand: `.venv/Scripts/python -m solver.native.build`. Z3's headers and library come from the `z3-solver` wheel.
@@ -183,9 +188,9 @@ Extraction (optional, needs `ANTHROPIC_API_KEY` in `.env`):
 | Path | What |
 |---|---|
 | `solver/` | Z3 encoding in C++ (`native/`), its Python binding, independent verifier |
-| `library/` | label schema and loading, extraction, checks, review queue, sign-off store, evaluation |
-| `linnet/` | patient input, tiers, conflicts, greedy baseline, API, solver evaluation |
+| `library/` | label schema and loading, extraction, checks, review queue, peer review, sign-off store, extraction scoring |
+| `linnet/` | patient input, tiers, conflicts, greedy baseline, API, solver evaluation, NHANES patient builder |
 | `web/` | the single-page UI |
-| `data/` | labels, curated rules, products, groups, demo patients, extracted drafts, evaluation output |
+| `data/` | labels, curated rules, products, groups, demo and NHANES patients, extracted drafts, review decisions, evaluation output |
 
 MIT licensed.

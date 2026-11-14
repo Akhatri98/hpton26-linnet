@@ -22,7 +22,8 @@ from fractions import Fraction
 from typing import Optional
 
 from library.load import Built, Library, build_regimen
-from solver.encode import DAY, FREE, build, check
+from solver.encode import FREE, build, check
+from solver.model import DAY
 from solver.verify import violations
 
 from .conflicts import Conflict, find_conflicts

@@ -62,8 +62,9 @@ def _items(root: Path):
         for g, body in doc["groups"].items():
             for i, m in enumerate(body["members"]):
                 yield (f"member:{g}:{m['ingredient']}", gpath, ("groups", g, "members", i),
-                       m.get("verified", False), [f"[{m['provenance']}] basis: \"{m['basis']}\"",
-                                                  f"label: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid={m.get('source_spl', '?')}"])
+                       m.get("verified", False),
+                       [f"[{m['provenance']}] basis: \"{m['basis']}\"",
+                        f"label: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid={m.get('source_spl', '?')}"])
 
 
 def _get(doc, ptr):

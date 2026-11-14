@@ -67,7 +67,8 @@ def _strength_key(s) -> tuple:
 
 
 def _ing_key(s) -> str:
-    words = [w for w in re.split(r"[\s_]+", str(s or "").lower()) if w and w not in ("hydrochloride", "sodium", "phosphate", "usp")]
+    skip = ("hydrochloride", "sodium", "phosphate", "usp")
+    words = [w for w in re.split(r"[\s_]+", str(s or "").lower()) if w and w not in skip]
     return " ".join(words)
 
 
@@ -162,6 +163,13 @@ def _uncovered(strengths: list[str], dosing: list[dict]) -> list[str]:
     return [s for s in strengths if _strength_key(s) not in named]
 
 
+def _set_row(ing: str, kind: str, r: dict, counts: dict) -> dict:
+    """One dosing or limit row on a doseset card, with its sentence and how many runs agree."""
+    src = r.get("source") or {}
+    return {**{k: v for k, v in r.items() if k != "source"}, "sentence_id": src.get("sentence_id", ""),
+            "sentence": src.get("sentence", ""), "agree": counts.get((ing, kind, signature(kind, r)), 0)}
+
+
 def queue(root: Path) -> list[dict]:
     root = Path(root)
     cards = []
@@ -191,15 +199,12 @@ def queue(root: Path) -> list[dict]:
                               "agree": counts.get((ing, kind, signature(kind, r)), 0), "runs": runs, "model": d["model"]})
         open_rows = [r for kind in ("dosing", "limits") for r in d.get(kind, []) if not r.get("review")]
         if open_rows:
-            def row(kind, r):
-                src = r.get("source") or {}
-                return {**{k: v for k, v in r.items() if k not in ("source",)}, "sentence_id": src.get("sentence_id", ""),
-                        "sentence": src.get("sentence", ""), "agree": counts.get((ing, kind, signature(kind, r)), 0)}
-            dosing = [row("dosing", r) for r in d.get("dosing", [])]
-            limits = [row("limits", r) for r in d.get("limits", [])]
+            dosing = [_set_row(ing, "dosing", r, counts) for r in d.get("dosing", [])]
+            limits = [_set_row(ing, "limits", r, counts) for r in d.get("limits", [])]
             cards.append({"id": _set_id(ing, d), "origin": "extracted", "kind": "doseset", "ingredient": ing,
                           "record": {}, "strengths": d.get("strengths", []), "substances": d.get("substances", []),
-                          "dosing": dosing, "limits": limits, "uncovered": _uncovered(d.get("strengths", []), d.get("dosing", [])),
+                          "dosing": dosing, "limits": limits,
+                          "uncovered": _uncovered(d.get("strengths", []), d.get("dosing", [])),
                           "sentence": "", "section": "", "url": d.get("label_url", ""),
                           "agree": min([x["agree"] for x in dosing + limits] or [0]), "runs": runs, "model": d["model"]})
     order = {"administration": 0, "memberships": 1, "doseset": 2}

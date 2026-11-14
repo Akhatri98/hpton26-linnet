@@ -15,10 +15,10 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from fractions import Fraction
-from typing import Iterable, Optional, Union
+from typing import Optional, Union
+from collections.abc import Iterable
 
 from .model import (
-    DAY,
     Hours,
     IngredientCeiling,
     IngredientInterval,

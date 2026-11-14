@@ -2,7 +2,6 @@
 and expansion of ingredient groups to products. All data here is invented."""
 
 import json
-from fractions import Fraction as F
 
 import pytest
 from pydantic import ValidationError
