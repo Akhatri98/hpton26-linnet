@@ -33,7 +33,14 @@
         "section": "dosage and administration",
         "sentence": "In general, the capsules should be swallowed whole with a little liquid, preferably not less than one hour before or two hours after meals."
       },
-      "note": "'preferably' makes this soft; loosest reading is no constraint. DRAFT (Claude, 14 Nov): not yet checked against the label by a human."
+      "note": "'preferably' makes this soft; loosest reading is no constraint. DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+      "verified": true,
+      "review": {
+        "decision": "approved",
+        "by": "ak",
+        "role": "pharmacist",
+        "at": "2026-11-14T15:47:44-05:00"
+      }
     }
   ]
 }
