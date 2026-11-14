@@ -1,0 +1,30 @@
+{
+  "groups": {
+    "levothyroxine_binders": {
+      "members": [
+        {
+          "ingredient": "calcium_carbonate",
+          "provenance": "quoted",
+          "source_spl": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
+          "basis": "Phosphate Binders (e.g., calcium carbonate, ferrous sulfate, sevelamer, lanthanum)"
+        },
+        {
+          "ingredient": "colestipol",
+          "provenance": "quoted",
+          "source_spl": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
+          "basis": "Bile Acid Sequestrants (e.g., colesevelam, cholestyramine, colestipol)"
+        }
+      ]
+    },
+    "polyvalent_cations": {
+      "members": [
+        {
+          "ingredient": "calcium_carbonate",
+          "provenance": "quoted",
+          "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
+          "basis": "or other products containing calcium, iron or zinc."
+        }
+      ]
+    }
+  }
+}

@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from fractions import Fraction
-from typing import Union
+from typing import Optional, Union
 
 Hours = Union[int, Fraction]
 
@@ -90,7 +90,32 @@ class Window:
     spans: tuple[tuple[Hours, Hours], ...]
 
 
-Rule = Union[MinInterval, IngredientInterval, Separation, IngredientCeiling, Window]
+@dataclass(frozen=True)
+class MealGap:
+    """Family 2: no dose of `product` from `before` h before to `after` h after
+    a meal. Applies to every meal, or only `meal` if named. Meal times are not
+    part of the regimen: they are supplied at solve time (fixed or variable)."""
+
+    id: str
+    product: str
+    before: Hours
+    after: Hours
+    meal: Optional[str] = None
+
+
+@dataclass(frozen=True)
+class MealWindow:
+    """Family 2: each dose of `product` falls between `earliest` and `latest`
+    hours before the named `meal` ("one-half to one hour before breakfast")."""
+
+    id: str
+    product: str
+    meal: str
+    earliest: Hours
+    latest: Hours
+
+
+Rule = Union[MinInterval, IngredientInterval, Separation, IngredientCeiling, Window, MealGap, MealWindow]
 
 
 @dataclass(frozen=True)

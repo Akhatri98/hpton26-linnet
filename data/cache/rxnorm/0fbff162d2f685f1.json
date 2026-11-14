@@ -1,0 +1,1 @@
+{"_url": "https://rxnav.nlm.nih.gov/REST/rxcui/198037/related.json?tty=IN+PIN", "relatedGroup": {"rxcui": null, "conceptGroup": [{"tty": "IN", "conceptProperties": [{"rxcui": "7426", "name": "nimodipine", "synonym": "", "tty": "IN", "language": "ENG", "suppress": "N", "umlscui": ""}]}, {"tty": "PIN"}]}}

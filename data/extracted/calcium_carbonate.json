@@ -1,0 +1,104 @@
+{
+  "ingredient": "calcium_carbonate",
+  "spl_set_id": "036ef1ed-32ef-46b8-8817-b3f63a014280",
+  "model": "claude-haiku (subagent, files backend)",
+  "label_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ef1ed-32ef-46b8-8817-b3f63a014280",
+  "dosing": [],
+  "limits": [
+    {
+      "kind": "per_day",
+      "amount": 6,
+      "unit": "tablets",
+      "population": "general",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "036ef1ed-32ef-46b8-8817-b3f63a014280",
+        "section": "warnings",
+        "sentence_id": "S4",
+        "sentence": "When using this product • do not take more than 6 tablets in 24 hours • if pregnant do not take more than 6 tablets in 24 hours • do not use the maximum dosage for more than 2 weeks, except under the advice and supervision of a doctor Keep out of reach of children.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ef1ed-32ef-46b8-8817-b3f63a014280"
+      },
+      "verified": false
+    },
+    {
+      "kind": "per_day",
+      "amount": 6,
+      "unit": "tablets",
+      "population": "pregnant",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "036ef1ed-32ef-46b8-8817-b3f63a014280",
+        "section": "warnings",
+        "sentence_id": "S4",
+        "sentence": "When using this product • do not take more than 6 tablets in 24 hours • if pregnant do not take more than 6 tablets in 24 hours • do not use the maximum dosage for more than 2 weeks, except under the advice and supervision of a doctor Keep out of reach of children.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ef1ed-32ef-46b8-8817-b3f63a014280"
+      },
+      "verified": false
+    }
+  ],
+  "administration": [],
+  "memberships": [],
+  "rejected": [
+    {
+      "pass": "limits",
+      "item": {
+        "kind": "duration_days",
+        "amount": 14,
+        "unit": "days",
+        "population": "general",
+        "sentence": "S4",
+        "provenance": "interpreted"
+      },
+      "reason": "number not stated in S4: amount=14"
+    },
+    {
+      "pass": "limits",
+      "item": {
+        "kind": "duration_days",
+        "amount": 14,
+        "unit": "days",
+        "population": "general",
+        "sentence": "S2",
+        "provenance": "interpreted"
+      },
+      "reason": "number not stated in S2: amount=14"
+    }
+  ],
+  "unaccounted_for": [
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S2",
+      "section": "dosage and administration",
+      "sentence": "• do not take for symptoms that persist for more than 2 weeks unless advised by a doctor"
+    }
+  ],
+  "sentences": [
+    {
+      "sentence_id": "S1",
+      "section": "dosage and administration",
+      "text": "Chew or crush tablets completely before swallowing."
+    },
+    {
+      "sentence_id": "S2",
+      "section": "dosage and administration",
+      "text": "• do not take for symptoms that persist for more than 2 weeks unless advised by a doctor"
+    },
+    {
+      "sentence_id": "S3",
+      "section": "warnings",
+      "text": "Warnings Ask a doctor or pharmacist before use if you are presently taking a prescription drug."
+    },
+    {
+      "sentence_id": "S4",
+      "section": "warnings",
+      "text": "When using this product • do not take more than 6 tablets in 24 hours • if pregnant do not take more than 6 tablets in 24 hours • do not use the maximum dosage for more than 2 weeks, except under the advice and supervision of a doctor Keep out of reach of children."
+    }
+  ],
+  "passes_run": [
+    "administration",
+    "dosing",
+    "limits"
+  ]
+}

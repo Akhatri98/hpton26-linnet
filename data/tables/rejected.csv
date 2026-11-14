@@ -1,0 +1,4 @@
+ingredient,pass,reason,model_output,model
+calcium_carbonate,limits,number not stated in S4: amount=14,"{""kind"": ""duration_days"", ""amount"": 14, ""unit"": ""days"", ""population"": ""general"", ""sentence"": ""S4"", ""provenance"": ""interpreted""}","claude-haiku (subagent, files backend)"
+calcium_carbonate,limits,number not stated in S2: amount=14,"{""kind"": ""duration_days"", ""amount"": 14, ""unit"": ""days"", ""population"": ""general"", ""sentence"": ""S2"", ""provenance"": ""interpreted""}","claude-haiku (subagent, files backend)"
+levothyroxine,administration,number(s) not stated in S5: hours=24,"{""id"": ""levothyroxine-once-daily"", ""family"": ""min_interval"", ""hours"": 24, ""sentence"": ""S5"", ""provenance"": ""interpreted"", ""loosest"": {""hours"": 24}, ""note"": ""derived from single daily dose""}","claude-haiku (subagent, files backend)"

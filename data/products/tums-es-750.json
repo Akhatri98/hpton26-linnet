@@ -1,0 +1,25 @@
+{
+  "name": "tums-es-750",
+  "display_name": "Tums Chewy Bites ES (calcium carbonate 750 mg)",
+  "spl_set_id": "036ef1ed-32ef-46b8-8817-b3f63a014280",
+  "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ef1ed-32ef-46b8-8817-b3f63a014280",
+  "ingredients": {
+    "calcium_carbonate": {
+      "amount": 1500,
+      "unit": "mg"
+    }
+  },
+  "dose_note": "One dose = 2 tablets, the low end of 'chew 2-4 tablets as symptoms occur' (interpreted).",
+  "otc_max_doses": {
+    "count": 3,
+    "provenance": "interpreted",
+    "source": {
+      "spl_set_id": "036ef1ed-32ef-46b8-8817-b3f63a014280",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ef1ed-32ef-46b8-8817-b3f63a014280",
+      "section": "warnings",
+      "sentence": "do not take more than 6 tablets in 24 hours"
+    },
+    "note": "6 tablets / 2 tablets per dose = 3 doses (interpreted). DRAFT (Claude, 14 Nov): not yet checked against the label by a human."
+  },
+  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human."
+}

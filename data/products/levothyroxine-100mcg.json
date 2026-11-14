@@ -1,0 +1,14 @@
+{
+  "name": "levothyroxine-100mcg",
+  "display_name": "Levothyroxine sodium 100 mcg tablets",
+  "spl_set_id": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
+  "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7",
+  "ingredients": {
+    "levothyroxine": {
+      "amount": 100,
+      "unit": "mcg"
+    }
+  },
+  "dose_note": "One tablet once daily (strength chosen for the demo patient).",
+  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human."
+}

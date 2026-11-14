@@ -1,0 +1,18 @@
+{
+  "name": "apap-codeine-300-30",
+  "display_name": "Acetaminophen 300 mg / codeine 30 mg tablets (Rx)",
+  "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
+  "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795",
+  "ingredients": {
+    "acetaminophen": {
+      "amount": 300,
+      "unit": "mg"
+    },
+    "codeine_phosphate": {
+      "amount": 30,
+      "unit": "mg"
+    }
+  },
+  "dose_note": "One tablet per dose (label: 'Take 1 to 2 tablet every 4 hours').",
+  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human."
+}

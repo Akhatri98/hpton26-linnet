@@ -1,0 +1,31 @@
+{
+  "name": "Levothyroxine + ciprofloxacin, plus Tums nobody knew about",
+  "constructed": true,
+  "note": "Constructed. Reports chewing Tums three times a day; the solver fits all three in the evening (tier 0).",
+  "items": [
+    {
+      "product": "levothyroxine-100mcg",
+      "prescribed_count": 1
+    },
+    {
+      "product": "ciprofloxacin-500mg",
+      "prescribed_count": 2,
+      "every_hours": 12
+    },
+    {
+      "product": "tums-es-750",
+      "reported_count": 3
+    }
+  ],
+  "routine": {
+    "meals": {
+      "breakfast": "07:30",
+      "lunch": "12:30",
+      "dinner": "18:30"
+    },
+    "sleep": {
+      "start": "23:00",
+      "end": "07:00"
+    }
+  }
+}

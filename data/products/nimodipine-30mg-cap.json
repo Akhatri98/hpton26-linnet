@@ -1,0 +1,18 @@
+{
+  "name": "nimodipine-30mg-cap",
+  "display_name": "Nimodipine 30 mg capsules (Avet)",
+  "spl_set_id": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
+  "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
+  "ndc": [
+    "23155-512-30",
+    "23155-512-00"
+  ],
+  "ingredients": {
+    "nimodipine": {
+      "amount": 60,
+      "unit": "mg"
+    }
+  },
+  "dose_note": "One dose = two 30 mg capsules (label: '60 mg (two 30 mg capsules)').",
+  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human."
+}

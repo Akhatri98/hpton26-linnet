@@ -1,0 +1,7 @@
+{
+  "rules": [
+    {"id": "nimodipine-every-4-hours", "family": "min_interval", "hours": 4, "sentence": "S1", "provenance": "quoted"},
+    {"id": "nimodipine-food-timing", "family": "food", "mode": "empty_stomach", "before_meal": 1, "after_meal": 2, "meal": null, "sentence": "S2", "provenance": "interpreted", "loosest": {"before_meal": 0, "after_meal": 0}, "note": "Label says 'preferably', so the meal gap is soft"}
+  ],
+  "memberships": []
+}

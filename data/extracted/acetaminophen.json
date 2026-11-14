@@ -1,0 +1,166 @@
+{
+  "ingredient": "acetaminophen",
+  "spl_set_id": "00146b91-008d-4b16-95b0-6077f98821be",
+  "model": "claude-haiku (subagent, files backend)",
+  "label_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be",
+  "dosing": [
+    {
+      "condition": "general",
+      "population": "adults and children 12 years and over",
+      "dose": 2,
+      "dose_max": null,
+      "unit": "caplets",
+      "every_hours": 6,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "00146b91-008d-4b16-95b0-6077f98821be",
+        "section": "dosage and administration",
+        "sentence_id": "S1",
+        "sentence": "Directions • do not take more than directed (see overdose warning) adults and children 12 years and over • take 2 caplets every 6 hours while symptoms last • do not take more than 6 caplets in 24 hours, unless directed by a doctor • do not use for more than 10 days unless directed by a doctor children under 12 years ask a doctor",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be"
+      },
+      "verified": false
+    }
+  ],
+  "limits": [
+    {
+      "kind": "per_day",
+      "amount": 6,
+      "unit": "caplets",
+      "population": "adults and children 12 years and over",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "00146b91-008d-4b16-95b0-6077f98821be",
+        "section": "dosage and administration",
+        "sentence_id": "S1",
+        "sentence": "Directions • do not take more than directed (see overdose warning) adults and children 12 years and over • take 2 caplets every 6 hours while symptoms last • do not take more than 6 caplets in 24 hours, unless directed by a doctor • do not use for more than 10 days unless directed by a doctor children under 12 years ask a doctor",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be"
+      },
+      "verified": false
+    },
+    {
+      "kind": "duration_days",
+      "amount": 10,
+      "unit": "days",
+      "population": "adults and children 12 years and over",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "00146b91-008d-4b16-95b0-6077f98821be",
+        "section": "dosage and administration",
+        "sentence_id": "S1",
+        "sentence": "Directions • do not take more than directed (see overdose warning) adults and children 12 years and over • take 2 caplets every 6 hours while symptoms last • do not take more than 6 caplets in 24 hours, unless directed by a doctor • do not use for more than 10 days unless directed by a doctor children under 12 years ask a doctor",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be"
+      },
+      "verified": false
+    },
+    {
+      "kind": "per_day",
+      "amount": 4000,
+      "unit": "mg",
+      "population": "general",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "00146b91-008d-4b16-95b0-6077f98821be",
+        "section": "warnings",
+        "sentence_id": "S2",
+        "sentence": "Severe liver damage may occur if you take • more than 4,000 mg of acetaminophen in 24 hours • with other drugs containing acetaminophen • 3 or more alcoholic drinks every day while using this product Allergy alert: Acetaminophen may cause severe skin reactions.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be"
+      },
+      "verified": false
+    },
+    {
+      "kind": "duration_days",
+      "amount": 10,
+      "unit": "days",
+      "population": "general",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "00146b91-008d-4b16-95b0-6077f98821be",
+        "section": "warnings",
+        "sentence_id": "S3",
+        "sentence": "• if you have ever had an allergic reaction to this product or any of its ingredients Ask a doctor before use if you have liver disease Ask a doctor or pharmacist before use if you are taking the blood thinning drug warfarin Stop use and ask a doctor if • pain gets worse or lasts more than 10 days • fever gets worse or lasts more than 3 days • new symptoms occur • redness or swelling is present These could be signs of a serious condition.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be"
+      },
+      "verified": false
+    },
+    {
+      "kind": "duration_days",
+      "amount": 3,
+      "unit": "days",
+      "population": "general",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "00146b91-008d-4b16-95b0-6077f98821be",
+        "section": "warnings",
+        "sentence_id": "S3",
+        "sentence": "• if you have ever had an allergic reaction to this product or any of its ingredients Ask a doctor before use if you have liver disease Ask a doctor or pharmacist before use if you are taking the blood thinning drug warfarin Stop use and ask a doctor if • pain gets worse or lasts more than 10 days • fever gets worse or lasts more than 3 days • new symptoms occur • redness or swelling is present These could be signs of a serious condition.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be"
+      },
+      "verified": false
+    }
+  ],
+  "administration": [
+    {
+      "id": "acetaminophen-interval-6h",
+      "family": "min_interval",
+      "hours": 6,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "00146b91-008d-4b16-95b0-6077f98821be",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be",
+        "section": "dosage and administration",
+        "sentence": "Directions • do not take more than directed (see overdose warning) adults and children 12 years and over • take 2 caplets every 6 hours while symptoms last • do not take more than 6 caplets in 24 hours, unless directed by a doctor • do not use for more than 10 days unless directed by a doctor children under 12 years ask a doctor"
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    },
+    {
+      "id": "acetaminophen-daily-max-4000mg",
+      "family": "daily_max",
+      "amount": 4000,
+      "unit": "mg",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "00146b91-008d-4b16-95b0-6077f98821be",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be",
+        "section": "warnings",
+        "sentence": "Severe liver damage may occur if you take • more than 4,000 mg of acetaminophen in 24 hours • with other drugs containing acetaminophen • 3 or more alcoholic drinks every day while using this product Allergy alert: Acetaminophen may cause severe skin reactions."
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    }
+  ],
+  "memberships": [],
+  "rejected": [],
+  "unaccounted_for": [],
+  "sentences": [
+    {
+      "sentence_id": "S1",
+      "section": "dosage and administration",
+      "text": "Directions • do not take more than directed (see overdose warning) adults and children 12 years and over • take 2 caplets every 6 hours while symptoms last • do not take more than 6 caplets in 24 hours, unless directed by a doctor • do not use for more than 10 days unless directed by a doctor children under 12 years ask a doctor"
+    },
+    {
+      "sentence_id": "S2",
+      "section": "warnings",
+      "text": "Severe liver damage may occur if you take • more than 4,000 mg of acetaminophen in 24 hours • with other drugs containing acetaminophen • 3 or more alcoholic drinks every day while using this product Allergy alert: Acetaminophen may cause severe skin reactions."
+    },
+    {
+      "sentence_id": "S3",
+      "section": "warnings",
+      "text": "• if you have ever had an allergic reaction to this product or any of its ingredients Ask a doctor before use if you have liver disease Ask a doctor or pharmacist before use if you are taking the blood thinning drug warfarin Stop use and ask a doctor if • pain gets worse or lasts more than 10 days • fever gets worse or lasts more than 3 days • new symptoms occur • redness or swelling is present These could be signs of a serious condition."
+    },
+    {
+      "sentence_id": "S4",
+      "section": "warnings",
+      "text": "If pregnant or breast-feeding, ask a health professional before use."
+    }
+  ],
+  "passes_run": [
+    "administration",
+    "dosing",
+    "limits"
+  ]
+}

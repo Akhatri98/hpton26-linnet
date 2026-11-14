@@ -8,7 +8,8 @@ Resolution policy (agreed 13 Nov):
         mode "strict" (tiers 0/1): take the strictest value across sources
         mode "loose"  (tier 2):    take the loosest value across sources,
                                    including each interpreted rule's `loosest`
-  - Separation targets are expanded through groups to concrete products.
+  - Separation targets are expanded through groups to concrete products;
+    target "*" means every other product in the regimen.
 """
 
 from __future__ import annotations
@@ -19,8 +20,18 @@ from fractions import Fraction
 from pathlib import Path
 from typing import Literal, Optional
 
-from solver.model import IngredientCeiling, IngredientInterval, Product, Regimen, Separation
+from solver.model import (
+    IngredientCeiling,
+    IngredientInterval,
+    MealGap,
+    MealWindow,
+    MinInterval,
+    Product,
+    Regimen,
+    Separation,
+)
 
+from .moieties import element_of, is_element
 from .schema import (
     DailyMaxRule,
     FoodRule,
@@ -41,7 +52,15 @@ class Library:
     groups: GroupsFile
 
     def group_members(self, name: str) -> set[str]:
-        return {m.ingredient for m in self.groups.groups[name].members}
+        """Ingredient names in a group. An element member ("calcium") covers every
+        ingredient in the library that is a salt of it (calcium_carbonate, ...)."""
+        out = set()
+        known = set(self.ingredients) | {i for p in self.products.values() for i in p.ingredients}
+        for m in self.groups.groups[name].members:
+            out.add(m.ingredient)
+            if is_element(m.ingredient):
+                out |= {i for i in known if element_of(i) == m.ingredient}
+        return out
 
     def target_ingredients(self, target: str) -> set[str]:
         if target.startswith("group:"):
@@ -93,10 +112,17 @@ class Resolved:
     values: dict[str, Fraction]
     used_fallback: bool
     disagreement: Optional[dict[str, dict[str, Fraction]]] = None  # spl -> params
+    all_rules: list = field(default_factory=list)
+
+    @property
+    def verified(self) -> bool:
+        return all(r.verified for r in self.all_rules)
 
 
 def _key(ingredient: str, r) -> tuple[str, str, str]:
     target = getattr(r, "target", "") or getattr(r, "mode", "")
+    if isinstance(r, FoodRule) and r.meal:
+        target = f"{target}:{r.meal}"
     return (ingredient, r.family, target)
 
 
@@ -127,7 +153,8 @@ def resolve(ing: IngredientFile, mode: Mode) -> list[Resolved]:
                 values[param] = max(candidates) if stricter_is_max else min(candidates)
             else:
                 values[param] = min(candidates) if stricter_is_max else max(candidates)
-        out.append(Resolved(key, chosen, values, used_fallback=not primary, disagreement=disagreement))
+        out.append(Resolved(key, chosen, values, used_fallback=not primary,
+                            disagreement=disagreement, all_rules=rules))
     return out
 
 
@@ -145,6 +172,10 @@ class Item:
 
     product: str
     prescribed_count: Optional[int] = None
+    every_hours: Optional[Fraction] = None  # from the prescription's directions, e.g. "every 12 hours"
+
+
+RX_PREFIX = "rx::"  # solver ids for prescription facts (not label rules)
 
 
 @dataclass
@@ -153,25 +184,48 @@ class Built:
     # solver rule id -> (library rule id, ingredient, resolution details)
     origin: dict[str, tuple[str, str, Resolved]] = field(default_factory=dict)
     skipped: list[str] = field(default_factory=list)  # human-readable reasons
+    unverified: list[str] = field(default_factory=list)  # library items not yet human-checked
+    rx: dict[str, str] = field(default_factory=dict)  # solver id -> description, for prescription facts
 
 
-def build_regimen(lib: Library, items: list[Item], mode: Mode) -> Built:
+def build_regimen(lib: Library, items: list[Item], mode: Mode, *, include_food: bool = True) -> Built:
+    """include_food=False drops meal rules entirely (tier 2: the routine,
+    meals included, is not part of the claim)."""
     products = []
+    built = Built(Regimen((), ()))
     for it in items:
         pf = lib.products[it.product]
+        if not pf.verified:
+            built.unverified.append(f"product {pf.name}")
         if it.prescribed_count is not None:
             products.append(Product(pf.name, it.prescribed_count, True, _amounts(pf)))
         elif pf.otc_max_doses is None:
             raise ValueError(f"{pf.name}: as-needed use needs `otc_max_doses` on the product")
         else:
+            if not pf.otc_max_doses.verified:
+                built.unverified.append(f"max doses of {pf.name}")
             products.append(Product(pf.name, pf.otc_max_doses.count, False, _amounts(pf)))
 
-    def containing(ingredients: set[str]) -> list[str]:
-        return [it.product for it in items if ingredients & set(lib.products[it.product].ingredients)]
+    rx_rules = []
+    for it in items:
+        if it.every_hours is not None:
+            # The prescription chose this frequency; it is a fact of the Rx, not a label rule.
+            sid = f"{RX_PREFIX}every::{it.product}"
+            rx_rules.append(MinInterval(sid, it.product, it.every_hours))
+            built.rx[sid] = f"every {_hours(it.every_hours)} (prescription directions)"
 
-    present = {i for it in items for i in lib.products[it.product].ingredients}
-    built = Built(Regimen(tuple(products), ()))
+    def ingredients_of(product: str) -> set[str]:
+        return set(lib.products[product].ingredients)
+
+    def containing(ingredients: set[str]) -> list[str]:
+        return [it.product for it in items if ingredients & ingredients_of(it.product)]
+
+    present = {i for it in items for i in ingredients_of(it.product)}
     rules = []
+
+    def add(sid, rule, lib_rule, ing_name, res):
+        rules.append(rule)
+        built.origin[sid] = (lib_rule.id, ing_name, res)
 
     for ing_name in sorted(present):
         ing = lib.ingredients.get(ing_name)
@@ -180,32 +234,48 @@ def build_regimen(lib: Library, items: list[Item], mode: Mode) -> Built:
             continue
         for res in resolve(ing, mode):
             r, v = res.rule, res.values
+            if isinstance(r, FoodRule) and not include_food:
+                continue
+            if not res.verified:
+                built.unverified.append(f"rule {r.id}")
             if isinstance(r, MinIntervalRule):
                 # Across every product containing the ingredient, not per product.
                 sid = f"{r.id}@{ing_name}"
-                rules.append(IngredientInterval(sid, ing_name, v["hours"]))
-                built.origin[sid] = (r.id, ing_name, res)
+                add(sid, IngredientInterval(sid, ing_name, v["hours"]), r, ing_name, res)
             elif isinstance(r, SeparationRule):
-                targets = lib.target_ingredients(r.target)
                 for a in containing({ing_name}):
-                    for b in containing(targets):
+                    if r.target == "*":
+                        others = [it.product for it in items if it.product != a]
+                    else:
+                        others = containing(lib.target_ingredients(r.target))
+                    for b in others:
                         if a == b:
                             built.skipped.append(f"{r.id}: {a} contains both sides; not separable")
                             continue
                         sid = f"{r.id}@{a}~{b}"
-                        rules.append(Separation(sid, a, b, v["before"], v["after"]))
-                        built.origin[sid] = (r.id, ing_name, res)
+                        add(sid, Separation(sid, a, b, v["before"], v["after"]), r, ing_name, res)
             elif isinstance(r, DailyMaxRule):
                 units = {lib.products[p].ingredients[ing_name].unit for p in containing({ing_name})}
                 if units != {r.unit}:
                     raise ValueError(f"{r.id}: unit {r.unit} vs product units {units}")
                 sid = f"{r.id}@{ing_name}"
-                rules.append(IngredientCeiling(sid, ing_name, v["amount"]))
-                built.origin[sid] = (r.id, ing_name, res)
+                add(sid, IngredientCeiling(sid, ing_name, v["amount"]), r, ing_name, res)
             elif isinstance(r, FoodRule):
-                built.skipped.append(f"{r.id}: food rules are encoded in M5")
-    built.regimen = Regimen(tuple(products), tuple(rules))
+                for p in containing({ing_name}):
+                    sid = f"{r.id}@{p}"
+                    if r.mode == "empty_stomach":
+                        add(sid, MealGap(sid, p, v["before_meal"], v["after_meal"], r.meal), r, ing_name, res)
+                    elif r.mode == "before_meal_window":
+                        add(sid, MealWindow(sid, p, r.meal, v["earliest"], v["latest"]), r, ing_name, res)
+                    else:
+                        built.skipped.append(f"{r.id}: food mode {r.mode!r} not encoded yet")
+    built.regimen = Regimen(tuple(products), tuple(rx_rules + rules))
     return built
+
+
+def _hours(h: Fraction) -> str:
+    h = Fraction(h)
+    return f"{h.numerator} h" if h.denominator == 1 else f"{float(h):g} h"
 
 
 def _amounts(pf: ProductFile) -> dict[str, Fraction]:

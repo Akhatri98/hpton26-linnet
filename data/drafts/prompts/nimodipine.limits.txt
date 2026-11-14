@@ -1,0 +1,23 @@
+You are extracting LIMITS from an FDA drug label for a pharmacist's tool.
+
+Ingredient: nimodipine
+Label set id: a323ebd8-ef1b-439b-93d1-ba73a5b0127d
+
+Numbered sentences from the label:
+S1 [dosage and administration] The recommended oral dose is 60 mg (two 30 mg capsules) every 4 hours for 21 consecutive days.
+S2 [dosage and administration] In general, the capsules should be swallowed whole with a little liquid, preferably not less than one hour before or two hours after meals.
+S3 [dosage and administration] Oral nimodipine therapy should commence as soon as possible within 96 hours of the onset of subarachnoid hemorrhage.
+S4 [dosage and administration] Dosage should be reduced to one 30 mg capsule every 4 hours with close monitoring of blood pressure and heart rate;
+S5 [precautions] nefazodone) - grapefruit juice: after intake of grapefruit juice and nimodipine, the blood pressure lowering effect may last for at least 4 days after the last ingestion of grapefruit juice.
+S6 [precautions] Nimodipine did not impair the fertility and general reproductive performance of male and female Wistar rats following oral doses of up to 30 mg/kg/day when administered daily for more than 10 weeks in the males and 3 weeks in the females prior to mating and continued to day 7 of pregnancy.
+S7 [precautions] This dose in a rat is about 4 times the equivalent clinical dose of 60 mg q4h in a 50 kg patient.
+
+Return ONLY a JSON object {"limits": [ ... ]}. One row per limit the label states. Each row:
+  {"kind": "per_dose" | "per_day" | "duration_days",
+   "amount": N, "unit": "mg" | "g" | "mcg" | "tablets" | "caplets" | "capsules" | "doses" | "days",
+   "population": "adults" | "children" | "pregnant" | "general" | ...,
+   "sentence": "Sk", "provenance": "quoted" | "interpreted"}
+Examples: "do not take more than 6 caplets in 24 hours" -> per_day, 6, caplets.
+"more than 4,000 mg of acetaminophen in 24 hours" -> per_day, 4000, mg.
+"do not use for more than 10 days" -> duration_days, 10, days.
+Use only numbers stated in the cited sentence. Cite exactly one sentence id per row; do not copy text.

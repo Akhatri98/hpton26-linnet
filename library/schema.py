@@ -48,6 +48,7 @@ class _RuleBase(Strict):
     source: Source
     loosest: Optional[dict[str, Number]] = None  # param -> loosest defensible value
     note: str = ""  # reviewer remarks; JSON has no comments
+    verified: bool = False  # set true only after a human checked it against the label
 
     @model_validator(mode="after")
     def _loosest_matches_provenance(self):
@@ -78,8 +79,9 @@ class MinIntervalRule(_RuleBase):
 
 class SeparationRule(_RuleBase):
     """This ingredient must be at least `before` h before and `after` h after
-    any dose containing the target. Target is an ingredient name or
-    "group:<name>"."""
+    any dose containing the target. Target is an ingredient name,
+    "group:<name>", or "*" for every other product in the regimen (labels
+    that say "other drugs")."""
 
     family: Literal["separation"]
     target: str
@@ -102,18 +104,36 @@ class DailyMaxRule(_RuleBase):
 
 
 class FoodRule(_RuleBase):
-    """Accepted and validated now so curation can record it; the solver
-    encodes it in M5, when meal times become soft variables."""
+    """Dose timing relative to the patient's meals.
+
+    empty_stomach:      no dose from `before_meal` h before to `after_meal` h
+                        after a meal (every meal, or only `meal` if named)
+    before_meal_window: dose falls between `earliest` and `latest` h before the
+                        named `meal` (e.g. "one-half to one hour before breakfast")
+    with_food:          validated but not yet encoded by the solver
+    """
 
     family: Literal["food"]
-    mode: Literal["empty_stomach", "with_food"]
-    before_meal: Number = Fraction(0)  # empty_stomach: hours before a meal
-    after_meal: Number = Fraction(0)  # empty_stomach: hours after a meal
-    within: Number = Fraction(0)  # with_food: hours from a meal
-    STRICTER: ClassVar[dict[str, int]] = {"before_meal": +1, "after_meal": +1, "within": -1}
+    mode: Literal["empty_stomach", "before_meal_window", "with_food"]
+    meal: Optional[str] = None
+    before_meal: Number = Fraction(0)
+    after_meal: Number = Fraction(0)
+    earliest: Number = Fraction(0)
+    latest: Number = Fraction(0)
+    within: Number = Fraction(0)
+    STRICTER: ClassVar[dict[str, int]] = {
+        "before_meal": +1, "after_meal": +1, "earliest": -1, "latest": +1, "within": -1,
+    }
+
+    @model_validator(mode="after")
+    def _window_needs_meal(self):
+        if self.mode == "before_meal_window" and (not self.meal or self.earliest < self.latest):
+            raise ValueError(f"{self.id}: before_meal_window needs `meal` and earliest >= latest")
+        return self
 
     def numeric_params(self):
-        return {"before_meal": self.before_meal, "after_meal": self.after_meal, "within": self.within}
+        return {"before_meal": self.before_meal, "after_meal": self.after_meal,
+                "earliest": self.earliest, "latest": self.latest, "within": self.within}
 
 
 Rule = Annotated[
@@ -149,6 +169,8 @@ class MaxDoses(Strict):
     count: int = Field(ge=1)
     provenance: Provenance
     source: Source
+    note: str = ""
+    verified: bool = False
 
 
 class ProductFile(Strict):
@@ -156,8 +178,12 @@ class ProductFile(Strict):
     display_name: str
     spl_set_id: str
     url: str
-    ingredients: dict[str, Amount]  # per dose
+    ingredients: dict[str, Amount]  # per dose (a "dose" is defined in `dose_note`)
     otc_max_doses: Optional[MaxDoses] = None  # label maximum, for as-needed use
+    ndc: list[str] = []
+    dose_note: str = ""  # what one dose is, e.g. "2 caplets", and where that comes from
+    note: str = ""
+    verified: bool = False
 
     @field_validator("ingredients")
     @classmethod
@@ -171,6 +197,9 @@ class Membership(Strict):
     ingredient: str
     provenance: Provenance
     basis: str = Field(min_length=10)  # the label wording that puts it in the set
+    source_spl: str = ""
+    verified: bool = False
+    matched: str = ""  # set when the label names only the element (see library/moieties.py)
 
 
 class Group(Strict):

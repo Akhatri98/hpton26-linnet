@@ -1,0 +1,12 @@
+{
+  "name": "Prescribed acetaminophen/codeine, also taking OTC acetaminophen",
+  "constructed": true,
+  "note": "Constructed to exercise tier 1 and the shared-ingredient family. PLACEHOLDER painkiller choice, pending A.",
+  "items": [
+    {"product": "apap-codeine-300-30", "prescribed_count": 3},
+    {"product": "acetaminophen-500-otc", "reported_count": 2},
+    {"product": "levothyroxine-100mcg", "prescribed_count": 1}
+  ],
+  "routine": {"meals": {"breakfast": "07:30", "lunch": "12:30", "dinner": "18:30"},
+              "sleep": {"start": "23:00", "end": "07:00"}}
+}

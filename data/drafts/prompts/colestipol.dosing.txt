@@ -1,0 +1,32 @@
+You are extracting DOSING directions from an FDA drug label for a pharmacist's tool.
+
+Ingredient: colestipol
+Label set id: 03ca5800-4211-4383-a332-be88bd9b5304
+
+Numbered sentences from the label:
+S1 [dosage and administration] The starting dose should be 2 grams once or twice daily.
+S2 [dosage and administration] Dosage increases of 2 grams, once or twice daily should occur at 1-or 2-month intervals.
+S3 [dosage and administration] Patients should take other drugs at least one hour before or four hours after colestipol hydrochloride tablets to minimize possible interference with their absorption.
+S4 [dosage and administration] (See Drug Interactions.) Before Administration of Colestipol Hydrochloride Tablets Define the type of hyperlipoproteinemia, as described in NCEP guidelines.
+S5 [drug interactions] The interval between the administration of colestipol hydrochloride tablets and any other medication should be as long as possible.
+S6 [drug interactions] Patients should take other drugs at least one hour before or four hours after colestipol hydrochloride tablets to avoid impeding their absorption.
+S7 [drug interactions] Repeated doses of colestipol hydrochloride given prior to a single dose of propranolol in human trials have been reported to decrease propranolol absorption.
+S8 [drug interactions] the time to reach maximum concentration was delayed approximately 30 minutes.
+S9 [drug interactions] Studies in humans show that the absorption of chlorothiazide as reflected in urinary excretion is markedly decreased even when administered one hour before colestipol hydrochloride.
+S10 [drug interactions] these drugs were not tested to determine the effect of administration one hour before colestipol hydrochloride.
+S11 [precautions] PRECAUTIONS Prior to initiating therapy with colestipol hydrochloride tablets, secondary causes of hypercholesterolemia (e.g., poorly controlled diabetes mellitus, hypothyroidism, nephrotic syndrome, dysproteinemias, obstructive liver disease, other drug therapy, alcoholism), should be excluded, and a lipid profile performed to assess total cholesterol, HDL-C, and triglycerides (TG).
+S12 [precautions] In patients with pre-existing constipation, the starting dose should be 2 grams once or twice a day.
+S13 [precautions] Information for Patients Colestipol hydrochloride tablets may be larger than pills you have taken before.
+S14 [precautions] If you have had swallowing problems or choking with food, liquids or other tablets or capsules in the past, you should discuss this with your doctor before taking colestipol hydrochloride tablets.
+S15 [precautions] If a tablet does get stuck after you swallow it, you may notice pressure or discomfort.
+S16 [precautions] If you are taking other medications, you should take them at least one hour before or four hours after taking colestipol hydrochloride tablets.
+
+Return ONLY a JSON object {"dosing": [ ... ]}. One row per distinct regimen the label gives (per condition,
+per population, per formulation). Each row:
+  {"condition": "what it is for, or 'general'", "population": "adults" | "children" | "renal impairment" | ...,
+   "dose": N, "dose_max": N or null, "unit": "mg" | "g" | "mcg" | "tablets" | "caplets" | "capsules" | "mL",
+   "every_hours": H or null, "times_per_day": T or null, "duration_days": D or null,
+   "as_needed": true | false, "sentence": "Sk", "provenance": "quoted" | "interpreted"}
+Use only numbers stated in the cited sentence. A range like "500-750 mg" is dose=500, dose_max=750.
+"twice daily" is times_per_day=2; "every 12 hours" is every_hours=12. Cite exactly one sentence id per row; do not copy text.
+Include every regimen you find, even if there are many. If unsure, leave it out.

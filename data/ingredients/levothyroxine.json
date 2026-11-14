@@ -1,0 +1,43 @@
+{
+  "ingredient": "levothyroxine",
+  "primary_spl": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
+  "rules": [
+    {
+      "id": "levo-interfering",
+      "family": "separation",
+      "target": "group:levothyroxine_binders",
+      "before": 4,
+      "after": 4,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7",
+        "section": "dosage and administration",
+        "sentence": "Administer levothyroxine sodium tablets at least 4 hours before or after drugs known to interfere with levothyroxine sodium absorption"
+      },
+      "note": "Which drugs 'interfere' is defined by the group (from section 7.1). DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+      "verified": true
+    },
+    {
+      "id": "levo-breakfast",
+      "family": "food",
+      "mode": "before_meal_window",
+      "meal": "breakfast",
+      "earliest": 1,
+      "latest": "1/2",
+      "provenance": "interpreted",
+      "loosest": {
+        "earliest": 24,
+        "latest": 0
+      },
+      "source": {
+        "spl_set_id": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7",
+        "section": "dosage and administration",
+        "sentence": "Administer levothyroxine sodium tablets as a single daily dose, on an empty stomach, one-half to one hour before breakfast with a full glass of water to avoid choking or gagging"
+      },
+      "note": "Section 2.1 states it firmly; the highlights say 'preferably'. Tagged interpreted for that reason. DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+      "verified": true
+    }
+  ]
+}

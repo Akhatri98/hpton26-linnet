@@ -10,7 +10,8 @@ from __future__ import annotations
 
 from fractions import Fraction
 
-from .model import DAY, IngredientCeiling, IngredientInterval, MinInterval, Regimen, Separation, Window
+from .model import (DAY, IngredientCeiling, IngredientInterval, MealGap, MealWindow, MinInterval,
+                    Regimen, Separation, Window)
 
 
 def cdist(x: Fraction, y: Fraction) -> Fraction:
@@ -30,7 +31,18 @@ def _in_span(t: Fraction, start, end) -> bool:
     return t >= start or t <= end
 
 
-def violations(regimen: Regimen, schedule: dict[str, list[Fraction]]) -> list[str]:
+def _outside(t, anchor, before, after) -> bool:
+    """t is >= before h before anchor and >= after h after it (circular)."""
+    f = forward(t, anchor)  # t -> anchor
+    back = DAY - f if f else Fraction(0)  # anchor -> t
+    return f >= before and back >= after
+
+
+def violations(regimen: Regimen, schedule: dict[str, list[Fraction]],
+               meals: dict[str, Fraction] | None = None, partial: bool = False) -> list[str]:
+    """partial=True skips dose-count checks, for checking a schedule that is
+    still being built (used by the greedy baseline)."""
+    meals = meals or {}
     out: list[str] = []
     for p in regimen.products:
         times = schedule.get(p.name, [])
@@ -38,6 +50,8 @@ def violations(regimen: Regimen, schedule: dict[str, list[Fraction]]) -> list[st
             out.append(f"{p.name}: time outside [0, 24)")
         if any(times[i] >= times[i + 1] for i in range(len(times) - 1)):
             out.append(f"{p.name}: doses not strictly ordered")
+        if partial:
+            continue
         if p.prescribed and len(times) != p.max_doses:
             out.append(f"{p.name}: prescribed {p.max_doses}, scheduled {len(times)}")
         if not p.prescribed and len(times) > p.max_doses:
@@ -65,8 +79,7 @@ def violations(regimen: Regimen, schedule: dict[str, list[Fraction]]) -> list[st
         elif isinstance(r, Separation):
             for ta in schedule.get(r.a, []):
                 for tb in schedule.get(r.b, []):
-                    f = forward(ta, tb)  # a -> b
-                    if f < r.before or (DAY - f if f else 0) < r.after:
+                    if not _outside(ta, tb, r.before, r.after):
                         out.append(f"{r.id}: {r.a}@{ta} vs {r.b}@{tb}")
         elif isinstance(r, IngredientCeiling):
             total = sum(
@@ -80,6 +93,22 @@ def violations(regimen: Regimen, schedule: dict[str, list[Fraction]]) -> list[st
             for t in schedule.get(r.product, []):
                 if not any(_in_span(t, s, e) for s, e in r.spans):
                     out.append(f"{r.id}: {r.product}@{t} outside window")
+        elif isinstance(r, MealGap):
+            names = [r.meal] if r.meal else list(meals)
+            for name in names:
+                if name not in meals:
+                    out.append(f"{r.id}: no time for meal {name}")
+                    continue
+                for t in schedule.get(r.product, []):
+                    if not _outside(t, meals[name], r.before, r.after):
+                        out.append(f"{r.id}: {r.product}@{t} too close to {name}@{meals[name]}")
+        elif isinstance(r, MealWindow):
+            if r.meal not in meals:
+                out.append(f"{r.id}: no time for meal {r.meal}")
+                continue
+            for t in schedule.get(r.product, []):
+                if not (r.latest <= forward(t, meals[r.meal]) <= r.earliest):
+                    out.append(f"{r.id}: {r.product}@{t} not {r.latest}-{r.earliest} h before {r.meal}")
         else:
             out.append(f"unchecked rule type {type(r).__name__}")
     return out

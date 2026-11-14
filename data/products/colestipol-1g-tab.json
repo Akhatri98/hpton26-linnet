@@ -1,0 +1,14 @@
+{
+  "name": "colestipol-1g-tab",
+  "display_name": "Colestipol HCl 1 g tablets (Edenbridge)",
+  "spl_set_id": "03ca5800-4211-4383-a332-be88bd9b5304",
+  "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03ca5800-4211-4383-a332-be88bd9b5304",
+  "ingredients": {
+    "colestipol": {
+      "amount": 2,
+      "unit": "g"
+    }
+  },
+  "dose_note": "One dose = 2 g (label starting dose '2 grams once or twice daily').",
+  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human."
+}

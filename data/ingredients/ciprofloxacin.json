@@ -1,0 +1,21 @@
+{
+  "ingredient": "ciprofloxacin",
+  "primary_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
+  "rules": [
+    {
+      "id": "cipro-cations",
+      "family": "separation",
+      "target": "group:polyvalent_cations",
+      "before": 2,
+      "after": 6,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa",
+        "section": "dosage and administration",
+        "sentence": "Administer ciprofloxacin tablets at least 2 hours before or 6 hours after magnesium/aluminum antacids; polymeric phosphate binders (for example, sevelamer, lanthanum carbonate) or sucralfate; Videx ® (didanosine) chewable/buffered tablets or pediatric powder for oral solution; other highly buffered drugs; or other products containing calcium, iron or zinc."
+      },
+      "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human."
+    }
+  ]
+}

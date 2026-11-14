@@ -1,0 +1,1 @@
+{"limits": [{"kind": "per_day", "amount": 360, "unit": "mg", "population": "adults", "sentence": "S9", "provenance": "quoted"}, {"kind": "per_day", "amount": 4000, "unit": "mg", "population": "general", "sentence": "S18", "provenance": "quoted"}]}

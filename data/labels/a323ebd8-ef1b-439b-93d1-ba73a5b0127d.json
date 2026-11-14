@@ -1,0 +1,83 @@
+{
+ "set_id": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
+ "id": "05594f64-8cb4-4cc0-b1b9-93fb5313b197",
+ "version": "6",
+ "effective_time": "20240816",
+ "openfda": {
+  "application_number": [
+   "ANDA077811"
+  ],
+  "brand_name": [
+   "nimodipine"
+  ],
+  "generic_name": [
+   "NIMODIPINE"
+  ],
+  "manufacturer_name": [
+   "Heritage Pharmaceuticals Inc. d/b/a Avet Pharmaceuticals Inc."
+  ],
+  "product_ndc": [
+   "23155-512"
+  ],
+  "product_type": [
+   "HUMAN PRESCRIPTION DRUG"
+  ],
+  "route": [
+   "ORAL"
+  ],
+  "substance_name": [
+   "NIMODIPINE"
+  ],
+  "rxcui": [
+   "198037"
+  ],
+  "spl_id": [
+   "05594f64-8cb4-4cc0-b1b9-93fb5313b197"
+  ],
+  "spl_set_id": [
+   "a323ebd8-ef1b-439b-93d1-ba73a5b0127d"
+  ],
+  "package_ndc": [
+   "23155-512-30",
+   "23155-512-00"
+  ],
+  "is_original_packager": [
+   true
+  ],
+  "nui": [
+   "N0000000069",
+   "N0000175421",
+   "M0006414"
+  ],
+  "pharm_class_moa": [
+   "Calcium Channel Antagonists [MoA]"
+  ],
+  "pharm_class_epc": [
+   "Dihydropyridine Calcium Channel Blocker [EPC]"
+  ],
+  "pharm_class_cs": [
+   "Dihydropyridines [CS]"
+  ],
+  "unii": [
+   "57WA9QZ5WH"
+  ]
+ },
+ "dosage_and_administration": [
+  "DOSAGE AND ADMINISTRATION DO NOT ADMINISTER NIMODIPINE CAPSULES INTRAVENOUSLY OR BY OTHER PARENTERAL ROUTES (see WARNINGS ). If nimodipine is inadvertently administered intravenously, clinically significant hypotension may require cardiovascular support with pressor agents. Specific treatments for calcium channel blocker overdose should also be given promptly. Nimodipine is given orally in the form of soft gelatin 30 mg capsules for subarachnoid hemorrhage. The recommended oral dose is 60 mg (two 30 mg capsules) every 4 hours for 21 consecutive days. In general, the capsules should be swallowed whole with a little liquid, preferably not less than one hour before or two hours after meals. Grapefruit juice is to be avoided (see PRECAUTIONS, Drug Interactions ). Oral nimodipine therapy should commence as soon as possible within 96 hours of the onset of subarachnoid hemorrhage. If the capsule cannot be swallowed, e.g., at the time of surgery, or if the patient is unconscious, a hole should be made in both ends of the capsule with an 18 gauge needle, and the contents of the capsule extracted into a syringe. A parenteral syringe can be used to extract the liquid inside the capsule, but the liquid should always be transferred to a syringe that cannot accept a needle and that is designed for administration orally or via a naso-gastric tube or PEG. To help minimize administration errors, it is recommended that the syringe used for administration be labeled \"Not for IV Use\". The contents should then be emptied into the patient's in situ naso-gastric tube and washed down the tube with 30 mL of normal saline (0.9%). Severely disturbed liver function, particularly liver cirrhosis, may result in an increased bioavailability of nimodipine due to a decreased first pass capacity and a reduced metabolic clearance. The reduction in blood pressure and other adverse effects may be more pronounced in these patients. Dosage should be reduced to one 30 mg capsule every 4 hours with close monitoring of blood pressure and heart rate; if necessary, discontinuation of the treatment should be considered. Strong inhibitors of CYP3A4 should not be administered concomitantly with nimodipine (see CONTRAINDICATIONS ). Strong inducers of CYP3A4 should generally not be administered with nimodipine (see WARNINGS ). Patients on moderate and weak inducers of CYP3A4 should be closely monitored for lack of effectiveness, and a nimodipine dose increase may be required. Patients on moderate and weak CYP3A4 inhibitors may require a nimodipine dose reduction in case of hypotension (see PRECAUTIONS, Drug Interactions )."
+ ],
+ "precautions": [
+  "PRECAUTIONS General Blood Pressure: Nimodipine has the hemodynamic effects expected of a calcium channel blocker, although they are generally not marked. However, intravenous administration of the contents of nimodipine capsules has resulted in serious adverse consequences including death, cardiac arrest, cardiovascular collapse, hypotension, and bradycardia. In patients with subarachnoid hemorrhage given nimodipine in clinical studies, about 5% were reported to have had lowering of the blood pressure and about 1% left the study because of this (not all could be attributed to nimodipine). Nevertheless, blood pressure should be carefully monitored during treatment with nimodipine based on its known pharmacology and the known effects of calcium channel blockers. (see WARNINGS and DOSAGE AND ADMINISTRATION ). Hepatic Disease: The metabolism of nimodipine is decreased in patients with impaired hepatic function. Such patients should have their blood pressure and pulse rate monitored closely and should be given a lower dose (see DOSAGE AND ADMINISTRATION ). Intestinal pseudo-obstruction and ileus have been reported rarely in patients treated with nimodipine. A causal relationship has not been established. The condition has responded to conservative management. Laboratory Test Interactions None known. Drug Interactions Nimodipine is metabolized via the cytochrome P450 3A4 system located both in the intestinal mucosa and in the liver. Drugs that are known to either inhibit or to induce this enzyme system may therefore alter the first pass or the clearance of nimodipine. In addition, the blood pressure lowering effects of antihypertensives could be enhanced when taken concomitantly with nimodipine. Inducers of CYP3A4: Nimodipine plasma concentration and efficacy may be significantly reduced when concomitantly administered with strong CYP3A4 inducers. Therefore strong CYP3A4 inducers (e.g. rifampin, carbamazepine, phenobarbital, phenytoin, St. John's Wort) should generally not be administered concomitantly with nimodipine (see WARNINGS ). Other moderate and weak inducers of CYP3A4 may also reduce the efficacy of nimodipine, although the magnitude of decrease in nimodipine plasma concentrations is not known. Patients on these should be closely monitored for lack of effectiveness, and a nimodipine dosage increase may be required. Moderate and weak CYP3A4 inducers include: amprenavir, aprepitant, armodafinil, bosentan, efavirenz, etravirine, Echinacea, modafinil, nafcillin, pioglitazone, prednisone and rufinamide. Inhibitors of CYP3A4: Nimodipine plasma concentration can be significantly increased when concomitantly administered with strong inhibitors of the CYP3A4 system. As a consequence, the blood pressure lowering effect may be increased. Therefore strong CYP3A4 inhibitors should not be coadministered with nimodipine (see CONTRAINDICATIONS ). Strong CYP3A4 inhibitors include some members of the following classes: - macrolide antibiotics (e.g., clarithromycin, telithromycin), -HIV protease inhibitors (e.g., delavirdine, indinavir, nelfinavir, ritonavir, saquinavir), - azole antimycotics (e.g., ketoconazole, itraconazole, voriconazole), - antidepressants (e.g. nefazodone) - grapefruit juice: after intake of grapefruit juice and nimodipine, the blood pressure lowering effect may last for at least 4 days after the last ingestion of grapefruit juice. Ingestion of grapefruit/grapefruit juice is therefore not recommended while taking nimodipine (see DOSAGE AND ADMINISTRATION ). Nimodipine plasma concentration can also be increased in the presence of moderate and weak inhibitors of CYP3A4. If nimodipine is concomitantly administered with these drugs, blood pressure should be monitored, and a reduction of the nimodipine dose may be necessary. Moderate and weak CYP3A4 inhibitors include amprenavir, aprepitant, atazanavir, amiodarone, alprozalam, cyclosporine, cimetidine, erythromycin, fluconazole, fluoxetine, isoniazid, oral contraceptives, quinuprestin/dalforpristin, and valproic acid. Blood pressure lowering drugs: Nimodipine may increase the blood pressure lowering effect of concomitantly administered anti-hypertensives, such as: – diuretics, – β-blockers, – ACE inhibitors, – A1-antagonists, – other calcium antagonists, – α-adrenergic blocking agents, – PDE5 inhibitors, – α-methyldopa. Blood pressure should be carefully monitored, and dose adjustment of the blood pressure lowering drug(s) may be necessary. Carcinogenesis, Mutagenesis, Impairment of Fertility In a two-year study, higher incidences of adenocarcinoma of the uterus and Leydig-cell adenoma of the testes were observed in rats given a diet containing 1800 ppm nimodipine (equivalent to 91 to 121 mg/kg/day nimodipine) than in placebo controls. The differences were not statistically significant, however, and the higher rates were well within historical control range for these tumors in the Wistar strain. Nimodipine was found not to be carcinogenic in a 91-week mouse study but the high dose of 1800 ppm nimodipine-in-feed (546 to 774 mg/kg/day) shortened the life expectancy of the animals. Mutagenicity studies, including the Ames, micronucleus and dominant lethal tests were negative. Nimodipine did not impair the fertility and general reproductive performance of male and female Wistar rats following oral doses of up to 30 mg/kg/day when administered daily for more than 10 weeks in the males and 3 weeks in the females prior to mating and continued to day 7 of pregnancy. This dose in a rat is about 4 times the equivalent clinical dose of 60 mg q4h in a 50 kg patient. Pregnancy Nimodipine has been shown to have a teratogenic effect in Himalayan rabbits. Incidences of malformations and stunted fetuses were increased at oral doses of 1 and 10 mg/kg/day administered (by gavage) from day 6 through day 18 of pregnancy but not at 3 mg/kg/day in one of two identical rabbit studies. In the second study an increased incidence of stunted fetuses was seen at 1 mg/kg/day but not at higher doses. Nimodipine was embryotoxic, causing resorption and stunted growth of fetuses, in Long Evans rats at 100 mg/kg/day administered by gavage from day 6 through day 15 of pregnancy. In two other rat studies, doses of 30 mg/kg/day nimodipine administered by gavage from day 16 of gestation and continued until sacrifice (day 20 of pregnancy or day 21 post partum) were associated with higher incidences of skeletal variation, stunted fetuses and stillbirths but no malformations. There are no adequate and well controlled studies in pregnant women to directly assess the effect on human fetuses. Nimodipine should be used during pregnancy only if the potential benefit justifies the potential risk to the fetus. Nursing Mothers Nimodipine and/or its metabolites have been shown to appear in rat milk at concentrations much higher than in maternal plasma. It is not known whether the drug is excreted in human milk. Because many drugs are excreted in human milk, nursing mothers are advised not to breast feed their babies when taking the drug. Pediatric Use Safety and effectiveness in children have not been established. Geriatric Use Clinical studies of nimodipine did not include sufficient numbers of subjects aged 65 and over to determine whether they respond differently from younger subjects. Other reported clinical experience has not identified differences in responses between the elderly and younger patients. In general, dosing in elderly patients should be cautious, reflecting the greater frequency of decreased hepatic, renal or cardiac function, and of concomitant disease or other drug therapy."
+ ],
+ "warnings": [
+  "WARNINGS DEATH DUE TO INADVERTENT INTRAVENOUS ADMINISTRATION: DO NOT ADMINISTER NIMODIPINE INTRAVENOUSLY OR BY OTHER PARENTERAL ROUTES. DEATHS AND SERIOUS, LIFE THREATENING ADVERSE EVENTS, INCLUDING CARDIAC ARREST, CARDIOVASCULAR COLLAPSE, HYPOTENSION, AND BRADYCARDIA, HAVE OCCURRED WHEN THE CONTENTS OF NIMODIPINE CAPSULES HAVE BEEN INJECTED PARENTERALLY (SEE DOSAGE AND ADMINISTRATION ). Reduced Efficacy with CYP3A4 Inducers: Concomitant use of strong CYP3A4 inducers (e.g. rifampin, phenobarbital, phenytoin, carbamazepine, St John's wort) and nimodipine should generally be avoided, as nimodipine plasma concentration and efficacy may be very significantly reduced (see PRECAUTIONS, Drug Interactions ). Moderate and weak inducers of CYP3A4 may also reduce the efficacy of nimodipine to a lesser extent. Patients on these should be closely monitored for lack of effectiveness, and a nimodipine dosage increase may be required. Moderate and weak CYP3A4 inhibitors include, for example: amprenavir, aprepitant, armodafinil, bosentan, efavirenz, etravirine, echinacea, modafinil, nafcillin, pioglitazone, prednisone and rufinamide."
+ ],
+ "boxed_warning": [
+  "DO NOT ADMINISTER NIMODIPINE INTRAVENOUSLY OR BY OTHER PARENTERAL ROUTES. DEATHS AND SERIOUS, LIFE THREATENING ADVERSE EVENTS HAVE OCCURRED WHEN THE CONTENTS OF NIMODIPINE CAPSULES HAVE BEEN INJECTED PARENTERALLY (See WARNINGS and DOSAGE AND ADMINISTRATION )."
+ ],
+ "description": [
+  "DESCRIPTION Nimodipine belongs to the class of pharmacological agents known as calcium channel blockers. Nimodipine is isopropyl 2-methoxyethyl 1,4-dihydro-2,6-dimethyl-4-( m -nitrophenyl)-3,5-pyridinedicarboxylate. It has a molecular weight of 418.5 and a molecular formula of C 21 H 26 N 2 O 7 . The structural formula is: Nimodipine is a yellow crystalline substance, practically insoluble in water. Nimodipine capsules are formulated as soft gelatin capsules for oral administration. Each liquid filled capsule contains 30 mg of nimodipine in a vehicle of glycerin, peppermint oil and polyethylene glycol. The gelatin shell contains FD&C Yellow No. 6 Aluminum Lake, gelatin, glycerin, iron oxide black, lecithin, medium-chain triglycerides, shellac, sorbitol and titanium dioxide. structure"
+ ],
+ "how_supplied": [
+  "HOW SUPPLIED Nimodipine Capsules 30 mg are available as orange, opaque, oblong shape, soft gelatin capsules, imprinted \"HP 512\" with black ink. They are supplied as follows: Strength NDC Code Unit Dose Package of 30: (3 blister cards; each containing 10 capsules) 30 mg 23155-512-30 Unit Dose Package of 100: (10 blister cards; each containing 10 capsules) 30 mg 23155-512-00 The capsules should be stored in the manufacturer's original package. Store at 20° to 25°C (68° to 77°F); excursions permitted between 15° to 30°C (59° to 86°F) [See USP Controlled Room Temperature]. Capsules should be protected from light and freezing. Distributed by: Avet Pharmaceuticals Inc. East Brunswick, NJ 08816 1.866.901.DRUG (3784) 51U000000272US03 Revised: 06/2024 avet-logo"
+ ]
+}

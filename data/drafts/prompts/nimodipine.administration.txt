@@ -1,0 +1,46 @@
+You are extracting medication TIMING rules from an FDA drug label, for a scheduling tool used by pharmacists.
+
+Ingredient: nimodipine
+Label set id: a323ebd8-ef1b-439b-93d1-ba73a5b0127d
+
+Numbered sentences from the label:
+S1 [dosage and administration] The recommended oral dose is 60 mg (two 30 mg capsules) every 4 hours for 21 consecutive days.
+S2 [dosage and administration] In general, the capsules should be swallowed whole with a little liquid, preferably not less than one hour before or two hours after meals.
+S3 [dosage and administration] Oral nimodipine therapy should commence as soon as possible within 96 hours of the onset of subarachnoid hemorrhage.
+S4 [dosage and administration] Dosage should be reduced to one 30 mg capsule every 4 hours with close monitoring of blood pressure and heart rate;
+S5 [precautions] nefazodone) - grapefruit juice: after intake of grapefruit juice and nimodipine, the blood pressure lowering effect may last for at least 4 days after the last ingestion of grapefruit juice.
+S6 [precautions] Nimodipine did not impair the fertility and general reproductive performance of male and female Wistar rats following oral doses of up to 30 mg/kg/day when administered daily for more than 10 weeks in the males and 3 weeks in the females prior to mating and continued to day 7 of pregnancy.
+S7 [precautions] This dose in a rat is about 4 times the equivalent clinical dose of 60 mg q4h in a 50 kg patient.
+
+Known ingredient groups (you may propose members for these, or a new group):
+- levothyroxine_binders: ['calcium_carbonate', 'colestipol']
+- polyvalent_cations: ['calcium_carbonate']
+
+Return ONLY a JSON object:
+{
+  "rules": [ ... ],
+  "memberships": [ ... ]
+}
+
+Each rule is one of these shapes. Times are in HOURS (30 minutes = 0.5). Use only numbers stated in the cited sentence.
+  {"id": "...", "family": "min_interval", "hours": H, "sentence": "Sk", "provenance": "quoted"|"interpreted", "loosest": {"hours": X}?, "note": "..."}
+      any two doses of this ingredient at least H hours apart ("every 6 hours")
+  {"id": "...", "family": "separation", "target": "<ingredient>" | "group:<name>" | "*", "before": B, "after": A, "sentence": "Sk", ...}
+      THIS ingredient is taken at least B hours BEFORE and at least A hours AFTER any dose of the target.
+      "*" means every other drug. Careful with direction: if the label says "take OTHER drugs 1 hour before
+      or 4 hours after THIS drug", then THIS drug is 4 hours before and 1 hour after the other: before=4, after=1.
+  {"id": "...", "family": "daily_max", "amount": N, "unit": "mg"|"g"|"mcg", "sentence": "Sk", ...}
+  {"id": "...", "family": "food", "mode": "empty_stomach", "before_meal": B, "after_meal": A, "meal": null|"breakfast", "sentence": "Sk", ...}
+      no dose from B hours before to A hours after a meal
+  {"id": "...", "family": "food", "mode": "before_meal_window", "meal": "breakfast", "earliest": E, "latest": L, "sentence": "Sk", ...}
+      dose between E and L hours before the meal (E >= L)
+
+provenance: "quoted" if the number is stated plainly and firmly; "interpreted" if you had to judge
+(soft words like "preferably", "if possible", "consider", a range, or a derived number). Every
+"interpreted" rule MUST give "loosest": the most permissive defensible value of each number you judged.
+
+Each membership: {"group": "<name>", "ingredient": "<lowercase_underscore_name>", "sentence": "Sk", "provenance": "quoted"|"interpreted"}
+  Propose a membership when the label names an ingredient as one of the things to separate from.
+
+Ids: lowercase letters, digits, dashes, starting with the ingredient name. Cite exactly one sentence id per item.
+Do not copy sentence text; cite its id. Only include rules the label actually states. If unsure, leave it out.

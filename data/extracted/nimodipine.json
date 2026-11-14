@@ -1,0 +1,163 @@
+{
+  "ingredient": "nimodipine",
+  "spl_set_id": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
+  "model": "claude-haiku (subagent, files backend)",
+  "label_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
+  "dosing": [
+    {
+      "condition": "general",
+      "population": "general",
+      "dose": 60,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 4,
+      "times_per_day": null,
+      "duration_days": 21,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
+        "section": "dosage and administration",
+        "sentence_id": "S1",
+        "sentence": "The recommended oral dose is 60 mg (two 30 mg capsules) every 4 hours for 21 consecutive days.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d"
+      },
+      "verified": false
+    },
+    {
+      "condition": "general",
+      "population": "general",
+      "dose": 30,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 4,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
+        "section": "dosage and administration",
+        "sentence_id": "S4",
+        "sentence": "Dosage should be reduced to one 30 mg capsule every 4 hours with close monitoring of blood pressure and heart rate;",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d"
+      },
+      "verified": false
+    }
+  ],
+  "limits": [],
+  "administration": [
+    {
+      "id": "nimodipine-interval-4h",
+      "family": "min_interval",
+      "hours": 4,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
+        "section": "dosage and administration",
+        "sentence": "The recommended oral dose is 60 mg (two 30 mg capsules) every 4 hours for 21 consecutive days."
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    },
+    {
+      "id": "nimodipine-empty-stomach-meal",
+      "family": "food",
+      "mode": "empty_stomach",
+      "before_meal": 1,
+      "after_meal": 2,
+      "provenance": "interpreted",
+      "loosest": {
+        "before_meal": 0,
+        "after_meal": 0
+      },
+      "source": {
+        "spl_set_id": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
+        "section": "dosage and administration",
+        "sentence": "In general, the capsules should be swallowed whole with a little liquid, preferably not less than one hour before or two hours after meals."
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    }
+  ],
+  "memberships": [],
+  "rejected": [],
+  "unaccounted_for": [
+    {
+      "priority": 1,
+      "kind": "possible_timing_rule",
+      "note": "",
+      "sentence_id": "S3",
+      "section": "dosage and administration",
+      "sentence": "Oral nimodipine therapy should commence as soon as possible within 96 hours of the onset of subarachnoid hemorrhage."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S5",
+      "section": "precautions",
+      "sentence": "nefazodone) - grapefruit juice: after intake of grapefruit juice and nimodipine, the blood pressure lowering effect may last for at least 4 days after the last ingestion of grapefruit juice."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S6",
+      "section": "precautions",
+      "sentence": "Nimodipine did not impair the fertility and general reproductive performance of male and female Wistar rats following oral doses of up to 30 mg/kg/day when administered daily for more than 10 weeks in the males and 3 weeks in the females prior to mating and continued to day 7 of pregnancy."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S7",
+      "section": "precautions",
+      "sentence": "This dose in a rat is about 4 times the equivalent clinical dose of 60 mg q4h in a 50 kg patient."
+    }
+  ],
+  "sentences": [
+    {
+      "sentence_id": "S1",
+      "section": "dosage and administration",
+      "text": "The recommended oral dose is 60 mg (two 30 mg capsules) every 4 hours for 21 consecutive days."
+    },
+    {
+      "sentence_id": "S2",
+      "section": "dosage and administration",
+      "text": "In general, the capsules should be swallowed whole with a little liquid, preferably not less than one hour before or two hours after meals."
+    },
+    {
+      "sentence_id": "S3",
+      "section": "dosage and administration",
+      "text": "Oral nimodipine therapy should commence as soon as possible within 96 hours of the onset of subarachnoid hemorrhage."
+    },
+    {
+      "sentence_id": "S4",
+      "section": "dosage and administration",
+      "text": "Dosage should be reduced to one 30 mg capsule every 4 hours with close monitoring of blood pressure and heart rate;"
+    },
+    {
+      "sentence_id": "S5",
+      "section": "precautions",
+      "text": "nefazodone) - grapefruit juice: after intake of grapefruit juice and nimodipine, the blood pressure lowering effect may last for at least 4 days after the last ingestion of grapefruit juice."
+    },
+    {
+      "sentence_id": "S6",
+      "section": "precautions",
+      "text": "Nimodipine did not impair the fertility and general reproductive performance of male and female Wistar rats following oral doses of up to 30 mg/kg/day when administered daily for more than 10 weeks in the males and 3 weeks in the females prior to mating and continued to day 7 of pregnancy."
+    },
+    {
+      "sentence_id": "S7",
+      "section": "precautions",
+      "text": "This dose in a rat is about 4 times the equivalent clinical dose of 60 mg q4h in a 50 kg patient."
+    }
+  ],
+  "passes_run": [
+    "administration",
+    "dosing",
+    "limits"
+  ]
+}

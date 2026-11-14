@@ -1,0 +1,39 @@
+{
+  "ingredient": "nimodipine",
+  "primary_spl": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
+  "rules": [
+    {
+      "id": "nimodipine-q4h",
+      "family": "min_interval",
+      "hours": 4,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
+        "section": "dosage and administration",
+        "sentence": "The recommended oral dose is 60 mg (two 30 mg capsules) every 4 hours for 21 consecutive days."
+      },
+      "note": "Sentence checked by A on DailyMed 14 Nov; decided quoted. Tier 2 holds for any reading >= 3h48m. DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+      "verified": true
+    },
+    {
+      "id": "nimodipine-meals",
+      "family": "food",
+      "mode": "empty_stomach",
+      "before_meal": 1,
+      "after_meal": 2,
+      "provenance": "interpreted",
+      "loosest": {
+        "before_meal": 0,
+        "after_meal": 0
+      },
+      "source": {
+        "spl_set_id": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
+        "section": "dosage and administration",
+        "sentence": "In general, the capsules should be swallowed whole with a little liquid, preferably not less than one hour before or two hours after meals."
+      },
+      "note": "'preferably' makes this soft; loosest reading is no constraint. DRAFT (Claude, 14 Nov): not yet checked against the label by a human."
+    }
+  ]
+}

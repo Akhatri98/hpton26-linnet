@@ -1,0 +1,35 @@
+{
+  "ingredient": "acetaminophen",
+  "primary_spl": "00146b91-008d-4b16-95b0-6077f98821be",
+  "rules": [
+    {
+      "id": "acetaminophen-interval-6h",
+      "family": "min_interval",
+      "hours": 6,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "00146b91-008d-4b16-95b0-6077f98821be",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be",
+        "section": "dosage and administration",
+        "sentence": "Directions • do not take more than directed (see overdose warning) adults and children 12 years and over • take 2 caplets every 6 hours while symptoms last • do not take more than 6 caplets in 24 hours, unless directed by a doctor • do not use for more than 10 days unless directed by a doctor children under 12 years ask a doctor"
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    },
+    {
+      "id": "acetaminophen-daily-max-4000mg",
+      "family": "daily_max",
+      "amount": 4000,
+      "unit": "mg",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "00146b91-008d-4b16-95b0-6077f98821be",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be",
+        "section": "warnings",
+        "sentence": "Severe liver damage may occur if you take • more than 4,000 mg of acetaminophen in 24 hours • with other drugs containing acetaminophen • 3 or more alcoholic drinks every day while using this product Allergy alert: Acetaminophen may cause severe skin reactions."
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "ingredient": "acetaminophen",
+  "primary_spl": "00146b91-008d-4b16-95b0-6077f98821be",
+  "fallback_spls": [
+    "02386806-02d4-47e3-9c8b-7810146ee795"
+  ],
+  "rules": [
+    {
+      "id": "apap-q6h-otc",
+      "family": "min_interval",
+      "hours": 6,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "00146b91-008d-4b16-95b0-6077f98821be",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be",
+        "section": "dosage and administration",
+        "sentence": "take 2 caplets every 6 hours while symptoms last"
+      },
+      "note": "OTC directions. Applied across all acetaminophen products (ingredient-level spacing). DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+      "verified": true
+    },
+    {
+      "id": "apap-q4h-rx",
+      "family": "min_interval",
+      "hours": 4,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795",
+        "section": "dosage and administration",
+        "sentence": "Take 1 to 2 tablet every 4 hours as needed for pain."
+      },
+      "note": "Rx combination label disagrees with the OTC 6 h: strict tiers use 6, tier 2 uses 4. DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+      "verified": true
+    },
+    {
+      "id": "apap-max-otc",
+      "family": "daily_max",
+      "amount": 4000,
+      "unit": "mg",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "00146b91-008d-4b16-95b0-6077f98821be",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be",
+        "section": "warnings",
+        "sentence": "more than 4,000 mg of acetaminophen in 24 hours"
+      },
+      "note": "Liver warning. The same label says 'Do not use with any other drug containing acetaminophen'; that duplicate-therapy rule is not a timing rule and is surfaced, not solved. DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+      "verified": true
+    },
+    {
+      "id": "apap-max-rx",
+      "family": "daily_max",
+      "amount": 4000,
+      "unit": "mg",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795",
+        "section": "warnings",
+        "sentence": "Most of the cases of liver injury are associated with the use of acetaminophen at doses that exceed 4,000 milligrams per day"
+      },
+      "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+      "verified": true
+    }
+  ]
+}

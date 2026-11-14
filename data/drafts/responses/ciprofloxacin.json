@@ -1,0 +1,11 @@
+{
+  "rules": [
+    {"id": "ciprofloxacin-multivalent-cations-separation", "family": "separation", "target": "group:polyvalent_cations", "before": 2, "after": 6, "sentence": "S25", "provenance": "interpreted", "loosest": {"before": 2, "after": 6}, "note": "Numbers are firm; mapping the label's multivalent cation-containing products to the polyvalent_cations group is a judgment"}
+  ],
+  "memberships": [
+    {"group": "polyvalent_cations", "ingredient": "iron", "sentence": "S24", "provenance": "quoted"},
+    {"group": "polyvalent_cations", "ingredient": "zinc", "sentence": "S24", "provenance": "quoted"},
+    {"group": "polyvalent_cations", "ingredient": "magnesium", "sentence": "S14", "provenance": "quoted"},
+    {"group": "polyvalent_cations", "ingredient": "aluminum", "sentence": "S14", "provenance": "quoted"}
+  ]
+}

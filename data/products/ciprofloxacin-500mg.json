@@ -1,0 +1,14 @@
+{
+  "name": "ciprofloxacin-500mg",
+  "display_name": "Ciprofloxacin 500 mg tablets",
+  "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
+  "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa",
+  "ingredients": {
+    "ciprofloxacin": {
+      "amount": 500,
+      "unit": "mg"
+    }
+  },
+  "dose_note": "One 500 mg tablet per dose.",
+  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human."
+}

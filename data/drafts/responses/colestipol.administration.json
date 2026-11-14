@@ -1,0 +1,1 @@
+{"rules": [{"id": "colestipol-other-drugs-timing", "family": "separation", "target": "*", "before": 4, "after": 1, "sentence": "S3", "provenance": "quoted"}], "memberships": []}

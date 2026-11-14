@@ -1,0 +1,21 @@
+{
+  "model": "claude-haiku (subagent, files backend)",
+  "accepted_rules": 1,
+  "accepted_memberships": [],
+  "rejected": [
+    {
+      "item": {
+        "id": "levothyroxine-once-daily",
+        "family": "min_interval",
+        "hours": 24,
+        "sentence": "S5",
+        "provenance": "interpreted",
+        "loosest": {
+          "hours": 24
+        },
+        "note": "derived from single daily dose"
+      },
+      "reason": "number(s) not stated in S5: hours=24"
+    }
+  ]
+}

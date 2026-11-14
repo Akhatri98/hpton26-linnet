@@ -1,0 +1,25 @@
+{
+  "name": "acetaminophen-500-otc",
+  "display_name": "Acetaminophen 500 mg caplets (OTC)",
+  "spl_set_id": "00146b91-008d-4b16-95b0-6077f98821be",
+  "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be",
+  "ingredients": {
+    "acetaminophen": {
+      "amount": 1000,
+      "unit": "mg"
+    }
+  },
+  "dose_note": "One dose = 2 caplets ('take 2 caplets every 6 hours').",
+  "otc_max_doses": {
+    "count": 3,
+    "provenance": "interpreted",
+    "source": {
+      "spl_set_id": "00146b91-008d-4b16-95b0-6077f98821be",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be",
+      "section": "dosage and administration",
+      "sentence": "do not take more than 6 caplets in 24 hours"
+    },
+    "note": "6 caplets / 2 per dose = 3 doses (interpreted). DRAFT (Claude, 14 Nov): not yet checked against the label by a human."
+  },
+  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human."
+}

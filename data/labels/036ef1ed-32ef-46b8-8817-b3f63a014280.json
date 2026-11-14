@@ -1,0 +1,60 @@
+{
+ "set_id": "036ef1ed-32ef-46b8-8817-b3f63a014280",
+ "id": "ce65b4cc-cb90-4d8e-8831-158b60176bdb",
+ "version": "4",
+ "effective_time": "20250214",
+ "openfda": {
+  "application_number": [
+   "M001"
+  ],
+  "brand_name": [
+   "Tums Chewy Bites Orange and Cream ES"
+  ],
+  "generic_name": [
+   "CALCIUM CARBONATE"
+  ],
+  "manufacturer_name": [
+   "Haleon US Holdings LLC"
+  ],
+  "product_ndc": [
+   "0135-0642"
+  ],
+  "product_type": [
+   "HUMAN OTC DRUG"
+  ],
+  "route": [
+   "ORAL"
+  ],
+  "substance_name": [
+   "CALCIUM CARBONATE"
+  ],
+  "rxcui": [
+   "308915",
+   "1044532"
+  ],
+  "spl_id": [
+   "ce65b4cc-cb90-4d8e-8831-158b60176bdb"
+  ],
+  "spl_set_id": [
+   "036ef1ed-32ef-46b8-8817-b3f63a014280"
+  ],
+  "package_ndc": [
+   "0135-0642-01"
+  ],
+  "is_original_packager": [
+   true
+  ],
+  "unii": [
+   "H0G9379FGK"
+  ]
+ },
+ "dosage_and_administration": [
+  "Directions • adults and children 12 years of age and over: chew 2-4 tablets as symptoms occur, or as directed by a doctor. Chew or crush tablets completely before swallowing. • do not take for symptoms that persist for more than 2 weeks unless advised by a doctor"
+ ],
+ "warnings": [
+  "Warnings Ask a doctor or pharmacist before use if you are presently taking a prescription drug. Antacids may interact with certain prescription drugs. When using this product • do not take more than 6 tablets in 24 hours • if pregnant do not take more than 6 tablets in 24 hours • do not use the maximum dosage for more than 2 weeks, except under the advice and supervision of a doctor Keep out of reach of children."
+ ],
+ "active_ingredient": [
+  "Active ingredient (per tablet) Calcium carbonate 750 mg"
+ ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Inpatient after subarachnoid haemorrhage, on home colestipol",
+  "constructed": true,
+  "note": "Constructed to exercise tier 2. Nimodipine started in hospital; colestipol continued from the home list.",
+  "items": [
+    {"product": "nimodipine-30mg-cap", "prescribed_count": 6},
+    {"product": "colestipol-1g-tab", "prescribed_count": 1}
+  ],
+  "routine": {"meals": {"breakfast": "08:00", "lunch": "12:30", "dinner": "18:00"},
+              "sleep": {"start": "23:00", "end": "07:00"}}
+}
