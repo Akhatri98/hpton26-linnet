@@ -1,0 +1,1 @@
+{"limits": [{"kind": "per_dose", "amount": 60, "unit": "mg", "population": "general", "sentence": "S1", "provenance": "quoted"}, {"kind": "duration_days", "amount": 21, "unit": "days", "population": "general", "sentence": "S1", "provenance": "quoted"}, {"kind": "per_dose", "amount": 30, "unit": "mg", "population": "general", "sentence": "S4", "provenance": "quoted"}]}

@@ -1,71 +1,11 @@
 {
   "ingredient": "acetaminophen-codeine",
   "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
-  "model": "claude-haiku (subagent, files backend)",
+  "model": "claude-haiku-5-5",
   "label_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795",
   "dosing": [
     {
-      "condition": "pain (codeine 15 mg / acetaminophen 300 mg tablets)",
-      "population": "adults",
-      "dose": 1,
-      "dose_max": 2,
-      "unit": "tablets",
-      "every_hours": 4,
-      "times_per_day": null,
-      "duration_days": null,
-      "as_needed": true,
-      "provenance": "quoted",
-      "source": {
-        "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
-        "section": "dosage and administration",
-        "sentence_id": "S6",
-        "sentence": "The usual adult dosage is: Acetaminophen and Codeine P hosphate Tablets (codeine 15 mg and acetaminophen 300 mg): Take 1 to 2 tablets every 4 hours as needed for pain.",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795"
-      },
-      "verified": false
-    },
-    {
-      "condition": "pain (codeine 30 mg / acetaminophen 300 mg tablets)",
-      "population": "adults",
-      "dose": 1,
-      "dose_max": 2,
-      "unit": "tablets",
-      "every_hours": 4,
-      "times_per_day": null,
-      "duration_days": null,
-      "as_needed": true,
-      "provenance": "quoted",
-      "source": {
-        "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
-        "section": "dosage and administration",
-        "sentence_id": "S7",
-        "sentence": "Acetaminophen and Codeine Phosphate Tablets (codeine 30 mg and acetaminophen 300 mg): Take 1 to 2 tablet every 4 hours as needed for pain.",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795"
-      },
-      "verified": false
-    },
-    {
-      "condition": "pain (codeine 60 mg / acetaminophen 300 mg tablet)",
-      "population": "adults",
-      "dose": 1,
-      "dose_max": null,
-      "unit": "tablets",
-      "every_hours": 4,
-      "times_per_day": null,
-      "duration_days": null,
-      "as_needed": true,
-      "provenance": "quoted",
-      "source": {
-        "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
-        "section": "dosage and administration",
-        "sentence_id": "S8",
-        "sentence": "Acetaminophen and Codeine Phosphate Tablets (codeine 60 mg and acetaminophen 300 mg): Take one tablet every 4 hours as needed for pain.",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795"
-      },
-      "verified": false
-    },
-    {
-      "condition": "pain, initial dose as first opioid (acetaminophen component)",
+      "condition": "pain",
       "population": "adults",
       "dose": 300,
       "dose_max": 600,
@@ -85,15 +25,117 @@
       "verified": false
     },
     {
-      "condition": "pain, initial dose as first opioid (codeine component)",
+      "condition": "pain",
       "population": "adults",
-      "dose": 15,
-      "dose_max": 60,
-      "unit": "mg",
+      "dose": 1,
+      "dose_max": 2,
+      "unit": "tablets",
       "every_hours": 4,
       "times_per_day": null,
       "duration_days": null,
       "as_needed": true,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
+        "section": "dosage and administration",
+        "sentence_id": "S6",
+        "sentence": "The usual adult dosage is: Acetaminophen and Codeine P hosphate Tablets (codeine 15 mg and acetaminophen 300 mg): Take 1 to 2 tablets every 4 hours as needed for pain.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795"
+      },
+      "verified": false
+    },
+    {
+      "condition": "pain",
+      "population": "adults",
+      "dose": 1,
+      "dose_max": 2,
+      "unit": "tablets",
+      "every_hours": 4,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": true,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
+        "section": "dosage and administration",
+        "sentence_id": "S7",
+        "sentence": "Acetaminophen and Codeine Phosphate Tablets (codeine 30 mg and acetaminophen 300 mg): Take 1 to 2 tablet every 4 hours as needed for pain.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795"
+      },
+      "verified": false
+    },
+    {
+      "condition": "pain",
+      "population": "adults",
+      "dose": 1,
+      "dose_max": null,
+      "unit": "tablets",
+      "every_hours": 4,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": true,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
+        "section": "dosage and administration",
+        "sentence_id": "S8",
+        "sentence": "Acetaminophen and Codeine Phosphate Tablets (codeine 60 mg and acetaminophen 300 mg): Take one tablet every 4 hours as needed for pain.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795"
+      },
+      "verified": false
+    }
+  ],
+  "limits": [
+    {
+      "kind": "per_dose",
+      "amount": 2,
+      "unit": "tablets",
+      "population": "adults",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
+        "section": "dosage and administration",
+        "sentence_id": "S6",
+        "sentence": "The usual adult dosage is: Acetaminophen and Codeine P hosphate Tablets (codeine 15 mg and acetaminophen 300 mg): Take 1 to 2 tablets every 4 hours as needed for pain.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795"
+      },
+      "verified": false
+    },
+    {
+      "kind": "per_dose",
+      "amount": 2,
+      "unit": "tablets",
+      "population": "adults",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
+        "section": "dosage and administration",
+        "sentence_id": "S7",
+        "sentence": "Acetaminophen and Codeine Phosphate Tablets (codeine 30 mg and acetaminophen 300 mg): Take 1 to 2 tablet every 4 hours as needed for pain.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795"
+      },
+      "verified": false
+    },
+    {
+      "kind": "per_dose",
+      "amount": 1,
+      "unit": "tablets",
+      "population": "adults",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
+        "section": "dosage and administration",
+        "sentence_id": "S8",
+        "sentence": "Acetaminophen and Codeine Phosphate Tablets (codeine 60 mg and acetaminophen 300 mg): Take one tablet every 4 hours as needed for pain.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795"
+      },
+      "verified": false
+    },
+    {
+      "kind": "per_dose",
+      "amount": 600,
+      "unit": "mg",
+      "population": "general",
       "provenance": "quoted",
       "source": {
         "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
@@ -103,14 +145,42 @@
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795"
       },
       "verified": false
-    }
-  ],
-  "limits": [
+    },
+    {
+      "kind": "per_dose",
+      "amount": 60,
+      "unit": "mg",
+      "population": "general",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
+        "section": "dosage and administration",
+        "sentence_id": "S5",
+        "sentence": "Initial Dosage Use of acetaminophen and codeine phosphate tablets as the First Opioid Analgesic Initiate treatment with acetaminophen and codeine phosphate tablets in a dosing range of 300 mg to 600 mg of acetaminophen and 15 mg to 60 mg of codeine phosphate every 4 hours as needed for pain, at the lowest dose necessary to achieve adequate analgesia.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795"
+      },
+      "verified": false
+    },
     {
       "kind": "per_day",
       "amount": 360,
       "unit": "mg",
-      "population": "adults",
+      "population": "general",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
+        "section": "dosage and administration",
+        "sentence_id": "S9",
+        "sentence": "Single Doses (Range) Maximum 24-Hour Dose Codeine Phosphate 15 mg to 60 mg 360 mg Acetaminophen 300 mg to 1,000 mg 4,000 mg The prescriber must determine the number of tablets per dose, and the maximum number of tablets per 24 hours, based upon the above dosage guidance.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795"
+      },
+      "verified": false
+    },
+    {
+      "kind": "per_day",
+      "amount": 4000,
+      "unit": "mg",
+      "population": "general",
       "provenance": "quoted",
       "source": {
         "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
@@ -135,52 +205,67 @@
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795"
       },
       "verified": false
+    },
+    {
+      "kind": "per_day",
+      "amount": 4000,
+      "unit": "mg",
+      "population": "general",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
+        "section": "warnings",
+        "sentence_id": "S47",
+        "sentence": "Instruct patients to seek medical attention immediately upon ingestion of more than 4,000 milligrams of acetaminophen per day, even if they feel well.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795"
+      },
+      "verified": false
     }
   ],
   "administration": [
     {
-      "id": "acetaminophen-codeine-interval-4h",
+      "id": "acetaminophen-codeine-min-interval-4h",
       "family": "min_interval",
       "hours": 4,
       "provenance": "quoted",
+      "note": "Dosed every 4 hours as needed for pain. | DRAFT: proposed by a language model.",
       "source": {
         "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795",
         "section": "dosage and administration",
         "sentence": "Initial Dosage Use of acetaminophen and codeine phosphate tablets as the First Opioid Analgesic Initiate treatment with acetaminophen and codeine phosphate tablets in a dosing range of 300 mg to 600 mg of acetaminophen and 15 mg to 60 mg of codeine phosphate every 4 hours as needed for pain, at the lowest dose necessary to achieve adequate analgesia."
       },
-      "verified": false,
-      "note": "DRAFT: proposed by a language model."
+      "verified": false
     },
     {
-      "id": "acetaminophen-codeine-max-codeine-360mg",
-      "family": "daily_max",
-      "amount": 360,
-      "unit": "mg",
-      "provenance": "quoted",
-      "source": {
-        "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795",
-        "section": "dosage and administration",
-        "sentence": "Single Doses (Range) Maximum 24-Hour Dose Codeine Phosphate 15 mg to 60 mg 360 mg Acetaminophen 300 mg to 1,000 mg 4,000 mg The prescriber must determine the number of tablets per dose, and the maximum number of tablets per 24 hours, based upon the above dosage guidance."
-      },
-      "verified": false,
-      "note": "DRAFT: proposed by a language model."
-    },
-    {
-      "id": "acetaminophen-codeine-max-acetaminophen-4000mg",
+      "id": "acetaminophen-codeine-daily-max-acetaminophen-4000mg",
       "family": "daily_max",
       "amount": 4000,
       "unit": "mg",
       "provenance": "quoted",
+      "note": "Do not take more than 4,000 mg of acetaminophen per day. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795",
+        "section": "precautions",
+        "sentence": "Maximum Daily Dose of Acetaminophen Inform patients not to take more than 4,000 milligrams of acetaminophen per day."
+      },
+      "verified": false
+    },
+    {
+      "id": "acetaminophen-codeine-daily-max-codeine-360mg",
+      "family": "daily_max",
+      "amount": 360,
+      "unit": "mg",
+      "provenance": "quoted",
+      "note": "Maximum 24-hour codeine phosphate dose of 360 mg. | DRAFT: proposed by a language model.",
       "source": {
         "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795",
         "section": "dosage and administration",
         "sentence": "Single Doses (Range) Maximum 24-Hour Dose Codeine Phosphate 15 mg to 60 mg 360 mg Acetaminophen 300 mg to 1,000 mg 4,000 mg The prescriber must determine the number of tablets per dose, and the maximum number of tablets per 24 hours, based upon the above dosage guidance."
       },
-      "verified": false,
-      "note": "DRAFT: proposed by a language model."
+      "verified": false
     }
   ],
   "memberships": [],
@@ -225,14 +310,6 @@
       "sentence_id": "S46",
       "section": "warnings",
       "sentence": "Instruct patients to look for acetaminophen or APAP on package labels and not to use more than one product that contains acetaminophen."
-    },
-    {
-      "priority": 2,
-      "kind": "review",
-      "note": "",
-      "sentence_id": "S47",
-      "section": "warnings",
-      "sentence": "Instruct patients to seek medical attention immediately upon ingestion of more than 4,000 milligrams of acetaminophen per day, even if they feel well."
     },
     {
       "priority": 2,

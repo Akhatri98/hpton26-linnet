@@ -1,21 +1,31 @@
 {
-  "model": "claude-haiku (subagent, files backend)",
+  "model": "claude-haiku-5-5",
   "accepted_rules": 1,
   "accepted_memberships": [],
   "rejected": [
     {
       "item": {
-        "id": "levothyroxine-once-daily",
-        "family": "min_interval",
-        "hours": 24,
-        "sentence": "S5",
-        "provenance": "interpreted",
-        "loosest": {
-          "hours": 24
-        },
-        "note": "derived from single daily dose"
+        "id": "levothyroxine-separation-interfering-drugs",
+        "family": "separation",
+        "target": "*",
+        "before": 4,
+        "after": 4,
+        "sentence": "S6",
+        "provenance": "quoted",
+        "note": "At least 4 hours before or after drugs known to interfere with absorption."
       },
-      "reason": "number(s) not stated in S5: hours=24"
+      "reason": "target '*' (every other drug) but S6 does not refer to other drugs in general; use a specific ingredient or group"
+    },
+    {
+      "item": {
+        "id": "levothyroxine-biotin-hold",
+        "family": "min_interval",
+        "hours": 48,
+        "sentence": "S4",
+        "provenance": "quoted",
+        "note": "Stop biotin at least 2 days (48 hours) before assessing TSH and/or T4 levels; not a dosing interval, relates to lab testing."
+      },
+      "reason": "number(s) not stated in S4: hours=48"
     }
   ]
 }

@@ -3,7 +3,7 @@
   "primary_spl": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
   "rules": [
     {
-      "id": "levothyroxine-before-breakfast-window",
+      "id": "levothyroxine-breakfast-window",
       "family": "food",
       "mode": "before_meal_window",
       "meal": "breakfast",
@@ -14,14 +14,14 @@
         "earliest": 1,
         "latest": 0.5
       },
+      "note": "Administer one-half to one hour before breakfast with a full glass of water. | DRAFT: proposed by a language model.",
       "source": {
         "spl_set_id": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7",
         "section": "dosage and administration",
         "sentence": "(2.4) 2.1 Important Administration Instructions Administer levothyroxine sodium tablets as a single daily dose, on an empty stomach, one-half to one hour before breakfast with a full glass of water to avoid choking or gagging [see Adverse Reactions (6) ]."
       },
-      "verified": false,
-      "note": "DRAFT: proposed by a language model."
+      "verified": false
     }
   ]
 }

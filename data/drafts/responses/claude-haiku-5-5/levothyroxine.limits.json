@@ -1,0 +1,1 @@
+{"limits": [{"kind": "per_day", "amount": 1.6, "unit": "mcg", "population": "adults", "sentence": "S13", "provenance": "quoted"}, {"kind": "per_day", "amount": 1.6, "unit": "mcg", "population": "geriatric", "sentence": "S14", "provenance": "quoted"}, {"kind": "per_day", "amount": 25, "unit": "mcg", "population": "pregnant", "sentence": "S19", "provenance": "quoted"}]}

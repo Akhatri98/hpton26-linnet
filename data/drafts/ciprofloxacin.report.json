@@ -1,6 +1,6 @@
 {
-  "model": "claude-haiku (subagent, files backend)",
-  "accepted_rules": 1,
+  "model": "claude-haiku-5-5",
+  "accepted_rules": 2,
   "accepted_memberships": [
     {
       "group": "polyvalent_cations",
@@ -10,6 +10,38 @@
       "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
       "verified": false,
       "matched": "label names 'calcium'; calcium_carbonate is a salt of it"
+    },
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "iron",
+      "provenance": "quoted",
+      "basis": "or products containing calcium, iron, or zinc and dairy products) Ciprofloxacin should be taken at least two hours before or six hours after Multivalent cation-containing products administration [see Dosage and Administration (2.4)] Decrease ciprofloxacin absorption, resulting in lower serum and urine levels Probenecid Use with caution (interferes with renal tubular secretion of ciprofloxacin and increases ciprofloxacin serum levels) Potentiation of ciprofloxacin toxicity may occur.",
+      "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
+      "verified": false
+    },
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "zinc",
+      "provenance": "quoted",
+      "basis": "or products containing calcium, iron, or zinc and dairy products) Ciprofloxacin should be taken at least two hours before or six hours after Multivalent cation-containing products administration [see Dosage and Administration (2.4)] Decrease ciprofloxacin absorption, resulting in lower serum and urine levels Probenecid Use with caution (interferes with renal tubular secretion of ciprofloxacin and increases ciprofloxacin serum levels) Potentiation of ciprofloxacin toxicity may occur.",
+      "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
+      "verified": false
+    },
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "magnesium",
+      "provenance": "quoted",
+      "basis": "2.4 Important Administration Instructions With Multivalent Cations Administer ciprofloxacin tablets at least 2 hours before or 6 hours after magnesium/aluminum antacids;",
+      "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
+      "verified": false
+    },
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "aluminum",
+      "provenance": "quoted",
+      "basis": "2.4 Important Administration Instructions With Multivalent Cations Administer ciprofloxacin tablets at least 2 hours before or 6 hours after magnesium/aluminum antacids;",
+      "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
+      "verified": false
     }
   ],
   "rejected": []

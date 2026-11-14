@@ -1,17 +1,17 @@
 {
   "ingredient": "colestipol",
   "spl_set_id": "03ca5800-4211-4383-a332-be88bd9b5304",
-  "model": "claude-haiku (subagent, files backend)",
+  "model": "claude-haiku-5-5",
   "label_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03ca5800-4211-4383-a332-be88bd9b5304",
   "dosing": [
     {
-      "condition": "general",
+      "condition": "hyperlipoproteinemia",
       "population": "general",
       "dose": 2,
       "dose_max": null,
       "unit": "g",
       "every_hours": null,
-      "times_per_day": 1,
+      "times_per_day": null,
       "duration_days": null,
       "as_needed": false,
       "provenance": "quoted",
@@ -25,53 +25,33 @@
       "verified": false
     },
     {
-      "condition": "general",
+      "condition": "hyperlipoproteinemia",
       "population": "general",
       "dose": 2,
       "dose_max": null,
       "unit": "g",
       "every_hours": null,
-      "times_per_day": 2,
+      "times_per_day": null,
       "duration_days": null,
       "as_needed": false,
       "provenance": "quoted",
       "source": {
         "spl_set_id": "03ca5800-4211-4383-a332-be88bd9b5304",
         "section": "dosage and administration",
-        "sentence_id": "S1",
-        "sentence": "The starting dose should be 2 grams once or twice daily.",
+        "sentence_id": "S2",
+        "sentence": "Dosage increases of 2 grams, once or twice daily should occur at 1-or 2-month intervals.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03ca5800-4211-4383-a332-be88bd9b5304"
       },
       "verified": false
     },
     {
-      "condition": "pre-existing constipation",
-      "population": "general",
+      "condition": "hyperlipoproteinemia",
+      "population": "patients with pre-existing constipation",
       "dose": 2,
       "dose_max": null,
       "unit": "g",
       "every_hours": null,
-      "times_per_day": 1,
-      "duration_days": null,
-      "as_needed": false,
-      "provenance": "quoted",
-      "source": {
-        "spl_set_id": "03ca5800-4211-4383-a332-be88bd9b5304",
-        "section": "precautions",
-        "sentence_id": "S12",
-        "sentence": "In patients with pre-existing constipation, the starting dose should be 2 grams once or twice a day.",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03ca5800-4211-4383-a332-be88bd9b5304"
-      },
-      "verified": false
-    },
-    {
-      "condition": "pre-existing constipation",
-      "population": "general",
-      "dose": 2,
-      "dose_max": null,
-      "unit": "g",
-      "every_hours": null,
-      "times_per_day": 2,
+      "times_per_day": null,
       "duration_days": null,
       "as_needed": false,
       "provenance": "quoted",
@@ -85,10 +65,26 @@
       "verified": false
     }
   ],
-  "limits": [],
+  "limits": [
+    {
+      "kind": "per_dose",
+      "amount": 2,
+      "unit": "g",
+      "population": "general",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "03ca5800-4211-4383-a332-be88bd9b5304",
+        "section": "dosage and administration",
+        "sentence_id": "S1",
+        "sentence": "The starting dose should be 2 grams once or twice daily.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03ca5800-4211-4383-a332-be88bd9b5304"
+      },
+      "verified": false
+    }
+  ],
   "administration": [
     {
-      "id": "colestipol-other-drugs-timing",
+      "id": "colestipol-separation-other-drugs",
       "family": "separation",
       "target": "*",
       "before": 4,
@@ -97,8 +93,8 @@
       "source": {
         "spl_set_id": "03ca5800-4211-4383-a332-be88bd9b5304",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03ca5800-4211-4383-a332-be88bd9b5304",
-        "section": "dosage and administration",
-        "sentence": "Patients should take other drugs at least one hour before or four hours after colestipol hydrochloride tablets to minimize possible interference with their absorption."
+        "section": "drug interactions",
+        "sentence": "Patients should take other drugs at least one hour before or four hours after colestipol hydrochloride tablets to avoid impeding their absorption."
       },
       "verified": false,
       "note": "DRAFT: proposed by a language model."
@@ -119,14 +115,6 @@
       "priority": 2,
       "kind": "review",
       "note": "",
-      "sentence_id": "S2",
-      "section": "dosage and administration",
-      "sentence": "Dosage increases of 2 grams, once or twice daily should occur at 1-or 2-month intervals."
-    },
-    {
-      "priority": 2,
-      "kind": "review",
-      "note": "",
       "sentence_id": "S8",
       "section": "drug interactions",
       "sentence": "the time to reach maximum concentration was delayed approximately 30 minutes."
@@ -134,15 +122,15 @@
     {
       "priority": 6,
       "kind": "restates",
-      "note": "repeats S3",
-      "sentence_id": "S6",
-      "section": "drug interactions",
-      "sentence": "Patients should take other drugs at least one hour before or four hours after colestipol hydrochloride tablets to avoid impeding their absorption."
+      "note": "repeats S6",
+      "sentence_id": "S3",
+      "section": "dosage and administration",
+      "sentence": "Patients should take other drugs at least one hour before or four hours after colestipol hydrochloride tablets to minimize possible interference with their absorption."
     },
     {
       "priority": 6,
       "kind": "restates",
-      "note": "repeats S3",
+      "note": "repeats S6",
       "sentence_id": "S16",
       "section": "precautions",
       "sentence": "If you are taking other medications, you should take them at least one hour before or four hours after taking colestipol hydrochloride tablets."

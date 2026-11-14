@@ -3,7 +3,7 @@
   "primary_spl": "03ca5800-4211-4383-a332-be88bd9b5304",
   "rules": [
     {
-      "id": "colestipol-other-drugs-timing",
+      "id": "colestipol-separation-other-drugs",
       "family": "separation",
       "target": "*",
       "before": 4,
@@ -12,8 +12,8 @@
       "source": {
         "spl_set_id": "03ca5800-4211-4383-a332-be88bd9b5304",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03ca5800-4211-4383-a332-be88bd9b5304",
-        "section": "dosage and administration",
-        "sentence": "Patients should take other drugs at least one hour before or four hours after colestipol hydrochloride tablets to minimize possible interference with their absorption."
+        "section": "drug interactions",
+        "sentence": "Patients should take other drugs at least one hour before or four hours after colestipol hydrochloride tablets to avoid impeding their absorption."
       },
       "verified": false,
       "note": "DRAFT: proposed by a language model."

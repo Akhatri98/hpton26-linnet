@@ -322,21 +322,37 @@ def main(argv=None) -> int:
                 continue
             results[ps] = _check_pass(ps, json.loads(f.read_text(encoding="utf-8")), args.ingredient, args.spl, sents)
         else:
-            from .llm import complete
-            p = prompt
-            for _ in range(args.retries + 1):
-                c = _check_pass(ps, json.loads(complete(p, args.model)), args.ingredient, args.spl, sents)
+            from .llm import DEFAULT_MODEL, complete
+            args.model = args.model or DEFAULT_MODEL
+            save = rdir / re.sub(r"[^A-Za-z0-9._-]", "_", args.model)  # raw answers, one folder per model
+            save.mkdir(parents=True, exist_ok=True)
+            p, c = prompt, None
+            for attempt in range(args.retries + 1):
+                print(f"  {args.ingredient} / {ps}  attempt {attempt + 1}")
+                raw = complete(p, args.model)
+                (save / f"{args.ingredient}.{ps}.json").write_text(raw + "\n", encoding="utf-8")
+                try:
+                    answer = json.loads(raw)
+                except json.JSONDecodeError as e:
+                    p = prompt + f"\n\nYour previous answer was not valid JSON ({e}). Reply with one JSON object only."
+                    continue
+                c = _check_pass(ps, answer, args.ingredient, args.spl, sents)
                 if not c.rejected:
                     break
                 p = (prompt + "\n\nYour previous answer had these problems; fix them and answer again:\n"
                      + "\n".join(f"- {r['reason']}: {json.dumps(r['item'])}" for r in c.rejected))
-            results[ps] = c
+            if c is not None:
+                results[ps] = c
     model = args.model or "files backend"
     rec = write_record(args.ingredient, args.spl, sents, results, model)
     data = json.loads(rec.read_text(encoding="utf-8"))
     print(f"{args.ingredient}: dosing {len(data['dosing'])}, limits {len(data['limits'])}, "
           f"administration {len(data['administration'])}, memberships {len(data['memberships'])}, "
           f"rejected {len(data['rejected'])}, unaccounted-for sentences {len(data['unaccounted_for'])}  ->  {rec}")
+    if args.cmd == "run":
+        from .llm import SPENT
+        print(f"spent this run: {SPENT['calls']} calls, {SPENT['input_tokens']} in / {SPENT['output_tokens']} out tokens, "
+              f"~${SPENT['usd']:.4f}")
     return 0
 
 

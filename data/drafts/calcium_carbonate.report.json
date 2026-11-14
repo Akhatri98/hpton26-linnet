@@ -1,5 +1,5 @@
 {
-  "model": "claude-haiku (subagent, files backend)",
+  "model": "claude-haiku-5-5",
   "accepted_rules": 0,
   "accepted_memberships": [],
   "rejected": []

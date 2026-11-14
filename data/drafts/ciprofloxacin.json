@@ -3,20 +3,34 @@
   "primary_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
   "rules": [
     {
-      "id": "ciprofloxacin-multivalent-cations",
+      "id": "ciprofloxacin-min-interval-12h",
+      "family": "min_interval",
+      "hours": 12,
+      "provenance": "quoted",
+      "note": "Standard adult dosing is every 12 hours; other renal-adjusted intervals (q18h, q24h) are not included here. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa",
+        "section": "dosage and administration",
+        "sentence": "Adult Dosage Guidelines Infection Dose Frequency Duration Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal 500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) 500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Adults with creatinine clearance 3050 mL/min 250500 mg q 12 h ( 2.3 ) Adults with creatinine clearance 529 mL/min 250500 mg q 18 h ( 2.3 ) Patients on hemodialysis or peritoneal dialysis 250500 mg q 24 h (after dialysis) ( 2.3 ) Pediatric Oral Dosage Guidelines Infection Dose Frequency Duration Complicated UTI and Pyelonephritis (1 to 17 years of age) 10-20 mg/kg (maximum 750 mg per dose) Every 12 hours 10 - 21 days Inhalational Anthrax (Post-Exposure) 15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague 15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.1 Dosage in Adults The determination of dosage and duration for any particular patient must take into consideration the severity and nature of the infection, the susceptibility of the causative microorganism, the integrity of the patient's host-defense mechanisms, and the status of renal and hepatic function."
+      },
+      "verified": false
+    },
+    {
+      "id": "ciprofloxacin-polyvalent-cation-separation",
       "family": "separation",
       "target": "group:polyvalent_cations",
       "before": 2,
       "after": 6,
       "provenance": "quoted",
+      "note": "Take ciprofloxacin at least 2 hours before or 6 hours after multivalent cation-containing drugs. S14 also states the same windows for magnesium/aluminum antacids, and S14 allows taking ciprofloxacin with a meal containing these products. | DRAFT: proposed by a language model.",
       "source": {
         "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa",
         "section": "drug interactions",
         "sentence": "Take ciprofloxacin 2 hours before or 6 hours after administration of multivalent cation containing drugs ( 7 )"
       },
-      "verified": false,
-      "note": "DRAFT: proposed by a language model."
+      "verified": false
     }
   ]
 }

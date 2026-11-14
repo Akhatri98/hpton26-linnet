@@ -4,3 +4,4 @@ uvicorn==0.54.0
 pydantic==2.14.3
 pytest==9.2.0
 httpx==0.28.1  # tests only (FastAPI TestClient)
+anthropic==2.8.0  # library/llm.py (extraction only; the solver never calls a model)
