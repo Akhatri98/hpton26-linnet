@@ -45,7 +45,7 @@ FDA label (public)                                   Patient (stays in memory)
 | Review queue | deterministic | label sentences with numbers that no accepted row uses, sorted so likely misses come first |
 | Sign-off | human | nothing reaches the solver as verified without it; unverified rules are flagged on the card |
 | Ingredients of a product | deterministic | RxNorm (NLM); model fallback only behind a flag, only when RxNorm has no data |
-| Scheduling, tiers, conflicts | deterministic | Z3 (linear real arithmetic over a circular 24-hour day) |
+| Scheduling, tiers, conflicts | deterministic | Z3 (linear real arithmetic over a circular 24-hour day), encoded in C++ against Z3's native API |
 | Checking every schedule shown | deterministic | an independent verifier in exact rational arithmetic |
 
 The model never sees patient data, and the solver never calls a model.
@@ -125,6 +125,8 @@ py -m venv .venv
 .venv/Scripts/python -m pytest                                   # tests
 ```
 
+The solver core is C++ (`solver/native/linnet_solver.cpp`). It is compiled on first use and needs a C++17 compiler: `g++` or `clang++` on PATH (MSYS2 on Windows), or set `CXX`. To build it by hand: `.venv/Scripts/python -m solver.native.build`. Z3's headers and library come from the `z3-solver` wheel.
+
 Extraction (optional, needs `ANTHROPIC_API_KEY` in `.env`):
 
 ```bash
@@ -135,7 +137,7 @@ Extraction (optional, needs `ANTHROPIC_API_KEY` in `.env`):
 
 | Path | What |
 |---|---|
-| `solver/` | Z3 encoding, independent verifier |
+| `solver/` | Z3 encoding in C++ (`native/`), its Python binding, independent verifier |
 | `library/` | label schema and loading, extraction, checks, review queue, sign-off store, evaluation |
 | `linnet/` | patient input, tiers, conflicts, greedy baseline, API, solver evaluation |
 | `web/` | the single-page UI |

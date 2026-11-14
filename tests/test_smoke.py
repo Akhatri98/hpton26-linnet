@@ -1,14 +1,15 @@
-import z3
+from solver.native import Native
 
 
-def test_z3_solver_and_optimize_available():
-    x = z3.Real("x")
-    s = z3.Solver()
-    s.add(x > 1, x < 2)
-    assert s.check() == z3.sat
+def test_native_solver_and_optimizer_available():
+    """The C++ core builds, loads against libz3, and answers on both back ends."""
+    s = Native()
+    s.product("X", 1, True)
+    assert s.check(s.tracked()) == "sat"
+    assert len(s.dose_times("X", 1)) == 1
 
-    o = z3.Optimize()
-    o.add(x >= 0)
-    o.minimize(x)
-    assert o.check() == z3.sat
-    assert o.model()[x] == 0
+    o = Native(optimize=True)
+    o.product("X", 1, True)
+    o.minimize_times()
+    assert o.check(o.tracked()) == "sat"
+    assert o.dose_times("X", 1) == [0]

@@ -1,4 +1,4 @@
-z3-solver==5.4.1.0
+z3-solver==5.4.1.0  # libz3 + C++ headers for solver/native; its Python module is not imported
 fastapi==0.162.7
 uvicorn==0.54.0
 pydantic==2.14.3

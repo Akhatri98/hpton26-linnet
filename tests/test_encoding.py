@@ -6,8 +6,6 @@ No real drugs here. Product names are placeholders; numbers are arbitrary.
 import random
 from fractions import Fraction as F
 
-import z3
-
 from solver.encode import build, check, solve
 from solver.model import IngredientCeiling, IngredientInterval, MinInterval, Product, Regimen, Separation, Window
 from solver.verify import violations
@@ -184,7 +182,7 @@ def test_same_encoding_works_under_optimize():
         ),
     )
     enc = build(reg, optimize=True)
-    enc.solver.maximize(enc.slots["OTC"].count())
+    enc.solver.maximize_count("OTC")
     r = check(enc)
     assert_valid(reg, r)
     # Free arcs between RX doses: 10-12, 16-18, 22-06 (8 h). Gaps of 2 h fit
@@ -192,7 +190,7 @@ def test_same_encoding_works_under_optimize():
     assert len(r.schedule["OTC"]) == 4
 
     enc2 = build(reg, optimize=True, counts={"OTC": 4})
-    enc2.solver.add(z3.And(*[t < 5 for t in enc2.slots["OTC"].t]))  # untracked: [0, 5) fits 0,2,4 only
+    enc2.add_hard(Window("otc-early", "OTC", ((0, 4),)))  # untracked: [0, 4] fits 0,2,4 only
     r2 = check(enc2)
     assert r2.status == "unsat" and "reported::OTC" in r2.core
 
@@ -211,8 +209,11 @@ class _AlwaysUnknown:
     def __init__(self, inner):
         self._inner = inner
 
-    def check(self, *a):
-        return z3.unknown
+    def __getattr__(self, name):
+        return getattr(self._inner, name)
+
+    def check(self, ids):
+        return "unknown"
 
     def reason_unknown(self):
         return "timeout (simulated)"

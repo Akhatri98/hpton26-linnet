@@ -21,16 +21,13 @@ from dataclasses import dataclass, field
 from fractions import Fraction
 from typing import Optional
 
-import z3
-
 from library.load import Built, Library, build_regimen
-from solver.encode import DAY, Encoding, _q, build, check, forward, read_model
+from solver.encode import DAY, FREE, build, check
 from solver.verify import violations
 
 from .conflicts import Conflict, find_conflicts
 from .patient import Patient
 
-z3.set_param("smt.random_seed", 0)  # deterministic re-runs
 EPS = Fraction(1, 60)  # one minute: anything smaller is "unchanged"
 
 
@@ -63,26 +60,6 @@ class Report:
     solves: list[str] = field(default_factory=list)  # audit trail: which solves ran and how they ended
 
 
-def _awake(t, wake: Fraction, bed: Fraction, early, late) -> z3.BoolRef:
-    """t lies in the awake arc [wake - early, bed + late] on the circular day."""
-    awake_len = (bed - wake) % DAY
-    return z3.Or(forward(_q(wake), t) <= _q(awake_len) + late, forward(t, _q(wake)) <= early)
-
-
-def _add_sleep(enc: Encoding, wake, bed, early=None, late=None) -> None:
-    early = _q(0) if early is None else early
-    late = _q(0) if late is None else late
-    for p, s in enc.slots.items():
-        enc.track(f"routine::sleep@{p}",
-                  z3.And(True, *[z3.Implies(o, _awake(t, wake, bed, early, late)) for t, o in s.doses()]))
-
-
-def _canonical(enc: Encoding) -> None:
-    """Secondary objective: earliest valid dose times. Many schedules tie; this
-    picks one deterministically so a re-run shows the same card."""
-    enc.solver.minimize(z3.Sum([z3.If(o, t, _q(0)) for s in enc.slots.values() for t, o in s.doses()] or [_q(0)]))
-
-
 def _notes(built: Built) -> list[str]:
     out = []
     if built.rejected:  # first and loudest: the result rests on facts a reviewer said are wrong
@@ -102,8 +79,9 @@ def run(lib: Library, patient: Patient, timeout_ms: int = 10_000) -> Report:
     # --- Solve A: tier 0 -------------------------------------------------------------
     built_a = build_regimen(lib, patient.library_items(), "strict")
     enc_a = build(built_a.regimen, counts=reported, meals=meals0, timeout_ms=timeout_ms, optimize=True)
-    _add_sleep(enc_a, wake, bed)
-    _canonical(enc_a)
+    awake_len = (bed - wake) % DAY
+    enc_a.solver.sleep(wake, awake_len)
+    enc_a.solver.minimize_times()  # many schedules tie; earliest times makes a re-run show the same card
     ra = check(enc_a)
     report = Report(None, "unknown", patient, notes=_notes(built_a))
     report.solves.append(f"A (as reported, strict): {ra.status}")
@@ -133,34 +111,23 @@ def run(lib: Library, patient: Patient, timeout_ms: int = 10_000) -> Report:
     # --- Solve C: tier 1 -------------------------------------------------------------
     w = patient.weights
     built_c = built_a
-    meal_vars = {k: z3.Real(f"meal::{k}") for k in meals0}
-    enc_c = build(built_c.regimen, meals=meal_vars, timeout_ms=timeout_ms, optimize=True)
+    enc_c = build(built_c.regimen, meals={k: FREE for k in meals0}, timeout_ms=timeout_ms, optimize=True)
     opt = enc_c.solver
-    costs, components = [], []  # components: (Change template, z3 magnitude term)
+    components = []  # (kind, what, name of the solver term measuring the change)
 
-    for k, m in meal_vars.items():
-        dev = z3.Real(f"dev::{k}")
-        opt.add(m >= 0, m < DAY, dev >= m - _q(meals0[k]), dev >= _q(meals0[k]) - m,
-                dev <= _q(w.max_meal_shift_hours))
-        costs.append(_q(w.meal_shift_per_hour) * dev)
-        components.append((("meal", k), dev))
+    for k in meals0:
+        opt.meal_shift(k, meals0[k], w.max_meal_shift_hours, w.meal_shift_per_hour)
+        components.append(("meal", k, f"dev::{k}"))
 
-    early, late = z3.Real("sleep::wake_earlier"), z3.Real("sleep::bed_later")
-    opt.add(early >= 0, late >= 0, early <= _q(w.max_sleep_shift_hours), late <= _q(w.max_sleep_shift_hours))
-    _add_sleep(enc_c, wake, bed, early, late)
-    costs.append(_q(w.sleep_shift_per_hour) * (early + late))
-    components += [(("sleep", "wake"), early), (("sleep", "bedtime"), late)]
+    opt.sleep(wake, awake_len, w.max_sleep_shift_hours, w.sleep_shift_per_hour)
+    components += [("sleep", "wake", "sleep::wake_earlier"), ("sleep", "bedtime", "sleep::bed_later")]
 
     for p, n in reported.items():
-        cnt = z3.ToReal(enc_c.slots[p].count())
-        enc_c.track(f"reported_cap::{p}", cnt <= n)  # suggest fewer, never more
-        dropped = _q(n) - cnt
-        costs.append(_q(w.dose_dropped) * dropped)
-        components.append((("dose", p), dropped))
+        opt.reported_cap(p, n, w.dose_dropped)  # suggest fewer, never more
+        components.append(("dose", p, f"dropped::{p}"))
 
-    total = z3.Sum(costs)
-    opt.minimize(total)  # lexicographic: cost first,
-    _canonical(enc_c)    # then earliest times among equal-cost schedules
+    opt.minimize_cost()   # lexicographic: cost first,
+    opt.minimize_times()  # then earliest times among equal-cost schedules
 
     options: list[Option] = []
     for _ in range(3):
@@ -169,15 +136,14 @@ def run(lib: Library, patient: Patient, timeout_ms: int = 10_000) -> Report:
             if not options:
                 report.solves.append(f"C (smallest change): {rc.status}")
             break
-        m = rc.model
-        changes, signature = [], []
-        for (kind, what), term in components:
-            v = _val(m, term)
-            changed = v > EPS
-            # Superset test for the block below: continuous shifts count as "also
-            # changed" if nonzero; dose drops only if at least as many are dropped.
-            signature.append((term >= _q(v)) if kind == "dose" else (term > _q(EPS)) if changed else None)
-            if not changed:
+        # Read this option's changes, and make the next option leave at least one
+        # of them undone, so it is a genuinely different fix, not this one plus a
+        # pointless tweak.
+        blocked, size, cost = opt.block_superset(EPS)
+        changes = []
+        for kind, what, name in components:
+            v = size[name]
+            if v <= EPS:  # one minute: anything smaller is "unchanged"
                 continue
             if kind == "meal":
                 changes.append(Change("meal", what, meals0[what], rc.meals[what]))
@@ -191,13 +157,9 @@ def run(lib: Library, patient: Patient, timeout_ms: int = 10_000) -> Report:
         new_bed = next((c.after for c in changes if c.what == "bedtime"), bed)
         new_wake = next((c.after for c in changes if c.what == "wake"), wake)
         _assert_valid(built_c, rc.schedule, rc.meals)
-        options.append(Option(_val(m, total), changes, rc.schedule, rc.meals, (new_bed, new_wake)))
-        # Next option must leave at least one of this option's changes undone,
-        # so it is a genuinely different fix, not this one plus a pointless tweak.
-        superset = [c for c, (_, term) in zip(signature, components) if c is not None and _val(m, term) > EPS]
-        if not superset:
+        options.append(Option(cost, changes, rc.schedule, rc.meals, (new_bed, new_wake)))
+        if not blocked:
             break
-        opt.add(z3.Not(z3.And(*superset)))
 
     if options:
         # Ties in cost come back in solver order; fix the order for stable output.
@@ -217,15 +179,6 @@ def run(lib: Library, patient: Patient, timeout_ms: int = 10_000) -> Report:
     else:
         report.notes.append("No schedule found within the allowed routine shifts; widen the limits in `weights`.")
     return report
-
-
-def _val(m: z3.ModelRef, term) -> Fraction:
-    v = m.eval(term, model_completion=True)
-    if z3.is_rational_value(v):
-        return v.as_fraction()
-    if z3.is_int_value(v):
-        return Fraction(v.as_long())
-    raise ValueError(f"non-rational value {v}")
 
 
 def _assert_valid(built: Built, schedule, meals) -> None:

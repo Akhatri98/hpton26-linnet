@@ -220,6 +220,11 @@ __marimo__/
 .streamlit/secrets.toml
 
 # Mine
+# native solver core, built from solver/native/linnet_solver.cpp on first use
+/solver/native/linnet_solver.dll
+/solver/native/linnet_solver.so
+/solver/native/linnet_solver.dylib
+/solver/native/linnet_solver.*.dll
 /documents
 # NHANES raw downloads (large, public, re-downloadable)
 /data/nhanes/raw/
