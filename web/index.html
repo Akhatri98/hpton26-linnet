@@ -706,6 +706,13 @@ function rejected() {
       ps.map(p => `<option value="${esc(p.id)}">${esc(p.name)}</option>`).join("") + "</optgroup>").join("");
     $("#switch").innerHTML = '<option value="">choose</option>' + opts;
     renderMeds(); renderMeals(); renderWeights();
+    api("/api/patients/tiers").then(tiers => {  // dots fill in when ready: yellow tier 1, red tier 2
+      const dot = {tier1: "\u{1F7E1} ", tier2: "\u{1F534} ", strict_only_conflict: "\u{1F7E0} ", unknown: "⚪ "};
+      pts.forEach(p => {
+        const o = $(`#switch option[value="${CSS.escape(p.id)}"]`);
+        if (o) o.textContent = (dot[tiers[p.id]] || "") + p.name;
+      });
+    }).catch(() => {});
   } catch (e) { $("#intake-err").innerHTML = `<div class="err">Cannot reach the LINNET API. Start it with: uvicorn linnet.api:app</div>`; }
 })();
 </script>

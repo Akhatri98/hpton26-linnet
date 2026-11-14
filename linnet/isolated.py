@@ -58,3 +58,32 @@ def check(patient: dict, data: Path, compare: bool = True, limit_s: float = LIMI
         _pool.shutdown(wait=False, cancel_futures=True)
         _pool = None
         raise CheckTimeout(f"the check did not finish within {limit_s:g} s")
+
+
+def _outcome(patient: dict, data: str) -> str:
+    from library.load import load
+
+    from .patient import Patient
+    from .tiers import run
+
+    return run(load(Path(data)), Patient.model_validate(patient)).outcome
+
+
+def outcomes(patients: dict[str, dict], data: Path, workers: int = 4, limit_s: float = LIMIT_S) -> dict[str, str]:
+    """Tier outcome of each saved patient, each in its own fresh process (as a single check
+    would be); 'unknown' if one does not finish in time."""
+    pool = ProcessPoolExecutor(max_workers=workers, max_tasks_per_child=1, mp_context=mp.get_context("spawn"))
+    out = {}
+    try:
+        futs = {pid: pool.submit(_outcome, p, str(data)) for pid, p in patients.items()}
+        for pid, fut in futs.items():
+            try:
+                out[pid] = fut.result(timeout=limit_s)
+            except Exception:  # timeout or a crashed worker: say so, never guess
+                out[pid] = "unknown"
+    finally:
+        for proc in list(getattr(pool, "_processes", {}).values()):
+            if proc.is_alive():
+                proc.kill()
+        pool.shutdown(wait=False, cancel_futures=True)
+    return out

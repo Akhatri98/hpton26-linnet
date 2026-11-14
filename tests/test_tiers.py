@@ -149,3 +149,38 @@ def test_greedy_agrees_when_easy(lib):
     assert g.ok
     built = __import__("library.load", fromlist=["build_regimen"]).build_regimen(lib, p.library_items(), "strict")
     assert violations(built.regimen, g.schedule, p.meal_times()) == []
+
+
+# --- a solve that hits its time limit is never read as a yes or a no -----------------------
+
+def _time_out_call(monkeypatch, which: int):
+    """Make the `which`-th solve in run() report a timeout (1 = A, 2 = B, 3 = C)."""
+    import linnet.tiers as tiers
+    from solver.encode import Result
+    real, n = tiers.check, {"calls": 0}
+
+    def flaky(enc, *a, **k):
+        n["calls"] += 1
+        return Result("unknown", reason="timeout (test)") if n["calls"] == which else real(enc, *a, **k)
+    monkeypatch.setattr(tiers, "check", flaky)
+
+
+def test_solve_a_timeout_then_no_change_schedule_is_tier0(lib, monkeypatch):
+    _time_out_call(monkeypatch, 1)
+    r = run_patient(lib, "tier0-levo-cipro")
+    assert r.outcome == "tier0" and r.unfinished == ["A"]
+    assert r.options[0].changes == []
+
+
+def test_solve_a_timeout_with_changes_is_tier1_with_a_warning(lib, monkeypatch):
+    _time_out_call(monkeypatch, 1)
+    r = run_patient(lib, "tier1-duplicate-acetaminophen")
+    assert r.outcome == "tier1" and r.unfinished == ["A"]
+    assert any("may not all be needed" in n for n in r.notes)
+
+
+def test_solve_c_timeout_is_unknown_not_a_conflict(lib, monkeypatch):
+    _time_out_call(monkeypatch, 3)
+    r = run_patient(lib, "tier1-duplicate-acetaminophen")
+    assert r.outcome == "unknown" and r.tier is None and r.unfinished == ["C"]
+    assert not r.conflicts and not r.options

@@ -1,11 +1,16 @@
 {
  "name": "NHANES #96082",
  "constructed": false,
- "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-18 participant SEQN 96082 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency. Also takes, not in LINNET's library so not checked: metoprolol.",
+ "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-18 participant SEQN 96082 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency. Reported in the supplement and antacid questionnaire: TUMS CALCIUM CARBONATE ANTACID SMOOTHIES SMOOTH DISSOLVE EXTRA STRENGTH 750, 3 on a day used, on 5 of the past 30 days. Also takes, not in LINNET's library so not checked: metoprolol.",
  "items": [
   {
    "product": "apap-codeine-300-30",
    "prescribed_count": 3
+  },
+  {
+   "product": "tums-es-750",
+   "reported_count": 1,
+   "units_per_dose": 3
   }
  ],
  "routine": {

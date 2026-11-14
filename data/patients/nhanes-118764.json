@@ -1,0 +1,22 @@
+{
+ "name": "NHANES #118764",
+ "constructed": false,
+ "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-March 2020 pre-pandemic file participant SEQN 118764 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency. Also takes, not in LINNET's library so not checked: alendronate, carvedilol, furosemide, insulin glargine, omeprazole, pregabalin, simvastatin.",
+ "items": [
+  {
+   "product": "apap-codeine-300-30",
+   "prescribed_count": 3
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "09:00",
+   "lunch": "14:00",
+   "dinner": "18:30"
+  },
+  "sleep": {
+   "start": "23:30",
+   "end": "05:00"
+  }
+ }
+}

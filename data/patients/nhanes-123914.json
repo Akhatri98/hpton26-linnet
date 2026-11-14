@@ -1,0 +1,22 @@
+{
+ "name": "NHANES #123914",
+ "constructed": false,
+ "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-March 2020 pre-pandemic file participant SEQN 123914 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency. Also takes, not in LINNET's library so not checked: cabergoline, olmesartan.",
+ "items": [
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "05:45",
+   "lunch": "10:30",
+   "dinner": "17:30"
+  },
+  "sleep": {
+   "start": "23:45",
+   "end": "05:30"
+  }
+ }
+}

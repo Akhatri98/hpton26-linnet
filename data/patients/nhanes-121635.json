@@ -1,0 +1,22 @@
+{
+ "name": "NHANES #121635",
+ "constructed": false,
+ "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-March 2020 pre-pandemic file participant SEQN 121635 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency. Also takes, not in LINNET's library so not checked: bupropion, escitalopram, gabapentin, omeprazole, pravastatin.",
+ "items": [
+  {
+   "product": "ciprofloxacin-500mg",
+   "prescribed_count": 2
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "08:30",
+   "lunch": "13:30",
+   "dinner": "18:00"
+  },
+  "sleep": {
+   "start": "22:00",
+   "end": "07:00"
+  }
+ }
+}

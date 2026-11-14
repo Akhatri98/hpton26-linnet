@@ -11,6 +11,7 @@ Privacy by construction:
 Endpoints:
   GET  /api/products              library products, for the intake picker
   GET  /api/patients              demo (constructed) patients
+  GET  /api/patients/tiers        tier of each saved patient (cached), for the switcher's dots
   GET  /api/patients/{name}
   POST /api/check                 patient JSON -> tier report (+ greedy comparison)
   GET  /api/library               sign-off items + extracted rows (metadata view)
@@ -21,6 +22,7 @@ from __future__ import annotations
 
 import json
 import os
+import threading
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
@@ -64,10 +66,33 @@ def patients():
     out = []
     for f in sorted((DATA / "patients").glob("*.json")):
         d = json.loads(f.read_text(encoding="utf-8"))
-        group = "From NHANES 2017-18 (real routine and medications)" if f.stem.startswith("nhanes-") else "Demo patients"
+        group = "From NHANES 2017-2020 (real routine and medications)" if f.stem.startswith("nhanes-") else "Demo patients"
         out.append({"id": f.stem, "name": d["name"], "group": group})
     out.sort(key=lambda p: (p["group"] != "Demo patients", p["id"]))
     return out
+
+
+_tiers = {"key": None, "outcomes": {}}
+_tiers_lock = threading.Lock()
+
+
+def _data_key() -> tuple:
+    files = [*(DATA / "ingredients").glob("*.json"), *(DATA / "products").glob("*.json"),
+             *(DATA / "patients").glob("*.json"), DATA / "groups.json"]
+    return (str(DATA.resolve()), *sorted((f.name, f.stat().st_mtime_ns) for f in files if f.exists()))
+
+
+@app.get("/api/patients/tiers")
+def patient_tiers():
+    """Tier of each saved patient, for the dots in the switcher. Cached until a library or
+    patient file changes (a review decision changes them)."""
+    with _tiers_lock:
+        key = _data_key()
+        if _tiers["key"] != key:
+            pts = {f.stem: json.loads(f.read_text(encoding="utf-8")) for f in sorted((DATA / "patients").glob("*.json"))}
+            _tiers["outcomes"] = isolated.outcomes(pts, DATA)
+            _tiers["key"] = key
+        return _tiers["outcomes"]
 
 
 @app.get("/api/patients/{pid}")

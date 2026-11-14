@@ -4,10 +4,10 @@
  "routines": "NHANES 2017-18 (real)",
  "grid_minutes": 15,
  "tiers": {
-  "tier1": 179,
+  "tier1": 180,
   "tier2": 93,
   "tier0": 199,
-  "strict_only_conflict": 29
+  "strict_only_conflict": 28
  },
  "greedy": {
   "ok": 132,
@@ -28,8 +28,8 @@
   "not_minimal": []
  },
  "speed_ms": {
-  "median": 60.9,
-  "p95": 415.3,
-  "max": 2092089.0
+  "median": 28.2,
+  "p95": 386.7,
+  "max": 45807.8
  }
 }

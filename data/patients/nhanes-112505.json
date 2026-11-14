@@ -1,0 +1,22 @@
+{
+ "name": "NHANES #112505",
+ "constructed": false,
+ "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-March 2020 pre-pandemic file participant SEQN 112505 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency. Also takes, not in LINNET's library so not checked: ezetimibe, indomethacin, metformin, prednisone.",
+ "items": [
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "08:00",
+   "lunch": "12:30",
+   "dinner": "17:00"
+  },
+  "sleep": {
+   "start": "22:45",
+   "end": "08:00"
+  }
+ }
+}

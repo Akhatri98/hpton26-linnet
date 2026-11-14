@@ -1,0 +1,22 @@
+{
+ "name": "NHANES #120627",
+ "constructed": false,
+ "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-March 2020 pre-pandemic file participant SEQN 120627 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency. Also takes, not in LINNET's library so not checked: albuterol, budesonide, clindamycin, escitalopram, furosemide, omeprazole, ranitidine, solifenacin, sotalol.",
+ "items": [
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "09:15",
+   "lunch": "13:00",
+   "dinner": "19:00"
+  },
+  "sleep": {
+   "start": "00:30",
+   "end": "09:00"
+  }
+ }
+}

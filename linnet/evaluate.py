@@ -139,7 +139,8 @@ def evaluate(n: int, seed: int, bf_max: int, data: Path, routines: list | None =
     out = {"n": n, "seed": seed, "routines": "NHANES 2017-18 (real)" if routines else "random", "grid_minutes": 15, "tiers": {}, "times_ms": [],
            "greedy": {"ok": 0, "gave_up": 0, "false_alarms": 0, "greedy_ok_linnet_not_tier0": 0},
            "grid": {"checked": 0, "agree": 0, "off_grid_only": 0, "too_large": 0, "BUGS": []},
-           "conflicts": {"checked": 0, "minimal": 0, "not_minimal": []}}
+           "conflicts": {"checked": 0, "minimal": 0, "not_minimal": []},
+           "unfinished": []}  # (case, solves) that hit the per-solve time limit: counted apart, never as bugs
     fa_dir = data / "eval" / ("false_alarms_nhanes" if routines else "false_alarms")
     fa_dir.mkdir(parents=True, exist_ok=True)
     for old in fa_dir.glob("*.json"):
@@ -152,12 +153,14 @@ def evaluate(n: int, seed: int, bf_max: int, data: Path, routines: list | None =
         rep = run(lib, p)
         out["times_ms"].append((time.perf_counter() - t0) * 1000)
         out["tiers"][rep.outcome] = out["tiers"].get(rep.outcome, 0) + 1
+        if rep.unfinished:
+            out["unfinished"].append({"case": i, "solves": rep.unfinished, "outcome": rep.outcome})
 
         # 2. greedy vs LINNET (same question as solve A)
         g = run_greedy(lib, p)
         if g.ok:
             out["greedy"]["ok"] += 1
-            if rep.outcome != "tier0":  # the greedy schedule is valid, so LINNET missed one: a bug
+            if rep.outcome != "tier0" and not rep.unfinished:  # greedy's schedule is valid, so LINNET missed one: a bug
                 out["greedy"]["greedy_ok_linnet_not_tier0"] += 1
         else:
             out["greedy"]["gave_up"] += 1
@@ -184,6 +187,8 @@ def evaluate(n: int, seed: int, bf_max: int, data: Path, routines: list | None =
             except Budget:
                 out["grid"]["too_large"] += 1
                 continue
+            if rep.unfinished and bool(found) != z3_sat:
+                continue  # a solve timed out: not an answer, so not a disagreement (counted in "unfinished")
             if found and not z3_sat:
                 out["grid"]["BUGS"].append({"case": i, "solve": name, "grid_schedule":
                                             {k: [fmt_hhmm(t) for t in v] for k, v in found.items()}})
@@ -234,6 +239,8 @@ def summary(r: dict) -> str:
         f"Conflict minimality: {c['minimal']} of {c['checked']} conflicts minimal (every rule needed)",
         "",
         f"Speed per full check: median {r['speed_ms']['median']} ms, p95 {r['speed_ms']['p95']} ms, max {r['speed_ms']['max']} ms",
+        f"Checks where a solve hit its time limit: {len(r['unfinished'])}"
+        + (f"  {r['unfinished']}" if r["unfinished"] else ""),
     ]
     return "\n".join(lines)
 

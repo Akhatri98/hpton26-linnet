@@ -1,0 +1,27 @@
+{
+ "name": "NHANES #101945 (hypothetical: brain bleed)",
+ "constructed": true,
+ "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-18 participant SEQN 101945 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency. Also takes, not in LINNET's library so not checked: albuterol, arformoterol, budesonide, cyanocobalamin, donepezil, memantine, pantoprazole, selegiline, sodium chloride, theophylline, tiotropium, trazodone, warfarin. HYPOTHETICAL addition, not recorded for this person: nimodipine every 4 hours after a subarachnoid hemorrhage.",
+ "items": [
+  {
+   "product": "colestipol-1g-tab",
+   "prescribed_count": 2
+  },
+  {
+   "product": "nimodipine-30mg-cap",
+   "prescribed_count": 6,
+   "every_hours": 4
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "07:30",
+   "lunch": "12:00",
+   "dinner": "18:00"
+  },
+  "sleep": {
+   "start": "23:30",
+   "end": "06:00"
+  }
+ }
+}

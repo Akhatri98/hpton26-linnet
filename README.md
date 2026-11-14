@@ -68,6 +68,12 @@ Every schedule LINNET returned was also re-checked by the independent verifier. 
 
 Two real NHANES participants, unmodified (#102924 and #98848, both on colestipol and levothyroxine), are false alarms for the greedy heuristic on their recorded day; LINNET schedules both.
 
+Of the 193 NHANES adults on a library drug with a usable routine, 24 cannot follow their labels on their recorded day as they live (tier 1), with nothing added:
+- 23 levothyroxine users ate breakfast less than 30 minutes after their usual wake time; the label asks for it 30–60 minutes before breakfast.
+- One takes nimodipine every 4 hours, which needs 20 waking hours.
+
+Wake time is the usual weekday time; breakfast is from the recall day.
+
 Found by this evaluation: Z3 keeps state across solves in one process, and late in a long sweep a few regimens ran far slower than from a clean start (one: 0.6 s fresh, 52 s in the sweep, and fewer tier-1 options). The app therefore runs each check in a fresh worker process with a 30 s hard limit (about 0.7 s per check including start-up), and returns the same answer every time.
 
 ### Rule extraction (pilot: 7 labels)

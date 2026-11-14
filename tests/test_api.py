@@ -77,3 +77,21 @@ def test_same_patient_same_answer_every_time(client):
     for _ in range(2):
         assert client.post("/api/check", json=p).json() == first
     assert first["outcome"] == "tier1" and len(first["options"]) == 3
+
+
+def test_patient_tiers_for_switcher_dots(client, monkeypatch):
+    t = client.get("/api/patients/tiers").json()
+    assert t["tier2-nimodipine-colestipol"] == "tier2"
+    assert t["tier1-duplicate-acetaminophen"] == "tier1"
+    assert t["tier0-levo-cipro"] == "tier0"
+    nh = [k for k in t if k.startswith("nhanes-")]
+    assert sum(t[k] == "tier1" for k in nh) >= 5 and sum(t[k] == "tier2" for k in nh) >= 3
+    # Cached until a library or patient file changes.
+    calls = []
+    monkeypatch.setattr(api.isolated, "outcomes", lambda pts, data: calls.append(1) or t)
+    client.get("/api/patients/tiers")
+    assert calls == []
+    f = api.DATA / "products" / "tums-es-750.json"
+    f.write_text(f.read_text(encoding="utf-8") + " ", encoding="utf-8")
+    client.get("/api/patients/tiers")
+    assert calls == [1]

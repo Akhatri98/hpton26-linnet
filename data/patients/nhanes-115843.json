@@ -1,0 +1,27 @@
+{
+ "name": "NHANES #115843",
+ "constructed": false,
+ "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-March 2020 pre-pandemic file participant SEQN 115843 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency. Reported in the supplement and antacid questionnaire: TUMS CALCIUM CARBONATE ANTACID SMOOTHIES SMOOTH DISSOLVE EXTRA STRENGTH 750, 2 on a day used, on 4 of the past 30 days. Also takes, not in LINNET's library so not checked: atorvastatin, losartan.",
+ "items": [
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  },
+  {
+   "product": "tums-es-750",
+   "reported_count": 1,
+   "units_per_dose": 2
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "09:00",
+   "lunch": "12:30",
+   "dinner": "17:00"
+  },
+  "sleep": {
+   "start": "23:00",
+   "end": "08:30"
+  }
+ }
+}

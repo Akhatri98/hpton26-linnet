@@ -1,0 +1,26 @@
+{
+ "name": "NHANES #95738 (hypothetical: Tylenol)",
+ "constructed": true,
+ "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-18 participant SEQN 95738 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency. Also takes, not in LINNET's library so not checked: amlodipine, omeprazole. HYPOTHETICAL addition, not recorded for this person: Tylenol Extra Strength 4 times a day for back pain.",
+ "items": [
+  {
+   "product": "apap-codeine-300-30",
+   "prescribed_count": 3
+  },
+  {
+   "product": "acetaminophen-500-otc",
+   "reported_count": 4
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "09:30",
+   "lunch": "11:00",
+   "dinner": "14:30"
+  },
+  "sleep": {
+   "start": "00:00",
+   "end": "08:00"
+  }
+ }
+}

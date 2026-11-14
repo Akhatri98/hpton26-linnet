@@ -1,0 +1,22 @@
+{
+ "name": "NHANES #116511",
+ "constructed": false,
+ "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-March 2020 pre-pandemic file participant SEQN 116511 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency. Also takes, not in LINNET's library so not checked: clonazepam, sumatriptan.",
+ "items": [
+  {
+   "product": "apap-codeine-300-30",
+   "prescribed_count": 3
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "06:30",
+   "lunch": "13:15",
+   "dinner": "19:00"
+  },
+  "sleep": {
+   "start": "23:00",
+   "end": "05:00"
+  }
+ }
+}

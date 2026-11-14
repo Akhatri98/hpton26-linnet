@@ -1,0 +1,22 @@
+{
+ "name": "NHANES #99886",
+ "constructed": false,
+ "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-18 participant SEQN 99886 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency.",
+ "items": [
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "05:40",
+   "lunch": "14:00",
+   "dinner": "19:00"
+  },
+  "sleep": {
+   "start": "20:00",
+   "end": "05:35"
+  }
+ }
+}

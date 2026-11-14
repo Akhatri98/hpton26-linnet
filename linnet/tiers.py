@@ -58,6 +58,7 @@ class Report:
     built: Optional[Built] = None  # the regimen the shown result came from
     notes: list[str] = field(default_factory=list)
     solves: list[str] = field(default_factory=list)  # audit trail: which solves ran and how they ended
+    unfinished: list[str] = field(default_factory=list)  # solves that hit their time limit ("A", "B", "C")
 
 
 def _notes(built: Built) -> list[str]:
@@ -90,8 +91,9 @@ def run(lib: Library, patient: Patient, timeout_ms: int = 10_000) -> Report:
         report.tier, report.outcome, report.built = 0, "tier0", built_a
         report.options = [Option(Fraction(0), [], ra.schedule, ra.meals, (bed, wake))]
         return report
-    if ra.status == "unknown":
+    if ra.status == "unknown":  # not a "no": solve C below can still find a schedule
         report.notes.append(f"Solve A did not finish: {ra.reason}")
+        report.unfinished.append("A")
 
     # --- Solve B: tier 2 -------------------------------------------------------------
     rx_items = patient.library_items(prescribed_only=True)
@@ -106,6 +108,7 @@ def run(lib: Library, patient: Patient, timeout_ms: int = 10_000) -> Report:
         return report
     if rb.status == "unknown":
         report.notes.append(f"Solve B did not finish: {rb.reason}; tier 2 could not be ruled in or out")
+        report.unfinished.append("B")
         return report
 
     # --- Solve C: tier 1 -------------------------------------------------------------
@@ -130,11 +133,13 @@ def run(lib: Library, patient: Patient, timeout_ms: int = 10_000) -> Report:
     opt.minimize_times()  # then earliest times among equal-cost schedules
 
     options: list[Option] = []
+    c_unfinished = False
     for _ in range(3):
         rc = check(enc_c)
         if rc.status != "sat":
             if not options:
                 report.solves.append(f"C (smallest change): {rc.status}")
+            c_unfinished = rc.status == "unknown"
             break
         # Read this option's changes, and make the next option leave at least one
         # of them undone, so it is a genuinely different fix, not this one plus a
@@ -165,10 +170,24 @@ def run(lib: Library, patient: Patient, timeout_ms: int = 10_000) -> Report:
         # Ties in cost come back in solver order; fix the order for stable output.
         options.sort(key=lambda o: (o.cost, [(c.kind, c.what, c.after) for c in o.changes]))
         report.solves.append(f"C (smallest change): {len(options)} option(s)")
+        if "A" in report.unfinished and options[0].cost == 0:
+            # Solve A timed out, but solve C found a schedule that changes nothing: that is tier 0.
+            report.tier, report.outcome, report.built = 0, "tier0", built_c
+            report.options = [Option(Fraction(0), [], options[0].schedule, options[0].meals, (bed, wake))]
+            report.notes.append("Schedule found by the smallest-change search, with no change needed.")
+            return report
         report.tier, report.outcome, report.built, report.options = 1, "tier1", built_c, options
+        if "A" in report.unfinished:
+            report.notes.append("The routine as reported was not proven impossible (solve A did not finish), "
+                                "so these changes may not all be needed.")
+        return report
+    if c_unfinished:  # no schedule found in time, but none ruled out either: say so, never guess
+        report.notes.append(f"Solve C did not finish: {rc.reason}; no smallest change could be found in time")
+        report.unfinished.append("C")
         return report
 
-    # Strict reading conflicts, loosest does not: show the strict prescriptions-only conflict.
+    # C proved no schedule within the allowed shifts (so A is impossible too). Strict reading
+    # conflicts, loosest does not: show the strict prescriptions-only conflict.
     built_s = build_regimen(lib, rx_items, "strict", include_food=False)
     enc_s = build(built_s.regimen, timeout_ms=timeout_ms)
     rs = check(enc_s)

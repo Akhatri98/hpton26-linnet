@@ -1,0 +1,22 @@
+{
+ "name": "NHANES #110479",
+ "constructed": false,
+ "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-March 2020 pre-pandemic file participant SEQN 110479 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency. Also takes, not in LINNET's library so not checked: benzonatate, clonazepam, clonidine, duloxetine, hydrochlorothiazide; lisinopril, mirtazapine, tizanidine.",
+ "items": [
+  {
+   "product": "apap-codeine-300-30",
+   "prescribed_count": 3
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "09:00",
+   "lunch": "17:30",
+   "dinner": "19:30"
+  },
+  "sleep": {
+   "start": "01:00",
+   "end": "07:00"
+  }
+ }
+}
