@@ -27,9 +27,10 @@
   "minimal": 93,
   "not_minimal": []
  },
+ "unfinished": [],
  "speed_ms": {
-  "median": 28.2,
-  "p95": 386.7,
-  "max": 45807.8
+  "median": 36.9,
+  "p95": 544.1,
+  "max": 11496.3
  }
 }

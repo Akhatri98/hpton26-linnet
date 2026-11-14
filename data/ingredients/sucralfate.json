@@ -1,0 +1,22 @@
+{
+  "ingredient": "sucralfate",
+  "primary_spl": "0909acc5-c746-17fb-e063-6394a90a677f",
+  "rules": [
+    {
+      "id": "sucralfate-antacids",
+      "family": "separation",
+      "target": "group:antacids",
+      "before": "1/2",
+      "after": "1/2",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f",
+        "section": "dosage and administration",
+        "sentence": "Antacids may be prescribed as needed for relief of pain but should not be taken within one-half hour before or after sucralfate."
+      },
+      "note": "Which products are antacids is defined by the group (from each product's own label). DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+      "verified": false
+    }
+  ]
+}

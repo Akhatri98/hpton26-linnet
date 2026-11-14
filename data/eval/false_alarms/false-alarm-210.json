@@ -1,0 +1,30 @@
+{
+ "name": "random regimen 210",
+ "constructed": true,
+ "items": [
+  {
+   "product": "ciprofloxacin-500mg",
+   "prescribed_count": 2,
+   "every_hours": 12
+  },
+  {
+   "product": "colestipol-1g-tab",
+   "prescribed_count": 1
+  },
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "06:30",
+   "lunch": "13:30",
+   "dinner": "18:30"
+  },
+  "sleep": {
+   "start": "22:15",
+   "end": "05:30"
+  }
+ }
+}

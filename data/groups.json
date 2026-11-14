@@ -13,6 +13,13 @@
           "provenance": "quoted",
           "source_spl": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
           "basis": "Bile Acid Sequestrants (e.g., colesevelam, cholestyramine, colestipol)"
+        },
+        {
+          "ingredient": "ferrous_sulfate",
+          "provenance": "quoted",
+          "source_spl": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
+          "basis": "Phosphate Binders (e.g., calcium carbonate, ferrous sulfate, sevelamer, lanthanum)",
+          "verified": false
         }
       ]
     },
@@ -55,6 +62,25 @@
           "basis": "or products containing calcium, iron, or zinc and dairy products) Ciprofloxacin should be taken at least two hours before or six hours after Multivalent cation-containing products administration [see Dosage and Administration (2.4)] Decrease ciprofloxacin absorption, resulting in lower serum and urine levels Probenecid Use with caution (interferes with renal tubular secretion of ciprofloxacin and increases ciprofloxacin serum levels) Potentiation of ciprofloxacin toxicity may occur.",
           "verified": false,
           "matched": "element member: covers every salt of it in the library"
+        },
+        {
+          "ingredient": "sucralfate",
+          "provenance": "quoted",
+          "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
+          "basis": "Administer ciprofloxacin tablets at least 2 hours before or 6 hours after magnesium/aluminum antacids; polymeric phosphate binders (for example, sevelamer, lanthanum carbonate) or sucralfate;",
+          "verified": false
+        }
+      ]
+    },
+    "antacids": {
+      "members": [
+        {
+          "ingredient": "calcium_carbonate",
+          "provenance": "interpreted",
+          "source_spl": "036ef1ed-32ef-46b8-8817-b3f63a014280",
+          "basis": "Antacids may interact with certain prescription drugs.",
+          "verified": false,
+          "note": "Tums' own label warns 'Antacids may interact...', i.e. calls itself an antacid; it never says 'calcium carbonate is an antacid' in one sentence, so this is interpreted."
         }
       ]
     }

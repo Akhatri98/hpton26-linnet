@@ -1,0 +1,22 @@
+{
+ "name": "NHANES #121965",
+ "constructed": false,
+ "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-March 2020 pre-pandemic file participant SEQN 121965 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency. Also takes, not in LINNET's library so not checked: amlodipine, doxazosin, simvastatin.",
+ "items": [
+  {
+   "product": "alendronate-70mg-tab",
+   "prescribed_count": 1
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "05:10",
+   "lunch": "13:30",
+   "dinner": "19:00"
+  },
+  "sleep": {
+   "start": "22:00",
+   "end": "05:00"
+  }
+ }
+}

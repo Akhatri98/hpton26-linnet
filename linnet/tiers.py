@@ -78,7 +78,7 @@ def run(lib: Library, patient: Patient, timeout_ms: int = 10_000) -> Report:
     reported = patient.reported_counts()
 
     # --- Solve A: tier 0 -------------------------------------------------------------
-    built_a = build_regimen(lib, patient.library_items(), "strict")
+    built_a = build_regimen(lib, patient.library_items(), "strict", bed=bed, wake=wake, meals=meals0)
     enc_a = build(built_a.regimen, counts=reported, meals=meals0, timeout_ms=timeout_ms, optimize=True)
     awake_len = (bed - wake) % DAY
     enc_a.solver.sleep(wake, awake_len)
@@ -113,7 +113,9 @@ def run(lib: Library, patient: Patient, timeout_ms: int = 10_000) -> Report:
 
     # --- Solve C: tier 1 -------------------------------------------------------------
     w = patient.weights
-    built_c = built_a
+    # Same rules as solve A; "after waking" windows keep clear of any bedtime this search can reach.
+    built_c = build_regimen(lib, patient.library_items(), "strict", bed=bed, wake=wake, meals=meals0,
+                            shift_margin=w.max_meal_shift_hours + w.max_sleep_shift_hours)
     enc_c = build(built_c.regimen, meals={k: FREE for k in meals0}, timeout_ms=timeout_ms, optimize=True)
     opt = enc_c.solver
     components = []  # (kind, what, name of the solver term measuring the change)

@@ -1,0 +1,26 @@
+{
+ "name": "NHANES #95121",
+ "constructed": false,
+ "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-18 participant SEQN 95121 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency. Also takes, not in LINNET's library so not checked: losartan, pravastatin.",
+ "items": [
+  {
+   "product": "alendronate-70mg-tab",
+   "prescribed_count": 1
+  },
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "07:30",
+   "lunch": "13:30",
+   "dinner": "18:00"
+  },
+  "sleep": {
+   "start": "23:00",
+   "end": "06:30"
+  }
+ }
+}

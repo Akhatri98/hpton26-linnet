@@ -1,0 +1,79 @@
+{
+  "ingredient": "ferrous_sulfate",
+  "spl_set_id": "5514d582-19b5-4f1e-b794-f790afb8211c",
+  "model": "claude-haiku-5-5",
+  "label_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5514d582-19b5-4f1e-b794-f790afb8211c",
+  "strengths": [],
+  "substances": [
+    "ferrous sulfate"
+  ],
+  "dosing": [],
+  "limits": [],
+  "administration": [
+    {
+      "id": "ferrous-sulfate-tetracyclines-separation",
+      "family": "separation",
+      "target": "group:tetracyclines",
+      "before": 2,
+      "after": 2,
+      "provenance": "quoted",
+      "note": "Oral iron products should not be taken within two hours of oral tetracycline antibiotics, in either direction. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "5514d582-19b5-4f1e-b794-f790afb8211c",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5514d582-19b5-4f1e-b794-f790afb8211c",
+        "section": "dosage and administration",
+        "sentence": "DRUG INTERACTION PRECAUTION: Since oral iron products interfere with absorption of oral tetracycline antibiotics, these products should not be taken within two hours of each other."
+      },
+      "verified": false
+    }
+  ],
+  "memberships": [
+    {
+      "group": "tetracyclines",
+      "ingredient": "tetracycline",
+      "provenance": "quoted",
+      "basis": "DRUG INTERACTION PRECAUTION: Since oral iron products interfere with absorption of oral tetracycline antibiotics, these products should not be taken within two hours of each other.",
+      "source_spl": "5514d582-19b5-4f1e-b794-f790afb8211c",
+      "verified": false
+    }
+  ],
+  "rejected": [],
+  "unaccounted_for": [],
+  "sentences": [
+    {
+      "sentence_id": "S1",
+      "section": "dosage and administration",
+      "text": "DRUG INTERACTION PRECAUTION: Since oral iron products interfere with absorption of oral tetracycline antibiotics, these products should not be taken within two hours of each other."
+    },
+    {
+      "sentence_id": "S2",
+      "section": "warnings",
+      "text": "WARNINGS: Do not exceed recommended dosage."
+    },
+    {
+      "sentence_id": "S3",
+      "section": "warnings",
+      "text": "Occasional gastrointestinal discomfort (such as nausea) may be minimized by taking with meals."
+    },
+    {
+      "sentence_id": "S4",
+      "section": "warnings",
+      "text": "As with any drug, if you are pregnant or nursing a baby, seek the advice of a health professional before using this product."
+    },
+    {
+      "sentence_id": "S5",
+      "section": "active ingredient",
+      "text": "EACH TABLET CONTAINS: % U.S."
+    },
+    {
+      "sentence_id": "S6",
+      "section": "active ingredient",
+      "text": "RDA* Elemental Iron 65 mg (Equivalent to 325 mg of Ferrous Sulfate) 60 *U.S."
+    }
+  ],
+  "passes_run": [
+    "administration",
+    "dosing",
+    "limits"
+  ]
+}

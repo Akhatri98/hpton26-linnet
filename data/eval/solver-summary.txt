@@ -1,0 +1,17 @@
+SOLVER EVALUATION  (500 random constructed regimens, seed 1, routines: random)
+
+Tiers:            strict_only_conflict 64, tier0 194, tier1 163, tier2 78, unknown 1
+
+Greedy heuristic vs LINNET (same question: schedulable as they live now?)
+  greedy gave up on      370 of 500
+  FALSE ALARMS           64  (greedy gave up; LINNET found a schedule)  = 33% of the 194 schedulable regimens
+  greedy ok, LINNET not  0  (must be 0)
+
+Exhaustive 15-minute grid search vs Z3
+  checked 332  |  agree 274  |  Z3 found an off-grid schedule only 0  |  too large to search 58
+  BUGS (grid found a schedule Z3 said does not exist): 0  (must be 0)
+
+Conflict minimality: 78 of 78 conflicts minimal (every rule needed)
+
+Speed per full check: median 34.9 ms, p95 450.8 ms, max 12043.6 ms
+Checks where a solve hit its time limit: 1  [{'case': 68, 'solves': ['C'], 'outcome': 'unknown'}]

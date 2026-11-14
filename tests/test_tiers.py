@@ -184,3 +184,31 @@ def test_solve_c_timeout_is_unknown_not_a_conflict(lib, monkeypatch):
     r = run_patient(lib, "tier1-duplicate-acetaminophen")
     assert r.outcome == "unknown" and r.tier is None and r.unfinished == ["C"]
     assert not r.conflicts and not r.options
+
+
+# --- "upon arising, at least 30 min before the first food, beverage, or medication" (alendronate) ---
+
+def _morning(items, wake, breakfast, bed="22:30"):
+    from linnet.patient import Patient
+    return Patient.model_validate({"name": "t", "constructed": True, "items": items, "routine": {
+        "meals": {"breakfast": breakfast, "lunch": "12:30", "dinner": "18:30"}, "sleep": {"start": bed, "end": wake}}})
+
+
+ALN = {"product": "alendronate-70mg-tab", "prescribed_count": 1}
+LEVO = {"product": "levothyroxine-100mcg", "prescribed_count": 1}
+
+
+def test_alendronate_then_levothyroxine_needs_an_hour_before_breakfast(lib):
+    r = run(lib, _morning([ALN, LEVO], "07:00", "08:30"))
+    assert r.outcome == "tier0"
+    s = r.options[0].schedule
+    assert s["alendronate-70mg-tab"][0] == F(7) and s["levothyroxine-100mcg"][0] >= F(15, 2)  # first, then 30 min
+    assert run(lib, _morning([ALN, LEVO], "07:00", "07:45")).outcome == "tier1"
+
+
+def test_alendronate_never_at_bedtime_even_in_tier1(lib):
+    r = run(lib, _morning([ALN], "07:00", "07:20"))
+    assert r.outcome == "tier1"
+    for o in r.options:  # every suggestion keeps it in the morning, before breakfast
+        t, bfast = o.schedule["alendronate-70mg-tab"][0], o.meals["breakfast"]
+        assert F(5) <= t <= bfast - F(1, 2)

@@ -1,0 +1,26 @@
+{
+ "name": "NHANES #94274 (hypothetical: alendronate)",
+ "constructed": true,
+ "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-18 participant SEQN 94274 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency. Also takes, not in LINNET's library so not checked: albuterol, bupropion, estradiol, fluoxetine, fluticasone; salmeterol, metformin, montelukast, topiramate, trazodone. HYPOTHETICAL addition, not recorded for this person: alendronate 70 mg once weekly for osteoporosis (this is the day it is taken).",
+ "items": [
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  },
+  {
+   "product": "alendronate-70mg-tab",
+   "prescribed_count": 1
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "08:30",
+   "lunch": "11:30",
+   "dinner": "17:30"
+  },
+  "sleep": {
+   "start": "23:30",
+   "end": "08:00"
+  }
+ }
+}

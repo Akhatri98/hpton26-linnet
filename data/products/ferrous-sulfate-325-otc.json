@@ -1,0 +1,16 @@
+{
+  "name": "ferrous-sulfate-325-otc",
+  "display_name": "Ferrous sulfate 325 mg tablets (65 mg iron, OTC)",
+  "spl_set_id": "5514d582-19b5-4f1e-b794-f790afb8211c",
+  "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5514d582-19b5-4f1e-b794-f790afb8211c",
+  "ingredients": {
+    "ferrous_sulfate": {
+      "amount": 325,
+      "unit": "mg"
+    }
+  },
+  "dose_note": "One tablet per dose ('Elemental Iron 65 mg (Equivalent to 325 mg of Ferrous Sulfate)'). The label gives no daily count, so none is enforced.",
+  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+  "unit_name": "tablet",
+  "units_per_dose": 1
+}

@@ -1,0 +1,33 @@
+{
+ "name": "random regimen 465",
+ "constructed": true,
+ "items": [
+  {
+   "product": "apap-codeine-300-30",
+   "prescribed_count": 2
+  },
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  },
+  {
+   "product": "ciprofloxacin-500mg",
+   "prescribed_count": 2
+  },
+  {
+   "product": "tums-es-750",
+   "reported_count": 3
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "08:45",
+   "lunch": "12:30",
+   "dinner": "18:00"
+  },
+  "sleep": {
+   "start": "23:15",
+   "end": "08:00"
+  }
+ }
+}

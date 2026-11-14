@@ -1,0 +1,15 @@
+{
+  "model": "claude-haiku-5-5",
+  "accepted_rules": 1,
+  "accepted_memberships": [
+    {
+      "group": "tetracyclines",
+      "ingredient": "tetracycline",
+      "provenance": "quoted",
+      "basis": "DRUG INTERACTION PRECAUTION: Since oral iron products interfere with absorption of oral tetracycline antibiotics, these products should not be taken within two hours of each other.",
+      "source_spl": "5514d582-19b5-4f1e-b794-f790afb8211c",
+      "verified": false
+    }
+  ],
+  "rejected": []
+}

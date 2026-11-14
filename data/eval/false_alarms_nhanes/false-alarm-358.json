@@ -1,0 +1,29 @@
+{
+ "name": "random regimen 358 on a real NHANES routine",
+ "constructed": true,
+ "items": [
+  {
+   "product": "tums-es-750",
+   "reported_count": 2
+  },
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  },
+  {
+   "product": "apap-codeine-300-30",
+   "prescribed_count": 4
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "08:00",
+   "lunch": "13:30",
+   "dinner": "17:30"
+  },
+  "sleep": {
+   "start": "01:00",
+   "end": "06:00"
+  }
+ }
+}

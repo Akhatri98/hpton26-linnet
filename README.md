@@ -62,19 +62,21 @@ The model never sees patient data, and the solver never calls a model.
 | Greedy found a schedule but LINNET did not | 0 | 0 |
 | Exhaustive 15-minute grid search disagreeing with Z3 | **0** (274 searched) | **0** (265 searched) |
 | Conflicts shown that are not minimal | **0 of 78** | **0 of 93** |
-| Time per full check (median / p95) | 67 ms / 437 ms | 61 ms / 415 ms |
+| Checks where a solve hit its 10 s limit (shown as undetermined, never as an answer) | 1 | 0 |
+| Time per full check (median / p95), C++ solver core | 35 ms / 451 ms | 37 ms / 544 ms |
 
-Every schedule LINNET returned was also re-checked by the independent verifier. The false-alarm regimens are saved in `data/eval/false_alarms*/`.
+Both sweeps ran at the same time on one laptop, so the times are pessimistic. Every schedule LINNET returned was also re-checked by the independent verifier. The false-alarm regimens are saved in `data/eval/false_alarms*/`.
 
 Two real NHANES participants, unmodified (#102924 and #98848, both on colestipol and levothyroxine), are false alarms for the greedy heuristic on their recorded day; LINNET schedules both.
 
-Of the 193 NHANES adults on a library drug with a usable routine, 24 cannot follow their labels on their recorded day as they live (tier 1), with nothing added:
-- 23 levothyroxine users ate breakfast less than 30 minutes after their usual wake time; the label asks for it 30–60 minutes before breakfast.
+Across NHANES 2017–March 2020, 362 adults with a usable routine take a library product. 41 of them (11%) cannot follow their labels on their recorded day as they live (tier 1), with nothing added:
+- 36 levothyroxine users ate breakfast less than 30 minutes after their usual wake time; the label asks for it 30–60 minutes before breakfast.
+- 4 alendronate users did the same; its label asks for it at least 30 minutes before the first food of the day.
 - One takes nimodipine every 4 hours, which needs 20 waking hours.
 
 Wake time is the usual weekday time; breakfast is from the recall day.
 
-Found by this evaluation: Z3 keeps state across solves in one process, and late in a long sweep a few regimens ran far slower than from a clean start (one: 0.6 s fresh, 52 s in the sweep, and fewer tier-1 options). The app therefore runs each check in a fresh worker process with a 30 s hard limit (about 0.7 s per check including start-up), and returns the same answer every time.
+Found by this evaluation: Z3 keeps state across solves in one process, and late in a long sweep a few regimens run far slower than from a clean start (with the C++ core, one took 0.04 s fresh and over 40 s in the sweep). The app therefore runs each check in a fresh worker process with a 30 s hard limit, and returns the same answer every time. A solve that still hits its limit is reported as undetermined, or as tier 0 or 1 only if a later solve finds an actual schedule; it is never read as a conflict.
 
 ### Rule extraction (pilot: 7 labels)
 
@@ -112,7 +114,7 @@ LINNET differs in being complete (if a schedule exists at the stated rules, it f
 
 - Reasons only over rules stated on labels; it is not an interaction database and does not judge clinical appropriateness.
 - Deliberately makes no drug recommendations. It shows that a conflict exists and which label sentences cause it; whether to hold, replace or re-time a drug is the prescriber's decision.
-- Small library (7 products). Adding a product means extracting and signing off its label.
+- Small library (10 products). Adding a product means extracting and signing off its label.
 - Weight-based (mg/kg) doses are extracted and shown for review, but the solver does not use them.
 - Tier-1 weights (how bad is moving a meal vs waking earlier) are judgement calls the pharmacist sets; defaults are placeholders.
 - Demo patients are constructed. Not for clinical use.

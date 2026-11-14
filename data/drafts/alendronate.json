@@ -1,0 +1,42 @@
+{
+  "ingredient": "alendronate",
+  "primary_spl": "14e931fd-2c5f-4d90-b7db-5980706f4a56",
+  "rules": [
+    {
+      "id": "alendronate-before-other-oral-meds-0.5h",
+      "family": "separation",
+      "target": "*",
+      "before": 0.5,
+      "after": 0,
+      "provenance": "quoted",
+      "note": "Wait at least one-half hour after taking alendronate before any other oral medication. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "14e931fd-2c5f-4d90-b7db-5980706f4a56",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14e931fd-2c5f-4d90-b7db-5980706f4a56",
+        "section": "drug interactions",
+        "sentence": "Therefore, instruct patients to wait at least one-half hour after taking FOSAMAX before taking any other oral medications."
+      },
+      "verified": false
+    },
+    {
+      "id": "alendronate-empty-stomach-before-first-food-0.5h",
+      "family": "food",
+      "mode": "empty_stomach",
+      "before_meal": 0.5,
+      "after_meal": 0,
+      "provenance": "interpreted",
+      "loosest": {
+        "before_meal": 0.5,
+        "after_meal": 0
+      },
+      "note": "Take at least one-half hour before the first food, beverage, or medication of the day, with plain water only. The after-meal value is not stated and is set to 0. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "14e931fd-2c5f-4d90-b7db-5980706f4a56",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14e931fd-2c5f-4d90-b7db-5980706f4a56",
+        "section": "dosage and administration",
+        "sentence": "2.6 Important Administration Instructions Instruct patients to do the following: Take FOSAMAX at least one-half hour before the first food, beverage, or medication of the day with plain water only [see Patient Counseling Information (17) ]."
+      },
+      "verified": false
+    }
+  ]
+}

@@ -4,54 +4,42 @@
  "routines": "random",
  "grid_minutes": 15,
  "tiers": {
-  "tier0": 193,
+  "tier0": 194,
   "tier2": 78,
-  "strict_only_conflict": 65,
-  "tier1": 164
+  "strict_only_conflict": 64,
+  "tier1": 163,
+  "unknown": 1
  },
  "greedy": {
   "ok": 130,
   "gave_up": 370,
-  "false_alarms": 63,
+  "false_alarms": 64,
   "greedy_ok_linnet_not_tier0": 0
  },
  "grid": {
   "checked": 332,
-  "agree": 273,
+  "agree": 274,
   "off_grid_only": 0,
   "too_large": 58,
-  "BUGS": [
-   {
-    "case": 283,
-    "solve": "A",
-    "grid_schedule": {
-     "levothyroxine-100mcg": [
-      "08:15"
-     ],
-     "colestipol-1g-tab": [
-      "15:15"
-     ],
-     "apap-codeine-300-30": [
-      "00:00",
-      "08:15",
-      "14:15"
-     ],
-     "ciprofloxacin-500mg": [
-      "00:00",
-      "00:15"
-     ]
-    }
-   }
-  ]
+  "BUGS": []
  },
  "conflicts": {
   "checked": 78,
   "minimal": 78,
   "not_minimal": []
  },
+ "unfinished": [
+  {
+   "case": 68,
+   "solves": [
+    "C"
+   ],
+   "outcome": "unknown"
+  }
+ ],
  "speed_ms": {
-  "median": 25.1,
-  "p95": 327.9,
-  "max": 58260.7
+  "median": 34.9,
+  "p95": 450.8,
+  "max": 12043.6
  }
 }

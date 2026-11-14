@@ -1,0 +1,33 @@
+{
+ "name": "random regimen 318",
+ "constructed": true,
+ "items": [
+  {
+   "product": "apap-codeine-300-30",
+   "prescribed_count": 2
+  },
+  {
+   "product": "tums-es-750",
+   "reported_count": 1
+  },
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  },
+  {
+   "product": "colestipol-1g-tab",
+   "prescribed_count": 2
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "07:00",
+   "lunch": "12:00",
+   "dinner": "17:45"
+  },
+  "sleep": {
+   "start": "21:15",
+   "end": "05:45"
+  }
+ }
+}

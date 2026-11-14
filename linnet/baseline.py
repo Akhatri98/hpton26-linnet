@@ -38,10 +38,10 @@ class BaselineResult:
 
 
 def run_greedy(lib: Library, patient: Patient) -> BaselineResult:
-    built = build_regimen(lib, patient.library_items(), "strict")
+    bed, wake = patient.sleep_window()
+    built = build_regimen(lib, patient.library_items(), "strict", bed=bed, wake=wake, meals=patient.meal_times())
     reg = built.regimen
     meals = patient.meal_times()
-    bed, wake = patient.sleep_window()
     awake_len = (bed - wake) % DAY
     slots = [(wake + STEP * i) % DAY for i in range(int(awake_len / STEP) + 1)]
 

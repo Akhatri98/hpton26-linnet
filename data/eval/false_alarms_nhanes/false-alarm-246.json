@@ -1,0 +1,26 @@
+{
+ "name": "random regimen 246 on a real NHANES routine",
+ "constructed": true,
+ "items": [
+  {
+   "product": "tums-es-750",
+   "reported_count": 3
+  },
+  {
+   "product": "ciprofloxacin-500mg",
+   "prescribed_count": 2,
+   "every_hours": 12
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "08:00",
+   "lunch": "12:30",
+   "dinner": "18:30"
+  },
+  "sleep": {
+   "start": "00:00",
+   "end": "08:00"
+  }
+ }
+}

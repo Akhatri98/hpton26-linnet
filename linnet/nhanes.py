@@ -23,9 +23,13 @@ Who is written (every choice is a fixed rule, not a hand pick):
   - four levothyroxine users per release who ate breakfast under 30 minutes after their usual
     wake time (the label asks for 30-60 minutes before breakfast), longest such gaps first;
   - every levothyroxine user who reported Tums Extra Strength 750 (calcium carbonate);
+  - every alendronate or sucralfate user who also takes another library product, and every
+    alendronate user who ate breakfast under 30 minutes after waking;
   - hypothetical: ciprofloxacin + Tums on two of those levothyroxine users; nimodipine
     (brain bleed) on every colestipol user; colestipol on every nimodipine user;
-    Tylenol Extra Strength on two acetaminophen/codeine users.
+    Tylenol Extra Strength on two acetaminophen/codeine users; ferrous sulfate (anemia) on two
+    levothyroxine users; weekly alendronate on two levothyroxine users with 30-59 min from
+    waking to breakfast.
 """
 
 from __future__ import annotations
@@ -45,7 +49,10 @@ LIBRARY = {
     "COLESTIPOL": ("colestipol-1g-tab", 2),
     "NIMODIPINE": ("nimodipine-30mg-cap", 6),
     "ACETAMINOPHEN; CODEINE": ("apap-codeine-300-30", 3),
+    "ALENDRONATE": ("alendronate-70mg-tab", 1),  # usually once weekly: the profile is the day it is taken
+    "SUCRALFATE": ("sucralfate-1g-tab", 4),
 }
+COMMON = {"LEVOTHYROXINE", "ALENDRONATE", "SUCRALFATE"}  # too many users to include everyone
 # DR1_030Z eating-occasion codes (NHANES 2017-18 codebook)
 MEALS = {"breakfast": {1, 10}, "lunch": {2, 12}, "dinner": {3, 4, 14}}
 HHMM = re.compile(r"^([01]\d|2[0-3]):[0-5]\d$")
@@ -183,7 +190,7 @@ def build() -> list[Path]:
 
     # Everyone on a library drug other than levothyroxine (rare drugs, all real), then three
     # levothyroxine users, chosen deterministically: the ones with the most prescriptions.
-    rare = [p for p in ps if any(d in LIBRARY and d != "LEVOTHYROXINE" for d in p["drugs"])]
+    rare = [p for p in ps if any(d in LIBRARY and d not in COMMON for d in p["drugs"])]
     levo_all = [p for p in ps if "LEVOTHYROXINE" in p["drugs"] and p not in rare]
     levo = sorted([p for p in levo_all if p["cycle"] == "J"], key=lambda p: (-len(p["drugs"]), p["seqn"]))[:3]
     # Levothyroxine users who ate breakfast less than 30 minutes after their usual wake time: the
@@ -194,7 +201,13 @@ def build() -> list[Path]:
                         key=lambda p: (-_gap(p), p["seqn"]))[:4]
     # Levothyroxine users who also reported Tums Extra Strength 750 (calcium carbonate): all of them.
     tums = [p for p in levo_all if p.get("tums") and p not in levo + early]
-    for p in rare + levo + early + tums:
+    # Alendronate or sucralfate users who also take another library product (or reported Tums): all.
+    pair = [p for p in ps if p not in rare and any(d in ("ALENDRONATE", "SUCRALFATE") for d in p["drugs"])
+            and (sum(d in LIBRARY for d in p["drugs"]) > 1 or p.get("tums"))]
+    # Alendronate users who ate breakfast under 30 min after waking (label: at least 30 min before
+    # the first food of the day): all of them.
+    pair += [p for p in ps if p not in rare + pair and "ALENDRONATE" in p["drugs"] and _gap(p) < 30]
+    for p in rare + levo + early + tums + pair:
         write(f"nhanes-{p['seqn']}", profile(p))
 
     # Hypothetical new prescriptions on real routines.
@@ -211,6 +224,18 @@ def build() -> list[Path]:
         write(f"nhanes-{p['seqn']}-colestipol", profile(
             p, [{"product": "colestipol-1g-tab", "prescribed_count": 2}],
             "colestipol twice daily for high cholesterol", "colestipol"))
+    for p in levo[:2]:
+        write(f"nhanes-{p['seqn']}-iron", profile(
+            p, [{"product": "ferrous-sulfate-325-otc", "prescribed_count": 1}],
+            "ferrous sulfate once daily for iron-deficiency anemia", "iron"))
+    # Levothyroxine users with 30-59 min from waking to breakfast: enough for levothyroxine alone,
+    # not for alendronate first (it needs 30 min before any other medicine). Two, by ID.
+    roomy = [p for p in levo_all if p["cycle"] == "J" and 30 <= _gap(p) < 60 and "ALENDRONATE" not in p["drugs"]
+             and p not in levo + early]
+    for p in sorted(roomy, key=lambda p: p["seqn"])[:2]:
+        write(f"nhanes-{p['seqn']}-alendronate", profile(
+            p, [{"product": "alendronate-70mg-tab", "prescribed_count": 1}],
+            "alendronate 70 mg once weekly for osteoporosis (this is the day it is taken)", "alendronate"))
     codeine = [p for p in rare if "ACETAMINOPHEN; CODEINE" in p["drugs"] and "NIMODIPINE" not in p["drugs"]]
     for p in codeine[:2]:
         write(f"nhanes-{p['seqn']}-tylenol", profile(

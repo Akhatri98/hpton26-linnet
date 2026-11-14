@@ -1,0 +1,75 @@
+{
+ "set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+ "id": "48c0e47e-08b1-0c73-e063-6394a90a90b7",
+ "version": "2",
+ "effective_time": "20260119",
+ "openfda": {
+  "application_number": [
+   "ANDA215576"
+  ],
+  "brand_name": [
+   "Sucralfate"
+  ],
+  "generic_name": [
+   "SUCRALFATE"
+  ],
+  "manufacturer_name": [
+   "AvKARE"
+  ],
+  "product_ndc": [
+   "42291-936"
+  ],
+  "product_type": [
+   "HUMAN PRESCRIPTION DRUG"
+  ],
+  "route": [
+   "ORAL"
+  ],
+  "substance_name": [
+   "SUCRALFATE"
+  ],
+  "rxcui": [
+   "314234"
+  ],
+  "spl_id": [
+   "48c0e47e-08b1-0c73-e063-6394a90a90b7"
+  ],
+  "spl_set_id": [
+   "0909acc5-c746-17fb-e063-6394a90a677f"
+  ],
+  "package_ndc": [
+   "42291-936-90"
+  ],
+  "original_packager_product_ndc": [
+   "69238-1656"
+  ],
+  "nui": [
+   "N0000175801",
+   "M0015420"
+  ],
+  "pharm_class_epc": [
+   "Aluminum Complex [EPC]"
+  ],
+  "pharm_class_cs": [
+   "Organometallic Compounds [CS]"
+  ],
+  "unii": [
+   "XX73205DH5"
+  ]
+ },
+ "dosage_and_administration": [
+  "DOSAGE AND ADMINISTRATION Active Duodenal Ulcer. The recommended adult oral dosage for duodenal ulcer is 1 g four times per day on an empty stomach. Antacids may be prescribed as needed for relief of pain but should not be taken within one-half hour before or after sucralfate. While healing with sucralfate may occur during the first week or two, treatment should be continued for 4 to 8 weeks unless healing has been demonstrated by x-ray or endoscopic examination. Maintenance Therapy: The recommended adult oral dosage is 1 g twice a day. Elderly: In general, dose selection for an elderly patient should be cautious, usually starting at the low end of the dosing range, reflecting the greater frequency of decreased hepatic, renal, or cardiac function, and of concomitant disease or other drug therapy (See PRECAUTIONS Geriatric Use ). Call your doctor for medical advice about side effects. You may report side effects to AvKARE at 1-855-361-3993 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch."
+ ],
+ "drug_interactions": [
+  "Drug Interactions Some studies have shown that simultaneous sucralfate administration in healthy volunteers reduced the extent of absorption (bioavailability) of single doses of the following: cimetidine, digoxin, fluoroquinolone antibiotics, ketoconazole, l-thyroxine, phenytoin, quinidine, ranitidine, tetracycline, and theophylline. Subtherapeutic prothrombin times with concomitant warfarin and sucralfate therapy have been reported in spontaneous and published case reports. However, two clinical studies have demonstrated no change in either serum warfarin concentration or prothrombin time with the addition of sucralfate to chronic warfarin therapy. The mechanism of these interactions appears to be nonsystemic in nature, presumably resulting from sucralfate binding to the concomitant agent in the gastrointestinal tract. In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction. Because of the potential of sucralfate to alter the absorption of some drugs, sucralfate should be administered separately from other drugs when alterations in bioavailability are felt to be critical. In these cases, patients should be monitored appropriately."
+ ],
+ "precautions": [
+  "PRECAUTIONS The physician should read the \" PRECAUTIONS \" section when considering the use of this drug in pregnant or pediatric patients, or patients of childbearing potential. Duodenal ulcer is a chronic, recurrent disease. While short-term treatment with sucralfate can result in complete healing of the ulcer, a successful course of treatment with sucralfate should not be expected to alter the post healing frequency or severity of duodenal ulceration. Isolated reports of sucralfate tablet aspiration with accompanying respiratory complications have been received. Therefore, sucralfate tablets should be used with caution by patients who have known conditions that may impair swallowing, such as recent or prolonged intubation, tracheostomy, prior history of aspiration, dysphagia, or any other conditions that may alter gag and cough reflexes, or diminish oropharyngeal coordination or motility. Special Populations: Chronic Renal Failure and Dialysis Patients When sucralfate is administered orally, small amounts of aluminum are absorbed from the gastrointestinal tract. Concomitant use of sucralfate with other products that contain aluminum, such as aluminum-containing antacids, may increase the total body burden of aluminum. Patients with normal renal function receiving the recommended doses of sucralfate and aluminum-containing products adequately excrete aluminum in the urine. Patients with chronic renal failure or those receiving dialysis have impaired excretion of absorbed aluminum. In addition, aluminum does not cross dialysis membranes because it is bound to albumin and transferrin plasma proteins. Aluminum accumulation and toxicity (aluminum osteodystrophy, osteomalacia, encephalopathy) have been described in patients with renal impairment. Sucralfate should be used with caution in patients with chronic renal failure. Drug Interactions Some studies have shown that simultaneous sucralfate administration in healthy volunteers reduced the extent of absorption (bioavailability) of single doses of the following: cimetidine, digoxin, fluoroquinolone antibiotics, ketoconazole, l-thyroxine, phenytoin, quinidine, ranitidine, tetracycline, and theophylline. Subtherapeutic prothrombin times with concomitant warfarin and sucralfate therapy have been reported in spontaneous and published case reports. However, two clinical studies have demonstrated no change in either serum warfarin concentration or prothrombin time with the addition of sucralfate to chronic warfarin therapy. The mechanism of these interactions appears to be nonsystemic in nature, presumably resulting from sucralfate binding to the concomitant agent in the gastrointestinal tract. In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction. Because of the potential of sucralfate to alter the absorption of some drugs, sucralfate should be administered separately from other drugs when alterations in bioavailability are felt to be critical. In these cases, patients should be monitored appropriately. Carcinogenesis, Mutagenesis, Impairment of Fertility Chronic oral toxicity studies of 24 months’ duration were conducted in mice and rats at doses up to 1 g/kg (12 times the human dose). There was no evidence of drug-related tumorigenicity. A reproduction study in rats at doses up to 38 times the human dose did not reveal any indication of fertility impairment. Mutagenicity studies were not conducted. Pregnancy Teratogenic effects Teratogenicity studies have been performed in mice, rats, and rabbits at doses up to 50 times the human dose and have revealed no evidence of harm to the fetus due to sucralfate. There are, however, no adequate and well-controlled studies in pregnant women. Because animal reproduction studies are not always predictive of human response, this drug should be used during pregnancy only if clearly needed. Nursing Mothers It is not known whether this drug is excreted in human milk. Because many drugs are excreted in human milk, caution should be exercised when sucralfate is administered to a nursing woman. Pediatric Use Safety and effectiveness in pediatric patients have not been established. Geriatric Use Clinical studies of sucralfate tablets did not include sufficient numbers of subjects aged 65 and over to determine whether they respond differently from younger subjects. Other reported clinical experience has not identified differences in responses between the elderly and younger patients. In general, dose selection for an elderly patient should be cautious, usually starting at the low end of the dosing range, reflecting the greater frequency of decreased hepatic, renal, or cardiac function, and of concomitant disease or other drug therapy (See DOSAGE AND ADMINISTRATION ). This drug is known to be substantially excreted by the kidney, and the risk of toxic reactions to this drug may be greater in patients with impaired renal function (See PRECAUTIONS Special Populations: Chronic Renal Failure and Dialysis Patients ). Because elderly patients are more likely to have decreased renal function, care should be taken in dose selection, and it may be useful to monitor renal function."
+ ],
+ "how_supplied": [
+  "HOW SUPPLIED Sucralfate tablets, USP 1 g are available as light pink, oblong tablets debossed with “A56” on one side and plain on the other side with a score line. They are supplied as follows: Bottles of 90 with child resistant closure: NDC 42291-936-90 Store at 20° to 25°C (68° to 77°F); excursions permitted between 15° to 30°C (59° to 86°F) [see USP Controlled Room Temperature]. Rx Only Manufactured for: AvKARE Pulaski, TN 38478 Mfg. Rev. 05-2021-01 AV 10/23 (M)"
+ ],
+ "description": [
+  "DESCRIPTION Sucralfate tablets, USP contain sucralfate, USP and sucralfate, USP is an α-D-glucopyranoside, β-D-fructofuranosyl-, octakis-(hydrogen sulfate), aluminum complex. Tablets for oral administration contain 1 g of sucralfate, USP. Also contain: D&C Red #30 Lake, FD&C Blue #1 Lake, magnesium stearate, microcrystalline cellulose, and starch. Therapeutic category: antiulcer. Structural Formula"
+ ]
+}

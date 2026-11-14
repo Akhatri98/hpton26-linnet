@@ -21,6 +21,7 @@ from pathlib import Path
 from typing import Literal, Optional
 
 from solver.model import (
+    DAY,
     IngredientCeiling,
     IngredientInterval,
     MealGap,
@@ -199,9 +200,14 @@ class Built:
     rx: dict[str, str] = field(default_factory=dict)  # solver id -> description, for prescription facts
 
 
-def build_regimen(lib: Library, items: list[Item], mode: Mode, *, include_food: bool = True) -> Built:
+def build_regimen(lib: Library, items: list[Item], mode: Mode, *, include_food: bool = True,
+                  bed: Optional[Fraction] = None, wake: Optional[Fraction] = None,
+                  meals: Optional[dict] = None, shift_margin: Fraction = Fraction(0)) -> Built:
     """include_food=False drops meal rules entirely (tier 2: the routine,
-    meals included, is not part of the claim)."""
+    meals included, is not part of the claim). `bed` and `meals` (the reported
+    routine) anchor "after waking, before the first meal" rules; `shift_margin` is how
+    far a tier-1 search may move bedtime and meals, so the window stays clear of any bedtime
+    it could reach."""
     products = []
     built = Built(Regimen((), ()))
     for it in items:
@@ -276,7 +282,14 @@ def build_regimen(lib: Library, items: list[Item], mode: Mode, *, include_food: 
                             built.skipped.append(f"{r.id}: {a} contains both sides; not separable")
                             continue
                         sid = f"{r.id}@{a}~{b}"
-                        add(sid, Separation(sid, a, b, v["before"], v["after"]), r, ing_name, res)
+                        after = v["after"]
+                        if r.first_of_day:  # nothing of b from bedtime until a (reported sleep)
+                            if bed is None or wake is None:
+                                built.skipped.append(f"{r.id}: needs the patient's sleep times")
+                                continue
+                            after = max(after, (Fraction(wake) - Fraction(bed)) % DAY)
+                        add(sid, Separation(sid, a, b, v["before"], after, first_of_day=r.first_of_day),
+                            r, ing_name, res)
             elif isinstance(r, DailyMaxRule):
                 units = {lib.products[p].ingredients[ing_name].unit for p in containing({ing_name})}
                 if units != {r.unit}:
@@ -290,6 +303,19 @@ def build_regimen(lib: Library, items: list[Item], mode: Mode, *, include_food: 
                         add(sid, MealGap(sid, p, v["before_meal"], v["after_meal"], r.meal), r, ing_name, res)
                     elif r.mode == "before_meal_window":
                         add(sid, MealWindow(sid, p, r.meal, v["earliest"], v["latest"]), r, ing_name, res)
+                    elif r.mode == "before_first_meal":
+                        # Window opens at bedtime; doses are never placed during sleep, so in effect it
+                        # opens at waking. Anchored to the reported routine: if a tier-1 change moves
+                        # bedtime later than breakfast moves, the window can open a little before bed.
+                        if bed is None or not meals or r.meal not in meals:
+                            built.skipped.append(f"{r.id}: needs the patient's bedtime and {r.meal} time")
+                            continue
+                        # Opens one minute after bedtime (plus any tier-1 margin, never past waking), so
+                        # a dose cannot sit at bedtime ("should not be taken at bedtime or before arising").
+                        sleep_len = (Fraction(wake) - Fraction(bed)) % DAY if wake is not None else Fraction(0)
+                        offset = min(Fraction(shift_margin), sleep_len) + Fraction(1, 60)
+                        span = max((Fraction(meals[r.meal]) - Fraction(bed)) % DAY - offset, v["latest"])
+                        add(sid, MealWindow(sid, p, r.meal, span, v["latest"], first_of_day=True), r, ing_name, res)
                     else:
                         built.skipped.append(f"{r.id}: food mode {r.mode!r} not encoded yet")
     built.regimen = Regimen(tuple(products), tuple(rx_rules + rules))

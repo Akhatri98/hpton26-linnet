@@ -88,6 +88,9 @@ class SeparationRule(_RuleBase):
     target: str
     before: Number
     after: Number
+    # "first medication of the day": no target dose between bedtime and this one. Applied with
+    # the patient's reported sleep (after = at least the time from bedtime to waking).
+    first_of_day: bool = False
     STRICTER: ClassVar[dict[str, int]] = {"before": +1, "after": +1}
 
     def numeric_params(self):
@@ -111,11 +114,14 @@ class FoodRule(_RuleBase):
                         after a meal (every meal, or only `meal` if named)
     before_meal_window: dose falls between `earliest` and `latest` h before the
                         named `meal` (e.g. "one-half to one hour before breakfast")
+    before_first_meal:  dose after waking and at least `latest` h before the named
+                        `meal`, the first of the day (e.g. "upon arising ... at least
+                        one-half hour before the first food ... of the day")
     with_food:          validated but not yet encoded by the solver
     """
 
     family: Literal["food"]
-    mode: Literal["empty_stomach", "before_meal_window", "with_food"]
+    mode: Literal["empty_stomach", "before_meal_window", "before_first_meal", "with_food"]
     meal: Optional[str] = None
     before_meal: Number = Fraction(0)
     after_meal: Number = Fraction(0)
@@ -130,6 +136,8 @@ class FoodRule(_RuleBase):
     def _window_needs_meal(self):
         if self.mode == "before_meal_window" and (not self.meal or self.earliest < self.latest):
             raise ValueError(f"{self.id}: before_meal_window needs `meal` and earliest >= latest")
+        if self.mode == "before_first_meal" and (not self.meal or self.earliest):
+            raise ValueError(f"{self.id}: before_first_meal needs `meal` and no `earliest` (waking is the start)")
         return self
 
     def numeric_params(self):
@@ -207,6 +215,7 @@ class Membership(Strict):
     verified: bool = False
     review: Optional[dict] = None
     matched: str = ""  # set when the label names only the element (see library/moieties.py)
+    note: str = ""  # reviewer remarks, e.g. why it is interpreted
 
 
 class Group(Strict):

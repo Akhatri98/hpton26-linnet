@@ -1,0 +1,62 @@
+{
+ "set_id": "5514d582-19b5-4f1e-b794-f790afb8211c",
+ "id": "2a327df7-e75d-8130-e063-6294a90a6e83",
+ "version": "3",
+ "effective_time": "20241226",
+ "openfda": {
+  "brand_name": [
+   "Ferrous Sulfate"
+  ],
+  "generic_name": [
+   "FERROUS SULFATE"
+  ],
+  "manufacturer_name": [
+   "Richmond Pharmaceuticals Inc."
+  ],
+  "product_ndc": [
+   "54738-963"
+  ],
+  "product_type": [
+   "HUMAN OTC DRUG"
+  ],
+  "route": [
+   "ORAL"
+  ],
+  "substance_name": [
+   "FERROUS SULFATE"
+  ],
+  "rxcui": [
+   "310325"
+  ],
+  "spl_id": [
+   "2a327df7-e75d-8130-e063-6294a90a6e83"
+  ],
+  "spl_set_id": [
+   "5514d582-19b5-4f1e-b794-f790afb8211c"
+  ],
+  "package_ndc": [
+   "54738-963-13"
+  ],
+  "is_original_packager": [
+   true
+  ],
+  "upc": [
+   "0054738963137"
+  ],
+  "unii": [
+   "39R4TAN1VT"
+  ]
+ },
+ "dosage_and_administration": [
+  "DRUG INTERACTION PRECAUTION: Since oral iron products interfere with absorption of oral tetracycline antibiotics, these products should not be taken within two hours of each other."
+ ],
+ "warnings": [
+  "WARNINGS: Do not exceed recommended dosage. The treatment of any anemic condition should be under the advice and supervision of a doctor. Occasional gastrointestinal discomfort (such as nausea) may be minimized by taking with meals. Iron-containing medication may occasionally cause constipation or diarrhea. As with any drug, if you are pregnant or nursing a baby, seek the advice of a health professional before using this product."
+ ],
+ "boxed_warning": [
+  "WARNING: Accidental overdose of iron-containing products is a leading cause of fatal poisoning in children under 6. Keep this product out of reach of children. In case of accidental overdose, call a doctor or Poison Control Center immediately."
+ ],
+ "active_ingredient": [
+  "EACH TABLET CONTAINS: % U.S. RDA* Elemental Iron 65 mg (Equivalent to 325 mg of Ferrous Sulfate) 60 *U.S. Recommended Daily Allowance"
+ ]
+}

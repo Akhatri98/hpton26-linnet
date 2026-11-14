@@ -66,6 +66,7 @@ class Separation:
     b: str
     before: Hours
     after: Hours
+    first_of_day: bool = False  # `after` = bedtime->waking: nothing of b between bedtime and a
 
 
 @dataclass(frozen=True)
@@ -113,6 +114,7 @@ class MealWindow:
     meal: str
     earliest: Hours
     latest: Hours
+    first_of_day: bool = False  # earliest = bedtime->meal, so with sleep: "after waking, before the meal"
 
 
 Rule = Union[MinInterval, IngredientInterval, Separation, IngredientCeiling, Window, MealGap, MealWindow]

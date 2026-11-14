@@ -1,0 +1,118 @@
+{
+  "ingredient": "sucralfate",
+  "primary_spl": "0909acc5-c746-17fb-e063-6394a90a677f",
+  "rules": [
+    {
+      "id": "sucralfate-antacids-half-hour-separation",
+      "family": "separation",
+      "target": "group:antacids",
+      "before": 0.5,
+      "after": 0.5,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f",
+        "section": "dosage and administration",
+        "sentence": "Antacids may be prescribed as needed for relief of pain but should not be taken within one-half hour before or after sucralfate."
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    },
+    {
+      "id": "sucralfate-after-cimetidine-2h",
+      "family": "separation",
+      "target": "cimetidine",
+      "before": 0,
+      "after": 2,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f",
+        "section": "drug interactions",
+        "sentence": "In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction."
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    },
+    {
+      "id": "sucralfate-after-ciprofloxacin-2h",
+      "family": "separation",
+      "target": "ciprofloxacin",
+      "before": 0,
+      "after": 2,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f",
+        "section": "drug interactions",
+        "sentence": "In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction."
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    },
+    {
+      "id": "sucralfate-after-digoxin-2h",
+      "family": "separation",
+      "target": "digoxin",
+      "before": 0,
+      "after": 2,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f",
+        "section": "drug interactions",
+        "sentence": "In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction."
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    },
+    {
+      "id": "sucralfate-after-norfloxacin-2h",
+      "family": "separation",
+      "target": "norfloxacin",
+      "before": 0,
+      "after": 2,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f",
+        "section": "drug interactions",
+        "sentence": "In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction."
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    },
+    {
+      "id": "sucralfate-after-ofloxacin-2h",
+      "family": "separation",
+      "target": "ofloxacin",
+      "before": 0,
+      "after": 2,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f",
+        "section": "drug interactions",
+        "sentence": "In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction."
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    },
+    {
+      "id": "sucralfate-after-ranitidine-2h",
+      "family": "separation",
+      "target": "ranitidine",
+      "before": 0,
+      "after": 2,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f",
+        "section": "drug interactions",
+        "sentence": "In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction."
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    }
+  ]
+}

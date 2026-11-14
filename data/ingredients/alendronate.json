@@ -1,0 +1,39 @@
+{
+  "ingredient": "alendronate",
+  "primary_spl": "14e931fd-2c5f-4d90-b7db-5980706f4a56",
+  "rules": [
+    {
+      "id": "alendronate-first-thing",
+      "family": "food",
+      "mode": "before_first_meal",
+      "meal": "breakfast",
+      "latest": "1/2",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "14e931fd-2c5f-4d90-b7db-5980706f4a56",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14e931fd-2c5f-4d90-b7db-5980706f4a56",
+        "section": "dosage and administration",
+        "sentence": "2.6 Important Administration Instructions Instruct patients to do the following: Take FOSAMAX at least one-half hour before the first food, beverage, or medication of the day with plain water only [see Patient Counseling Information (17) ]."
+      },
+      "note": "After waking (label: 'FOSAMAX should not be taken at bedtime or before arising for the day.') and at least 30 min before breakfast, the first food of the day. DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+      "verified": false
+    },
+    {
+      "id": "alendronate-before-other-meds",
+      "family": "separation",
+      "target": "*",
+      "before": "1/2",
+      "after": 0,
+      "first_of_day": true,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "14e931fd-2c5f-4d90-b7db-5980706f4a56",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14e931fd-2c5f-4d90-b7db-5980706f4a56",
+        "section": "dosage and administration",
+        "sentence": "2.6 Important Administration Instructions Instruct patients to do the following: Take FOSAMAX at least one-half hour before the first food, beverage, or medication of the day with plain water only [see Patient Counseling Information (17) ]."
+      },
+      "note": "Every other medicine at least 30 min after it, and none between bedtime and it (first medication of the day). Drug Interactions agrees: 'Therefore, instruct patients to wait at least one-half hour after taking FOSAMAX before taking any other oral medications.' DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+      "verified": false
+    }
+  ]
+}

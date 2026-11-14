@@ -170,7 +170,7 @@ def evaluate(n: int, seed: int, bf_max: int, data: Path, routines: list | None =
 
         # 1. exhaustive grid search, for solve A (tier 0 question) and solve B (tier 2 question)
         bed, wake = p.sleep_window()
-        built_a = build_regimen(lib, p.library_items(), "strict")
+        built_a = build_regimen(lib, p.library_items(), "strict", bed=bed, wake=wake, meals=p.meal_times())
         reported = p.reported_counts()
         counts_a = {pr.name: (pr.max_doses if pr.prescribed else reported[pr.name]) for pr in built_a.regimen.products}
         questions = [("A", built_a.regimen, counts_a, p.meal_times(), awake_slots(bed, wake), rep.outcome == "tier0")]

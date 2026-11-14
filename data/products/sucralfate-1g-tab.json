@@ -1,0 +1,16 @@
+{
+  "name": "sucralfate-1g-tab",
+  "display_name": "Sucralfate 1 g tablets",
+  "spl_set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+  "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f",
+  "ingredients": {
+    "sucralfate": {
+      "amount": 1,
+      "unit": "g"
+    }
+  },
+  "dose_note": "One 1 g tablet per dose; 'The recommended adult oral dosage for duodenal ulcer is 1 g four times per day on an empty stomach.'",
+  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+  "unit_name": "tablet",
+  "units_per_dose": 1
+}

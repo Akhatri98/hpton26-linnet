@@ -1,0 +1,22 @@
+{
+  "ingredient": "ferrous_sulfate",
+  "primary_spl": "5514d582-19b5-4f1e-b794-f790afb8211c",
+  "rules": [
+    {
+      "id": "ferrous-sulfate-tetracyclines-separation",
+      "family": "separation",
+      "target": "group:tetracyclines",
+      "before": 2,
+      "after": 2,
+      "provenance": "quoted",
+      "note": "Oral iron products should not be taken within two hours of oral tetracycline antibiotics, in either direction. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "5514d582-19b5-4f1e-b794-f790afb8211c",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5514d582-19b5-4f1e-b794-f790afb8211c",
+        "section": "dosage and administration",
+        "sentence": "DRUG INTERACTION PRECAUTION: Since oral iron products interfere with absorption of oral tetracycline antibiotics, these products should not be taken within two hours of each other."
+      },
+      "verified": false
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "ingredient": "sucralfate",
+  "spl_set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+  "model": "claude-haiku-5-5",
+  "label_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f",
+  "strengths": [],
+  "substances": [
+    "sucralfate"
+  ],
+  "dosing": [
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "duodenal ulcer",
+      "population": "adults",
+      "dose": 1,
+      "dose_max": null,
+      "unit": "g",
+      "every_hours": null,
+      "times_per_day": 4,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+        "section": "dosage and administration",
+        "sentence_id": "S2",
+        "sentence": "The recommended adult oral dosage for duodenal ulcer is 1 g four times per day on an empty stomach.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f"
+      },
+      "verified": false
+    },
+    {
+      "strength": null,
+      "dose_type": "maintenance",
+      "condition": "maintenance therapy for duodenal ulcer",
+      "population": "adults",
+      "dose": 1,
+      "dose_max": null,
+      "unit": "g",
+      "every_hours": null,
+      "times_per_day": 2,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+        "section": "dosage and administration",
+        "sentence_id": "S5",
+        "sentence": "Maintenance Therapy: The recommended adult oral dosage is 1 g twice a day.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f"
+      },
+      "verified": false
+    }
+  ],
+  "limits": [],
+  "administration": [
+    {
+      "id": "sucralfate-antacids-half-hour-separation",
+      "family": "separation",
+      "target": "group:antacids",
+      "before": 0.5,
+      "after": 0.5,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f",
+        "section": "dosage and administration",
+        "sentence": "Antacids may be prescribed as needed for relief of pain but should not be taken within one-half hour before or after sucralfate."
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    },
+    {
+      "id": "sucralfate-after-cimetidine-2h",
+      "family": "separation",
+      "target": "cimetidine",
+      "before": 0,
+      "after": 2,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f",
+        "section": "drug interactions",
+        "sentence": "In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction."
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    },
+    {
+      "id": "sucralfate-after-ciprofloxacin-2h",
+      "family": "separation",
+      "target": "ciprofloxacin",
+      "before": 0,
+      "after": 2,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f",
+        "section": "drug interactions",
+        "sentence": "In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction."
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    },
+    {
+      "id": "sucralfate-after-digoxin-2h",
+      "family": "separation",
+      "target": "digoxin",
+      "before": 0,
+      "after": 2,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f",
+        "section": "drug interactions",
+        "sentence": "In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction."
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    },
+    {
+      "id": "sucralfate-after-norfloxacin-2h",
+      "family": "separation",
+      "target": "norfloxacin",
+      "before": 0,
+      "after": 2,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f",
+        "section": "drug interactions",
+        "sentence": "In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction."
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    },
+    {
+      "id": "sucralfate-after-ofloxacin-2h",
+      "family": "separation",
+      "target": "ofloxacin",
+      "before": 0,
+      "after": 2,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f",
+        "section": "drug interactions",
+        "sentence": "In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction."
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    },
+    {
+      "id": "sucralfate-after-ranitidine-2h",
+      "family": "separation",
+      "target": "ranitidine",
+      "before": 0,
+      "after": 2,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0909acc5-c746-17fb-e063-6394a90a677f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f",
+        "section": "drug interactions",
+        "sentence": "In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction."
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model."
+    }
+  ],
+  "memberships": [],
+  "rejected": [],
+  "unaccounted_for": [
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S11",
+      "section": "precautions",
+      "sentence": "Carcinogenesis, Mutagenesis, Impairment of Fertility Chronic oral toxicity studies of 24 months’ duration were conducted in mice and rats at doses up to 1 g/kg (12 times the human dose)."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S12",
+      "section": "precautions",
+      "sentence": "A reproduction study in rats at doses up to 38 times the human dose did not reveal any indication of fertility impairment."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S13",
+      "section": "precautions",
+      "sentence": "Pregnancy Teratogenic effects Teratogenicity studies have been performed in mice, rats, and rabbits at doses up to 50 times the human dose and have revealed no evidence of harm to the fetus due to sucralfate."
+    }
+  ],
+  "sentences": [
+    {
+      "sentence_id": "S1",
+      "section": "dosage and administration",
+      "text": "DOSAGE AND ADMINISTRATION Active Duodenal Ulcer."
+    },
+    {
+      "sentence_id": "S2",
+      "section": "dosage and administration",
+      "text": "The recommended adult oral dosage for duodenal ulcer is 1 g four times per day on an empty stomach."
+    },
+    {
+      "sentence_id": "S3",
+      "section": "dosage and administration",
+      "text": "Antacids may be prescribed as needed for relief of pain but should not be taken within one-half hour before or after sucralfate."
+    },
+    {
+      "sentence_id": "S4",
+      "section": "dosage and administration",
+      "text": "While healing with sucralfate may occur during the first week or two, treatment should be continued for 4 to 8 weeks unless healing has been demonstrated by x-ray or endoscopic examination."
+    },
+    {
+      "sentence_id": "S5",
+      "section": "dosage and administration",
+      "text": "Maintenance Therapy: The recommended adult oral dosage is 1 g twice a day."
+    },
+    {
+      "sentence_id": "S6",
+      "section": "drug interactions",
+      "text": "Subtherapeutic prothrombin times with concomitant warfarin and sucralfate therapy have been reported in spontaneous and published case reports."
+    },
+    {
+      "sentence_id": "S7",
+      "section": "drug interactions",
+      "text": "In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction."
+    },
+    {
+      "sentence_id": "S8",
+      "section": "drug interactions",
+      "text": "Because of the potential of sucralfate to alter the absorption of some drugs, sucralfate should be administered separately from other drugs when alterations in bioavailability are felt to be critical."
+    },
+    {
+      "sentence_id": "S9",
+      "section": "precautions",
+      "text": "Therefore, sucralfate tablets should be used with caution by patients who have known conditions that may impair swallowing, such as recent or prolonged intubation, tracheostomy, prior history of aspiration, dysphagia, or any other conditions that may alter gag and cough reflexes, or diminish oropharyngeal coordination or motility."
+    },
+    {
+      "sentence_id": "S10",
+      "section": "precautions",
+      "text": "In these cases, patients should be monitored appropriately."
+    },
+    {
+      "sentence_id": "S11",
+      "section": "precautions",
+      "text": "Carcinogenesis, Mutagenesis, Impairment of Fertility Chronic oral toxicity studies of 24 months’ duration were conducted in mice and rats at doses up to 1 g/kg (12 times the human dose)."
+    },
+    {
+      "sentence_id": "S12",
+      "section": "precautions",
+      "text": "A reproduction study in rats at doses up to 38 times the human dose did not reveal any indication of fertility impairment."
+    },
+    {
+      "sentence_id": "S13",
+      "section": "precautions",
+      "text": "Pregnancy Teratogenic effects Teratogenicity studies have been performed in mice, rats, and rabbits at doses up to 50 times the human dose and have revealed no evidence of harm to the fetus due to sucralfate."
+    },
+    {
+      "sentence_id": "S14",
+      "section": "how supplied",
+      "text": "HOW SUPPLIED Sucralfate tablets, USP 1 g are available as light pink, oblong tablets debossed with “A56” on one side and plain on the other side with a score line."
+    },
+    {
+      "sentence_id": "S15",
+      "section": "description",
+      "text": "DESCRIPTION Sucralfate tablets, USP contain sucralfate, USP and sucralfate, USP is an α-D-glucopyranoside, β-D-fructofuranosyl-, octakis-(hydrogen sulfate), aluminum complex."
+    },
+    {
+      "sentence_id": "S16",
+      "section": "description",
+      "text": "Tablets for oral administration contain 1 g of sucralfate, USP."
+    }
+  ],
+  "passes_run": [
+    "administration",
+    "dosing",
+    "limits"
+  ]
+}

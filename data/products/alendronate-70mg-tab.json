@@ -1,0 +1,16 @@
+{
+  "name": "alendronate-70mg-tab",
+  "display_name": "Alendronate sodium 70 mg tablets (FOSAMAX)",
+  "spl_set_id": "14e931fd-2c5f-4d90-b7db-5980706f4a56",
+  "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14e931fd-2c5f-4d90-b7db-5980706f4a56",
+  "ingredients": {
+    "alendronate": {
+      "amount": 70,
+      "unit": "mg"
+    }
+  },
+  "dose_note": "One 70 mg tablet once weekly (label 2.1); LINNET checks the day it is taken.",
+  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+  "unit_name": "tablet",
+  "units_per_dose": 1
+}

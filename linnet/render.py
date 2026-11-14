@@ -67,6 +67,8 @@ def describe(rule, lib: Library, unit: str = "") -> str:
         return f"doses of {_name(lib, rule.product)} at least {_dur(rule.hours)} apart"
     if isinstance(rule, Separation):
         a, b = _name(lib, rule.a), _name(lib, rule.b)
+        if rule.first_of_day:
+            return f"{a} first: no {b} from bedtime until it, and {b} at least {_dur(rule.before)} after it"
         if rule.before and rule.after:
             return f"no {a} from {_dur(rule.before)} before to {_dur(rule.after)} after any {b} dose"
         if rule.before:
@@ -77,6 +79,8 @@ def describe(rule, lib: Library, unit: str = "") -> str:
     if isinstance(rule, MealGap):
         meal = rule.meal or "any meal"
         return f"no {_name(lib, rule.product)} from {_dur(rule.before)} before to {_dur(rule.after)} after {meal}"
+    if isinstance(rule, MealWindow) and rule.first_of_day:
+        return f"{_name(lib, rule.product)} after waking, at least {_dur(rule.latest)} before {rule.meal}"
     if isinstance(rule, MealWindow):
         return (f"{_name(lib, rule.product)} between {_dur(rule.earliest)} and "
                 f"{_dur(rule.latest)} before {rule.meal}")
