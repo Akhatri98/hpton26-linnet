@@ -1,0 +1,29 @@
+{
+ "name": "random regimen 145 on a real NHANES routine",
+ "constructed": true,
+ "items": [
+  {
+   "product": "acetaminophen-500-otc",
+   "reported_count": 3
+  },
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  },
+  {
+   "product": "tums-es-750",
+   "reported_count": 3
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "09:00",
+   "lunch": "13:30",
+   "dinner": "19:30"
+  },
+  "sleep": {
+   "start": "21:30",
+   "end": "05:00"
+  }
+ }
+}

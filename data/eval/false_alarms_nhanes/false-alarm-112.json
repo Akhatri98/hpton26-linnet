@@ -1,0 +1,34 @@
+{
+ "name": "random regimen 112 on a real NHANES routine",
+ "constructed": true,
+ "items": [
+  {
+   "product": "ciprofloxacin-500mg",
+   "prescribed_count": 2,
+   "every_hours": 12
+  },
+  {
+   "product": "tums-es-750",
+   "reported_count": 3
+  },
+  {
+   "product": "colestipol-1g-tab",
+   "prescribed_count": 2
+  },
+  {
+   "product": "apap-codeine-300-30",
+   "prescribed_count": 3
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "08:00",
+   "lunch": "12:00",
+   "dinner": "20:00"
+  },
+  "sleep": {
+   "start": "22:00",
+   "end": "06:45"
+  }
+ }
+}

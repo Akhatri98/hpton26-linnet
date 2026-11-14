@@ -1,0 +1,25 @@
+{
+ "name": "random regimen 141",
+ "constructed": true,
+ "items": [
+  {
+   "product": "tums-es-750",
+   "reported_count": 3
+  },
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "07:15",
+   "lunch": "11:45",
+   "dinner": "18:45"
+  },
+  "sleep": {
+   "start": "23:15",
+   "end": "06:45"
+  }
+ }
+}
