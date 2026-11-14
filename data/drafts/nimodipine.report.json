@@ -1,6 +1,17 @@
 {
   "model": "claude-haiku-5-5",
-  "accepted_rules": 2,
+  "accepted_rules": 1,
   "accepted_memberships": [],
-  "rejected": []
+  "rejected": [
+    {
+      "item": {
+        "id": "nimodipine-min-interval-4h",
+        "family": "min_interval",
+        "hours": 4,
+        "sentence": "S3",
+        "provenance": "quoted"
+      },
+      "reason": "S3 gives 'every 4 hours' as a regimen, not a minimum gap or an as-needed limit; the prescription sets the regimen"
+    }
+  ]
 }

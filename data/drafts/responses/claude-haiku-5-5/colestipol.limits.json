@@ -1,1 +1,1 @@
-{"limits": [{"kind": "per_dose", "amount": 2, "unit": "g", "population": "general", "sentence": "S1", "provenance": "quoted"}]}
+{"limits": [{"kind": "per_day", "amount": 16, "unit": "g", "ingredient": null, "strength": null, "population": "adults", "condition": null, "sentence": "S1", "provenance": "quoted"}]}

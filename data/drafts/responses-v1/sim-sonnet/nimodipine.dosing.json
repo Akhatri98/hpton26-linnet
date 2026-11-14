@@ -1,0 +1,30 @@
+{
+ "dosing": [
+  {
+   "condition": "subarachnoid hemorrhage",
+   "population": "adults",
+   "dose": 60,
+   "dose_max": null,
+   "unit": "mg",
+   "every_hours": 4,
+   "times_per_day": null,
+   "duration_days": 21,
+   "as_needed": false,
+   "sentence": "S1",
+   "provenance": "quoted"
+  },
+  {
+   "condition": "reduced dosage",
+   "population": "general",
+   "dose": 30,
+   "dose_max": null,
+   "unit": "mg",
+   "every_hours": 4,
+   "times_per_day": null,
+   "duration_days": null,
+   "as_needed": false,
+   "sentence": "S4",
+   "provenance": "quoted"
+  }
+ ]
+}

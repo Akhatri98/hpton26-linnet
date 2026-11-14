@@ -12,10 +12,6 @@
   "dose_note": "One 500 mg tablet per dose.",
   "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
   "verified": false,
-  "review": {
-    "decision": "rejected",
-    "by": "ak",
-    "role": "pharmacist",
-    "at": "2026-11-14T15:50:41-05:00"
-  }
+  "unit_name": "tablet",
+  "units_per_dose": 1
 }

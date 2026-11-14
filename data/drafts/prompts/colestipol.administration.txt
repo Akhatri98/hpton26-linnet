@@ -4,26 +4,26 @@ Ingredient: colestipol
 Label set id: 03ca5800-4211-4383-a332-be88bd9b5304
 
 Numbered sentences from the label:
-S1 [dosage and administration] The starting dose should be 2 grams once or twice daily.
-S2 [dosage and administration] Dosage increases of 2 grams, once or twice daily should occur at 1-or 2-month intervals.
-S3 [dosage and administration] Patients should take other drugs at least one hour before or four hours after colestipol hydrochloride tablets to minimize possible interference with their absorption.
-S4 [dosage and administration] (See Drug Interactions.) Before Administration of Colestipol Hydrochloride Tablets Define the type of hyperlipoproteinemia, as described in NCEP guidelines.
-S5 [drug interactions] The interval between the administration of colestipol hydrochloride tablets and any other medication should be as long as possible.
-S6 [drug interactions] Patients should take other drugs at least one hour before or four hours after colestipol hydrochloride tablets to avoid impeding their absorption.
-S7 [drug interactions] Repeated doses of colestipol hydrochloride given prior to a single dose of propranolol in human trials have been reported to decrease propranolol absorption.
-S8 [drug interactions] the time to reach maximum concentration was delayed approximately 30 minutes.
-S9 [drug interactions] Studies in humans show that the absorption of chlorothiazide as reflected in urinary excretion is markedly decreased even when administered one hour before colestipol hydrochloride.
-S10 [drug interactions] these drugs were not tested to determine the effect of administration one hour before colestipol hydrochloride.
-S11 [precautions] PRECAUTIONS Prior to initiating therapy with colestipol hydrochloride tablets, secondary causes of hypercholesterolemia (e.g., poorly controlled diabetes mellitus, hypothyroidism, nephrotic syndrome, dysproteinemias, obstructive liver disease, other drug therapy, alcoholism), should be excluded, and a lipid profile performed to assess total cholesterol, HDL-C, and triglycerides (TG).
-S12 [precautions] In patients with pre-existing constipation, the starting dose should be 2 grams once or twice a day.
-S13 [precautions] Information for Patients Colestipol hydrochloride tablets may be larger than pills you have taken before.
-S14 [precautions] If you have had swallowing problems or choking with food, liquids or other tablets or capsules in the past, you should discuss this with your doctor before taking colestipol hydrochloride tablets.
-S15 [precautions] If a tablet does get stuck after you swallow it, you may notice pressure or discomfort.
-S16 [precautions] If you are taking other medications, you should take them at least one hour before or four hours after taking colestipol hydrochloride tablets.
+S2 [dosage and administration] The starting dose should be 2 grams once or twice daily.
+S3 [dosage and administration] Dosage increases of 2 grams, once or twice daily should occur at 1-or 2-month intervals.
+S6 [dosage and administration] Patients should take other drugs at least one hour before or four hours after colestipol hydrochloride tablets to minimize possible interference with their absorption.
+S7 [dosage and administration] (See Drug Interactions.) Before Administration of Colestipol Hydrochloride Tablets Define the type of hyperlipoproteinemia, as described in NCEP guidelines.
+S8 [drug interactions] The interval between the administration of colestipol hydrochloride tablets and any other medication should be as long as possible.
+S9 [drug interactions] Patients should take other drugs at least one hour before or four hours after colestipol hydrochloride tablets to avoid impeding their absorption.
+S10 [drug interactions] Repeated doses of colestipol hydrochloride given prior to a single dose of propranolol in human trials have been reported to decrease propranolol absorption.
+S11 [drug interactions] the time to reach maximum concentration was delayed approximately 30 minutes.
+S12 [drug interactions] Studies in humans show that the absorption of chlorothiazide as reflected in urinary excretion is markedly decreased even when administered one hour before colestipol hydrochloride.
+S13 [drug interactions] these drugs were not tested to determine the effect of administration one hour before colestipol hydrochloride.
+S14 [precautions] PRECAUTIONS Prior to initiating therapy with colestipol hydrochloride tablets, secondary causes of hypercholesterolemia (e.g., poorly controlled diabetes mellitus, hypothyroidism, nephrotic syndrome, dysproteinemias, obstructive liver disease, other drug therapy, alcoholism), should be excluded, and a lipid profile performed to assess total cholesterol, HDL-C, and triglycerides (TG).
+S17 [precautions] In patients with pre-existing constipation, the starting dose should be 2 grams once or twice a day.
+S21 [precautions] Information for Patients Colestipol hydrochloride tablets may be larger than pills you have taken before.
+S22 [precautions] If you have had swallowing problems or choking with food, liquids or other tablets or capsules in the past, you should discuss this with your doctor before taking colestipol hydrochloride tablets.
+S23 [precautions] If a tablet does get stuck after you swallow it, you may notice pressure or discomfort.
+S24 [precautions] If you are taking other medications, you should take them at least one hour before or four hours after taking colestipol hydrochloride tablets.
 
 Known ingredient groups (you may propose members for these, or a new group):
 - levothyroxine_binders: ['calcium_carbonate', 'colestipol']
-- polyvalent_cations: ['calcium_carbonate']
+- polyvalent_cations: ['aluminum', 'calcium_carbonate', 'iron', 'magnesium', 'zinc']
 
 Return ONLY a JSON object:
 {

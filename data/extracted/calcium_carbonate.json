@@ -3,43 +3,31 @@
   "spl_set_id": "036ef1ed-32ef-46b8-8817-b3f63a014280",
   "model": "claude-haiku-5-5",
   "label_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ef1ed-32ef-46b8-8817-b3f63a014280",
+  "strengths": [
+    "750 mg"
+  ],
+  "substances": [
+    "calcium carbonate"
+  ],
   "dosing": [
     {
+      "strength": null,
+      "dose_type": "usual",
       "condition": "general",
-      "population": "adults",
-      "dose": 6,
-      "dose_max": null,
+      "population": "adults and children 12 years of age and over",
+      "dose": 2,
+      "dose_max": 4,
       "unit": "tablets",
-      "every_hours": 24,
+      "every_hours": null,
       "times_per_day": null,
       "duration_days": null,
       "as_needed": true,
       "provenance": "quoted",
       "source": {
         "spl_set_id": "036ef1ed-32ef-46b8-8817-b3f63a014280",
-        "section": "warnings",
-        "sentence_id": "S4",
-        "sentence": "When using this product • do not take more than 6 tablets in 24 hours • if pregnant do not take more than 6 tablets in 24 hours • do not use the maximum dosage for more than 2 weeks, except under the advice and supervision of a doctor Keep out of reach of children.",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ef1ed-32ef-46b8-8817-b3f63a014280"
-      },
-      "verified": false
-    },
-    {
-      "condition": "general",
-      "population": "pregnant women",
-      "dose": 6,
-      "dose_max": null,
-      "unit": "tablets",
-      "every_hours": 24,
-      "times_per_day": null,
-      "duration_days": null,
-      "as_needed": true,
-      "provenance": "quoted",
-      "source": {
-        "spl_set_id": "036ef1ed-32ef-46b8-8817-b3f63a014280",
-        "section": "warnings",
-        "sentence_id": "S4",
-        "sentence": "When using this product • do not take more than 6 tablets in 24 hours • if pregnant do not take more than 6 tablets in 24 hours • do not use the maximum dosage for more than 2 weeks, except under the advice and supervision of a doctor Keep out of reach of children.",
+        "section": "dosage and administration",
+        "sentence_id": "S1",
+        "sentence": "Directions • adults and children 12 years of age and over: chew 2-4 tablets as symptoms occur, or as directed by a doctor.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ef1ed-32ef-46b8-8817-b3f63a014280"
       },
       "verified": false
@@ -50,12 +38,15 @@
       "kind": "per_day",
       "amount": 6,
       "unit": "tablets",
+      "ingredient": null,
+      "strength": null,
       "population": "general",
+      "condition": null,
       "provenance": "quoted",
       "source": {
         "spl_set_id": "036ef1ed-32ef-46b8-8817-b3f63a014280",
         "section": "warnings",
-        "sentence_id": "S4",
+        "sentence_id": "S6",
         "sentence": "When using this product • do not take more than 6 tablets in 24 hours • if pregnant do not take more than 6 tablets in 24 hours • do not use the maximum dosage for more than 2 weeks, except under the advice and supervision of a doctor Keep out of reach of children.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ef1ed-32ef-46b8-8817-b3f63a014280"
       },
@@ -65,12 +56,33 @@
       "kind": "per_day",
       "amount": 6,
       "unit": "tablets",
+      "ingredient": null,
+      "strength": null,
       "population": "pregnant",
+      "condition": null,
       "provenance": "quoted",
       "source": {
         "spl_set_id": "036ef1ed-32ef-46b8-8817-b3f63a014280",
         "section": "warnings",
-        "sentence_id": "S4",
+        "sentence_id": "S6",
+        "sentence": "When using this product • do not take more than 6 tablets in 24 hours • if pregnant do not take more than 6 tablets in 24 hours • do not use the maximum dosage for more than 2 weeks, except under the advice and supervision of a doctor Keep out of reach of children.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ef1ed-32ef-46b8-8817-b3f63a014280"
+      },
+      "verified": false
+    },
+    {
+      "kind": "duration_days",
+      "amount": 2,
+      "unit": "days",
+      "ingredient": null,
+      "strength": null,
+      "population": "general",
+      "condition": "symptoms persisting; maximum dosage use",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "036ef1ed-32ef-46b8-8817-b3f63a014280",
+        "section": "warnings",
+        "sentence_id": "S6",
         "sentence": "When using this product • do not take more than 6 tablets in 24 hours • if pregnant do not take more than 6 tablets in 24 hours • do not use the maximum dosage for more than 2 weeks, except under the advice and supervision of a doctor Keep out of reach of children.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ef1ed-32ef-46b8-8817-b3f63a014280"
       },
@@ -85,7 +97,7 @@
       "priority": 2,
       "kind": "review",
       "note": "",
-      "sentence_id": "S2",
+      "sentence_id": "S3",
       "section": "dosage and administration",
       "sentence": "• do not take for symptoms that persist for more than 2 weeks unless advised by a doctor"
     }
@@ -94,22 +106,37 @@
     {
       "sentence_id": "S1",
       "section": "dosage and administration",
-      "text": "Chew or crush tablets completely before swallowing."
+      "text": "Directions • adults and children 12 years of age and over: chew 2-4 tablets as symptoms occur, or as directed by a doctor."
     },
     {
       "sentence_id": "S2",
       "section": "dosage and administration",
-      "text": "• do not take for symptoms that persist for more than 2 weeks unless advised by a doctor"
+      "text": "Chew or crush tablets completely before swallowing."
     },
     {
       "sentence_id": "S3",
-      "section": "warnings",
-      "text": "Warnings Ask a doctor or pharmacist before use if you are presently taking a prescription drug."
+      "section": "dosage and administration",
+      "text": "• do not take for symptoms that persist for more than 2 weeks unless advised by a doctor"
     },
     {
       "sentence_id": "S4",
       "section": "warnings",
+      "text": "Warnings Ask a doctor or pharmacist before use if you are presently taking a prescription drug."
+    },
+    {
+      "sentence_id": "S5",
+      "section": "warnings",
+      "text": "Antacids may interact with certain prescription drugs."
+    },
+    {
+      "sentence_id": "S6",
+      "section": "warnings",
       "text": "When using this product • do not take more than 6 tablets in 24 hours • if pregnant do not take more than 6 tablets in 24 hours • do not use the maximum dosage for more than 2 weeks, except under the advice and supervision of a doctor Keep out of reach of children."
+    },
+    {
+      "sentence_id": "S7",
+      "section": "active ingredient",
+      "text": "Active ingredient (per tablet) Calcium carbonate 750 mg"
     }
   ],
   "passes_run": [

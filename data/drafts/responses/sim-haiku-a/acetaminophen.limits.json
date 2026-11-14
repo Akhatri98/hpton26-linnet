@@ -1,7 +1,1 @@
-{"limits": [
-  {"kind": "per_day", "amount": 6, "unit": "caplets", "population": "adults and children 12 years and over", "sentence": "S1", "provenance": "quoted"},
-  {"kind": "duration_days", "amount": 10, "unit": "days", "population": "adults and children 12 years and over", "sentence": "S1", "provenance": "quoted"},
-  {"kind": "per_day", "amount": 4000, "unit": "mg", "population": "general", "sentence": "S2", "provenance": "quoted"},
-  {"kind": "duration_days", "amount": 10, "unit": "days", "population": "general", "sentence": "S3", "provenance": "quoted", "note": "stop use if pain gets worse or lasts more than 10 days"},
-  {"kind": "duration_days", "amount": 3, "unit": "days", "population": "general", "sentence": "S3", "provenance": "quoted", "note": "stop use if fever gets worse or lasts more than 3 days"}
-]}
+{"limits": [{"kind": "per_day", "amount": 6, "unit": "caplets", "ingredient": null, "strength": "500 mg", "population": "adults and children 12 years and over", "condition": null, "sentence": "S1", "provenance": "quoted"}, {"kind": "duration_days", "amount": 10, "unit": "days", "ingredient": null, "strength": null, "population": "adults and children 12 years and over", "condition": null, "sentence": "S1", "provenance": "quoted"}, {"kind": "per_day", "amount": 4000, "unit": "mg", "ingredient": "acetaminophen", "strength": null, "population": "general", "condition": null, "sentence": "S3", "provenance": "quoted"}]}

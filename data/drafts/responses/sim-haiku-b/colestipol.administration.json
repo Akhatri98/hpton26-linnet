@@ -1,1 +1,1 @@
-{"rules":[{"id":"colestipol-separation-other-drugs","family":"separation","target":"*","before":4,"after":1,"sentence":"S3","provenance":"quoted"}],"memberships":[]}
+{"rules": [{"id": "colestipol-separation-other-drugs", "family": "separation", "target": "*", "before": 4, "after": 1, "sentence": "S6", "provenance": "quoted", "note": "other drugs at least 1 hour before or 4 hours after colestipol; S9 and S24 repeat this"}], "memberships": []}

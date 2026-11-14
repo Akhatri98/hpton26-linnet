@@ -32,7 +32,7 @@ from pathlib import Path
 from .evaluate import _key, _nums
 from .extract import PASSES, _check_pass, label_record, numbered_sentences
 from .moieties import element_of, is_element
-from .passes import uncited
+from .passes import MASS_UNITS, uncited
 
 DATA = Path("data")
 RESP = DATA / "drafts" / "responses"
@@ -52,11 +52,30 @@ NAMES = {".": "stand-in Haiku run 0 (subagent)", "claude-haiku-5-5": "Haiku 5.5 
 
 def _gold_rules(spl: str) -> list[dict]:
     """Curated rules citing this label, from ANY ingredient file (a combination
-    label's rules are filed under each ingredient)."""
+    label's rules are filed under each ingredient), tagged with that ingredient."""
     out = []
     for f in sorted((DATA / "ingredients").glob("*.json")):
-        out += [r for r in json.loads(f.read_text(encoding="utf-8"))["rules"] if r["source"]["spl_set_id"] == spl]
+        out += [{**r, "ingredient": f.stem} for r in json.loads(f.read_text(encoding="utf-8"))["rules"]
+                if r["source"]["spl_set_id"] == spl]
     return out
+
+
+def _ing(name) -> str:
+    return str(name or "").strip().lower().replace(" ", "_")
+
+
+def _same_ing(gold: dict, draft: dict) -> bool:
+    """A draft that names its ingredient must name the gold rule's; one that names none can match any."""
+    return not draft.get("ingredient") or _ing(draft["ingredient"]) == _ing(gold.get("ingredient"))
+
+
+def _candidates(admin: list[dict], limits: list[dict]) -> list[dict]:
+    """Draft rules to score: the administration pass, plus daily maxima from the limits pass (which
+    names the ingredient on a combination label). A maximum found by both passes counts once."""
+    out = [{"family": "daily_max", "amount": r["amount"], "unit": r["unit"], "ingredient": r.get("ingredient"),
+            "provenance": r["provenance"]} for r in limits if r.get("kind") == "per_day" and r.get("unit") in MASS_UNITS]
+    seen = {(_key(r), tuple(sorted(_nums(r).items()))) for r in out}
+    return out + [r for r in admin if (_key(r), tuple(sorted(_nums(r).items()))) not in seen]
 
 
 def _gold_members(spl: str) -> set[str]:
@@ -101,22 +120,34 @@ def score_set(folder: Path) -> dict:
         res["limits_rows"] += len(checked["limits"].rules) if "limits" in checked else 0
 
         gold = _gold_rules(spl)
+        drafts = _candidates(adm.rules, checked["limits"].rules if "limits" in checked else [])
         g_by, d_by = {}, {}
         for r in gold:
             g_by.setdefault(_key(r), []).append(r)
-        for r in adm.rules:
+        for r in drafts:
             d_by.setdefault(_key(r), []).append(r)
-        lab = {"exact": [], "partial": [], "missed": [], "extra": [], "signature": _sig(adm.rules)}
-        for k, gs in g_by.items():
-            ds = d_by.get(k)
-            if not ds:
-                lab["missed"] += [g["id"] for g in gs]
-                continue
-            same = _nums(gs[0]) == _nums(ds[0])
-            lab["exact" if same else "partial"].append(gs[0]["id"])
-            res["prov_total"] += 1
-            res["prov_agree"] += gs[0]["provenance"] == ds[0]["provenance"]
-        lab["extra"] = [r["id"] for k, ds in d_by.items() if k not in g_by for r in ds]
+        lab = {"exact": [], "partial": [], "missed": [], "extra": [], "signature": _sig(drafts)}
+        for k in set(g_by) | set(d_by):  # one draft row per gold rule, never shared
+            gs, ds = list(g_by.get(k, [])), list(d_by.get(k, []))
+            pairs = []
+            for g in list(gs):  # exact matches first
+                d = next((d for d in ds if _nums(d) == _nums(g) and _same_ing(g, d)), None)
+                if d is not None:
+                    pairs.append(("exact", g, d))
+                    gs.remove(g)
+                    ds.remove(d)
+            for g in list(gs):
+                d = next((d for d in ds if _same_ing(g, d)), None)
+                if d is not None:
+                    pairs.append(("partial", g, d))
+                    gs.remove(g)
+                    ds.remove(d)
+            for how, g, d in pairs:
+                lab[how].append(g["id"])
+                res["prov_total"] += 1
+                res["prov_agree"] += g["provenance"] == d["provenance"]
+            lab["missed"] += [g["id"] for g in gs]
+            lab["extra"] += [d.get("id") or f"{d['family']}-{d.get('amount', '')}" for d in ds]
 
         # safety net: is each missed gold rule's sentence at priority 1 in the review queue?
         cited = {text_to_sid.get(r["source"]["sentence"], "") for c in checked.values() for r in c.rules}

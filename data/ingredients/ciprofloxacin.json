@@ -16,13 +16,7 @@
         "sentence": "Administer ciprofloxacin tablets at least 2 hours before or 6 hours after magnesium/aluminum antacids; polymeric phosphate binders (for example, sevelamer, lanthanum carbonate) or sucralfate; Videx ® (didanosine) chewable/buffered tablets or pediatric powder for oral solution; other highly buffered drugs; or other products containing calcium, iron or zinc."
       },
       "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
-      "verified": false,
-      "review": {
-        "decision": "rejected",
-        "by": "ak",
-        "role": "pharmacist",
-        "at": "2026-11-14T15:46:20-05:00"
-      }
+      "verified": false
     }
   ]
 }

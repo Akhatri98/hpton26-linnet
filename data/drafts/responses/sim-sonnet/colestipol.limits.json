@@ -1,3 +1,1 @@
-{
- "limits": []
-}
+{"limits":[{"kind":"per_day","amount":16,"unit":"g","ingredient":null,"strength":null,"population":"adults","condition":null,"sentence":"S1","provenance":"interpreted"}]}

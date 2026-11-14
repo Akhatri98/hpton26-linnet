@@ -3,20 +3,6 @@
   "primary_spl": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
   "rules": [
     {
-      "id": "nimodipine-min-interval-4h",
-      "family": "min_interval",
-      "hours": 4,
-      "provenance": "quoted",
-      "note": "Dose is 60 mg every 4 hours for 21 consecutive days. | DRAFT: proposed by a language model.",
-      "source": {
-        "spl_set_id": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
-        "section": "dosage and administration",
-        "sentence": "The recommended oral dose is 60 mg (two 30 mg capsules) every 4 hours for 21 consecutive days."
-      },
-      "verified": false
-    },
-    {
       "id": "nimodipine-food-empty-stomach",
       "family": "food",
       "mode": "empty_stomach",
@@ -27,7 +13,7 @@
         "before_meal": 0,
         "after_meal": 0
       },
-      "note": "Capsules preferably taken not less than 1 hour before or 2 hours after meals; 'preferably' makes this soft. | DRAFT: proposed by a language model.",
+      "note": "Label says capsules should preferably be taken not less than 1 hour before or 2 hours after meals; 'preferably' is a soft word. | DRAFT: proposed by a language model.",
       "source": {
         "spl_set_id": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d",

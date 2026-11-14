@@ -13,6 +13,7 @@ SENTS = [
              "Patients should take other drugs at least one hour before or four hours after colestipol tablets."),
     Sentence("S3", "warnings", "Do not take more than 4,000 mg of acetaminophen in 24 hours."),
     Sentence("S4", "dosage and administration", "Take one-half to one hour before breakfast."),
+    Sentence("S5", "dosage and administration", "Take 1 to 2 tablets every 4 hours as needed for pain."),
 ]
 
 
@@ -25,23 +26,30 @@ def test_numbers_in_reads_digits_words_commas_and_minutes():
 
 
 def test_good_rule_is_accepted_and_quote_is_copied_by_code():
-    out = check({"rules": [{"id": "x-q4h", "family": "min_interval", "hours": 4, "sentence": "S1",
+    out = check({"rules": [{"id": "x-q4h", "family": "min_interval", "hours": 4, "sentence": "S5",
                             "provenance": "quoted"}]}, "x", SPL, SENTS)
     assert not out.rejected and len(out.rules) == 1
     r = out.rules[0]
-    assert r["source"]["sentence"] == SENTS[0].text and r["verified"] is False
+    assert r["source"]["sentence"] == SENTS[4].text and r["verified"] is False
+
+
+def test_regimen_frequency_is_not_a_minimum_gap():
+    # "60 mg every 4 hours for 21 days" is a regimen: the prescription sets it, not a hard spacing rule.
+    out = check({"rules": [{"id": "x-q4h", "family": "min_interval", "hours": 4, "sentence": "S1",
+                            "provenance": "quoted"}]}, "x", SPL, SENTS)
+    assert not out.rules and "regimen" in out.rejected[0]["reason"]
 
 
 def test_invented_number_is_rejected():
-    out = check({"rules": [{"id": "x-q6h", "family": "min_interval", "hours": 6, "sentence": "S1",
+    out = check({"rules": [{"id": "x-q6h", "family": "min_interval", "hours": 6, "sentence": "S5",
                             "provenance": "quoted"}]}, "x", SPL, SENTS)
-    assert not out.rules and "not stated in S1" in out.rejected[0]["reason"]
+    assert not out.rules and "not stated in S5" in out.rejected[0]["reason"]
 
 
 def test_missing_sentence_and_bad_schema_are_rejected():
     out = check({"rules": [
         {"id": "x-a", "family": "min_interval", "hours": 4, "sentence": "S99", "provenance": "quoted"},
-        {"id": "x-b", "family": "min_interval", "hours": 4, "sentence": "S1", "provenance": "interpreted"},
+        {"id": "x-b", "family": "min_interval", "hours": 4, "sentence": "S5", "provenance": "interpreted"},
     ]}, "x", SPL, SENTS)
     reasons = [r["reason"] for r in out.rejected]
     assert len(out.rules) == 0

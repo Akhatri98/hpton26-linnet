@@ -125,6 +125,8 @@ mark { background: var(--honey); color: var(--ink); padding: 0 3px; border-radiu
 .rv-rule { font-size: 14px; font-weight: 700; color: var(--walnut); margin: 8px 0 4px; }
 .btn.danger { background: var(--persimmon); border-color: var(--persimmon); color: #fff; font-weight: 600; }
 .btn u { text-decoration-thickness: 2px; }
+.btn.flag { background: var(--honey); border-color: var(--honey); color: var(--ink); font-weight: 600; }
+tr.done td { opacity: .45; }
 </style>
 </head>
 <body>
@@ -159,7 +161,7 @@ mark { background: var(--honey); color: var(--ink); padding: 0 3px; border-radiu
     <div class="panel"><div class="body row-actions"><label>ID <input type="text" id="pname" size="32"></label></div></div>
 
     <div class="panel"><h2>Medications <span class="r"><button class="btn sm" id="add-med">+ add</button></span></h2>
-      <table><thead><tr><th style="width:44%">Product</th><th>Use</th><th>Doses / day</th><th>Every N h</th><th></th></tr></thead>
+      <table><thead><tr><th style="width:40%">Product</th><th>Use</th><th>Doses / day</th><th>Per dose</th><th>Every N h</th><th></th></tr></thead>
       <tbody id="meds"></tbody></table>
     </div>
 
@@ -242,15 +244,18 @@ function renderMeds() {
       <td><select data-i="${i}" data-f="product" style="width:100%"><option value="">choose a product</option>${opts}</select></td>
       <td><select data-i="${i}" data-f="use"><option value="rx" ${m.use === "rx" ? "selected" : ""}>Prescribed</option><option value="prn" ${m.use === "prn" ? "selected" : ""}>As needed</option></select></td>
       <td><input type="number" min="0" data-i="${i}" data-f="count" value="${esc(m.count)}"></td>
+      <td><input type="number" min="0" step="0.5" data-i="${i}" data-f="units" value="${esc(m.units ?? "")}"
+        placeholder="${p ? esc(p.units_per_dose) : ""}" title="${p ? esc((p.unit_name || "unit") + "s per dose") : ""}"> <span class="small muted">${p ? esc(p.unit_name) : ""}</span></td>
       <td>${m.use === "rx" ? `<input type="number" min="0" step="0.5" placeholder="-" data-i="${i}" data-f="every" value="${esc(m.every ?? "")}">` : `<span class="muted">-</span>`}</td>
       <td><button class="btn sm" data-del="${i}" title="remove">&times;</button></td></tr>`;
-  }).join("") || `<tr><td colspan="5" class="empty">No medications.</td></tr>`;
+  }).join("") || `<tr><td colspan="6" class="empty">No medications.</td></tr>`;
 }
 $("#meds").addEventListener("change", e => {
   const i = e.target.dataset.i, f = e.target.dataset.f; if (i === undefined) return;
   const m = state.meds[i], v = e.target.value;
   if (f === "count") m.count = v === "" ? "" : Number(v);
   else if (f === "every") m.every = v === "" ? null : Number(v);
+  else if (f === "units") m.units = v === "" ? null : Number(v);
   else { m[f] = v; if (f === "use" && v === "prn") m.every = null; }
   renderMeds();
 });
@@ -282,7 +287,7 @@ function renderWeights() {
 function loadPatient(p) {
   state.name = p.name; state.constructed = p.constructed !== false; state.note = p.note || "";
   state.meds = p.items.map(it => ({product: it.product, use: it.prescribed_count != null ? "rx" : "prn",
-    count: it.prescribed_count ?? it.reported_count, every: it.every_hours ?? null}));
+    count: it.prescribed_count ?? it.reported_count, every: it.every_hours ?? null, units: it.units_per_dose ?? null}));
   state.meals = Object.entries(p.routine.meals).map(([name, time]) => ({name, time}));
   state.bed = p.routine.sleep.start; state.wake = p.routine.sleep.end;
   state.weights = p.weights ? {meal: p.weights.meal_shift_per_hour, sleep: p.weights.sleep_shift_per_hour, dose: p.weights.dose_dropped} : null;
@@ -301,6 +306,7 @@ function patientJson() {
     const it = {product: m.product};
     if (m.use === "rx") { it.prescribed_count = m.count; if (m.every) it.every_hours = String(m.every); }
     else it.reported_count = m.count;
+    if (m.units) it.units_per_dose = String(m.units);
     return it;
   });
   const out = {name: state.name || "unnamed", constructed: state.constructed, note: state.note, items,
@@ -370,9 +376,15 @@ function timeline(opt) {
     ${prods.map(p => `<span><i style="background:${color[p]}"></i>${esc(label[p])}</span>`).join("")}</div>`;
 }
 
+function perDose(name) {
+  const p = product(name), m = state.meds.find(x => x.product === name);
+  if (!p || !p.unit_name) return "";
+  const n = (m && m.units) || p.units_per_dose;
+  return `&middot; ${esc(n)} ${esc(p.unit_name)}${n === 1 ? "" : "s"}`;
+}
 function card(opt) {
   return `<table><thead><tr><th style="width:70px">Time</th><th>What</th></tr></thead><tbody>` + opt.events.map(e =>
-    e.kind === "dose" ? `<tr><td class="mono"><b>${e.hhmm}</b></td><td><b>${esc(e.label)}</b>${e.of > 1 ? ` <span class="muted">dose ${e.dose} of ${e.of}</span>` : ""}</td></tr>`
+    e.kind === "dose" ? `<tr><td class="mono"><b>${e.hhmm}</b></td><td><b>${esc(e.label)}</b> ${perDose(e.product)}${e.of > 1 ? ` <span class="muted">dose ${e.dose} of ${e.of}</span>` : ""}</td></tr>`
                       : `<tr><td class="mono muted">${e.hhmm}</td><td class="muted">${esc(e.label)}</td></tr>`).join("") + "</tbody></table>";
 }
 
@@ -494,6 +506,54 @@ function plain(c) {
 const KIND = {rule: "library rule", administration: "timing rule", dosing: "dosing", limits: "limit", memberships: "group member",
   member: "group member", max: "as-needed max", product: "product"};
 
+function rvButtons() {
+  return `<div class="row-actions" style="margin-top:10px">
+        <button class="btn primary" data-rv="approved"><u>A</u>pprove</button>
+        <button class="btn danger" data-rv="rejected"><u>R</u>eject</button>
+        <button class="btn flag" data-rv="flagged"><u>F</u>lag</button>
+        <button class="btn" data-rv="skip"><u>S</u>kip</button>
+        <span class="small muted" id="rv-last">${esc(LAST)}</span></div>`;
+}
+
+function agreeBadge(n, runs) {
+  return `<span class="badge ${n === runs ? "b-ok" : n <= 1 ? "b-p1" : "b-p2"}">${n}/${runs}</span>`;
+}
+
+function doseset(c) {
+  const num = x => x == null ? "" : String(Number(x));
+  const strengths = c.strengths.length
+    ? c.strengths.map(s => `<span class="badge ${c.uncovered.includes(s) ? "b-p1" : "b-quoted"}">${esc(s)}</span>`).join(" ")
+    : `<span class="muted">none found</span>`;
+  const missing = c.uncovered.length
+    ? `<div class="note small"><b>No regimen found for:</b> ${c.uncovered.map(esc).join(", ")}</div>` : "";
+  const detail = (x, cols) => `<tr class="detail" hidden><td colspan="${cols}"><blockquote class="rv-sentence">${highlight(x.sentence, x)}</blockquote>
+      <div class="quote-meta">${esc(x.sentence_id)}${x.note ? " &middot; " + esc(x.note) : ""}</div></td></tr>`;
+  const dosing = c.dosing.length ? `<table><thead><tr><th>Strength</th><th>Type</th><th>Who / for</th><th>Dose</th><th>How often</th><th>Days</th><th>PRN</th><th>Runs</th></tr></thead><tbody>` +
+    c.dosing.map(x => `<tr class="click${x.review ? " done" : ""}" data-toggle>
+      <td>${x.strength ? `<b>${esc(x.strength)}</b>` : '<span class="muted">-</span>'}</td><td>${esc(x.dose_type || "")}</td>
+      <td>${esc(x.population || "")}${x.condition && x.condition !== "general" ? `<div class="small muted">${esc(x.condition)}</div>` : ""}</td>
+      <td><b>${num(x.dose)}${x.dose_max ? "-" + num(x.dose_max) : ""} ${esc(x.unit)}</b></td>
+      <td>${x.every_hours ? `every ${num(x.every_hours)} h` : x.times_per_day ? `${num(x.times_per_day)}x/day` : ""}</td>
+      <td>${num(x.duration_days)}</td><td>${x.as_needed ? "yes" : ""}</td><td>${agreeBadge(x.agree, c.runs)}</td></tr>${detail(x, 8)}`).join("") +
+    `</tbody></table>` : `<div class="empty">No dosing rows.</div>`;
+  const limits = c.limits.length ? `<table><thead><tr><th>Limit</th><th>Amount</th><th>Of</th><th>Strength</th><th>Who / for</th><th>Runs</th></tr></thead><tbody>` +
+    c.limits.map(x => `<tr class="click${x.review ? " done" : ""}" data-toggle>
+      <td>${esc(String(x.kind).replace("_", " "))}</td><td><b>${num(x.amount)} ${esc(x.unit)}</b></td>
+      <td>${x.ingredient ? `<b>${esc(x.ingredient)}</b>` : '<span class="muted">-</span>'}</td>
+      <td>${x.strength ? esc(x.strength) : '<span class="muted">-</span>'}</td>
+      <td>${esc(x.population || "")}${x.condition ? `<div class="small muted">${esc(x.condition)}</div>` : ""}</td>
+      <td>${agreeBadge(x.agree, c.runs)}</td></tr>${detail(x, 6)}`).join("") +
+    `</tbody></table>` : `<div class="empty">No limit rows.</div>`;
+  return `<div class="panel rv-card"><h2>Dosing and limits &middot; ${esc(c.ingredient)}
+      <span class="r">${agreeBadge(c.agree, c.runs)} <span class="small">lowest agreement</span></span></h2>
+    <div class="body">
+      <div class="row-actions"><span class="muted small">Strengths on the label</span> ${strengths}
+        <span class="spacer"></span>${c.substances.length > 1 ? `<span class="muted small">Ingredients</span> ${c.substances.map(s => `<span class="badge b-quoted">${esc(s)}</span>`).join(" ")}` : ""}
+        ${c.url ? link(c.url, "DailyMed") : ""}</div>${missing}</div>
+    <h2>Dosing</h2>${dosing}<h2>Limits</h2>${limits}
+    <div class="body">${rvButtons()}</div></div>`;
+}
+
 function review() {
   const who = store.get("linnet.reviewer"), role = store.get("linnet.role") || "pharmacist";
   const top = `<div class="panel"><div class="body row-actions">
@@ -502,6 +562,7 @@ function review() {
       <span class="spacer"></span><b>${QUEUE.length}</b>&nbsp;left</div></div>`;
   if (!QUEUE.length) return top + `<div class="panel"><div class="empty">Nothing left to review.</div></div>`;
   const c = QUEUE[0], r = c.record;
+  if (c.kind === "doseset") return top + doseset(c);
   const agree = c.origin === "library" ? `<span class="badge b-code">in library</span>`
     : `<span class="badge ${c.agree === c.runs ? "b-ok" : c.agree <= 1 ? "b-p1" : "b-p2"}">${c.agree}/${c.runs} runs agree</span>`;
   const prov = r.provenance ? (r.provenance === "quoted" ? '<span class="badge b-quoted">quoted</span>' : '<span class="badge b-interp">interpreted</span>') : "";
@@ -510,12 +571,9 @@ function review() {
       <span class="r">${agree} ${prov}</span></h2>
     <div class="body">${sentence}
       <div class="rv-rule">${esc(plain(c))}</div>
+      ${c.peer ? `<div class="note small"><b>${esc(c.peer.by)}: ${esc(c.peer.verdict)}</b> - ${esc(c.peer.reason)}</div>` : ""}
       <div class="quote-meta">${esc(c.section || "")}${c.url ? " &middot; " + link(c.url, "DailyMed") : ""}</div>
-      <div class="row-actions" style="margin-top:10px">
-        <button class="btn primary" data-rv="approved"><u>A</u>pprove</button>
-        <button class="btn danger" data-rv="rejected"><u>R</u>eject</button>
-        <button class="btn" data-rv="skip"><u>S</u>kip</button>
-        <span class="small muted" id="rv-last">${esc(LAST)}</span></div></div></div>`;
+      ${rvButtons()}</div></div>`;
 }
 
 async function decideCard(decision) {
@@ -525,9 +583,14 @@ async function decideCard(decision) {
   store.set("linnet.reviewer", by); store.set("linnet.role", role);
   const c = QUEUE[0];
   if (decision === "skip") { QUEUE.push(QUEUE.shift()); LAST = "skipped"; renderLibrary(); return; }
+  let note = "";
+  if (decision === "flagged") {
+    note = window.prompt("What needs fixing? (optional)", "");
+    if (note === null) return;  // cancelled: nothing saved
+  }
   decideCard.busy = true;
   try {
-    const out = await api("/api/review/decide", {body: JSON.stringify({id: c.id, decision, by, role})});
+    const out = await api("/api/review/decide", {body: JSON.stringify({id: c.id, decision, by, role, note})});
     QUEUE.shift(); LAST = out.result;  // saved on disk before we move on
   } catch (e) {
     LAST = "NOT SAVED: " + (Array.isArray(e.detail) ? e.detail.map(x => x.problem).join("; ") : e.message);
@@ -537,7 +600,8 @@ document.addEventListener("keydown", e => {
   if (LIBTAB !== "review" || !$("#v-library").classList.contains("on")) return;
   if (e.target.closest("input, select, textarea") || e.ctrlKey || e.metaKey || e.altKey) return;
   const k = e.key.toLowerCase();
-  if (k === "a") decideCard("approved"); else if (k === "r") decideCard("rejected"); else if (k === "s" || k === "arrowright") decideCard("skip");
+  if (k === "a") decideCard("approved"); else if (k === "r") decideCard("rejected");
+  else if (k === "f") decideCard("flagged"); else if (k === "s" || k === "arrowright") decideCard("skip");
 });
 
 function renderLibrary() {

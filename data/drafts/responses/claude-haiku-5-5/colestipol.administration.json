@@ -1,1 +1,1 @@
-{"rules":[{"id":"colestipol-separation-other-drugs","family":"separation","target":"*","before":4,"after":1,"sentence":"S6","provenance":"quoted"}],"memberships":[]}
+{"rules":[{"id":"colestipol-other-drugs-separation","family":"separation","target":"*","before":4,"after":1,"sentence":"S9","provenance":"quoted","note":"Other drugs should be taken at least 1 hour before or 4 hours after colestipol, so colestipol is at least 4 hours before and at least 1 hour after any other drug."}],"memberships":[]}

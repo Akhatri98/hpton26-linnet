@@ -1,33 +1,36 @@
 {
- ".": {
-  "exact": 8,
-  "partial": 1,
-  "missed": 1,
-  "extra": 0,
-  "prov_agree": 9,
+ "claude-haiku-5-5": {
+  "exact": 9,
+  "partial": 0,
+  "missed": 2,
+  "extra": 3,
+  "prov_agree": 8,
   "prov_total": 9,
-  "proposed": 53,
-  "rejected": 3,
+  "proposed": 60,
+  "rejected": 4,
   "reject_reasons": {
+   "S3 gives 'every 4 hours' as a regimen, not a minimum gap or an as-needed limit; the prescription sets the regimen": 1,
    "number(s) not stated": 1,
-   "number not stated": 2
+   "target '*' (every other drug) but": 1,
+   "S2 gives 'every 12 hours' as a regimen, not a minimum gap or an as-needed limit; the prescription sets the regimen": 1
   },
   "missed_surfaced": 1,
   "parse_errors": 0,
-  "members_found": 1,
+  "members_found": 5,
   "members_missed": 2,
   "members_extra": 0,
-  "dosing_rows": 28,
-  "limits_rows": 11,
+  "dosing_rows": 27,
+  "limits_rows": 15,
   "answers": 21,
   "labels": {
    "nimodipine": {
     "exact": [
-     "nimodipine-q4h",
      "nimodipine-meals"
     ],
     "partial": [],
-    "missed": [],
+    "missed": [
+     "nimodipine-q4h"
+    ],
     "extra": []
    },
    "colestipol": {
@@ -36,7 +39,9 @@
     ],
     "partial": [],
     "missed": [],
-    "extra": []
+    "extra": [
+     "daily_max-16"
+    ]
    },
    "levothyroxine": {
     "exact": [
@@ -46,7 +51,10 @@
     "missed": [
      "levo-interfering"
     ],
-    "extra": []
+    "extra": [
+     "levothyroxine-food-interaction-1h",
+     "daily_max-200"
+    ]
    },
    "ciprofloxacin": {
     "exact": [
@@ -73,95 +81,9 @@
    },
    "acetaminophen-codeine": {
     "exact": [
-     "apap-q4h-rx"
-    ],
-    "partial": [
-     "apap-max-rx"
-    ],
-    "missed": [],
-    "extra": []
-   }
-  }
- },
- "claude-haiku-5-5": {
-  "exact": 8,
-  "partial": 1,
-  "missed": 1,
-  "extra": 1,
-  "prov_agree": 9,
-  "prov_total": 9,
-  "proposed": 72,
-  "rejected": 2,
-  "reject_reasons": {
-   "target '*' (every other drug) but": 1,
-   "number(s) not stated": 1
-  },
-  "missed_surfaced": 1,
-  "parse_errors": 0,
-  "members_found": 1,
-  "members_missed": 2,
-  "members_extra": 4,
-  "dosing_rows": 29,
-  "limits_rows": 24,
-  "answers": 21,
-  "labels": {
-   "nimodipine": {
-    "exact": [
-     "nimodipine-q4h",
-     "nimodipine-meals"
-    ],
-    "partial": [],
-    "missed": [],
-    "extra": []
-   },
-   "colestipol": {
-    "exact": [
-     "colestipol-other-drugs"
-    ],
-    "partial": [],
-    "missed": [],
-    "extra": []
-   },
-   "levothyroxine": {
-    "exact": [
-     "levo-breakfast"
-    ],
-    "partial": [],
-    "missed": [
-     "levo-interfering"
-    ],
-    "extra": []
-   },
-   "ciprofloxacin": {
-    "exact": [
-     "cipro-cations"
-    ],
-    "partial": [],
-    "missed": [],
-    "extra": [
-     "ciprofloxacin-min-interval-12h"
-    ]
-   },
-   "calcium_carbonate": {
-    "exact": [],
-    "partial": [],
-    "missed": [],
-    "extra": []
-   },
-   "acetaminophen": {
-    "exact": [
-     "apap-q6h-otc"
-    ],
-    "partial": [
-     "apap-max-otc"
-    ],
-    "missed": [],
-    "extra": []
-   },
-   "acetaminophen-codeine": {
-    "exact": [
      "apap-q4h-rx",
-     "apap-max-rx"
+     "apap-max-rx",
+     "codeine-max-rx"
     ],
     "partial": [],
     "missed": [],
@@ -172,33 +94,38 @@
  "sim-haiku-a": {
   "exact": 9,
   "partial": 0,
-  "missed": 1,
-  "extra": 1,
-  "prov_agree": 9,
+  "missed": 2,
+  "extra": 0,
+  "prov_agree": 8,
   "prov_total": 9,
-  "proposed": 63,
-  "rejected": 5,
+  "proposed": 66,
+  "rejected": 13,
   "reject_reasons": {
+   "S3 gives 'every 4 hours' as a regimen, not a minimum gap or an as-needed limit; the prescription sets the regimen": 1,
    "target '*' (every other drug) but": 1,
-   "number(s) not stated": 2,
-   "number not stated": 2
+   "number(s) not stated": 5,
+   "S2 gives 'every 12 hours' as a regimen, not a minimum gap or an as-needed limit; the prescription sets the regimen": 1,
+   "strength '750 mg' is not stated": 1,
+   "number not stated": 2,
+   "strength '500 mg' is not stated": 2
   },
   "missed_surfaced": 1,
   "parse_errors": 0,
   "members_found": 0,
-  "members_missed": 3,
-  "members_extra": 3,
-  "dosing_rows": 30,
-  "limits_rows": 14,
+  "members_missed": 7,
+  "members_extra": 0,
+  "dosing_rows": 35,
+  "limits_rows": 9,
   "answers": 21,
   "labels": {
    "nimodipine": {
     "exact": [
-     "nimodipine-q4h",
      "nimodipine-meals"
     ],
     "partial": [],
-    "missed": [],
+    "missed": [
+     "nimodipine-q4h"
+    ],
     "extra": []
    },
    "colestipol": {
@@ -225,9 +152,7 @@
     ],
     "partial": [],
     "missed": [],
-    "extra": [
-     "ciprofloxacin-min-interval-12h"
-    ]
+    "extra": []
    },
    "calcium_carbonate": {
     "exact": [],
@@ -247,7 +172,8 @@
    "acetaminophen-codeine": {
     "exact": [
      "apap-q4h-rx",
-     "apap-max-rx"
+     "apap-max-rx",
+     "codeine-max-rx"
     ],
     "partial": [],
     "missed": [],
@@ -258,32 +184,38 @@
  "sim-haiku-b": {
   "exact": 9,
   "partial": 0,
-  "missed": 1,
-  "extra": 1,
+  "missed": 2,
+  "extra": 0,
   "prov_agree": 9,
   "prov_total": 9,
-  "proposed": 58,
-  "rejected": 3,
+  "proposed": 75,
+  "rejected": 13,
   "reject_reasons": {
+   "S3 gives 'every 4 hours' as a regimen, not a minimum gap or an as-needed limit; the prescription sets the regimen": 1,
    "target '*' (every other drug) but": 1,
-   "number not stated": 2
+   "S2 gives 'every 12 hours' as a regimen, not a minimum gap or an as-needed limit; the prescription sets the regimen": 1,
+   "number(s) not stated": 3,
+   "strength '750 mg' is not stated": 3,
+   "number not stated": 2,
+   "strength '500 mg' is not stated": 2
   },
   "missed_surfaced": 1,
   "parse_errors": 0,
-  "members_found": 0,
+  "members_found": 4,
   "members_missed": 3,
-  "members_extra": 3,
-  "dosing_rows": 29,
-  "limits_rows": 12,
+  "members_extra": 0,
+  "dosing_rows": 40,
+  "limits_rows": 9,
   "answers": 21,
   "labels": {
    "nimodipine": {
     "exact": [
-     "nimodipine-q4h",
      "nimodipine-meals"
     ],
     "partial": [],
-    "missed": [],
+    "missed": [
+     "nimodipine-q4h"
+    ],
     "extra": []
    },
    "colestipol": {
@@ -310,9 +242,7 @@
     ],
     "partial": [],
     "missed": [],
-    "extra": [
-     "ciprofloxacin-interval-12h"
-    ]
+    "extra": []
    },
    "calcium_carbonate": {
     "exact": [],
@@ -332,7 +262,8 @@
    "acetaminophen-codeine": {
     "exact": [
      "apap-q4h-rx",
-     "apap-max-rx"
+     "apap-max-rx",
+     "codeine-max-rx"
     ],
     "partial": [],
     "missed": [],
@@ -341,34 +272,40 @@
   }
  },
  "sim-sonnet": {
-  "exact": 10,
+  "exact": 9,
   "partial": 0,
-  "missed": 0,
-  "extra": 0,
-  "prov_agree": 9,
-  "prov_total": 10,
-  "proposed": 53,
-  "rejected": 2,
+  "missed": 2,
+  "extra": 1,
+  "prov_agree": 8,
+  "prov_total": 9,
+  "proposed": 67,
+  "rejected": 14,
   "reject_reasons": {
-   "number(s) not stated": 1,
-   "number not stated": 1
+   "S3 gives 'every 4 hours' as a regimen, not a minimum gap or an as-needed limit; the prescription sets the regimen": 1,
+   "number(s) not stated": 4,
+   "S2 gives 'every 12 hours' as a regimen, not a minimum gap or an as-needed limit; the prescription sets the regimen": 1,
+   "strength '750 mg' is not stated": 3,
+   "number not stated": 1,
+   "strength '500 mg' is not stated": 2,
+   "schema": 2
   },
-  "missed_surfaced": 0,
+  "missed_surfaced": 1,
   "parse_errors": 0,
-  "members_found": 0,
+  "members_found": 4,
   "members_missed": 3,
-  "members_extra": 4,
-  "dosing_rows": 24,
-  "limits_rows": 13,
+  "members_extra": 0,
+  "dosing_rows": 33,
+  "limits_rows": 9,
   "answers": 21,
   "labels": {
    "nimodipine": {
     "exact": [
-     "nimodipine-q4h",
      "nimodipine-meals"
     ],
     "partial": [],
-    "missed": [],
+    "missed": [
+     "nimodipine-q4h"
+    ],
     "extra": []
    },
    "colestipol": {
@@ -377,15 +314,18 @@
     ],
     "partial": [],
     "missed": [],
-    "extra": []
+    "extra": [
+     "daily_max-16"
+    ]
    },
    "levothyroxine": {
     "exact": [
-     "levo-interfering",
      "levo-breakfast"
     ],
     "partial": [],
-    "missed": [],
+    "missed": [
+     "levo-interfering"
+    ],
     "extra": []
    },
    "ciprofloxacin": {
@@ -414,7 +354,8 @@
    "acetaminophen-codeine": {
     "exact": [
      "apap-q4h-rx",
-     "apap-max-rx"
+     "apap-max-rx",
+     "codeine-max-rx"
     ],
     "partial": [],
     "missed": [],

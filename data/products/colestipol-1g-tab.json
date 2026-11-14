@@ -10,5 +10,7 @@
     }
   },
   "dose_note": "One dose = 2 g (label starting dose '2 grams once or twice daily').",
-  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human."
+  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+  "unit_name": "tablet",
+  "units_per_dose": 2
 }

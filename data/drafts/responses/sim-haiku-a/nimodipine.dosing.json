@@ -1,4 +1,1 @@
-{"dosing": [
-  {"condition": "general", "population": "general", "dose": 60, "dose_max": null, "unit": "mg", "every_hours": 4, "times_per_day": null, "duration_days": 21, "as_needed": false, "sentence": "S1", "provenance": "quoted"},
-  {"condition": "general", "population": "general", "dose": 30, "dose_max": null, "unit": "mg", "every_hours": 4, "times_per_day": null, "duration_days": null, "as_needed": false, "sentence": "S4", "provenance": "quoted"}
-]}
+{"dosing": [{"strength": null, "dose_type": "usual", "condition": "subarachnoid hemorrhage", "population": "general", "dose": 60, "dose_max": null, "unit": "mg", "every_hours": 4, "times_per_day": null, "duration_days": 21, "as_needed": false, "sentence": "S3", "provenance": "quoted"}, {"strength": "30 mg", "dose_type": "adjusted", "condition": "subarachnoid hemorrhage", "population": "general", "dose": 1, "dose_max": null, "unit": "capsules", "every_hours": 4, "times_per_day": null, "duration_days": null, "as_needed": false, "sentence": "S9", "provenance": "quoted"}]}

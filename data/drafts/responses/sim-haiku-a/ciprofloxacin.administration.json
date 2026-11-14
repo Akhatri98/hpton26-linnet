@@ -1,11 +1,1 @@
-{
-  "rules": [
-    {"id": "ciprofloxacin-separation-polyvalent-cations", "family": "separation", "target": "group:polyvalent_cations", "before": 2, "after": 6, "sentence": "S25", "provenance": "quoted"},
-    {"id": "ciprofloxacin-min-interval-12h", "family": "min_interval", "hours": 12, "sentence": "S1", "provenance": "quoted", "note": "standard adult 500-750 mg every 12 hours; plague pediatric (q8-12h) and renal (q18h, q24h) regimens are shorter or longer"}
-  ],
-  "memberships": [
-    {"group": "polyvalent_cations", "ingredient": "magnesium_aluminum_antacids", "sentence": "S14", "provenance": "quoted"},
-    {"group": "polyvalent_cations", "ingredient": "iron", "sentence": "S24", "provenance": "quoted"},
-    {"group": "polyvalent_cations", "ingredient": "zinc", "sentence": "S24", "provenance": "quoted"}
-  ]
-}
+{"rules": [{"id": "ciprofloxacin-multivalent-cations-2h-before-6h-after", "family": "separation", "target": "group:polyvalent_cations", "before": 2, "after": 6, "sentence": "S32", "provenance": "quoted", "note": "label allows taking ciprofloxacin with a meal that contains magnesium/aluminum antacids (S22)"}, {"id": "ciprofloxacin-every-12-hours", "family": "min_interval", "hours": 12, "sentence": "S2", "provenance": "quoted", "note": "renal dosing intervals are longer (q18h, q24h)"}], "memberships": []}

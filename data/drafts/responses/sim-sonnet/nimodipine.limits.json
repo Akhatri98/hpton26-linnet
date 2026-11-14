@@ -1,12 +1,1 @@
-{
- "limits": [
-  {
-   "kind": "duration_days",
-   "amount": 21,
-   "unit": "days",
-   "population": "general",
-   "sentence": "S1",
-   "provenance": "quoted"
-  }
- ]
-}
+{"limits":[{"kind":"duration_days","amount":21,"unit":"days","ingredient":null,"strength":null,"population":"adults","condition":"subarachnoid hemorrhage","sentence":"S3","provenance":"quoted"}]}

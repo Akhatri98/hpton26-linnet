@@ -1,3 +1,1 @@
-{
- "dosing": []
-}
+{"dosing":[{"strength":"750 mg","dose_type":"usual","condition":"symptoms (antacid)","population":"adults and children 12 years and over","dose":2,"dose_max":4,"unit":"tablets","every_hours":null,"times_per_day":null,"duration_days":null,"as_needed":true,"sentence":"S1","provenance":"quoted"}]}

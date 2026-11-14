@@ -180,8 +180,11 @@ class ProductFile(Strict):
     display_name: str
     spl_set_id: str
     url: str
-    ingredients: dict[str, Amount]  # per dose (a "dose" is defined in `dose_note`)
-    otc_max_doses: Optional[MaxDoses] = None  # label maximum, for as-needed use
+    ingredients: dict[str, Amount]  # per dose of `units_per_dose` units (see `dose_note`)
+    unit_name: str = ""  # "tablet", "caplet", "capsule"
+    units_per_dose: Number = Fraction(1)  # how many units the `ingredients` amounts are for
+    label_max_units_per_dose: Optional[Number] = None  # the label's per-dose maximum for THIS strength
+    otc_max_doses: Optional[MaxDoses] = None  # label maximum, for as-needed use (doses of `units_per_dose`)
     ndc: list[str] = []
     dose_note: str = ""  # what one dose is, e.g. "2 caplets", and where that comes from
     note: str = ""

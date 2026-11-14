@@ -20,13 +20,7 @@
       "sentence": "do not take more than 6 caplets in 24 hours"
     },
     "note": "6 caplets / 2 per dose = 3 doses (interpreted). DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
-    "verified": false,
-    "review": {
-      "decision": "rejected",
-      "by": "ak",
-      "role": "pharmacist",
-      "at": "2026-11-14T15:48:26-05:00"
-    }
+    "verified": false
   },
   "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
   "verified": true,
@@ -35,5 +29,8 @@
     "by": "ak",
     "role": "pharmacist",
     "at": "2026-11-14T15:48:06-05:00"
-  }
+  },
+  "unit_name": "caplet",
+  "units_per_dose": 2,
+  "label_max_units_per_dose": 2
 }

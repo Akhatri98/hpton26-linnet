@@ -3,8 +3,16 @@
   "spl_set_id": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
   "model": "claude-haiku-5-5",
   "label_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
+  "strengths": [
+    "30 mg"
+  ],
+  "substances": [
+    "nimodipine"
+  ],
   "dosing": [
     {
+      "strength": "30 mg",
+      "dose_type": "usual",
       "condition": "subarachnoid hemorrhage",
       "population": "adults",
       "dose": 60,
@@ -18,15 +26,17 @@
       "source": {
         "spl_set_id": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
         "section": "dosage and administration",
-        "sentence_id": "S1",
+        "sentence_id": "S3",
         "sentence": "The recommended oral dose is 60 mg (two 30 mg capsules) every 4 hours for 21 consecutive days.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d"
       },
       "verified": false
     },
     {
+      "strength": "30 mg",
+      "dose_type": "adjusted",
       "condition": "subarachnoid hemorrhage",
-      "population": "adults",
+      "population": "patients with low blood pressure or other conditions where blood pressure reduction is more pronounced",
       "dose": 30,
       "dose_max": null,
       "unit": "mg",
@@ -38,7 +48,7 @@
       "source": {
         "spl_set_id": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
         "section": "dosage and administration",
-        "sentence_id": "S4",
+        "sentence_id": "S9",
         "sentence": "Dosage should be reduced to one 30 mg capsule every 4 hours with close monitoring of blood pressure and heart rate;",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d"
       },
@@ -47,66 +57,25 @@
   ],
   "limits": [
     {
-      "kind": "per_dose",
-      "amount": 60,
-      "unit": "mg",
-      "population": "general",
-      "provenance": "quoted",
-      "source": {
-        "spl_set_id": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
-        "section": "dosage and administration",
-        "sentence_id": "S1",
-        "sentence": "The recommended oral dose is 60 mg (two 30 mg capsules) every 4 hours for 21 consecutive days.",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d"
-      },
-      "verified": false
-    },
-    {
       "kind": "duration_days",
       "amount": 21,
       "unit": "days",
+      "ingredient": null,
+      "strength": null,
       "population": "general",
+      "condition": "subarachnoid hemorrhage",
       "provenance": "quoted",
       "source": {
         "spl_set_id": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
         "section": "dosage and administration",
-        "sentence_id": "S1",
+        "sentence_id": "S3",
         "sentence": "The recommended oral dose is 60 mg (two 30 mg capsules) every 4 hours for 21 consecutive days.",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d"
-      },
-      "verified": false
-    },
-    {
-      "kind": "per_dose",
-      "amount": 30,
-      "unit": "mg",
-      "population": "general",
-      "provenance": "quoted",
-      "source": {
-        "spl_set_id": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
-        "section": "dosage and administration",
-        "sentence_id": "S4",
-        "sentence": "Dosage should be reduced to one 30 mg capsule every 4 hours with close monitoring of blood pressure and heart rate;",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d"
       },
       "verified": false
     }
   ],
   "administration": [
-    {
-      "id": "nimodipine-min-interval-4h",
-      "family": "min_interval",
-      "hours": 4,
-      "provenance": "quoted",
-      "note": "Dose is 60 mg every 4 hours for 21 consecutive days. | DRAFT: proposed by a language model.",
-      "source": {
-        "spl_set_id": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
-        "section": "dosage and administration",
-        "sentence": "The recommended oral dose is 60 mg (two 30 mg capsules) every 4 hours for 21 consecutive days."
-      },
-      "verified": false
-    },
     {
       "id": "nimodipine-food-empty-stomach",
       "family": "food",
@@ -118,7 +87,7 @@
         "before_meal": 0,
         "after_meal": 0
       },
-      "note": "Capsules preferably taken not less than 1 hour before or 2 hours after meals; 'preferably' makes this soft. | DRAFT: proposed by a language model.",
+      "note": "Label says capsules should preferably be taken not less than 1 hour before or 2 hours after meals; 'preferably' is a soft word. | DRAFT: proposed by a language model.",
       "source": {
         "spl_set_id": "a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d",
@@ -129,13 +98,24 @@
     }
   ],
   "memberships": [],
-  "rejected": [],
+  "rejected": [
+    {
+      "item": {
+        "id": "nimodipine-min-interval-4h",
+        "family": "min_interval",
+        "hours": 4,
+        "sentence": "S3",
+        "provenance": "quoted"
+      },
+      "reason": "S3 gives 'every 4 hours' as a regimen, not a minimum gap or an as-needed limit; the prescription sets the regimen"
+    }
+  ],
   "unaccounted_for": [
     {
       "priority": 1,
       "kind": "possible_timing_rule",
       "note": "",
-      "sentence_id": "S3",
+      "sentence_id": "S5",
       "section": "dosage and administration",
       "sentence": "Oral nimodipine therapy should commence as soon as possible within 96 hours of the onset of subarachnoid hemorrhage."
     },
@@ -143,15 +123,47 @@
       "priority": 2,
       "kind": "review",
       "note": "",
-      "sentence_id": "S5",
+      "sentence_id": "S10",
       "section": "precautions",
       "sentence": "nefazodone) - grapefruit juice: after intake of grapefruit juice and nimodipine, the blood pressure lowering effect may last for at least 4 days after the last ingestion of grapefruit juice."
+    },
+    {
+      "priority": 5,
+      "kind": "weight_based",
+      "note": "",
+      "sentence_id": "S19",
+      "section": "precautions",
+      "sentence": "Incidences of malformations and stunted fetuses were increased at oral doses of 1 and 10 mg/kg/day administered (by gavage) from day 6 through day 18 of pregnancy but not at 3 mg/kg/day in one of two identical rabbit studies."
+    },
+    {
+      "priority": 5,
+      "kind": "weight_based",
+      "note": "",
+      "sentence_id": "S20",
+      "section": "precautions",
+      "sentence": "In the second study an increased incidence of stunted fetuses was seen at 1 mg/kg/day but not at higher doses."
     },
     {
       "priority": 7,
       "kind": "background",
       "note": "",
-      "sentence_id": "S6",
+      "sentence_id": "S12",
+      "section": "precautions",
+      "sentence": "Carcinogenesis, Mutagenesis, Impairment of Fertility In a two-year study, higher incidences of adenocarcinoma of the uterus and Leydig-cell adenoma of the testes were observed in rats given a diet containing 1800 ppm nimodipine (equivalent to 91 to 121 mg/kg/day nimodipine) than in placebo controls."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S14",
+      "section": "precautions",
+      "sentence": "Nimodipine was found not to be carcinogenic in a 91-week mouse study but the high dose of 1800 ppm nimodipine-in-feed (546 to 774 mg/kg/day) shortened the life expectancy of the animals."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S16",
       "section": "precautions",
       "sentence": "Nimodipine did not impair the fertility and general reproductive performance of male and female Wistar rats following oral doses of up to 30 mg/kg/day when administered daily for more than 10 weeks in the males and 3 weeks in the females prior to mating and continued to day 7 of pregnancy."
     },
@@ -159,46 +171,167 @@
       "priority": 7,
       "kind": "background",
       "note": "",
-      "sentence_id": "S7",
+      "sentence_id": "S17",
       "section": "precautions",
       "sentence": "This dose in a rat is about 4 times the equivalent clinical dose of 60 mg q4h in a 50 kg patient."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S21",
+      "section": "precautions",
+      "sentence": "Nimodipine was embryotoxic, causing resorption and stunted growth of fetuses, in Long Evans rats at 100 mg/kg/day administered by gavage from day 6 through day 15 of pregnancy."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S22",
+      "section": "precautions",
+      "sentence": "In two other rat studies, doses of 30 mg/kg/day nimodipine administered by gavage from day 16 of gestation and continued until sacrifice (day 20 of pregnancy or day 21 post partum) were associated with higher incidences of skeletal variation, stunted fetuses and stillbirths but no malformations."
     }
   ],
   "sentences": [
     {
       "sentence_id": "S1",
       "section": "dosage and administration",
-      "text": "The recommended oral dose is 60 mg (two 30 mg capsules) every 4 hours for 21 consecutive days."
+      "text": "Specific treatments for calcium channel blocker overdose should also be given promptly."
     },
     {
       "sentence_id": "S2",
       "section": "dosage and administration",
-      "text": "In general, the capsules should be swallowed whole with a little liquid, preferably not less than one hour before or two hours after meals."
+      "text": "Nimodipine is given orally in the form of soft gelatin 30 mg capsules for subarachnoid hemorrhage."
     },
     {
       "sentence_id": "S3",
       "section": "dosage and administration",
-      "text": "Oral nimodipine therapy should commence as soon as possible within 96 hours of the onset of subarachnoid hemorrhage."
+      "text": "The recommended oral dose is 60 mg (two 30 mg capsules) every 4 hours for 21 consecutive days."
     },
     {
       "sentence_id": "S4",
       "section": "dosage and administration",
-      "text": "Dosage should be reduced to one 30 mg capsule every 4 hours with close monitoring of blood pressure and heart rate;"
+      "text": "In general, the capsules should be swallowed whole with a little liquid, preferably not less than one hour before or two hours after meals."
     },
     {
       "sentence_id": "S5",
+      "section": "dosage and administration",
+      "text": "Oral nimodipine therapy should commence as soon as possible within 96 hours of the onset of subarachnoid hemorrhage."
+    },
+    {
+      "sentence_id": "S6",
+      "section": "dosage and administration",
+      "text": "To help minimize administration errors, it is recommended that the syringe used for administration be labeled \"Not for IV Use\"."
+    },
+    {
+      "sentence_id": "S7",
+      "section": "dosage and administration",
+      "text": "The contents should then be emptied into the patient's in situ naso-gastric tube and washed down the tube with 30 mL of normal saline (0.9%)."
+    },
+    {
+      "sentence_id": "S8",
+      "section": "dosage and administration",
+      "text": "The reduction in blood pressure and other adverse effects may be more pronounced in these patients."
+    },
+    {
+      "sentence_id": "S9",
+      "section": "dosage and administration",
+      "text": "Dosage should be reduced to one 30 mg capsule every 4 hours with close monitoring of blood pressure and heart rate;"
+    },
+    {
+      "sentence_id": "S10",
       "section": "precautions",
       "text": "nefazodone) - grapefruit juice: after intake of grapefruit juice and nimodipine, the blood pressure lowering effect may last for at least 4 days after the last ingestion of grapefruit juice."
     },
     {
-      "sentence_id": "S6",
+      "sentence_id": "S11",
+      "section": "precautions",
+      "text": "Blood pressure should be carefully monitored, and dose adjustment of the blood pressure lowering drug(s) may be necessary."
+    },
+    {
+      "sentence_id": "S12",
+      "section": "precautions",
+      "text": "Carcinogenesis, Mutagenesis, Impairment of Fertility In a two-year study, higher incidences of adenocarcinoma of the uterus and Leydig-cell adenoma of the testes were observed in rats given a diet containing 1800 ppm nimodipine (equivalent to 91 to 121 mg/kg/day nimodipine) than in placebo controls."
+    },
+    {
+      "sentence_id": "S13",
+      "section": "precautions",
+      "text": "The differences were not statistically significant, however, and the higher rates were well within historical control range for these tumors in the Wistar strain."
+    },
+    {
+      "sentence_id": "S14",
+      "section": "precautions",
+      "text": "Nimodipine was found not to be carcinogenic in a 91-week mouse study but the high dose of 1800 ppm nimodipine-in-feed (546 to 774 mg/kg/day) shortened the life expectancy of the animals."
+    },
+    {
+      "sentence_id": "S15",
+      "section": "precautions",
+      "text": "Mutagenicity studies, including the Ames, micronucleus and dominant lethal tests were negative."
+    },
+    {
+      "sentence_id": "S16",
       "section": "precautions",
       "text": "Nimodipine did not impair the fertility and general reproductive performance of male and female Wistar rats following oral doses of up to 30 mg/kg/day when administered daily for more than 10 weeks in the males and 3 weeks in the females prior to mating and continued to day 7 of pregnancy."
     },
     {
-      "sentence_id": "S7",
+      "sentence_id": "S17",
       "section": "precautions",
       "text": "This dose in a rat is about 4 times the equivalent clinical dose of 60 mg q4h in a 50 kg patient."
+    },
+    {
+      "sentence_id": "S18",
+      "section": "precautions",
+      "text": "Pregnancy Nimodipine has been shown to have a teratogenic effect in Himalayan rabbits."
+    },
+    {
+      "sentence_id": "S19",
+      "section": "precautions",
+      "text": "Incidences of malformations and stunted fetuses were increased at oral doses of 1 and 10 mg/kg/day administered (by gavage) from day 6 through day 18 of pregnancy but not at 3 mg/kg/day in one of two identical rabbit studies."
+    },
+    {
+      "sentence_id": "S20",
+      "section": "precautions",
+      "text": "In the second study an increased incidence of stunted fetuses was seen at 1 mg/kg/day but not at higher doses."
+    },
+    {
+      "sentence_id": "S21",
+      "section": "precautions",
+      "text": "Nimodipine was embryotoxic, causing resorption and stunted growth of fetuses, in Long Evans rats at 100 mg/kg/day administered by gavage from day 6 through day 15 of pregnancy."
+    },
+    {
+      "sentence_id": "S22",
+      "section": "precautions",
+      "text": "In two other rat studies, doses of 30 mg/kg/day nimodipine administered by gavage from day 16 of gestation and continued until sacrifice (day 20 of pregnancy or day 21 post partum) were associated with higher incidences of skeletal variation, stunted fetuses and stillbirths but no malformations."
+    },
+    {
+      "sentence_id": "S23",
+      "section": "how supplied",
+      "text": "HOW SUPPLIED Nimodipine Capsules 30 mg are available as orange, opaque, oblong shape, soft gelatin capsules, imprinted \"HP 512\" with black ink."
+    },
+    {
+      "sentence_id": "S24",
+      "section": "how supplied",
+      "text": "They are supplied as follows: Strength NDC Code Unit Dose Package of 30: (3 blister cards;"
+    },
+    {
+      "sentence_id": "S25",
+      "section": "how supplied",
+      "text": "each containing 10 capsules) 30 mg 23155-512-30 Unit Dose Package of 100: (10 blister cards;"
+    },
+    {
+      "sentence_id": "S26",
+      "section": "how supplied",
+      "text": "each containing 10 capsules) 30 mg 23155-512-00 The capsules should be stored in the manufacturer's original package."
+    },
+    {
+      "sentence_id": "S27",
+      "section": "description",
+      "text": "Nimodipine capsules are formulated as soft gelatin capsules for oral administration."
+    },
+    {
+      "sentence_id": "S28",
+      "section": "description",
+      "text": "Each liquid filled capsule contains 30 mg of nimodipine in a vehicle of glycerin, peppermint oil and polyethylene glycol."
     }
   ],
   "passes_run": [

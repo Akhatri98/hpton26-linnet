@@ -1,0 +1,17 @@
+{
+ "dosing": [
+  {
+   "condition": "pain and fever",
+   "population": "adults and children 12 years and over",
+   "dose": 2,
+   "dose_max": null,
+   "unit": "caplets",
+   "every_hours": 6,
+   "times_per_day": null,
+   "duration_days": null,
+   "as_needed": false,
+   "sentence": "S1",
+   "provenance": "quoted"
+  }
+ ]
+}

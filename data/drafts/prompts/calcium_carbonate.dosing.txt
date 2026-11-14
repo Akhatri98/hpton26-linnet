@@ -2,19 +2,36 @@ You are extracting DOSING directions from an FDA drug label for a pharmacist's t
 
 Ingredient: calcium_carbonate
 Label set id: 036ef1ed-32ef-46b8-8817-b3f63a014280
+Active ingredients on this label: calcium carbonate
+Strengths this label comes in (read from the label by code): 750 mg
 
 Numbered sentences from the label:
-S1 [dosage and administration] Chew or crush tablets completely before swallowing.
-S2 [dosage and administration] • do not take for symptoms that persist for more than 2 weeks unless advised by a doctor
-S3 [warnings] Warnings Ask a doctor or pharmacist before use if you are presently taking a prescription drug.
-S4 [warnings] When using this product • do not take more than 6 tablets in 24 hours • if pregnant do not take more than 6 tablets in 24 hours • do not use the maximum dosage for more than 2 weeks, except under the advice and supervision of a doctor Keep out of reach of children.
+S1 [dosage and administration] Directions • adults and children 12 years of age and over: chew 2-4 tablets as symptoms occur, or as directed by a doctor.
+S2 [dosage and administration] Chew or crush tablets completely before swallowing.
+S3 [dosage and administration] • do not take for symptoms that persist for more than 2 weeks unless advised by a doctor
+S4 [warnings] Warnings Ask a doctor or pharmacist before use if you are presently taking a prescription drug.
+S5 [warnings] Antacids may interact with certain prescription drugs.
+S6 [warnings] When using this product • do not take more than 6 tablets in 24 hours • if pregnant do not take more than 6 tablets in 24 hours • do not use the maximum dosage for more than 2 weeks, except under the advice and supervision of a doctor Keep out of reach of children.
+S7 [active ingredient] Active ingredient (per tablet) Calcium carbonate 750 mg
 
-Return ONLY a JSON object {"dosing": [ ... ]}. One row per distinct regimen the label gives (per condition,
-per population, per formulation). Each row:
-  {"condition": "what it is for, or 'general'", "population": "adults" | "children" | "renal impairment" | ...,
-   "dose": N, "dose_max": N or null, "unit": "mg" | "g" | "mcg" | "tablets" | "caplets" | "capsules" | "mL",
+Return ONLY a JSON object {"dosing": [ ... ]}. One row per distinct regimen the label gives: per condition,
+per population, and PER STRENGTH when the label gives different directions for different strengths.
+Each row:
+  {"strength": "the strength this row is for, written like the list above, e.g. '300 mg/30 mg'", or null if the
+              dose is given as an amount (mg, mcg, g) that does not depend on the strength,
+   "dose_type": "usual" | "starting" | "maintenance" | "adjusted" (for a population such as renal or hepatic impairment),
+   "condition": "what it is for, or 'general'", "population": "adults" | "children" | "renal impairment" | ...,
+   "dose": N, "dose_max": N or null,
+   "unit": "mg" | "g" | "mcg" | "mg/kg" | "mcg/kg" | "tablets" | "caplets" | "capsules" | "mL",
    "every_hours": H or null, "times_per_day": T or null, "duration_days": D or null,
    "as_needed": true | false, "sentence": "Sk", "provenance": "quoted" | "interpreted"}
-Use only numbers stated in the cited sentence. A range like "500-750 mg" is dose=500, dose_max=750.
-"twice daily" is times_per_day=2; "every 12 hours" is every_hours=12. Cite exactly one sentence id per row; do not copy text.
+Rules:
+- If the dose is a count of tablets, caplets or capsules and the label comes in more than one strength, "strength" is REQUIRED.
+- Weight-based doses use "mg/kg" or "mcg/kg" (e.g. "15 mg/kg" -> dose 15, unit "mg/kg").
+- A range like "500-750 mg" is dose=500, dose_max=750. "1 to 2 tablets" is dose=1, dose_max=2.
+- "twice daily" is times_per_day=2; "every 12 hours" is every_hours=12.
+- Not doses: maximums ("do not take more than 6 tablets") belong to limits; increases ("increase by 12.5 to 25 mcg")
+  are titration steps, not doses; "do not use for more than 10 days" is a limit, not a course length.
+- Read the sentence before a dose: it often says who the dose is for (e.g. patients with liver cirrhosis).
+- Use only numbers stated in the cited sentence. Cite exactly one sentence id per row; do not copy text.
 Include every regimen you find, even if there are many. If unsure, leave it out.

@@ -17,7 +17,7 @@
       "verified": false
     },
     {
-      "id": "acetaminophen-codeine-daily-max-acetaminophen-4000mg",
+      "id": "acetaminophen-codeine-acetaminophen-daily-max-4000mg",
       "family": "daily_max",
       "amount": 4000,
       "unit": "mg",
@@ -28,21 +28,6 @@
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795",
         "section": "precautions",
         "sentence": "Maximum Daily Dose of Acetaminophen Inform patients not to take more than 4,000 milligrams of acetaminophen per day."
-      },
-      "verified": false
-    },
-    {
-      "id": "acetaminophen-codeine-daily-max-codeine-360mg",
-      "family": "daily_max",
-      "amount": 360,
-      "unit": "mg",
-      "provenance": "quoted",
-      "note": "Maximum 24-hour codeine phosphate dose of 360 mg. | DRAFT: proposed by a language model.",
-      "source": {
-        "spl_set_id": "02386806-02d4-47e3-9c8b-7810146ee795",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795",
-        "section": "dosage and administration",
-        "sentence": "Single Doses (Range) Maximum 24-Hour Dose Codeine Phosphate 15 mg to 60 mg 360 mg Acetaminophen 300 mg to 1,000 mg 4,000 mg The prescriber must determine the number of tablets per dose, and the maximum number of tablets per 24 hours, based upon the above dosage guidance."
       },
       "verified": false
     }

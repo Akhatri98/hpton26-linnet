@@ -21,5 +21,8 @@
     },
     "note": "6 tablets / 2 tablets per dose = 3 doses (interpreted). DRAFT (Claude, 14 Nov): not yet checked against the label by a human."
   },
-  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human."
+  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+  "unit_name": "tablet",
+  "units_per_dose": 2,
+  "label_max_units_per_dose": 4
 }

@@ -40,7 +40,8 @@ FDA label (public)                                   Patient (stays in memory)
 |---|---|---|
 | Fetching labels, splitting sentences | deterministic | openFDA / DailyMed |
 | Proposing rules from label text | **language model** | the only probabilistic step; cites sentence ids, never quotes (the quote is copied by code) |
-| Checking proposals | deterministic | sentence exists; every number appears in that sentence; schema; "every other drug" only if the sentence says so; group members must be named (or be a salt of a named element) |
+| Checking proposals | deterministic | sentence exists; every number appears in that sentence; schema; "every other drug" only if the sentence says so; group members must be named (or be a salt of a named element); a strength must be one the label lists and a maximum must name one of its ingredients; rejects a per-kg dose read as flat, a maximum or titration step read as a dose, "every N hours" read as a spacing rule (the prescription sets the regimen), and duplicates |
+| Strengths and ingredients on a label | deterministic | read by code from How Supplied, Description and openFDA; the review card shows any strength with no regimen in red |
 | Review queue | deterministic | label sentences with numbers that no accepted row uses, sorted so likely misses come first |
 | Sign-off | human | nothing reaches the solver as verified without it; unverified rules are flagged on the card |
 | Ingredients of a product | deterministic | RxNorm (NLM); model fallback only behind a flag, only when RxNorm has no data |
@@ -71,17 +72,26 @@ Found by this evaluation: Z3 keeps state across solves in one process, and late 
 
 ### Rule extraction (pilot: 7 labels)
 
-`python -m library.compare`. Gold = the curated library rules citing the same label.
+`python -m library.compare`. Gold = the 11 curated library rules citing the same labels (timing rules and daily maxima). Each gold rule is matched to at most one proposed row; a maximum counts only if it names the right ingredient.
 
-| Model run | Timing rules exactly right | Rows rejected by checks | Missed rules still at top of review queue |
+| Run | Gold rules exactly right | Rows rejected by checks | Dosing / limit rows accepted |
 |---|---|---|---|
-| Claude Haiku 5.5 (API) | 8 / 10 | 2 / 72 | 1 / 1 |
-| Claude Haiku (2 further runs) | 9 / 10, 9 / 10 | 5 / 63, 3 / 58 | 1 / 1, 1 / 1 |
-| Claude Sonnet | 10 / 10 | 2 / 53 | none missed |
+| Claude Haiku 5.5 (API) | 9 / 11 | 4 / 60 | 27 / 15 |
+| Haiku stand-in A | 9 / 11 | 13 / 66 | 35 / 9 |
+| Haiku stand-in B | 9 / 11 | 13 / 75 | 40 / 9 |
+| Sonnet stand-in | 9 / 11 | 14 / 67 | 33 / 9 |
 
-- Repeatability: Haiku runs agreed on a label's full set of timing rules in 86% of pairwise comparisons.
+Stand-ins are Claude Code subagents answering the same 21 prompts as the API run, used to measure variation without API spend. Only the first row is a real API call.
+
+All four runs miss the same two rules:
+- **Nimodipine "60 mg every 4 hours"**: rejected by design. "Every N hours" is the regimen, and the prescription supplies it; the solver gets the same 4-hour spacing from the prescription. The sentence still reaches the reviewer as a dosing row.
+- **Levothyroxine "4 hours before or after drugs known to interfere"**: the sentence names no drugs (they are listed in section 7.1). The runs answered "every other drug", which the checks reject. The sentence stays at the top of the review queue.
+
+Other results:
+- On the codeine label, every run tied each maximum to its ingredient (codeine phosphate 360 mg, acetaminophen 4000 mg) and found all three strength-specific regimens (300/15 and 300/30 mg: 1–2 tablets; 300/60 mg: 1 tablet).
+- Repeatability: Haiku runs gave a label the same set of timing rules and maxima in 81% of pairwise comparisons.
 - The full extraction of all 7 labels (21 calls) on Haiku 5.5 cost about **$0.02**.
-- Every rule a model missed was still shown to the pharmacist at the top of the review queue.
+- An earlier prompt version (archived in `data/drafts/responses-v1/`) scored on 10 gold rules without ingredient matching, so its numbers are not comparable.
 
 The extraction numbers are a pilot: 7 labels, and the gold rules are partly signed off. Treat them as indicative.
 
@@ -97,7 +107,7 @@ LINNET differs in being complete (if a schedule exists at the stated rules, it f
 - Reasons only over rules stated on labels; it is not an interaction database and does not judge clinical appropriateness.
 - Deliberately makes no drug recommendations. It shows that a conflict exists and which label sentences cause it; whether to hold, replace or re-time a drug is the prescriber's decision.
 - Small library (7 products). Adding a product means extracting and signing off its label.
-- Weight-based (mg/kg) dosing is not represented.
+- Weight-based (mg/kg) doses are extracted and shown for review, but the solver does not use them.
 - Tier-1 weights (how bad is moving a meal vs waking earlier) are judgement calls the pharmacist sets; defaults are placeholders.
 - Demo patients are constructed. Not for clinical use.
 

@@ -182,6 +182,7 @@ class Item:
     product: str
     prescribed_count: Optional[int] = None
     every_hours: Optional[Fraction] = None  # from the prescription's directions, e.g. "every 12 hours"
+    units_per_dose: Optional[Fraction] = None  # from the prescription, e.g. "take 2 tablets"; None = the product's usual
 
 
 RX_PREFIX = "rx::"  # solver ids for prescription facts (not label rules)
@@ -194,6 +195,7 @@ class Built:
     origin: dict[str, tuple[str, str, Resolved]] = field(default_factory=dict)
     skipped: list[str] = field(default_factory=list)  # human-readable reasons
     unverified: list[str] = field(default_factory=list)  # library items not yet human-checked
+    rejected: list[str] = field(default_factory=list)  # items a reviewer rejected that this result still depends on
     rx: dict[str, str] = field(default_factory=dict)  # solver id -> description, for prescription facts
 
 
@@ -204,16 +206,28 @@ def build_regimen(lib: Library, items: list[Item], mode: Mode, *, include_food: 
     built = Built(Regimen((), ()))
     for it in items:
         pf = lib.products[it.product]
-        if not pf.verified:
+        if _rejected(pf):
+            built.rejected.append(f"product {pf.name} (rejected by {pf.review.get('by', '?')})")
+        elif not pf.verified:
             built.unverified.append(f"product {pf.name}")
+        units = Fraction(it.units_per_dose) if it.units_per_dose is not None else Fraction(pf.units_per_dose)
+        scale = units / Fraction(pf.units_per_dose)  # e.g. 2 tablets of a product filed per 1 tablet
+        amounts = {k: v * scale for k, v in _amounts(pf).items()}
+        if pf.label_max_units_per_dose is not None and units > pf.label_max_units_per_dose:
+            built.skipped.append(f"{pf.display_name}: {_n(units)} {pf.unit_name or 'unit'}(s) per dose is above the label's "
+                                 f"{_n(pf.label_max_units_per_dose)} for this strength")
         if it.prescribed_count is not None:
-            products.append(Product(pf.name, it.prescribed_count, True, _amounts(pf)))
+            products.append(Product(pf.name, it.prescribed_count, True, amounts))
         elif pf.otc_max_doses is None:
             raise ValueError(f"{pf.name}: as-needed use needs `otc_max_doses` on the product")
         else:
-            if not pf.otc_max_doses.verified:
+            if _rejected(pf.otc_max_doses):
+                built.rejected.append(f"max doses of {pf.name} (rejected by {pf.otc_max_doses.review.get('by', '?')})")
+            elif not pf.otc_max_doses.verified:
                 built.unverified.append(f"max doses of {pf.name}")
-            products.append(Product(pf.name, pf.otc_max_doses.count, False, _amounts(pf)))
+            # The label maximum is in doses of the product's usual size: convert through units.
+            max_units = pf.otc_max_doses.count * Fraction(pf.units_per_dose)
+            products.append(Product(pf.name, int(max_units // units), False, amounts))
 
     rx_rules = []
     for it in items:
@@ -285,6 +299,11 @@ def build_regimen(lib: Library, items: list[Item], mode: Mode, *, include_food: 
 def _hours(h: Fraction) -> str:
     h = Fraction(h)
     return f"{h.numerator} h" if h.denominator == 1 else f"{float(h):g} h"
+
+
+def _n(v) -> str:
+    v = Fraction(v)
+    return str(v.numerator) if v.denominator == 1 else f"{float(v):g}"
 
 
 def _amounts(pf: ProductFile) -> dict[str, Fraction]:

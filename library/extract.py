@@ -40,7 +40,16 @@ SECTIONS = ["dosage_and_administration", "directions", "drug_interactions", "pre
 TIMING = re.compile(
     r"\b(hours?|minutes?|before|after|apart|prior|daily|a day|per day|24 hours|maximum|exceed|"
     r"more than|meals?|breakfast|food|empty stomach|every|times|separat\w*|interval)\b", re.I)
-MAX_SENTENCES = 60
+MAX_SENTENCES = 60  # timing sentences shown to the administration pass
+# Dosing and limits passes also see strength sections, and any sentence stating a dose amount
+# (the timing filter alone hid sentences like "given as 30 mg capsules").
+STRENGTH_SECTIONS = ["dosage_forms_and_strengths", "how_supplied", "description", "active_ingredient"]
+DOSE = re.compile(r"\d[\d,.]*\s*(mg|mcg|g|grams?|mL|tablets?|caplets?|capsules?)\b|\b(mg|mcg)/kg\b", re.I)
+MAX_DOSE_SENTENCES = 150
+# A stated minimum gap, or as-needed use (where "every N hours" is a ceiling on frequency).
+SPACING = re.compile(r"\bat least\b|\bapart\b|\bno (?:more|sooner)\b|\bnot (?:more|sooner)\b|\bminimum\b|"
+                     r"\binterval\b|\bbetween doses\b|\bprior to the next\b", re.I)
+AS_NEEDED = re.compile(r"\bas needed\b|\bif needed\b|\bwhile symptoms\b|\bas symptoms\b|\bPRN\b|\bfor pain\b", re.I)
 
 
 # --- 1-2: label -> numbered sentences -----------------------------------------------
@@ -53,7 +62,7 @@ def label_record(spl: str) -> dict:
     with urllib.request.urlopen(url, timeout=30) as r:
         rec = json.load(r)["results"][0]
     keep = {k: rec[k] for k in ["set_id", "id", "version", "effective_time", "openfda", *SECTIONS,
-                                 "active_ingredient", "description"] if k in rec}
+                                 *STRENGTH_SECTIONS] if k in rec}
     f.parent.mkdir(parents=True, exist_ok=True)
     f.write_text(json.dumps(keep, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     return keep
@@ -64,22 +73,82 @@ class Sentence:
     sid: str
     section: str
     text: str  # verbatim substring of the section text
+    timing: bool = True  # shown to the administration (timing) pass; dosing/limits passes see all
 
 
 def numbered_sentences(rec: dict) -> list[Sentence]:
-    out, seen = [], set()
-    for sec in SECTIONS:
+    """One numbering for the whole label, so a sentence id means the same thing in every pass.
+    Timing sentences come first (the administration pass sees those); then sentences that
+    state a dose amount, including the strength sections (dosing and limits passes see all)."""
+    out, seen, n_timing, n_dose = [], set(), 0, 0
+
+    def add(part: str, sec: str, timing: bool):
+        seen.add(part)
+        out.append(Sentence(f"S{len(out) + 1}", sec.replace("_", " "), part, timing))
+
+    for sec in SECTIONS + STRENGTH_SECTIONS:
         text = " ".join(rec.get(sec, []))
-        for part in re.split(r"(?<=[.;])\s+", text):
-            part = part.strip()
-            if len(part) < 12 or part in seen or not TIMING.search(part):
+        parts = [p.strip() for p in re.split(r"(?<=[.;])\s+", text)]
+        for i, part in enumerate(parts):
+            if len(part) < 12 or part in seen:
+                continue
+            is_timing = sec in SECTIONS and bool(TIMING.search(part)) and n_timing < MAX_SENTENCES
+            is_dose = bool(DOSE.search(part)) and n_dose < MAX_DOSE_SENTENCES
+            if not (is_timing or is_dose):
                 continue
             assert part in text
-            seen.add(part)
-            out.append(Sentence(f"S{len(out) + 1}", sec.replace("_", " "), part))
-            if len(out) >= MAX_SENTENCES:
-                return out
+            # The sentence before a dose often says who it is for ("Severely disturbed liver
+            # function ... ."): show it too, so the dose is not read as applying to everyone.
+            prev = parts[i - 1] if i > 0 else ""
+            if is_dose and len(prev) >= 12 and prev not in seen:
+                prev_timing = sec in SECTIONS and bool(TIMING.search(prev)) and n_timing < MAX_SENTENCES
+                add(prev, sec, prev_timing)
+                n_timing += prev_timing
+                n_dose += not prev_timing
+            add(part, sec, is_timing)
+            n_timing += is_timing
+            n_dose += not is_timing
     return out
+
+
+# --- strengths, read from the label by code (never by the model) -------------------------
+
+_COMBO = re.compile(r"(\d[\d,]*(?:\.\d+)?)\s*mg\s*/\s*(\d[\d,]*(?:\.\d+)?)\s*mg", re.I)
+_AMT = r"(\d[\d,]*(?:\.\d+)?)\s*(mg|mcg|grams?|g)\b"
+_SINGLE = [
+    re.compile(r"strengths?\s*:?\s*((?:\d[\d,.]*\s*(?:mg|mcg|g)\b[\s,]*(?:(?:and|or)\s+)?)+)", re.I),       # "strengths: 25 mcg, 50 mcg"
+    re.compile(r"available in\s+((?:\d[\d,.]*\s*(?:mg|mcg|g)\b[\s,]*(?:(?:and|or)\s+)?)+)", re.I),          # "available in 250 mg, 500 mg and 750 mg"
+    re.compile(r"(?:tablets?|capsules?|caplets?)\s+(?:USP\s+)?" + _AMT, re.I),                         # "tablets USP 500 mg"
+    re.compile(_AMT + r"\s+(?:film-coated\s+|soft gelatin\s+|chewable\s+)?(?:tablets?|capsules?|caplets?)\b", re.I),
+    re.compile(r"\((?:in each|per) (?:tablet|caplet|capsule)\)\s*[A-Za-z ,]*?" + _AMT, re.I),         # OTC "Active ingredient (in each caplet) X 500 mg"
+    re.compile(r"each (?:[a-z-]+ )*?(?:tablet|caplet|capsule) contains\s+" + _AMT, re.I),            # "Each tablet contains 1 gram"
+]
+
+
+def _norm_amount(num: str, unit: str) -> str:
+    unit = unit.lower()
+    unit = "g" if unit.startswith("gram") else unit
+    return f"{num.replace(',', '')} {unit}"
+
+
+def label_strengths(rec: dict) -> list[str]:
+    """Strengths the label says it comes in, e.g. ["300 mg/15 mg", "300 mg/30 mg"] or ["250 mg", "500 mg"]."""
+    text = " ".join(" ".join(rec.get(k, [])) for k in STRENGTH_SECTIONS)
+    combos = {f"{a.replace(',', '')} mg/{b.replace(',', '')} mg" for a, b in _COMBO.findall(text)}
+    if combos:
+        return sorted(combos, key=lambda s: [float(x.split()[0]) for x in s.split("/")])
+    found = set()
+    for pat in _SINGLE:
+        for m in pat.finditer(text):
+            if pat.groups == 1:  # a list of amounts
+                found |= {_norm_amount(a, u) for a, u in re.findall(_AMT, m.group(1), re.I)}
+            else:
+                found.add(_norm_amount(m.group(1), m.group(2)))
+    return sorted(found, key=lambda s: float(s.split()[0]))
+
+
+def label_substances(rec: dict) -> list[str]:
+    return [s.lower() for s in (rec.get("openfda") or {}).get("substance_name", [])]
 
 
 # --- 3: the prompt ---------------------------------------------------------------------
@@ -127,7 +196,7 @@ Do not copy sentence text; cite its id. Only include rules the label actually st
 
 
 def build_prompt(ingredient: str, spl: str, sents: list[Sentence], groups: dict) -> str:
-    lines = "\n".join(f"{s.sid} [{s.section}] {s.text}" for s in sents)
+    lines = "\n".join(f"{s.sid} [{s.section}] {s.text}" for s in sents if s.timing)
     g = "\n".join(f"- {name}: {sorted(m['ingredient'] for m in body['members'])}"
                   for name, body in groups.items()) or "(none)"
     return PROMPT.format(ingredient=ingredient, spl=spl, sentences=lines, groups=g)
@@ -186,6 +255,14 @@ def check(answer: dict, ingredient: str, spl: str, sents: list[Sentence]) -> Che
         if item.get("target") == "*" and not ANY_OTHER.search(s.text):
             out.rejected.append({"item": raw, "reason": f"target '*' (every other drug) but {s.sid} does not "
                                  "refer to other drugs in general; use a specific ingredient or group"})
+            continue
+        if item.get("family") == "min_interval" and not (SPACING.search(s.text) or AS_NEEDED.search(s.text)):
+            out.rejected.append({"item": raw, "reason": f"{s.sid} gives 'every {item.get('hours')} hours' as a regimen, not a "
+                                 "minimum gap or an as-needed limit; the prescription sets the regimen"})
+            continue
+        if item.get("family") == "daily_max" and str(item.get("unit", "")).lower() not in ("mg", "mcg", "g"):
+            out.rejected.append({"item": raw, "reason": f"a daily maximum in {item.get('unit')} counts one product's units; "
+                                 "an ingredient maximum must be in mg, mcg or g (product caps belong on the product)"})
             continue
         if item.get("id") in ids:
             out.rejected.append({"item": raw, "reason": "duplicate id"})
@@ -249,8 +326,11 @@ def _prompt_for(pass_name: str, ingredient: str, spl: str, sents: list[Sentence]
     if pass_name == "administration":
         return build_prompt(ingredient, spl, sents, _groups())
     lines = "\n".join(f"{s.sid} [{s.section}] {s.text}" for s in sents)
+    rec = label_record(spl)
     tpl = DOSING_PROMPT if pass_name == "dosing" else LIMITS_PROMPT
-    return tpl.format(ingredient=ingredient, spl=spl, sentences=lines)
+    return tpl.format(ingredient=ingredient, spl=spl, sentences=lines,
+                      strengths=", ".join(label_strengths(rec)) or "(none found)",
+                      substances=", ".join(label_substances(rec)) or ingredient)
 
 
 def _check_pass(pass_name: str, answer: dict, ingredient: str, spl: str, sents: list[Sentence]) -> Checked:
@@ -270,9 +350,12 @@ def write_record(ingredient: str, spl: str, sents: list[Sentence], results: dict
             cited.add(r["source"].get("sentence_id") or text_to_sid.get(r["source"]["sentence"], ""))
         for m in c.memberships:
             cited.add(text_to_sid.get(m["basis"], ""))
+    label = label_record(spl)
     rec = {
         "ingredient": ingredient, "spl_set_id": spl, "model": model,
         "label_url": f"https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid={spl}",
+        "strengths": label_strengths(label),      # read by code, not by the model
+        "substances": label_substances(label),
         "dosing": results["dosing"].rules if "dosing" in results else [],
         "limits": results["limits"].rules if "limits" in results else [],
         "administration": results["administration"].rules if "administration" in results else [],
@@ -284,7 +367,12 @@ def write_record(ingredient: str, spl: str, sents: list[Sentence], results: dict
     }
     out = DATA / "extracted" / f"{ingredient}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(rec, indent=2, ensure_ascii=False, default=str) + "\n", encoding="utf-8")
+    if out.exists():  # keep human decisions on rows that came out the same this time
+        from .review_queue import carry_reviews, write_json
+        carry_reviews(json.loads(out.read_text(encoding="utf-8")), rec)
+        write_json(out, rec)
+    else:
+        out.write_text(json.dumps(rec, indent=2, ensure_ascii=False, default=str) + "\n", encoding="utf-8")
     if "administration" in results:  # keep the administration draft + report used by library.evaluate
         write_drafts(ingredient, spl, results["administration"], model)
     return out

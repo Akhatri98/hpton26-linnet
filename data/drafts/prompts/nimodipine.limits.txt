@@ -2,22 +2,52 @@ You are extracting LIMITS from an FDA drug label for a pharmacist's tool.
 
 Ingredient: nimodipine
 Label set id: a323ebd8-ef1b-439b-93d1-ba73a5b0127d
+Active ingredients on this label: nimodipine
+Strengths this label comes in (read from the label by code): 30 mg
 
 Numbered sentences from the label:
-S1 [dosage and administration] The recommended oral dose is 60 mg (two 30 mg capsules) every 4 hours for 21 consecutive days.
-S2 [dosage and administration] In general, the capsules should be swallowed whole with a little liquid, preferably not less than one hour before or two hours after meals.
-S3 [dosage and administration] Oral nimodipine therapy should commence as soon as possible within 96 hours of the onset of subarachnoid hemorrhage.
-S4 [dosage and administration] Dosage should be reduced to one 30 mg capsule every 4 hours with close monitoring of blood pressure and heart rate;
-S5 [precautions] nefazodone) - grapefruit juice: after intake of grapefruit juice and nimodipine, the blood pressure lowering effect may last for at least 4 days after the last ingestion of grapefruit juice.
-S6 [precautions] Nimodipine did not impair the fertility and general reproductive performance of male and female Wistar rats following oral doses of up to 30 mg/kg/day when administered daily for more than 10 weeks in the males and 3 weeks in the females prior to mating and continued to day 7 of pregnancy.
-S7 [precautions] This dose in a rat is about 4 times the equivalent clinical dose of 60 mg q4h in a 50 kg patient.
+S1 [dosage and administration] Specific treatments for calcium channel blocker overdose should also be given promptly.
+S2 [dosage and administration] Nimodipine is given orally in the form of soft gelatin 30 mg capsules for subarachnoid hemorrhage.
+S3 [dosage and administration] The recommended oral dose is 60 mg (two 30 mg capsules) every 4 hours for 21 consecutive days.
+S4 [dosage and administration] In general, the capsules should be swallowed whole with a little liquid, preferably not less than one hour before or two hours after meals.
+S5 [dosage and administration] Oral nimodipine therapy should commence as soon as possible within 96 hours of the onset of subarachnoid hemorrhage.
+S6 [dosage and administration] To help minimize administration errors, it is recommended that the syringe used for administration be labeled "Not for IV Use".
+S7 [dosage and administration] The contents should then be emptied into the patient's in situ naso-gastric tube and washed down the tube with 30 mL of normal saline (0.9%).
+S8 [dosage and administration] The reduction in blood pressure and other adverse effects may be more pronounced in these patients.
+S9 [dosage and administration] Dosage should be reduced to one 30 mg capsule every 4 hours with close monitoring of blood pressure and heart rate;
+S10 [precautions] nefazodone) - grapefruit juice: after intake of grapefruit juice and nimodipine, the blood pressure lowering effect may last for at least 4 days after the last ingestion of grapefruit juice.
+S11 [precautions] Blood pressure should be carefully monitored, and dose adjustment of the blood pressure lowering drug(s) may be necessary.
+S12 [precautions] Carcinogenesis, Mutagenesis, Impairment of Fertility In a two-year study, higher incidences of adenocarcinoma of the uterus and Leydig-cell adenoma of the testes were observed in rats given a diet containing 1800 ppm nimodipine (equivalent to 91 to 121 mg/kg/day nimodipine) than in placebo controls.
+S13 [precautions] The differences were not statistically significant, however, and the higher rates were well within historical control range for these tumors in the Wistar strain.
+S14 [precautions] Nimodipine was found not to be carcinogenic in a 91-week mouse study but the high dose of 1800 ppm nimodipine-in-feed (546 to 774 mg/kg/day) shortened the life expectancy of the animals.
+S15 [precautions] Mutagenicity studies, including the Ames, micronucleus and dominant lethal tests were negative.
+S16 [precautions] Nimodipine did not impair the fertility and general reproductive performance of male and female Wistar rats following oral doses of up to 30 mg/kg/day when administered daily for more than 10 weeks in the males and 3 weeks in the females prior to mating and continued to day 7 of pregnancy.
+S17 [precautions] This dose in a rat is about 4 times the equivalent clinical dose of 60 mg q4h in a 50 kg patient.
+S18 [precautions] Pregnancy Nimodipine has been shown to have a teratogenic effect in Himalayan rabbits.
+S19 [precautions] Incidences of malformations and stunted fetuses were increased at oral doses of 1 and 10 mg/kg/day administered (by gavage) from day 6 through day 18 of pregnancy but not at 3 mg/kg/day in one of two identical rabbit studies.
+S20 [precautions] In the second study an increased incidence of stunted fetuses was seen at 1 mg/kg/day but not at higher doses.
+S21 [precautions] Nimodipine was embryotoxic, causing resorption and stunted growth of fetuses, in Long Evans rats at 100 mg/kg/day administered by gavage from day 6 through day 15 of pregnancy.
+S22 [precautions] In two other rat studies, doses of 30 mg/kg/day nimodipine administered by gavage from day 16 of gestation and continued until sacrifice (day 20 of pregnancy or day 21 post partum) were associated with higher incidences of skeletal variation, stunted fetuses and stillbirths but no malformations.
+S23 [how supplied] HOW SUPPLIED Nimodipine Capsules 30 mg are available as orange, opaque, oblong shape, soft gelatin capsules, imprinted "HP 512" with black ink.
+S24 [how supplied] They are supplied as follows: Strength NDC Code Unit Dose Package of 30: (3 blister cards;
+S25 [how supplied] each containing 10 capsules) 30 mg 23155-512-30 Unit Dose Package of 100: (10 blister cards;
+S26 [how supplied] each containing 10 capsules) 30 mg 23155-512-00 The capsules should be stored in the manufacturer's original package.
+S27 [description] Nimodipine capsules are formulated as soft gelatin capsules for oral administration.
+S28 [description] Each liquid filled capsule contains 30 mg of nimodipine in a vehicle of glycerin, peppermint oil and polyethylene glycol.
 
 Return ONLY a JSON object {"limits": [ ... ]}. One row per limit the label states. Each row:
   {"kind": "per_dose" | "per_day" | "duration_days",
    "amount": N, "unit": "mg" | "g" | "mcg" | "tablets" | "caplets" | "capsules" | "doses" | "days",
+   "ingredient": "which active ingredient the amount is of (one of the list above)", or null when there is only one,
+   "strength": "the strength the limit is for, e.g. '300 mg/60 mg'", or null if it applies to all strengths,
    "population": "adults" | "children" | "pregnant" | "general" | ...,
+   "condition": "what it is for, if the limit depends on it (e.g. 'complicated UTI')", or null,
    "sentence": "Sk", "provenance": "quoted" | "interpreted"}
+Rules:
+- Starting doses, titration steps and per-kg doses are not limits.
+- On a label with more than one active ingredient, every limit in mg, mcg or g MUST name its "ingredient".
+- A limit counted in tablets, caplets or capsules on a label with more than one strength MUST name its "strength".
 Examples: "do not take more than 6 caplets in 24 hours" -> per_day, 6, caplets.
-"more than 4,000 mg of acetaminophen in 24 hours" -> per_day, 4000, mg.
+"more than 4,000 mg of acetaminophen in 24 hours" -> per_day, 4000, mg, ingredient "acetaminophen".
 "do not use for more than 10 days" -> duration_days, 10, days.
 Use only numbers stated in the cited sentence. Cite exactly one sentence id per row; do not copy text.

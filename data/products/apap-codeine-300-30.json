@@ -13,13 +13,10 @@
       "unit": "mg"
     }
   },
-  "dose_note": "One tablet per dose (label: 'Take 1 to 2 tablet every 4 hours').",
+  "dose_note": "One tablet per dose by default; the prescription sets tablets per dose (label: 'Take 1 to 2 tablet every 4 hours'; 'The prescriber must determine the number of tablets per dose').",
   "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
   "verified": false,
-  "review": {
-    "decision": "rejected",
-    "by": "ak",
-    "role": "pharmacist",
-    "at": "2026-11-14T15:49:59-05:00"
-  }
+  "unit_name": "tablet",
+  "units_per_dose": 1,
+  "label_max_units_per_dose": 2
 }

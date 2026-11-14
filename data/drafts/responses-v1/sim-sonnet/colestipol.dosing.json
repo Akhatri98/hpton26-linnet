@@ -1,0 +1,30 @@
+{
+ "dosing": [
+  {
+   "condition": "hyperlipoproteinemia",
+   "population": "adults",
+   "dose": 2,
+   "dose_max": null,
+   "unit": "g",
+   "every_hours": null,
+   "times_per_day": 2,
+   "duration_days": null,
+   "as_needed": false,
+   "sentence": "S1",
+   "provenance": "interpreted"
+  },
+  {
+   "condition": "pre-existing constipation",
+   "population": "adults",
+   "dose": 2,
+   "dose_max": null,
+   "unit": "g",
+   "every_hours": null,
+   "times_per_day": 2,
+   "duration_days": null,
+   "as_needed": false,
+   "sentence": "S12",
+   "provenance": "interpreted"
+  }
+ ]
+}

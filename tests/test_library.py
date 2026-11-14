@@ -127,3 +127,20 @@ BASE = {"ingredient": "x", "primary_spl": PRIMARY}
 def test_schema_rejects_bad_rules(rule, msg):
     with pytest.raises(ValidationError, match=msg):
         IngredientFile.model_validate({**BASE, "rules": [rule]})
+
+
+def test_tablets_per_dose_scales_ingredient_totals_and_flags_above_label():
+    from fractions import Fraction as Fr
+    from pathlib import Path
+    from library.load import Item, build_regimen, load as load_real
+    lib = load_real(Path("data"))
+    one = build_regimen(lib, [Item("apap-codeine-300-30", 6)], "strict")
+    two = build_regimen(lib, [Item("apap-codeine-300-30", 6, None, Fr(2))], "strict")
+    p1, p2 = one.regimen.products[0], two.regimen.products[0]
+    assert p2.ingredients["codeine_phosphate"] == 2 * p1.ingredients["codeine_phosphate"] == 60
+    assert any(getattr(r, "ingredient", "") == "codeine_phosphate" for r in two.regimen.rules)  # 360 mg/day now enforced
+    three = build_regimen(lib, [Item("apap-codeine-300-30", 4, None, Fr(3))], "strict")
+    assert any("above the label" in s for s in three.skipped)
+    # as-needed maximum is in doses of the usual size: 3 doses of 2 caplets = 6 caplets = 6 doses of 1 caplet
+    otc = build_regimen(lib, [Item("acetaminophen-500-otc", None, None, Fr(1))], "strict")
+    assert otc.regimen.products[0].max_doses == 6

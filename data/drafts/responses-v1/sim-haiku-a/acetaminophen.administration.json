@@ -1,0 +1,7 @@
+{
+  "rules": [
+    {"id": "acetaminophen-min-interval-6h", "family": "min_interval", "hours": 6, "sentence": "S1", "provenance": "quoted", "note": "2 caplets every 6 hours while symptoms last, adults and children 12 and over"},
+    {"id": "acetaminophen-daily-max-4000mg", "family": "daily_max", "amount": 4000, "unit": "mg", "sentence": "S2", "provenance": "quoted", "note": "more than 4,000 mg of acetaminophen in 24 hours risks severe liver damage"}
+  ],
+  "memberships": []
+}

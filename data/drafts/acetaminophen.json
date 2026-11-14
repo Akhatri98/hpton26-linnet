@@ -7,22 +7,7 @@
       "family": "min_interval",
       "hours": 6,
       "provenance": "quoted",
-      "note": "Take 2 caplets every 6 hours while symptoms last, adults and children 12 and over. | DRAFT: proposed by a language model.",
-      "source": {
-        "spl_set_id": "00146b91-008d-4b16-95b0-6077f98821be",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be",
-        "section": "dosage and administration",
-        "sentence": "Directions • do not take more than directed (see overdose warning) adults and children 12 years and over • take 2 caplets every 6 hours while symptoms last • do not take more than 6 caplets in 24 hours, unless directed by a doctor • do not use for more than 10 days unless directed by a doctor children under 12 years ask a doctor"
-      },
-      "verified": false
-    },
-    {
-      "id": "acetaminophen-daily-max-6-caplets",
-      "family": "daily_max",
-      "amount": 6,
-      "unit": "caplets",
-      "provenance": "quoted",
-      "note": "Do not take more than 6 caplets in 24 hours unless directed by a doctor. | DRAFT: proposed by a language model.",
+      "note": "Take 2 caplets every 6 hours while symptoms last (adults and children 12 and over). | DRAFT: proposed by a language model.",
       "source": {
         "spl_set_id": "00146b91-008d-4b16-95b0-6077f98821be",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be",
@@ -37,7 +22,7 @@
       "amount": 4000,
       "unit": "mg",
       "provenance": "quoted",
-      "note": "Liver damage risk above 4,000 mg of acetaminophen in 24 hours. | DRAFT: proposed by a language model.",
+      "note": "Severe liver damage may occur with more than 4,000 mg of acetaminophen in 24 hours. | DRAFT: proposed by a language model.",
       "source": {
         "spl_set_id": "00146b91-008d-4b16-95b0-6077f98821be",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be",

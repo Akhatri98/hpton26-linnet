@@ -4,14 +4,14 @@ Ingredient: calcium_carbonate
 Label set id: 036ef1ed-32ef-46b8-8817-b3f63a014280
 
 Numbered sentences from the label:
-S1 [dosage and administration] Chew or crush tablets completely before swallowing.
-S2 [dosage and administration] • do not take for symptoms that persist for more than 2 weeks unless advised by a doctor
-S3 [warnings] Warnings Ask a doctor or pharmacist before use if you are presently taking a prescription drug.
-S4 [warnings] When using this product • do not take more than 6 tablets in 24 hours • if pregnant do not take more than 6 tablets in 24 hours • do not use the maximum dosage for more than 2 weeks, except under the advice and supervision of a doctor Keep out of reach of children.
+S2 [dosage and administration] Chew or crush tablets completely before swallowing.
+S3 [dosage and administration] • do not take for symptoms that persist for more than 2 weeks unless advised by a doctor
+S4 [warnings] Warnings Ask a doctor or pharmacist before use if you are presently taking a prescription drug.
+S6 [warnings] When using this product • do not take more than 6 tablets in 24 hours • if pregnant do not take more than 6 tablets in 24 hours • do not use the maximum dosage for more than 2 weeks, except under the advice and supervision of a doctor Keep out of reach of children.
 
 Known ingredient groups (you may propose members for these, or a new group):
 - levothyroxine_binders: ['calcium_carbonate', 'colestipol']
-- polyvalent_cations: ['calcium_carbonate']
+- polyvalent_cations: ['aluminum', 'calcium_carbonate', 'iron', 'magnesium', 'zinc']
 
 Return ONLY a JSON object:
 {

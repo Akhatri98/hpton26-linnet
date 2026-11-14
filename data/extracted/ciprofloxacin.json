@@ -3,9 +3,19 @@
   "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
   "model": "claude-haiku-5-5",
   "label_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa",
+  "strengths": [
+    "250 mg",
+    "500 mg",
+    "750 mg"
+  ],
+  "substances": [
+    "ciprofloxacin hydrochloride"
+  ],
   "dosing": [
     {
-      "condition": "skin and skin structure",
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "skin and skin structure infections",
       "population": "adults",
       "dose": 500,
       "dose_max": 750,
@@ -18,14 +28,16 @@
       "source": {
         "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
         "section": "dosage and administration",
-        "sentence_id": "S3",
-        "sentence": "Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal Used in conjunction with metronidazole.",
+        "sentence_id": "S2",
+        "sentence": "Adult Dosage Guidelines Infection Dose Frequency Duration Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal 500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) 500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Adults with creatinine clearance 3050 mL/min 250500 mg q 12 h ( 2.3 ) Adults with creatinine clearance 529 mL/min 250500 mg q 18 h ( 2.3 ) Patients on hemodialysis or peritoneal dialysis 250500 mg q 24 h (after dialysis) ( 2.3 ) Pediatric Oral Dosage Guidelines Infection Dose Frequency Duration Complicated UTI and Pyelonephritis (1 to 17 years of age) 10-20 mg/kg (maximum 750 mg per dose) Every 12 hours 10 - 21 days Inhalational Anthrax (Post-Exposure) 15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague 15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.1 Dosage in Adults The determination of dosage and duration for any particular patient must take into consideration the severity and nature of the infection, the susceptibility of the causative microorganism, the integrity of the patient's host-defense mechanisms, and the status of renal and hepatic function.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
       "verified": false
     },
     {
-      "condition": "bone and joint",
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "bone and joint infections",
       "population": "adults",
       "dose": 500,
       "dose_max": 750,
@@ -38,53 +50,15 @@
       "source": {
         "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
         "section": "dosage and administration",
-        "sentence_id": "S3",
-        "sentence": "Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal Used in conjunction with metronidazole.",
+        "sentence_id": "S2",
+        "sentence": "Adult Dosage Guidelines Infection Dose Frequency Duration Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal 500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) 500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Adults with creatinine clearance 3050 mL/min 250500 mg q 12 h ( 2.3 ) Adults with creatinine clearance 529 mL/min 250500 mg q 18 h ( 2.3 ) Patients on hemodialysis or peritoneal dialysis 250500 mg q 24 h (after dialysis) ( 2.3 ) Pediatric Oral Dosage Guidelines Infection Dose Frequency Duration Complicated UTI and Pyelonephritis (1 to 17 years of age) 10-20 mg/kg (maximum 750 mg per dose) Every 12 hours 10 - 21 days Inhalational Anthrax (Post-Exposure) 15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague 15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.1 Dosage in Adults The determination of dosage and duration for any particular patient must take into consideration the severity and nature of the infection, the susceptibility of the causative microorganism, the integrity of the patient's host-defense mechanisms, and the status of renal and hepatic function.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
       "verified": false
     },
     {
-      "condition": "infectious diarrhea",
-      "population": "adults",
-      "dose": 500,
-      "dose_max": null,
-      "unit": "mg",
-      "every_hours": 12,
-      "times_per_day": null,
-      "duration_days": null,
-      "as_needed": false,
-      "provenance": "quoted",
-      "source": {
-        "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
-        "section": "dosage and administration",
-        "sentence_id": "S4",
-        "sentence": "500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) Begin drug administration as soon as possible after suspected or confirmed exposure.",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
-      },
-      "verified": false
-    },
-    {
-      "condition": "typhoid fever",
-      "population": "adults",
-      "dose": 500,
-      "dose_max": null,
-      "unit": "mg",
-      "every_hours": 12,
-      "times_per_day": null,
-      "duration_days": 10,
-      "as_needed": false,
-      "provenance": "quoted",
-      "source": {
-        "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
-        "section": "dosage and administration",
-        "sentence_id": "S4",
-        "sentence": "500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) Begin drug administration as soon as possible after suspected or confirmed exposure.",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
-      },
-      "verified": false
-    },
-    {
+      "strength": null,
+      "dose_type": "usual",
       "condition": "uncomplicated gonorrhea",
       "population": "adults",
       "dose": 250,
@@ -98,33 +72,15 @@
       "source": {
         "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
         "section": "dosage and administration",
-        "sentence_id": "S4",
-        "sentence": "500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) Begin drug administration as soon as possible after suspected or confirmed exposure.",
+        "sentence_id": "S2",
+        "sentence": "Adult Dosage Guidelines Infection Dose Frequency Duration Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal 500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) 500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Adults with creatinine clearance 3050 mL/min 250500 mg q 12 h ( 2.3 ) Adults with creatinine clearance 529 mL/min 250500 mg q 18 h ( 2.3 ) Patients on hemodialysis or peritoneal dialysis 250500 mg q 24 h (after dialysis) ( 2.3 ) Pediatric Oral Dosage Guidelines Infection Dose Frequency Duration Complicated UTI and Pyelonephritis (1 to 17 years of age) 10-20 mg/kg (maximum 750 mg per dose) Every 12 hours 10 - 21 days Inhalational Anthrax (Post-Exposure) 15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague 15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.1 Dosage in Adults The determination of dosage and duration for any particular patient must take into consideration the severity and nature of the infection, the susceptibility of the causative microorganism, the integrity of the patient's host-defense mechanisms, and the status of renal and hepatic function.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
       "verified": false
     },
     {
-      "condition": "inhalational anthrax (post-exposure)",
-      "population": "adults",
-      "dose": 500,
-      "dose_max": null,
-      "unit": "mg",
-      "every_hours": 12,
-      "times_per_day": null,
-      "duration_days": 60,
-      "as_needed": false,
-      "provenance": "quoted",
-      "source": {
-        "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
-        "section": "dosage and administration",
-        "sentence_id": "S5",
-        "sentence": "500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Conversion of IV to Oral Dosing in Adults Patients whose therapy is started with ciprofloxacin IV may be switched to ciprofloxacin tablets or oral suspension when clinically indicated at the discretion of the physician (Table 2) [see Clinical Pharmacology (12.3) ] .",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
-      },
-      "verified": false
-    },
-    {
+      "strength": null,
+      "dose_type": "usual",
       "condition": "plague",
       "population": "adults",
       "dose": 500,
@@ -138,53 +94,15 @@
       "source": {
         "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
         "section": "dosage and administration",
-        "sentence_id": "S5",
-        "sentence": "500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Conversion of IV to Oral Dosing in Adults Patients whose therapy is started with ciprofloxacin IV may be switched to ciprofloxacin tablets or oral suspension when clinically indicated at the discretion of the physician (Table 2) [see Clinical Pharmacology (12.3) ] .",
+        "sentence_id": "S2",
+        "sentence": "Adult Dosage Guidelines Infection Dose Frequency Duration Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal 500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) 500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Adults with creatinine clearance 3050 mL/min 250500 mg q 12 h ( 2.3 ) Adults with creatinine clearance 529 mL/min 250500 mg q 18 h ( 2.3 ) Patients on hemodialysis or peritoneal dialysis 250500 mg q 24 h (after dialysis) ( 2.3 ) Pediatric Oral Dosage Guidelines Infection Dose Frequency Duration Complicated UTI and Pyelonephritis (1 to 17 years of age) 10-20 mg/kg (maximum 750 mg per dose) Every 12 hours 10 - 21 days Inhalational Anthrax (Post-Exposure) 15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague 15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.1 Dosage in Adults The determination of dosage and duration for any particular patient must take into consideration the severity and nature of the infection, the susceptibility of the causative microorganism, the integrity of the patient's host-defense mechanisms, and the status of renal and hepatic function.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
       "verified": false
     },
     {
-      "condition": "chronic bacterial prostatitis",
-      "population": "adults",
-      "dose": 500,
-      "dose_max": null,
-      "unit": "mg",
-      "every_hours": 12,
-      "times_per_day": null,
-      "duration_days": 28,
-      "as_needed": false,
-      "provenance": "quoted",
-      "source": {
-        "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
-        "section": "dosage and administration",
-        "sentence_id": "S5",
-        "sentence": "500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Conversion of IV to Oral Dosing in Adults Patients whose therapy is started with ciprofloxacin IV may be switched to ciprofloxacin tablets or oral suspension when clinically indicated at the discretion of the physician (Table 2) [see Clinical Pharmacology (12.3) ] .",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
-      },
-      "verified": false
-    },
-    {
-      "condition": "lower respiratory tract infection",
-      "population": "adults",
-      "dose": 500,
-      "dose_max": 750,
-      "unit": "mg",
-      "every_hours": 12,
-      "times_per_day": null,
-      "duration_days": null,
-      "as_needed": false,
-      "provenance": "quoted",
-      "source": {
-        "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
-        "section": "dosage and administration",
-        "sentence_id": "S5",
-        "sentence": "500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Conversion of IV to Oral Dosing in Adults Patients whose therapy is started with ciprofloxacin IV may be switched to ciprofloxacin tablets or oral suspension when clinically indicated at the discretion of the physician (Table 2) [see Clinical Pharmacology (12.3) ] .",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
-      },
-      "verified": false
-    },
-    {
+      "strength": null,
+      "dose_type": "usual",
       "condition": "urinary tract infection",
       "population": "adults",
       "dose": 250,
@@ -198,13 +116,15 @@
       "source": {
         "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
         "section": "dosage and administration",
-        "sentence_id": "S5",
-        "sentence": "500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Conversion of IV to Oral Dosing in Adults Patients whose therapy is started with ciprofloxacin IV may be switched to ciprofloxacin tablets or oral suspension when clinically indicated at the discretion of the physician (Table 2) [see Clinical Pharmacology (12.3) ] .",
+        "sentence_id": "S2",
+        "sentence": "Adult Dosage Guidelines Infection Dose Frequency Duration Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal 500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) 500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Adults with creatinine clearance 3050 mL/min 250500 mg q 12 h ( 2.3 ) Adults with creatinine clearance 529 mL/min 250500 mg q 18 h ( 2.3 ) Patients on hemodialysis or peritoneal dialysis 250500 mg q 24 h (after dialysis) ( 2.3 ) Pediatric Oral Dosage Guidelines Infection Dose Frequency Duration Complicated UTI and Pyelonephritis (1 to 17 years of age) 10-20 mg/kg (maximum 750 mg per dose) Every 12 hours 10 - 21 days Inhalational Anthrax (Post-Exposure) 15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague 15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.1 Dosage in Adults The determination of dosage and duration for any particular patient must take into consideration the severity and nature of the infection, the susceptibility of the causative microorganism, the integrity of the patient's host-defense mechanisms, and the status of renal and hepatic function.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
       "verified": false
     },
     {
+      "strength": null,
+      "dose_type": "usual",
       "condition": "acute uncomplicated cystitis",
       "population": "adults",
       "dose": 250,
@@ -218,13 +138,15 @@
       "source": {
         "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
         "section": "dosage and administration",
-        "sentence_id": "S5",
-        "sentence": "500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Conversion of IV to Oral Dosing in Adults Patients whose therapy is started with ciprofloxacin IV may be switched to ciprofloxacin tablets or oral suspension when clinically indicated at the discretion of the physician (Table 2) [see Clinical Pharmacology (12.3) ] .",
+        "sentence_id": "S2",
+        "sentence": "Adult Dosage Guidelines Infection Dose Frequency Duration Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal 500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) 500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Adults with creatinine clearance 3050 mL/min 250500 mg q 12 h ( 2.3 ) Adults with creatinine clearance 529 mL/min 250500 mg q 18 h ( 2.3 ) Patients on hemodialysis or peritoneal dialysis 250500 mg q 24 h (after dialysis) ( 2.3 ) Pediatric Oral Dosage Guidelines Infection Dose Frequency Duration Complicated UTI and Pyelonephritis (1 to 17 years of age) 10-20 mg/kg (maximum 750 mg per dose) Every 12 hours 10 - 21 days Inhalational Anthrax (Post-Exposure) 15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague 15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.1 Dosage in Adults The determination of dosage and duration for any particular patient must take into consideration the severity and nature of the infection, the susceptibility of the causative microorganism, the integrity of the patient's host-defense mechanisms, and the status of renal and hepatic function.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
       "verified": false
     },
     {
+      "strength": null,
+      "dose_type": "usual",
       "condition": "acute sinusitis",
       "population": "adults",
       "dose": 500,
@@ -238,15 +160,17 @@
       "source": {
         "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
         "section": "dosage and administration",
-        "sentence_id": "S5",
-        "sentence": "500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Conversion of IV to Oral Dosing in Adults Patients whose therapy is started with ciprofloxacin IV may be switched to ciprofloxacin tablets or oral suspension when clinically indicated at the discretion of the physician (Table 2) [see Clinical Pharmacology (12.3) ] .",
+        "sentence_id": "S2",
+        "sentence": "Adult Dosage Guidelines Infection Dose Frequency Duration Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal 500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) 500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Adults with creatinine clearance 3050 mL/min 250500 mg q 12 h ( 2.3 ) Adults with creatinine clearance 529 mL/min 250500 mg q 18 h ( 2.3 ) Patients on hemodialysis or peritoneal dialysis 250500 mg q 24 h (after dialysis) ( 2.3 ) Pediatric Oral Dosage Guidelines Infection Dose Frequency Duration Complicated UTI and Pyelonephritis (1 to 17 years of age) 10-20 mg/kg (maximum 750 mg per dose) Every 12 hours 10 - 21 days Inhalational Anthrax (Post-Exposure) 15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague 15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.1 Dosage in Adults The determination of dosage and duration for any particular patient must take into consideration the severity and nature of the infection, the susceptibility of the causative microorganism, the integrity of the patient's host-defense mechanisms, and the status of renal and hepatic function.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
       "verified": false
     },
     {
+      "strength": null,
+      "dose_type": "adjusted",
       "condition": "general",
-      "population": "renal impairment (creatinine clearance 30-50 mL/min)",
+      "population": "renal impairment",
       "dose": 250,
       "dose_max": 500,
       "unit": "mg",
@@ -258,15 +182,17 @@
       "source": {
         "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
         "section": "dosage and administration",
-        "sentence_id": "S13",
+        "sentence_id": "S16",
         "sentence": "Table 4: Recommended Starting and Maintenance Doses for Adult Patients with Impaired Renal Function Creatinine Clearance (mL/min) Dose >50 See Usual Dosage 30 -50 250 – 500 mg every 12 hours 5 - 29 250 – 500 mg every 18 hours Patients on hemodialysis or Peritoneal dialysis 250 – 500 mg every 24 hours (after dialysis) When only the serum creatinine concentration is known, the following formulas may be used to estimate creatinine clearance: Men - Creatinine clearance (mL/min) = Weight (kg) x (140-age) 72 x serum creatinine (mg/dL) Women - 0.85 x the value calculated for men.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
       "verified": false
     },
     {
+      "strength": null,
+      "dose_type": "adjusted",
       "condition": "general",
-      "population": "renal impairment (creatinine clearance 5-29 mL/min)",
+      "population": "renal impairment",
       "dose": 250,
       "dose_max": 500,
       "unit": "mg",
@@ -278,15 +204,17 @@
       "source": {
         "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
         "section": "dosage and administration",
-        "sentence_id": "S13",
+        "sentence_id": "S16",
         "sentence": "Table 4: Recommended Starting and Maintenance Doses for Adult Patients with Impaired Renal Function Creatinine Clearance (mL/min) Dose >50 See Usual Dosage 30 -50 250 – 500 mg every 12 hours 5 - 29 250 – 500 mg every 18 hours Patients on hemodialysis or Peritoneal dialysis 250 – 500 mg every 24 hours (after dialysis) When only the serum creatinine concentration is known, the following formulas may be used to estimate creatinine clearance: Men - Creatinine clearance (mL/min) = Weight (kg) x (140-age) 72 x serum creatinine (mg/dL) Women - 0.85 x the value calculated for men.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
       "verified": false
     },
     {
+      "strength": null,
+      "dose_type": "adjusted",
       "condition": "general",
-      "population": "patients on hemodialysis or peritoneal dialysis",
+      "population": "hemodialysis or peritoneal dialysis",
       "dose": 250,
       "dose_max": 500,
       "unit": "mg",
@@ -298,8 +226,30 @@
       "source": {
         "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
         "section": "dosage and administration",
-        "sentence_id": "S13",
+        "sentence_id": "S16",
         "sentence": "Table 4: Recommended Starting and Maintenance Doses for Adult Patients with Impaired Renal Function Creatinine Clearance (mL/min) Dose >50 See Usual Dosage 30 -50 250 – 500 mg every 12 hours 5 - 29 250 – 500 mg every 18 hours Patients on hemodialysis or Peritoneal dialysis 250 – 500 mg every 24 hours (after dialysis) When only the serum creatinine concentration is known, the following formulas may be used to estimate creatinine clearance: Men - Creatinine clearance (mL/min) = Weight (kg) x (140-age) 72 x serum creatinine (mg/dL) Women - 0.85 x the value calculated for men.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
+      },
+      "verified": false
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "complicated urinary tract infection or pyelonephritis",
+      "population": "children",
+      "dose": 10,
+      "dose_max": 20,
+      "unit": "mg/kg",
+      "every_hours": null,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
+        "section": "dosage and administration",
+        "sentence_id": "S9",
+        "sentence": "Table 3: Pediatric Oral Dosage Guidelines Infection Dose Frequency Total Duration Complicated Urinary Tract or Pyelonephritis (patients from 1 to 17 years of age) 10 mg/kg to 20 mg/kg (maximum 750 mg per dose;",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
       "verified": false
@@ -310,12 +260,15 @@
       "kind": "per_dose",
       "amount": 750,
       "unit": "mg",
+      "ingredient": null,
+      "strength": null,
       "population": "children",
+      "condition": "complicated UTI and pyelonephritis (ages 1 to 17)",
       "provenance": "quoted",
       "source": {
         "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
         "section": "dosage and administration",
-        "sentence_id": "S7",
+        "sentence_id": "S9",
         "sentence": "Table 3: Pediatric Oral Dosage Guidelines Infection Dose Frequency Total Duration Complicated Urinary Tract or Pyelonephritis (patients from 1 to 17 years of age) 10 mg/kg to 20 mg/kg (maximum 750 mg per dose;",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
@@ -325,13 +278,52 @@
       "kind": "per_dose",
       "amount": 500,
       "unit": "mg",
+      "ingredient": null,
+      "strength": null,
       "population": "children",
+      "condition": "inhalational anthrax (post-exposure)",
       "provenance": "quoted",
       "source": {
         "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
         "section": "dosage and administration",
-        "sentence_id": "S11",
+        "sentence_id": "S13",
         "sentence": "15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague Begin drug administration as soon as possible after suspected or confirmed exposure to Y.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
+      },
+      "verified": false
+    },
+    {
+      "kind": "per_dose",
+      "amount": 500,
+      "unit": "mg",
+      "ingredient": null,
+      "strength": null,
+      "population": "children",
+      "condition": "plague",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
+        "section": "dosage and administration",
+        "sentence_id": "S14",
+        "sentence": "15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.3 Dosage Modifications in Patients with Renal Impairment Ciprofloxacin is eliminated primarily by renal excretion;",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
+      },
+      "verified": false
+    },
+    {
+      "kind": "per_dose",
+      "amount": 750,
+      "unit": "mg",
+      "ingredient": null,
+      "strength": null,
+      "population": "adults",
+      "condition": "severe infections with severe renal impairment",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
+        "section": "dosage and administration",
+        "sentence_id": "S18",
+        "sentence": "In patients with severe infections and severe renal impairment, a unit dose of 750 mg may be administered at the intervals noted above.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
       "verified": false
@@ -339,37 +331,39 @@
   ],
   "administration": [
     {
-      "id": "ciprofloxacin-min-interval-12h",
-      "family": "min_interval",
-      "hours": 12,
-      "provenance": "quoted",
-      "note": "Standard adult dosing is every 12 hours; other renal-adjusted intervals (q18h, q24h) are not included here. | DRAFT: proposed by a language model.",
-      "source": {
-        "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa",
-        "section": "dosage and administration",
-        "sentence": "Adult Dosage Guidelines Infection Dose Frequency Duration Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal 500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) 500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Adults with creatinine clearance 3050 mL/min 250500 mg q 12 h ( 2.3 ) Adults with creatinine clearance 529 mL/min 250500 mg q 18 h ( 2.3 ) Patients on hemodialysis or peritoneal dialysis 250500 mg q 24 h (after dialysis) ( 2.3 ) Pediatric Oral Dosage Guidelines Infection Dose Frequency Duration Complicated UTI and Pyelonephritis (1 to 17 years of age) 10-20 mg/kg (maximum 750 mg per dose) Every 12 hours 10 - 21 days Inhalational Anthrax (Post-Exposure) 15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague 15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.1 Dosage in Adults The determination of dosage and duration for any particular patient must take into consideration the severity and nature of the infection, the susceptibility of the causative microorganism, the integrity of the patient's host-defense mechanisms, and the status of renal and hepatic function."
-      },
-      "verified": false
-    },
-    {
-      "id": "ciprofloxacin-polyvalent-cation-separation",
+      "id": "cipro-separation-polyvalent-cations",
       "family": "separation",
       "target": "group:polyvalent_cations",
       "before": 2,
       "after": 6,
       "provenance": "quoted",
-      "note": "Take ciprofloxacin at least 2 hours before or 6 hours after multivalent cation-containing drugs. S14 also states the same windows for magnesium/aluminum antacids, and S14 allows taking ciprofloxacin with a meal containing these products. | DRAFT: proposed by a language model.",
+      "note": "Ciprofloxacin tablets should be taken at least 2 hours before or 6 hours after multivalent cation-containing products; may be taken with a meal containing these products (S22). | DRAFT: proposed by a language model.",
       "source": {
         "spl_set_id": "0c355077-7361-41d0-9e82-eb31beaf5daa",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa",
-        "section": "drug interactions",
-        "sentence": "Take ciprofloxacin 2 hours before or 6 hours after administration of multivalent cation containing drugs ( 7 )"
+        "section": "dosage and administration",
+        "sentence": "2.4 Important Administration Instructions With Multivalent Cations Administer ciprofloxacin tablets at least 2 hours before or 6 hours after magnesium/aluminum antacids;"
       },
       "verified": false
     }
   ],
   "memberships": [
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "aluminum",
+      "provenance": "quoted",
+      "basis": "2.4 Important Administration Instructions With Multivalent Cations Administer ciprofloxacin tablets at least 2 hours before or 6 hours after magnesium/aluminum antacids;",
+      "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
+      "verified": false
+    },
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "magnesium",
+      "provenance": "quoted",
+      "basis": "2.4 Important Administration Instructions With Multivalent Cations Administer ciprofloxacin tablets at least 2 hours before or 6 hours after magnesium/aluminum antacids;",
+      "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
+      "verified": false
+    },
     {
       "group": "polyvalent_cations",
       "ingredient": "calcium_carbonate",
@@ -394,31 +388,27 @@
       "basis": "or products containing calcium, iron, or zinc and dairy products) Ciprofloxacin should be taken at least two hours before or six hours after Multivalent cation-containing products administration [see Dosage and Administration (2.4)] Decrease ciprofloxacin absorption, resulting in lower serum and urine levels Probenecid Use with caution (interferes with renal tubular secretion of ciprofloxacin and increases ciprofloxacin serum levels) Potentiation of ciprofloxacin toxicity may occur.",
       "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
       "verified": false
-    },
-    {
-      "group": "polyvalent_cations",
-      "ingredient": "magnesium",
-      "provenance": "quoted",
-      "basis": "2.4 Important Administration Instructions With Multivalent Cations Administer ciprofloxacin tablets at least 2 hours before or 6 hours after magnesium/aluminum antacids;",
-      "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
-      "verified": false
-    },
-    {
-      "group": "polyvalent_cations",
-      "ingredient": "aluminum",
-      "provenance": "quoted",
-      "basis": "2.4 Important Administration Instructions With Multivalent Cations Administer ciprofloxacin tablets at least 2 hours before or 6 hours after magnesium/aluminum antacids;",
-      "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
-      "verified": false
     }
   ],
-  "rejected": [],
+  "rejected": [
+    {
+      "item": {
+        "id": "cipro-min-interval-12h",
+        "family": "min_interval",
+        "hours": 12,
+        "sentence": "S2",
+        "provenance": "quoted",
+        "note": "Standard adult dosing is every 12 hours for most indications; renal-adjusted regimens use longer intervals (S16)."
+      },
+      "reason": "S2 gives 'every 12 hours' as a regimen, not a minimum gap or an as-needed limit; the prescription sets the regimen"
+    }
+  ],
   "unaccounted_for": [
     {
       "priority": 1,
       "kind": "possible_timing_rule",
       "note": "",
-      "sentence_id": "S16",
+      "sentence_id": "S23",
       "section": "dosage and administration",
       "sentence": "Missed Doses If a dose is missed, it should be taken anytime but not later than 6 hours prior to the next scheduled dose."
     },
@@ -426,15 +416,39 @@
       "priority": 1,
       "kind": "possible_timing_rule",
       "note": "",
-      "sentence_id": "S17",
+      "sentence_id": "S24",
       "section": "dosage and administration",
       "sentence": "If less than 6 hours remain before the next dose, the missed dose should not be taken and treatment should be continued as prescribed with the next scheduled dose."
+    },
+    {
+      "priority": 1,
+      "kind": "possible_timing_rule",
+      "note": "",
+      "sentence_id": "S32",
+      "section": "drug interactions",
+      "sentence": "Take ciprofloxacin 2 hours before or 6 hours after administration of multivalent cation containing drugs ( 7 )"
     },
     {
       "priority": 2,
       "kind": "review",
       "note": "",
-      "sentence_id": "S8",
+      "sentence_id": "S4",
+      "section": "dosage and administration",
+      "sentence": "Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal Used in conjunction with metronidazole."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S6",
+      "section": "dosage and administration",
+      "sentence": "500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Conversion of IV to Oral Dosing in Adults Patients whose therapy is started with ciprofloxacin IV may be switched to ciprofloxacin tablets or oral suspension when clinically indicated at the discretion of the physician (Table 2) [see Clinical Pharmacology (12.3) ] ."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S10",
       "section": "dosage and administration",
       "sentence": "not to be exceeded even in patients weighing more than 51 kg)."
     },
@@ -442,7 +456,7 @@
       "priority": 2,
       "kind": "review",
       "note": "",
-      "sentence_id": "S9",
+      "sentence_id": "S11",
       "section": "dosage and administration",
       "sentence": "Every 12 hours 10 - 21 days The total duration of therapy for cUTI and pyelonephritis in the clinical trial was determined by the physician."
     },
@@ -450,7 +464,7 @@
       "priority": 2,
       "kind": "review",
       "note": "",
-      "sentence_id": "S26",
+      "sentence_id": "S33",
       "section": "warnings and cautions",
       "sentence": "5 WARNINGS AND PRECAUTIONS Hypersensitivity and other serious reactions: Serious and sometimes fatal reactions (for example, anaphylactic reactions) may occur after the first or subsequent doses of ciprofloxacin tablets."
     },
@@ -458,7 +472,7 @@
       "priority": 2,
       "kind": "review",
       "note": "",
-      "sentence_id": "S31",
+      "sentence_id": "S38",
       "section": "warnings and cautions",
       "sentence": "Symptoms may occur soon after initiation of ciprofloxacin tablets and may be irreversible in some patients [see Warnings and Precautions ( 5.1 ) and Adverse Reactions ( 6.1 , 6.2 )] ."
     },
@@ -466,7 +480,7 @@
       "priority": 2,
       "kind": "review",
       "note": "",
-      "sentence_id": "S32",
+      "sentence_id": "S39",
       "section": "warnings and cautions",
       "sentence": "Careful medical history is necessary since CDAD has been reported to occur over two months after the administration of antibacterial agents."
     },
@@ -474,7 +488,7 @@
       "priority": 3,
       "kind": "monitoring",
       "note": "",
-      "sentence_id": "S21",
+      "sentence_id": "S28",
       "section": "drug interactions",
       "sentence": "Ropinirole Use with caution Monitoring for ropinirole-related adverse reactions and appropriate dose adjustment of ropinirole is recommended during and shortly after co-administration with ciprofloxacin [see Warnings and Precautions (5.16) ]."
     },
@@ -482,23 +496,15 @@
       "priority": 3,
       "kind": "monitoring",
       "note": "",
-      "sentence_id": "S37",
+      "sentence_id": "S44",
       "section": "warnings and cautions",
       "sentence": "Perform follow-up serologic test for syphilis three months after ciprofloxacin treatment."
-    },
-    {
-      "priority": 5,
-      "kind": "weight_based",
-      "note": "",
-      "sentence_id": "S12",
-      "section": "dosage and administration",
-      "sentence": "15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.3 Dosage Modifications in Patients with Renal Impairment Ciprofloxacin is eliminated primarily by renal excretion;"
     },
     {
       "priority": 7,
       "kind": "background",
       "note": "",
-      "sentence_id": "S2",
+      "sentence_id": "S3",
       "section": "dosage and administration",
       "sentence": "Table1: Adult Dosage Guidelines Infection Dose Frequency Usual Duration Generally ciprofloxacin should be continued for at least 2 days after the signs and symptoms of infection have disappeared, except for inhalational anthrax (post-exposure)."
     },
@@ -506,7 +512,15 @@
       "priority": 7,
       "kind": "background",
       "note": "",
-      "sentence_id": "S6",
+      "sentence_id": "S5",
+      "section": "dosage and administration",
+      "sentence": "500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) Begin drug administration as soon as possible after suspected or confirmed exposure."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S7",
       "section": "dosage and administration",
       "sentence": "Table 2: Equivalent AUC Dosing Regimens Ciprofloxacin Oral Dosage Equivalent Ciprofloxacin IV Dosage 250 mg Tablet every 12 hours 200 mg intravenous every 12 hours 500 mg Tablet every 12 hours 400 mg intravenous every 12 hours 750 mg Tablet every 12 hours 400 mg intravenous every 8 hours 2.2 Dosage in Pediatric Patients Dosing and initial route of therapy (that is, IV or oral) for cUTI or pyelonephritis should be determined by the severity of the infection."
     },
@@ -514,7 +528,7 @@
       "priority": 7,
       "kind": "background",
       "note": "",
-      "sentence_id": "S23",
+      "sentence_id": "S30",
       "section": "drug interactions",
       "sentence": "Duloxetine Avoid Use Five-fold increase in duloxetine exposure If unavoidable, monitor for duloxetine toxicity Caffeine/Xanthine Derivatives Use with caution Reduced clearance resulting in elevated levels and prolongation of serum half-life Ciprofloxacin inhibits the formation of paraxanthine after caffeine administration (or pentoxifylline containing products)."
     },
@@ -522,7 +536,7 @@
       "priority": 7,
       "kind": "background",
       "note": "",
-      "sentence_id": "S36",
+      "sentence_id": "S43",
       "section": "warnings and cautions",
       "sentence": "5.14 Photosensitivity/Phototoxicity Moderate to severe photosensitivity/phototoxicity reactions, the latter of which may manifest as exaggerated sunburn reactions (for example, burning, erythema, exudation, vesicles, blistering, edema) involving areas exposed to light (typically the face, \"V\" area of the neck, extensor surfaces of the forearms, dorsa of the hands), can be associated with the use of quinolones including ciprofloxacin after sun or UV light exposure."
     }
@@ -531,187 +545,262 @@
     {
       "sentence_id": "S1",
       "section": "dosage and administration",
-      "text": "Adult Dosage Guidelines Infection Dose Frequency Duration Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal 500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) 500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Adults with creatinine clearance 3050 mL/min 250500 mg q 12 h ( 2.3 ) Adults with creatinine clearance 529 mL/min 250500 mg q 18 h ( 2.3 ) Patients on hemodialysis or peritoneal dialysis 250500 mg q 24 h (after dialysis) ( 2.3 ) Pediatric Oral Dosage Guidelines Infection Dose Frequency Duration Complicated UTI and Pyelonephritis (1 to 17 years of age) 10-20 mg/kg (maximum 750 mg per dose) Every 12 hours 10 - 21 days Inhalational Anthrax (Post-Exposure) 15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague 15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.1 Dosage in Adults The determination of dosage and duration for any particular patient must take into consideration the severity and nature of the infection, the susceptibility of the causative microorganism, the integrity of the patient's host-defense mechanisms, and the status of renal and hepatic function."
+      "text": "2 DOSAGE AND ADMINISTRATION Ciprofloxacin tablets should be administered orally as described in the appropriate Dosage Guidelines tables."
     },
     {
       "sentence_id": "S2",
       "section": "dosage and administration",
-      "text": "Table1: Adult Dosage Guidelines Infection Dose Frequency Usual Duration Generally ciprofloxacin should be continued for at least 2 days after the signs and symptoms of infection have disappeared, except for inhalational anthrax (post-exposure)."
+      "text": "Adult Dosage Guidelines Infection Dose Frequency Duration Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal 500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) 500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Adults with creatinine clearance 3050 mL/min 250500 mg q 12 h ( 2.3 ) Adults with creatinine clearance 529 mL/min 250500 mg q 18 h ( 2.3 ) Patients on hemodialysis or peritoneal dialysis 250500 mg q 24 h (after dialysis) ( 2.3 ) Pediatric Oral Dosage Guidelines Infection Dose Frequency Duration Complicated UTI and Pyelonephritis (1 to 17 years of age) 10-20 mg/kg (maximum 750 mg per dose) Every 12 hours 10 - 21 days Inhalational Anthrax (Post-Exposure) 15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague 15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.1 Dosage in Adults The determination of dosage and duration for any particular patient must take into consideration the severity and nature of the infection, the susceptibility of the causative microorganism, the integrity of the patient's host-defense mechanisms, and the status of renal and hepatic function."
     },
     {
       "sentence_id": "S3",
       "section": "dosage and administration",
-      "text": "Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal Used in conjunction with metronidazole."
+      "text": "Table1: Adult Dosage Guidelines Infection Dose Frequency Usual Duration Generally ciprofloxacin should be continued for at least 2 days after the signs and symptoms of infection have disappeared, except for inhalational anthrax (post-exposure)."
     },
     {
       "sentence_id": "S4",
       "section": "dosage and administration",
-      "text": "500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) Begin drug administration as soon as possible after suspected or confirmed exposure."
+      "text": "Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal Used in conjunction with metronidazole."
     },
     {
       "sentence_id": "S5",
       "section": "dosage and administration",
-      "text": "500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Conversion of IV to Oral Dosing in Adults Patients whose therapy is started with ciprofloxacin IV may be switched to ciprofloxacin tablets or oral suspension when clinically indicated at the discretion of the physician (Table 2) [see Clinical Pharmacology (12.3) ] ."
+      "text": "500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) Begin drug administration as soon as possible after suspected or confirmed exposure."
     },
     {
       "sentence_id": "S6",
       "section": "dosage and administration",
-      "text": "Table 2: Equivalent AUC Dosing Regimens Ciprofloxacin Oral Dosage Equivalent Ciprofloxacin IV Dosage 250 mg Tablet every 12 hours 200 mg intravenous every 12 hours 500 mg Tablet every 12 hours 400 mg intravenous every 12 hours 750 mg Tablet every 12 hours 400 mg intravenous every 8 hours 2.2 Dosage in Pediatric Patients Dosing and initial route of therapy (that is, IV or oral) for cUTI or pyelonephritis should be determined by the severity of the infection."
+      "text": "500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Conversion of IV to Oral Dosing in Adults Patients whose therapy is started with ciprofloxacin IV may be switched to ciprofloxacin tablets or oral suspension when clinically indicated at the discretion of the physician (Table 2) [see Clinical Pharmacology (12.3) ] ."
     },
     {
       "sentence_id": "S7",
       "section": "dosage and administration",
-      "text": "Table 3: Pediatric Oral Dosage Guidelines Infection Dose Frequency Total Duration Complicated Urinary Tract or Pyelonephritis (patients from 1 to 17 years of age) 10 mg/kg to 20 mg/kg (maximum 750 mg per dose;"
+      "text": "Table 2: Equivalent AUC Dosing Regimens Ciprofloxacin Oral Dosage Equivalent Ciprofloxacin IV Dosage 250 mg Tablet every 12 hours 200 mg intravenous every 12 hours 500 mg Tablet every 12 hours 400 mg intravenous every 12 hours 750 mg Tablet every 12 hours 400 mg intravenous every 8 hours 2.2 Dosage in Pediatric Patients Dosing and initial route of therapy (that is, IV or oral) for cUTI or pyelonephritis should be determined by the severity of the infection."
     },
     {
       "sentence_id": "S8",
       "section": "dosage and administration",
-      "text": "not to be exceeded even in patients weighing more than 51 kg)."
+      "text": "Ciprofloxacin should be administered as described in Table 3."
     },
     {
       "sentence_id": "S9",
       "section": "dosage and administration",
-      "text": "Every 12 hours 10 - 21 days The total duration of therapy for cUTI and pyelonephritis in the clinical trial was determined by the physician."
+      "text": "Table 3: Pediatric Oral Dosage Guidelines Infection Dose Frequency Total Duration Complicated Urinary Tract or Pyelonephritis (patients from 1 to 17 years of age) 10 mg/kg to 20 mg/kg (maximum 750 mg per dose;"
     },
     {
       "sentence_id": "S10",
       "section": "dosage and administration",
-      "text": "Inhalational Anthrax (Post- Exposure) Begin drug administration as soon as possible after suspected or confirmed exposure."
+      "text": "not to be exceeded even in patients weighing more than 51 kg)."
     },
     {
       "sentence_id": "S11",
       "section": "dosage and administration",
-      "text": "15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague Begin drug administration as soon as possible after suspected or confirmed exposure to Y."
+      "text": "Every 12 hours 10 - 21 days The total duration of therapy for cUTI and pyelonephritis in the clinical trial was determined by the physician."
     },
     {
       "sentence_id": "S12",
       "section": "dosage and administration",
-      "text": "15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.3 Dosage Modifications in Patients with Renal Impairment Ciprofloxacin is eliminated primarily by renal excretion;"
+      "text": "Inhalational Anthrax (Post- Exposure) Begin drug administration as soon as possible after suspected or confirmed exposure."
     },
     {
       "sentence_id": "S13",
       "section": "dosage and administration",
-      "text": "Table 4: Recommended Starting and Maintenance Doses for Adult Patients with Impaired Renal Function Creatinine Clearance (mL/min) Dose >50 See Usual Dosage 30 -50 250 – 500 mg every 12 hours 5 - 29 250 – 500 mg every 18 hours Patients on hemodialysis or Peritoneal dialysis 250 – 500 mg every 24 hours (after dialysis) When only the serum creatinine concentration is known, the following formulas may be used to estimate creatinine clearance: Men - Creatinine clearance (mL/min) = Weight (kg) x (140-age) 72 x serum creatinine (mg/dL) Women - 0.85 x the value calculated for men."
+      "text": "15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague Begin drug administration as soon as possible after suspected or confirmed exposure to Y."
     },
     {
       "sentence_id": "S14",
       "section": "dosage and administration",
-      "text": "2.4 Important Administration Instructions With Multivalent Cations Administer ciprofloxacin tablets at least 2 hours before or 6 hours after magnesium/aluminum antacids;"
+      "text": "15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.3 Dosage Modifications in Patients with Renal Impairment Ciprofloxacin is eliminated primarily by renal excretion;"
     },
     {
       "sentence_id": "S15",
       "section": "dosage and administration",
-      "text": "however, ciprofloxacin tablets may be taken with a meal that contains these products."
+      "text": "Dosage guidelines for use in patients with renal impairment are shown in Table 4."
     },
     {
       "sentence_id": "S16",
       "section": "dosage and administration",
-      "text": "Missed Doses If a dose is missed, it should be taken anytime but not later than 6 hours prior to the next scheduled dose."
+      "text": "Table 4: Recommended Starting and Maintenance Doses for Adult Patients with Impaired Renal Function Creatinine Clearance (mL/min) Dose >50 See Usual Dosage 30 -50 250 – 500 mg every 12 hours 5 - 29 250 – 500 mg every 18 hours Patients on hemodialysis or Peritoneal dialysis 250 – 500 mg every 24 hours (after dialysis) When only the serum creatinine concentration is known, the following formulas may be used to estimate creatinine clearance: Men - Creatinine clearance (mL/min) = Weight (kg) x (140-age) 72 x serum creatinine (mg/dL) Women - 0.85 x the value calculated for men."
     },
     {
       "sentence_id": "S17",
       "section": "dosage and administration",
-      "text": "If less than 6 hours remain before the next dose, the missed dose should not be taken and treatment should be continued as prescribed with the next scheduled dose."
+      "text": "The serum creatinine should represent a steady state of renal function."
     },
     {
       "sentence_id": "S18",
-      "section": "drug interactions",
-      "text": "Drugs Known to Prolong QT Interval Avoid Use Ciprofloxacin may further prolong the QT interval in patients receiving drugs known to prolong the QT interval (for example, class IA or III antiarrhythmics, tricyclic antidepressants, macrolides, antipsychotics) [ see Warnings and Precautions (5.12) and Use in Specific Populations (8.5) ]."
+      "section": "dosage and administration",
+      "text": "In patients with severe infections and severe renal impairment, a unit dose of 750 mg may be administered at the intervals noted above."
     },
     {
       "sentence_id": "S19",
-      "section": "drug interactions",
-      "text": "Phenytoin Use with caution Altered serum levels of phenytoin (increased and decreased) To avoid the loss of seizure control associated with decreased phenytoin levels and to prevent phenytoin overdose-related adverse reactions upon ciprofloxacin discontinuation in patients receiving both agents, monitor phenytoin therapy, including phenytoin serum concentration during and shortly after co-administration of ciprofloxacin with phenytoin."
+      "section": "dosage and administration",
+      "text": "Pediatric patients with moderate to severe renal insufficiency were excluded from the clinical trial of cUTI and pyelonephritis."
     },
     {
       "sentence_id": "S20",
-      "section": "drug interactions",
-      "text": "Monitor prothrombin time and INR frequently during and shortly after co-administration of ciprofloxacin with an oral anti-coagulant (for example, warfarin)."
+      "section": "dosage and administration",
+      "text": "No information is available on dosing adjustments necessary for pediatric patients with moderate to severe renal insufficiency (that is, creatinine clearance of < 50 mL/min/1.73m 2 )."
     },
     {
       "sentence_id": "S21",
-      "section": "drug interactions",
-      "text": "Ropinirole Use with caution Monitoring for ropinirole-related adverse reactions and appropriate dose adjustment of ropinirole is recommended during and shortly after co-administration with ciprofloxacin [see Warnings and Precautions (5.16) ]."
+      "section": "dosage and administration",
+      "text": "2.4 Important Administration Instructions With Multivalent Cations Administer ciprofloxacin tablets at least 2 hours before or 6 hours after magnesium/aluminum antacids;"
     },
     {
       "sentence_id": "S22",
-      "section": "drug interactions",
-      "text": "Clozapine Use with caution Careful monitoring of clozapine associated adverse reactions and appropriate adjustment of clozapine dosage during and shortly after co-administration with ciprofloxacin are advised."
+      "section": "dosage and administration",
+      "text": "however, ciprofloxacin tablets may be taken with a meal that contains these products."
     },
     {
       "sentence_id": "S23",
-      "section": "drug interactions",
-      "text": "Duloxetine Avoid Use Five-fold increase in duloxetine exposure If unavoidable, monitor for duloxetine toxicity Caffeine/Xanthine Derivatives Use with caution Reduced clearance resulting in elevated levels and prolongation of serum half-life Ciprofloxacin inhibits the formation of paraxanthine after caffeine administration (or pentoxifylline containing products)."
+      "section": "dosage and administration",
+      "text": "Missed Doses If a dose is missed, it should be taken anytime but not later than 6 hours prior to the next scheduled dose."
     },
     {
       "sentence_id": "S24",
-      "section": "drug interactions",
-      "text": "or products containing calcium, iron, or zinc and dairy products) Ciprofloxacin should be taken at least two hours before or six hours after Multivalent cation-containing products administration [see Dosage and Administration (2.4)] Decrease ciprofloxacin absorption, resulting in lower serum and urine levels Probenecid Use with caution (interferes with renal tubular secretion of ciprofloxacin and increases ciprofloxacin serum levels) Potentiation of ciprofloxacin toxicity may occur."
+      "section": "dosage and administration",
+      "text": "If less than 6 hours remain before the next dose, the missed dose should not be taken and treatment should be continued as prescribed with the next scheduled dose."
     },
     {
       "sentence_id": "S25",
       "section": "drug interactions",
-      "text": "Take ciprofloxacin 2 hours before or 6 hours after administration of multivalent cation containing drugs ( 7 )"
+      "text": "Drugs Known to Prolong QT Interval Avoid Use Ciprofloxacin may further prolong the QT interval in patients receiving drugs known to prolong the QT interval (for example, class IA or III antiarrhythmics, tricyclic antidepressants, macrolides, antipsychotics) [ see Warnings and Precautions (5.12) and Use in Specific Populations (8.5) ]."
     },
     {
       "sentence_id": "S26",
-      "section": "warnings and cautions",
-      "text": "5 WARNINGS AND PRECAUTIONS Hypersensitivity and other serious reactions: Serious and sometimes fatal reactions (for example, anaphylactic reactions) may occur after the first or subsequent doses of ciprofloxacin tablets."
+      "section": "drug interactions",
+      "text": "Phenytoin Use with caution Altered serum levels of phenytoin (increased and decreased) To avoid the loss of seizure control associated with decreased phenytoin levels and to prevent phenytoin overdose-related adverse reactions upon ciprofloxacin discontinuation in patients receiving both agents, monitor phenytoin therapy, including phenytoin serum concentration during and shortly after co-administration of ciprofloxacin with phenytoin."
     },
     {
       "sentence_id": "S27",
-      "section": "warnings and cautions",
-      "text": "( 5.11 ) QT Prolongation: Prolongation of the QT interval and isolated cases of torsade de pointes have been reported."
+      "section": "drug interactions",
+      "text": "Monitor prothrombin time and INR frequently during and shortly after co-administration of ciprofloxacin with an oral anti-coagulant (for example, warfarin)."
     },
     {
       "sentence_id": "S28",
-      "section": "warnings and cautions",
-      "text": "Avoid use in patients with known prolongation, those with hypokalemia, and with other drugs that prolong the QT interval."
+      "section": "drug interactions",
+      "text": "Ropinirole Use with caution Monitoring for ropinirole-related adverse reactions and appropriate dose adjustment of ropinirole is recommended during and shortly after co-administration with ciprofloxacin [see Warnings and Precautions (5.16) ]."
     },
     {
       "sentence_id": "S29",
-      "section": "warnings and cautions",
-      "text": "These reactions can occur within hours to weeks after starting ciprofloxacin tablets."
+      "section": "drug interactions",
+      "text": "Clozapine Use with caution Careful monitoring of clozapine associated adverse reactions and appropriate adjustment of clozapine dosage during and shortly after co-administration with ciprofloxacin are advised."
     },
     {
       "sentence_id": "S30",
-      "section": "warnings and cautions",
-      "text": "Tendinitis or tendon rupture can occur, within hours or days of starting ciprofloxacin tablets, or as long as several months after completion of fluoroquinolone therapy."
+      "section": "drug interactions",
+      "text": "Duloxetine Avoid Use Five-fold increase in duloxetine exposure If unavoidable, monitor for duloxetine toxicity Caffeine/Xanthine Derivatives Use with caution Reduced clearance resulting in elevated levels and prolongation of serum half-life Ciprofloxacin inhibits the formation of paraxanthine after caffeine administration (or pentoxifylline containing products)."
     },
     {
       "sentence_id": "S31",
-      "section": "warnings and cautions",
-      "text": "Symptoms may occur soon after initiation of ciprofloxacin tablets and may be irreversible in some patients [see Warnings and Precautions ( 5.1 ) and Adverse Reactions ( 6.1 , 6.2 )] ."
+      "section": "drug interactions",
+      "text": "or products containing calcium, iron, or zinc and dairy products) Ciprofloxacin should be taken at least two hours before or six hours after Multivalent cation-containing products administration [see Dosage and Administration (2.4)] Decrease ciprofloxacin absorption, resulting in lower serum and urine levels Probenecid Use with caution (interferes with renal tubular secretion of ciprofloxacin and increases ciprofloxacin serum levels) Potentiation of ciprofloxacin toxicity may occur."
     },
     {
       "sentence_id": "S32",
-      "section": "warnings and cautions",
-      "text": "Careful medical history is necessary since CDAD has been reported to occur over two months after the administration of antibacterial agents."
+      "section": "drug interactions",
+      "text": "Take ciprofloxacin 2 hours before or 6 hours after administration of multivalent cation containing drugs ( 7 )"
     },
     {
       "sentence_id": "S33",
       "section": "warnings and cautions",
-      "text": "5.12 Prolongation of the QT Interval Some fluoroquinolones, including ciprofloxacin, have been associated with prolongation of the QT interval on the electrocardiogram and cases of arrhythmia."
+      "text": "5 WARNINGS AND PRECAUTIONS Hypersensitivity and other serious reactions: Serious and sometimes fatal reactions (for example, anaphylactic reactions) may occur after the first or subsequent doses of ciprofloxacin tablets."
     },
     {
       "sentence_id": "S34",
       "section": "warnings and cautions",
-      "text": "Avoid ciprofloxacin in patients with known prolongation of the QT interval, risk factors for QT prolongation or torsade de pointes (for example, congenital long QT syndrome, uncorrected electrolyte imbalance, such as hypokalemia or hypomagnesemia and cardiac disease, such as heart failure, myocardial infarction, or bradycardia), and patients receiving Class IA antiarrhythmic agents (quinidine, procainamide), or Class III antiarrhythmic agents (amiodarone, sotalol), tricyclic antidepressants, macrolides, and antipsychotics."
+      "text": "( 5.11 ) QT Prolongation: Prolongation of the QT interval and isolated cases of torsade de pointes have been reported."
     },
     {
       "sentence_id": "S35",
       "section": "warnings and cautions",
-      "text": "Elderly patients may also be more susceptible to drug-associated effects on the QT interval [see Adverse Reactions (6.2) , Use in Specific Populations (8.5) ]."
+      "text": "Avoid use in patients with known prolongation, those with hypokalemia, and with other drugs that prolong the QT interval."
     },
     {
       "sentence_id": "S36",
       "section": "warnings and cautions",
-      "text": "5.14 Photosensitivity/Phototoxicity Moderate to severe photosensitivity/phototoxicity reactions, the latter of which may manifest as exaggerated sunburn reactions (for example, burning, erythema, exudation, vesicles, blistering, edema) involving areas exposed to light (typically the face, \"V\" area of the neck, extensor surfaces of the forearms, dorsa of the hands), can be associated with the use of quinolones including ciprofloxacin after sun or UV light exposure."
+      "text": "These reactions can occur within hours to weeks after starting ciprofloxacin tablets."
     },
     {
       "sentence_id": "S37",
       "section": "warnings and cautions",
+      "text": "Tendinitis or tendon rupture can occur, within hours or days of starting ciprofloxacin tablets, or as long as several months after completion of fluoroquinolone therapy."
+    },
+    {
+      "sentence_id": "S38",
+      "section": "warnings and cautions",
+      "text": "Symptoms may occur soon after initiation of ciprofloxacin tablets and may be irreversible in some patients [see Warnings and Precautions ( 5.1 ) and Adverse Reactions ( 6.1 , 6.2 )] ."
+    },
+    {
+      "sentence_id": "S39",
+      "section": "warnings and cautions",
+      "text": "Careful medical history is necessary since CDAD has been reported to occur over two months after the administration of antibacterial agents."
+    },
+    {
+      "sentence_id": "S40",
+      "section": "warnings and cautions",
+      "text": "5.12 Prolongation of the QT Interval Some fluoroquinolones, including ciprofloxacin, have been associated with prolongation of the QT interval on the electrocardiogram and cases of arrhythmia."
+    },
+    {
+      "sentence_id": "S41",
+      "section": "warnings and cautions",
+      "text": "Avoid ciprofloxacin in patients with known prolongation of the QT interval, risk factors for QT prolongation or torsade de pointes (for example, congenital long QT syndrome, uncorrected electrolyte imbalance, such as hypokalemia or hypomagnesemia and cardiac disease, such as heart failure, myocardial infarction, or bradycardia), and patients receiving Class IA antiarrhythmic agents (quinidine, procainamide), or Class III antiarrhythmic agents (amiodarone, sotalol), tricyclic antidepressants, macrolides, and antipsychotics."
+    },
+    {
+      "sentence_id": "S42",
+      "section": "warnings and cautions",
+      "text": "Elderly patients may also be more susceptible to drug-associated effects on the QT interval [see Adverse Reactions (6.2) , Use in Specific Populations (8.5) ]."
+    },
+    {
+      "sentence_id": "S43",
+      "section": "warnings and cautions",
+      "text": "5.14 Photosensitivity/Phototoxicity Moderate to severe photosensitivity/phototoxicity reactions, the latter of which may manifest as exaggerated sunburn reactions (for example, burning, erythema, exudation, vesicles, blistering, edema) involving areas exposed to light (typically the face, \"V\" area of the neck, extensor surfaces of the forearms, dorsa of the hands), can be associated with the use of quinolones including ciprofloxacin after sun or UV light exposure."
+    },
+    {
+      "sentence_id": "S44",
+      "section": "warnings and cautions",
       "text": "Perform follow-up serologic test for syphilis three months after ciprofloxacin treatment."
+    },
+    {
+      "sentence_id": "S45",
+      "section": "how supplied",
+      "text": "16 HOW SUPPLIED/STORAGE AND HANDLING Ciprofloxacin tablets USP 250 mg are available as white colored, biconvex, circular, film coated tablets, debossed 'P' on one side and '250' on the other side containing ciprofloxacin hydrochloride, USP equivalent to 250 mg of ciprofloxacin."
+    },
+    {
+      "sentence_id": "S46",
+      "section": "how supplied",
+      "text": "Ciprofloxacin tablets USP 500 mg are available as white colored, biconvex, capsule shaped, film coated tablets, debossed 'P' on one side and '500' on the other side containing ciprofloxacin hydrochloride, USP equivalent to 500 mg of ciprofloxacin."
+    },
+    {
+      "sentence_id": "S47",
+      "section": "how supplied",
+      "text": "Ciprofloxacin tablets USP 750 mg are available as white colored, biconvex, capsule shaped, film coated tablets, debossed 'P' on one side and '750' on the other side containing ciprofloxacin hydrochloride, USP equivalent to 750 mg of ciprofloxacin."
+    },
+    {
+      "sentence_id": "S48",
+      "section": "how supplied",
+      "text": "Ciprofloxacin tablets USP 250 mg, 500 mg and 750 mg are available in bottles of 100."
+    },
+    {
+      "sentence_id": "S49",
+      "section": "how supplied",
+      "text": "Strength NDC Code Tablet Identification Bottles of 100: 250 mg 500 mg 750 mg NDC 85293-002-01 NDC 85293-003-01 NDC 85293-004-01 P 250 P 500 P 750 Store at 20° to 25°C (68° to 77° F);"
+    },
+    {
+      "sentence_id": "S50",
+      "section": "description",
+      "text": "It is a faintly yellowish to light yellow crystalline substance with a molecular weight of 385.8."
+    },
+    {
+      "sentence_id": "S51",
+      "section": "description",
+      "text": "Its empirical formula is C 17 H 18 FN 3 O 3 •HCl •H 2 O and its chemical structure is as follows: Ciprofloxacin film-coated tablets USP are available in 250 mg, 500 mg and 750 mg (ciprofloxacin equivalent) strengths."
+    },
+    {
+      "sentence_id": "S52",
+      "section": "description",
+      "text": "Each ciprofloxacin film-coated tablet contains 250 mg (equivalent to 291 mg ciprofloxacin hydrochloride monohydrate), 500 mg of ciprofloxacin (equivalent to 582 mg ciprofloxacin hydrochloride monohydrate) or 750 mg of ciprofloxacin (equivalent to 873 mg ciprofloxacin hydrochloride monohydrate)."
     }
   ],
   "passes_run": [

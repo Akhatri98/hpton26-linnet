@@ -84,7 +84,10 @@ def _canonical(enc: Encoding) -> None:
 
 
 def _notes(built: Built) -> list[str]:
-    out = list(built.skipped)
+    out = []
+    if built.rejected:  # first and loudest: the result rests on facts a reviewer said are wrong
+        out.append("REJECTED BY REVIEWER, still used here, so this result is not reliable: " + ", ".join(built.rejected))
+    out += list(built.skipped)
     if built.unverified:
         out.append(f"{len(built.unverified)} library item(s) not yet verified by a human: "
                    + ", ".join(built.unverified))

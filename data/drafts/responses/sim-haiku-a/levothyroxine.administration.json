@@ -1,8 +1,1 @@
-{
-  "rules": [
-    {"id": "levothyroxine-separation-interfering-drugs", "family": "separation", "target": "*", "before": 4, "after": 4, "sentence": "S6", "provenance": "quoted", "note": "applies to drugs known to interfere with absorption, a narrower set than all drugs"},
-    {"id": "levothyroxine-breakfast-window", "family": "food", "mode": "before_meal_window", "meal": "breakfast", "earliest": 1, "latest": 0.5, "sentence": "S1", "provenance": "interpreted", "loosest": {"earliest": 1, "latest": 0}, "note": "one-half to one hour before breakfast, empty stomach, preferably"},
-    {"id": "levothyroxine-min-interval-24h", "family": "min_interval", "hours": 24, "sentence": "S5", "provenance": "interpreted", "loosest": {"hours": 24}, "note": "single daily dose"}
-  ],
-  "memberships": []
-}
+{"rules": [{"id": "levothyroxine-interfering-drugs-4h", "family": "separation", "target": "*", "before": 4, "after": 4, "sentence": "S6", "provenance": "quoted", "note": "label gives no named drugs in these sentences; '*' used for drugs known to interfere with absorption"}, {"id": "levothyroxine-breakfast-window", "family": "food", "mode": "before_meal_window", "meal": "breakfast", "earliest": 1, "latest": 0.5, "sentence": "S34", "provenance": "quoted"}, {"id": "levothyroxine-once-daily", "family": "min_interval", "hours": 24, "sentence": "S34", "provenance": "interpreted", "loosest": {"hours": 24}, "note": "single daily dose implies 24 hours between doses"}], "memberships": []}

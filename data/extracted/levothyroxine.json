@@ -3,13 +3,32 @@
   "spl_set_id": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
   "model": "claude-haiku-5-5",
   "label_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7",
+  "strengths": [
+    "25 mcg",
+    "50 mcg",
+    "75 mcg",
+    "88 mcg",
+    "100 mcg",
+    "112 mcg",
+    "125 mcg",
+    "137 mcg",
+    "150 mcg",
+    "175 mcg",
+    "200 mcg",
+    "300 mcg"
+  ],
+  "substances": [
+    "levothyroxine sodium"
+  ],
   "dosing": [
     {
-      "condition": "hypothyroidism in pregnancy with pre-existing primary hypothyroidism",
-      "population": "pregnant patients",
-      "dose": 12.5,
-      "dose_max": 25,
-      "unit": "mcg",
+      "strength": null,
+      "dose_type": "starting",
+      "condition": "hypothyroidism",
+      "population": "adults",
+      "dose": 1.6,
+      "dose_max": null,
+      "unit": "mcg/kg",
       "every_hours": null,
       "times_per_day": null,
       "duration_days": null,
@@ -18,18 +37,20 @@
       "source": {
         "spl_set_id": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
         "section": "dosage and administration",
-        "sentence_id": "S19",
-        "sentence": "Levothyroxine Sodium Tablet Dosing Guidelines for Hypothyroidism in Pregnant Patients Patient Population Starting Dosage Dose Adjustment and Titration Pre-existing primary hypothyroidism with serum TSH above normal trimester- specific range Pre-pregnancy dosage may increase during pregnancy Increase levothyroxine sodium dosage by 12.5 to 25 mcg per day.",
+        "sentence_id": "S14",
+        "sentence": "Patient Population Starting Dosage Dosage Titration Based on serum TSH or Free-T4 Adults diagnosed with hypothyroidism Full replacement dose is 1.6 mcg/kg/day.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7"
       },
       "verified": false
     },
     {
-      "condition": "new onset hypothyroidism with TSH at or above 10 mIU/L",
-      "population": "pregnant patients",
+      "strength": null,
+      "dose_type": "starting",
+      "condition": "hypothyroidism",
+      "population": "adults at risk for atrial fibrillation or with underlying cardiac disease",
       "dose": 1.6,
       "dose_max": null,
-      "unit": "mcg",
+      "unit": "mcg/kg",
       "every_hours": null,
       "times_per_day": null,
       "duration_days": null,
@@ -38,7 +59,51 @@
       "source": {
         "spl_set_id": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
         "section": "dosage and administration",
-        "sentence_id": "S22",
+        "sentence_id": "S17",
+        "sentence": "Adults at risk for atrial fibrillation or with underlying cardiac disease Lower starting dose (less than 1.6 mcg/kg/day) Titrate dosage every 6 to 8 weeks, as needed until the patient is euthyroid.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7"
+      },
+      "verified": false
+    },
+    {
+      "strength": null,
+      "dose_type": "starting",
+      "condition": "hypothyroidism",
+      "population": "geriatric",
+      "dose": 1.6,
+      "dose_max": null,
+      "unit": "mcg/kg",
+      "every_hours": null,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
+        "section": "dosage and administration",
+        "sentence_id": "S18",
+        "sentence": "Geriatric patients Lower starting dose (less than 1.6 mcg/kg/day) Primary, Secondary, and Tertiary Hypothyroidism in Pediatric Patients The recommended starting daily dosage of levothyroxine sodium tablets in pediatric patients with primary, secondary, or tertiary hypothyroidism is based on body weight and changes with age as described in Table 2.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7"
+      },
+      "verified": false
+    },
+    {
+      "strength": null,
+      "dose_type": "starting",
+      "condition": "new onset hypothyroidism with TSH 10 mIU/L or more during pregnancy",
+      "population": "pregnant patients",
+      "dose": 1.6,
+      "dose_max": null,
+      "unit": "mcg/kg",
+      "every_hours": null,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
+        "section": "dosage and administration",
+        "sentence_id": "S27",
         "sentence": "New onset hypothyroidism (TSH ≥10 mIU per liter) 1.6 mcg/kg/day Monitor serum TSH every 4 weeks and adjust levothyroxine sodium dosage until serum TSH is within normal trimester-specific range.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7"
       },
@@ -48,45 +113,18 @@
   "limits": [
     {
       "kind": "per_day",
-      "amount": 1.6,
+      "amount": 200,
       "unit": "mcg",
+      "ingredient": null,
+      "strength": null,
       "population": "adults",
+      "condition": null,
       "provenance": "quoted",
       "source": {
         "spl_set_id": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
         "section": "dosage and administration",
-        "sentence_id": "S13",
-        "sentence": "Adults at risk for atrial fibrillation or with underlying cardiac disease Lower starting dose (less than 1.6 mcg/kg/day) Titrate dosage every 6 to 8 weeks, as needed until the patient is euthyroid.",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7"
-      },
-      "verified": false
-    },
-    {
-      "kind": "per_day",
-      "amount": 1.6,
-      "unit": "mcg",
-      "population": "geriatric",
-      "provenance": "quoted",
-      "source": {
-        "spl_set_id": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
-        "section": "dosage and administration",
-        "sentence_id": "S14",
-        "sentence": "Geriatric patients Lower starting dose (less than 1.6 mcg/kg/day) Primary, Secondary, and Tertiary Hypothyroidism in Pediatric Patients The recommended starting daily dosage of levothyroxine sodium tablets in pediatric patients with primary, secondary, or tertiary hypothyroidism is based on body weight and changes with age as described in Table 2.",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7"
-      },
-      "verified": false
-    },
-    {
-      "kind": "per_day",
-      "amount": 25,
-      "unit": "mcg",
-      "population": "pregnant",
-      "provenance": "quoted",
-      "source": {
-        "spl_set_id": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
-        "section": "dosage and administration",
-        "sentence_id": "S19",
-        "sentence": "Levothyroxine Sodium Tablet Dosing Guidelines for Hypothyroidism in Pregnant Patients Patient Population Starting Dosage Dose Adjustment and Titration Pre-existing primary hypothyroidism with serum TSH above normal trimester- specific range Pre-pregnancy dosage may increase during pregnancy Increase levothyroxine sodium dosage by 12.5 to 25 mcg per day.",
+        "sentence_id": "S12",
+        "sentence": "Levothyroxine Sodium Tablets Dosing Guidelines for Hypothyroidism in Adults* *Dosages greater than 200 mcg/day are seldom required.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7"
       },
       "verified": false
@@ -94,23 +132,39 @@
   ],
   "administration": [
     {
-      "id": "levothyroxine-breakfast-window",
+      "id": "levothyroxine-empty-stomach-breakfast",
       "family": "food",
       "mode": "before_meal_window",
       "meal": "breakfast",
       "earliest": 1,
       "latest": 0.5,
-      "provenance": "interpreted",
-      "loosest": {
-        "earliest": 1,
-        "latest": 0.5
-      },
-      "note": "Administer one-half to one hour before breakfast with a full glass of water. | DRAFT: proposed by a language model.",
+      "provenance": "quoted",
+      "note": "Take one-half to one hour before breakfast with a full glass of water. | DRAFT: proposed by a language model.",
       "source": {
         "spl_set_id": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7",
         "section": "dosage and administration",
         "sentence": "(2.4) 2.1 Important Administration Instructions Administer levothyroxine sodium tablets as a single daily dose, on an empty stomach, one-half to one hour before breakfast with a full glass of water to avoid choking or gagging [see Adverse Reactions (6) ]."
+      },
+      "verified": false
+    },
+    {
+      "id": "levothyroxine-food-interaction-1h",
+      "family": "food",
+      "mode": "empty_stomach",
+      "before_meal": 1,
+      "after_meal": 1,
+      "provenance": "interpreted",
+      "loosest": {
+        "before_meal": 0.5,
+        "after_meal": 0.5
+      },
+      "note": "Evaluate dose adjustment when regularly dosed within one hour of certain foods that may affect absorption. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7",
+        "section": "dosage and administration",
+        "sentence": "(2.1) Evaluate the need for dose adjustments when regularly administering within one hour of certain foods that may affect absorption."
       },
       "verified": false
     }
@@ -119,27 +173,30 @@
   "rejected": [
     {
       "item": {
-        "id": "levothyroxine-separation-interfering-drugs",
+        "id": "levothyroxine-once-daily-24h",
+        "family": "min_interval",
+        "hours": 24,
+        "sentence": "S5",
+        "provenance": "interpreted",
+        "loosest": {
+          "hours": 24
+        },
+        "note": "Label directs a single daily dose; interpreted as doses at least 24 hours apart."
+      },
+      "reason": "number(s) not stated in S5: hours=24"
+    },
+    {
+      "item": {
+        "id": "levothyroxine-interacting-drugs-4h",
         "family": "separation",
         "target": "*",
         "before": 4,
         "after": 4,
         "sentence": "S6",
         "provenance": "quoted",
-        "note": "At least 4 hours before or after drugs known to interfere with absorption."
+        "note": "Separate from drugs known to interfere with levothyroxine absorption by at least 4 hours before or after."
       },
       "reason": "target '*' (every other drug) but S6 does not refer to other drugs in general; use a specific ingredient or group"
-    },
-    {
-      "item": {
-        "id": "levothyroxine-biotin-hold",
-        "family": "min_interval",
-        "hours": 48,
-        "sentence": "S4",
-        "provenance": "quoted",
-        "note": "Stop biotin at least 2 days (48 hours) before assessing TSH and/or T4 levels; not a dosing interval, relates to lab testing."
-      },
-      "reason": "number(s) not stated in S4: hours=48"
     }
   ],
   "unaccounted_for": [
@@ -163,14 +220,6 @@
       "priority": 1,
       "kind": "possible_timing_rule",
       "note": "",
-      "sentence_id": "S3",
-      "section": "dosage and administration",
-      "sentence": "(2.1) Evaluate the need for dose adjustments when regularly administering within one hour of certain foods that may affect absorption."
-    },
-    {
-      "priority": 1,
-      "kind": "possible_timing_rule",
-      "note": "",
       "sentence_id": "S6",
       "section": "dosage and administration",
       "sentence": "Administer levothyroxine sodium tablets at least 4 hours before or after drugs known to interfere with levothyroxine sodium absorption [see Drug Interactions (7.1) ]."
@@ -187,7 +236,7 @@
       "priority": 1,
       "kind": "possible_timing_rule",
       "note": "",
-      "sentence_id": "S30",
+      "sentence_id": "S36",
       "section": "drug interactions",
       "sentence": "Administer levothyroxine sodium tablets at least 4 hours apart from these agents."
     },
@@ -195,7 +244,7 @@
       "priority": 1,
       "kind": "possible_timing_rule",
       "note": "",
-      "sentence_id": "S31",
+      "sentence_id": "S37",
       "section": "drug interactions",
       "sentence": "Administer levothyroxine sodium tablets at least 4 hours prior to these drugs or monitor TSH levels."
     },
@@ -203,7 +252,7 @@
       "priority": 2,
       "kind": "review",
       "note": "",
-      "sentence_id": "S11",
+      "sentence_id": "S13",
       "section": "dosage and administration",
       "sentence": "An inadequate response to daily dosages greater than 300 mcg/day is rare and may indicate poor compliance, malabsorption, drug interactions, or a combination of these factors [see Dosage and Administration (2.1) and Drug Interactions (7) ]."
     },
@@ -211,7 +260,7 @@
       "priority": 2,
       "kind": "review",
       "note": "",
-      "sentence_id": "S29",
+      "sentence_id": "S35",
       "section": "dosage and administration",
       "sentence": "Primary, Secondary, and Tertiary Hypothyroidism in Adults The recommended starting daily dosage of levothyroxine sodium tablets in adults with primary, secondary, or tertiary hypothyroidism is based on age and comorbid cardiac conditions, as described in Table 1."
     },
@@ -219,7 +268,31 @@
       "priority": 2,
       "kind": "review",
       "note": "",
-      "sentence_id": "S32",
+      "sentence_id": "S39",
+      "section": "drug interactions",
+      "sentence": "Salicylates (> 2 g/day) Salicylates inhibit binding of T4 and T3 to TBG and transthyretin."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S43",
+      "section": "drug interactions",
+      "sentence": "Drug or Drug Class Effect Beta-adrenergic antagonists (e.g., Propranolol > 160 mg/day) In patients treated with large doses of propranolol (> 160 mg/day), T3 and T4 levels change, TSH levels remain normal, and patients are clinically euthyroid."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S45",
+      "section": "drug interactions",
+      "sentence": "Glucocorticoids (e.g., Dexamethasone ≥ 4 mg/day) Short-term administration of large doses of glucocorticoids may decrease serum T3 concentrations by 30% with minimal change in serum T4 levels."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S46",
       "section": "drug interactions",
       "sentence": "7.9 Drug-Food Interactions Consumption of certain foods may affect levothyroxine sodium absorption thereby necessitating adjustments in dosing [see Dosage and Administration (2.1) ] ."
     },
@@ -227,7 +300,7 @@
       "priority": 2,
       "kind": "review",
       "note": "",
-      "sentence_id": "S37",
+      "sentence_id": "S51",
       "section": "warnings and cautions",
       "sentence": "Consider the potential for food or drug interactions and adjust the administration or dosage of levothyroxine sodium tablets as needed [see Dosage and Administration (2.1) , Drug Interactions (7.1) , and Clinical Pharmacology (12.3) ]."
     },
@@ -235,7 +308,7 @@
       "priority": 2,
       "kind": "review",
       "note": "",
-      "sentence_id": "S42",
+      "sentence_id": "S56",
       "section": "boxed warning",
       "sentence": "Doses beyond the range of daily hormonal requirements may produce serious or even life-threatening manifestations of toxicity (6 , 10) ."
     },
@@ -251,7 +324,7 @@
       "priority": 3,
       "kind": "monitoring",
       "note": "",
-      "sentence_id": "S9",
+      "sentence_id": "S10",
       "section": "dosage and administration",
       "sentence": "If so, advise them to stop biotin supplementation at least 2 days before assessing TSH and/or T4 levels [see Dosage and Administration (2.4) and Drug Interactions (7.10) ]."
     },
@@ -259,7 +332,7 @@
       "priority": 3,
       "kind": "monitoring",
       "note": "",
-      "sentence_id": "S10",
+      "sentence_id": "S11",
       "section": "dosage and administration",
       "sentence": "2.3 Recommended Dosage and Titration Primary, Secondary, and Tertiary Hypothyroidism in Adults The recommended starting daily dosage of levothyroxine sodium tablets in adults with primary, secondary, or tertiary hypothyroidism is based on age and comorbid cardiac conditions, as described in Table 1."
     },
@@ -267,7 +340,7 @@
       "priority": 3,
       "kind": "monitoring",
       "note": "",
-      "sentence_id": "S12",
+      "sentence_id": "S16",
       "section": "dosage and administration",
       "sentence": "Titrate dosage by 12.5 to 25 mcg increments every 4 to 6 weeks, as needed until the patient is euthyroid."
     },
@@ -275,7 +348,7 @@
       "priority": 3,
       "kind": "monitoring",
       "note": "",
-      "sentence_id": "S15",
+      "sentence_id": "S19",
       "section": "dosage and administration",
       "sentence": "Titrate the dosage (every 2 weeks) as needed based on serum TSH or free-T4 until the patient is euthyroid [see Dosage and Administration (2.2) ]."
     },
@@ -285,13 +358,21 @@
       "note": "",
       "sentence_id": "S23",
       "section": "dosage and administration",
+      "sentence": "Levothyroxine Sodium Tablet Dosing Guidelines for Hypothyroidism in Pregnant Patients Patient Population Starting Dosage Dose Adjustment and Titration Pre-existing primary hypothyroidism with serum TSH above normal trimester- specific range Pre-pregnancy dosage may increase during pregnancy Increase levothyroxine sodium dosage by 12.5 to 25 mcg per day."
+    },
+    {
+      "priority": 3,
+      "kind": "monitoring",
+      "note": "",
+      "sentence_id": "S29",
+      "section": "dosage and administration",
       "sentence": "Stop biotin and biotin-containing supplements for at least 2 days before assessing TSH and/or T4 levels [see Drug Interactions (7.10) ] ."
     },
     {
       "priority": 3,
       "kind": "monitoring",
       "note": "",
-      "sentence_id": "S24",
+      "sentence_id": "S30",
       "section": "dosage and administration",
       "sentence": "Adults In adult patients with primary hypothyroidism, monitor serum TSH levels after an interval of 6 to 8 weeks after any change in dosage."
     },
@@ -299,7 +380,7 @@
       "priority": 3,
       "kind": "monitoring",
       "note": "",
-      "sentence_id": "S25",
+      "sentence_id": "S31",
       "section": "dosage and administration",
       "sentence": "In patients on a stable and appropriate replacement dosage, evaluate clinical and biochemical response every 6 to 12 months and whenever there is a change in the patient’s clinical status."
     },
@@ -307,7 +388,7 @@
       "priority": 3,
       "kind": "monitoring",
       "note": "",
-      "sentence_id": "S26",
+      "sentence_id": "S32",
       "section": "dosage and administration",
       "sentence": "Monitor TSH and total or free-T4 in pediatric patients as follows: 2 and 4 weeks after the initiation of treatment, 2 weeks after any change in dosage, and then every 3 to 12 months thereafter following dosage stabilization until growth is completed."
     },
@@ -315,7 +396,7 @@
       "priority": 3,
       "kind": "monitoring",
       "note": "",
-      "sentence_id": "S34",
+      "sentence_id": "S48",
       "section": "drug interactions",
       "sentence": "Stop biotin and biotin-containing supplements for at least 2 days prior to thyroid testing."
     },
@@ -323,7 +404,7 @@
       "priority": 3,
       "kind": "monitoring",
       "note": "",
-      "sentence_id": "S40",
+      "sentence_id": "S54",
       "section": "warnings and cautions",
       "sentence": "Carefully monitor glycemic control after starting, changing, or discontinuing levothyroxine sodium [see Drug Interactions (7.2) ] ."
     },
@@ -331,7 +412,7 @@
       "priority": 4,
       "kind": "population",
       "note": "",
-      "sentence_id": "S8",
+      "sentence_id": "S9",
       "section": "dosage and administration",
       "sentence": "2.2 Important Considerations for Dosing The dosage of levothyroxine sodium tablets for hypothyroidism or pituitary TSH suppression depends on a variety of factors including: the patient's age, body weight, cardiovascular status, concomitant medical conditions (including pregnancy), concomitant medications, co-administered food and the specific nature of the condition being treated [see Dosage and Administration (2.3) , Warnings and Precautions (5) , and Drug Interactions (7) ] ."
     },
@@ -339,7 +420,7 @@
       "priority": 4,
       "kind": "population",
       "note": "",
-      "sentence_id": "S17",
+      "sentence_id": "S21",
       "section": "dosage and administration",
       "sentence": "Pediatric Patients from Birth to 3 Months of Age at Risk for Cardiac Failure Start at a lower starting dosage and increase the dosage every 4 to 6 weeks as needed based on clinical and laboratory response."
     },
@@ -347,7 +428,7 @@
       "priority": 4,
       "kind": "population",
       "note": "",
-      "sentence_id": "S18",
+      "sentence_id": "S22",
       "section": "dosage and administration",
       "sentence": "The recommended daily dosage of levothyroxine sodium tablets in pregnant patients is described in Table 3."
     },
@@ -355,15 +436,23 @@
       "priority": 5,
       "kind": "weight_based",
       "note": "",
-      "sentence_id": "S16",
+      "sentence_id": "S20",
       "section": "dosage and administration",
       "sentence": "Levothyroxine Sodium Tablets Dosing Guidelines for Hypothyroidism in Pediatric Patients Age Starting Daily Dosage Per Kg Body Weight* 0 to 3 months 10 to 15 mcg/kg/day 3 to 6 months 8 to 10 mcg/kg/day 6 to 12 months 6 to 8 mcg/kg/day 1 to 5 years 5 to 6 mcg/kg/day 6 to 12 years 4 to 5 mcg/kg/day Greater than 12 years but growth and puberty incomplete 2 to 3 mcg/kg/day Growth and puberty complete 1.6 mcg/kg/day *Adjust dosage based on clinical response and laboratory parameters [see Dosage and Administration (2.4) and Use in Specific Populations (8.4) ] ."
     },
     {
+      "priority": 5,
+      "kind": "weight_based",
+      "note": "",
+      "sentence_id": "S28",
+      "section": "dosage and administration",
+      "sentence": "New onset hypothyroidism (TSH < 10 mIU per liter) 1.0 mcg/kg/day TSH Suppression in Well-differentiated Thyroid Cancer in Adult and Pediatric Patients The levothyroxine sodium dosage is based on the target level of TSH suppression for the stage and clinical status of thyroid cancer."
+    },
+    {
       "priority": 6,
       "kind": "restates",
-      "note": "repeats S22",
-      "sentence_id": "S20",
+      "note": "repeats S27",
+      "sentence_id": "S24",
       "section": "dosage and administration",
       "sentence": "Monitor TSH every 4 weeks until a stable dose is reached and serum TSH is within normal trimester-specific range."
     },
@@ -371,7 +460,7 @@
       "priority": 6,
       "kind": "restates",
       "note": "repeats S5",
-      "sentence_id": "S28",
+      "sentence_id": "S34",
       "section": "dosage and administration",
       "sentence": "2.1 Important Administration Instructions Administer levothyroxine sodium tablets as a single daily dose, on an empty stomach, one-half to one hour before breakfast with a full glass of water to avoid choking or gagging [see Adverse Reactions (6) ]."
     }
@@ -415,177 +504,262 @@
     {
       "sentence_id": "S8",
       "section": "dosage and administration",
-      "text": "2.2 Important Considerations for Dosing The dosage of levothyroxine sodium tablets for hypothyroidism or pituitary TSH suppression depends on a variety of factors including: the patient's age, body weight, cardiovascular status, concomitant medical conditions (including pregnancy), concomitant medications, co-administered food and the specific nature of the condition being treated [see Dosage and Administration (2.3) , Warnings and Precautions (5) , and Drug Interactions (7) ] ."
+      "text": "Administer levothyroxine sodium tablets to pediatric patients who cannot swallow intact tablets by crushing the tablet, suspending the freshly crushed tablet in a small amount (5 to 10 mL) of water and immediately administering the suspension by spoon or dropper."
     },
     {
       "sentence_id": "S9",
       "section": "dosage and administration",
-      "text": "If so, advise them to stop biotin supplementation at least 2 days before assessing TSH and/or T4 levels [see Dosage and Administration (2.4) and Drug Interactions (7.10) ]."
+      "text": "2.2 Important Considerations for Dosing The dosage of levothyroxine sodium tablets for hypothyroidism or pituitary TSH suppression depends on a variety of factors including: the patient's age, body weight, cardiovascular status, concomitant medical conditions (including pregnancy), concomitant medications, co-administered food and the specific nature of the condition being treated [see Dosage and Administration (2.3) , Warnings and Precautions (5) , and Drug Interactions (7) ] ."
     },
     {
       "sentence_id": "S10",
       "section": "dosage and administration",
-      "text": "2.3 Recommended Dosage and Titration Primary, Secondary, and Tertiary Hypothyroidism in Adults The recommended starting daily dosage of levothyroxine sodium tablets in adults with primary, secondary, or tertiary hypothyroidism is based on age and comorbid cardiac conditions, as described in Table 1."
+      "text": "If so, advise them to stop biotin supplementation at least 2 days before assessing TSH and/or T4 levels [see Dosage and Administration (2.4) and Drug Interactions (7.10) ]."
     },
     {
       "sentence_id": "S11",
       "section": "dosage and administration",
-      "text": "An inadequate response to daily dosages greater than 300 mcg/day is rare and may indicate poor compliance, malabsorption, drug interactions, or a combination of these factors [see Dosage and Administration (2.1) and Drug Interactions (7) ]."
+      "text": "2.3 Recommended Dosage and Titration Primary, Secondary, and Tertiary Hypothyroidism in Adults The recommended starting daily dosage of levothyroxine sodium tablets in adults with primary, secondary, or tertiary hypothyroidism is based on age and comorbid cardiac conditions, as described in Table 1."
     },
     {
       "sentence_id": "S12",
       "section": "dosage and administration",
-      "text": "Titrate dosage by 12.5 to 25 mcg increments every 4 to 6 weeks, as needed until the patient is euthyroid."
+      "text": "Levothyroxine Sodium Tablets Dosing Guidelines for Hypothyroidism in Adults* *Dosages greater than 200 mcg/day are seldom required."
     },
     {
       "sentence_id": "S13",
       "section": "dosage and administration",
-      "text": "Adults at risk for atrial fibrillation or with underlying cardiac disease Lower starting dose (less than 1.6 mcg/kg/day) Titrate dosage every 6 to 8 weeks, as needed until the patient is euthyroid."
+      "text": "An inadequate response to daily dosages greater than 300 mcg/day is rare and may indicate poor compliance, malabsorption, drug interactions, or a combination of these factors [see Dosage and Administration (2.1) and Drug Interactions (7) ]."
     },
     {
       "sentence_id": "S14",
       "section": "dosage and administration",
-      "text": "Geriatric patients Lower starting dose (less than 1.6 mcg/kg/day) Primary, Secondary, and Tertiary Hypothyroidism in Pediatric Patients The recommended starting daily dosage of levothyroxine sodium tablets in pediatric patients with primary, secondary, or tertiary hypothyroidism is based on body weight and changes with age as described in Table 2."
+      "text": "Patient Population Starting Dosage Dosage Titration Based on serum TSH or Free-T4 Adults diagnosed with hypothyroidism Full replacement dose is 1.6 mcg/kg/day."
     },
     {
       "sentence_id": "S15",
       "section": "dosage and administration",
-      "text": "Titrate the dosage (every 2 weeks) as needed based on serum TSH or free-T4 until the patient is euthyroid [see Dosage and Administration (2.2) ]."
+      "text": "Some patients require a lower starting dose."
     },
     {
       "sentence_id": "S16",
       "section": "dosage and administration",
-      "text": "Levothyroxine Sodium Tablets Dosing Guidelines for Hypothyroidism in Pediatric Patients Age Starting Daily Dosage Per Kg Body Weight* 0 to 3 months 10 to 15 mcg/kg/day 3 to 6 months 8 to 10 mcg/kg/day 6 to 12 months 6 to 8 mcg/kg/day 1 to 5 years 5 to 6 mcg/kg/day 6 to 12 years 4 to 5 mcg/kg/day Greater than 12 years but growth and puberty incomplete 2 to 3 mcg/kg/day Growth and puberty complete 1.6 mcg/kg/day *Adjust dosage based on clinical response and laboratory parameters [see Dosage and Administration (2.4) and Use in Specific Populations (8.4) ] ."
+      "text": "Titrate dosage by 12.5 to 25 mcg increments every 4 to 6 weeks, as needed until the patient is euthyroid."
     },
     {
       "sentence_id": "S17",
       "section": "dosage and administration",
-      "text": "Pediatric Patients from Birth to 3 Months of Age at Risk for Cardiac Failure Start at a lower starting dosage and increase the dosage every 4 to 6 weeks as needed based on clinical and laboratory response."
+      "text": "Adults at risk for atrial fibrillation or with underlying cardiac disease Lower starting dose (less than 1.6 mcg/kg/day) Titrate dosage every 6 to 8 weeks, as needed until the patient is euthyroid."
     },
     {
       "sentence_id": "S18",
       "section": "dosage and administration",
-      "text": "The recommended daily dosage of levothyroxine sodium tablets in pregnant patients is described in Table 3."
+      "text": "Geriatric patients Lower starting dose (less than 1.6 mcg/kg/day) Primary, Secondary, and Tertiary Hypothyroidism in Pediatric Patients The recommended starting daily dosage of levothyroxine sodium tablets in pediatric patients with primary, secondary, or tertiary hypothyroidism is based on body weight and changes with age as described in Table 2."
     },
     {
       "sentence_id": "S19",
       "section": "dosage and administration",
-      "text": "Levothyroxine Sodium Tablet Dosing Guidelines for Hypothyroidism in Pregnant Patients Patient Population Starting Dosage Dose Adjustment and Titration Pre-existing primary hypothyroidism with serum TSH above normal trimester- specific range Pre-pregnancy dosage may increase during pregnancy Increase levothyroxine sodium dosage by 12.5 to 25 mcg per day."
+      "text": "Titrate the dosage (every 2 weeks) as needed based on serum TSH or free-T4 until the patient is euthyroid [see Dosage and Administration (2.2) ]."
     },
     {
       "sentence_id": "S20",
       "section": "dosage and administration",
-      "text": "Monitor TSH every 4 weeks until a stable dose is reached and serum TSH is within normal trimester-specific range."
+      "text": "Levothyroxine Sodium Tablets Dosing Guidelines for Hypothyroidism in Pediatric Patients Age Starting Daily Dosage Per Kg Body Weight* 0 to 3 months 10 to 15 mcg/kg/day 3 to 6 months 8 to 10 mcg/kg/day 6 to 12 months 6 to 8 mcg/kg/day 1 to 5 years 5 to 6 mcg/kg/day 6 to 12 years 4 to 5 mcg/kg/day Greater than 12 years but growth and puberty incomplete 2 to 3 mcg/kg/day Growth and puberty complete 1.6 mcg/kg/day *Adjust dosage based on clinical response and laboratory parameters [see Dosage and Administration (2.4) and Use in Specific Populations (8.4) ] ."
     },
     {
       "sentence_id": "S21",
       "section": "dosage and administration",
-      "text": "Reduce levothyroxine sodium dosage to pre-pregnancy levels immediately after delivery."
+      "text": "Pediatric Patients from Birth to 3 Months of Age at Risk for Cardiac Failure Start at a lower starting dosage and increase the dosage every 4 to 6 weeks as needed based on clinical and laboratory response."
     },
     {
       "sentence_id": "S22",
       "section": "dosage and administration",
-      "text": "New onset hypothyroidism (TSH ≥10 mIU per liter) 1.6 mcg/kg/day Monitor serum TSH every 4 weeks and adjust levothyroxine sodium dosage until serum TSH is within normal trimester-specific range."
+      "text": "The recommended daily dosage of levothyroxine sodium tablets in pregnant patients is described in Table 3."
     },
     {
       "sentence_id": "S23",
       "section": "dosage and administration",
-      "text": "Stop biotin and biotin-containing supplements for at least 2 days before assessing TSH and/or T4 levels [see Drug Interactions (7.10) ] ."
+      "text": "Levothyroxine Sodium Tablet Dosing Guidelines for Hypothyroidism in Pregnant Patients Patient Population Starting Dosage Dose Adjustment and Titration Pre-existing primary hypothyroidism with serum TSH above normal trimester- specific range Pre-pregnancy dosage may increase during pregnancy Increase levothyroxine sodium dosage by 12.5 to 25 mcg per day."
     },
     {
       "sentence_id": "S24",
       "section": "dosage and administration",
-      "text": "Adults In adult patients with primary hypothyroidism, monitor serum TSH levels after an interval of 6 to 8 weeks after any change in dosage."
+      "text": "Monitor TSH every 4 weeks until a stable dose is reached and serum TSH is within normal trimester-specific range."
     },
     {
       "sentence_id": "S25",
       "section": "dosage and administration",
-      "text": "In patients on a stable and appropriate replacement dosage, evaluate clinical and biochemical response every 6 to 12 months and whenever there is a change in the patient’s clinical status."
+      "text": "Reduce levothyroxine sodium dosage to pre-pregnancy levels immediately after delivery."
     },
     {
       "sentence_id": "S26",
       "section": "dosage and administration",
-      "text": "Monitor TSH and total or free-T4 in pediatric patients as follows: 2 and 4 weeks after the initiation of treatment, 2 weeks after any change in dosage, and then every 3 to 12 months thereafter following dosage stabilization until growth is completed."
+      "text": "Monitor serum TSH 4 to 8 weeks postpartum."
     },
     {
       "sentence_id": "S27",
       "section": "dosage and administration",
-      "text": "Assess compliance, dose of medication administered, and method of administration prior to increasing the dose of levothyroxine sodium [see Warnings and Precautions (5.1) and Use in Specific Populations (8.4) ] ."
+      "text": "New onset hypothyroidism (TSH ≥10 mIU per liter) 1.6 mcg/kg/day Monitor serum TSH every 4 weeks and adjust levothyroxine sodium dosage until serum TSH is within normal trimester-specific range."
     },
     {
       "sentence_id": "S28",
       "section": "dosage and administration",
-      "text": "2.1 Important Administration Instructions Administer levothyroxine sodium tablets as a single daily dose, on an empty stomach, one-half to one hour before breakfast with a full glass of water to avoid choking or gagging [see Adverse Reactions (6) ]."
+      "text": "New onset hypothyroidism (TSH < 10 mIU per liter) 1.0 mcg/kg/day TSH Suppression in Well-differentiated Thyroid Cancer in Adult and Pediatric Patients The levothyroxine sodium dosage is based on the target level of TSH suppression for the stage and clinical status of thyroid cancer."
     },
     {
       "sentence_id": "S29",
       "section": "dosage and administration",
-      "text": "Primary, Secondary, and Tertiary Hypothyroidism in Adults The recommended starting daily dosage of levothyroxine sodium tablets in adults with primary, secondary, or tertiary hypothyroidism is based on age and comorbid cardiac conditions, as described in Table 1."
+      "text": "Stop biotin and biotin-containing supplements for at least 2 days before assessing TSH and/or T4 levels [see Drug Interactions (7.10) ] ."
     },
     {
       "sentence_id": "S30",
+      "section": "dosage and administration",
+      "text": "Adults In adult patients with primary hypothyroidism, monitor serum TSH levels after an interval of 6 to 8 weeks after any change in dosage."
+    },
+    {
+      "sentence_id": "S31",
+      "section": "dosage and administration",
+      "text": "In patients on a stable and appropriate replacement dosage, evaluate clinical and biochemical response every 6 to 12 months and whenever there is a change in the patient’s clinical status."
+    },
+    {
+      "sentence_id": "S32",
+      "section": "dosage and administration",
+      "text": "Monitor TSH and total or free-T4 in pediatric patients as follows: 2 and 4 weeks after the initiation of treatment, 2 weeks after any change in dosage, and then every 3 to 12 months thereafter following dosage stabilization until growth is completed."
+    },
+    {
+      "sentence_id": "S33",
+      "section": "dosage and administration",
+      "text": "Assess compliance, dose of medication administered, and method of administration prior to increasing the dose of levothyroxine sodium [see Warnings and Precautions (5.1) and Use in Specific Populations (8.4) ] ."
+    },
+    {
+      "sentence_id": "S34",
+      "section": "dosage and administration",
+      "text": "2.1 Important Administration Instructions Administer levothyroxine sodium tablets as a single daily dose, on an empty stomach, one-half to one hour before breakfast with a full glass of water to avoid choking or gagging [see Adverse Reactions (6) ]."
+    },
+    {
+      "sentence_id": "S35",
+      "section": "dosage and administration",
+      "text": "Primary, Secondary, and Tertiary Hypothyroidism in Adults The recommended starting daily dosage of levothyroxine sodium tablets in adults with primary, secondary, or tertiary hypothyroidism is based on age and comorbid cardiac conditions, as described in Table 1."
+    },
+    {
+      "sentence_id": "S36",
       "section": "drug interactions",
       "text": "Administer levothyroxine sodium tablets at least 4 hours apart from these agents."
     },
     {
-      "sentence_id": "S31",
+      "sentence_id": "S37",
       "section": "drug interactions",
       "text": "Administer levothyroxine sodium tablets at least 4 hours prior to these drugs or monitor TSH levels."
     },
     {
-      "sentence_id": "S32",
+      "sentence_id": "S38",
+      "section": "drug interactions",
+      "text": "Continued administration results in a decrease in serum T4 and normal FT4 and TSH concentrations."
+    },
+    {
+      "sentence_id": "S39",
+      "section": "drug interactions",
+      "text": "Salicylates (> 2 g/day) Salicylates inhibit binding of T4 and T3 to TBG and transthyretin."
+    },
+    {
+      "sentence_id": "S40",
+      "section": "drug interactions",
+      "text": "An initial increase in serum FT4 is followed by return of FT4 to normal levels with sustained therapeutic serum salicylate concentrations, although total T4 levels may decrease by as much as 30%."
+    },
+    {
+      "sentence_id": "S41",
+      "section": "drug interactions",
+      "text": "Other drugs: Carbamazepine Furosemide (> 80 mg IV) Heparin Hydantoins Non-Steroidal Anti-inflammatory Drugs - Fenamates These drugs may cause protein-binding site displacement."
+    },
+    {
+      "sentence_id": "S42",
+      "section": "drug interactions",
+      "text": "However, serum T4 levels are usually normal but may occasionally be slightly increased."
+    },
+    {
+      "sentence_id": "S43",
+      "section": "drug interactions",
+      "text": "Drug or Drug Class Effect Beta-adrenergic antagonists (e.g., Propranolol > 160 mg/day) In patients treated with large doses of propranolol (> 160 mg/day), T3 and T4 levels change, TSH levels remain normal, and patients are clinically euthyroid."
+    },
+    {
+      "sentence_id": "S44",
+      "section": "drug interactions",
+      "text": "Actions of particular beta-adrenergic antagonists may be impaired when a hypothyroid patient is converted to the euthyroid state."
+    },
+    {
+      "sentence_id": "S45",
+      "section": "drug interactions",
+      "text": "Glucocorticoids (e.g., Dexamethasone ≥ 4 mg/day) Short-term administration of large doses of glucocorticoids may decrease serum T3 concentrations by 30% with minimal change in serum T4 levels."
+    },
+    {
+      "sentence_id": "S46",
       "section": "drug interactions",
       "text": "7.9 Drug-Food Interactions Consumption of certain foods may affect levothyroxine sodium absorption thereby necessitating adjustments in dosing [see Dosage and Administration (2.1) ] ."
     },
     {
-      "sentence_id": "S33",
+      "sentence_id": "S47",
       "section": "drug interactions",
       "text": "Soybean flour, cottonseed meal, walnuts, and dietary fiber may bind and decrease the absorption of levothyroxine sodium from the gastrointestinal tract."
     },
     {
-      "sentence_id": "S34",
+      "sentence_id": "S48",
       "section": "drug interactions",
       "text": "Stop biotin and biotin-containing supplements for at least 2 days prior to thyroid testing."
     },
     {
-      "sentence_id": "S35",
+      "sentence_id": "S49",
       "section": "warnings and cautions",
       "text": "(5.3) Acute adrenal crisis in patients with concomitant adrenal insufficiency: Treat with replacement glucocorticoids prior to initiation of levothyroxine sodium treatment."
     },
     {
-      "sentence_id": "S36",
+      "sentence_id": "S50",
       "section": "warnings and cautions",
       "text": "Carefully monitor glycemic control after starting, changing, or discontinuing thyroid hormone therapy."
     },
     {
-      "sentence_id": "S37",
+      "sentence_id": "S51",
       "section": "warnings and cautions",
       "text": "Consider the potential for food or drug interactions and adjust the administration or dosage of levothyroxine sodium tablets as needed [see Dosage and Administration (2.1) , Drug Interactions (7.1) , and Clinical Pharmacology (12.3) ]."
     },
     {
-      "sentence_id": "S38",
+      "sentence_id": "S52",
       "section": "warnings and cautions",
       "text": "Initiation of thyroid hormone therapy prior to initiating glucocorticoid therapy may precipitate an acute adrenal crisis in patients with adrenal insufficiency."
     },
     {
-      "sentence_id": "S39",
+      "sentence_id": "S53",
       "section": "warnings and cautions",
       "text": "Treat patients with adrenal insufficiency with replacement glucocorticoids prior to initiating treatment with levothyroxine sodium [see Contraindications (4) ] ."
     },
     {
-      "sentence_id": "S40",
+      "sentence_id": "S54",
       "section": "warnings and cautions",
       "text": "Carefully monitor glycemic control after starting, changing, or discontinuing levothyroxine sodium [see Drug Interactions (7.2) ] ."
     },
     {
-      "sentence_id": "S41",
+      "sentence_id": "S55",
       "section": "boxed warning",
       "text": "In euthyroid patients, doses within the range of daily hormonal requirements are ineffective for weight reduction."
     },
     {
-      "sentence_id": "S42",
+      "sentence_id": "S56",
       "section": "boxed warning",
       "text": "Doses beyond the range of daily hormonal requirements may produce serious or even life-threatening manifestations of toxicity (6 , 10) ."
+    },
+    {
+      "sentence_id": "S57",
+      "section": "how supplied",
+      "text": "16 HOW SUPPLIED/STORAGE AND HANDLING Product: 50090-6115 NDC: 50090-6115-0 30 TABLET in a BOTTLE NDC: 50090-6115-1 90 TABLET in a BOTTLE"
+    },
+    {
+      "sentence_id": "S58",
+      "section": "description",
+      "text": "Synthetic T4 is chemically identical to that produced in the human thyroid gland."
+    },
+    {
+      "sentence_id": "S59",
+      "section": "description",
+      "text": "Levothyroxine (T4) sodium has an empirical formula of C 15 H 10 I 4 N NaO 4 • H 2 O, molecular weight of 798.86 (anhydrous), and structural formula as shown: Levothyroxine sodium tablets, USP for oral administration are supplied in the following strengths: 25 mcg, 50 mcg, 75 mcg, 88 mcg, 100 mcg, 112 mcg, 125 mcg, 137 mcg, 150 mcg, 175 mcg, 200 mcg, and 300 mcg."
     }
   ],
   "passes_run": [

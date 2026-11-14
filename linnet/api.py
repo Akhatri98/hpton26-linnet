@@ -53,7 +53,9 @@ def products():
     return [{"name": p.name, "display_name": p.display_name,
              "ingredients": {k: f"{v.amount} {v.unit}" for k, v in p.ingredients.items()},
              "as_needed_max": p.otc_max_doses.count if p.otc_max_doses else None,
-             "dose_note": p.dose_note, "verified": p.verified, "url": p.url}
+             "dose_note": p.dose_note, "verified": p.verified, "url": p.url,
+             "unit_name": p.unit_name, "units_per_dose": float(p.units_per_dose),
+             "label_max_units_per_dose": float(p.label_max_units_per_dose) if p.label_max_units_per_dose is not None else None}
             for p in sorted(lib.products.values(), key=lambda p: p.display_name)]
 
 
@@ -112,21 +114,24 @@ def library():
 
 @app.get("/api/review/queue")
 def review_queue():
-    return rq.queue(DATA)
+    from library.peer import opinions
+    ops = opinions(DATA)  # a second reviewer's opinion: shown, never applied
+    return [{**c, "peer": ops.get(c["id"])} for c in rq.queue(DATA)]
 
 
 class Decision(BaseModel):
     id: str
-    decision: str  # "approved" | "rejected"
+    decision: str  # "approved" | "rejected" | "flagged"
     by: str
     role: str = ""
+    note: str = ""
 
 
 @app.post("/api/review/decide")
 def review_decide(d: Decision):
     # Written to disk (atomically) before this returns: stopping the server never loses a decision.
     try:
-        return rq.decide(DATA, d.id, d.decision, d.by, d.role)
+        return rq.decide(DATA, d.id, d.decision, d.by, d.role, d.note)
     except KeyError:
         raise HTTPException(404, [{"where": "id", "problem": f"no review item {d.id} (already decided?)"}])
     except ValueError as e:

@@ -1,0 +1,28 @@
+{
+ "limits": [
+  {
+   "kind": "per_dose",
+   "amount": 750,
+   "unit": "mg",
+   "population": "children",
+   "sentence": "S7",
+   "provenance": "quoted"
+  },
+  {
+   "kind": "per_dose",
+   "amount": 500,
+   "unit": "mg",
+   "population": "children",
+   "sentence": "S11",
+   "provenance": "quoted"
+  },
+  {
+   "kind": "per_dose",
+   "amount": 500,
+   "unit": "mg",
+   "population": "children",
+   "sentence": "S12",
+   "provenance": "quoted"
+  }
+ ]
+}

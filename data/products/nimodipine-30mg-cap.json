@@ -14,5 +14,8 @@
     }
   },
   "dose_note": "One dose = two 30 mg capsules (label: '60 mg (two 30 mg capsules)').",
-  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human."
+  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+  "unit_name": "capsule",
+  "units_per_dose": 2,
+  "label_max_units_per_dose": 2
 }

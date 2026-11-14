@@ -45,6 +45,7 @@ class PatientItem(Strict):
     prescribed_count: Optional[int] = Field(default=None, ge=1)
     reported_count: Optional[int] = Field(default=None, ge=0)
     every_hours: Optional[Fraction] = Field(default=None, gt=0)  # Rx directions, e.g. "every 12 hours"
+    units_per_dose: Optional[Fraction] = Field(default=None, gt=0)  # "take 2 tablets"; default: the product's usual
 
     @model_validator(mode="after")
     def _one_count(self):
@@ -96,9 +97,9 @@ class Patient(Strict):
         out = []
         for it in self.items:
             if it.prescribed_count is not None:
-                out.append(Item(it.product, it.prescribed_count, it.every_hours))
+                out.append(Item(it.product, it.prescribed_count, it.every_hours, it.units_per_dose))
             elif not prescribed_only:
-                out.append(Item(it.product, None))
+                out.append(Item(it.product, None, None, it.units_per_dose))
         return out
 
     def reported_counts(self) -> dict[str, int]:

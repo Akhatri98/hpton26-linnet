@@ -2,19 +2,31 @@ You are extracting LIMITS from an FDA drug label for a pharmacist's tool.
 
 Ingredient: calcium_carbonate
 Label set id: 036ef1ed-32ef-46b8-8817-b3f63a014280
+Active ingredients on this label: calcium carbonate
+Strengths this label comes in (read from the label by code): 750 mg
 
 Numbered sentences from the label:
-S1 [dosage and administration] Chew or crush tablets completely before swallowing.
-S2 [dosage and administration] • do not take for symptoms that persist for more than 2 weeks unless advised by a doctor
-S3 [warnings] Warnings Ask a doctor or pharmacist before use if you are presently taking a prescription drug.
-S4 [warnings] When using this product • do not take more than 6 tablets in 24 hours • if pregnant do not take more than 6 tablets in 24 hours • do not use the maximum dosage for more than 2 weeks, except under the advice and supervision of a doctor Keep out of reach of children.
+S1 [dosage and administration] Directions • adults and children 12 years of age and over: chew 2-4 tablets as symptoms occur, or as directed by a doctor.
+S2 [dosage and administration] Chew or crush tablets completely before swallowing.
+S3 [dosage and administration] • do not take for symptoms that persist for more than 2 weeks unless advised by a doctor
+S4 [warnings] Warnings Ask a doctor or pharmacist before use if you are presently taking a prescription drug.
+S5 [warnings] Antacids may interact with certain prescription drugs.
+S6 [warnings] When using this product • do not take more than 6 tablets in 24 hours • if pregnant do not take more than 6 tablets in 24 hours • do not use the maximum dosage for more than 2 weeks, except under the advice and supervision of a doctor Keep out of reach of children.
+S7 [active ingredient] Active ingredient (per tablet) Calcium carbonate 750 mg
 
 Return ONLY a JSON object {"limits": [ ... ]}. One row per limit the label states. Each row:
   {"kind": "per_dose" | "per_day" | "duration_days",
    "amount": N, "unit": "mg" | "g" | "mcg" | "tablets" | "caplets" | "capsules" | "doses" | "days",
+   "ingredient": "which active ingredient the amount is of (one of the list above)", or null when there is only one,
+   "strength": "the strength the limit is for, e.g. '300 mg/60 mg'", or null if it applies to all strengths,
    "population": "adults" | "children" | "pregnant" | "general" | ...,
+   "condition": "what it is for, if the limit depends on it (e.g. 'complicated UTI')", or null,
    "sentence": "Sk", "provenance": "quoted" | "interpreted"}
+Rules:
+- Starting doses, titration steps and per-kg doses are not limits.
+- On a label with more than one active ingredient, every limit in mg, mcg or g MUST name its "ingredient".
+- A limit counted in tablets, caplets or capsules on a label with more than one strength MUST name its "strength".
 Examples: "do not take more than 6 caplets in 24 hours" -> per_day, 6, caplets.
-"more than 4,000 mg of acetaminophen in 24 hours" -> per_day, 4000, mg.
+"more than 4,000 mg of acetaminophen in 24 hours" -> per_day, 4000, mg, ingredient "acetaminophen".
 "do not use for more than 10 days" -> duration_days, 10, days.
 Use only numbers stated in the cited sentence. Cite exactly one sentence id per row; do not copy text.
