@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LINNET</title>
+<style>
+:root {
+  --bg: #f4f6f8; --panel: #ffffff; --ink: #18212b; --muted: #5d6876; --line: #dfe4ea; --soft: #eef2f5;
+  --accent: #0f6e68; --accent-soft: #e2f1ef;
+  --t0: #1d7a3e; --t0-soft: #e3f3e8; --t1: #9a6300; --t1-soft: #fbf0d9; --t2: #b42318; --t2-soft: #fbe4e1;
+  --model: #6941c6; --model-soft: #efe9fb; --code: #175cd3; --code-soft: #e5eefb; --human: #1d7a3e; --human-soft: #e3f3e8;
+  --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { background: var(--bg); color: var(--ink); font: 13px/1.45 system-ui, "Segoe UI", Roboto, sans-serif; display: flex; }
+a { color: var(--accent); }
+button, input, select { font: inherit; color: inherit; }
+
+/* sidebar */
+nav { width: 216px; flex: none; background: #121a22; color: #c9d2dc; display: flex; flex-direction: column; }
+nav .brand { padding: 18px 18px 14px; border-bottom: 1px solid #22303c; }
+nav .brand b { color: #fff; font-size: 17px; letter-spacing: .12em; }
+nav .brand small { display: block; color: #8b98a6; margin-top: 2px; }
+nav .group { padding: 14px 10px 4px; }
+nav .group > span { display: block; padding: 0 8px 6px; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: #74828f; }
+nav button { display: block; width: 100%; text-align: left; background: none; border: 0; padding: 7px 10px; border-radius: 6px; cursor: pointer; color: inherit; }
+nav button.sub { padding-left: 24px; font-size: 12.5px; }
+nav button:hover { background: #1c2833; }
+nav button.on { background: #1f3a3a; color: #fff; }
+nav .who { font-size: 11px; color: #74828f; margin-left: 4px; }
+nav .foot { margin-top: auto; padding: 14px 18px; border-top: 1px solid #22303c; font-size: 11.5px; color: #8b98a6; }
+nav .foot b { color: #c9d2dc; }
+
+main { flex: 1; min-width: 0; overflow: auto; }
+header.top { position: sticky; top: 0; z-index: 2; background: var(--panel); border-bottom: 1px solid var(--line); padding: 12px 24px; display: flex; align-items: center; gap: 14px; }
+header.top h1 { font-size: 15px; margin: 0; font-weight: 600; }
+header.top .crumb { color: var(--muted); }
+header.top .spacer { flex: 1; }
+.view { padding: 18px 24px 40px; display: none; }
+.view.on { display: block; }
+
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; margin-bottom: 14px; }
+.panel > h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin: 0; padding: 10px 14px; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 8px; }
+.panel > h2 .r { margin-left: auto; text-transform: none; letter-spacing: 0; font-weight: 400; }
+.panel .body { padding: 12px 14px; }
+.grid2 { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 14px; }
+@media (max-width: 1100px) { .grid2 { grid-template-columns: 1fr; } }
+
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; font-weight: 600; font-size: 11.5px; color: var(--muted); padding: 6px 8px; border-bottom: 1px solid var(--line); background: var(--soft); white-space: nowrap; }
+td { padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+tr.click { cursor: pointer; }
+tr.click:hover td { background: #f8fafb; }
+tr.detail td { background: #fafbfc; }
+.mono { font-family: var(--mono); font-size: 12px; }
+.muted { color: var(--muted); }
+.small { font-size: 11.5px; }
+
+.btn { border: 1px solid var(--line); background: var(--panel); padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+.btn:hover { border-color: #c3ccd6; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+.btn.primary:hover { filter: brightness(1.08); }
+.btn.sm { padding: 2px 8px; font-size: 12px; }
+.btn:disabled { opacity: .55; cursor: default; }
+input[type=text], input[type=number], input[type=time], select { border: 1px solid var(--line); border-radius: 5px; padding: 4px 6px; background: #fff; }
+input[type=number] { width: 70px; }
+input:focus, select:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+
+.badge { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 11px; font-weight: 600; white-space: nowrap; border: 1px solid transparent; }
+.b-quoted { background: var(--soft); color: var(--ink); border-color: var(--line); }
+.b-interp { background: var(--t1-soft); color: var(--t1); }
+.b-ok { background: var(--human-soft); color: var(--human); }
+.b-unv { background: #fff; color: var(--t2); border-color: #f1b8b2; }
+.b-model { background: var(--model-soft); color: var(--model); }
+.b-code { background: var(--code-soft); color: var(--code); }
+.b-human { background: var(--human-soft); color: var(--human); }
+.b-p1 { background: var(--t2-soft); color: var(--t2); }
+.b-p2 { background: var(--t1-soft); color: var(--t1); }
+.b-p3 { background: var(--soft); color: var(--muted); }
+
+.tierbar { display: flex; align-items: center; gap: 16px; padding: 14px 16px; border-radius: 8px; border: 1px solid; margin-bottom: 14px; }
+.tierbar .t { font-size: 22px; font-weight: 700; letter-spacing: .02em; }
+.tierbar .h { font-size: 14px; font-weight: 600; }
+.tier0 { background: var(--t0-soft); border-color: #b4dcc0; color: var(--t0); }
+.tier1 { background: var(--t1-soft); border-color: #ecd29a; color: var(--t1); }
+.tier2 { background: var(--t2-soft); border-color: #f1b8b2; color: var(--t2); }
+.tierx { background: var(--soft); border-color: var(--line); color: var(--muted); }
+
+blockquote { margin: 6px 0; padding: 6px 10px; border-left: 3px solid var(--line); background: var(--soft); border-radius: 0 4px 4px 0; }
+.quote-meta { font-size: 11.5px; color: var(--muted); }
+.note { padding: 8px 12px; border-radius: 6px; background: var(--t1-soft); color: #6b4500; margin: 6px 0; }
+.err { padding: 8px 12px; border-radius: 6px; background: var(--t2-soft); color: var(--t2); margin: 8px 0; }
+.empty { color: var(--muted); padding: 20px; text-align: center; }
+
+.tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--line); margin-bottom: 12px; }
+.tabs button { background: none; border: 0; padding: 8px 12px; cursor: pointer; color: var(--muted); border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.tabs button.on { color: var(--ink); border-bottom-color: var(--accent); font-weight: 600; }
+.tabs .n { font-size: 11px; color: var(--muted); margin-left: 4px; }
+
+.pipeline { display: flex; flex-wrap: wrap; gap: 6px; align-items: stretch; }
+.pipeline .step { flex: 1 1 130px; border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; background: var(--panel); }
+.pipeline .step b { display: block; font-size: 12px; margin: 4px 0 2px; }
+.pipeline .arrow { align-self: center; color: var(--muted); }
+
+.legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: var(--muted); margin-top: 8px; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+.option-row.on td { background: var(--accent-soft); }
+.row-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.spacer { flex: 1; }
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; }
+.spin { display: inline-block; width: 12px; height: 12px; border: 2px solid #fff8; border-top-color: #fff; border-radius: 50%; animation: s .7s linear infinite; vertical-align: -2px; }
+@keyframes s { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand"><b>LINNET</b><small>medication timing check</small></div>
+  <div class="group"><span>Intake <span class="who">prescriber / tech</span></span>
+    <button data-go="patient" class="on">Patient &amp; regimen</button>
+    <button data-go="library" class="sub">Library (metadata)</button>
+  </div>
+  <div class="group"><span>Review <span class="who">pharmacist</span></span>
+    <button data-go="check">Timing check</button>
+  </div>
+  <div class="foot">
+    <b>Privacy.</b> Patient data is checked in memory and never stored. The language model reads only public FDA labels, never patient data. Demo patients are constructed.
+  </div>
+</nav>
+
+<main>
+  <header class="top"><h1 id="title">Patient &amp; regimen</h1><span class="crumb" id="crumb"></span><span class="spacer"></span>
+    <button class="btn primary" id="run">Run timing check</button></header>
+
+  <!-- ================= INTAKE: PATIENT ================= -->
+  <section class="view on" id="v-patient">
+    <div class="panel"><div class="body row-actions">
+      <label>Load demo patient
+        <select id="demo"><option value="">-</option></select></label>
+      <span class="spacer"></span>
+      <label>Patient label <input type="text" id="pname" size="40" placeholder="free text - no name, DOB or MRN"></label>
+    </div></div>
+
+    <div class="panel"><h2>Medications <span class="r"><button class="btn sm" id="add-med">+ add</button></span></h2>
+      <table><thead><tr><th style="width:38%">Product</th><th>Use</th><th>Doses / day</th><th>Rx: every N hours</th><th>Label</th><th></th></tr></thead>
+      <tbody id="meds"></tbody></table>
+      <div class="body small muted">Prescribed: the count is fixed. As needed: the count is what the patient reports; LINNET may suggest fewer, never more.</div>
+    </div>
+
+    <div class="grid2">
+      <div class="panel"><h2>Daily routine <span class="r"><button class="btn sm" id="add-meal">+ meal</button></span></h2>
+        <table><thead><tr><th>Meal</th><th>Time</th><th></th></tr></thead><tbody id="meals"></tbody></table>
+        <div class="body row-actions">
+          <label>Bedtime <input type="time" id="bed"></label>
+          <label>Wake <input type="time" id="wake"></label>
+        </div>
+      </div>
+      <div class="panel"><h2>Tier-1 weights <span class="r small muted">judgement calls, not label facts</span></h2>
+        <div class="body kv">
+          <span>Moving a meal, per hour</span><input type="number" step="0.5" min="0" id="w-meal">
+          <span>Shortening sleep, per hour</span><input type="number" step="0.5" min="0" id="w-sleep">
+          <span>Dropping an as-needed dose</span><input type="number" step="0.5" min="0" id="w-dose">
+          <span class="muted small" id="w-state"></span><span></span>
+        </div>
+      </div>
+    </div>
+    <div id="intake-err"></div>
+  </section>
+
+  <!-- ================= INTAKE: LIBRARY ================= -->
+  <section class="view" id="v-library">
+    <div class="panel"><h2>How a label becomes a rule</h2><div class="body">
+      <div class="pipeline">
+        <div class="step"><span class="badge b-code">CODE</span><b>Fetch label</b><span class="small muted">public FDA SPL (DailyMed / openFDA)</span></div><div class="arrow">&rarr;</div>
+        <div class="step"><span class="badge b-code">CODE</span><b>Number sentences</b><span class="small muted">split, keep timing/dose text</span></div><div class="arrow">&rarr;</div>
+        <div class="step"><span class="badge b-model">MODEL</span><b>Propose rows</b><span class="small muted">cites sentence ids, never quotes</span></div><div class="arrow">&rarr;</div>
+        <div class="step"><span class="badge b-code">CODE</span><b>Check rows</b><span class="small muted">sentence exists, every number on the label, schema</span></div><div class="arrow">&rarr;</div>
+        <div class="step"><span class="badge b-human">PHARMACIST</span><b>Sign off</b><span class="small muted">read the sentence, approve</span></div><div class="arrow">&rarr;</div>
+        <div class="step"><span class="badge b-code">CODE</span><b>Solve</b><span class="small muted">Z3; exact verifier re-checks</span></div>
+      </div>
+      <div class="small muted" style="margin-top:8px">The model is the only probabilistic step. It can misread meaning (e.g. the wrong population); the checks catch invented numbers, and sign-off catches the rest. Sentences no row uses are listed for review, most likely misses first.</div>
+    </div></div>
+    <div class="tabs" id="libtabs"></div>
+    <div id="libbody"></div>
+  </section>
+
+  <!-- ================= REVIEW: CHECK ================= -->
+  <section class="view" id="v-check"><div id="checkbody"><div class="empty">Run a timing check from Intake.</div></div></section>
+</main>
+
+<script>
+"use strict";
+const $ = (s, el = document) => el.querySelector(s);
+const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
+const safeUrl = u => /^https:\/\//.test(u || "") ? u : "#";
+const link = (u, t = "label") => `<a href="${esc(safeUrl(u))}" target="_blank" rel="noopener">${esc(t)} &#8599;</a>`;
+const PALETTE = ["#0f6e68", "#6941c6", "#c4320a", "#175cd3", "#9a6300", "#b42318", "#3b7d23", "#7a5af8"];
+
+async function api(path, opts) {
+  const r = await fetch(path, opts && opts.body ? {method: "POST", headers: {"Content-Type": "application/json"}, ...opts} : opts);
+  const data = await r.json().catch(() => ({}));
+  if (!r.ok) throw Object.assign(new Error("request failed"), {detail: data.detail, status: r.status});
+  return data;
+}
+
+/* ---------- navigation ---------- */
+const TITLES = {patient: ["Patient & regimen", "Intake"], library: ["Library", "Intake  /  metadata"], check: ["Timing check", "Review"]};
+function go(v) {
+  document.querySelectorAll(".view").forEach(x => x.classList.toggle("on", x.id === "v-" + v));
+  document.querySelectorAll("nav button").forEach(b => b.classList.toggle("on", b.dataset.go === v));
+  $("#title").textContent = TITLES[v][0]; $("#crumb").textContent = TITLES[v][1];
+  if (v === "library") loadLibrary();
+}
+document.querySelectorAll("nav button").forEach(b => b.onclick = () => go(b.dataset.go));
+
+/* ---------- intake state ---------- */
+let PRODUCTS = [];
+const state = {name: "", constructed: true, note: "", meds: [], meals: [], bed: "23:00", wake: "07:00", weights: null};
+const DEFAULT_W = {meal: 1, sleep: 2, dose: 1.5};
+
+function product(name) { return PRODUCTS.find(p => p.name === name); }
+
+function renderMeds() {
+  $("#meds").innerHTML = state.meds.map((m, i) => {
+    const p = product(m.product);
+    const opts = PRODUCTS.map(x => `<option value="${esc(x.name)}" ${x.name === m.product ? "selected" : ""}>${esc(x.display_name)}</option>`).join("");
+    return `<tr>
+      <td><select data-i="${i}" data-f="product" style="width:100%"><option value="">choose a product</option>${opts}</select>
+          ${p ? `<div class="small muted">${esc(Object.entries(p.ingredients).map(([k, v]) => k.replace(/_/g, " ") + " " + v).join(" + "))}${p.as_needed_max ? " &middot; label max " + p.as_needed_max + "/day" : ""}</div>` : ""}</td>
+      <td><select data-i="${i}" data-f="use"><option value="rx" ${m.use === "rx" ? "selected" : ""}>Prescribed</option><option value="prn" ${m.use === "prn" ? "selected" : ""}>As needed</option></select></td>
+      <td><input type="number" min="0" data-i="${i}" data-f="count" value="${esc(m.count)}"></td>
+      <td>${m.use === "rx" ? `<input type="number" min="0" step="0.5" placeholder="-" data-i="${i}" data-f="every" value="${esc(m.every ?? "")}">` : `<span class="muted">-</span>`}</td>
+      <td>${p ? `${p.verified ? '<span class="badge b-ok">verified</span>' : '<span class="badge b-unv">unverified</span>'} ${link(p.url)}` : ""}</td>
+      <td><button class="btn sm" data-del="${i}" title="remove">&times;</button></td></tr>`;
+  }).join("") || `<tr><td colspan="6" class="empty">No medications. Load a demo patient or add one.</td></tr>`;
+}
+$("#meds").addEventListener("change", e => {
+  const i = e.target.dataset.i, f = e.target.dataset.f; if (i === undefined) return;
+  const m = state.meds[i], v = e.target.value;
+  if (f === "count") m.count = v === "" ? "" : Number(v);
+  else if (f === "every") m.every = v === "" ? null : Number(v);
+  else { m[f] = v; if (f === "use" && v === "prn") m.every = null; }
+  renderMeds();
+});
+$("#meds").addEventListener("click", e => { const d = e.target.dataset.del; if (d !== undefined) { state.meds.splice(d, 1); renderMeds(); } });
+$("#add-med").onclick = () => { state.meds.push({product: "", use: "rx", count: 1, every: null}); renderMeds(); };
+
+function renderMeals() {
+  $("#meals").innerHTML = state.meals.map((m, i) => `<tr>
+    <td><input type="text" data-i="${i}" data-f="name" value="${esc(m.name)}"></td>
+    <td><input type="time" data-i="${i}" data-f="time" value="${esc(m.time)}"></td>
+    <td><button class="btn sm" data-del="${i}">&times;</button></td></tr>`).join("");
+  $("#bed").value = state.bed; $("#wake").value = state.wake;
+}
+$("#meals").addEventListener("change", e => { const i = e.target.dataset.i; if (i !== undefined) state.meals[i][e.target.dataset.f] = e.target.value; });
+$("#meals").addEventListener("click", e => { const d = e.target.dataset.del; if (d !== undefined) { state.meals.splice(d, 1); renderMeals(); } });
+$("#add-meal").onclick = () => { state.meals.push({name: "snack", time: "15:00"}); renderMeals(); };
+$("#bed").onchange = e => state.bed = e.target.value;
+$("#wake").onchange = e => state.wake = e.target.value;
+$("#pname").oninput = e => state.name = e.target.value;
+
+function renderWeights() {
+  const w = state.weights || DEFAULT_W;
+  $("#w-meal").value = w.meal; $("#w-sleep").value = w.sleep; $("#w-dose").value = w.dose;
+  $("#w-state").textContent = state.weights ? "set by you" : "placeholders - set these";
+}
+["meal", "sleep", "dose"].forEach(k => $("#w-" + k).onchange = e => {
+  state.weights = {...(state.weights || DEFAULT_W), [k]: Number(e.target.value)}; renderWeights();
+});
+
+function loadPatient(p) {
+  state.name = p.name; state.constructed = p.constructed !== false; state.note = p.note || "";
+  state.meds = p.items.map(it => ({product: it.product, use: it.prescribed_count != null ? "rx" : "prn",
+    count: it.prescribed_count ?? it.reported_count, every: it.every_hours ?? null}));
+  state.meals = Object.entries(p.routine.meals).map(([name, time]) => ({name, time}));
+  state.bed = p.routine.sleep.start; state.wake = p.routine.sleep.end;
+  state.weights = p.weights ? {meal: p.weights.meal_shift_per_hour, sleep: p.weights.sleep_shift_per_hour, dose: p.weights.dose_dropped} : null;
+  $("#pname").value = state.name; renderMeds(); renderMeals(); renderWeights();
+}
+$("#demo").onchange = async e => { if (e.target.value) loadPatient(await api("/api/patients/" + encodeURIComponent(e.target.value))); };
+
+function patientJson() {
+  const items = state.meds.map(m => {
+    const it = {product: m.product};
+    if (m.use === "rx") { it.prescribed_count = m.count; if (m.every) it.every_hours = String(m.every); }
+    else it.reported_count = m.count;
+    return it;
+  });
+  const out = {name: state.name || "unnamed", constructed: state.constructed, note: state.note, items,
+    routine: {meals: Object.fromEntries(state.meals.map(m => [m.name, m.time])), sleep: {start: state.bed, end: state.wake}}};
+  if (state.weights) out.weights = {meal_shift_per_hour: String(state.weights.meal), sleep_shift_per_hour: String(state.weights.sleep),
+    dose_dropped: String(state.weights.dose), placeholder: false};
+  return out;
+}
+
+$("#run").onclick = async () => {
+  const b = $("#run"); b.disabled = true; b.innerHTML = '<span class="spin"></span> Solving';
+  $("#intake-err").innerHTML = "";
+  try {
+    const r = await api("/api/check?compare=true", {body: JSON.stringify(patientJson())});
+    renderCheck(r); go("check");
+  } catch (e) {
+    const d = Array.isArray(e.detail) ? e.detail.map(x => `${esc(x.where || (x.loc || []).join("."))}: ${esc(x.problem || x.msg)}`).join("<br>") : esc(e.message);
+    $("#intake-err").innerHTML = `<div class="err"><b>Cannot check this regimen yet.</b><br>${d}</div>`; go("patient");
+  } finally { b.disabled = false; b.textContent = "Run timing check"; }
+};
+
+/* ---------- check view ---------- */
+let REPORT = null, OPT = 0;
+
+function flagBadges(r) {
+  return [r.provenance === "quoted" ? '<span class="badge b-quoted">quoted</span>' : '<span class="badge b-interp">interpreted</span>',
+    r.verified ? '<span class="badge b-ok">verified</span>' : '<span class="badge b-unv">unverified</span>',
+    r.from_fallback_label ? '<span class="badge b-p3">fallback label</span>' : "",
+    r.labels_disagree ? '<span class="badge b-p2">labels disagree: strictest used</span>' : ""].join(" ");
+}
+function evidence(src) {
+  return `<blockquote>&ldquo;${esc(src.sentence)}&rdquo;</blockquote>
+    <div class="quote-meta">${esc(src.section)} &middot; SPL <span class="mono">${esc(src.spl_set_id)}</span> &middot; ${link(src.url, "open on DailyMed")}</div>`;
+}
+
+function timeline(opt) {
+  const W = 1000, L = 150, X = m => L + (m / 1440) * (W - L - 10);
+  const doses = opt.events.filter(e => e.kind === "dose");
+  const prods = [...new Set(doses.map(d => d.product))];
+  const color = Object.fromEntries(prods.map((p, i) => [p, PALETTE[i % PALETTE.length]]));
+  const label = Object.fromEntries(doses.map(d => [d.product, d.label]));
+  const rowH = 34, top = 26, H = top + rowH * (prods.length + 1) + 8;
+  let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="24-hour schedule" style="font: 11px system-ui">`;
+  const bed = opt.sleep.bed.min, wake = opt.sleep.wake.min;
+  const spans = bed > wake ? [[bed, 1440], [0, wake]] : [[bed, wake]];
+  spans.forEach(([a, b]) => s += `<rect x="${X(a)}" y="${top - 4}" width="${X(b) - X(a)}" height="${H - top}" fill="#e7ebf3"/>`);
+  for (let h = 0; h <= 24; h += 3) {
+    s += `<line x1="${X(h * 60)}" x2="${X(h * 60)}" y1="${top - 4}" y2="${H - 4}" stroke="#dfe4ea"/>`;
+    s += `<text x="${X(h * 60)}" y="14" text-anchor="middle" fill="#5d6876">${String(h % 24).padStart(2, "0")}:00</text>`;
+  }
+  const y0 = top + rowH / 2;
+  s += `<text x="8" y="${y0 + 4}" fill="#5d6876">Day</text>`;
+  opt.events.filter(e => e.kind === "meal").forEach(m => {
+    s += `<rect x="${X(m.min) - 3}" y="${y0 - 9}" width="6" height="18" rx="2" fill="#9a6300"><title>${esc(m.label)} ${m.hhmm}</title></rect>`;
+    s += `<text x="${X(m.min) + 6}" y="${y0 + 4}" fill="#6b4500">${esc(m.label)} ${m.hhmm}</text>`;
+  });
+  prods.forEach((p, i) => {
+    const y = top + rowH * (i + 1) + rowH / 2;
+    s += `<text x="8" y="${y + 4}" fill="#18212b">${esc(label[p].length > 22 ? label[p].slice(0, 21) + "…" : label[p])}<title>${esc(label[p])}</title></text>`;
+    s += `<line x1="${L}" x2="${W - 10}" y1="${y}" y2="${y}" stroke="#eef2f5"/>`;
+    doses.filter(d => d.product === p).forEach(d => {
+      s += `<circle cx="${X(d.min)}" cy="${y}" r="7" fill="${color[p]}"><title>${esc(d.label)} dose ${d.dose}/${d.of} at ${d.hhmm}</title></circle>`;
+      s += `<text x="${X(d.min)}" y="${y - 11}" text-anchor="middle" fill="${color[p]}" class="mono">${d.hhmm}</text>`;
+    });
+  });
+  return s + `</svg><div class="legend"><span><i style="background:#e7ebf3"></i>asleep</span><span><i style="background:#9a6300;border-radius:2px"></i>meal</span>
+    ${prods.map(p => `<span><i style="background:${color[p]}"></i>${esc(label[p])}</span>`).join("")}</div>`;
+}
+
+function card(opt) {
+  return `<table><thead><tr><th style="width:70px">Time</th><th>What</th></tr></thead><tbody>` + opt.events.map(e =>
+    e.kind === "dose" ? `<tr><td class="mono"><b>${e.hhmm}</b></td><td><b>${esc(e.label)}</b>${e.of > 1 ? ` <span class="muted">dose ${e.dose} of ${e.of}</span>` : ""}</td></tr>`
+                      : `<tr><td class="mono muted">${e.hhmm}</td><td class="muted">${esc(e.label)}</td></tr>`).join("") + "</tbody></table>";
+}
+
+function renderCheck(r) {
+  REPORT = r; OPT = 0;
+  const tcls = {tier0: "tier0", tier1: "tier1", tier2: "tier2"}[r.outcome] || "tierx";
+  const tname = r.tier == null ? "NO TIER" : "TIER " + r.tier;
+  let h = `<div class="tierbar ${tcls}"><div class="t">${tname}</div><div><div class="h">${esc(r.headline.split("  -  ").slice(1).join(" - ") || r.headline)}</div>
+    <div class="small">${esc(r.patient.name)}${r.patient.constructed ? " &middot; constructed patient" : ""} &middot; draft for a pharmacist to check; reasons over stated label rules only</div></div></div>`;
+
+  if (r.outcome === "tier1") {
+    h += `<div class="panel"><h2>Smallest changes <span class="r small">lower cost = smaller change${r.weights.placeholder ? " &middot; <b>weights are placeholders</b>" : ""}</span></h2>
+      <table><thead><tr><th>#</th><th>Cost</th><th>Change</th></tr></thead><tbody>` +
+      r.options.map((o, i) => `<tr class="click option-row ${i === 0 ? "on" : ""}" data-opt="${i}"><td>${i + 1}</td><td class="mono">${o.cost.toFixed(2)}</td>
+        <td>${o.changes.map(c => esc(c.text)).join("<br>")}</td></tr>`).join("") + `</tbody></table></div>`;
+  }
+  if (r.options.length) {
+    h += `<div class="panel"><h2>24-hour schedule <span class="r small muted" id="optlabel"></span></h2><div class="body" id="tl"></div></div>
+      <div class="grid2"><div class="panel"><h2>Medication card</h2><div id="card"></div></div>
+      <div class="panel"><h2>Comparison</h2><div class="body">${baseline(r)}</div></div></div>`;
+  }
+  if (r.conflicts.length) h += conflicts(r);
+  if (r.rules_applied.length) h += rulesApplied(r);
+  if (r.notes.length) h += `<div class="panel"><h2>Notes</h2><div class="body">${r.notes.map(n => `<div class="note">${esc(n)}</div>`).join("")}</div></div>`;
+  if (r.outcome === "tier2" && r.baseline) h += `<div class="panel"><h2>Comparison</h2><div class="body">${baseline(r)}</div></div>`;
+  h += `<div class="panel"><h2>Audit</h2><div class="body mono small">${r.audit.map(esc).join("<br>")}</div></div>`;
+  $("#checkbody").innerHTML = h;
+  showOption(0);
+  $("#checkbody").querySelectorAll("[data-opt]").forEach(tr => tr.onclick = () => showOption(Number(tr.dataset.opt)));
+  $("#checkbody").querySelectorAll("tr[data-toggle]").forEach(tr => tr.onclick = () => { const d = tr.nextElementSibling; d.hidden = !d.hidden; });
+}
+function showOption(i) {
+  if (!REPORT || !REPORT.options.length) return;
+  OPT = i; const o = REPORT.options[i];
+  $("#tl").innerHTML = timeline(o); $("#card").innerHTML = card(o);
+  $("#optlabel").textContent = REPORT.outcome === "tier1" ? `option ${i + 1}` : "";
+  document.querySelectorAll(".option-row").forEach(tr => tr.classList.toggle("on", Number(tr.dataset.opt) === i));
+}
+function baseline(r) {
+  const b = r.baseline; if (!b) return "";
+  const verdict = {tier0: "a schedule exists as they live now (tier 0)", tier1: "a schedule exists if something gives (tier 1)",
+    tier2: "no schedule exists for the prescriptions at all (tier 2)"}[r.outcome] || r.outcome;
+  return `<div class="kv"><span class="muted">Greedy heuristic</span><span>${b.ok ? "found a schedule" : `<b style="color:var(--t2)">gave up</b> on ${esc(b.failed_on)}`}</span>
+    <span class="muted">LINNET</span><span>${esc(verdict)}</span></div>
+    ${b.false_alarm ? `<div class="note" style="margin-top:8px"><b>False alarm avoided.</b> The heuristic said this regimen cannot be scheduled; it can.</div>` : ""}
+    <div class="small muted" style="margin-top:6px">${esc(b.method)}</div>`;
+}
+function conflicts(r) {
+  return r.conflicts.map((c, i) => `<div class="panel" style="border-color:#f1b8b2"><h2 style="color:var(--t2)">Conflict ${i + 1} of ${r.conflicts.length}
+      <span class="r small">these ${c.prescriptions.length + c.label_rules.length} requirements cannot all hold on any 24-hour day${c.proven_minimal ? "" : " &middot; minimality not proven"}</span></h2>
+    <div class="body"><div class="muted small">Prescriptions</div><ul>${c.prescriptions.map(p => `<li>${esc(p)}</li>`).join("")}</ul>
+    <div class="muted small">Label rules</div>${c.label_rules.map((x, j) => `<div style="margin:8px 0 14px"><b>${j + 1}. ${esc(x.text)}</b>
+      <div style="margin:3px 0">${flagBadges(x)} <span class="mono small muted">${esc(x.id)}</span></div>${evidence(x.source)}</div>`).join("")}
+    ${r.outcome === "tier2" ? `<div class="note">Checked at the loosest defensible reading of every label: still no schedule.<br><b>Action:</b> ask the prescriber whether one can be held, replaced, or re-timed.</div>` : ""}
+    </div></div>`).join("");
+}
+function rulesApplied(r) {
+  return `<div class="panel"><h2>Rules applied <span class="r small muted">click a row for the label sentence</span></h2><table><thead><tr><th>Rule</th><th>Status</th><th>Id</th></tr></thead><tbody>` +
+    r.rules_applied.map(x => x.kind === "prescription"
+      ? `<tr><td>${esc(x.text)}</td><td><span class="badge b-p3">prescription</span></td><td class="mono small muted">${esc(x.id)}</td></tr>`
+      : `<tr class="click" data-toggle><td>${esc(x.text)}</td><td>${flagBadges(x)}</td><td class="mono small muted">${esc(x.id)}</td></tr>
+         <tr class="detail" hidden><td colspan="3">${evidence(x.source)}</td></tr>`).join("") + "</tbody></table></div>";
+}
+
+/* ---------- library (metadata) ---------- */
+let LIB = null, LIBTAB = "signoff", ONLY_UNV = false;
+const PRIO = {1: "b-p1", 2: "b-p2"};
+async function loadLibrary() { LIB = await api("/api/library"); renderLibrary(); }
+
+function renderLibrary() {
+  const ex = LIB.extracted, unv = LIB.items.filter(i => !i.verified).length;
+  const tabs = [["signoff", "Sign-off", `${unv} unverified`], ["unaccounted", "Review queue", ex.unaccounted.length],
+    ["administration", "Timing rows", ex.administration.length], ["dosing", "Dosing", ex.dosing.length],
+    ["limits", "Limits", ex.limits.length], ["memberships", "Group members", ex.memberships.length], ["rejected", "Rejected by checks", ex.rejected.length]];
+  $("#libtabs").innerHTML = tabs.map(([k, t, n]) => `<button data-t="${k}" class="${k === LIBTAB ? "on" : ""}">${t}<span class="n">${n}</span></button>`).join("");
+  $("#libtabs").querySelectorAll("button").forEach(b => b.onclick = () => { LIBTAB = b.dataset.t; renderLibrary(); });
+  $("#libbody").innerHTML = ({signoff, unaccounted, administration, dosing, limits, memberships, rejected})[LIBTAB]();
+  $("#libbody").querySelectorAll("tr[data-toggle]").forEach(tr => tr.onclick = e => { if (e.target.closest("button,a,input")) return; const d = tr.nextElementSibling; d.hidden = !d.hidden; });
+  $("#libbody").querySelectorAll("button[data-verify]").forEach(b => b.onclick = async () => {
+    b.disabled = true;
+    try { await api("/api/library/verify", {body: JSON.stringify({id: b.dataset.verify, verified: b.dataset.to === "1"})}); await loadLibrary(); }
+    catch (e) { b.disabled = false; alert("Could not save: " + (e.detail || e.message)); }
+  });
+  const f = $("#only-unv"); if (f) f.onchange = e => { ONLY_UNV = e.target.checked; renderLibrary(); };
+}
+const fromModel = r => `<span class="badge b-model" title="proposed by ${esc(r.model)}">model</span> <span class="badge b-code">checked</span>`;
+
+function signoff() {
+  const what = i => {
+    const r = i.record;
+    if (i.kind === "rule") return `<b>${esc(i.id)}</b> <span class="muted">${esc(r.family)}</span>`;
+    if (i.kind === "product") return `<b>${esc(r.display_name)}</b> <span class="muted">product facts</span>`;
+    if (i.kind === "max") return `<b>${esc(i.id.slice(4))}</b> <span class="muted">as-needed max ${esc(r.count)}/day</span>`;
+    return `<b>${esc(i.id.split(":")[2])}</b> <span class="muted">in group ${esc(i.id.split(":")[1])}</span>`;
+  };
+  const detail = i => {
+    const r = i.record, src = r.source;
+    if (src) return evidence(src);
+    if (i.kind === "product") return `<div class="kv small"><span class="muted">ingredients / dose</span><span>${esc(Object.entries(r.ingredients).map(([k, v]) => `${k} ${v.amount} ${v.unit}`).join(", "))}</span>
+      <span class="muted">dose</span><span>${esc(r.dose_note)}</span><span class="muted">NDC</span><span class="mono">${esc((r.ndc || []).join(" "))}</span>
+      <span class="muted">label</span><span>${link(r.url, "open on DailyMed")}</span></div>`;
+    return `<blockquote>&ldquo;${esc(r.basis)}&rdquo;</blockquote>${r.matched ? `<div class="note small">${esc(r.matched)}</div>` : ""}
+      <div class="quote-meta">${link("https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=" + encodeURIComponent(r.source_spl || ""), "open on DailyMed")}</div>`;
+  };
+  const prov = i => i.record.provenance ? (i.record.provenance === "quoted" ? '<span class="badge b-quoted">quoted</span>' : '<span class="badge b-interp">interpreted</span>') : "";
+  const rows = LIB.items.filter(i => !ONLY_UNV || !i.verified);
+  return `<div class="panel"><h2>Library items the solver uses <span class="r"><label class="small"><input type="checkbox" id="only-unv" ${ONLY_UNV ? "checked" : ""}> unverified only</label></span></h2>
+    <table><thead><tr><th>Item</th><th>Reading</th><th>Status</th><th>File</th><th></th></tr></thead><tbody>` +
+    rows.map(i => `<tr class="click" data-toggle><td>${what(i)}</td><td>${prov(i)}</td>
+      <td>${i.verified ? '<span class="badge b-human">pharmacist verified</span>' : '<span class="badge b-unv">unverified</span>'}</td>
+      <td class="mono small muted">${esc(i.file)}</td>
+      <td>${i.verified ? `<button class="btn sm" data-verify="${esc(i.id)}" data-to="0">Revoke</button>` : `<button class="btn sm primary" data-verify="${esc(i.id)}" data-to="1">Approve</button>`}</td></tr>
+      <tr class="detail" hidden><td colspan="5">${detail(i)}</td></tr>`).join("") + `</tbody></table>
+    <div class="body small muted">Approve only after reading the label sentence. Approvals are written to the JSON in data/ (visible in git diff).</div></div>`;
+}
+function srcCell(r) { const t = (r.source || {}).sentence || ""; return `<span class="small muted">${esc(t.length > 70 ? t.slice(0, 69) + "…" : t)}</span>`; }
+function extractedTable(rows, cols, title) {
+  if (!rows.length) return `<div class="panel"><div class="empty">Nothing here.</div></div>`;
+  return `<div class="panel"><h2>${title} <span class="r small muted">proposed by the model, numbers checked by code, not yet signed off</span></h2><table><thead><tr><th>Ingredient</th>${cols.map(c => `<th>${c[0]}</th>`).join("")}<th>Reading</th><th>Origin</th><th>Sentence</th></tr></thead><tbody>` +
+    rows.map(r => `<tr class="click" data-toggle><td>${esc(r.ingredient)}</td>${cols.map(c => `<td>${c[1](r)}</td>`).join("")}
+      <td>${r.provenance === "interpreted" ? '<span class="badge b-interp">interpreted</span>' : '<span class="badge b-quoted">quoted</span>'}</td><td>${fromModel(r)}</td><td>${srcCell(r)}</td></tr>
+      <tr class="detail" hidden><td colspan="${cols.length + 4}">${r.source ? evidence({...r.source, url: r.source.url || r.label_url}) : ""}</td></tr>`).join("") + "</tbody></table></div>";
+}
+const v = x => x == null || x === "" ? '<span class="muted">-</span>' : esc(x);
+function administration() {
+  return extractedTable(LIB.extracted.administration, [["Rule", r => `<span class="mono small">${esc(r.id)}</span>`], ["Family", r => v(r.family)],
+    ["Values", r => esc(["target", "hours", "before", "after", "mode", "meal", "amount", "unit"].filter(k => r[k] != null).map(k => `${k}=${r[k]}`).join("  "))]], "Timing rows");
+}
+function dosing() {
+  return extractedTable(LIB.extracted.dosing, [["Condition", r => v(r.condition)], ["Population", r => v(r.population)],
+    ["Dose", r => v(r.dose == null ? null : r.dose + (r.dose_max ? "-" + r.dose_max : "") + " " + (r.unit || ""))],
+    ["Every", r => v(r.every_hours && r.every_hours + " h")], ["Per day", r => v(r.times_per_day)], ["Days", r => v(r.duration_days)]], "Dosing");
+}
+function limits() {
+  return extractedTable(LIB.extracted.limits, [["Kind", r => v(r.kind)], ["Amount", r => v(r.amount + " " + (r.unit || ""))], ["Population", r => v(r.population)]], "Limits");
+}
+function memberships() {
+  const rows = LIB.extracted.memberships;
+  if (!rows.length) return `<div class="panel"><div class="empty">No proposals.</div></div>`;
+  return `<div class="panel"><h2>Proposed group members</h2><table><thead><tr><th>Ingredient</th><th>Group</th><th>Reading</th><th>Why</th><th>Origin</th></tr></thead><tbody>` +
+    rows.map(r => `<tr class="click" data-toggle><td>${esc(r.ingredient)}</td><td>${esc(r.group)}</td>
+      <td>${r.provenance === "interpreted" ? '<span class="badge b-interp">interpreted</span>' : '<span class="badge b-quoted">quoted</span>'}</td>
+      <td class="small">${v(r.matched)}</td><td>${fromModel(r)}</td></tr>
+      <tr class="detail" hidden><td colspan="5"><blockquote>&ldquo;${esc(r.basis)}&rdquo;</blockquote><div class="quote-meta">${link(r.label_url, "open on DailyMed")}</div></td></tr>`).join("") + "</tbody></table></div>";
+}
+function unaccounted() {
+  const rows = LIB.extracted.unaccounted;
+  const KIND = {possible_timing_rule: "possible timing rule", review: "number to review", monitoring: "monitoring / titration",
+    population: "specific population", weight_based: "per kg", restates: "repeats a used sentence", background: "animal / lab data"};
+  return `<div class="panel"><h2>Review queue <span class="r small muted">label sentences with numbers that no row uses, most likely misses first. Sorting is by code keywords, never hides a sentence.</span></h2>
+    <table><thead><tr><th>Priority</th><th>Ingredient</th><th>Sentence</th><th>Section</th><th></th></tr></thead><tbody>` +
+    rows.map(r => `<tr><td><span class="badge ${PRIO[r.priority] || "b-p3"}">${r.priority} &middot; ${esc(KIND[r.kind] || r.kind)}</span>${r.note ? `<div class="small muted">${esc(r.note)}</div>` : ""}</td>
+      <td>${esc(r.ingredient)}</td><td><span class="mono small muted">${esc(r.sentence_id)}</span> ${esc(r.sentence)}</td><td class="small muted">${esc(r.section)}</td><td>${link(r.label_url)}</td></tr>`).join("") + "</tbody></table></div>";
+}
+function rejected() {
+  const rows = LIB.extracted.rejected;
+  return `<div class="panel"><h2>Rejected by checks <span class="r small muted">model output the deterministic checks refused</span></h2><table><thead><tr><th>Ingredient</th><th>Pass</th><th>Reason</th><th>Model said</th></tr></thead><tbody>` +
+    rows.map(r => `<tr><td>${esc(r.ingredient)}</td><td>${esc(r.pass || "administration")}</td><td><b>${esc(r.reason)}</b></td><td class="mono small">${esc(JSON.stringify(r.item))}</td></tr>`).join("") + "</tbody></table></div>";
+}
+
+/* ---------- boot ---------- */
+(async () => {
+  try {
+    PRODUCTS = await api("/api/products");
+    const pts = await api("/api/patients");
+    $("#demo").innerHTML = '<option value="">choose</option>' + pts.map(p => `<option value="${esc(p.id)}">${esc(p.name)}</option>`).join("");
+    renderMeds(); renderMeals(); renderWeights();
+  } catch (e) { $("#intake-err").innerHTML = `<div class="err">Cannot reach the LINNET API. Start it with: uvicorn linnet.api:app</div>`; }
+})();
+</script>
+</body>
+</html>
