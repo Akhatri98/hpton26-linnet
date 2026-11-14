@@ -50,6 +50,38 @@ FDA label (public)                                   Patient (stays in memory)
 
 The model never sees patient data, and the solver never calls a model.
 
+### The solver encoding
+
+One repeating 24-hour day, in linear real arithmetic (Z3), with every time and amount kept as an exact fraction.
+
+- **Dose slots.** Each product gets as many slots as its most doses a day. Slot *k* has a real time *t*[*k*] in [0, 24) and an on/off flag. Prescribed doses are forced on; as-needed doses may be off, which is how tier 1 can suggest one fewer.
+- **Order.** Active slots come first (on[*k*+1] implies on[*k*]) and are strictly ordered (*t*[*k*] < *t*[*k*+1]). This keeps "dose 2" after "dose 1" and removes the *k*! copies of every schedule.
+- **Midnight wraparound.** Every gap is circular: cdist(*x*, *y*) = min(|*x* − *y*|, 24 − |*x* − *y*|). Doses at 23:00 and 01:00 are 2 hours apart, not 22. Regression tests cover a twice-daily drug that a naive encoding places at 01:00 and 23:00.
+- **Rule families.** Minimum gap between doses of an ingredient (across every product containing it); separation from another drug or group ("at least 2 hours before or 6 hours after"); daily maximum of an ingredient; meal windows ("one-half to one hour before breakfast", "after waking, at least 30 minutes before the first food"); awake hours only.
+- **Named rules.** Each label rule and each dose count is guarded by a literal named after its id, so an unsatisfiable core names label rules. Conflicts are shrunk by dropping one rule at a time until every remaining rule is needed.
+- **Three solves.** A: the day as reported, strictest reading (sat → tier 0). B: prescriptions only, loosest reading, no routine (unsat → tier 2). C: an optimiser that minimises a weighted cost of moving meals, moving sleep and dropping as-needed doses (→ tier 1, up to three different options).
+- **Tier-1 weights** (placeholders, shown on the card and editable): moving a meal 1 per hour, moving sleep 2 per hour, dropping an as-needed dose 1.5; meals and sleep move at most 2 hours.
+- **Time limits.** Every solve has a 10-second limit. A solve that hits it never counts as a yes or a no.
+
+### Labels used
+
+Every rule cites one of these DailyMed labels (SPL set IDs), copied from openFDA and cached in `data/labels/`.
+
+| Product in the library | Label | SPL set ID |
+|---|---|---|
+| Levothyroxine sodium 100 mcg tablets | Levothyroxine sodium (A-S Medication Solutions) | [008de8fd-150f-4022-8ccb-c8bfa94875c7](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7) |
+| Ciprofloxacin 500 mg tablets | Ciprofloxacin (Umasuto) | [0c355077-7361-41d0-9e82-eb31beaf5daa](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa) |
+| Colestipol HCl 1 g tablets | Colestipol hydrochloride (Edenbridge) | [03ca5800-4211-4383-a332-be88bd9b5304](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03ca5800-4211-4383-a332-be88bd9b5304) |
+| Nimodipine 30 mg capsules | Nimodipine (Avet) | [a323ebd8-ef1b-439b-93d1-ba73a5b0127d](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d) |
+| Acetaminophen 300 mg / codeine 30 mg tablets | Acetaminophen and codeine phosphate (Aurolife) | [02386806-02d4-47e3-9c8b-7810146ee795](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02386806-02d4-47e3-9c8b-7810146ee795) |
+| Acetaminophen 500 mg caplets (OTC) | basic care acetaminophen (Amazon) | [00146b91-008d-4b16-95b0-6077f98821be](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be) |
+| Tums ES (calcium carbonate 750 mg) | Tums Chewy Bites ES (Haleon) | [036ef1ed-32ef-46b8-8817-b3f63a014280](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ef1ed-32ef-46b8-8817-b3f63a014280) |
+| Alendronate sodium 70 mg tablets | FOSAMAX (Organon) | [14e931fd-2c5f-4d90-b7db-5980706f4a56](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14e931fd-2c5f-4d90-b7db-5980706f4a56) |
+| Sucralfate 1 g tablets | Sucralfate (AvKARE) | [0909acc5-c746-17fb-e063-6394a90a677f](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f) |
+| Ferrous sulfate 325 mg tablets (OTC) | Ferrous sulfate (Richmond) | [5514d582-19b5-4f1e-b794-f790afb8211c](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5514d582-19b5-4f1e-b794-f790afb8211c) |
+
+Curation: a model proposes rules citing sentence ids, code checks them, and a person signs each one off in the Review screen (see the table above). Groups ("drugs that interfere with levothyroxine", "multivalent cations") list their members with the label wording that names each one.
+
 ## Evaluation
 
 ### Solver (500 random regimens, seed 1, twice: on synthetic days and on real NHANES days)
@@ -112,12 +144,17 @@ LINNET differs in being complete (if a schedule exists at the stated rules, it f
 
 ## Limitations
 
-- Reasons only over rules stated on labels; it is not an interaction database and does not judge clinical appropriateness.
+- Reasons only over rules stated on labels. There is no pharmacokinetic model, it is not an interaction database, and it does not judge clinical appropriateness.
+- A rule missing from the library is not evidence that it is missing from the label: the library is small and curated, and extraction can miss rules (the review queue shows unused label sentences for that reason).
+- The output is a draft for a pharmacist to check, not an instruction to a patient.
 - Deliberately makes no drug recommendations. It shows that a conflict exists and which label sentences cause it; whether to hold, replace or re-time a drug is the prescriber's decision.
 - Small library (10 products). Adding a product means extracting and signing off its label.
 - Weight-based (mg/kg) doses are extracted and shown for review, but the solver does not use them.
 - Tier-1 weights (how bad is moving a meal vs waking earlier) are judgement calls the pharmacist sets; defaults are placeholders.
-- Demo patients are constructed. Not for clinical use.
+- The demo patients are constructed. NHANES patients use real routines and medication lists, but doses per day are each label's usual regimen (NHANES does not record frequency), and variants marked hypothetical add a drug.
+- No pharmacist has reviewed the premise or the card yet.
+- Novelty is not established: we found heuristic schedulers and manual tools (see Prior art) but did not search exhaustively.
+- Not for clinical use.
 
 ## Privacy
 

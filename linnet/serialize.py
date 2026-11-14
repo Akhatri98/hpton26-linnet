@@ -10,7 +10,8 @@ from __future__ import annotations
 from fractions import Fraction
 from typing import Optional
 
-from library.load import Library
+from library.load import Built, Library
+from solver.verify import binding
 
 from .conflicts import is_count
 from .patient import fmt_hhmm
@@ -36,12 +37,29 @@ def _flags(res) -> dict:
             "from_fallback_label": bool(res.used_fallback), "labels_disagree": bool(res.disagreement)}
 
 
-def _option(o: Option, lib: Library) -> dict:
+def _pin(sid: str, built: Built, lib: Library) -> dict:
+    """{"id": short label for the card, "text": the full rule for the tooltip}."""
+    if sid in ("wake", "bedtime"):
+        return {"id": sid, "text": "wake time" if sid == "wake" else "bedtime"}
+    if sid in built.rx:
+        return {"id": "prescription", "text": f"prescription: {built.rx[sid]}"}
+    rule = next((r for r in built.regimen.rules if r.id == sid), None)
+    if sid in built.origin and rule is not None:
+        rid, _, res = built.origin[sid]
+        return {"id": rid, "text": describe(rule, lib, getattr(res.rule, "unit", ""))}
+    return {"id": sid, "text": sid}
+
+
+def _option(o: Option, lib: Library, built: Optional[Built] = None) -> dict:
+    # What holds each dose where it is: the rules it sits exactly at the limit of.
+    bed, wake = o.sleep
+    pins = binding(built.regimen, o.schedule, o.meals, wake=wake, bed=bed) if built else {}
     events = []
     for prod, times in o.schedule.items():
         for k, t in enumerate(times):
             events.append({**_time(t), "kind": "dose", "product": prod, "label": _name(lib, prod),
-                           "dose": k + 1, "of": len(times)})
+                           "dose": k + 1, "of": len(times),
+                           "pinned_by": [_pin(sid, built, lib) for sid in pins.get((prod, k), [])]})
     for meal, t in o.meals.items():
         events.append({**_time(t), "kind": "meal", "label": meal})
     bed, wake = o.sleep
@@ -116,7 +134,7 @@ def report_json(report: Report, lib: Library, baseline=None) -> dict:
         "outcome": report.outcome,
         "headline": HEAD[report.outcome],
         "patient": {"name": p.name, "constructed": p.constructed, "note": p.note},
-        "options": [_option(o, lib) for o in report.options],
+        "options": [_option(o, lib, report.built) for o in report.options],
         "rules_applied": _rules_applied(report, lib) if report.built and report.outcome in ("tier0", "tier1") else [],
         "conflicts": _conflicts(report, lib) if report.conflicts else [],
         "weights": {"meal_shift_per_hour": float(w.meal_shift_per_hour), "sleep_shift_per_hour": float(w.sleep_shift_per_hour),

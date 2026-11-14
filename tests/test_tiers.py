@@ -212,3 +212,22 @@ def test_alendronate_never_at_bedtime_even_in_tier1(lib):
     for o in r.options:  # every suggestion keeps it in the morning, before breakfast
         t, bfast = o.schedule["alendronate-70mg-tab"][0], o.meals["breakfast"]
         assert F(5) <= t <= bfast - F(1, 2)
+
+
+# --- what holds each dose where it is ---------------------------------------------------
+
+def test_each_dose_says_which_rules_pin_it(lib):
+    from linnet.serialize import report_json
+    j = report_json(run_patient(lib, "tier0-levo-cipro-tums"), lib, None)
+    doses = {(e["product"], e["dose"]): {x["id"] for x in e["pinned_by"]} for e in j["options"][0]["events"] if e["kind"] == "dose"}
+    assert "levo-breakfast" in doses[("levothyroxine-100mcg", 1)]       # 30-60 min before breakfast
+    assert "prescription" in doses[("ciprofloxacin-500mg", 2)]           # exactly 12 h after dose 1
+    assert any("levo-interfering" in ids for (p, _), ids in doses.items() if p == "tums-es-750")  # 4 h after levothyroxine
+
+
+def test_binding_is_exact_and_skips_slack():
+    from solver.model import Product, Regimen, Separation
+    from solver.verify import binding
+    reg = Regimen((Product("a", 1, True), Product("b", 1, True)), (Separation("sep", "a", "b", F(2), F(6)),))
+    assert binding(reg, {"a": [F(8)], "b": [F(10)]}) == {("a", 0): ["sep"], ("b", 0): ["sep"]}  # exactly 2 h before
+    assert binding(reg, {"a": [F(7)], "b": [F(10)]}) == {}                                      # 3 h: not at the limit

@@ -112,3 +112,54 @@ def violations(regimen: Regimen, schedule: dict[str, list[Fraction]],
         else:
             out.append(f"unchecked rule type {type(r).__name__}")
     return out
+
+
+def binding(regimen: Regimen, schedule: dict[str, list[Fraction]], meals: dict[str, Fraction] | None = None,
+            wake: Fraction | None = None, bed: Fraction | None = None) -> dict[tuple[str, int], list[str]]:
+    """For each dose (product, k): the rules it sits exactly at the limit of, i.e. what keeps it
+    from moving (exact fractions, so "exactly" is equality). Also "wake" and "bedtime" when a dose
+    is at the edge of the waking day. Zero-length limits are skipped: they pin nothing."""
+    meals = meals or {}
+    out: dict[tuple[str, int], list[str]] = {}
+
+    def pin(product: str, k: int, rid: str) -> None:
+        ids = out.setdefault((product, k), [])
+        if rid not in ids:
+            ids.append(rid)
+
+    doses = {p.name: list(enumerate(schedule.get(p.name, []))) for p in regimen.products}
+    for r in regimen.rules:
+        if isinstance(r, MinInterval) and r.hours:
+            ts = doses.get(r.product, [])
+            for i, ti in ts:
+                for j, tj in ts:
+                    if i < j and cdist(ti, tj) == r.hours:
+                        pin(r.product, i, r.id), pin(r.product, j, r.id)
+        elif isinstance(r, IngredientInterval) and r.hours:
+            ds = [(p.name, k, t) for p in regimen.products if r.ingredient in p.ingredients for k, t in doses[p.name]]
+            for x in range(len(ds)):
+                for y in range(x + 1, len(ds)):
+                    if cdist(ds[x][2], ds[y][2]) == r.hours:
+                        pin(ds[x][0], ds[x][1], r.id), pin(ds[y][0], ds[y][1], r.id)
+        elif isinstance(r, Separation):
+            for ka, ta in doses.get(r.a, []):
+                for kb, tb in doses.get(r.b, []):
+                    if (r.before and forward(ta, tb) == r.before) or (r.after and forward(tb, ta) == r.after):
+                        pin(r.a, ka, r.id), pin(r.b, kb, r.id)
+        elif isinstance(r, MealWindow) and r.meal in meals:
+            for k, t in doses.get(r.product, []):
+                f = forward(t, meals[r.meal])
+                if f == r.latest or (f == r.earliest and not r.first_of_day):
+                    pin(r.product, k, r.id)
+        elif isinstance(r, MealGap):
+            for name in ([r.meal] if r.meal else list(meals)):
+                for k, t in doses.get(r.product, []) if name in meals else []:
+                    if (r.before and forward(t, meals[name]) == r.before) or (r.after and forward(meals[name], t) == r.after):
+                        pin(r.product, k, r.id)
+    for p, ts in doses.items():
+        for k, t in ts:
+            if wake is not None and t == Fraction(wake):
+                pin(p, k, "wake")
+            if bed is not None and t == Fraction(bed):
+                pin(p, k, "bedtime")
+    return out

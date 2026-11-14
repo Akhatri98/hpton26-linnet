@@ -368,7 +368,10 @@ function timeline(opt) {
     s += `<text x="8" y="${y + 4}" fill="#2E1E16">${esc(label[p].length > 22 ? label[p].slice(0, 21) + "…" : label[p])}<title>${esc(label[p])}</title></text>`;
     s += `<line x1="${L}" x2="${W - 10}" y1="${y}" y2="${y}" stroke="#F1E8D2"/>`;
     doses.filter(d => d.product === p).forEach(d => {
-      s += `<circle cx="${X(d.min)}" cy="${y}" r="7" fill="${color[p]}"><title>${esc(d.label)} dose ${d.dose}/${d.of} at ${d.hhmm}</title></circle>`;
+      s += `<circle cx="${X(d.min)}" cy="${y}" r="7" fill="${color[p]}"><title>${esc(d.label)} dose ${d.dose}/${d.of} at ${d.hhmm}${(d.pinned_by || []).length ? "
+pinned by:
+" + esc(d.pinned_by.map(x => x.text).join("
+")) : ""}</title></circle>`;
       s += `<text x="${X(d.min)}" y="${y - 11}" text-anchor="middle" fill="${color[p]}" class="mono">${d.hhmm}</text>`;
     });
   });
@@ -384,7 +387,8 @@ function perDose(name) {
 }
 function card(opt) {
   return `<table><thead><tr><th style="width:70px">Time</th><th>What</th></tr></thead><tbody>` + opt.events.map(e =>
-    e.kind === "dose" ? `<tr><td class="mono"><b>${e.hhmm}</b></td><td><b>${esc(e.label)}</b> ${perDose(e.product)}${e.of > 1 ? ` <span class="muted">dose ${e.dose} of ${e.of}</span>` : ""}</td></tr>`
+    e.kind === "dose" ? `<tr><td class="mono"><b>${e.hhmm}</b></td><td><b>${esc(e.label)}</b> ${perDose(e.product)}${e.of > 1 ? ` <span class="muted">dose ${e.dose} of ${e.of}</span>` : ""}${(e.pinned_by || []).length ? `<div class="small muted" title="${esc(e.pinned_by.map(x => x.text).join("
+"))}">pinned by ${e.pinned_by.map(x => esc(x.id)).join(", ")}</div>` : ""}</td></tr>`
                       : `<tr><td class="mono muted">${e.hhmm}</td><td class="muted">${esc(e.label)}</td></tr>`).join("") + "</tbody></table>";
 }
 
