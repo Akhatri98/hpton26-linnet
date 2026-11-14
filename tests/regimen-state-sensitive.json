@@ -1,0 +1,31 @@
+{
+ "name": "random regimen 260",
+ "constructed": true,
+ "items": [
+  {
+   "product": "ciprofloxacin-500mg",
+   "prescribed_count": 2,
+   "every_hours": 12
+  },
+  {
+   "product": "acetaminophen-500-otc",
+   "reported_count": 2
+  },
+  {
+   "product": "nimodipine-30mg-cap",
+   "prescribed_count": 6,
+   "every_hours": 4
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "06:15",
+   "lunch": "12:45",
+   "dinner": "17:45"
+  },
+  "sleep": {
+   "start": "22:30",
+   "end": "05:45"
+  }
+ }
+}

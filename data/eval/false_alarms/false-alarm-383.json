@@ -1,0 +1,29 @@
+{
+ "name": "random regimen 383",
+ "constructed": true,
+ "items": [
+  {
+   "product": "tums-es-750",
+   "reported_count": 3
+  },
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  },
+  {
+   "product": "colestipol-1g-tab",
+   "prescribed_count": 1
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "08:00",
+   "lunch": "12:00",
+   "dinner": "18:30"
+  },
+  "sleep": {
+   "start": "22:45",
+   "end": "07:00"
+  }
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "n": 500,
+ "seed": 1,
+ "grid_minutes": 15,
+ "tiers": {
+  "tier0": 194,
+  "tier2": 78,
+  "strict_only_conflict": 65,
+  "tier1": 163
+ },
+ "greedy": {
+  "ok": 130,
+  "gave_up": 370,
+  "false_alarms": 64,
+  "greedy_ok_linnet_not_tier0": 0
+ },
+ "grid": {
+  "checked": 332,
+  "agree": 274,
+  "off_grid_only": 0,
+  "too_large": 58,
+  "BUGS": []
+ },
+ "conflicts": {
+  "checked": 78,
+  "minimal": 78,
+  "not_minimal": []
+ },
+ "speed_ms": {
+  "median": 67.0,
+  "p95": 437.4,
+  "max": 47311.1
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "name": "random regimen 364 on a real NHANES routine",
+ "constructed": true,
+ "items": [
+  {
+   "product": "ciprofloxacin-500mg",
+   "prescribed_count": 2
+  },
+  {
+   "product": "tums-es-750",
+   "reported_count": 3
+  },
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  },
+  {
+   "product": "acetaminophen-500-otc",
+   "reported_count": 2
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "08:30",
+   "lunch": "11:30",
+   "dinner": "17:00"
+  },
+  "sleep": {
+   "start": "23:00",
+   "end": "07:00"
+  }
+ }
+}

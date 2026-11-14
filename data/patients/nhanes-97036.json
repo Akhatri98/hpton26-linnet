@@ -1,0 +1,22 @@
+{
+ "name": "NHANES #97036",
+ "constructed": false,
+ "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-18 participant SEQN 97036 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency. Also takes, not in LINNET's library so not checked: acyclovir, amoxicillin.",
+ "items": [
+  {
+   "product": "apap-codeine-300-30",
+   "prescribed_count": 3
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "07:00",
+   "lunch": "12:45",
+   "dinner": "17:00"
+  },
+  "sleep": {
+   "start": "23:00",
+   "end": "06:00"
+  }
+ }
+}

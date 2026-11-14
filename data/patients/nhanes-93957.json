@@ -1,0 +1,30 @@
+{
+ "name": "NHANES #93957",
+ "constructed": false,
+ "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-18 participant SEQN 93957 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency. Also takes, not in LINNET's library so not checked: ezetimibe, fluticasone nasal, hydrochlorothiazide, lansoprazole, paroxetine.",
+ "items": [
+  {
+   "product": "apap-codeine-300-30",
+   "prescribed_count": 3
+  },
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  },
+  {
+   "product": "nimodipine-30mg-cap",
+   "prescribed_count": 6
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "11:30",
+   "lunch": "12:30",
+   "dinner": "19:30"
+  },
+  "sleep": {
+   "start": "01:00",
+   "end": "09:00"
+  }
+ }
+}

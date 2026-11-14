@@ -1,0 +1,29 @@
+{
+ "name": "random regimen 325 on a real NHANES routine",
+ "constructed": true,
+ "items": [
+  {
+   "product": "acetaminophen-500-otc",
+   "reported_count": 3
+  },
+  {
+   "product": "colestipol-1g-tab",
+   "prescribed_count": 1
+  },
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "08:30",
+   "lunch": "13:15",
+   "dinner": "18:00"
+  },
+  "sleep": {
+   "start": "00:30",
+   "end": "07:15"
+  }
+ }
+}

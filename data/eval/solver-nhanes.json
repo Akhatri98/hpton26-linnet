@@ -1,0 +1,35 @@
+{
+ "n": 500,
+ "seed": 1,
+ "routines": "NHANES 2017-18 (real)",
+ "grid_minutes": 15,
+ "tiers": {
+  "tier1": 179,
+  "tier2": 93,
+  "tier0": 199,
+  "strict_only_conflict": 29
+ },
+ "greedy": {
+  "ok": 132,
+  "gave_up": 368,
+  "false_alarms": 67,
+  "greedy_ok_linnet_not_tier0": 0
+ },
+ "grid": {
+  "checked": 333,
+  "agree": 265,
+  "off_grid_only": 0,
+  "too_large": 68,
+  "BUGS": []
+ },
+ "conflicts": {
+  "checked": 93,
+  "minimal": 93,
+  "not_minimal": []
+ },
+ "speed_ms": {
+  "median": 60.9,
+  "p95": 415.3,
+  "max": 2092089.0
+ }
+}

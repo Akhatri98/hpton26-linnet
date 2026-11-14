@@ -1,0 +1,33 @@
+{
+ "name": "random regimen 114",
+ "constructed": true,
+ "items": [
+  {
+   "product": "acetaminophen-500-otc",
+   "reported_count": 2
+  },
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  },
+  {
+   "product": "colestipol-1g-tab",
+   "prescribed_count": 2
+  },
+  {
+   "product": "tums-es-750",
+   "reported_count": 2
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "09:45",
+   "lunch": "13:15",
+   "dinner": "17:30"
+  },
+  "sleep": {
+   "start": "23:30",
+   "end": "08:30"
+  }
+ }
+}

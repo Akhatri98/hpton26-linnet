@@ -1,0 +1,25 @@
+{
+ "name": "random regimen 8 on a real NHANES routine",
+ "constructed": true,
+ "items": [
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  },
+  {
+   "product": "tums-es-750",
+   "reported_count": 3
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "07:00",
+   "lunch": "13:30",
+   "dinner": "20:00"
+  },
+  "sleep": {
+   "start": "23:30",
+   "end": "06:00"
+  }
+ }
+}

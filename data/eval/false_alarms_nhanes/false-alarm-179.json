@@ -1,0 +1,25 @@
+{
+ "name": "random regimen 179 on a real NHANES routine",
+ "constructed": true,
+ "items": [
+  {
+   "product": "colestipol-1g-tab",
+   "prescribed_count": 2
+  },
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "10:00",
+   "lunch": "14:30",
+   "dinner": "21:00"
+  },
+  "sleep": {
+   "start": "23:00",
+   "end": "05:30"
+  }
+ }
+}

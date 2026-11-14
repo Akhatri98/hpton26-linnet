@@ -31,10 +31,8 @@ from pydantic import BaseModel, ValidationError
 from library.load import load
 from library.store import LocalJsonStore
 
-from .baseline import run_greedy
+from . import isolated
 from .patient import Patient
-from .serialize import report_json
-from .tiers import run
 
 DATA = Path(os.environ.get("LINNET_DATA", "data"))
 WEB = Path(__file__).resolve().parent.parent / "web"
@@ -64,7 +62,9 @@ def patients():
     out = []
     for f in sorted((DATA / "patients").glob("*.json")):
         d = json.loads(f.read_text(encoding="utf-8"))
-        out.append({"id": f.stem, "name": d["name"]})
+        group = "From NHANES 2017-18 (real routine and medications)" if f.stem.startswith("nhanes-") else "Demo patients"
+        out.append({"id": f.stem, "name": d["name"], "group": group})
+    out.sort(key=lambda p: (p["group"] != "Demo patients", p["id"]))
     return out
 
 
@@ -86,9 +86,11 @@ def check(body: dict, compare: bool = True):
     unknown = [it.product for it in p.items if it.product not in lib.products]
     if unknown:
         raise HTTPException(422, [{"where": "items", "problem": f"not in the library: {u}"} for u in unknown])
-    report = run(lib, p, timeout_ms=TIMEOUT_MS)
-    g = run_greedy(lib, p) if compare else None
-    return report_json(report, lib, g)
+    try:
+        # Fresh worker process per check: identical results every run, and a hard time limit.
+        return isolated.check(p.model_dump(mode="json"), DATA, compare)
+    except isolated.CheckTimeout as e:
+        raise HTTPException(504, [{"where": "solver", "problem": str(e)}])
 
 
 def _extracted():

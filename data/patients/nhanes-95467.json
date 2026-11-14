@@ -1,0 +1,22 @@
+{
+ "name": "NHANES #95467",
+ "constructed": false,
+ "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-18 participant SEQN 95467 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency. Also takes, not in LINNET's library so not checked: benzonatate, conjugated estrogens, cyclobenzaprine, fesoterodine, formoterol; mometasone, furosemide, hydroxyzine, lamotrigine, lidocaine topical, lorazepam, memantine, olmesartan, olopatadine ophthalmic, omeprazole, promethazine, propranolol, rivastigmine, rosuvastatin.",
+ "items": [
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "07:00",
+   "lunch": "11:30",
+   "dinner": "17:30"
+  },
+  "sleep": {
+   "start": "23:00",
+   "end": "06:30"
+  }
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "name": "random regimen 381 on a real NHANES routine",
+ "constructed": true,
+ "items": [
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  },
+  {
+   "product": "ciprofloxacin-500mg",
+   "prescribed_count": 2
+  },
+  {
+   "product": "acetaminophen-500-otc",
+   "reported_count": 3
+  },
+  {
+   "product": "colestipol-1g-tab",
+   "prescribed_count": 1
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "10:00",
+   "lunch": "13:00",
+   "dinner": "19:30"
+  },
+  "sleep": {
+   "start": "21:30",
+   "end": "08:30"
+  }
+ }
+}

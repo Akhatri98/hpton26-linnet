@@ -115,7 +115,7 @@ def report_json(report: Report, lib: Library, baseline=None) -> dict:
         "tier": report.tier,
         "outcome": report.outcome,
         "headline": HEAD[report.outcome],
-        "patient": {"name": p.name, "constructed": p.constructed},
+        "patient": {"name": p.name, "constructed": p.constructed, "note": p.note},
         "options": [_option(o, lib) for o in report.options],
         "rules_applied": _rules_applied(report, lib) if report.built and report.outcome in ("tier0", "tier1") else [],
         "conflicts": _conflicts(report, lib) if report.conflicts else [],

@@ -1,0 +1,425 @@
+{
+ ".": {
+  "exact": 8,
+  "partial": 1,
+  "missed": 1,
+  "extra": 0,
+  "prov_agree": 9,
+  "prov_total": 9,
+  "proposed": 53,
+  "rejected": 3,
+  "reject_reasons": {
+   "number(s) not stated": 1,
+   "number not stated": 2
+  },
+  "missed_surfaced": 1,
+  "parse_errors": 0,
+  "members_found": 1,
+  "members_missed": 2,
+  "members_extra": 0,
+  "dosing_rows": 28,
+  "limits_rows": 11,
+  "answers": 21,
+  "labels": {
+   "nimodipine": {
+    "exact": [
+     "nimodipine-q4h",
+     "nimodipine-meals"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "colestipol": {
+    "exact": [
+     "colestipol-other-drugs"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "levothyroxine": {
+    "exact": [
+     "levo-breakfast"
+    ],
+    "partial": [],
+    "missed": [
+     "levo-interfering"
+    ],
+    "extra": []
+   },
+   "ciprofloxacin": {
+    "exact": [
+     "cipro-cations"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "calcium_carbonate": {
+    "exact": [],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "acetaminophen": {
+    "exact": [
+     "apap-q6h-otc",
+     "apap-max-otc"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "acetaminophen-codeine": {
+    "exact": [
+     "apap-q4h-rx"
+    ],
+    "partial": [
+     "apap-max-rx"
+    ],
+    "missed": [],
+    "extra": []
+   }
+  }
+ },
+ "claude-haiku-5-5": {
+  "exact": 8,
+  "partial": 1,
+  "missed": 1,
+  "extra": 1,
+  "prov_agree": 9,
+  "prov_total": 9,
+  "proposed": 72,
+  "rejected": 2,
+  "reject_reasons": {
+   "target '*' (every other drug) but": 1,
+   "number(s) not stated": 1
+  },
+  "missed_surfaced": 1,
+  "parse_errors": 0,
+  "members_found": 1,
+  "members_missed": 2,
+  "members_extra": 4,
+  "dosing_rows": 29,
+  "limits_rows": 24,
+  "answers": 21,
+  "labels": {
+   "nimodipine": {
+    "exact": [
+     "nimodipine-q4h",
+     "nimodipine-meals"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "colestipol": {
+    "exact": [
+     "colestipol-other-drugs"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "levothyroxine": {
+    "exact": [
+     "levo-breakfast"
+    ],
+    "partial": [],
+    "missed": [
+     "levo-interfering"
+    ],
+    "extra": []
+   },
+   "ciprofloxacin": {
+    "exact": [
+     "cipro-cations"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": [
+     "ciprofloxacin-min-interval-12h"
+    ]
+   },
+   "calcium_carbonate": {
+    "exact": [],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "acetaminophen": {
+    "exact": [
+     "apap-q6h-otc"
+    ],
+    "partial": [
+     "apap-max-otc"
+    ],
+    "missed": [],
+    "extra": []
+   },
+   "acetaminophen-codeine": {
+    "exact": [
+     "apap-q4h-rx",
+     "apap-max-rx"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   }
+  }
+ },
+ "sim-haiku-a": {
+  "exact": 9,
+  "partial": 0,
+  "missed": 1,
+  "extra": 1,
+  "prov_agree": 9,
+  "prov_total": 9,
+  "proposed": 63,
+  "rejected": 5,
+  "reject_reasons": {
+   "target '*' (every other drug) but": 1,
+   "number(s) not stated": 2,
+   "number not stated": 2
+  },
+  "missed_surfaced": 1,
+  "parse_errors": 0,
+  "members_found": 0,
+  "members_missed": 3,
+  "members_extra": 3,
+  "dosing_rows": 30,
+  "limits_rows": 14,
+  "answers": 21,
+  "labels": {
+   "nimodipine": {
+    "exact": [
+     "nimodipine-q4h",
+     "nimodipine-meals"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "colestipol": {
+    "exact": [
+     "colestipol-other-drugs"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "levothyroxine": {
+    "exact": [
+     "levo-breakfast"
+    ],
+    "partial": [],
+    "missed": [
+     "levo-interfering"
+    ],
+    "extra": []
+   },
+   "ciprofloxacin": {
+    "exact": [
+     "cipro-cations"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": [
+     "ciprofloxacin-min-interval-12h"
+    ]
+   },
+   "calcium_carbonate": {
+    "exact": [],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "acetaminophen": {
+    "exact": [
+     "apap-q6h-otc",
+     "apap-max-otc"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "acetaminophen-codeine": {
+    "exact": [
+     "apap-q4h-rx",
+     "apap-max-rx"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   }
+  }
+ },
+ "sim-haiku-b": {
+  "exact": 9,
+  "partial": 0,
+  "missed": 1,
+  "extra": 1,
+  "prov_agree": 9,
+  "prov_total": 9,
+  "proposed": 58,
+  "rejected": 3,
+  "reject_reasons": {
+   "target '*' (every other drug) but": 1,
+   "number not stated": 2
+  },
+  "missed_surfaced": 1,
+  "parse_errors": 0,
+  "members_found": 0,
+  "members_missed": 3,
+  "members_extra": 3,
+  "dosing_rows": 29,
+  "limits_rows": 12,
+  "answers": 21,
+  "labels": {
+   "nimodipine": {
+    "exact": [
+     "nimodipine-q4h",
+     "nimodipine-meals"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "colestipol": {
+    "exact": [
+     "colestipol-other-drugs"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "levothyroxine": {
+    "exact": [
+     "levo-breakfast"
+    ],
+    "partial": [],
+    "missed": [
+     "levo-interfering"
+    ],
+    "extra": []
+   },
+   "ciprofloxacin": {
+    "exact": [
+     "cipro-cations"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": [
+     "ciprofloxacin-interval-12h"
+    ]
+   },
+   "calcium_carbonate": {
+    "exact": [],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "acetaminophen": {
+    "exact": [
+     "apap-q6h-otc",
+     "apap-max-otc"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "acetaminophen-codeine": {
+    "exact": [
+     "apap-q4h-rx",
+     "apap-max-rx"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   }
+  }
+ },
+ "sim-sonnet": {
+  "exact": 10,
+  "partial": 0,
+  "missed": 0,
+  "extra": 0,
+  "prov_agree": 9,
+  "prov_total": 10,
+  "proposed": 53,
+  "rejected": 2,
+  "reject_reasons": {
+   "number(s) not stated": 1,
+   "number not stated": 1
+  },
+  "missed_surfaced": 0,
+  "parse_errors": 0,
+  "members_found": 0,
+  "members_missed": 3,
+  "members_extra": 4,
+  "dosing_rows": 24,
+  "limits_rows": 13,
+  "answers": 21,
+  "labels": {
+   "nimodipine": {
+    "exact": [
+     "nimodipine-q4h",
+     "nimodipine-meals"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "colestipol": {
+    "exact": [
+     "colestipol-other-drugs"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "levothyroxine": {
+    "exact": [
+     "levo-interfering",
+     "levo-breakfast"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "ciprofloxacin": {
+    "exact": [
+     "cipro-cations"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "calcium_carbonate": {
+    "exact": [],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "acetaminophen": {
+    "exact": [
+     "apap-q6h-otc",
+     "apap-max-otc"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   },
+   "acetaminophen-codeine": {
+    "exact": [
+     "apap-q4h-rx",
+     "apap-max-rx"
+    ],
+    "partial": [],
+    "missed": [],
+    "extra": []
+   }
+  }
+ }
+}

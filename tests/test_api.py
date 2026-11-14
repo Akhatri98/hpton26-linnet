@@ -68,3 +68,12 @@ def test_verify_writes_json_and_round_trips(client):
     items = {i["id"]: i for i in client.get("/api/library").json()["items"]}
     assert items["product:nimodipine-30mg-cap"]["verified"] is True
     assert client.post("/api/library/verify", json={"id": "nope", "verified": True}).status_code == 404
+
+
+def test_same_patient_same_answer_every_time(client):
+    # Each check runs in a fresh worker process, so earlier solves cannot change the result.
+    p = json.loads((Path(__file__).parent / "regimen-state-sensitive.json").read_text(encoding="utf-8"))
+    first = client.post("/api/check", json=p).json()
+    for _ in range(2):
+        assert client.post("/api/check", json=p).json() == first
+    assert first["outcome"] == "tier1" and len(first["options"]) == 3

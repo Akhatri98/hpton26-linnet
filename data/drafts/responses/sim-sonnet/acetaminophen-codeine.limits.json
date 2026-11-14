@@ -1,0 +1,36 @@
+{
+ "limits": [
+  {
+   "kind": "per_day",
+   "amount": 4000,
+   "unit": "mg",
+   "population": "adults",
+   "sentence": "S18",
+   "provenance": "quoted"
+  },
+  {
+   "kind": "per_day",
+   "amount": 360,
+   "unit": "mg",
+   "population": "adults",
+   "sentence": "S9",
+   "provenance": "quoted"
+  },
+  {
+   "kind": "per_dose",
+   "amount": 1000,
+   "unit": "mg",
+   "population": "adults",
+   "sentence": "S9",
+   "provenance": "quoted"
+  },
+  {
+   "kind": "per_dose",
+   "amount": 60,
+   "unit": "mg",
+   "population": "adults",
+   "sentence": "S9",
+   "provenance": "quoted"
+  }
+ ]
+}

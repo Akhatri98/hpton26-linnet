@@ -221,3 +221,5 @@ __marimo__/
 
 # Mine
 /documents
+# NHANES raw downloads (large, public, re-downloadable)
+/data/nhanes/raw/

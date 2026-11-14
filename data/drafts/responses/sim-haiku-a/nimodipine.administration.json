@@ -1,0 +1,7 @@
+{
+  "rules": [
+    {"id": "nimodipine-min-interval-4h", "family": "min_interval", "hours": 4, "sentence": "S1", "provenance": "quoted", "note": "60 mg every 4 hours for 21 consecutive days"},
+    {"id": "nimodipine-food-empty-stomach", "family": "food", "mode": "empty_stomach", "before_meal": 1, "after_meal": 2, "meal": null, "sentence": "S2", "provenance": "interpreted", "loosest": {"before_meal": 0, "after_meal": 0}, "note": "swallow whole, preferably not less than 1 h before or 2 h after meals"}
+  ],
+  "memberships": []
+}

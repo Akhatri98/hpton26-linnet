@@ -1,0 +1,22 @@
+{
+ "name": "NHANES #101640",
+ "constructed": false,
+ "note": "Routine (usual sleep and wake, and meal times on the recall day) and prescription list from NHANES 2017-18 participant SEQN 101640 (CDC, public, de-identified). Doses per day are each label's usual regimen; NHANES does not record frequency. Also takes, not in LINNET's library so not checked: amitriptyline, ibuprofen, pentosan polysulfate sodium.",
+ "items": [
+  {
+   "product": "ciprofloxacin-500mg",
+   "prescribed_count": 2
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "09:00",
+   "lunch": "11:00",
+   "dinner": "17:00"
+  },
+  "sleep": {
+   "start": "00:00",
+   "end": "07:00"
+  }
+ }
+}

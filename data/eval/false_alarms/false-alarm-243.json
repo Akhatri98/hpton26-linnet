@@ -1,0 +1,33 @@
+{
+ "name": "random regimen 243",
+ "constructed": true,
+ "items": [
+  {
+   "product": "colestipol-1g-tab",
+   "prescribed_count": 1
+  },
+  {
+   "product": "ciprofloxacin-500mg",
+   "prescribed_count": 2
+  },
+  {
+   "product": "tums-es-750",
+   "reported_count": 3
+  },
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "08:00",
+   "lunch": "13:15",
+   "dinner": "18:45"
+  },
+  "sleep": {
+   "start": "23:15",
+   "end": "07:30"
+  }
+ }
+}

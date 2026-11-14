@@ -1,0 +1,25 @@
+{
+ "name": "random regimen 216",
+ "constructed": true,
+ "items": [
+  {
+   "product": "colestipol-1g-tab",
+   "prescribed_count": 1
+  },
+  {
+   "product": "levothyroxine-100mcg",
+   "prescribed_count": 1
+  }
+ ],
+ "routine": {
+  "meals": {
+   "breakfast": "08:45",
+   "lunch": "13:30",
+   "dinner": "18:00"
+  },
+  "sleep": {
+   "start": "23:30",
+   "end": "08:00"
+  }
+ }
+}
