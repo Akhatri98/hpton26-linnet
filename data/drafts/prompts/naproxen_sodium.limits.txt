@@ -1,0 +1,31 @@
+You are extracting LIMITS from an FDA drug label for a pharmacist's tool.
+
+Ingredient: naproxen_sodium
+Label set id: 02941928-128a-2c88-e063-6294a90ac6ba
+Active ingredients on this label: naproxen sodium
+Strengths this label comes in (read from the label by code): 220 mg
+
+Numbered sentences from the label:
+S1 [dosage and administration] Directions do not take more than directed the smallest effective dose should be used drink a full glass of water with each dose Adults and children 12 years and older take 1 caplet every 8 to 12 hours while symptoms last for the first dose you may take 2 caplets within the first hour do not exceed 2 caplets in any 8- to 12-hour period do not exceed 3 caplets in a 24-hour period Children under 12 years ask a doctor
+S2 [warnings] The chance is higher if you: are age 60 or older have had stomach ulcers or bleeding problems take a blood thinning (anticoagulant) or steroid drug take other drugs containing prescription or nonprescription NSAIDs (aspirin, ibuprofen, naproxen, or others) have 3 or more alcoholic drinks every day while using this product take more or for a longer time than directed Heart attack and stroke warning: NSAIDs, except aspirin, increase the risk of heart attack, heart failure, and stroke.
+S3 [warnings] The risk is higher if you use more than directed or for longer than directed.
+S4 [warnings] Do not use if you have ever had an allergic reaction to any other pain reliever/fever reducer right before or after heart surgery Ask a doctor before use if the stomach bleeding warning applies to you you have a history of stomach problems, such as heartburn you have high blood pressure, heart disease, liver cirrhosis, kidney disease, asthma, or had a stroke you are taking a diuretic you have problems or serious side effects from taking pain relievers or fever reducers Ask a doctor or pharmacist before use if you are under a doctor's care for any serious conidtion taking aspirin for heart attack or stroke, because naproxen may decrease this benefit of aspirin taking any other drug When using this product take with food or milk if stomach upset occurs Stop use and ask a doctor if you experience any of the following signs of stomach bleeding: feel faint vomit blood have bloody or black stools have stomach pain that does not get better you have symptoms of heart problems or stroke: chest pain trouble breathing weakness in one part or side of body slurred speech leg swelling pain gets worse or lasts more than 10 days fever gets worse or lasts more than 3 days you have difficulty swallowing it feels like the pill is stuck in your throat redness or swelling is present in the painful area any new symptoms appear If pregnant or breast-feeding , ask a healthcare professional before use.
+S5 [do not use] Do not use if you have ever had an allergic reaction to any other pain reliever/fever reducer right before or after heart surgery
+S6 [active ingredient] Active ingredient (in each caplet) Naproxen sodium 220 mg (naproxen 200 mg) (NSAID) *nonsteroidal anti-inflammatory drug
+
+Return ONLY a JSON object {"limits": [ ... ]}. One row per limit the label states. Each row:
+  {"kind": "per_dose" | "per_day" | "duration_days",
+   "amount": N, "unit": "mg" | "g" | "mcg" | "tablets" | "caplets" | "capsules" | "doses" | "days",
+   "ingredient": "which active ingredient the amount is of (one of the list above)", or null when there is only one,
+   "strength": "the strength the limit is for, e.g. '300 mg/60 mg'", or null if it applies to all strengths,
+   "population": "adults" | "children" | "pregnant" | "general" | ...,
+   "condition": "what it is for, if the limit depends on it (e.g. 'complicated UTI')", or null,
+   "sentence": "Sk", "provenance": "quoted" | "interpreted"}
+Rules:
+- Starting doses, titration steps and per-kg doses are not limits.
+- On a label with more than one active ingredient, every limit in mg, mcg or g MUST name its "ingredient".
+- A limit counted in tablets, caplets or capsules on a label with more than one strength MUST name its "strength".
+Examples: "do not take more than 6 caplets in 24 hours" -> per_day, 6, caplets.
+"more than 4,000 mg of acetaminophen in 24 hours" -> per_day, 4000, mg, ingredient "acetaminophen".
+"do not use for more than 10 days" -> duration_days, 10, days.
+Use only numbers stated in the cited sentence. Cite exactly one sentence id per row; do not copy text.

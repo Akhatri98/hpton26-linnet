@@ -1,0 +1,54 @@
+You are extracting LIMITS from an FDA drug label for a pharmacist's tool.
+
+Ingredient: ibandronate
+Label set id: 86c0b4ae-5e38-4efe-88af-50ac560e294f
+Active ingredients on this label: ibandronate sodium
+Strengths this label comes in (read from the label by code): 150 mg
+
+Numbered sentences from the label:
+S1 [dosage and administration] 2 DOSAGE AND ADMINISTRATION Take one 150 mg tablet once monthly on the same day each month ( 2.1 ) Instruct patient to: ( 2.2 ) Swallow whole tablet with 6 to 8 oz of plain water only, at least 60 minutes before the first food, beverage, or medication of day.
+S2 [dosage and administration] Avoid lying down for at least 60 minutes after taking ibandronate sodium tablets.
+S3 [dosage and administration] Do not eat, drink (except for water), or take other medication for 60 minutes after taking ibandronate sodium tablets.
+S4 [dosage and administration] Take supplemental calcium and vitamin D if dietary intake inadequate ( 2.3 ) 2.1 Dosage Information The dose of ibandronate sodium is one 150 mg tablet taken once monthly on the same date each month.
+S5 [dosage and administration] 2.2 Important Administration Instructions Instruct Patients to do the following: Take ibandronate sodium tablets at least 60 minutes before the first food or drink (other than water) of the day or before taking any oral medication or supplementation, including calcium, antacids, or vitamins to maximize absorption and clinical benefit, (see DRUG INTERACTIONS [7.1] ) .
+S6 [dosage and administration] Avoid lying down for 60 minutes after taking ibandronate sodium tablets (see WARNINGS AND PRECAUTIONS [5.1] ) .
+S7 [dosage and administration] Do not eat, drink anything except plain water, or take other medications for at least 60 minutes after taking ibandronate sodium tablets.
+S8 [dosage and administration] Avoid the use of calcium supplements within 60 minutes of ibandronate sodium tablets administration because co-administration of ibandronate sodium tablets and calcium may interfere with the absorption of ibandronate sodium (see DRUG INTERACTIONS [7.1] ) .
+S9 [dosage and administration] 2.4 Administration Instructions for Missed Once-Monthly Doses If the once-monthly dose is missed, instruct patients to do the following: If the next scheduled ibandronate sodium tablets day is more than 7 days away, take one ibandronate sodium tablet 150 mg (ibandronate) in the morning following the date that it is remembered.
+S10 [dosage and administration] If the next scheduled ibandronate sodium tablets day is only 1 to 7 days away, wait until the subsequent month’s scheduled ibandronate sodium tablets day to take their tablet.
+S11 [dosage and administration] For subsequent monthly doses for both of the above scenarios, instruct patients to return to their original schedule by taking one ibandronate sodium tablet 150 mg (ibandronate) every month on their previous chosen day.
+S12 [drug interactions] Do not take within 60 minutes of dosing.
+S13 [drug interactions] Therefore, instruct patients to take ibandronate sodium at least 60 minutes before any oral medications, including medications containing multivalent cations (such as antacids, supplements or vitamins).
+S14 [drug interactions] Also, patients should wait at least 60 minutes after dosing before taking any other oral medications (see Dosage and Administration [2.3] ) .
+S15 [warnings and cautions] Correct hypocalcemia before use.
+S16 [warnings and cautions] The risk of severe esophageal adverse experiences appears to be greater in patients who lie down after taking oral bisphosphonates and/or who fail to swallow it with the recommended full glass (6 to 8 oz) of water, and/or who continue to take oral bisphosphonates after developing symptoms suggestive of esophageal irritation.
+S17 [warnings and cautions] Treat hypocalcemia and other disturbances of bone and mineral metabolism before starting ibandronate sodium therapy.
+S18 [warnings and cautions] The time to onset of symptoms varied from one day to several months after starting the drug.
+S19 [warnings and cautions] Most patients had relief of symptoms after stopping.
+S20 [warnings and cautions] Prodromal pain in the affected area, usually presenting as dull, aching thigh pain, weeks to months before a complete fracture occurs was reported by patients.
+S21 [warnings and cautions] Risk/benefit of continuing bisphosphonate therapy should be re-evaluated in these patients and interruption of bisphosphonate therapy should be considered.
+S22 [warnings and cautions] 5.6 Severe Renal Impairment Ibandronate sodium is not recommended for use in patients with severe renal impairment (creatinine clearance of less than 30 mL/min).
+S23 [dosage forms and strengths] 3 DOSAGE FORMS AND STRENGTHS Ibandronate sodium tablets, 150 mg: white to off-white, film-coated, caplet shaped, biconvex tablets debossed with ‘X’ on one side and ‘78’ on the other side.
+S24 [dosage forms and strengths] Tablets: 150 mg (3)
+S25 [how supplied] 16 HOW SUPPLIED/STORAGE AND HANDLING 16.1 How Supplied Ibandronate Sodium Tablets, 150 mg ( ibandronate) are white to off-white, film-coated, caplet shaped, biconvex tablets debossed with ‘X’ on one side and ‘78’ on the other side.
+S26 [how supplied] Carton of 1 Blister Pack Containing 3 Tablets NDC 65862-237-03 16.2 Storage and Handling Store at 20° to 25°C (68° to 77°F) [see USP Controlled Room Temperature].
+S27 [description] It is freely soluble in water and practically insoluble in organic solvents.
+S28 [description] Ibandronate sodium has the following structural formula: Ibandronate sodium is available as a white to off-white, caplet shaped, 150 mg film-coated tablet for once-monthly oral administration.
+S29 [description] One 150 mg film-coated tablet contains 168.795 mg ibandronate sodium monohydrate, equivalent to 150 mg free acid.
+
+Return ONLY a JSON object {"limits": [ ... ]}. One row per limit the label states. Each row:
+  {"kind": "per_dose" | "per_day" | "duration_days",
+   "amount": N, "unit": "mg" | "g" | "mcg" | "tablets" | "caplets" | "capsules" | "doses" | "days",
+   "ingredient": "which active ingredient the amount is of (one of the list above)", or null when there is only one,
+   "strength": "the strength the limit is for, e.g. '300 mg/60 mg'", or null if it applies to all strengths,
+   "population": "adults" | "children" | "pregnant" | "general" | ...,
+   "condition": "what it is for, if the limit depends on it (e.g. 'complicated UTI')", or null,
+   "sentence": "Sk", "provenance": "quoted" | "interpreted"}
+Rules:
+- Starting doses, titration steps and per-kg doses are not limits.
+- On a label with more than one active ingredient, every limit in mg, mcg or g MUST name its "ingredient".
+- A limit counted in tablets, caplets or capsules on a label with more than one strength MUST name its "strength".
+Examples: "do not take more than 6 caplets in 24 hours" -> per_day, 6, caplets.
+"more than 4,000 mg of acetaminophen in 24 hours" -> per_day, 4000, mg, ingredient "acetaminophen".
+"do not use for more than 10 days" -> duration_days, 10, days.
+Use only numbers stated in the cited sentence. Cite exactly one sentence id per row; do not copy text.

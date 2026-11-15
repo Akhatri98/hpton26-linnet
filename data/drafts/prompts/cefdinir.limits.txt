@@ -1,0 +1,62 @@
+You are extracting LIMITS from an FDA drug label for a pharmacist's tool.
+
+Ingredient: cefdinir
+Label set id: 10bf69e7-5f7e-4448-9f22-777f137d9666
+Active ingredients on this label: cefdinir
+Strengths this label comes in (read from the label by code): (none found)
+
+Numbered sentences from the label:
+S1 [dosage and administration] DOSAGE & ADMINISTRATION (see INDICATIONS AND USAGE for Indicated Pathogens) The recommended dosage and duration of treatment for infections in adults and adolescents are described in the following chart;
+S2 [dosage and administration] the total daily dose for all infections is 600 mg.
+S3 [dosage and administration] Once-daily dosing for 10 days is as effective as b.i.d.
+S4 [dosage and administration] Once-daily dosing has not been studied in pneumonia or skin infections;
+S5 [dosage and administration] therefore, cefdinir capsules should be administered twice daily in these infections.
+S6 [dosage and administration] Cefdinir capsules may be taken without regard to meals.
+S7 [dosage and administration] Adults and Adolescents (Age 13 Years and Older) Type of Infection Dosage Duration Community-Acquired Pneumonia 300 mg q12h 10 days Acute Exacerbations of Chronic Bronchitis 300 mg q12h or 600 mg q24h 5 to 10 days 10 days Acute Maxillary Sinusitis 300 mg q12h or 600 mg q24h 10 days 10 days Pharyngitis/Tonsillitis 300 mg q12h or 600 mg q24h 5 to 10 days 10 days Uncomplicated Skin and Skin Structure Infections 300 mg q12h 10 days Patients with Renal Insufficiency For adult patients with creatinine clearance < 30 mL/min, the dose of cefdinir should be 300 mg given once daily.
+S8 [dosage and administration] 3 In the above equation, creatinine clearance is in mL/min/1.73 m 2 , body length or height is in centimeters, and serum creatinine is in mg/dL.
+S9 [dosage and administration] For pediatric patients with a creatinine clearance of < 30 mL/min/1.73 m 2 , the dose of cefdinir should be 7 mg/kg (up to 300 mg) given once daily.
+S10 [dosage and administration] Patients on Hemodialysis Hemodialysis removes cefdinir from the body.
+S11 [dosage and administration] In patients maintained on chronic hemodialysis, the recommended initial dosage regimen is a 300 mg or 7 mg/kg dose every other day.
+S12 [dosage and administration] At the conclusion of each hemodialysis session, 300 mg (or 7 mg/kg) should be given.
+S13 [dosage and administration] Subsequent doses (300 mg or 7 mg/kg) are then administered every other day.
+S14 [drug interactions] DRUG INTERACTIONS Antacids (Aluminum- or Magnesium-Containing) Concomitant administration of 300 mg cefdinir capsules with 30 mL Maalox ® TC suspension reduces the rate (C max ) and extent (AUC) of absorption by approximately 40%.
+S15 [drug interactions] Time to reach C max is also prolonged by 1 hour.
+S16 [drug interactions] There are no significant effects on cefdinir pharmacokinetics if the antacid is administered 2 hours before or 2 hours after cefdinir.
+S17 [drug interactions] If antacids are required during cefdinir capsule therapy, cefdinir should be taken at least 2 hours before or after the antacid.
+S18 [drug interactions] Probenecid As with other β-lactam antibiotics, probenecid inhibits the renal excretion of cefdinir, resulting in an approximate doubling in AUC, a 54% increase in peak cefdinir plasma levels, and a 50% prolongation in the apparent elimination t 1/2 .
+S19 [drug interactions] Iron Supplements and Foods Fortified With Iron Concomitant administration of cefdinir with a therapeutic iron supplement containing 60 mg of elemental iron (as FeSO 4 ) or vitamins supplemented with 10 mg of elemental iron reduced extent of absorption by 80% and 31%, respectively.
+S20 [drug interactions] If iron supplements are required during cefdinir therapy, cefdinir should be taken at least 2 hours before or after the supplement.
+S21 [drug interactions] The effect of foods highly fortified with elemental iron (primarily iron-fortified breakfast cereals) on cefdinir absorption has not been studied.
+S22 [precautions] Cefdinir, as with other broad-spectrum antimicrobials (antibiotics), should be prescribed with caution in individuals with a history of colitis.
+S23 [precautions] In patients with transient or persistent renal insufficiency (creatinine clearance < 30 mL/min), the total daily dose of cefdinir should be reduced because high and prolonged plasma concentrations of cefdinir can result following recommended doses (see DOSAGE AND ADMINISTRATION ).
+S24 [precautions] If this type of antacid is required during cefdinir therapy, cefdinir should be taken at least 2 hours before or after the antacid.
+S25 [precautions] Sometimes after starting treatment with antibiotics, patients can develop watery and bloody stools (with or without stomach cramps and fever) even as late as two or more months after having taken the last dose of the antibiotic.
+S26 [precautions] No clastogenic effects were observed in vitro in the structural chromosome aberration assay in V79 Chinese hamster lung cells or in vivo in the micronucleus assay in mouse bone marrow.
+S27 [precautions] In rats, fertility and reproductive performance were not affected by cefdinir at oral doses up to 1000 mg/kg/day (70 times the human dose based on mg/kg/day, 11 times based on mg/m 2 /day).
+S28 [precautions] PREGNANCY Teratogenic Effects Pregnancy Category B Cefdinir was not teratogenic in rats at oral doses up to 1000 mg/kg/day (70 times the human dose based on mg/kg/day, 11 times based on mg/m 2 /day) or in rabbits at oral doses up to 10 mg/kg/day (0.7 times the human dose based on mg/kg/day, 0.23 times based on mg/m 2 /day).
+S29 [precautions] Maternal toxicity (decreased body weight gain) was observed in rabbits at the maximum tolerated dose of 10 mg/kg/day without adverse effects on offspring.
+S30 [precautions] Decreased body weight occurred in rat fetuses at ≥ 100 mg/kg/day, and in rat offspring at ≥ 32 mg/kg/day.
+S31 [precautions] LABOR & DELIVERY Cefdinir has not been studied for use during labor and delivery.
+S32 [precautions] NURSING MOTHERS Following administration of single 600 mg doses, cefdinir was not detected in human breast milk.
+S33 [warnings] WARNINGS BEFORE THERAPY WITH CEFDINIR IS INSTITUTED, CAREFUL INQUIRY SHOULD BE MADE TO DETERMINE WHETHER THE PATIENT HAS HAD PREVIOUS HYPERSENSITIVITY REACTIONS TO CEFDINIR, OTHER CEPHALOSPORINS, PENICILLINS, OR OTHER DRUGS.
+S34 [warnings] Careful medical history is necessary since CDAD has been reported to occur over two months after the administration of antibacterial agents.
+S35 [how supplied] HOW SUPPLIED Product: 50090-6042 NDC: 50090-6042-0 20 CAPSULE in a BOTTLE NDC: 50090-6042-1 14 CAPSULE in a BOTTLE
+S36 [description] It is slightly soluble in dilute hydrochloric acid and sparingly soluble in 0.1 M pH 7.0 phosphate buffer.The empirical formula is C 14 H 13 N 5 O 5 S 2 and the molecular weight is 395.42.
+S37 [description] Cefdinir has the structural formula shown below: Cefdinir capsules, USP contain 300 mg cefdinir and the following inactive ingredients: carboxymethylcellulose calcium, polyoxyl 40 stearate, colloidal silicone dioxide and magnesium stearate.
+
+Return ONLY a JSON object {"limits": [ ... ]}. One row per limit the label states. Each row:
+  {"kind": "per_dose" | "per_day" | "duration_days",
+   "amount": N, "unit": "mg" | "g" | "mcg" | "tablets" | "caplets" | "capsules" | "doses" | "days",
+   "ingredient": "which active ingredient the amount is of (one of the list above)", or null when there is only one,
+   "strength": "the strength the limit is for, e.g. '300 mg/60 mg'", or null if it applies to all strengths,
+   "population": "adults" | "children" | "pregnant" | "general" | ...,
+   "condition": "what it is for, if the limit depends on it (e.g. 'complicated UTI')", or null,
+   "sentence": "Sk", "provenance": "quoted" | "interpreted"}
+Rules:
+- Starting doses, titration steps and per-kg doses are not limits.
+- On a label with more than one active ingredient, every limit in mg, mcg or g MUST name its "ingredient".
+- A limit counted in tablets, caplets or capsules on a label with more than one strength MUST name its "strength".
+Examples: "do not take more than 6 caplets in 24 hours" -> per_day, 6, caplets.
+"more than 4,000 mg of acetaminophen in 24 hours" -> per_day, 4000, mg, ingredient "acetaminophen".
+"do not use for more than 10 days" -> duration_days, 10, days.
+Use only numbers stated in the cited sentence. Cite exactly one sentence id per row; do not copy text.

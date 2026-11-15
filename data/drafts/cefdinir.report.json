@@ -1,0 +1,15 @@
+{
+  "model": "claude-haiku-5-5",
+  "accepted_rules": 3,
+  "accepted_memberships": [
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "iron",
+      "provenance": "quoted",
+      "basis": "If iron supplements are required during cefdinir therapy, cefdinir should be taken at least 2 hours before or after the supplement.",
+      "source_spl": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+      "verified": false
+    }
+  ],
+  "rejected": []
+}

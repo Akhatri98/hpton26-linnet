@@ -1,0 +1,715 @@
+{
+  "ingredient": "tramadol",
+  "spl_set_id": "007bf37f-0e46-426a-ac8c-be63d4b7414c",
+  "model": "claude-haiku-5-5",
+  "label_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=007bf37f-0e46-426a-ac8c-be63d4b7414c",
+  "strengths": [],
+  "substances": [
+    "tramadol hydrochloride"
+  ],
+  "dosing": [
+    {
+      "strength": null,
+      "dose_type": "starting",
+      "condition": "pain",
+      "population": "adults",
+      "dose": 25,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": null,
+      "times_per_day": 4,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "007bf37f-0e46-426a-ac8c-be63d4b7414c",
+        "section": "dosage and administration",
+        "sentence_id": "S17",
+        "sentence": "For patients not requiring rapid onset of analgesic effect, the tolerability of tramadol hydrochloride tablets can be improved by initiating therapy with the following titration regimen: Start tramadol hydrochloride tablets at 25 mg/day and titrated in 25 mg increments as separate doses every 3 days to reach 100 mg/day (25 mg four times a day).",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=007bf37f-0e46-426a-ac8c-be63d4b7414c"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:21-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "pain requiring rapid onset of analgesia",
+      "population": "adults",
+      "dose": 50,
+      "dose_max": 100,
+      "unit": "mg",
+      "every_hours": 4,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": true,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "007bf37f-0e46-426a-ac8c-be63d4b7414c",
+        "section": "dosage and administration",
+        "sentence_id": "S19",
+        "sentence": "For the subset of patients for whom rapid onset of analgesic effect is required and for whom the benefits outweigh the risk of discontinuation due to adverse events associated with higher initial doses, tramadol hydrochloride tablets 50 mg to 100 mg can be administered as needed for pain relief every four to six hours, not to exceed 400 mg per day.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=007bf37f-0e46-426a-ac8c-be63d4b7414c"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:21-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "adjusted",
+      "condition": "pain",
+      "population": "severe hepatic impairment",
+      "dose": 50,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 12,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "007bf37f-0e46-426a-ac8c-be63d4b7414c",
+        "section": "dosage and administration",
+        "sentence_id": "S9",
+        "sentence": "Severe hepatic impairment : Recommended dose is 50 mg every 12 hours.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=007bf37f-0e46-426a-ac8c-be63d4b7414c"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:21-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    }
+  ],
+  "limits": [
+    {
+      "kind": "per_day",
+      "amount": 400,
+      "unit": "mg",
+      "ingredient": null,
+      "strength": null,
+      "population": "general",
+      "condition": null,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "007bf37f-0e46-426a-ac8c-be63d4b7414c",
+        "section": "dosage and administration",
+        "sentence_id": "S11",
+        "sentence": "Do not administer tramadol hydrochloride tablets at a dose exceeding 400 mg per day.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=007bf37f-0e46-426a-ac8c-be63d4b7414c"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:21-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "kind": "per_day",
+      "amount": 200,
+      "unit": "mg",
+      "ingredient": null,
+      "strength": null,
+      "population": "general",
+      "condition": "creatinine clearance less than 30 mL/min",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "007bf37f-0e46-426a-ac8c-be63d4b7414c",
+        "section": "dosage and administration",
+        "sentence_id": "S22",
+        "sentence": "Dosage Modification in Patients with Renal Impairment In all patients with creatinine clearance less than 30 mL/min, it is recommended that the dosing interval of tramadol hydrochloride tablets be increased to 12 hours, with a maximum daily dose of 200 mg.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=007bf37f-0e46-426a-ac8c-be63d4b7414c"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:21-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "kind": "per_day",
+      "amount": 300,
+      "unit": "mg",
+      "ingredient": null,
+      "strength": null,
+      "population": "geriatric",
+      "condition": "patients over 75 years old",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "007bf37f-0e46-426a-ac8c-be63d4b7414c",
+        "section": "dosage and administration",
+        "sentence_id": "S24",
+        "sentence": "Dosage Modification in Geriatric Patients Do not exceed a total dose of 300 mg/day in patients over 75 years old.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=007bf37f-0e46-426a-ac8c-be63d4b7414c"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:21-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "kind": "per_dose",
+      "amount": 50,
+      "unit": "mg",
+      "ingredient": null,
+      "strength": null,
+      "population": "adults",
+      "condition": "severe hepatic impairment",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "007bf37f-0e46-426a-ac8c-be63d4b7414c",
+        "section": "dosage and administration",
+        "sentence_id": "S21",
+        "sentence": "Dosage Modification in Patients with Hepatic Impairment The recommended dose for adult patients with severe hepatic impairment is 50 mg every 12 hours.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=007bf37f-0e46-426a-ac8c-be63d4b7414c"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:21-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    }
+  ],
+  "administration": [
+    {
+      "id": "tramadol-renal-interval-12h",
+      "family": "min_interval",
+      "hours": 12,
+      "provenance": "quoted",
+      "note": "Applies to patients with creatinine clearance less than 30 mL/min: dosing interval increased to 12 hours, with a maximum daily dose of 200 mg. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "007bf37f-0e46-426a-ac8c-be63d4b7414c",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=007bf37f-0e46-426a-ac8c-be63d4b7414c",
+        "section": "dosage and administration",
+        "sentence": "Dosage Modification in Patients with Renal Impairment In all patients with creatinine clearance less than 30 mL/min, it is recommended that the dosing interval of tramadol hydrochloride tablets be increased to 12 hours, with a maximum daily dose of 200 mg."
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:08-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/tramadol.json)"
+      }
+    },
+    {
+      "id": "tramadol-daily-max-400mg",
+      "family": "daily_max",
+      "amount": 400,
+      "unit": "mg",
+      "provenance": "quoted",
+      "note": "Do not exceed 400 mg per day of tramadol hydrochloride tablets. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "007bf37f-0e46-426a-ac8c-be63d4b7414c",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=007bf37f-0e46-426a-ac8c-be63d4b7414c",
+        "section": "dosage and administration",
+        "sentence": "Do not administer tramadol hydrochloride tablets at a dose exceeding 400 mg per day."
+      },
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:41-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "added to library as tramadol-daily-max-400mg"
+      }
+    },
+    {
+      "id": "tramadol-geriatric-max-300mg",
+      "family": "daily_max",
+      "amount": 300,
+      "unit": "mg",
+      "provenance": "quoted",
+      "note": "Applies only to patients over 75 years old. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "007bf37f-0e46-426a-ac8c-be63d4b7414c",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=007bf37f-0e46-426a-ac8c-be63d4b7414c",
+        "section": "dosage and administration",
+        "sentence": "Dosage Modification in Geriatric Patients Do not exceed a total dose of 300 mg/day in patients over 75 years old."
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:09-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/tramadol.json)"
+      }
+    },
+    {
+      "id": "tramadol-asneeded-interval-4h",
+      "family": "min_interval",
+      "hours": 4,
+      "provenance": "interpreted",
+      "loosest": {
+        "hours": 6
+      },
+      "note": "As-needed dosing is every 4 to 6 hours; the 4-hour lower bound is used as the minimum spacing, with 6 hours as the most permissive value. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "007bf37f-0e46-426a-ac8c-be63d4b7414c",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=007bf37f-0e46-426a-ac8c-be63d4b7414c",
+        "section": "dosage and administration",
+        "sentence": "After titration, tramadol hydrochloride, tablets 50 mg to 100 mg can be administered as needed for pain relief every 4 to 6 hours not to exceed 400 mg/day ( 2.3 , 2.4 )."
+      },
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:42-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "added to library as tramadol-asneeded-interval-4h"
+      }
+    }
+  ],
+  "memberships": [],
+  "rejected": [
+    {
+      "item": {
+        "id": "tramadol-hepatic-interval-12h",
+        "family": "min_interval",
+        "hours": 12,
+        "sentence": "S21",
+        "provenance": "quoted",
+        "note": "Applies only to adult patients with severe hepatic impairment: recommended dose 50 mg every 12 hours."
+      },
+      "reason": "S21 gives 'every 12 hours' as a regimen, not a minimum gap or an as-needed limit; the prescription sets the regimen"
+    },
+    {
+      "pass": "dosing",
+      "item": {
+        "strength": null,
+        "dose_type": "usual",
+        "condition": "pain",
+        "population": "adults",
+        "dose": 50,
+        "dose_max": 100,
+        "unit": "mg",
+        "every_hours": 4,
+        "times_per_day": null,
+        "duration_days": null,
+        "as_needed": true,
+        "sentence": "S18",
+        "provenance": "quoted"
+      },
+      "reason": "S18 states 50 as an increase or titration step, not a dose"
+    }
+  ],
+  "unaccounted_for": [
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S6",
+      "section": "dosage and administration",
+      "sentence": "Thereafter the total daily dose may be increased by 50 mg as tolerated every 3 days to reach 200 mg/day (50 mg four times a day)."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S15",
+      "section": "dosage and administration",
+      "sentence": "2.3 Initial Dosage Initiating Treatment with tramadol hydrochloride tablets Initiate treatment with tramadol hydrochloride tablets in a dosing range of 50 mg to 100 mg every 4 to 6 hours as needed for pain, and at the lowest dose necessary to achieve adequate analgesia."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S26",
+      "section": "dosage and administration",
+      "sentence": "If after increasing the dosage, unacceptable opioid-related adverse reactions are observed (including an increase in pain after dosage increase), consider reducing the dosage [see Warnings and Precautions (5) ] ."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S28",
+      "section": "dosage and administration",
+      "sentence": "For patients on tramadol hydrochloride tablets who are physically opioid-dependent, initiate the taper by a small enough increment, (e.g., no greater than 10% to 25% of the total daily dose) to avoid withdrawal symptoms, and proceed with dose-lowering at an interval of every 2 to 4 weeks."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S37",
+      "section": "warnings and cautions",
+      "sentence": "5.5 Opioid Analgesic Risk Evaluation and Mitigation Strategy (REMS) To ensure that the benefits of opioid analgesics outweigh the risks of addiction, abuse, and misuse, the Food and Drug Administration (FDA) has required a Risk Evaluation and Mitigation Strategy (REMS) for these products."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S41",
+      "section": "warnings and cautions",
+      "sentence": "Inform patients not to exceed the recommended dose and to limit their intake of alcohol [ see Dosage and Administration ( 2 ), Warnings and Precautions ( 5.7 ) ]."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S45",
+      "section": "boxed warning",
+      "sentence": "( 5.4 ) To ensure that the benefits of opioid analgesics outweigh the risks of addiction, abuse, and misuse, the Food and Drug Administration (FDA) has required a Risk Evaluation and Mitigation Strategy (REMS) for these products."
+    },
+    {
+      "priority": 3,
+      "kind": "monitoring",
+      "note": "",
+      "sentence_id": "S5",
+      "section": "dosage and administration",
+      "sentence": "( 2.1 , 5.2 ) Start at 25 mg/day and titrate in 25 mg increments as separate doses every 3 days to reach 100 mg/day (25 mg four times a day)."
+    },
+    {
+      "priority": 4,
+      "kind": "population",
+      "note": "",
+      "sentence_id": "S8",
+      "section": "dosage and administration",
+      "sentence": "Severe Renal Impairment: increase the tramadol hydrochloride tablets, dosing interval to 12 hours, and limit maximum daily dose to 200 mg ( 2.3 )."
+    },
+    {
+      "priority": 4,
+      "kind": "population",
+      "note": "",
+      "sentence_id": "S23",
+      "section": "dosage and administration",
+      "sentence": "Since only 7% of an administered dose is removed by hemodialysis, dialysis patients can receive their regular dose on the day of dialysis."
+    },
+    {
+      "priority": 6,
+      "kind": "restates",
+      "note": "repeats S7",
+      "sentence_id": "S18",
+      "section": "dosage and administration",
+      "sentence": "After titration, tramadol hydrochloride tablets 50 to 100 mg can be administered as needed for pain relief every 4 to 6 hours not to exceed 400 mg/day."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S30",
+      "section": "drug interactions",
+      "sentence": "7 DRUG INTERACTIONS Table 2: Clinically Significant Drug Interactions with tramadol hydrochloride tablets Inhibitors of CYP2D6 Clinical Impact: The concomitant use of tramadol hydrochloride tablets and CYP2D6 inhibitors may result in an increase in the plasma concentration of tramadol and a decrease in the plasma concentration of M1, particularly when an inhibitor is added after a stable dose of tramadol hydrochloride tablets are achieved."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S31",
+      "section": "drug interactions",
+      "sentence": "After stopping a CYP2D6 inhibitor, as the effects of the inhibitor decline, the tramadol plasma concentration will decrease and the M1 plasma concentration will increase."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S33",
+      "section": "drug interactions",
+      "sentence": "After stopping a CYP3A4 inhibitor, as the effects of the inhibitor decline, the tramadol plasma concentration will decrease [see Clinical Pharmacology (12.3) ] , resulting in decreased opioid efficacy or a withdrawal syndrome in patients who had developed physical dependence to tramadol."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S34",
+      "section": "drug interactions",
+      "sentence": "After stopping a CYP3A4 inducer, as the effects of the inducer decline, the tramadol plasma concentration will increase [see Clinical Pharmacology (12.3) ] , which could increase or prolong both the therapeutic effects and adverse reactions, and may cause seizures, serotonin syndrome, and/or potentially fatal respiratory depression."
+    }
+  ],
+  "sentences": [
+    {
+      "sentence_id": "S1",
+      "section": "dosage and administration",
+      "text": "( 2.1 , 5 ) Initiate the dosing regimen for each patient individually, taking into account the patient's severity of pain, patient response, prior analgesic treatment experience, and risk factors for addiction, abuse, and misuse ( 2.1 , 5.1 )."
+    },
+    {
+      "sentence_id": "S2",
+      "section": "dosage and administration",
+      "text": "Many acute pain conditions (e.g., the pain that occurs with a number of surgical procedures or acute musculoskeletal injuries) require no more than a few days of an opioid analgesic."
+    },
+    {
+      "sentence_id": "S3",
+      "section": "dosage and administration",
+      "text": "( 2.1 ) Initiate the dosing regimen for each patient individually, taking into account the patient's underlying cause and severity of pain, prior analgesic treatment and response, and risk factors for addiction, abuse, and misuse."
+    },
+    {
+      "sentence_id": "S4",
+      "section": "dosage and administration",
+      "text": "Consider this risk when selecting an initial dose and when making dose adjustments."
+    },
+    {
+      "sentence_id": "S5",
+      "section": "dosage and administration",
+      "text": "( 2.1 , 5.2 ) Start at 25 mg/day and titrate in 25 mg increments as separate doses every 3 days to reach 100 mg/day (25 mg four times a day)."
+    },
+    {
+      "sentence_id": "S6",
+      "section": "dosage and administration",
+      "text": "Thereafter the total daily dose may be increased by 50 mg as tolerated every 3 days to reach 200 mg/day (50 mg four times a day)."
+    },
+    {
+      "sentence_id": "S7",
+      "section": "dosage and administration",
+      "text": "After titration, tramadol hydrochloride, tablets 50 mg to 100 mg can be administered as needed for pain relief every 4 to 6 hours not to exceed 400 mg/day ( 2.3 , 2.4 )."
+    },
+    {
+      "sentence_id": "S8",
+      "section": "dosage and administration",
+      "text": "Severe Renal Impairment: increase the tramadol hydrochloride tablets, dosing interval to 12 hours, and limit maximum daily dose to 200 mg ( 2.3 )."
+    },
+    {
+      "sentence_id": "S9",
+      "section": "dosage and administration",
+      "text": "Severe hepatic impairment : Recommended dose is 50 mg every 12 hours."
+    },
+    {
+      "sentence_id": "S10",
+      "section": "dosage and administration",
+      "text": "2.1 Important Dosage and Administration Instructions Do not use tramadol hydrochloride tablets concomitantly with other tramadol-containing products."
+    },
+    {
+      "sentence_id": "S11",
+      "section": "dosage and administration",
+      "text": "Do not administer tramadol hydrochloride tablets at a dose exceeding 400 mg per day."
+    },
+    {
+      "sentence_id": "S12",
+      "section": "dosage and administration",
+      "text": "Initiate the dosing regimen for each patient individually, taking into account the patient's underlying cause and severity of pain, prior analgesic treatment and response, and risk factors for addiction, abuse, and misuse [see Warnings and Precautions ( 5.1 )] ."
+    },
+    {
+      "sentence_id": "S13",
+      "section": "dosage and administration",
+      "text": "Discuss the importance of having access to an opioid overdose reversal agent, especially if the patient has risk factors for overdose (e.g., concomitant use of CNS depressants, a history of opioid use disorder, or prior opioid overdose) or if there are household members (including children) or other close contacts at risk for accidental ingestion or opioid overdose."
+    },
+    {
+      "sentence_id": "S14",
+      "section": "dosage and administration",
+      "text": "Be familiar with these differences, as outlined in the approved labeling for those products, prior to recommending or prescribing such an agent."
+    },
+    {
+      "sentence_id": "S15",
+      "section": "dosage and administration",
+      "text": "2.3 Initial Dosage Initiating Treatment with tramadol hydrochloride tablets Initiate treatment with tramadol hydrochloride tablets in a dosing range of 50 mg to 100 mg every 4 to 6 hours as needed for pain, and at the lowest dose necessary to achieve adequate analgesia."
+    },
+    {
+      "sentence_id": "S16",
+      "section": "dosage and administration",
+      "text": "Titrate the dose based upon the individual patient's response to their initial dose of tramadol hydrochloride tablets."
+    },
+    {
+      "sentence_id": "S17",
+      "section": "dosage and administration",
+      "text": "For patients not requiring rapid onset of analgesic effect, the tolerability of tramadol hydrochloride tablets can be improved by initiating therapy with the following titration regimen: Start tramadol hydrochloride tablets at 25 mg/day and titrated in 25 mg increments as separate doses every 3 days to reach 100 mg/day (25 mg four times a day)."
+    },
+    {
+      "sentence_id": "S18",
+      "section": "dosage and administration",
+      "text": "After titration, tramadol hydrochloride tablets 50 to 100 mg can be administered as needed for pain relief every 4 to 6 hours not to exceed 400 mg/day."
+    },
+    {
+      "sentence_id": "S19",
+      "section": "dosage and administration",
+      "text": "For the subset of patients for whom rapid onset of analgesic effect is required and for whom the benefits outweigh the risk of discontinuation due to adverse events associated with higher initial doses, tramadol hydrochloride tablets 50 mg to 100 mg can be administered as needed for pain relief every four to six hours, not to exceed 400 mg per day."
+    },
+    {
+      "sentence_id": "S20",
+      "section": "dosage and administration",
+      "text": "Conversion from Tramadol to Extended-Release Tramadol The relative bioavailability of tramadol compared to extended-release tramadol is unknown, so conversion to extended-release formulations may lead to increased risk of excessive sedation and respiratory depression."
+    },
+    {
+      "sentence_id": "S21",
+      "section": "dosage and administration",
+      "text": "Dosage Modification in Patients with Hepatic Impairment The recommended dose for adult patients with severe hepatic impairment is 50 mg every 12 hours."
+    },
+    {
+      "sentence_id": "S22",
+      "section": "dosage and administration",
+      "text": "Dosage Modification in Patients with Renal Impairment In all patients with creatinine clearance less than 30 mL/min, it is recommended that the dosing interval of tramadol hydrochloride tablets be increased to 12 hours, with a maximum daily dose of 200 mg."
+    },
+    {
+      "sentence_id": "S23",
+      "section": "dosage and administration",
+      "text": "Since only 7% of an administered dose is removed by hemodialysis, dialysis patients can receive their regular dose on the day of dialysis."
+    },
+    {
+      "sentence_id": "S24",
+      "section": "dosage and administration",
+      "text": "Dosage Modification in Geriatric Patients Do not exceed a total dose of 300 mg/day in patients over 75 years old."
+    },
+    {
+      "sentence_id": "S25",
+      "section": "dosage and administration",
+      "text": "If the level of pain increases after dosage stabilization, attempt to identify the source of increased pain before increasing the tramadol hydrochloride tablets dosage."
+    },
+    {
+      "sentence_id": "S26",
+      "section": "dosage and administration",
+      "text": "If after increasing the dosage, unacceptable opioid-related adverse reactions are observed (including an increase in pain after dosage increase), consider reducing the dosage [see Warnings and Precautions (5) ] ."
+    },
+    {
+      "sentence_id": "S27",
+      "section": "dosage and administration",
+      "text": "When a decision has been made to decrease the dose or discontinue therapy in an opioid-dependent patient taking tramadol hydrochloride tablets, there are a variety of factors that should be considered, including the total daily dose of opioid (including tramadol hydrochloride tablets) the patient has been taking, the duration of treatment, the type of pain being treated, and the physical and psychological attributes of the patient."
+    },
+    {
+      "sentence_id": "S28",
+      "section": "dosage and administration",
+      "text": "For patients on tramadol hydrochloride tablets who are physically opioid-dependent, initiate the taper by a small enough increment, (e.g., no greater than 10% to 25% of the total daily dose) to avoid withdrawal symptoms, and proceed with dose-lowering at an interval of every 2 to 4 weeks."
+    },
+    {
+      "sentence_id": "S29",
+      "section": "dosage and administration",
+      "text": "When managing patients taking opioid analgesics, particularly those who have been treated for an extended period of time, and/or with high doses for chronic pain, ensure that a multimodal approach to pain management, including mental health support (if needed), is in place prior to initiating an opioid analgesic taper."
+    },
+    {
+      "sentence_id": "S30",
+      "section": "drug interactions",
+      "text": "7 DRUG INTERACTIONS Table 2: Clinically Significant Drug Interactions with tramadol hydrochloride tablets Inhibitors of CYP2D6 Clinical Impact: The concomitant use of tramadol hydrochloride tablets and CYP2D6 inhibitors may result in an increase in the plasma concentration of tramadol and a decrease in the plasma concentration of M1, particularly when an inhibitor is added after a stable dose of tramadol hydrochloride tablets are achieved."
+    },
+    {
+      "sentence_id": "S31",
+      "section": "drug interactions",
+      "text": "After stopping a CYP2D6 inhibitor, as the effects of the inhibitor decline, the tramadol plasma concentration will decrease and the M1 plasma concentration will increase."
+    },
+    {
+      "sentence_id": "S32",
+      "section": "drug interactions",
+      "text": "Follow patients closely for increased risk of serious adverse events including seizures and serotonin syndrome, and adverse reactions related to opioid toxicity including potentially fatal respiratory depression, particularly when an inhibitor is added after a stable dose of tramadol hydrochloride tablets are achieved."
+    },
+    {
+      "sentence_id": "S33",
+      "section": "drug interactions",
+      "text": "After stopping a CYP3A4 inhibitor, as the effects of the inhibitor decline, the tramadol plasma concentration will decrease [see Clinical Pharmacology (12.3) ] , resulting in decreased opioid efficacy or a withdrawal syndrome in patients who had developed physical dependence to tramadol."
+    },
+    {
+      "sentence_id": "S34",
+      "section": "drug interactions",
+      "text": "After stopping a CYP3A4 inducer, as the effects of the inducer decline, the tramadol plasma concentration will increase [see Clinical Pharmacology (12.3) ] , which could increase or prolong both the therapeutic effects and adverse reactions, and may cause seizures, serotonin syndrome, and/or potentially fatal respiratory depression."
+    },
+    {
+      "sentence_id": "S35",
+      "section": "drug interactions",
+      "text": "Warfarin Clinical Impact: Post-marketing surveillance of tramadol has revealed rare reports of alteration of warfarin effect, including elevation of prothrombin times Intervention: Frequently re-evaluate the prothrombin time of patients on warfarin for signs of an interaction and adjust the dosage of warfarin as needed Mixed Agonist/Antagonist and Partial Agonist Opioid Analgesics : Avoid use with tramadol hydrochloride tablets because they may reduce analgesic effect of tramadol hydrochloride or precipitate withdrawal symptoms."
+    },
+    {
+      "sentence_id": "S36",
+      "section": "warnings and cautions",
+      "text": "Assess each patient's risk for opioid addiction, abuse, or misuse prior to prescribing tramadol hydrochloride tablets, and reassess all patients receiving tramadol hydrochloride tablets for the development of these behaviors and conditions."
+    },
+    {
+      "sentence_id": "S37",
+      "section": "warnings and cautions",
+      "text": "5.5 Opioid Analgesic Risk Evaluation and Mitigation Strategy (REMS) To ensure that the benefits of opioid analgesics outweigh the risks of addiction, abuse, and misuse, the Food and Drug Administration (FDA) has required a Risk Evaluation and Mitigation Strategy (REMS) for these products."
+    },
+    {
+      "sentence_id": "S38",
+      "section": "warnings and cautions",
+      "text": "Discuss the safe use, serious risks, and proper storage and disposal of opioid analgesics with patients and/or their caregivers every time these medicines are prescribed."
+    },
+    {
+      "sentence_id": "S39",
+      "section": "warnings and cautions",
+      "text": "Emphasize to patients and their caregivers the importance of reading the Medication Guide that they will receive from their pharmacist every time an opioid analgesic is dispensed to them."
+    },
+    {
+      "sentence_id": "S40",
+      "section": "warnings and cautions",
+      "text": "The onset of symptoms generally occurs within several hours to a few days of concomitant use, but may occur later than that."
+    },
+    {
+      "sentence_id": "S41",
+      "section": "warnings and cautions",
+      "text": "Inform patients not to exceed the recommended dose and to limit their intake of alcohol [ see Dosage and Administration ( 2 ), Warnings and Precautions ( 5.7 ) ]."
+    },
+    {
+      "sentence_id": "S42",
+      "section": "warnings and cautions",
+      "text": "Regularly evaluate these patients for signs of hypotension after initiating or titrating the dosage of tramadol hydrochloride tablets."
+    },
+    {
+      "sentence_id": "S43",
+      "section": "boxed warning",
+      "text": "WARNING: SERIOUS AND LIFE-THREATENING RISKS FROM USE OF TRAMADOL HYDROCHLORIDE TABLETS ADDICTION, ABUSE AND MISUSE Because the use of tramadol hydrochloride tablets exposes patients and other users to the risks of opioid addiction, abuse, and misuse, which can lead to overdose and death, assess each patient's risk prior to prescribing and reassess all patients regularly for the development of these behaviors and conditions [see Warnings and Precautions ( 5.1 )] ."
+    },
+    {
+      "sentence_id": "S44",
+      "section": "boxed warning",
+      "text": "Assess each patient's risk prior to prescribing tramadol hydrochloride tablets, and monitor regularly for these behaviors or conditions."
+    },
+    {
+      "sentence_id": "S45",
+      "section": "boxed warning",
+      "text": "( 5.4 ) To ensure that the benefits of opioid analgesics outweigh the risks of addiction, abuse, and misuse, the Food and Drug Administration (FDA) has required a Risk Evaluation and Mitigation Strategy (REMS) for these products."
+    },
+    {
+      "sentence_id": "S46",
+      "section": "dosage forms and strengths",
+      "text": "3 DOSAGE FORMS AND STRENGTHS Tramadol Hydrochloride Tablets USP, 50 mg are pale yellow colored, capsule shaped biconvex, film coated tablet debossed with \"355\" on one side of break line and \"U\" on the other side of breakline on one side and plain on other side."
+    },
+    {
+      "sentence_id": "S47",
+      "section": "dosage forms and strengths",
+      "text": "Tablets: tramadol hydrochloride 50 mg ( 3 )."
+    },
+    {
+      "sentence_id": "S48",
+      "section": "how supplied",
+      "text": "16 HOW SUPPLIED/STORAGE AND HANDLING Tramadol hydrochloride tablets USP, 50 mg are Pale yellow colored, capsule shaped biconvex, film coated tablet debossed with \"355\" on one side of break line and \"U\" on the other side of breakline on one side and plain on other side."
+    },
+    {
+      "sentence_id": "S49",
+      "section": "description",
+      "text": "The n-octanol/water log partition coefficient (logP) is 1.35 at pH 7."
+    },
+    {
+      "sentence_id": "S50",
+      "section": "description",
+      "text": "Tramadol hydrochloride tablets, USP contain 50 mg of tramadol hydrochloride, USP and are pale yellow in color."
+    }
+  ],
+  "passes_run": [
+    "administration",
+    "dosing",
+    "limits"
+  ]
+}

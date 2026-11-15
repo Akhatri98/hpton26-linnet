@@ -1,0 +1,23 @@
+{
+  "name": "dolutegravir-50mg-tab",
+  "display_name": "Dolutegravir 50 mg tablets (Tivicay)",
+  "spl_set_id": "63df5af3-b8ac-4e76-9830-2dbb340af922",
+  "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=63df5af3-b8ac-4e76-9830-2dbb340af922",
+  "ingredients": {
+    "dolutegravir": {
+      "amount": 50,
+      "unit": "mg"
+    }
+  },
+  "dose_note": "One 50 mg tablet per dose, once or twice daily ('50 mg: Each tablet contains 50 mg of dolutegravir (as dolutegravir sodium).'; '50 mg once daily' or '50 mg twice daily').",
+  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+  "unit_name": "tablet",
+  "units_per_dose": 1,
+  "verified": true,
+  "review": {
+    "decision": "approved",
+    "by": "claude",
+    "role": "AI (Claude), not a pharmacist",
+    "at": "2026-11-14T22:16:01-05:00"
+  }
+}

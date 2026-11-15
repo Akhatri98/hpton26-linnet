@@ -1,0 +1,41 @@
+{
+  "ingredient": "cholestyramine",
+  "primary_spl": "06261db5-1435-4b91-8b54-71bfcfb1368c",
+  "rules": [
+    {
+      "id": "cholestyramine-separation-other-drugs",
+      "family": "separation",
+      "target": "*",
+      "before": 4,
+      "after": 1,
+      "provenance": "interpreted",
+      "loosest": {
+        "before": 4,
+        "after": 1
+      },
+      "note": "Label says other drugs should be taken at least 1 hour before or 4 to 6 hours after cholestyramine, so cholestyramine is at least 4 hours before and 1 hour after other drugs. The 4-hour value is the lower bound of the stated 4 to 6 hour range. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "06261db5-1435-4b91-8b54-71bfcfb1368c",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06261db5-1435-4b91-8b54-71bfcfb1368c",
+        "section": "drug interactions",
+        "sentence": "SINCE CHOLESTYRAMINE RESIN MAY BIND OTHER DRUGS GIVEN CONCURRENTLY, IT IS RECOMMENDED THAT PATIENTS TAKE OTHER DRUGS AT LEAST 1 HOUR BEFORE OR 4 TO 6 HOURS AFTER CHOLESTYRAMINE RESIN (OR AT AS GREAT AN INTERVAL AS POSSIBLE) TO AVOID IMPEDING THEIR ABSORPTION."
+      },
+      "verified": false
+    },
+    {
+      "id": "cholestyramine-daily-max-resin",
+      "family": "daily_max",
+      "amount": 24,
+      "unit": "g",
+      "provenance": "quoted",
+      "note": "Maximum recommended daily dose is 6 pouches or scoopfuls, stated as 24 grams of anhydrous cholestyramine resin. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "06261db5-1435-4b91-8b54-71bfcfb1368c",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06261db5-1435-4b91-8b54-71bfcfb1368c",
+        "section": "dosage and administration",
+        "sentence": "The maximum recommended daily dose is 6 pouches or scoopfuls of Cholestyramine for Oral Suspension, USP (24 grams of anhydrous cholestyramine resin)."
+      },
+      "verified": false
+    }
+  ]
+}

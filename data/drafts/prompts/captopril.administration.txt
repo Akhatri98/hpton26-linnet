@@ -1,0 +1,97 @@
+You are extracting medication TIMING rules from an FDA drug label, for a scheduling tool used by pharmacists.
+
+Ingredient: captopril
+Label set id: 1395ba5b-2fc9-41ff-9c43-e0740d781dee
+
+Numbered sentences from the label:
+S1 [dosage and administration] DOSAGE AND ADMINISTRATION Captopril tablets should be taken one hour before meals.
+S2 [dosage and administration] If possible, discontinue the patient’s previous antihypertensive drug regimen for one week before starting captopril tablets.
+S4 [dosage and administration] If satisfactory reduction of blood pressure has not been achieved after one or two weeks, the dose may be increased to 50 mg b.i.d.
+S6 [dosage and administration] The dose of captopril tablets in hypertension usually does not exceed 50 mg t.i.d.
+S7 [dosage and administration] Therefore, if the blood pressure has not been satisfactorily controlled after one to two weeks at this dose, (and the patient is not already receiving a diuretic), a modest dose of a thiazide-type diuretic (e.g., hydrochlorothiazide, 25 mg daily), should be added.
+S13 [dosage and administration] A maximum daily dose of 450 mg captopril tablets should not be exceeded.
+S15 [dosage and administration] When necessitated by the patient’s clinical condition, the daily dose of captopril tablets may be increased every 24 hours or less under continuous medical supervision until a satisfactory blood pressure response is obtained or the maximum dose of captopril tablets is reached.
+S18 [dosage and administration] for these patients, titration to the usual daily dosage can then occur within the next several days.
+S19 [dosage and administration] For most patients the usual initial daily dosage is 25 mg t.i.d.
+S20 [dosage and administration] After a dose of 50 mg t.i.d.
+S23 [dosage and administration] A maximum daily dose of 450 mg of captopril tablets should not be exceeded.
+S25 [dosage and administration] Left Ventricular Dysfunction After Myocardial Infarction The recommended dose for long-term use in patients following a myocardial infarction is a target maintenance dose of 50 mg t.i.d.
+S27 [dosage and administration] After a single dose of 6.25 mg, captopril tablets therapy should be initiated at 12.5 mg t.i.d.
+S32 [dosage and administration] These patients will take longer to reach steady-state captopril levels and will reach higher steady-state levels for a given daily dose than patients with normal renal function.
+S33 [dosage and administration] Accordingly, for patients with significant renal impairment, initial daily dosage of captopril tablets should be reduced, and smaller increments utilized for titration, which should be quite slow (one- to two-week intervals).
+S34 [dosage and administration] After the desired therapeutic effect has been achieved, the dose should be slowly back-titrated to determine the minimal effective dose.
+S37 [drug interactions] Hypotension–Patients on Diuretic Therapy Patients on diuretics and especially those in whom diuretic therapy was recently instituted, as well as those on severe dietary salt restriction or dialysis, may occasionally experience a precipitous reduction of blood pressure usually within the first hour after receiving the initial dose of captopril.
+S38 [drug interactions] The possibility of hypotensive effects with captopril can be minimized by either discontinuing the diuretic or increasing the salt intake approximately one week prior to initiation of treatment with captopril tablets or initiating therapy with small doses (6.25 or 12.5 mg).
+S39 [drug interactions] Alternatively, provide medical supervision for at least one hour after the initial dose.
+S40 [drug interactions] This transient hypotensive response is not a contraindication to further doses which can be given without difficulty once the blood pressure has increased after volume expansion.
+S41 [drug interactions] therefore, nitroglycerin or other nitrates (as used for management of angina) or other drugs having vasodilator activity should, if possible, be discontinued before starting captopril tablets.
+S42 [precautions] PRECAUTIONS General Impaired Renal Function Hypertension Some patients with renal disease, particularly those with severe renal artery stenosis, have developed increases in BUN and serum creatinine after reduction of blood pressure with captopril.
+S43 [precautions] Cough Presumably due to the inhibition of the degradation of endogenous bradykinin, persistent nonproductive cough has been reported with all ACE inhibitors, always resolving after discontinuation of therapy.
+S44 [precautions] Patients should be informed that captopril tablets should be taken one hour before meals (see DOSAGE AND ADMINISTRATION ).
+S47 [precautions] The high dose in these studies is 150 times the maximum recommended human dose of 450 mg, assuming a 50 kg subject.
+S48 [precautions] On a body-surface-area basis, the high doses for mice and rats are 13 and 26 times the maximum recommended human dose, respectively.
+S50 [precautions] Reductions in hemoglobin and/or hematocrit values were seen in mice, rats, and monkeys at doses 50 to 150 times the maximum recommended human dose (MRHD) of 450 mg, assuming a 50 kg subject.
+S51 [precautions] On a body- surface-area basis, these doses are 5 to 25 times maximum recommended dose (MRHD).
+S52 [precautions] Anemia, leukopenia, thrombocytopenia, and bone marrow suppression occurred in dogs at doses 8 to 30 times MRHD on a body- weight basis (4 to 15 times MRHD on a surface-area basis).
+S53 [precautions] Marked anemia was seen at all dose levels (8 to 30 times MRHD) in dogs, whereas moderate to marked leukopenia was noted only at 15 and 30 times MRHD and thrombocytopenia at 30 times MRHD.
+S54 [precautions] However, in the 47 week study at a dose 30 times MRHD, bone marrow suppression was found to be reversible upon continued drug administration.
+S55 [precautions] Captopril caused hyperplasia of the juxtaglomerular apparatus of the kidneys in mice and rats at doses 7 to 200 times MRHD on a body-weight basis (0.6 to 35 times MRHD on a surface-area basis);
+S56 [precautions] in monkeys at 20 to 60 times MRHD on a body-weight basis (7 to 20 times MRHD on a surface-area basis);
+S57 [precautions] and in dogs at 30 times MRHD on a body-weight basis (15 times MRHD on a surface-area basis).
+S58 [precautions] Gastric erosions/ulcerations were increased in incidence in male rats at 20 to 200 times MRHD on a body- weight basis (3.5 and 35 times MRHD on a surface-area basis);
+S59 [precautions] in dogs at 30 times MRHD on a body-weight basis (15 times MRHD on a surface-area basis);
+S60 [precautions] and in monkeys at 65 times MRHD on a body-weight basis (20 times MRHD on a surface-area basis).
+S61 [precautions] Rabbits developed gastric and intestinal ulcers when given oral doses approximately 30 times MRHD on a body-weight basis (10 times MRHD on surface-area basis) for only 5 to 7 days.
+S62 [precautions] In the two-year rat study, irreversible and progressive variations in the caliber of retinal vessels (focal sacculations and constrictions) occurred at all dose levels (7 to 200 times MRHD) on a body-weight basis;
+S63 [precautions] 1 to 35 times MRHD on a surface-area basis in a dose-related fashion.
+S64 [precautions] The effect was first observed in the 88th week of dosing, with a progressively increased incidence thereafter, even after cessation of dosing.
+S65 [warnings] in some cases there was no prior history of facial angioedema and C-1 esterase levels were normal.
+S66 [warnings] The angioedema was diagnosed by procedures including abdominal CT scan or ultrasound, or at surgery, and symptoms resolved after stopping the ACE inhibitor.
+S69 [warnings] In patients with some degree of renal failure (serum creatinine at least 1.6 mg/dL) but no collagen vascular disease, the risk of neutropenia in clinical trials was about 1 per 500, a frequency over 15 times that for uncomplicated hypertension.
+S70 [warnings] Daily doses of captopril were relatively high in these patients, particularly in view of their diminished renal function.
+S72 [warnings] About half of the reported cases had serum creatinine ≥ 1.6 mg/dL and more than 75 percent were in patients also receiving procainamide.
+S73 [warnings] The neutropenia has usually been detected within three months after captopril was started.
+S74 [warnings] In general, neutrophils returned to normal in about two weeks after captopril was discontinued, and serious infections were limited to clinically complex patients.
+S75 [warnings] If captopril is used in patients with impaired renal function, white blood cell and differential counts should be evaluated prior to starting treatment and at approximately two-week intervals for about three months, then periodically.
+S76 [warnings] In patients with collagen vascular disease or who are exposed to other drugs known to affect the white cells or immune response, particularly when there is impaired renal function, captopril should be used only after an assessment of benefit and risk, and then with caution.
+S78 [warnings] Proteinuria Total urinary proteins greater than 1 g per day were seen in about 0.7 percent of patients receiving captopril.
+S79 [warnings] About 90 percent of affected patients had evidence of prior renal disease or received relatively high doses of captopril (in excess of 150 mg/day), or both.
+S80 [warnings] This transient hypotension is more likely to occur after any of the first several doses and is usually well tolerated, producing either no symptoms or brief mild lightheadedness, although in rare instances it has been associated with arrhythmia or conduction defects.
+S83 [warnings] Most epidemiologic studies examining fetal abnormalities after exposure to antihypertensive use in the first trimester have not distinguished drugs affecting the renin-angiotensin system from other antihypertensive agents.
+S84 [warnings] Patients and physicians should be aware, however, that oligohydramnios may not appear until after the fetus has sustained irreversible injury.
+S86 [warnings] When captopril was given to rabbits at doses about 0.8 to 70 times (on a mg/kg basis) the maximum recommended human dose, low incidences of craniofacial malformations were seen.
+S88 [warnings] On a mg/kg basis, the doses used were up to 150 times (in hamsters) and 625 times (in rats) the maximum recommended human dose.
+
+Known ingredient groups (you may propose members for these, or a new group):
+- levothyroxine_binders: ['calcium_carbonate', 'colestipol', 'ferrous_sulfate']
+- polyvalent_cations: ['aluminum', 'calcium_carbonate', 'iron', 'magnesium', 'sucralfate', 'zinc']
+- antacids: ['calcium_carbonate']
+
+Return ONLY a JSON object:
+{
+  "rules": [ ... ],
+  "memberships": [ ... ]
+}
+
+Each rule is one of these shapes. Times are in HOURS (30 minutes = 0.5). Use only numbers stated in the cited sentence.
+  {"id": "...", "family": "min_interval", "hours": H, "sentence": "Sk", "provenance": "quoted"|"interpreted", "loosest": {"hours": X}?, "note": "..."}
+      any two doses of this ingredient at least H hours apart ("every 6 hours")
+  {"id": "...", "family": "separation", "target": "<ingredient>" | "group:<name>" | "*", "before": B, "after": A, "sentence": "Sk", ...}
+      THIS ingredient is taken at least B hours BEFORE and at least A hours AFTER any dose of the target.
+      "*" means every other drug. Careful with direction: if the label says "take OTHER drugs 1 hour before
+      or 4 hours after THIS drug", then THIS drug is 4 hours before and 1 hour after the other: before=4, after=1.
+  {"id": "...", "family": "daily_max", "amount": N, "unit": "mg"|"g"|"mcg", "sentence": "Sk", ...}
+  {"id": "...", "family": "food", "mode": "empty_stomach", "before_meal": B, "after_meal": A, "meal": null|"breakfast", "sentence": "Sk", ...}
+      no dose from B hours before to A hours after a meal
+  {"id": "...", "family": "food", "mode": "before_meal_window", "meal": "breakfast", "earliest": E, "latest": L, "sentence": "Sk", ...}
+      dose between E and L hours before the meal (E >= L)
+
+provenance: "quoted" if the number is stated plainly and firmly; "interpreted" if you had to judge
+(soft words like "preferably", "if possible", "consider", a range, or a derived number). Every
+"interpreted" rule MUST give "loosest": the most permissive defensible value of each number you judged.
+
+Each membership: {"group": "<name>", "ingredient": "<lowercase_underscore_name>", "sentence": "Sk", "provenance": "quoted"|"interpreted"}
+  Propose a membership when the label names an ingredient as one of the things to separate from.
+
+Ids: lowercase letters, digits, dashes, starting with the ingredient name. Cite exactly one sentence id per item.
+Do not copy sentence text; cite its id. Only include rules the label actually states. If unsure, leave it out.

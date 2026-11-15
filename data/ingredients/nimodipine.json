@@ -37,9 +37,10 @@
       "verified": true,
       "review": {
         "decision": "approved",
-        "by": "ak",
-        "role": "pharmacist",
-        "at": "2026-11-14T15:47:44-05:00"
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:52:07-05:00",
+        "note": "4 of 4 runs agreed"
       }
     }
   ]

@@ -1,0 +1,42 @@
+{
+  "ingredient": "captopril",
+  "primary_spl": "1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+  "rules": [
+    {
+      "id": "captopril-before-meal-1h",
+      "family": "food",
+      "mode": "before_meal_window",
+      "meal": "breakfast",
+      "earliest": 1,
+      "latest": 1,
+      "provenance": "interpreted",
+      "loosest": {
+        "earliest": 1,
+        "latest": 1
+      },
+      "note": "Label says 'one hour before meals' without naming a meal; breakfast is used as the schema placeholder for the meal. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+        "section": "dosage and administration",
+        "sentence": "DOSAGE AND ADMINISTRATION Captopril tablets should be taken one hour before meals."
+      },
+      "verified": false
+    },
+    {
+      "id": "captopril-daily-max-450mg",
+      "family": "daily_max",
+      "amount": 450,
+      "unit": "mg",
+      "provenance": "quoted",
+      "note": "Maximum daily dose of 450 mg should not be exceeded. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+        "section": "dosage and administration",
+        "sentence": "A maximum daily dose of 450 mg captopril tablets should not be exceeded."
+      },
+      "verified": false
+    }
+  ]
+}

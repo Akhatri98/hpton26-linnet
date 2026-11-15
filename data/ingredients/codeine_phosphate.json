@@ -15,7 +15,13 @@
         "sentence": "Single Doses (Range) Maximum 24-Hour Dose Codeine Phosphate 15 mg to 60 mg 360 mg Acetaminophen 300 mg to 1,000 mg 4,000 mg The prescriber must determine the number of tablets per dose, and the maximum number of tablets per 24 hours, based upon the above dosage guidance."
       },
       "note": "Added after peer review (claude): no codeine maximum was enforced. Maximum 24-hour dose of codeine phosphate.",
-      "verified": false
+      "verified": true,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:47-05:00"
+      }
     }
   ]
 }

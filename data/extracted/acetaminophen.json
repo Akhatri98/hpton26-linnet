@@ -30,7 +30,15 @@
         "sentence": "Directions • do not take more than directed (see overdose warning) adults and children 12 years and over • take 2 caplets every 6 hours while symptoms last • do not take more than 6 caplets in 24 hours, unless directed by a doctor • do not use for more than 10 days unless directed by a doctor children under 12 years ask a doctor",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:51-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -52,7 +60,15 @@
         "sentence": "Directions • do not take more than directed (see overdose warning) adults and children 12 years and over • take 2 caplets every 6 hours while symptoms last • do not take more than 6 caplets in 24 hours, unless directed by a doctor • do not use for more than 10 days unless directed by a doctor children under 12 years ask a doctor",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:51-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     }
   ],
   "limits": [
@@ -72,7 +88,15 @@
         "sentence": "Directions • do not take more than directed (see overdose warning) adults and children 12 years and over • take 2 caplets every 6 hours while symptoms last • do not take more than 6 caplets in 24 hours, unless directed by a doctor • do not use for more than 10 days unless directed by a doctor children under 12 years ask a doctor",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:51-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "kind": "per_day",
@@ -90,7 +114,15 @@
         "sentence": "Severe liver damage may occur if you take • more than 4,000 mg of acetaminophen in 24 hours • with other drugs containing acetaminophen • 3 or more alcoholic drinks every day while using this product Allergy alert: Acetaminophen may cause severe skin reactions.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:51-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "kind": "duration_days",
@@ -108,7 +140,15 @@
         "sentence": "Directions • do not take more than directed (see overdose warning) adults and children 12 years and over • take 2 caplets every 6 hours while symptoms last • do not take more than 6 caplets in 24 hours, unless directed by a doctor • do not use for more than 10 days unless directed by a doctor children under 12 years ask a doctor",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00146b91-008d-4b16-95b0-6077f98821be"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:51-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     }
   ],
   "administration": [
@@ -124,7 +164,15 @@
         "section": "dosage and administration",
         "sentence": "Directions • do not take more than directed (see overdose warning) adults and children 12 years and over • take 2 caplets every 6 hours while symptoms last • do not take more than 6 caplets in 24 hours, unless directed by a doctor • do not use for more than 10 days unless directed by a doctor children under 12 years ask a doctor"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:52:06-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "verified existing library rule apap-q6h-otc"
+      }
     },
     {
       "id": "acetaminophen-daily-max-4000mg",
@@ -139,7 +187,15 @@
         "section": "warnings",
         "sentence": "Severe liver damage may occur if you take • more than 4,000 mg of acetaminophen in 24 hours • with other drugs containing acetaminophen • 3 or more alcoholic drinks every day while using this product Allergy alert: Acetaminophen may cause severe skin reactions."
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:52:06-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "verified existing library rule apap-max-otc"
+      }
     }
   ],
   "memberships": [],

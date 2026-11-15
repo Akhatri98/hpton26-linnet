@@ -1,0 +1,52 @@
+{
+  "model": "claude-haiku-5-5",
+  "accepted_rules": 2,
+  "accepted_memberships": [],
+  "rejected": [
+    {
+      "item": {
+        "id": "rifampin-meningococcal-interval-12h",
+        "family": "min_interval",
+        "hours": 12,
+        "sentence": "S7",
+        "provenance": "quoted"
+      },
+      "reason": "S7 gives 'every 12 hours' as a regimen, not a minimum gap or an as-needed limit; the prescription sets the regimen"
+    },
+    {
+      "item": {
+        "id": "rifampin-under1month-interval-12h",
+        "family": "min_interval",
+        "hours": 12,
+        "sentence": "S8",
+        "provenance": "quoted"
+      },
+      "reason": "S8 gives 'every 12 hours' as a regimen, not a minimum gap or an as-needed limit; the prescription sets the regimen"
+    },
+    {
+      "item": {
+        "id": "rifampin-antacids-separation-1h",
+        "family": "separation",
+        "target": "group:antacids",
+        "before": 1,
+        "after": 0,
+        "sentence": "S25",
+        "provenance": "interpreted",
+        "loosest": {
+          "hours": 1
+        },
+        "note": "Rifampin daily doses should be given at least 1 hour before antacids. No after-interval is stated; 0 is a placeholder."
+      },
+      "reason": "schema: Value error, rifampin-antacids-separation-1h: `loosest` names unknown param 'hours'"
+    },
+    {
+      "item": {
+        "group": "antacids",
+        "ingredient": "calcium_carbonate",
+        "sentence": "S25",
+        "provenance": "interpreted"
+      },
+      "reason": "ingredient 'calcium_carbonate' not named in S25"
+    }
+  ]
+}

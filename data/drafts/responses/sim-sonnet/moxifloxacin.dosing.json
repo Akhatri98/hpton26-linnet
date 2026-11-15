@@ -1,0 +1,9 @@
+{"dosing":[
+{"strength":null,"dose_type":"usual","condition":"community acquired pneumonia","population":"adults","dose":400,"dose_max":null,"unit":"mg","every_hours":24,"times_per_day":null,"duration_days":14,"as_needed":false,"sentence":"S4","provenance":"interpreted"},
+{"strength":null,"dose_type":"usual","condition":"uncomplicated skin and skin structure infections","population":"adults","dose":400,"dose_max":null,"unit":"mg","every_hours":24,"times_per_day":null,"duration_days":7,"as_needed":false,"sentence":"S4","provenance":"quoted"},
+{"strength":null,"dose_type":"usual","condition":"complicated skin and skin structure infections","population":"adults","dose":400,"dose_max":null,"unit":"mg","every_hours":24,"times_per_day":null,"duration_days":21,"as_needed":false,"sentence":"S4","provenance":"interpreted"},
+{"strength":null,"dose_type":"usual","condition":"complicated intra-abdominal infections","population":"adults","dose":400,"dose_max":null,"unit":"mg","every_hours":24,"times_per_day":null,"duration_days":14,"as_needed":false,"sentence":"S4","provenance":"interpreted"},
+{"strength":null,"dose_type":"usual","condition":"plague","population":"adults","dose":400,"dose_max":null,"unit":"mg","every_hours":24,"times_per_day":null,"duration_days":14,"as_needed":false,"sentence":"S4","provenance":"interpreted"},
+{"strength":null,"dose_type":"usual","condition":"acute bacterial sinusitis","population":"adults","dose":400,"dose_max":null,"unit":"mg","every_hours":24,"times_per_day":null,"duration_days":10,"as_needed":false,"sentence":"S4","provenance":"quoted"},
+{"strength":null,"dose_type":"usual","condition":"acute bacterial exacerbation of chronic bronchitis","population":"adults","dose":400,"dose_max":null,"unit":"mg","every_hours":24,"times_per_day":null,"duration_days":5,"as_needed":false,"sentence":"S4","provenance":"quoted"}
+]}

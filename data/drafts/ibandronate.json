@@ -1,0 +1,38 @@
+{
+  "ingredient": "ibandronate",
+  "primary_spl": "86c0b4ae-5e38-4efe-88af-50ac560e294f",
+  "rules": [
+    {
+      "id": "ibandronate-separation-other-meds",
+      "family": "separation",
+      "target": "*",
+      "before": 1,
+      "after": 0,
+      "provenance": "quoted",
+      "note": "Take ibandronate at least 60 minutes before the first food or drink (other than water) or any oral medication. Other drugs are not to be taken within 60 minutes after ibandronate (S3, S14). | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "86c0b4ae-5e38-4efe-88af-50ac560e294f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86c0b4ae-5e38-4efe-88af-50ac560e294f",
+        "section": "dosage and administration",
+        "sentence": "2.2 Important Administration Instructions Instruct Patients to do the following: Take ibandronate sodium tablets at least 60 minutes before the first food or drink (other than water) of the day or before taking any oral medication or supplementation, including calcium, antacids, or vitamins to maximize absorption and clinical benefit, (see DRUG INTERACTIONS [7.1] ) ."
+      },
+      "verified": false
+    },
+    {
+      "id": "ibandronate-separation-calcium-cations",
+      "family": "separation",
+      "target": "group:polyvalent_cations",
+      "before": 1,
+      "after": 1,
+      "provenance": "quoted",
+      "note": "Avoid calcium supplements within 60 minutes of ibandronate because calcium may interfere with absorption. Taken at least 60 minutes before multivalent cations (S13). | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "86c0b4ae-5e38-4efe-88af-50ac560e294f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86c0b4ae-5e38-4efe-88af-50ac560e294f",
+        "section": "dosage and administration",
+        "sentence": "Avoid the use of calcium supplements within 60 minutes of ibandronate sodium tablets administration because co-administration of ibandronate sodium tablets and calcium may interfere with the absorption of ibandronate sodium (see DRUG INTERACTIONS [7.1] ) ."
+      },
+      "verified": false
+    }
+  ]
+}

@@ -30,7 +30,15 @@
         "sentence": "Directions • adults and children 12 years of age and over: chew 2-4 tablets as symptoms occur, or as directed by a doctor.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ef1ed-32ef-46b8-8817-b3f63a014280"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     }
   ],
   "limits": [
@@ -50,7 +58,15 @@
         "sentence": "When using this product • do not take more than 6 tablets in 24 hours • if pregnant do not take more than 6 tablets in 24 hours • do not use the maximum dosage for more than 2 weeks, except under the advice and supervision of a doctor Keep out of reach of children.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ef1ed-32ef-46b8-8817-b3f63a014280"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "kind": "per_day",
@@ -68,7 +84,15 @@
         "sentence": "When using this product • do not take more than 6 tablets in 24 hours • if pregnant do not take more than 6 tablets in 24 hours • do not use the maximum dosage for more than 2 weeks, except under the advice and supervision of a doctor Keep out of reach of children.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ef1ed-32ef-46b8-8817-b3f63a014280"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "kind": "duration_days",
@@ -86,7 +110,15 @@
         "sentence": "When using this product • do not take more than 6 tablets in 24 hours • if pregnant do not take more than 6 tablets in 24 hours • do not use the maximum dosage for more than 2 weeks, except under the advice and supervision of a doctor Keep out of reach of children.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ef1ed-32ef-46b8-8817-b3f63a014280"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     }
   ],
   "administration": [],

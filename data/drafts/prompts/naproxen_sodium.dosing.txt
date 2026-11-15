@@ -1,0 +1,36 @@
+You are extracting DOSING directions from an FDA drug label for a pharmacist's tool.
+
+Ingredient: naproxen_sodium
+Label set id: 02941928-128a-2c88-e063-6294a90ac6ba
+Active ingredients on this label: naproxen sodium
+Strengths this label comes in (read from the label by code): 220 mg
+
+Numbered sentences from the label:
+S1 [dosage and administration] Directions do not take more than directed the smallest effective dose should be used drink a full glass of water with each dose Adults and children 12 years and older take 1 caplet every 8 to 12 hours while symptoms last for the first dose you may take 2 caplets within the first hour do not exceed 2 caplets in any 8- to 12-hour period do not exceed 3 caplets in a 24-hour period Children under 12 years ask a doctor
+S2 [warnings] The chance is higher if you: are age 60 or older have had stomach ulcers or bleeding problems take a blood thinning (anticoagulant) or steroid drug take other drugs containing prescription or nonprescription NSAIDs (aspirin, ibuprofen, naproxen, or others) have 3 or more alcoholic drinks every day while using this product take more or for a longer time than directed Heart attack and stroke warning: NSAIDs, except aspirin, increase the risk of heart attack, heart failure, and stroke.
+S3 [warnings] The risk is higher if you use more than directed or for longer than directed.
+S4 [warnings] Do not use if you have ever had an allergic reaction to any other pain reliever/fever reducer right before or after heart surgery Ask a doctor before use if the stomach bleeding warning applies to you you have a history of stomach problems, such as heartburn you have high blood pressure, heart disease, liver cirrhosis, kidney disease, asthma, or had a stroke you are taking a diuretic you have problems or serious side effects from taking pain relievers or fever reducers Ask a doctor or pharmacist before use if you are under a doctor's care for any serious conidtion taking aspirin for heart attack or stroke, because naproxen may decrease this benefit of aspirin taking any other drug When using this product take with food or milk if stomach upset occurs Stop use and ask a doctor if you experience any of the following signs of stomach bleeding: feel faint vomit blood have bloody or black stools have stomach pain that does not get better you have symptoms of heart problems or stroke: chest pain trouble breathing weakness in one part or side of body slurred speech leg swelling pain gets worse or lasts more than 10 days fever gets worse or lasts more than 3 days you have difficulty swallowing it feels like the pill is stuck in your throat redness or swelling is present in the painful area any new symptoms appear If pregnant or breast-feeding , ask a healthcare professional before use.
+S5 [do not use] Do not use if you have ever had an allergic reaction to any other pain reliever/fever reducer right before or after heart surgery
+S6 [active ingredient] Active ingredient (in each caplet) Naproxen sodium 220 mg (naproxen 200 mg) (NSAID) *nonsteroidal anti-inflammatory drug
+
+Return ONLY a JSON object {"dosing": [ ... ]}. One row per distinct regimen the label gives: per condition,
+per population, and PER STRENGTH when the label gives different directions for different strengths.
+Each row:
+  {"strength": "the strength this row is for, written like the list above, e.g. '300 mg/30 mg'", or null if the
+              dose is given as an amount (mg, mcg, g) that does not depend on the strength,
+   "dose_type": "usual" | "starting" | "maintenance" | "adjusted" (for a population such as renal or hepatic impairment),
+   "condition": "what it is for, or 'general'", "population": "adults" | "children" | "renal impairment" | ...,
+   "dose": N, "dose_max": N or null,
+   "unit": "mg" | "g" | "mcg" | "mg/kg" | "mcg/kg" | "tablets" | "caplets" | "capsules" | "mL",
+   "every_hours": H or null, "times_per_day": T or null, "duration_days": D or null,
+   "as_needed": true | false, "sentence": "Sk", "provenance": "quoted" | "interpreted"}
+Rules:
+- If the dose is a count of tablets, caplets or capsules and the label comes in more than one strength, "strength" is REQUIRED.
+- Weight-based doses use "mg/kg" or "mcg/kg" (e.g. "15 mg/kg" -> dose 15, unit "mg/kg").
+- A range like "500-750 mg" is dose=500, dose_max=750. "1 to 2 tablets" is dose=1, dose_max=2.
+- "twice daily" is times_per_day=2; "every 12 hours" is every_hours=12.
+- Not doses: maximums ("do not take more than 6 tablets") belong to limits; increases ("increase by 12.5 to 25 mcg")
+  are titration steps, not doses; "do not use for more than 10 days" is a limit, not a course length.
+- Read the sentence before a dose: it often says who the dose is for (e.g. patients with liver cirrhosis).
+- Use only numbers stated in the cited sentence. Cite exactly one sentence id per row; do not copy text.
+Include every regimen you find, even if there are many. If unsure, leave it out.

@@ -1,0 +1,6 @@
+{"dosing":[
+{"strength":null,"dose_type":"starting","condition":"general","population":"adults","dose":50,"dose_max":100,"unit":"mg","every_hours":4,"times_per_day":null,"duration_days":null,"as_needed":true,"sentence":"S15","provenance":"interpreted"},
+{"strength":null,"dose_type":"starting","condition":"patients not requiring rapid onset of analgesia","population":"adults","dose":25,"dose_max":null,"unit":"mg","every_hours":null,"times_per_day":null,"duration_days":null,"as_needed":false,"sentence":"S17","provenance":"interpreted"},
+{"strength":null,"dose_type":"maintenance","condition":"general","population":"adults","dose":50,"dose_max":100,"unit":"mg","every_hours":4,"times_per_day":null,"duration_days":null,"as_needed":true,"sentence":"S18","provenance":"interpreted"},
+{"strength":null,"dose_type":"adjusted","condition":"severe hepatic impairment","population":"hepatic impairment","dose":50,"dose_max":null,"unit":"mg","every_hours":12,"times_per_day":null,"duration_days":null,"as_needed":false,"sentence":"S21","provenance":"quoted"}
+]}

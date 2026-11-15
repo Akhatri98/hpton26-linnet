@@ -1,0 +1,58 @@
+You are extracting medication TIMING rules from an FDA drug label, for a scheduling tool used by pharmacists.
+
+Ingredient: ibandronate
+Label set id: 86c0b4ae-5e38-4efe-88af-50ac560e294f
+
+Numbered sentences from the label:
+S1 [dosage and administration] 2 DOSAGE AND ADMINISTRATION Take one 150 mg tablet once monthly on the same day each month ( 2.1 ) Instruct patient to: ( 2.2 ) Swallow whole tablet with 6 to 8 oz of plain water only, at least 60 minutes before the first food, beverage, or medication of day.
+S2 [dosage and administration] Avoid lying down for at least 60 minutes after taking ibandronate sodium tablets.
+S3 [dosage and administration] Do not eat, drink (except for water), or take other medication for 60 minutes after taking ibandronate sodium tablets.
+S5 [dosage and administration] 2.2 Important Administration Instructions Instruct Patients to do the following: Take ibandronate sodium tablets at least 60 minutes before the first food or drink (other than water) of the day or before taking any oral medication or supplementation, including calcium, antacids, or vitamins to maximize absorption and clinical benefit, (see DRUG INTERACTIONS [7.1] ) .
+S6 [dosage and administration] Avoid lying down for 60 minutes after taking ibandronate sodium tablets (see WARNINGS AND PRECAUTIONS [5.1] ) .
+S7 [dosage and administration] Do not eat, drink anything except plain water, or take other medications for at least 60 minutes after taking ibandronate sodium tablets.
+S8 [dosage and administration] Avoid the use of calcium supplements within 60 minutes of ibandronate sodium tablets administration because co-administration of ibandronate sodium tablets and calcium may interfere with the absorption of ibandronate sodium (see DRUG INTERACTIONS [7.1] ) .
+S9 [dosage and administration] 2.4 Administration Instructions for Missed Once-Monthly Doses If the once-monthly dose is missed, instruct patients to do the following: If the next scheduled ibandronate sodium tablets day is more than 7 days away, take one ibandronate sodium tablet 150 mg (ibandronate) in the morning following the date that it is remembered.
+S11 [dosage and administration] For subsequent monthly doses for both of the above scenarios, instruct patients to return to their original schedule by taking one ibandronate sodium tablet 150 mg (ibandronate) every month on their previous chosen day.
+S12 [drug interactions] Do not take within 60 minutes of dosing.
+S13 [drug interactions] Therefore, instruct patients to take ibandronate sodium at least 60 minutes before any oral medications, including medications containing multivalent cations (such as antacids, supplements or vitamins).
+S14 [drug interactions] Also, patients should wait at least 60 minutes after dosing before taking any other oral medications (see Dosage and Administration [2.3] ) .
+S15 [warnings and cautions] Correct hypocalcemia before use.
+S16 [warnings and cautions] The risk of severe esophageal adverse experiences appears to be greater in patients who lie down after taking oral bisphosphonates and/or who fail to swallow it with the recommended full glass (6 to 8 oz) of water, and/or who continue to take oral bisphosphonates after developing symptoms suggestive of esophageal irritation.
+S17 [warnings and cautions] Treat hypocalcemia and other disturbances of bone and mineral metabolism before starting ibandronate sodium therapy.
+S18 [warnings and cautions] The time to onset of symptoms varied from one day to several months after starting the drug.
+S19 [warnings and cautions] Most patients had relief of symptoms after stopping.
+S20 [warnings and cautions] Prodromal pain in the affected area, usually presenting as dull, aching thigh pain, weeks to months before a complete fracture occurs was reported by patients.
+
+Known ingredient groups (you may propose members for these, or a new group):
+- levothyroxine_binders: ['calcium_carbonate', 'colestipol', 'ferrous_sulfate']
+- polyvalent_cations: ['aluminum', 'calcium_carbonate', 'iron', 'magnesium', 'sucralfate', 'zinc']
+- antacids: ['calcium_carbonate']
+
+Return ONLY a JSON object:
+{
+  "rules": [ ... ],
+  "memberships": [ ... ]
+}
+
+Each rule is one of these shapes. Times are in HOURS (30 minutes = 0.5). Use only numbers stated in the cited sentence.
+  {"id": "...", "family": "min_interval", "hours": H, "sentence": "Sk", "provenance": "quoted"|"interpreted", "loosest": {"hours": X}?, "note": "..."}
+      any two doses of this ingredient at least H hours apart ("every 6 hours")
+  {"id": "...", "family": "separation", "target": "<ingredient>" | "group:<name>" | "*", "before": B, "after": A, "sentence": "Sk", ...}
+      THIS ingredient is taken at least B hours BEFORE and at least A hours AFTER any dose of the target.
+      "*" means every other drug. Careful with direction: if the label says "take OTHER drugs 1 hour before
+      or 4 hours after THIS drug", then THIS drug is 4 hours before and 1 hour after the other: before=4, after=1.
+  {"id": "...", "family": "daily_max", "amount": N, "unit": "mg"|"g"|"mcg", "sentence": "Sk", ...}
+  {"id": "...", "family": "food", "mode": "empty_stomach", "before_meal": B, "after_meal": A, "meal": null|"breakfast", "sentence": "Sk", ...}
+      no dose from B hours before to A hours after a meal
+  {"id": "...", "family": "food", "mode": "before_meal_window", "meal": "breakfast", "earliest": E, "latest": L, "sentence": "Sk", ...}
+      dose between E and L hours before the meal (E >= L)
+
+provenance: "quoted" if the number is stated plainly and firmly; "interpreted" if you had to judge
+(soft words like "preferably", "if possible", "consider", a range, or a derived number). Every
+"interpreted" rule MUST give "loosest": the most permissive defensible value of each number you judged.
+
+Each membership: {"group": "<name>", "ingredient": "<lowercase_underscore_name>", "sentence": "Sk", "provenance": "quoted"|"interpreted"}
+  Propose a membership when the label names an ingredient as one of the things to separate from.
+
+Ids: lowercase letters, digits, dashes, starting with the ingredient name. Cite exactly one sentence id per item.
+Do not copy sentence text; cite its id. Only include rules the label actually states. If unsure, leave it out.

@@ -95,6 +95,29 @@ def test_group_expands_to_products_and_solves(lib_root):
     assert violations(built.regimen, r.schedule) == []
 
 
+def test_rule_naming_an_element_covers_its_salts(lib_root):
+    # "take at least 2 hours before or after iron supplements": the product is filed as the salt.
+    write(lib_root, "ingredients/drug_b.json", {
+        "ingredient": "drug_b", "primary_spl": PRIMARY,
+        "rules": [{"id": "b-iron", "family": "separation", "target": "iron", "before": 2, "after": 2,
+                   "provenance": "quoted", "source": src()}],
+    })
+    write(lib_root, "products/rx-b.json", {
+        "name": "rx-b", "display_name": "Drug B 300 mg", "spl_set_id": PRIMARY, "url": "u",
+        "ingredients": {"drug_b": {"amount": 300, "unit": "mg"}},
+    })
+    write(lib_root, "products/iron-otc.json", {
+        "name": "iron-otc", "display_name": "Ferrous sulfate 325 mg", "spl_set_id": "spl-iron-0005", "url": "u",
+        "ingredients": {"ferrous_sulfate": {"amount": 325, "unit": "mg"}},
+    })
+    lib = load(lib_root)
+    built = build_regimen(lib, [Item("rx-b", prescribed_count=2), Item("iron-otc", prescribed_count=1),
+                                Item("rx-a", prescribed_count=1)], "strict")
+    ids = {r.id for r in built.regimen.rules}
+    assert "b-iron@rx-b~iron-otc" in ids
+    assert not any(i.startswith("b-iron@rx-b~rx-a") for i in ids)  # only the element's salts
+
+
 def test_missing_ingredient_is_reported_not_silent(lib_root):
     write(lib_root, "products/mystery.json", {
         "name": "mystery", "display_name": "Mystery", "spl_set_id": "spl-myst-0004", "url": "u",

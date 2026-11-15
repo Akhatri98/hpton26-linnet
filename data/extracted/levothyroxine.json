@@ -41,7 +41,15 @@
         "sentence": "Patient Population Starting Dosage Dosage Titration Based on serum TSH or Free-T4 Adults diagnosed with hypothyroidism Full replacement dose is 1.6 mcg/kg/day.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:53-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -63,7 +71,15 @@
         "sentence": "Adults at risk for atrial fibrillation or with underlying cardiac disease Lower starting dose (less than 1.6 mcg/kg/day) Titrate dosage every 6 to 8 weeks, as needed until the patient is euthyroid.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:53-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -85,7 +101,15 @@
         "sentence": "Geriatric patients Lower starting dose (less than 1.6 mcg/kg/day) Primary, Secondary, and Tertiary Hypothyroidism in Pediatric Patients The recommended starting daily dosage of levothyroxine sodium tablets in pediatric patients with primary, secondary, or tertiary hypothyroidism is based on body weight and changes with age as described in Table 2.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:53-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -107,7 +131,15 @@
         "sentence": "New onset hypothyroidism (TSH ≥10 mIU per liter) 1.6 mcg/kg/day Monitor serum TSH every 4 weeks and adjust levothyroxine sodium dosage until serum TSH is within normal trimester-specific range.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:53-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     }
   ],
   "limits": [
@@ -127,7 +159,15 @@
         "sentence": "Levothyroxine Sodium Tablets Dosing Guidelines for Hypothyroidism in Adults* *Dosages greater than 200 mcg/day are seldom required.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=008de8fd-150f-4022-8ccb-c8bfa94875c7"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:53-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     }
   ],
   "administration": [
@@ -146,7 +186,15 @@
         "section": "dosage and administration",
         "sentence": "(2.4) 2.1 Important Administration Instructions Administer levothyroxine sodium tablets as a single daily dose, on an empty stomach, one-half to one hour before breakfast with a full glass of water to avoid choking or gagging [see Adverse Reactions (6) ]."
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:52:07-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "verified existing library rule levo-breakfast"
+      }
     },
     {
       "id": "levothyroxine-food-interaction-1h",
@@ -166,7 +214,15 @@
         "section": "dosage and administration",
         "sentence": "(2.1) Evaluate the need for dose adjustments when regularly administering within one hour of certain foods that may affect absorption."
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:48-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/levothyroxine.json)"
+      }
     }
   ],
   "memberships": [],

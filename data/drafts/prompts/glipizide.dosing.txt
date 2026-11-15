@@ -1,0 +1,66 @@
+You are extracting DOSING directions from an FDA drug label for a pharmacist's tool.
+
+Ingredient: glipizide
+Label set id: 00729e82-150a-464a-abe7-a3319721fbdb
+Active ingredients on this label: glipizide
+Strengths this label comes in (read from the label by code): (none found)
+
+Numbered sentences from the label:
+S1 [dosage and administration] to detect primary failure, i.e., inadequate lowering of blood glucose at the maximum recommended dose of medication;
+S2 [dosage and administration] and to detect secondary failure, i.e., loss of an adequate blood-glucose-lowering response after an initial period of effectiveness.
+S3 [dosage and administration] In general, glipizide should be given approximately 30 minutes before a meal to achieve the greatest reduction in postprandial hyperglycemia.
+S4 [dosage and administration] Initial Dose The recommended starting dose is 5 mg, given before breakfast.
+S5 [dosage and administration] Geriatric patients or those with liver disease may be started on 2.5 mg.
+S6 [dosage and administration] Titration Dosage adjustments should ordinarily be in increments of 2.5 to 5 mg, as determined by blood glucose response.
+S7 [dosage and administration] If response to a single dose is not satisfactory, dividing that dose may prove effective.
+S8 [dosage and administration] The maximum recommended once daily dose is 15 mg.
+S9 [dosage and administration] Doses above 15 mg should ordinarily be divided and given before meals of adequate caloric content.
+S10 [dosage and administration] The maximum recommended total daily dose is 40 mg.
+S11 [dosage and administration] Maintenance Some patients may be effectively controlled on a once-a-day regimen, while others show better response with divided dosing.
+S12 [dosage and administration] Total daily doses above 15 mg should ordinarily be divided.
+S13 [dosage and administration] Total daily doses above 30 mg have been safely given on a b.i.d.
+S14 [dosage and administration] When transferring patients from insulin to glipizide, the following general guidelines should be considered: For patients whose daily insulin requirement is 20 units or less, insulin may be discontinued and glipizide therapy may begin at usual dosages.
+S15 [dosage and administration] For patients whose daily insulin requirement is greater than 20 units, the insulin dose should be reduced by 50% and glipizide therapy may begin at usual dosages.
+S16 [dosage and administration] During the insulin withdrawal period, the patient should test urine samples for sugar and ketone bodies at least three times daily.
+S17 [dosage and administration] In some cases, especially when patient has been receiving greater than 40 units of insulin daily, it may be advisable to consider hospitalization during the transition period.
+S18 [dosage and administration] When colesevelam is co-administered with glipizide ER, maximum plasma concentration and total exposure to glipizide is reduced.
+S19 [dosage and administration] Therefore, glipizide tablets should be administered at least 4 hours prior to colesevelam.
+S20 [drug interactions] The effect of concomitant administration of DIFLUCAN ® (fluconazole) and glipizide has been demonstrated in a placebo-controlled crossover study in normal volunteers.
+S21 [drug interactions] All subjects received glipizide alone and following treatment with 100 mg of DIFLUCAN as a single daily oral dose for 7 days.
+S22 [drug interactions] The mean percentage increase in the glipizide AUC after fluconazole administration was 56.9% (range: 35 to 81).
+S23 [drug interactions] When glipizide ER was administered 4 hours prior to colesevelam, there was no significant change in glipizide AUC 0-∞ or C max , -4% and 0%, respectively.
+S24 [drug interactions] Therefore, glipizide should be administered at least 4 hours prior to colesevelam to ensure that colesevelam does not reduce the absorption of glipizide.
+S25 [precautions] Hypoglycemia is more likely to occur when caloric intake is deficient, after severe or prolonged exercise, when alcohol is ingested, or when more than one glucose-lowering drug is used.
+S26 [precautions] At such times, it may be necessary to discontinue glipizide and administer insulin.
+S27 [precautions] Carcinogenesis, Mutagenesis, Impairment of Fertility A twenty month study in rats and an eighteen month study in mice at doses up to 75 times the maximum human dose revealed no evidence of drug-related carcinogenicity.
+S28 [precautions] Studies in rats of both sexes at doses up to 75 times the human dose showed no effects on fertility.
+S29 [precautions] Pregnancy Glipizide was found to be mildly fetotoxic in rat reproductive studies at all dose levels (5 to 50 mg/kg).
+S30 [precautions] If glipizide is used during pregnancy, it should be discontinued at least one month before the expected delivery date.
+S31 [warnings] 2:747-830, 1970).
+S32 [warnings] UGDP reported that patients treated for 5 to 8 years with diet plus a fixed dose of tolbutamide (1.5 grams per day) had a rate of cardiovascular mortality approximately 2½ times that of patients treated with diet alone.
+S33 [how supplied] HOW SUPPLIED Glipizide Tablets USP, 10 mg are available as white to off-white, round, flat-faced, beveled edge tablets, bisected and debossed on one side with “316” above bisect and debossed with “ANI” on the other side, containing 10 mg of glipizide.
+S34 [how supplied] NDC: 72162-2215-00: 1000 Tablets in a BOTTLE Store at 20° to 25°C (68° to 77°F) [see USP Controlled Room Temperature].
+S35 [description] it is freely soluble in dimethylformamide.
+S36 [description] Glipizide Tablets USP for oral use are available in 5 and 10 mg strengths.
+
+Return ONLY a JSON object {"dosing": [ ... ]}. One row per distinct regimen the label gives: per condition,
+per population, and PER STRENGTH when the label gives different directions for different strengths.
+Each row:
+  {"strength": "the strength this row is for, written like the list above, e.g. '300 mg/30 mg'", or null if the
+              dose is given as an amount (mg, mcg, g) that does not depend on the strength,
+   "dose_type": "usual" | "starting" | "maintenance" | "adjusted" (for a population such as renal or hepatic impairment),
+   "condition": "what it is for, or 'general'", "population": "adults" | "children" | "renal impairment" | ...,
+   "dose": N, "dose_max": N or null,
+   "unit": "mg" | "g" | "mcg" | "mg/kg" | "mcg/kg" | "tablets" | "caplets" | "capsules" | "mL",
+   "every_hours": H or null, "times_per_day": T or null, "duration_days": D or null,
+   "as_needed": true | false, "sentence": "Sk", "provenance": "quoted" | "interpreted"}
+Rules:
+- If the dose is a count of tablets, caplets or capsules and the label comes in more than one strength, "strength" is REQUIRED.
+- Weight-based doses use "mg/kg" or "mcg/kg" (e.g. "15 mg/kg" -> dose 15, unit "mg/kg").
+- A range like "500-750 mg" is dose=500, dose_max=750. "1 to 2 tablets" is dose=1, dose_max=2.
+- "twice daily" is times_per_day=2; "every 12 hours" is every_hours=12.
+- Not doses: maximums ("do not take more than 6 tablets") belong to limits; increases ("increase by 12.5 to 25 mcg")
+  are titration steps, not doses; "do not use for more than 10 days" is a limit, not a course length.
+- Read the sentence before a dose: it often says who the dose is for (e.g. patients with liver cirrhosis).
+- Use only numbers stated in the cited sentence. Cite exactly one sentence id per row; do not copy text.
+Include every regimen you find, even if there are many. If unsure, leave it out.

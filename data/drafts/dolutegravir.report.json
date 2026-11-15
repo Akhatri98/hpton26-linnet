@@ -1,0 +1,31 @@
+{
+  "model": "claude-haiku-5-5",
+  "accepted_rules": 2,
+  "accepted_memberships": [
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "sucralfate",
+      "provenance": "quoted",
+      "basis": "Medications containing polyvalent cations (e.g., Mg or Al): Cation-containing antacids a or laxatives Sucralfate Buffered medications ↓Dolutegravir Administer TIVICAY or TIVICAY PD 2 hours before or 6 hours after taking medications containing polyvalent cations.",
+      "source_spl": "63df5af3-b8ac-4e76-9830-2dbb340af922",
+      "verified": false
+    },
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "iron",
+      "provenance": "quoted",
+      "basis": "Under fasting conditions, TIVICAY or TIVICAY PD should be taken 2 hours before or 6 hours after taking supplements containing calcium or iron.",
+      "source_spl": "63df5af3-b8ac-4e76-9830-2dbb340af922",
+      "verified": false
+    },
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "calcium",
+      "provenance": "quoted",
+      "basis": "Under fasting conditions, TIVICAY or TIVICAY PD should be taken 2 hours before or 6 hours after taking supplements containing calcium or iron.",
+      "source_spl": "63df5af3-b8ac-4e76-9830-2dbb340af922",
+      "verified": false
+    }
+  ],
+  "rejected": []
+}

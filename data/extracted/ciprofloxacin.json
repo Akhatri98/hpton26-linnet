@@ -32,7 +32,15 @@
         "sentence": "Adult Dosage Guidelines Infection Dose Frequency Duration Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal 500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) 500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Adults with creatinine clearance 3050 mL/min 250500 mg q 12 h ( 2.3 ) Adults with creatinine clearance 529 mL/min 250500 mg q 18 h ( 2.3 ) Patients on hemodialysis or peritoneal dialysis 250500 mg q 24 h (after dialysis) ( 2.3 ) Pediatric Oral Dosage Guidelines Infection Dose Frequency Duration Complicated UTI and Pyelonephritis (1 to 17 years of age) 10-20 mg/kg (maximum 750 mg per dose) Every 12 hours 10 - 21 days Inhalational Anthrax (Post-Exposure) 15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague 15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.1 Dosage in Adults The determination of dosage and duration for any particular patient must take into consideration the severity and nature of the infection, the susceptibility of the causative microorganism, the integrity of the patient's host-defense mechanisms, and the status of renal and hepatic function.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -54,7 +62,15 @@
         "sentence": "Adult Dosage Guidelines Infection Dose Frequency Duration Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal 500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) 500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Adults with creatinine clearance 3050 mL/min 250500 mg q 12 h ( 2.3 ) Adults with creatinine clearance 529 mL/min 250500 mg q 18 h ( 2.3 ) Patients on hemodialysis or peritoneal dialysis 250500 mg q 24 h (after dialysis) ( 2.3 ) Pediatric Oral Dosage Guidelines Infection Dose Frequency Duration Complicated UTI and Pyelonephritis (1 to 17 years of age) 10-20 mg/kg (maximum 750 mg per dose) Every 12 hours 10 - 21 days Inhalational Anthrax (Post-Exposure) 15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague 15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.1 Dosage in Adults The determination of dosage and duration for any particular patient must take into consideration the severity and nature of the infection, the susceptibility of the causative microorganism, the integrity of the patient's host-defense mechanisms, and the status of renal and hepatic function.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -76,7 +92,15 @@
         "sentence": "Adult Dosage Guidelines Infection Dose Frequency Duration Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal 500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) 500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Adults with creatinine clearance 3050 mL/min 250500 mg q 12 h ( 2.3 ) Adults with creatinine clearance 529 mL/min 250500 mg q 18 h ( 2.3 ) Patients on hemodialysis or peritoneal dialysis 250500 mg q 24 h (after dialysis) ( 2.3 ) Pediatric Oral Dosage Guidelines Infection Dose Frequency Duration Complicated UTI and Pyelonephritis (1 to 17 years of age) 10-20 mg/kg (maximum 750 mg per dose) Every 12 hours 10 - 21 days Inhalational Anthrax (Post-Exposure) 15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague 15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.1 Dosage in Adults The determination of dosage and duration for any particular patient must take into consideration the severity and nature of the infection, the susceptibility of the causative microorganism, the integrity of the patient's host-defense mechanisms, and the status of renal and hepatic function.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -98,7 +122,15 @@
         "sentence": "Adult Dosage Guidelines Infection Dose Frequency Duration Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal 500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) 500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Adults with creatinine clearance 3050 mL/min 250500 mg q 12 h ( 2.3 ) Adults with creatinine clearance 529 mL/min 250500 mg q 18 h ( 2.3 ) Patients on hemodialysis or peritoneal dialysis 250500 mg q 24 h (after dialysis) ( 2.3 ) Pediatric Oral Dosage Guidelines Infection Dose Frequency Duration Complicated UTI and Pyelonephritis (1 to 17 years of age) 10-20 mg/kg (maximum 750 mg per dose) Every 12 hours 10 - 21 days Inhalational Anthrax (Post-Exposure) 15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague 15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.1 Dosage in Adults The determination of dosage and duration for any particular patient must take into consideration the severity and nature of the infection, the susceptibility of the causative microorganism, the integrity of the patient's host-defense mechanisms, and the status of renal and hepatic function.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -120,7 +152,15 @@
         "sentence": "Adult Dosage Guidelines Infection Dose Frequency Duration Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal 500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) 500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Adults with creatinine clearance 3050 mL/min 250500 mg q 12 h ( 2.3 ) Adults with creatinine clearance 529 mL/min 250500 mg q 18 h ( 2.3 ) Patients on hemodialysis or peritoneal dialysis 250500 mg q 24 h (after dialysis) ( 2.3 ) Pediatric Oral Dosage Guidelines Infection Dose Frequency Duration Complicated UTI and Pyelonephritis (1 to 17 years of age) 10-20 mg/kg (maximum 750 mg per dose) Every 12 hours 10 - 21 days Inhalational Anthrax (Post-Exposure) 15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague 15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.1 Dosage in Adults The determination of dosage and duration for any particular patient must take into consideration the severity and nature of the infection, the susceptibility of the causative microorganism, the integrity of the patient's host-defense mechanisms, and the status of renal and hepatic function.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -142,7 +182,15 @@
         "sentence": "Adult Dosage Guidelines Infection Dose Frequency Duration Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal 500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) 500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Adults with creatinine clearance 3050 mL/min 250500 mg q 12 h ( 2.3 ) Adults with creatinine clearance 529 mL/min 250500 mg q 18 h ( 2.3 ) Patients on hemodialysis or peritoneal dialysis 250500 mg q 24 h (after dialysis) ( 2.3 ) Pediatric Oral Dosage Guidelines Infection Dose Frequency Duration Complicated UTI and Pyelonephritis (1 to 17 years of age) 10-20 mg/kg (maximum 750 mg per dose) Every 12 hours 10 - 21 days Inhalational Anthrax (Post-Exposure) 15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague 15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.1 Dosage in Adults The determination of dosage and duration for any particular patient must take into consideration the severity and nature of the infection, the susceptibility of the causative microorganism, the integrity of the patient's host-defense mechanisms, and the status of renal and hepatic function.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -164,7 +212,15 @@
         "sentence": "Adult Dosage Guidelines Infection Dose Frequency Duration Skin and Skin Structure 500-750mg every 12 hours 7 to 14 days Bone and Joint 500-750mg every 12 hours 4 to 8 weeks Complicated Intra-Abdominal 500mg every 12 hours 7 to 14 days Infectious Diarrhea 500mg every 12 hours 5 to 7 days Typhoid Fever 500mg every 12 hours 10 days Uncomplicated Gonorrhea 250mg single dose single dose Inhalational anthrax (post-exposure) 500mg every 12 hours 60 days Plague 500-750mg every 12 hours 14 days Chronic Bacterial Prostatitis 500mg every 12 hours 28 days Lower Respiratory Tract 500-750mg every 12 hours 7 to 14 days Urinary Tract 250-500mg every 12 hours 7 to 14 days Acute Uncomplicated Cystitis 250mg every 12 hours 3 days Acute Sinusitis 500mg every 12 hours 10 days Adults with creatinine clearance 3050 mL/min 250500 mg q 12 h ( 2.3 ) Adults with creatinine clearance 529 mL/min 250500 mg q 18 h ( 2.3 ) Patients on hemodialysis or peritoneal dialysis 250500 mg q 24 h (after dialysis) ( 2.3 ) Pediatric Oral Dosage Guidelines Infection Dose Frequency Duration Complicated UTI and Pyelonephritis (1 to 17 years of age) 10-20 mg/kg (maximum 750 mg per dose) Every 12 hours 10 - 21 days Inhalational Anthrax (Post-Exposure) 15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague 15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.1 Dosage in Adults The determination of dosage and duration for any particular patient must take into consideration the severity and nature of the infection, the susceptibility of the causative microorganism, the integrity of the patient's host-defense mechanisms, and the status of renal and hepatic function.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -186,7 +242,15 @@
         "sentence": "Table 4: Recommended Starting and Maintenance Doses for Adult Patients with Impaired Renal Function Creatinine Clearance (mL/min) Dose >50 See Usual Dosage 30 -50 250 – 500 mg every 12 hours 5 - 29 250 – 500 mg every 18 hours Patients on hemodialysis or Peritoneal dialysis 250 – 500 mg every 24 hours (after dialysis) When only the serum creatinine concentration is known, the following formulas may be used to estimate creatinine clearance: Men - Creatinine clearance (mL/min) = Weight (kg) x (140-age) 72 x serum creatinine (mg/dL) Women - 0.85 x the value calculated for men.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -208,7 +272,15 @@
         "sentence": "Table 4: Recommended Starting and Maintenance Doses for Adult Patients with Impaired Renal Function Creatinine Clearance (mL/min) Dose >50 See Usual Dosage 30 -50 250 – 500 mg every 12 hours 5 - 29 250 – 500 mg every 18 hours Patients on hemodialysis or Peritoneal dialysis 250 – 500 mg every 24 hours (after dialysis) When only the serum creatinine concentration is known, the following formulas may be used to estimate creatinine clearance: Men - Creatinine clearance (mL/min) = Weight (kg) x (140-age) 72 x serum creatinine (mg/dL) Women - 0.85 x the value calculated for men.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -230,7 +302,15 @@
         "sentence": "Table 4: Recommended Starting and Maintenance Doses for Adult Patients with Impaired Renal Function Creatinine Clearance (mL/min) Dose >50 See Usual Dosage 30 -50 250 – 500 mg every 12 hours 5 - 29 250 – 500 mg every 18 hours Patients on hemodialysis or Peritoneal dialysis 250 – 500 mg every 24 hours (after dialysis) When only the serum creatinine concentration is known, the following formulas may be used to estimate creatinine clearance: Men - Creatinine clearance (mL/min) = Weight (kg) x (140-age) 72 x serum creatinine (mg/dL) Women - 0.85 x the value calculated for men.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -252,7 +332,15 @@
         "sentence": "Table 3: Pediatric Oral Dosage Guidelines Infection Dose Frequency Total Duration Complicated Urinary Tract or Pyelonephritis (patients from 1 to 17 years of age) 10 mg/kg to 20 mg/kg (maximum 750 mg per dose;",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     }
   ],
   "limits": [
@@ -272,7 +360,15 @@
         "sentence": "Table 3: Pediatric Oral Dosage Guidelines Infection Dose Frequency Total Duration Complicated Urinary Tract or Pyelonephritis (patients from 1 to 17 years of age) 10 mg/kg to 20 mg/kg (maximum 750 mg per dose;",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "kind": "per_dose",
@@ -290,7 +386,15 @@
         "sentence": "15 mg/kg (maximum 500 mg per dose) Every 12 hours 60 days Plague Begin drug administration as soon as possible after suspected or confirmed exposure to Y.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "kind": "per_dose",
@@ -308,7 +412,15 @@
         "sentence": "15 mg/kg (maximum 500 mg per dose) Every 8 to 12 hours 14 days 2.3 Dosage Modifications in Patients with Renal Impairment Ciprofloxacin is eliminated primarily by renal excretion;",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "kind": "per_dose",
@@ -326,7 +438,15 @@
         "sentence": "In patients with severe infections and severe renal impairment, a unit dose of 750 mg may be administered at the intervals noted above.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c355077-7361-41d0-9e82-eb31beaf5daa"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     }
   ],
   "administration": [
@@ -344,7 +464,15 @@
         "section": "dosage and administration",
         "sentence": "2.4 Important Administration Instructions With Multivalent Cations Administer ciprofloxacin tablets at least 2 hours before or 6 hours after magnesium/aluminum antacids;"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:52:06-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "verified existing library rule cipro-cations"
+      }
     }
   ],
   "memberships": [
@@ -354,7 +482,15 @@
       "provenance": "quoted",
       "basis": "2.4 Important Administration Instructions With Multivalent Cations Administer ciprofloxacin tablets at least 2 hours before or 6 hours after magnesium/aluminum antacids;",
       "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:55-05:00",
+        "note": "3 of 4 runs agreed",
+        "result": "verified existing member aluminum of polyvalent_cations"
+      }
     },
     {
       "group": "polyvalent_cations",
@@ -362,7 +498,15 @@
       "provenance": "quoted",
       "basis": "2.4 Important Administration Instructions With Multivalent Cations Administer ciprofloxacin tablets at least 2 hours before or 6 hours after magnesium/aluminum antacids;",
       "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:52:05-05:00",
+        "note": "3 of 4 runs agreed",
+        "result": "verified existing member magnesium of polyvalent_cations"
+      }
     },
     {
       "group": "polyvalent_cations",
@@ -371,7 +515,15 @@
       "basis": "or products containing calcium, iron, or zinc and dairy products) Ciprofloxacin should be taken at least two hours before or six hours after Multivalent cation-containing products administration [see Dosage and Administration (2.4)] Decrease ciprofloxacin absorption, resulting in lower serum and urine levels Probenecid Use with caution (interferes with renal tubular secretion of ciprofloxacin and increases ciprofloxacin serum levels) Potentiation of ciprofloxacin toxicity may occur.",
       "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
       "verified": false,
-      "matched": "label names 'calcium'; calcium_carbonate is a salt of it"
+      "matched": "label names 'calcium'; calcium_carbonate is a salt of it",
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:50-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/ciprofloxacin.json)"
+      }
     },
     {
       "group": "polyvalent_cations",
@@ -379,7 +531,15 @@
       "provenance": "quoted",
       "basis": "or products containing calcium, iron, or zinc and dairy products) Ciprofloxacin should be taken at least two hours before or six hours after Multivalent cation-containing products administration [see Dosage and Administration (2.4)] Decrease ciprofloxacin absorption, resulting in lower serum and urine levels Probenecid Use with caution (interferes with renal tubular secretion of ciprofloxacin and increases ciprofloxacin serum levels) Potentiation of ciprofloxacin toxicity may occur.",
       "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:52:05-05:00",
+        "note": "3 of 4 runs agreed",
+        "result": "verified existing member iron of polyvalent_cations"
+      }
     },
     {
       "group": "polyvalent_cations",
@@ -387,7 +547,15 @@
       "provenance": "quoted",
       "basis": "or products containing calcium, iron, or zinc and dairy products) Ciprofloxacin should be taken at least two hours before or six hours after Multivalent cation-containing products administration [see Dosage and Administration (2.4)] Decrease ciprofloxacin absorption, resulting in lower serum and urine levels Probenecid Use with caution (interferes with renal tubular secretion of ciprofloxacin and increases ciprofloxacin serum levels) Potentiation of ciprofloxacin toxicity may occur.",
       "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:52:06-05:00",
+        "note": "3 of 4 runs agreed",
+        "result": "verified existing member zinc of polyvalent_cations"
+      }
     }
   ],
   "rejected": [

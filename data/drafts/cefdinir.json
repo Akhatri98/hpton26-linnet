@@ -1,0 +1,53 @@
+{
+  "ingredient": "cefdinir",
+  "primary_spl": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+  "rules": [
+    {
+      "id": "cefdinir-daily-max-600mg",
+      "family": "daily_max",
+      "amount": 600,
+      "unit": "mg",
+      "provenance": "quoted",
+      "note": "Total daily dose for all infections is 600 mg. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "section": "dosage and administration",
+        "sentence": "the total daily dose for all infections is 600 mg."
+      },
+      "verified": false
+    },
+    {
+      "id": "cefdinir-antacid-separation-2h",
+      "family": "separation",
+      "target": "group:antacids",
+      "before": 2,
+      "after": 2,
+      "provenance": "quoted",
+      "note": "Cefdinir should be taken at least 2 hours before or after an antacid. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "section": "drug interactions",
+        "sentence": "If antacids are required during cefdinir capsule therapy, cefdinir should be taken at least 2 hours before or after the antacid."
+      },
+      "verified": false
+    },
+    {
+      "id": "cefdinir-iron-separation-2h",
+      "family": "separation",
+      "target": "group:polyvalent_cations",
+      "before": 2,
+      "after": 2,
+      "provenance": "quoted",
+      "note": "Cefdinir should be taken at least 2 hours before or after iron supplements. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "section": "drug interactions",
+        "sentence": "If iron supplements are required during cefdinir therapy, cefdinir should be taken at least 2 hours before or after the supplement."
+      },
+      "verified": false
+    }
+  ]
+}

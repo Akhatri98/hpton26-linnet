@@ -1,0 +1,52 @@
+{
+  "ingredient": "rifampin",
+  "primary_spl": "0391f1e1-70d4-4b15-8b58-055bb6a385b8",
+  "rules": [
+    {
+      "id": "rifampin-antacids-separation",
+      "family": "separation",
+      "target": "group:antacids",
+      "before": 1,
+      "after": 0,
+      "provenance": "quoted",
+      "note": "Label states only that rifampin is given at least 1 hour before antacids. No after interval is stated, so after is 0. | DRAFT: proposed by a language model. | Not in the API take; the same row came from sim-haiku-a, sim-haiku-b, sim-sonnet. | approved from model draft",
+      "source": {
+        "spl_set_id": "0391f1e1-70d4-4b15-8b58-055bb6a385b8",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0391f1e1-70d4-4b15-8b58-055bb6a385b8",
+        "section": "drug interactions",
+        "sentence": "Daily doses of rifampin should be given at least 1 hour before the ingestion of antacids."
+      },
+      "verified": true,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:29-05:00",
+        "note": "3 of 4 runs agreed"
+      }
+    },
+    {
+      "id": "rifampin-food-empty-stomach-1h-2h",
+      "family": "food",
+      "mode": "empty_stomach",
+      "before_meal": 1,
+      "after_meal": 2,
+      "provenance": "quoted",
+      "note": "Take once daily, 1 hour before or 2 hours after a meal, with a full glass of water. | DRAFT: proposed by a language model. | approved from model draft",
+      "source": {
+        "spl_set_id": "0391f1e1-70d4-4b15-8b58-055bb6a385b8",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0391f1e1-70d4-4b15-8b58-055bb6a385b8",
+        "section": "dosage and administration",
+        "sentence": "It is recommended that oral rifampin be administered once daily, either 1 hour before or 2 hours after a meal with a full glass of water."
+      },
+      "verified": true,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:40-05:00",
+        "note": "4 of 4 runs agreed"
+      }
+    }
+  ]
+}

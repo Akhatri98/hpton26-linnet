@@ -52,20 +52,25 @@ class Library:
     products: dict[str, ProductFile]
     groups: GroupsFile
 
+    def _salts_of(self, element: str) -> set[str]:
+        known = set(self.ingredients) | {i for p in self.products.values() for i in p.ingredients}
+        return {i for i in known if element_of(i) == element}
+
     def group_members(self, name: str) -> set[str]:
         """Ingredient names in a group. An element member ("calcium") covers every
         ingredient in the library that is a salt of it (calcium_carbonate, ...)."""
         out = set()
-        known = set(self.ingredients) | {i for p in self.products.values() for i in p.ingredients}
         for m in self.groups.groups[name].members:
             out.add(m.ingredient)
             if is_element(m.ingredient):
-                out |= {i for i in known if element_of(i) == m.ingredient}
+                out |= self._salts_of(m.ingredient)
         return out
 
     def target_ingredients(self, target: str) -> set[str]:
         if target.startswith("group:"):
             return self.group_members(target.removeprefix("group:"))
+        if is_element(target):  # a rule that names the element ("iron supplements") covers its salts too
+            return {target} | self._salts_of(target)
         return {target}
 
 

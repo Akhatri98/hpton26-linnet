@@ -1,0 +1,357 @@
+{
+  "ingredient": "cholestyramine",
+  "spl_set_id": "06261db5-1435-4b91-8b54-71bfcfb1368c",
+  "model": "claude-haiku-5-5",
+  "label_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06261db5-1435-4b91-8b54-71bfcfb1368c",
+  "strengths": [],
+  "substances": [
+    "cholestyramine"
+  ],
+  "dosing": [
+    {
+      "strength": null,
+      "dose_type": "starting",
+      "condition": "general",
+      "population": "adults",
+      "dose": 8.3,
+      "dose_max": null,
+      "unit": "g",
+      "every_hours": null,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "06261db5-1435-4b91-8b54-71bfcfb1368c",
+        "section": "dosage and administration",
+        "sentence_id": "S1",
+        "sentence": "DOSAGE AND ADMINISTRATION The recommended starting adult dose for Cholestyramine for Oral Suspension, USP is 1 pouch or 1 level scoopful (8.3 grams of Cholestyramine for Oral Suspension, USP contains 4 grams of anhydrous cholestyramine resin) once or twice a day.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06261db5-1435-4b91-8b54-71bfcfb1368c"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:12-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "maintenance",
+      "condition": "general",
+      "population": "adults",
+      "dose": 8,
+      "dose_max": 16,
+      "unit": "g",
+      "every_hours": null,
+      "times_per_day": 2,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "06261db5-1435-4b91-8b54-71bfcfb1368c",
+        "section": "dosage and administration",
+        "sentence_id": "S2",
+        "sentence": "The recommended maintenance dose for Cholestyramine for Oral Suspension, USP is 2 to 4 pouches or scoopfuls daily (8 to 16 grams anhydrous cholestyramine resin) divided into two doses.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06261db5-1435-4b91-8b54-71bfcfb1368c"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:12-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "general",
+      "population": "children",
+      "dose": 240,
+      "dose_max": null,
+      "unit": "mg/kg",
+      "every_hours": null,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "06261db5-1435-4b91-8b54-71bfcfb1368c",
+        "section": "precautions",
+        "sentence_id": "S12",
+        "sentence": "Pediatric Use Although an optimal dosage schedule has not been established, standard texts (6,7) list a usual pediatric dose of 240 mg/kg/day of anhydrous cholestyramine resin in two to three divided doses, normally not to exceed 8 g/day with dose titration based on response and tolerance.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06261db5-1435-4b91-8b54-71bfcfb1368c"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:12-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    }
+  ],
+  "limits": [
+    {
+      "kind": "per_day",
+      "amount": 24,
+      "unit": "g",
+      "ingredient": null,
+      "strength": null,
+      "population": "adults",
+      "condition": null,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "06261db5-1435-4b91-8b54-71bfcfb1368c",
+        "section": "dosage and administration",
+        "sentence_id": "S4",
+        "sentence": "The maximum recommended daily dose is 6 pouches or scoopfuls of Cholestyramine for Oral Suspension, USP (24 grams of anhydrous cholestyramine resin).",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06261db5-1435-4b91-8b54-71bfcfb1368c"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:12-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "kind": "per_day",
+      "amount": 8,
+      "unit": "g",
+      "ingredient": null,
+      "strength": null,
+      "population": "children",
+      "condition": null,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "06261db5-1435-4b91-8b54-71bfcfb1368c",
+        "section": "precautions",
+        "sentence_id": "S12",
+        "sentence": "Pediatric Use Although an optimal dosage schedule has not been established, standard texts (6,7) list a usual pediatric dose of 240 mg/kg/day of anhydrous cholestyramine resin in two to three divided doses, normally not to exceed 8 g/day with dose titration based on response and tolerance.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06261db5-1435-4b91-8b54-71bfcfb1368c"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:12-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "kind": "per_day",
+      "amount": 6,
+      "unit": "doses",
+      "ingredient": null,
+      "strength": null,
+      "population": "general",
+      "condition": null,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "06261db5-1435-4b91-8b54-71bfcfb1368c",
+        "section": "dosage and administration",
+        "sentence_id": "S5",
+        "sentence": "Although the recommended dosing schedule is twice daily, Cholestyramine for Oral Suspension, USP may be administered in 1 to 6 doses per day.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06261db5-1435-4b91-8b54-71bfcfb1368c"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:12-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    }
+  ],
+  "administration": [
+    {
+      "id": "cholestyramine-separation-other-drugs",
+      "family": "separation",
+      "target": "*",
+      "before": 4,
+      "after": 1,
+      "provenance": "interpreted",
+      "loosest": {
+        "before": 4,
+        "after": 1
+      },
+      "note": "Label says other drugs should be taken at least 1 hour before or 4 to 6 hours after cholestyramine, so cholestyramine is at least 4 hours before and 1 hour after other drugs. The 4-hour value is the lower bound of the stated 4 to 6 hour range. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "06261db5-1435-4b91-8b54-71bfcfb1368c",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06261db5-1435-4b91-8b54-71bfcfb1368c",
+        "section": "drug interactions",
+        "sentence": "SINCE CHOLESTYRAMINE RESIN MAY BIND OTHER DRUGS GIVEN CONCURRENTLY, IT IS RECOMMENDED THAT PATIENTS TAKE OTHER DRUGS AT LEAST 1 HOUR BEFORE OR 4 TO 6 HOURS AFTER CHOLESTYRAMINE RESIN (OR AT AS GREAT AN INTERVAL AS POSSIBLE) TO AVOID IMPEDING THEIR ABSORPTION."
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:02-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/cholestyramine.json)"
+      }
+    },
+    {
+      "id": "cholestyramine-daily-max-resin",
+      "family": "daily_max",
+      "amount": 24,
+      "unit": "g",
+      "provenance": "quoted",
+      "note": "Maximum recommended daily dose is 6 pouches or scoopfuls, stated as 24 grams of anhydrous cholestyramine resin. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "06261db5-1435-4b91-8b54-71bfcfb1368c",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06261db5-1435-4b91-8b54-71bfcfb1368c",
+        "section": "dosage and administration",
+        "sentence": "The maximum recommended daily dose is 6 pouches or scoopfuls of Cholestyramine for Oral Suspension, USP (24 grams of anhydrous cholestyramine resin)."
+      },
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:33-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "approved; not added (no library file for this ingredient)"
+      }
+    }
+  ],
+  "memberships": [],
+  "rejected": [],
+  "unaccounted_for": [
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S10",
+      "section": "precautions",
+      "sentence": "Drink plenty of fluids and mix each 8.3 gram dose of Cholestyramine for Oral Suspension, USP in at least 2 to 6 ounces of fluid before taking."
+    },
+    {
+      "priority": 3,
+      "kind": "monitoring",
+      "note": "",
+      "sentence_id": "S8",
+      "section": "precautions",
+      "sentence": "In patients with preexisting constipation, the starting dose should be 1 pouch or 1 scoop once daily for 5 to 7 days, increasing to twice daily with monitoring of constipation and of serum lipoproteins, at least twice, 4 to 6 weeks apart."
+    }
+  ],
+  "sentences": [
+    {
+      "sentence_id": "S1",
+      "section": "dosage and administration",
+      "text": "DOSAGE AND ADMINISTRATION The recommended starting adult dose for Cholestyramine for Oral Suspension, USP is 1 pouch or 1 level scoopful (8.3 grams of Cholestyramine for Oral Suspension, USP contains 4 grams of anhydrous cholestyramine resin) once or twice a day."
+    },
+    {
+      "sentence_id": "S2",
+      "section": "dosage and administration",
+      "text": "The recommended maintenance dose for Cholestyramine for Oral Suspension, USP is 2 to 4 pouches or scoopfuls daily (8 to 16 grams anhydrous cholestyramine resin) divided into two doses."
+    },
+    {
+      "sentence_id": "S3",
+      "section": "dosage and administration",
+      "text": "It is recommended that increases in dose be gradual with periodic assessment of lipid/lipoprotein levels at intervals of not less than 4 weeks."
+    },
+    {
+      "sentence_id": "S4",
+      "section": "dosage and administration",
+      "text": "The maximum recommended daily dose is 6 pouches or scoopfuls of Cholestyramine for Oral Suspension, USP (24 grams of anhydrous cholestyramine resin)."
+    },
+    {
+      "sentence_id": "S5",
+      "section": "dosage and administration",
+      "text": "Although the recommended dosing schedule is twice daily, Cholestyramine for Oral Suspension, USP may be administered in 1 to 6 doses per day."
+    },
+    {
+      "sentence_id": "S6",
+      "section": "dosage and administration",
+      "text": "Always mix the dry powder with water or other fluids before ingesting."
+    },
+    {
+      "sentence_id": "S7",
+      "section": "drug interactions",
+      "text": "SINCE CHOLESTYRAMINE RESIN MAY BIND OTHER DRUGS GIVEN CONCURRENTLY, IT IS RECOMMENDED THAT PATIENTS TAKE OTHER DRUGS AT LEAST 1 HOUR BEFORE OR 4 TO 6 HOURS AFTER CHOLESTYRAMINE RESIN (OR AT AS GREAT AN INTERVAL AS POSSIBLE) TO AVOID IMPEDING THEIR ABSORPTION."
+    },
+    {
+      "sentence_id": "S8",
+      "section": "precautions",
+      "text": "In patients with preexisting constipation, the starting dose should be 1 pouch or 1 scoop once daily for 5 to 7 days, increasing to twice daily with monitoring of constipation and of serum lipoproteins, at least twice, 4 to 6 weeks apart."
+    },
+    {
+      "sentence_id": "S9",
+      "section": "precautions",
+      "text": "Information for Patients Inform your physician if you are pregnant or plan to become pregnant or are breast-feeding."
+    },
+    {
+      "sentence_id": "S10",
+      "section": "precautions",
+      "text": "Drink plenty of fluids and mix each 8.3 gram dose of Cholestyramine for Oral Suspension, USP in at least 2 to 6 ounces of fluid before taking."
+    },
+    {
+      "sentence_id": "S11",
+      "section": "precautions",
+      "text": "The possible lack of proper vitamin absorption described in the \"Pregnancy\" section may have an effect on nursing infants."
+    },
+    {
+      "sentence_id": "S12",
+      "section": "precautions",
+      "text": "Pediatric Use Although an optimal dosage schedule has not been established, standard texts (6,7) list a usual pediatric dose of 240 mg/kg/day of anhydrous cholestyramine resin in two to three divided doses, normally not to exceed 8 g/day with dose titration based on response and tolerance."
+    },
+    {
+      "sentence_id": "S13",
+      "section": "precautions",
+      "text": "In calculating pediatric dosages, 48.2 mg of anhydrous cholestyramine resin are contained in 100 mg of Cholestyramine for Oral Suspension, USP."
+    },
+    {
+      "sentence_id": "S14",
+      "section": "how supplied",
+      "text": "HOW SUPPLIED Cholestyramine for Oral Suspension, USP orange flavor is available in cartons of sixty 8.3 gram pouches and in a can containing 348.6 grams."
+    },
+    {
+      "sentence_id": "S15",
+      "section": "how supplied",
+      "text": "8.3 grams of Cholestyramine for Oral Suspension, USP contain 4 grams of anhydrous cholestyramine resin."
+    },
+    {
+      "sentence_id": "S16",
+      "section": "how supplied",
+      "text": "NDC 51224-011-20 Carton of 60 single-dose pouches NDC 51224-011-10 Can, 348.6 g (containing a scoop that is not interchangeable with scoops from other products) Storage Store at 20°C to 25°C (68° to 77°F) [see USP Controlled Room Temperature]."
+    },
+    {
+      "sentence_id": "S17",
+      "section": "description",
+      "text": "Cholestyramine resin is not absorbed from the digestive tract."
+    },
+    {
+      "sentence_id": "S18",
+      "section": "description",
+      "text": "8.3 grams of Cholestyramine for Oral Suspension, USP contain 4 grams of cholestyramine resin."
+    },
+    {
+      "sentence_id": "S19",
+      "section": "description",
+      "text": "It is represented by the following structural formula: Representation of structure of main polymeric groups Inactive ingredients: sucrose (429.5 mg/g), propylene glycol alginate, natural orange flavor, anhydrous citric acid, D&C Yellow No."
+    }
+  ],
+  "passes_run": [
+    "administration",
+    "dosing",
+    "limits"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "ingredient": "rifampin",
+  "primary_spl": "0391f1e1-70d4-4b15-8b58-055bb6a385b8",
+  "rules": [
+    {
+      "id": "rifampin-tb-daily-max-600mg",
+      "family": "daily_max",
+      "amount": 600,
+      "unit": "mg",
+      "provenance": "quoted",
+      "note": "Adult tuberculosis dosing: single daily administration, not to exceed 600 mg/day. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "0391f1e1-70d4-4b15-8b58-055bb6a385b8",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0391f1e1-70d4-4b15-8b58-055bb6a385b8",
+        "section": "dosage and administration",
+        "sentence": "Tuberculosis Adults 10 mg/kg, in a single daily administration, not to exceed 600 mg/day, orally."
+      },
+      "verified": false
+    },
+    {
+      "id": "rifampin-food-empty-stomach-1h-2h",
+      "family": "food",
+      "mode": "empty_stomach",
+      "before_meal": 1,
+      "after_meal": 2,
+      "provenance": "quoted",
+      "note": "Take once daily, 1 hour before or 2 hours after a meal, with a full glass of water. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "0391f1e1-70d4-4b15-8b58-055bb6a385b8",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0391f1e1-70d4-4b15-8b58-055bb6a385b8",
+        "section": "dosage and administration",
+        "sentence": "It is recommended that oral rifampin be administered once daily, either 1 hour before or 2 hours after a meal with a full glass of water."
+      },
+      "verified": false
+    }
+  ]
+}

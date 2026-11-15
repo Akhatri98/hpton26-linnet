@@ -1,0 +1,780 @@
+{
+  "ingredient": "cefdinir",
+  "spl_set_id": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+  "model": "claude-haiku-5-5",
+  "label_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10bf69e7-5f7e-4448-9f22-777f137d9666",
+  "strengths": [],
+  "substances": [
+    "cefdinir"
+  ],
+  "dosing": [
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "acute exacerbations of chronic bronchitis",
+      "population": "adults and adolescents",
+      "dose": 600,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 24,
+      "times_per_day": 1,
+      "duration_days": 5,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "section": "dosage and administration",
+        "sentence_id": "S7",
+        "sentence": "Adults and Adolescents (Age 13 Years and Older) Type of Infection Dosage Duration Community-Acquired Pneumonia 300 mg q12h 10 days Acute Exacerbations of Chronic Bronchitis 300 mg q12h or 600 mg q24h 5 to 10 days 10 days Acute Maxillary Sinusitis 300 mg q12h or 600 mg q24h 10 days 10 days Pharyngitis/Tonsillitis 300 mg q12h or 600 mg q24h 5 to 10 days 10 days Uncomplicated Skin and Skin Structure Infections 300 mg q12h 10 days Patients with Renal Insufficiency For adult patients with creatinine clearance < 30 mL/min, the dose of cefdinir should be 300 mg given once daily.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10bf69e7-5f7e-4448-9f22-777f137d9666"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:11-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "acute maxillary sinusitis",
+      "population": "adults and adolescents",
+      "dose": 600,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 24,
+      "times_per_day": 1,
+      "duration_days": 10,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "section": "dosage and administration",
+        "sentence_id": "S7",
+        "sentence": "Adults and Adolescents (Age 13 Years and Older) Type of Infection Dosage Duration Community-Acquired Pneumonia 300 mg q12h 10 days Acute Exacerbations of Chronic Bronchitis 300 mg q12h or 600 mg q24h 5 to 10 days 10 days Acute Maxillary Sinusitis 300 mg q12h or 600 mg q24h 10 days 10 days Pharyngitis/Tonsillitis 300 mg q12h or 600 mg q24h 5 to 10 days 10 days Uncomplicated Skin and Skin Structure Infections 300 mg q12h 10 days Patients with Renal Insufficiency For adult patients with creatinine clearance < 30 mL/min, the dose of cefdinir should be 300 mg given once daily.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10bf69e7-5f7e-4448-9f22-777f137d9666"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:11-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "pharyngitis/tonsillitis",
+      "population": "adults and adolescents",
+      "dose": 600,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 24,
+      "times_per_day": 1,
+      "duration_days": 5,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "section": "dosage and administration",
+        "sentence_id": "S7",
+        "sentence": "Adults and Adolescents (Age 13 Years and Older) Type of Infection Dosage Duration Community-Acquired Pneumonia 300 mg q12h 10 days Acute Exacerbations of Chronic Bronchitis 300 mg q12h or 600 mg q24h 5 to 10 days 10 days Acute Maxillary Sinusitis 300 mg q12h or 600 mg q24h 10 days 10 days Pharyngitis/Tonsillitis 300 mg q12h or 600 mg q24h 5 to 10 days 10 days Uncomplicated Skin and Skin Structure Infections 300 mg q12h 10 days Patients with Renal Insufficiency For adult patients with creatinine clearance < 30 mL/min, the dose of cefdinir should be 300 mg given once daily.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10bf69e7-5f7e-4448-9f22-777f137d9666"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:11-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "adjusted",
+      "condition": "general",
+      "population": "adults with renal insufficiency (creatinine clearance < 30 mL/min)",
+      "dose": 300,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 24,
+      "times_per_day": 1,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "section": "dosage and administration",
+        "sentence_id": "S7",
+        "sentence": "Adults and Adolescents (Age 13 Years and Older) Type of Infection Dosage Duration Community-Acquired Pneumonia 300 mg q12h 10 days Acute Exacerbations of Chronic Bronchitis 300 mg q12h or 600 mg q24h 5 to 10 days 10 days Acute Maxillary Sinusitis 300 mg q12h or 600 mg q24h 10 days 10 days Pharyngitis/Tonsillitis 300 mg q12h or 600 mg q24h 5 to 10 days 10 days Uncomplicated Skin and Skin Structure Infections 300 mg q12h 10 days Patients with Renal Insufficiency For adult patients with creatinine clearance < 30 mL/min, the dose of cefdinir should be 300 mg given once daily.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10bf69e7-5f7e-4448-9f22-777f137d9666"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:11-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    }
+  ],
+  "limits": [
+    {
+      "kind": "per_day",
+      "amount": 600,
+      "unit": "mg",
+      "ingredient": null,
+      "strength": null,
+      "population": "adults",
+      "condition": "all infections",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "section": "dosage and administration",
+        "sentence_id": "S2",
+        "sentence": "the total daily dose for all infections is 600 mg.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10bf69e7-5f7e-4448-9f22-777f137d9666"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:11-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "kind": "duration_days",
+      "amount": 10,
+      "unit": "days",
+      "ingredient": null,
+      "strength": null,
+      "population": "adults",
+      "condition": "community-acquired pneumonia, sinusitis, pharyngitis/tonsillitis, skin infections and acute bronchitis exacerbations (per dosing chart)",
+      "provenance": "interpreted",
+      "source": {
+        "spl_set_id": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "section": "dosage and administration",
+        "sentence_id": "S7",
+        "sentence": "Adults and Adolescents (Age 13 Years and Older) Type of Infection Dosage Duration Community-Acquired Pneumonia 300 mg q12h 10 days Acute Exacerbations of Chronic Bronchitis 300 mg q12h or 600 mg q24h 5 to 10 days 10 days Acute Maxillary Sinusitis 300 mg q12h or 600 mg q24h 10 days 10 days Pharyngitis/Tonsillitis 300 mg q12h or 600 mg q24h 5 to 10 days 10 days Uncomplicated Skin and Skin Structure Infections 300 mg q12h 10 days Patients with Renal Insufficiency For adult patients with creatinine clearance < 30 mL/min, the dose of cefdinir should be 300 mg given once daily.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10bf69e7-5f7e-4448-9f22-777f137d9666"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:11-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    }
+  ],
+  "administration": [
+    {
+      "id": "cefdinir-daily-max-600mg",
+      "family": "daily_max",
+      "amount": 600,
+      "unit": "mg",
+      "provenance": "quoted",
+      "note": "Total daily dose for all infections is 600 mg. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "section": "dosage and administration",
+        "sentence": "the total daily dose for all infections is 600 mg."
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:22-05:00",
+        "note": "only 2 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/cefdinir.json)"
+      }
+    },
+    {
+      "id": "cefdinir-antacid-separation-2h",
+      "family": "separation",
+      "target": "group:antacids",
+      "before": 2,
+      "after": 2,
+      "provenance": "quoted",
+      "note": "Cefdinir should be taken at least 2 hours before or after an antacid. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "section": "drug interactions",
+        "sentence": "If antacids are required during cefdinir capsule therapy, cefdinir should be taken at least 2 hours before or after the antacid."
+      },
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:32-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "added to library as cefdinir-antacid-separation-2h"
+      }
+    },
+    {
+      "id": "cefdinir-iron-separation-2h",
+      "family": "separation",
+      "target": "group:polyvalent_cations",
+      "before": 2,
+      "after": 2,
+      "provenance": "quoted",
+      "note": "Cefdinir should be taken at least 2 hours before or after iron supplements. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "section": "drug interactions",
+        "sentence": "If iron supplements are required during cefdinir therapy, cefdinir should be taken at least 2 hours before or after the supplement."
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:02-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/cefdinir.json)"
+      }
+    },
+    {
+      "id": "cefdinir-iron-window",
+      "family": "separation",
+      "target": "iron",
+      "before": 2,
+      "after": 2,
+      "provenance": "quoted",
+      "note": "If iron supplements are required, take cefdinir at least 2 hours before or after the supplement. | DRAFT: proposed by a language model. | Not in the API take; the same row came from sim-haiku-a, sim-haiku-b, sim-sonnet.",
+      "source": {
+        "spl_set_id": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "section": "drug interactions",
+        "sentence": "If iron supplements are required during cefdinir therapy, cefdinir should be taken at least 2 hours before or after the supplement."
+      },
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:25-05:00",
+        "note": "3 of 4 runs agreed",
+        "result": "added to library as cefdinir-iron-window"
+      }
+    }
+  ],
+  "memberships": [
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "iron",
+      "provenance": "quoted",
+      "basis": "If iron supplements are required during cefdinir therapy, cefdinir should be taken at least 2 hours before or after the supplement.",
+      "source_spl": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:43-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "already a verified member of polyvalent_cations; groups.json unchanged"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "pass": "dosing",
+      "item": {
+        "strength": null,
+        "dose_type": "usual",
+        "condition": "community-acquired pneumonia",
+        "population": "adults and adolescents",
+        "dose": 300,
+        "dose_max": null,
+        "unit": "mg",
+        "every_hours": 12,
+        "times_per_day": 2,
+        "duration_days": 10,
+        "as_needed": false,
+        "sentence": "S7",
+        "provenance": "quoted"
+      },
+      "reason": "number(s) not stated in S7: times_per_day=2"
+    },
+    {
+      "pass": "dosing",
+      "item": {
+        "strength": null,
+        "dose_type": "usual",
+        "condition": "acute exacerbations of chronic bronchitis",
+        "population": "adults and adolescents",
+        "dose": 300,
+        "dose_max": null,
+        "unit": "mg",
+        "every_hours": 12,
+        "times_per_day": 2,
+        "duration_days": 5,
+        "as_needed": false,
+        "sentence": "S7",
+        "provenance": "quoted"
+      },
+      "reason": "number(s) not stated in S7: times_per_day=2"
+    },
+    {
+      "pass": "dosing",
+      "item": {
+        "strength": null,
+        "dose_type": "usual",
+        "condition": "acute maxillary sinusitis",
+        "population": "adults and adolescents",
+        "dose": 300,
+        "dose_max": null,
+        "unit": "mg",
+        "every_hours": 12,
+        "times_per_day": 2,
+        "duration_days": 10,
+        "as_needed": false,
+        "sentence": "S7",
+        "provenance": "quoted"
+      },
+      "reason": "number(s) not stated in S7: times_per_day=2"
+    },
+    {
+      "pass": "dosing",
+      "item": {
+        "strength": null,
+        "dose_type": "usual",
+        "condition": "pharyngitis/tonsillitis",
+        "population": "adults and adolescents",
+        "dose": 300,
+        "dose_max": null,
+        "unit": "mg",
+        "every_hours": 12,
+        "times_per_day": 2,
+        "duration_days": 5,
+        "as_needed": false,
+        "sentence": "S7",
+        "provenance": "quoted"
+      },
+      "reason": "number(s) not stated in S7: times_per_day=2"
+    },
+    {
+      "pass": "dosing",
+      "item": {
+        "strength": null,
+        "dose_type": "usual",
+        "condition": "uncomplicated skin and skin structure infections",
+        "population": "adults and adolescents",
+        "dose": 300,
+        "dose_max": null,
+        "unit": "mg",
+        "every_hours": 12,
+        "times_per_day": 2,
+        "duration_days": 10,
+        "as_needed": false,
+        "sentence": "S7",
+        "provenance": "quoted"
+      },
+      "reason": "number(s) not stated in S7: times_per_day=2"
+    },
+    {
+      "pass": "dosing",
+      "item": {
+        "strength": null,
+        "dose_type": "adjusted",
+        "condition": "general",
+        "population": "children with renal insufficiency (creatinine clearance < 30 mL/min/1.73 m2)",
+        "dose": 7,
+        "dose_max": 300,
+        "unit": "mg/kg",
+        "every_hours": null,
+        "times_per_day": null,
+        "duration_days": null,
+        "as_needed": false,
+        "sentence": "S9",
+        "provenance": "quoted"
+      },
+      "reason": "S9 states 300 as a maximum, not a dose; it belongs in limits"
+    },
+    {
+      "pass": "dosing",
+      "item": {
+        "strength": null,
+        "dose_type": "starting",
+        "condition": "general",
+        "population": "adults on chronic hemodialysis",
+        "dose": 300,
+        "dose_max": null,
+        "unit": "mg",
+        "every_hours": 48,
+        "times_per_day": null,
+        "duration_days": null,
+        "as_needed": false,
+        "sentence": "S11",
+        "provenance": "quoted"
+      },
+      "reason": "number(s) not stated in S11: every_hours=48"
+    },
+    {
+      "pass": "dosing",
+      "item": {
+        "strength": null,
+        "dose_type": "maintenance",
+        "condition": "general",
+        "population": "adults on chronic hemodialysis",
+        "dose": 300,
+        "dose_max": null,
+        "unit": "mg",
+        "every_hours": 48,
+        "times_per_day": null,
+        "duration_days": null,
+        "as_needed": false,
+        "sentence": "S13",
+        "provenance": "quoted"
+      },
+      "reason": "number(s) not stated in S13: every_hours=48"
+    },
+    {
+      "pass": "dosing",
+      "item": {
+        "strength": null,
+        "dose_type": "maintenance",
+        "condition": "general",
+        "population": "children on chronic hemodialysis",
+        "dose": 7,
+        "dose_max": 300,
+        "unit": "mg/kg",
+        "every_hours": 48,
+        "times_per_day": null,
+        "duration_days": null,
+        "as_needed": false,
+        "sentence": "S13",
+        "provenance": "quoted"
+      },
+      "reason": "number(s) not stated in S13: every_hours=48"
+    }
+  ],
+  "unaccounted_for": [
+    {
+      "priority": 1,
+      "kind": "possible_timing_rule",
+      "note": "",
+      "sentence_id": "S16",
+      "section": "drug interactions",
+      "sentence": "There are no significant effects on cefdinir pharmacokinetics if the antacid is administered 2 hours before or 2 hours after cefdinir."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S3",
+      "section": "dosage and administration",
+      "sentence": "Once-daily dosing for 10 days is as effective as b.i.d."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S15",
+      "section": "drug interactions",
+      "sentence": "Time to reach C max is also prolonged by 1 hour."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S25",
+      "section": "precautions",
+      "sentence": "Sometimes after starting treatment with antibiotics, patients can develop watery and bloody stools (with or without stomach cramps and fever) even as late as two or more months after having taken the last dose of the antibiotic."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S34",
+      "section": "warnings",
+      "sentence": "Careful medical history is necessary since CDAD has been reported to occur over two months after the administration of antibacterial agents."
+    },
+    {
+      "priority": 5,
+      "kind": "weight_based",
+      "note": "",
+      "sentence_id": "S9",
+      "section": "dosage and administration",
+      "sentence": "For pediatric patients with a creatinine clearance of < 30 mL/min/1.73 m 2 , the dose of cefdinir should be 7 mg/kg (up to 300 mg) given once daily."
+    },
+    {
+      "priority": 5,
+      "kind": "weight_based",
+      "note": "",
+      "sentence_id": "S11",
+      "section": "dosage and administration",
+      "sentence": "In patients maintained on chronic hemodialysis, the recommended initial dosage regimen is a 300 mg or 7 mg/kg dose every other day."
+    },
+    {
+      "priority": 5,
+      "kind": "weight_based",
+      "note": "",
+      "sentence_id": "S13",
+      "section": "dosage and administration",
+      "sentence": "Subsequent doses (300 mg or 7 mg/kg) are then administered every other day."
+    },
+    {
+      "priority": 5,
+      "kind": "weight_based",
+      "note": "",
+      "sentence_id": "S29",
+      "section": "precautions",
+      "sentence": "Maternal toxicity (decreased body weight gain) was observed in rabbits at the maximum tolerated dose of 10 mg/kg/day without adverse effects on offspring."
+    },
+    {
+      "priority": 6,
+      "kind": "restates",
+      "note": "repeats S17",
+      "sentence_id": "S24",
+      "section": "precautions",
+      "sentence": "If this type of antacid is required during cefdinir therapy, cefdinir should be taken at least 2 hours before or after the antacid."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S23",
+      "section": "precautions",
+      "sentence": "In patients with transient or persistent renal insufficiency (creatinine clearance < 30 mL/min), the total daily dose of cefdinir should be reduced because high and prolonged plasma concentrations of cefdinir can result following recommended doses (see DOSAGE AND ADMINISTRATION )."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S27",
+      "section": "precautions",
+      "sentence": "In rats, fertility and reproductive performance were not affected by cefdinir at oral doses up to 1000 mg/kg/day (70 times the human dose based on mg/kg/day, 11 times based on mg/m 2 /day)."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S28",
+      "section": "precautions",
+      "sentence": "PREGNANCY Teratogenic Effects Pregnancy Category B Cefdinir was not teratogenic in rats at oral doses up to 1000 mg/kg/day (70 times the human dose based on mg/kg/day, 11 times based on mg/m 2 /day) or in rabbits at oral doses up to 10 mg/kg/day (0.7 times the human dose based on mg/kg/day, 0.23 times based on mg/m 2 /day)."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S30",
+      "section": "precautions",
+      "sentence": "Decreased body weight occurred in rat fetuses at ≥ 100 mg/kg/day, and in rat offspring at ≥ 32 mg/kg/day."
+    }
+  ],
+  "sentences": [
+    {
+      "sentence_id": "S1",
+      "section": "dosage and administration",
+      "text": "DOSAGE & ADMINISTRATION (see INDICATIONS AND USAGE for Indicated Pathogens) The recommended dosage and duration of treatment for infections in adults and adolescents are described in the following chart;"
+    },
+    {
+      "sentence_id": "S2",
+      "section": "dosage and administration",
+      "text": "the total daily dose for all infections is 600 mg."
+    },
+    {
+      "sentence_id": "S3",
+      "section": "dosage and administration",
+      "text": "Once-daily dosing for 10 days is as effective as b.i.d."
+    },
+    {
+      "sentence_id": "S4",
+      "section": "dosage and administration",
+      "text": "Once-daily dosing has not been studied in pneumonia or skin infections;"
+    },
+    {
+      "sentence_id": "S5",
+      "section": "dosage and administration",
+      "text": "therefore, cefdinir capsules should be administered twice daily in these infections."
+    },
+    {
+      "sentence_id": "S6",
+      "section": "dosage and administration",
+      "text": "Cefdinir capsules may be taken without regard to meals."
+    },
+    {
+      "sentence_id": "S7",
+      "section": "dosage and administration",
+      "text": "Adults and Adolescents (Age 13 Years and Older) Type of Infection Dosage Duration Community-Acquired Pneumonia 300 mg q12h 10 days Acute Exacerbations of Chronic Bronchitis 300 mg q12h or 600 mg q24h 5 to 10 days 10 days Acute Maxillary Sinusitis 300 mg q12h or 600 mg q24h 10 days 10 days Pharyngitis/Tonsillitis 300 mg q12h or 600 mg q24h 5 to 10 days 10 days Uncomplicated Skin and Skin Structure Infections 300 mg q12h 10 days Patients with Renal Insufficiency For adult patients with creatinine clearance < 30 mL/min, the dose of cefdinir should be 300 mg given once daily."
+    },
+    {
+      "sentence_id": "S8",
+      "section": "dosage and administration",
+      "text": "3 In the above equation, creatinine clearance is in mL/min/1.73 m 2 , body length or height is in centimeters, and serum creatinine is in mg/dL."
+    },
+    {
+      "sentence_id": "S9",
+      "section": "dosage and administration",
+      "text": "For pediatric patients with a creatinine clearance of < 30 mL/min/1.73 m 2 , the dose of cefdinir should be 7 mg/kg (up to 300 mg) given once daily."
+    },
+    {
+      "sentence_id": "S10",
+      "section": "dosage and administration",
+      "text": "Patients on Hemodialysis Hemodialysis removes cefdinir from the body."
+    },
+    {
+      "sentence_id": "S11",
+      "section": "dosage and administration",
+      "text": "In patients maintained on chronic hemodialysis, the recommended initial dosage regimen is a 300 mg or 7 mg/kg dose every other day."
+    },
+    {
+      "sentence_id": "S12",
+      "section": "dosage and administration",
+      "text": "At the conclusion of each hemodialysis session, 300 mg (or 7 mg/kg) should be given."
+    },
+    {
+      "sentence_id": "S13",
+      "section": "dosage and administration",
+      "text": "Subsequent doses (300 mg or 7 mg/kg) are then administered every other day."
+    },
+    {
+      "sentence_id": "S14",
+      "section": "drug interactions",
+      "text": "DRUG INTERACTIONS Antacids (Aluminum- or Magnesium-Containing) Concomitant administration of 300 mg cefdinir capsules with 30 mL Maalox ® TC suspension reduces the rate (C max ) and extent (AUC) of absorption by approximately 40%."
+    },
+    {
+      "sentence_id": "S15",
+      "section": "drug interactions",
+      "text": "Time to reach C max is also prolonged by 1 hour."
+    },
+    {
+      "sentence_id": "S16",
+      "section": "drug interactions",
+      "text": "There are no significant effects on cefdinir pharmacokinetics if the antacid is administered 2 hours before or 2 hours after cefdinir."
+    },
+    {
+      "sentence_id": "S17",
+      "section": "drug interactions",
+      "text": "If antacids are required during cefdinir capsule therapy, cefdinir should be taken at least 2 hours before or after the antacid."
+    },
+    {
+      "sentence_id": "S18",
+      "section": "drug interactions",
+      "text": "Probenecid As with other β-lactam antibiotics, probenecid inhibits the renal excretion of cefdinir, resulting in an approximate doubling in AUC, a 54% increase in peak cefdinir plasma levels, and a 50% prolongation in the apparent elimination t 1/2 ."
+    },
+    {
+      "sentence_id": "S19",
+      "section": "drug interactions",
+      "text": "Iron Supplements and Foods Fortified With Iron Concomitant administration of cefdinir with a therapeutic iron supplement containing 60 mg of elemental iron (as FeSO 4 ) or vitamins supplemented with 10 mg of elemental iron reduced extent of absorption by 80% and 31%, respectively."
+    },
+    {
+      "sentence_id": "S20",
+      "section": "drug interactions",
+      "text": "If iron supplements are required during cefdinir therapy, cefdinir should be taken at least 2 hours before or after the supplement."
+    },
+    {
+      "sentence_id": "S21",
+      "section": "drug interactions",
+      "text": "The effect of foods highly fortified with elemental iron (primarily iron-fortified breakfast cereals) on cefdinir absorption has not been studied."
+    },
+    {
+      "sentence_id": "S22",
+      "section": "precautions",
+      "text": "Cefdinir, as with other broad-spectrum antimicrobials (antibiotics), should be prescribed with caution in individuals with a history of colitis."
+    },
+    {
+      "sentence_id": "S23",
+      "section": "precautions",
+      "text": "In patients with transient or persistent renal insufficiency (creatinine clearance < 30 mL/min), the total daily dose of cefdinir should be reduced because high and prolonged plasma concentrations of cefdinir can result following recommended doses (see DOSAGE AND ADMINISTRATION )."
+    },
+    {
+      "sentence_id": "S24",
+      "section": "precautions",
+      "text": "If this type of antacid is required during cefdinir therapy, cefdinir should be taken at least 2 hours before or after the antacid."
+    },
+    {
+      "sentence_id": "S25",
+      "section": "precautions",
+      "text": "Sometimes after starting treatment with antibiotics, patients can develop watery and bloody stools (with or without stomach cramps and fever) even as late as two or more months after having taken the last dose of the antibiotic."
+    },
+    {
+      "sentence_id": "S26",
+      "section": "precautions",
+      "text": "No clastogenic effects were observed in vitro in the structural chromosome aberration assay in V79 Chinese hamster lung cells or in vivo in the micronucleus assay in mouse bone marrow."
+    },
+    {
+      "sentence_id": "S27",
+      "section": "precautions",
+      "text": "In rats, fertility and reproductive performance were not affected by cefdinir at oral doses up to 1000 mg/kg/day (70 times the human dose based on mg/kg/day, 11 times based on mg/m 2 /day)."
+    },
+    {
+      "sentence_id": "S28",
+      "section": "precautions",
+      "text": "PREGNANCY Teratogenic Effects Pregnancy Category B Cefdinir was not teratogenic in rats at oral doses up to 1000 mg/kg/day (70 times the human dose based on mg/kg/day, 11 times based on mg/m 2 /day) or in rabbits at oral doses up to 10 mg/kg/day (0.7 times the human dose based on mg/kg/day, 0.23 times based on mg/m 2 /day)."
+    },
+    {
+      "sentence_id": "S29",
+      "section": "precautions",
+      "text": "Maternal toxicity (decreased body weight gain) was observed in rabbits at the maximum tolerated dose of 10 mg/kg/day without adverse effects on offspring."
+    },
+    {
+      "sentence_id": "S30",
+      "section": "precautions",
+      "text": "Decreased body weight occurred in rat fetuses at ≥ 100 mg/kg/day, and in rat offspring at ≥ 32 mg/kg/day."
+    },
+    {
+      "sentence_id": "S31",
+      "section": "precautions",
+      "text": "LABOR & DELIVERY Cefdinir has not been studied for use during labor and delivery."
+    },
+    {
+      "sentence_id": "S32",
+      "section": "precautions",
+      "text": "NURSING MOTHERS Following administration of single 600 mg doses, cefdinir was not detected in human breast milk."
+    },
+    {
+      "sentence_id": "S33",
+      "section": "warnings",
+      "text": "WARNINGS BEFORE THERAPY WITH CEFDINIR IS INSTITUTED, CAREFUL INQUIRY SHOULD BE MADE TO DETERMINE WHETHER THE PATIENT HAS HAD PREVIOUS HYPERSENSITIVITY REACTIONS TO CEFDINIR, OTHER CEPHALOSPORINS, PENICILLINS, OR OTHER DRUGS."
+    },
+    {
+      "sentence_id": "S34",
+      "section": "warnings",
+      "text": "Careful medical history is necessary since CDAD has been reported to occur over two months after the administration of antibacterial agents."
+    },
+    {
+      "sentence_id": "S35",
+      "section": "how supplied",
+      "text": "HOW SUPPLIED Product: 50090-6042 NDC: 50090-6042-0 20 CAPSULE in a BOTTLE NDC: 50090-6042-1 14 CAPSULE in a BOTTLE"
+    },
+    {
+      "sentence_id": "S36",
+      "section": "description",
+      "text": "It is slightly soluble in dilute hydrochloric acid and sparingly soluble in 0.1 M pH 7.0 phosphate buffer.The empirical formula is C 14 H 13 N 5 O 5 S 2 and the molecular weight is 395.42."
+    },
+    {
+      "sentence_id": "S37",
+      "section": "description",
+      "text": "Cefdinir has the structural formula shown below: Cefdinir capsules, USP contain 300 mg cefdinir and the following inactive ingredients: carboxymethylcellulose calcium, polyoxyl 40 stearate, colloidal silicone dioxide and magnesium stearate."
+    }
+  ],
+  "passes_run": [
+    "administration",
+    "dosing",
+    "limits"
+  ]
+}

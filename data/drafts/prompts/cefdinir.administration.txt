@@ -1,0 +1,62 @@
+You are extracting medication TIMING rules from an FDA drug label, for a scheduling tool used by pharmacists.
+
+Ingredient: cefdinir
+Label set id: 10bf69e7-5f7e-4448-9f22-777f137d9666
+
+Numbered sentences from the label:
+S2 [dosage and administration] the total daily dose for all infections is 600 mg.
+S3 [dosage and administration] Once-daily dosing for 10 days is as effective as b.i.d.
+S4 [dosage and administration] Once-daily dosing has not been studied in pneumonia or skin infections;
+S5 [dosage and administration] therefore, cefdinir capsules should be administered twice daily in these infections.
+S6 [dosage and administration] Cefdinir capsules may be taken without regard to meals.
+S7 [dosage and administration] Adults and Adolescents (Age 13 Years and Older) Type of Infection Dosage Duration Community-Acquired Pneumonia 300 mg q12h 10 days Acute Exacerbations of Chronic Bronchitis 300 mg q12h or 600 mg q24h 5 to 10 days 10 days Acute Maxillary Sinusitis 300 mg q12h or 600 mg q24h 10 days 10 days Pharyngitis/Tonsillitis 300 mg q12h or 600 mg q24h 5 to 10 days 10 days Uncomplicated Skin and Skin Structure Infections 300 mg q12h 10 days Patients with Renal Insufficiency For adult patients with creatinine clearance < 30 mL/min, the dose of cefdinir should be 300 mg given once daily.
+S9 [dosage and administration] For pediatric patients with a creatinine clearance of < 30 mL/min/1.73 m 2 , the dose of cefdinir should be 7 mg/kg (up to 300 mg) given once daily.
+S11 [dosage and administration] In patients maintained on chronic hemodialysis, the recommended initial dosage regimen is a 300 mg or 7 mg/kg dose every other day.
+S13 [dosage and administration] Subsequent doses (300 mg or 7 mg/kg) are then administered every other day.
+S15 [drug interactions] Time to reach C max is also prolonged by 1 hour.
+S16 [drug interactions] There are no significant effects on cefdinir pharmacokinetics if the antacid is administered 2 hours before or 2 hours after cefdinir.
+S17 [drug interactions] If antacids are required during cefdinir capsule therapy, cefdinir should be taken at least 2 hours before or after the antacid.
+S20 [drug interactions] If iron supplements are required during cefdinir therapy, cefdinir should be taken at least 2 hours before or after the supplement.
+S21 [drug interactions] The effect of foods highly fortified with elemental iron (primarily iron-fortified breakfast cereals) on cefdinir absorption has not been studied.
+S23 [precautions] In patients with transient or persistent renal insufficiency (creatinine clearance < 30 mL/min), the total daily dose of cefdinir should be reduced because high and prolonged plasma concentrations of cefdinir can result following recommended doses (see DOSAGE AND ADMINISTRATION ).
+S24 [precautions] If this type of antacid is required during cefdinir therapy, cefdinir should be taken at least 2 hours before or after the antacid.
+S25 [precautions] Sometimes after starting treatment with antibiotics, patients can develop watery and bloody stools (with or without stomach cramps and fever) even as late as two or more months after having taken the last dose of the antibiotic.
+S27 [precautions] In rats, fertility and reproductive performance were not affected by cefdinir at oral doses up to 1000 mg/kg/day (70 times the human dose based on mg/kg/day, 11 times based on mg/m 2 /day).
+S28 [precautions] PREGNANCY Teratogenic Effects Pregnancy Category B Cefdinir was not teratogenic in rats at oral doses up to 1000 mg/kg/day (70 times the human dose based on mg/kg/day, 11 times based on mg/m 2 /day) or in rabbits at oral doses up to 10 mg/kg/day (0.7 times the human dose based on mg/kg/day, 0.23 times based on mg/m 2 /day).
+S29 [precautions] Maternal toxicity (decreased body weight gain) was observed in rabbits at the maximum tolerated dose of 10 mg/kg/day without adverse effects on offspring.
+S33 [warnings] WARNINGS BEFORE THERAPY WITH CEFDINIR IS INSTITUTED, CAREFUL INQUIRY SHOULD BE MADE TO DETERMINE WHETHER THE PATIENT HAS HAD PREVIOUS HYPERSENSITIVITY REACTIONS TO CEFDINIR, OTHER CEPHALOSPORINS, PENICILLINS, OR OTHER DRUGS.
+S34 [warnings] Careful medical history is necessary since CDAD has been reported to occur over two months after the administration of antibacterial agents.
+
+Known ingredient groups (you may propose members for these, or a new group):
+- levothyroxine_binders: ['calcium_carbonate', 'colestipol', 'ferrous_sulfate']
+- polyvalent_cations: ['aluminum', 'calcium_carbonate', 'iron', 'magnesium', 'sucralfate', 'zinc']
+- antacids: ['calcium_carbonate']
+
+Return ONLY a JSON object:
+{
+  "rules": [ ... ],
+  "memberships": [ ... ]
+}
+
+Each rule is one of these shapes. Times are in HOURS (30 minutes = 0.5). Use only numbers stated in the cited sentence.
+  {"id": "...", "family": "min_interval", "hours": H, "sentence": "Sk", "provenance": "quoted"|"interpreted", "loosest": {"hours": X}?, "note": "..."}
+      any two doses of this ingredient at least H hours apart ("every 6 hours")
+  {"id": "...", "family": "separation", "target": "<ingredient>" | "group:<name>" | "*", "before": B, "after": A, "sentence": "Sk", ...}
+      THIS ingredient is taken at least B hours BEFORE and at least A hours AFTER any dose of the target.
+      "*" means every other drug. Careful with direction: if the label says "take OTHER drugs 1 hour before
+      or 4 hours after THIS drug", then THIS drug is 4 hours before and 1 hour after the other: before=4, after=1.
+  {"id": "...", "family": "daily_max", "amount": N, "unit": "mg"|"g"|"mcg", "sentence": "Sk", ...}
+  {"id": "...", "family": "food", "mode": "empty_stomach", "before_meal": B, "after_meal": A, "meal": null|"breakfast", "sentence": "Sk", ...}
+      no dose from B hours before to A hours after a meal
+  {"id": "...", "family": "food", "mode": "before_meal_window", "meal": "breakfast", "earliest": E, "latest": L, "sentence": "Sk", ...}
+      dose between E and L hours before the meal (E >= L)
+
+provenance: "quoted" if the number is stated plainly and firmly; "interpreted" if you had to judge
+(soft words like "preferably", "if possible", "consider", a range, or a derived number). Every
+"interpreted" rule MUST give "loosest": the most permissive defensible value of each number you judged.
+
+Each membership: {"group": "<name>", "ingredient": "<lowercase_underscore_name>", "sentence": "Sk", "provenance": "quoted"|"interpreted"}
+  Propose a membership when the label names an ingredient as one of the things to separate from.
+
+Ids: lowercase letters, digits, dashes, starting with the ingredient name. Cite exactly one sentence id per item.
+Do not copy sentence text; cite its id. Only include rules the label actually states. If unsure, leave it out.

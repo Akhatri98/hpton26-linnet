@@ -1,0 +1,68 @@
+{
+ "set_id": "86c0b4ae-5e38-4efe-88af-50ac560e294f",
+ "id": "ac6119dd-ca9a-4a6e-9a3b-4ddb60924abe",
+ "version": "12",
+ "effective_time": "20260318",
+ "openfda": {
+  "application_number": [
+   "ANDA204502"
+  ],
+  "brand_name": [
+   "Ibandronate Sodium"
+  ],
+  "generic_name": [
+   "IBANDRONATE SODIUM"
+  ],
+  "manufacturer_name": [
+   "Aurobindo Pharma Limited"
+  ],
+  "product_ndc": [
+   "65862-237"
+  ],
+  "product_type": [
+   "HUMAN PRESCRIPTION DRUG"
+  ],
+  "route": [
+   "ORAL"
+  ],
+  "substance_name": [
+   "IBANDRONATE SODIUM"
+  ],
+  "rxcui": [
+   "904932"
+  ],
+  "spl_id": [
+   "ac6119dd-ca9a-4a6e-9a3b-4ddb60924abe"
+  ],
+  "spl_set_id": [
+   "86c0b4ae-5e38-4efe-88af-50ac560e294f"
+  ],
+  "package_ndc": [
+   "65862-237-03"
+  ],
+  "is_original_packager": [
+   true
+  ],
+  "unii": [
+   "J12U072QL0"
+  ]
+ },
+ "dosage_and_administration": [
+  "2 DOSAGE AND ADMINISTRATION Take one 150 mg tablet once monthly on the same day each month ( 2.1 ) Instruct patient to: ( 2.2 ) Swallow whole tablet with 6 to 8 oz of plain water only, at least 60 minutes before the first food, beverage, or medication of day. Avoid lying down for at least 60 minutes after taking ibandronate sodium tablets. Do not eat, drink (except for water), or take other medication for 60 minutes after taking ibandronate sodium tablets. Take supplemental calcium and vitamin D if dietary intake inadequate ( 2.3 ) 2.1 Dosage Information The dose of ibandronate sodium is one 150 mg tablet taken once monthly on the same date each month. 2.2 Important Administration Instructions Instruct Patients to do the following: Take ibandronate sodium tablets at least 60 minutes before the first food or drink (other than water) of the day or before taking any oral medication or supplementation, including calcium, antacids, or vitamins to maximize absorption and clinical benefit, (see DRUG INTERACTIONS [7.1] ) . Avoid the use of water with supplements including mineral water because they may have a higher concentration of calcium. Swallow ibandronate sodium tablets whole with a full glass of plain water (6 to 8 oz) while standing or sitting in an upright position to reduce the potential for esophageal irritation. Avoid lying down for 60 minutes after taking ibandronate sodium tablets (see WARNINGS AND PRECAUTIONS [5.1] ) . Do not chew or suck the tablet because of a potential for oropharyngeal ulceration. Do not eat, drink anything except plain water, or take other medications for at least 60 minutes after taking ibandronate sodium tablets. 2.3 Recommendations for Calcium and Vitamin D Supplementation Instruct patients to take supplemental calcium and vitamin D if their dietary intake is inadequate. Avoid the use of calcium supplements within 60 minutes of ibandronate sodium tablets administration because co-administration of ibandronate sodium tablets and calcium may interfere with the absorption of ibandronate sodium (see DRUG INTERACTIONS [7.1] ) . 2.4 Administration Instructions for Missed Once-Monthly Doses If the once-monthly dose is missed, instruct patients to do the following: If the next scheduled ibandronate sodium tablets day is more than 7 days away, take one ibandronate sodium tablet 150 mg (ibandronate) in the morning following the date that it is remembered. If the next scheduled ibandronate sodium tablets day is only 1 to 7 days away, wait until the subsequent month’s scheduled ibandronate sodium tablets day to take their tablet. For subsequent monthly doses for both of the above scenarios, instruct patients to return to their original schedule by taking one ibandronate sodium tablet 150 mg (ibandronate) every month on their previous chosen day."
+ ],
+ "drug_interactions": [
+  "7 DRUG INTERACTIONS Calcium supplements, antacids and some oral medications may interfere with absorption of ibandronate. Do not take within 60 minutes of dosing. ( 7.1 ) Use caution when co-prescribing aspirin/nonsteroidal anti-inflammatory drugs that may worsen gastrointestinal irritation. ( 7.2 ) 7.1 Calcium Supplements/Antacids Products containing calcium and other multivalent cations (such as aluminum, magnesium, iron) are likely to interfere with absorption of ibandronate sodium. Therefore, instruct patients to take ibandronate sodium at least 60 minutes before any oral medications, including medications containing multivalent cations (such as antacids, supplements or vitamins). Also, patients should wait at least 60 minutes after dosing before taking any other oral medications (see Dosage and Administration [2.3] ) . 7.2 Aspirin/Nonsteroidal Anti-Inflammatory Drugs (NSAIDs) Because aspirin, NSAIDs, and bisphosphonates are all associated with gastrointestinal irritation, caution should be exercised in the concomitant use of aspirin or NSAIDs with ibandronate sodium. 7.3 H 2 Blockers In healthy volunteers, co-administration with ranitidine resulted in a 20% increased bioavailability of ibandronate, which was not considered to be clinically relevant (see CLINICAL PHARMACOLOGY [12.3] ) . 7.4 Drug/Laboratory Test Interactions Bisphosphonates are known to interfere with the use of bone-imaging agents. Specific studies with ibandronate have not been performed."
+ ],
+ "warnings_and_cautions": [
+  "5 WARNINGS AND PRECAUTIONS Upper gastrointestinal Adverse Reactions can occur. Instruct patients to follow dosing instructions and discontinue use if new or worsening symptoms occur. ( 5.1 ) Hypocalcemia may worsen during treatment. Correct hypocalcemia before use. ( 5.2 ) Severe Bone, Joint, and Muscle Pain may occur. Consider discontinuing use if symptoms develop. ( 5.3 ) Osteonecrosis of the Jaw has been reported. ( 5.4 ) Atypical Fractures Including Femoral Fractures have been reported. Patients with new thigh or groin pain should be evaluated to rule out a femoral fracture. Risk/benefit of continuing bisphosphonate therapy should be re-evaluated in these patients and interruption of bisphosphonate therapy should be considered ( 5.5 ) 5.1 Upper Gastrointestinal Adverse Reactions Ibandronate sodium, like other bisphosphonates administered orally, may cause local irritation of the upper gastrointestinal mucosa. Because of these possible irritant effects and a potential for worsening of the underlying disease, caution should be used when ibandronate sodium is given to patients with active upper gastrointestinal problems (such as known Barrett’s esophagus, dysphagia, other esophageal diseases, gastritis, duodenitis or ulcers). Esophageal adverse experiences, such as esophagitis, esophageal ulcers and esophageal erosions, occasionally with bleeding and rarely followed by esophageal stricture or perforation, have been reported in patients receiving treatment with oral bisphosphonates. In some cases, these have been severe and required hospitalization. Physicians should therefore be alert to any signs or symptoms signaling a possible esophageal reaction and patients should be instructed to discontinue ibandronate sodium and seek medical attention if they develop dysphagia, odynophagia, retrosternal pain or new or worsening heartburn. The risk of severe esophageal adverse experiences appears to be greater in patients who lie down after taking oral bisphosphonates and/or who fail to swallow it with the recommended full glass (6 to 8 oz) of water, and/or who continue to take oral bisphosphonates after developing symptoms suggestive of esophageal irritation. Therefore, it is very important that the full dosing instructions are provided to, and understood by, the patient (see DOSAGE AND ADMINISTRATION [2.2] ) . In patients who cannot comply with dosing instructions due to mental disability, therapy with ibandronate sodium should be used under appropriate supervision. There have been post-marketing reports of gastric and duodenal ulcers with oral bisphosphonate use, some severe and with complications, although no increased risk was observed in controlled clinical trials. 5.2 Hypocalcemia and Mineral Metabolism Hypocalcemia has been reported in patients taking ibandronate sodium. Treat hypocalcemia and other disturbances of bone and mineral metabolism before starting ibandronate sodium therapy. Instruct patients to take supplemental calcium and vitamin D if their dietary intake is inadequate (see DOSAGE AND ADMINISTRATION [2.3] ) . 5.3 Musculoskeletal Pain Severe and occasionally incapacitating bone, joint, and/or muscle pain has been reported in patients taking ibandronate sodium and other bisphosphonates (see ADVERSE REACTIONS [6] ) . The time to onset of symptoms varied from one day to several months after starting the drug. Most patients had relief of symptoms after stopping. A subset had recurrence of symptoms when rechallenged with the same drug or another bisphosphonate. Consider discontinuing use if severe symptoms develop. 5.4 Jaw Osteonecrosis Osteonecrosis of the jaw (ONJ), which can occur spontaneously, is generally associated with tooth extraction and/or local infection with delayed healing, and has been reported in patients taking bisphosphonates, including ibandronate sodium. Known risk factors for osteonecrosis of the jaw include invasive dental procedures (e.g., tooth extraction, dental implants, boney surgery), diagnosis of cancer, concomitant therapies (e.g., chemotherapy, corticosteroids, angiogenesis inhibitors), poor oral hygiene, and co-morbid disorders (e.g., periodontal and/or other pre-existing dental disease, anemia, coagulopathy, infection, ill-fitting dentures). The risk of ONJ may increase with duration of exposure to bisphosphonates. For patients requiring invasive dental procedures, discontinuation of bisphosphonate treatment may reduce the risk for ONJ. Clinical judgment of the treating physician and/or oral surgeon should guide the management plan of each patient based on individual benefit/risk assessment. Patients who develop osteonecrosis of the jaw while on bisphosphonate therapy should receive care by an oral surgeon. In these patients, extensive dental surgery to treat ONJ may exacerbate the condition. Discontinuation of bisphosphonate therapy should be considered based on individual benefit/risk assessment. 5.5 Atypical Fractures Including Femoral Fractures Atypical, low-energy, or low trauma fractures of the femoral shaft have been reported during treatment with bisphosphonates, including ibandronate sodium in patients with osteoporosis. Atypical femur and other fractures most commonly occur with minimal or no trauma to the affected area. These fractures occurred anywhere in the femoral shaft from just below the lesser trochanter to above the supracondylar flare and are traverse or short oblique in orientation without evidence of comminution. Atypical fractures of other bones have also been reported. They may be bilateral. These fractures can also occur in osteoporotic patients who have not been treated with bisphosphonates. Concomitant treatment with glucocorticoids may also induce these fractures. Prodromal pain in the affected area, usually presenting as dull, aching thigh pain, weeks to months before a complete fracture occurs was reported by patients. Any patient with a history of bisphosphonate exposure who presents with thigh or groin pain should be suspected of having an atypical fracture and should be evaluated to rule out an incomplete femur fracture. Bony pain in other locations should also be considered for evaluation of atypical fracture. Patients presenting with an atypical fracture should also be assessed for symptoms and signs of fracture in the contralateral limb. Risk/benefit of continuing bisphosphonate therapy should be re-evaluated in these patients and interruption of bisphosphonate therapy should be considered. 5.6 Severe Renal Impairment Ibandronate sodium is not recommended for use in patients with severe renal impairment (creatinine clearance of less than 30 mL/min)."
+ ],
+ "dosage_forms_and_strengths": [
+  "3 DOSAGE FORMS AND STRENGTHS Ibandronate sodium tablets, 150 mg: white to off-white, film-coated, caplet shaped, biconvex tablets debossed with ‘X’ on one side and ‘78’ on the other side. Tablets: 150 mg (3)"
+ ],
+ "how_supplied": [
+  "16 HOW SUPPLIED/STORAGE AND HANDLING 16.1 How Supplied Ibandronate Sodium Tablets, 150 mg ( ibandronate) are white to off-white, film-coated, caplet shaped, biconvex tablets debossed with ‘X’ on one side and ‘78’ on the other side. Carton of 1 Blister Pack Containing 3 Tablets NDC 65862-237-03 16.2 Storage and Handling Store at 20° to 25°C (68° to 77°F) [see USP Controlled Room Temperature]."
+ ],
+ "description": [
+  "11 DESCRIPTION Ibandronate sodium is a nitrogen-containing bisphosphonate that inhibits osteoclast-mediated bone resorption. The chemical name for ibandronate sodium is 3-( N -methyl- N -pentyl) amino-1-hydroxypropane-1,1-diphosphonic acid, monosodium salt, monohydrate with the molecular formula C 9 H 22 NO 7 P 2 Na•H 2 O and a molecular weight of 359.24. Ibandronate sodium is a white to almost white powder. It is freely soluble in water and practically insoluble in organic solvents. Ibandronate sodium has the following structural formula: Ibandronate sodium is available as a white to off-white, caplet shaped, 150 mg film-coated tablet for once-monthly oral administration. One 150 mg film-coated tablet contains 168.795 mg ibandronate sodium monohydrate, equivalent to 150 mg free acid. Ibandronate sodium tablet also contains the following inactive ingredients: colloidal silicon dioxide, crospovidone, microcrystalline cellulose, povidone and sodium stearyl fumarate. The tablet film-coating contains hypromellose, talc, titanium dioxide and triacetin. Ibandronate Structure"
+ ]
+}

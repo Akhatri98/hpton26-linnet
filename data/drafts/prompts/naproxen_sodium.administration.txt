@@ -1,0 +1,45 @@
+You are extracting medication TIMING rules from an FDA drug label, for a scheduling tool used by pharmacists.
+
+Ingredient: naproxen_sodium
+Label set id: 02941928-128a-2c88-e063-6294a90ac6ba
+
+Numbered sentences from the label:
+S1 [dosage and administration] Directions do not take more than directed the smallest effective dose should be used drink a full glass of water with each dose Adults and children 12 years and older take 1 caplet every 8 to 12 hours while symptoms last for the first dose you may take 2 caplets within the first hour do not exceed 2 caplets in any 8- to 12-hour period do not exceed 3 caplets in a 24-hour period Children under 12 years ask a doctor
+S2 [warnings] The chance is higher if you: are age 60 or older have had stomach ulcers or bleeding problems take a blood thinning (anticoagulant) or steroid drug take other drugs containing prescription or nonprescription NSAIDs (aspirin, ibuprofen, naproxen, or others) have 3 or more alcoholic drinks every day while using this product take more or for a longer time than directed Heart attack and stroke warning: NSAIDs, except aspirin, increase the risk of heart attack, heart failure, and stroke.
+S3 [warnings] The risk is higher if you use more than directed or for longer than directed.
+S4 [warnings] Do not use if you have ever had an allergic reaction to any other pain reliever/fever reducer right before or after heart surgery Ask a doctor before use if the stomach bleeding warning applies to you you have a history of stomach problems, such as heartburn you have high blood pressure, heart disease, liver cirrhosis, kidney disease, asthma, or had a stroke you are taking a diuretic you have problems or serious side effects from taking pain relievers or fever reducers Ask a doctor or pharmacist before use if you are under a doctor's care for any serious conidtion taking aspirin for heart attack or stroke, because naproxen may decrease this benefit of aspirin taking any other drug When using this product take with food or milk if stomach upset occurs Stop use and ask a doctor if you experience any of the following signs of stomach bleeding: feel faint vomit blood have bloody or black stools have stomach pain that does not get better you have symptoms of heart problems or stroke: chest pain trouble breathing weakness in one part or side of body slurred speech leg swelling pain gets worse or lasts more than 10 days fever gets worse or lasts more than 3 days you have difficulty swallowing it feels like the pill is stuck in your throat redness or swelling is present in the painful area any new symptoms appear If pregnant or breast-feeding , ask a healthcare professional before use.
+S5 [do not use] Do not use if you have ever had an allergic reaction to any other pain reliever/fever reducer right before or after heart surgery
+
+Known ingredient groups (you may propose members for these, or a new group):
+- levothyroxine_binders: ['calcium_carbonate', 'colestipol', 'ferrous_sulfate']
+- polyvalent_cations: ['aluminum', 'calcium_carbonate', 'iron', 'magnesium', 'sucralfate', 'zinc']
+- antacids: ['calcium_carbonate']
+
+Return ONLY a JSON object:
+{
+  "rules": [ ... ],
+  "memberships": [ ... ]
+}
+
+Each rule is one of these shapes. Times are in HOURS (30 minutes = 0.5). Use only numbers stated in the cited sentence.
+  {"id": "...", "family": "min_interval", "hours": H, "sentence": "Sk", "provenance": "quoted"|"interpreted", "loosest": {"hours": X}?, "note": "..."}
+      any two doses of this ingredient at least H hours apart ("every 6 hours")
+  {"id": "...", "family": "separation", "target": "<ingredient>" | "group:<name>" | "*", "before": B, "after": A, "sentence": "Sk", ...}
+      THIS ingredient is taken at least B hours BEFORE and at least A hours AFTER any dose of the target.
+      "*" means every other drug. Careful with direction: if the label says "take OTHER drugs 1 hour before
+      or 4 hours after THIS drug", then THIS drug is 4 hours before and 1 hour after the other: before=4, after=1.
+  {"id": "...", "family": "daily_max", "amount": N, "unit": "mg"|"g"|"mcg", "sentence": "Sk", ...}
+  {"id": "...", "family": "food", "mode": "empty_stomach", "before_meal": B, "after_meal": A, "meal": null|"breakfast", "sentence": "Sk", ...}
+      no dose from B hours before to A hours after a meal
+  {"id": "...", "family": "food", "mode": "before_meal_window", "meal": "breakfast", "earliest": E, "latest": L, "sentence": "Sk", ...}
+      dose between E and L hours before the meal (E >= L)
+
+provenance: "quoted" if the number is stated plainly and firmly; "interpreted" if you had to judge
+(soft words like "preferably", "if possible", "consider", a range, or a derived number). Every
+"interpreted" rule MUST give "loosest": the most permissive defensible value of each number you judged.
+
+Each membership: {"group": "<name>", "ingredient": "<lowercase_underscore_name>", "sentence": "Sk", "provenance": "quoted"|"interpreted"}
+  Propose a membership when the label names an ingredient as one of the things to separate from.
+
+Ids: lowercase letters, digits, dashes, starting with the ingredient name. Cite exactly one sentence id per item.
+Do not copy sentence text; cite its id. Only include rules the label actually states. If unsure, leave it out.

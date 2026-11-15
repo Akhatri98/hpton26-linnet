@@ -28,7 +28,15 @@
         "sentence": "The recommended adult oral dosage for duodenal ulcer is 1 g four times per day on an empty stomach.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:54-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -50,7 +58,15 @@
         "sentence": "Maintenance Therapy: The recommended adult oral dosage is 1 g twice a day.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:54-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     }
   ],
   "limits": [],
@@ -69,7 +85,15 @@
         "sentence": "Antacids may be prescribed as needed for relief of pain but should not be taken within one-half hour before or after sucralfate."
       },
       "verified": false,
-      "note": "DRAFT: proposed by a language model."
+      "note": "DRAFT: proposed by a language model.",
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:49-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/sucralfate.json)"
+      }
     },
     {
       "id": "sucralfate-after-cimetidine-2h",
@@ -85,7 +109,15 @@
         "sentence": "In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction."
       },
       "verified": false,
-      "note": "DRAFT: proposed by a language model."
+      "note": "DRAFT: proposed by a language model.",
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:49-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/sucralfate.json)"
+      }
     },
     {
       "id": "sucralfate-after-ciprofloxacin-2h",
@@ -101,7 +133,15 @@
         "sentence": "In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction."
       },
       "verified": false,
-      "note": "DRAFT: proposed by a language model."
+      "note": "DRAFT: proposed by a language model.",
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:49-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/sucralfate.json)"
+      }
     },
     {
       "id": "sucralfate-after-digoxin-2h",
@@ -117,7 +157,15 @@
         "sentence": "In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction."
       },
       "verified": false,
-      "note": "DRAFT: proposed by a language model."
+      "note": "DRAFT: proposed by a language model.",
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:49-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/sucralfate.json)"
+      }
     },
     {
       "id": "sucralfate-after-norfloxacin-2h",
@@ -133,7 +181,15 @@
         "sentence": "In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction."
       },
       "verified": false,
-      "note": "DRAFT: proposed by a language model."
+      "note": "DRAFT: proposed by a language model.",
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:50-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/sucralfate.json)"
+      }
     },
     {
       "id": "sucralfate-after-ofloxacin-2h",
@@ -149,7 +205,15 @@
         "sentence": "In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction."
       },
       "verified": false,
-      "note": "DRAFT: proposed by a language model."
+      "note": "DRAFT: proposed by a language model.",
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:50-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/sucralfate.json)"
+      }
     },
     {
       "id": "sucralfate-after-ranitidine-2h",
@@ -165,7 +229,15 @@
         "sentence": "In all case studies to date (cimetidine, ciprofloxacin, digoxin, norfloxacin, ofloxacin, and ranitidine), dosing the concomitant medication 2 hours before sucralfate eliminated the interaction."
       },
       "verified": false,
-      "note": "DRAFT: proposed by a language model."
+      "note": "DRAFT: proposed by a language model.",
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:50-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/sucralfate.json)"
+      }
     }
   ],
   "memberships": [],

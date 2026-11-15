@@ -30,7 +30,15 @@
         "sentence": "The recommended oral dose is 60 mg (two 30 mg capsules) every 4 hours for 21 consecutive days.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:54-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": "30 mg",
@@ -52,7 +60,15 @@
         "sentence": "Dosage should be reduced to one 30 mg capsule every 4 hours with close monitoring of blood pressure and heart rate;",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:54-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     }
   ],
   "limits": [
@@ -72,7 +88,15 @@
         "sentence": "The recommended oral dose is 60 mg (two 30 mg capsules) every 4 hours for 21 consecutive days.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a323ebd8-ef1b-439b-93d1-ba73a5b0127d"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:54-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     }
   ],
   "administration": [
@@ -94,7 +118,15 @@
         "section": "dosage and administration",
         "sentence": "In general, the capsules should be swallowed whole with a little liquid, preferably not less than one hour before or two hours after meals."
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:52:07-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "verified existing library rule nimodipine-meals"
+      }
     }
   ],
   "memberships": [],

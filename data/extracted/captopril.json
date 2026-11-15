@@ -1,0 +1,1254 @@
+{
+  "ingredient": "captopril",
+  "spl_set_id": "1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+  "model": "claude-haiku-5-5",
+  "label_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+  "strengths": [
+    "12.5 mg",
+    "25 mg",
+    "50 mg",
+    "100 mg"
+  ],
+  "substances": [
+    "captopril"
+  ],
+  "dosing": [
+    {
+      "strength": null,
+      "dose_type": "starting",
+      "condition": "hypertension",
+      "population": "adults",
+      "dose": 25,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": null,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+        "section": "dosage and administration",
+        "sentence_id": "S3",
+        "sentence": "The initial dose of captopril tablets is 25 mg b.i.d.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:10-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "hypertension",
+      "population": "adults",
+      "dose": 25,
+      "dose_max": 150,
+      "unit": "mg",
+      "every_hours": null,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+        "section": "dosage and administration",
+        "sentence_id": "S12",
+        "sentence": "The usual dose range is 25 to 150 mg b.i.d.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:10-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "starting",
+      "condition": "severe hypertension",
+      "population": "adults",
+      "dose": 25,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": null,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+        "section": "dosage and administration",
+        "sentence_id": "S14",
+        "sentence": "For patients with severe hypertension (e.g., accelerated or malignant hypertension), when temporary discontinuation of current antihypertensive therapy is not practical or desirable, or when prompt titration to more normotensive blood pressure levels is indicated, diuretic should be continued but other current antihypertensive medication stopped and captopril tablets dosage promptly initiated at 25 mg b.i.d.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:10-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "starting",
+      "condition": "heart failure",
+      "population": "patients with vigorously diuretic-treated, hyponatremic and/or hypovolemic",
+      "dose": 6.25,
+      "dose_max": 12.5,
+      "unit": "mg",
+      "every_hours": null,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+        "section": "dosage and administration",
+        "sentence_id": "S17",
+        "sentence": "In patients with either normal or low blood pressure, who have been vigorously treated with diuretics and who may be hyponatremic and/or hypovolemic, a starting dose of 6.25 or 12.5 mg t.i.d.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:10-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "heart failure",
+      "population": "adults",
+      "dose": 25,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": null,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+        "section": "dosage and administration",
+        "sentence_id": "S19",
+        "sentence": "For most patients the usual initial daily dosage is 25 mg t.i.d.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:10-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "maintenance",
+      "condition": "left ventricular dysfunction after myocardial infarction",
+      "population": "adults",
+      "dose": 50,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": null,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+        "section": "dosage and administration",
+        "sentence_id": "S25",
+        "sentence": "Left Ventricular Dysfunction After Myocardial Infarction The recommended dose for long-term use in patients following a myocardial infarction is a target maintenance dose of 50 mg t.i.d.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:10-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "starting",
+      "condition": "left ventricular dysfunction after myocardial infarction",
+      "population": "adults",
+      "dose": 12.5,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": null,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+        "section": "dosage and administration",
+        "sentence_id": "S27",
+        "sentence": "After a single dose of 6.25 mg, captopril tablets therapy should be initiated at 12.5 mg t.i.d.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:10-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "maintenance",
+      "condition": "diabetic nephropathy",
+      "population": "adults",
+      "dose": 25,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": null,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+        "section": "dosage and administration",
+        "sentence_id": "S31",
+        "sentence": "Diabetic Nephropathy The recommended dose of captopril tablets for long term use to treat diabetic nephropathy is 25 mg t.i.d.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:10-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    }
+  ],
+  "limits": [
+    {
+      "kind": "per_day",
+      "amount": 450,
+      "unit": "mg",
+      "ingredient": "captopril",
+      "strength": null,
+      "population": "general",
+      "condition": null,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+        "section": "dosage and administration",
+        "sentence_id": "S13",
+        "sentence": "A maximum daily dose of 450 mg captopril tablets should not be exceeded.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:10-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "kind": "per_dose",
+      "amount": 50,
+      "unit": "mg",
+      "ingredient": "captopril",
+      "strength": null,
+      "population": "general",
+      "condition": "hypertension",
+      "provenance": "interpreted",
+      "source": {
+        "spl_set_id": "1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+        "section": "dosage and administration",
+        "sentence_id": "S6",
+        "sentence": "The dose of captopril tablets in hypertension usually does not exceed 50 mg t.i.d.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:10-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    }
+  ],
+  "administration": [
+    {
+      "id": "captopril-before-meal-1h",
+      "family": "food",
+      "mode": "before_meal_window",
+      "meal": "breakfast",
+      "earliest": 1,
+      "latest": 1,
+      "provenance": "interpreted",
+      "loosest": {
+        "earliest": 1,
+        "latest": 1
+      },
+      "note": "Label says 'one hour before meals' without naming a meal; breakfast is used as the schema placeholder for the meal. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+        "section": "dosage and administration",
+        "sentence": "DOSAGE AND ADMINISTRATION Captopril tablets should be taken one hour before meals."
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:01-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/captopril.json)"
+      }
+    },
+    {
+      "id": "captopril-daily-max-450mg",
+      "family": "daily_max",
+      "amount": 450,
+      "unit": "mg",
+      "provenance": "quoted",
+      "note": "Maximum daily dose of 450 mg should not be exceeded. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+        "section": "dosage and administration",
+        "sentence": "A maximum daily dose of 450 mg captopril tablets should not be exceeded."
+      },
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:31-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "approved; not added (no library file for this ingredient)"
+      }
+    }
+  ],
+  "memberships": [],
+  "rejected": [
+    {
+      "pass": "dosing",
+      "item": {
+        "strength": null,
+        "dose_type": "adjusted",
+        "condition": "hypertension",
+        "population": "adults",
+        "dose": 50,
+        "dose_max": null,
+        "unit": "mg",
+        "every_hours": null,
+        "times_per_day": null,
+        "duration_days": null,
+        "as_needed": false,
+        "sentence": "S4",
+        "provenance": "quoted"
+      },
+      "reason": "S4 states 50 as an increase or titration step, not a dose"
+    }
+  ],
+  "unaccounted_for": [
+    {
+      "priority": 1,
+      "kind": "possible_timing_rule",
+      "note": "",
+      "sentence_id": "S39",
+      "section": "drug interactions",
+      "sentence": "Alternatively, provide medical supervision for at least one hour after the initial dose."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S2",
+      "section": "dosage and administration",
+      "sentence": "If possible, discontinue the patient’s previous antihypertensive drug regimen for one week before starting captopril tablets."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S4",
+      "section": "dosage and administration",
+      "sentence": "If satisfactory reduction of blood pressure has not been achieved after one or two weeks, the dose may be increased to 50 mg b.i.d."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S7",
+      "section": "dosage and administration",
+      "sentence": "Therefore, if the blood pressure has not been satisfactorily controlled after one to two weeks at this dose, (and the patient is not already receiving a diuretic), a modest dose of a thiazide-type diuretic (e.g., hydrochlorothiazide, 25 mg daily), should be added."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S15",
+      "section": "dosage and administration",
+      "sentence": "When necessitated by the patient’s clinical condition, the daily dose of captopril tablets may be increased every 24 hours or less under continuous medical supervision until a satisfactory blood pressure response is obtained or the maximum dose of captopril tablets is reached."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S20",
+      "section": "dosage and administration",
+      "sentence": "After a dose of 50 mg t.i.d."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S26",
+      "section": "dosage and administration",
+      "sentence": "Therapy may be initiated as early as three days following a myocardial infarction."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S29",
+      "section": "dosage and administration",
+      "sentence": "during the next several days and to a target dose of 50 mg t.i.d."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S47",
+      "section": "precautions",
+      "sentence": "The high dose in these studies is 150 times the maximum recommended human dose of 450 mg, assuming a 50 kg subject."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S51",
+      "section": "precautions",
+      "sentence": "On a body- surface-area basis, these doses are 5 to 25 times maximum recommended dose (MRHD)."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S52",
+      "section": "precautions",
+      "sentence": "Anemia, leukopenia, thrombocytopenia, and bone marrow suppression occurred in dogs at doses 8 to 30 times MRHD on a body- weight basis (4 to 15 times MRHD on a surface-area basis)."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S53",
+      "section": "precautions",
+      "sentence": "Marked anemia was seen at all dose levels (8 to 30 times MRHD) in dogs, whereas moderate to marked leukopenia was noted only at 15 and 30 times MRHD and thrombocytopenia at 30 times MRHD."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S54",
+      "section": "precautions",
+      "sentence": "However, in the 47 week study at a dose 30 times MRHD, bone marrow suppression was found to be reversible upon continued drug administration."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S56",
+      "section": "precautions",
+      "sentence": "in monkeys at 20 to 60 times MRHD on a body-weight basis (7 to 20 times MRHD on a surface-area basis);"
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S57",
+      "section": "precautions",
+      "sentence": "and in dogs at 30 times MRHD on a body-weight basis (15 times MRHD on a surface-area basis)."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S59",
+      "section": "precautions",
+      "sentence": "in dogs at 30 times MRHD on a body-weight basis (15 times MRHD on a surface-area basis);"
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S60",
+      "section": "precautions",
+      "sentence": "and in monkeys at 65 times MRHD on a body-weight basis (20 times MRHD on a surface-area basis)."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S61",
+      "section": "precautions",
+      "sentence": "Rabbits developed gastric and intestinal ulcers when given oral doses approximately 30 times MRHD on a body-weight basis (10 times MRHD on surface-area basis) for only 5 to 7 days."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S63",
+      "section": "precautions",
+      "sentence": "1 to 35 times MRHD on a surface-area basis in a dose-related fashion."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S64",
+      "section": "precautions",
+      "sentence": "The effect was first observed in the 88th week of dosing, with a progressively increased incidence thereafter, even after cessation of dosing."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S72",
+      "section": "warnings",
+      "sentence": "About half of the reported cases had serum creatinine ≥ 1.6 mg/dL and more than 75 percent were in patients also receiving procainamide."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S73",
+      "section": "warnings",
+      "sentence": "The neutropenia has usually been detected within three months after captopril was started."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S74",
+      "section": "warnings",
+      "sentence": "In general, neutrophils returned to normal in about two weeks after captopril was discontinued, and serious infections were limited to clinically complex patients."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S78",
+      "section": "warnings",
+      "sentence": "Proteinuria Total urinary proteins greater than 1 g per day were seen in about 0.7 percent of patients receiving captopril."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S99",
+      "section": "description",
+      "sentence": "Patients were given a test dose of 6.25 mg oral captopril tablets and were randomized within 3 to 16 days post-infarction to receive either captopril tablets or placebo in addition to conventional therapy."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S103",
+      "section": "description",
+      "sentence": "In a multicenter, double-blind, placebo controlled trial, 409 patients, age 18 to 49 of either gender, with or without hypertension, with type I (juvenile type, onset before age 30) insulin-dependent diabetes mellitus, retinopathy, proteinuria ≥ 500 mg per day and serum creatinine  2.5 mg/dL, were randomized to placebo or captopril tablets (25 mg t.i.d.) and followed for up to 4.8 years (median 3 years)."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S106",
+      "section": "description",
+      "sentence": "Captopril tablets delayed the progression to overt nephropathy (proteinuria ≥ 500 mg/day) in both studies (risk reduction 67% to 76%;"
+    },
+    {
+      "priority": 3,
+      "kind": "monitoring",
+      "note": "",
+      "sentence_id": "S33",
+      "section": "dosage and administration",
+      "sentence": "Accordingly, for patients with significant renal impairment, initial daily dosage of captopril tablets should be reduced, and smaller increments utilized for titration, which should be quite slow (one- to two-week intervals)."
+    },
+    {
+      "priority": 3,
+      "kind": "monitoring",
+      "note": "",
+      "sentence_id": "S101",
+      "section": "description",
+      "sentence": "and after two weeks titrated to a target maintenance dose of 50 mg t.i.d."
+    },
+    {
+      "priority": 4,
+      "kind": "population",
+      "note": "",
+      "sentence_id": "S69",
+      "section": "warnings",
+      "sentence": "In patients with some degree of renal failure (serum creatinine at least 1.6 mg/dL) but no collagen vascular disease, the risk of neutropenia in clinical trials was about 1 per 500, a frequency over 15 times that for uncomplicated hypertension."
+    },
+    {
+      "priority": 4,
+      "kind": "population",
+      "note": "",
+      "sentence_id": "S79",
+      "section": "warnings",
+      "sentence": "About 90 percent of affected patients had evidence of prior renal disease or received relatively high doses of captopril (in excess of 150 mg/day), or both."
+    },
+    {
+      "priority": 5,
+      "kind": "weight_based",
+      "note": "",
+      "sentence_id": "S86",
+      "section": "warnings",
+      "sentence": "When captopril was given to rabbits at doses about 0.8 to 70 times (on a mg/kg basis) the maximum recommended human dose, low incidences of craniofacial malformations were seen."
+    },
+    {
+      "priority": 6,
+      "kind": "restates",
+      "note": "repeats S13",
+      "sentence_id": "S23",
+      "section": "dosage and administration",
+      "sentence": "A maximum daily dose of 450 mg of captopril tablets should not be exceeded."
+    },
+    {
+      "priority": 6,
+      "kind": "restates",
+      "note": "repeats S1",
+      "sentence_id": "S44",
+      "section": "precautions",
+      "sentence": "Patients should be informed that captopril tablets should be taken one hour before meals (see DOSAGE AND ADMINISTRATION )."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S46",
+      "section": "precautions",
+      "sentence": "Carcinogenesis, Mutagenesis and Impairment of Fertility Two-year studies with doses of 50 to 1350 mg/kg/day in mice and rats failed to show any evidence of carcinogenic potential."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S48",
+      "section": "precautions",
+      "sentence": "On a body-surface-area basis, the high doses for mice and rats are 13 and 26 times the maximum recommended human dose, respectively."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S50",
+      "section": "precautions",
+      "sentence": "Reductions in hemoglobin and/or hematocrit values were seen in mice, rats, and monkeys at doses 50 to 150 times the maximum recommended human dose (MRHD) of 450 mg, assuming a 50 kg subject."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S55",
+      "section": "precautions",
+      "sentence": "Captopril caused hyperplasia of the juxtaglomerular apparatus of the kidneys in mice and rats at doses 7 to 200 times MRHD on a body-weight basis (0.6 to 35 times MRHD on a surface-area basis);"
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S58",
+      "section": "precautions",
+      "sentence": "Gastric erosions/ulcerations were increased in incidence in male rats at 20 to 200 times MRHD on a body- weight basis (3.5 and 35 times MRHD on a surface-area basis);"
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S62",
+      "section": "precautions",
+      "sentence": "In the two-year rat study, irreversible and progressive variations in the caliber of retinal vessels (focal sacculations and constrictions) occurred at all dose levels (7 to 200 times MRHD) on a body-weight basis;"
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S88",
+      "section": "warnings",
+      "sentence": "On a mg/kg basis, the doses used were up to 150 times (in hamsters) and 625 times (in rats) the maximum recommended human dose."
+    }
+  ],
+  "sentences": [
+    {
+      "sentence_id": "S1",
+      "section": "dosage and administration",
+      "text": "DOSAGE AND ADMINISTRATION Captopril tablets should be taken one hour before meals."
+    },
+    {
+      "sentence_id": "S2",
+      "section": "dosage and administration",
+      "text": "If possible, discontinue the patient’s previous antihypertensive drug regimen for one week before starting captopril tablets."
+    },
+    {
+      "sentence_id": "S3",
+      "section": "dosage and administration",
+      "text": "The initial dose of captopril tablets is 25 mg b.i.d."
+    },
+    {
+      "sentence_id": "S4",
+      "section": "dosage and administration",
+      "text": "If satisfactory reduction of blood pressure has not been achieved after one or two weeks, the dose may be increased to 50 mg b.i.d."
+    },
+    {
+      "sentence_id": "S5",
+      "section": "dosage and administration",
+      "text": "Concomitant sodium restriction may be beneficial when captopril tablets are used alone."
+    },
+    {
+      "sentence_id": "S6",
+      "section": "dosage and administration",
+      "text": "The dose of captopril tablets in hypertension usually does not exceed 50 mg t.i.d."
+    },
+    {
+      "sentence_id": "S7",
+      "section": "dosage and administration",
+      "text": "Therefore, if the blood pressure has not been satisfactorily controlled after one to two weeks at this dose, (and the patient is not already receiving a diuretic), a modest dose of a thiazide-type diuretic (e.g., hydrochlorothiazide, 25 mg daily), should be added."
+    },
+    {
+      "sentence_id": "S8",
+      "section": "dosage and administration",
+      "text": "If captopril tablets are being started in a patient already receiving a diuretic, captopril tablets therapy should be initiated under close medical supervision (see WARNINGS and PRECAUTIONS: Drug Interactions regarding hypotension), with dosage and titration of captopril tablets as noted above."
+    },
+    {
+      "sentence_id": "S9",
+      "section": "dosage and administration",
+      "text": "If further blood pressure reduction is required, the dose of captopril tablets may be increased to 100 mg b.i.d."
+    },
+    {
+      "sentence_id": "S10",
+      "section": "dosage and administration",
+      "text": "and then, if necessary, to 150 mg b.i.d."
+    },
+    {
+      "sentence_id": "S11",
+      "section": "dosage and administration",
+      "text": "(while continuing the diuretic)."
+    },
+    {
+      "sentence_id": "S12",
+      "section": "dosage and administration",
+      "text": "The usual dose range is 25 to 150 mg b.i.d."
+    },
+    {
+      "sentence_id": "S13",
+      "section": "dosage and administration",
+      "text": "A maximum daily dose of 450 mg captopril tablets should not be exceeded."
+    },
+    {
+      "sentence_id": "S14",
+      "section": "dosage and administration",
+      "text": "For patients with severe hypertension (e.g., accelerated or malignant hypertension), when temporary discontinuation of current antihypertensive therapy is not practical or desirable, or when prompt titration to more normotensive blood pressure levels is indicated, diuretic should be continued but other current antihypertensive medication stopped and captopril tablets dosage promptly initiated at 25 mg b.i.d."
+    },
+    {
+      "sentence_id": "S15",
+      "section": "dosage and administration",
+      "text": "When necessitated by the patient’s clinical condition, the daily dose of captopril tablets may be increased every 24 hours or less under continuous medical supervision until a satisfactory blood pressure response is obtained or the maximum dose of captopril tablets is reached."
+    },
+    {
+      "sentence_id": "S16",
+      "section": "dosage and administration",
+      "text": "Heart Failure Initiation of therapy requires consideration of recent diuretic therapy and the possibility of severe salt/volume depletion."
+    },
+    {
+      "sentence_id": "S17",
+      "section": "dosage and administration",
+      "text": "In patients with either normal or low blood pressure, who have been vigorously treated with diuretics and who may be hyponatremic and/or hypovolemic, a starting dose of 6.25 or 12.5 mg t.i.d."
+    },
+    {
+      "sentence_id": "S18",
+      "section": "dosage and administration",
+      "text": "for these patients, titration to the usual daily dosage can then occur within the next several days."
+    },
+    {
+      "sentence_id": "S19",
+      "section": "dosage and administration",
+      "text": "For most patients the usual initial daily dosage is 25 mg t.i.d."
+    },
+    {
+      "sentence_id": "S20",
+      "section": "dosage and administration",
+      "text": "After a dose of 50 mg t.i.d."
+    },
+    {
+      "sentence_id": "S21",
+      "section": "dosage and administration",
+      "text": "is reached, further increases in dosage should be delayed, where possible, for at least two weeks to determine if a satisfactory response occurs."
+    },
+    {
+      "sentence_id": "S22",
+      "section": "dosage and administration",
+      "text": "Most patients studied have had a satisfactory clinical improvement at 50 or 100 mg t.i.d."
+    },
+    {
+      "sentence_id": "S23",
+      "section": "dosage and administration",
+      "text": "A maximum daily dose of 450 mg of captopril tablets should not be exceeded."
+    },
+    {
+      "sentence_id": "S24",
+      "section": "dosage and administration",
+      "text": "Captopril tablets therapy must be initiated under very close medical supervision."
+    },
+    {
+      "sentence_id": "S25",
+      "section": "dosage and administration",
+      "text": "Left Ventricular Dysfunction After Myocardial Infarction The recommended dose for long-term use in patients following a myocardial infarction is a target maintenance dose of 50 mg t.i.d."
+    },
+    {
+      "sentence_id": "S26",
+      "section": "dosage and administration",
+      "text": "Therapy may be initiated as early as three days following a myocardial infarction."
+    },
+    {
+      "sentence_id": "S27",
+      "section": "dosage and administration",
+      "text": "After a single dose of 6.25 mg, captopril tablets therapy should be initiated at 12.5 mg t.i.d."
+    },
+    {
+      "sentence_id": "S28",
+      "section": "dosage and administration",
+      "text": "Captopril tablets should then be increased to 25 mg t.i.d."
+    },
+    {
+      "sentence_id": "S29",
+      "section": "dosage and administration",
+      "text": "during the next several days and to a target dose of 50 mg t.i.d."
+    },
+    {
+      "sentence_id": "S30",
+      "section": "dosage and administration",
+      "text": "Captopril tablets may be used in patients treated with other post-myocardial infarction therapies, e.g., thrombolytics, aspirin, beta blockers."
+    },
+    {
+      "sentence_id": "S31",
+      "section": "dosage and administration",
+      "text": "Diabetic Nephropathy The recommended dose of captopril tablets for long term use to treat diabetic nephropathy is 25 mg t.i.d."
+    },
+    {
+      "sentence_id": "S32",
+      "section": "dosage and administration",
+      "text": "These patients will take longer to reach steady-state captopril levels and will reach higher steady-state levels for a given daily dose than patients with normal renal function."
+    },
+    {
+      "sentence_id": "S33",
+      "section": "dosage and administration",
+      "text": "Accordingly, for patients with significant renal impairment, initial daily dosage of captopril tablets should be reduced, and smaller increments utilized for titration, which should be quite slow (one- to two-week intervals)."
+    },
+    {
+      "sentence_id": "S34",
+      "section": "dosage and administration",
+      "text": "After the desired therapeutic effect has been achieved, the dose should be slowly back-titrated to determine the minimal effective dose."
+    },
+    {
+      "sentence_id": "S35",
+      "section": "drug interactions",
+      "text": "Do not coadminister aliskiren with captopril tablets in patients with diabetes."
+    },
+    {
+      "sentence_id": "S36",
+      "section": "drug interactions",
+      "text": "Avoid use of aliskiren with captopril tablets in patients with renal impairment (GFR < 60 ml/min)."
+    },
+    {
+      "sentence_id": "S37",
+      "section": "drug interactions",
+      "text": "Hypotension–Patients on Diuretic Therapy Patients on diuretics and especially those in whom diuretic therapy was recently instituted, as well as those on severe dietary salt restriction or dialysis, may occasionally experience a precipitous reduction of blood pressure usually within the first hour after receiving the initial dose of captopril."
+    },
+    {
+      "sentence_id": "S38",
+      "section": "drug interactions",
+      "text": "The possibility of hypotensive effects with captopril can be minimized by either discontinuing the diuretic or increasing the salt intake approximately one week prior to initiation of treatment with captopril tablets or initiating therapy with small doses (6.25 or 12.5 mg)."
+    },
+    {
+      "sentence_id": "S39",
+      "section": "drug interactions",
+      "text": "Alternatively, provide medical supervision for at least one hour after the initial dose."
+    },
+    {
+      "sentence_id": "S40",
+      "section": "drug interactions",
+      "text": "This transient hypotensive response is not a contraindication to further doses which can be given without difficulty once the blood pressure has increased after volume expansion."
+    },
+    {
+      "sentence_id": "S41",
+      "section": "drug interactions",
+      "text": "therefore, nitroglycerin or other nitrates (as used for management of angina) or other drugs having vasodilator activity should, if possible, be discontinued before starting captopril tablets."
+    },
+    {
+      "sentence_id": "S42",
+      "section": "precautions",
+      "text": "PRECAUTIONS General Impaired Renal Function Hypertension Some patients with renal disease, particularly those with severe renal artery stenosis, have developed increases in BUN and serum creatinine after reduction of blood pressure with captopril."
+    },
+    {
+      "sentence_id": "S43",
+      "section": "precautions",
+      "text": "Cough Presumably due to the inhibition of the degradation of endogenous bradykinin, persistent nonproductive cough has been reported with all ACE inhibitors, always resolving after discontinuation of therapy."
+    },
+    {
+      "sentence_id": "S44",
+      "section": "precautions",
+      "text": "Patients should be informed that captopril tablets should be taken one hour before meals (see DOSAGE AND ADMINISTRATION )."
+    },
+    {
+      "sentence_id": "S45",
+      "section": "precautions",
+      "text": "Drug/Laboratory Test Interaction Captopril may cause a false-positive urine test for acetone."
+    },
+    {
+      "sentence_id": "S46",
+      "section": "precautions",
+      "text": "Carcinogenesis, Mutagenesis and Impairment of Fertility Two-year studies with doses of 50 to 1350 mg/kg/day in mice and rats failed to show any evidence of carcinogenic potential."
+    },
+    {
+      "sentence_id": "S47",
+      "section": "precautions",
+      "text": "The high dose in these studies is 150 times the maximum recommended human dose of 450 mg, assuming a 50 kg subject."
+    },
+    {
+      "sentence_id": "S48",
+      "section": "precautions",
+      "text": "On a body-surface-area basis, the high doses for mice and rats are 13 and 26 times the maximum recommended human dose, respectively."
+    },
+    {
+      "sentence_id": "S49",
+      "section": "precautions",
+      "text": "Significant drug-related toxicity included effects on hematopoiesis, renal toxicity, erosion/ ulceration of the stomach, and variation of retinal blood vessels."
+    },
+    {
+      "sentence_id": "S50",
+      "section": "precautions",
+      "text": "Reductions in hemoglobin and/or hematocrit values were seen in mice, rats, and monkeys at doses 50 to 150 times the maximum recommended human dose (MRHD) of 450 mg, assuming a 50 kg subject."
+    },
+    {
+      "sentence_id": "S51",
+      "section": "precautions",
+      "text": "On a body- surface-area basis, these doses are 5 to 25 times maximum recommended dose (MRHD)."
+    },
+    {
+      "sentence_id": "S52",
+      "section": "precautions",
+      "text": "Anemia, leukopenia, thrombocytopenia, and bone marrow suppression occurred in dogs at doses 8 to 30 times MRHD on a body- weight basis (4 to 15 times MRHD on a surface-area basis)."
+    },
+    {
+      "sentence_id": "S53",
+      "section": "precautions",
+      "text": "Marked anemia was seen at all dose levels (8 to 30 times MRHD) in dogs, whereas moderate to marked leukopenia was noted only at 15 and 30 times MRHD and thrombocytopenia at 30 times MRHD."
+    },
+    {
+      "sentence_id": "S54",
+      "section": "precautions",
+      "text": "However, in the 47 week study at a dose 30 times MRHD, bone marrow suppression was found to be reversible upon continued drug administration."
+    },
+    {
+      "sentence_id": "S55",
+      "section": "precautions",
+      "text": "Captopril caused hyperplasia of the juxtaglomerular apparatus of the kidneys in mice and rats at doses 7 to 200 times MRHD on a body-weight basis (0.6 to 35 times MRHD on a surface-area basis);"
+    },
+    {
+      "sentence_id": "S56",
+      "section": "precautions",
+      "text": "in monkeys at 20 to 60 times MRHD on a body-weight basis (7 to 20 times MRHD on a surface-area basis);"
+    },
+    {
+      "sentence_id": "S57",
+      "section": "precautions",
+      "text": "and in dogs at 30 times MRHD on a body-weight basis (15 times MRHD on a surface-area basis)."
+    },
+    {
+      "sentence_id": "S58",
+      "section": "precautions",
+      "text": "Gastric erosions/ulcerations were increased in incidence in male rats at 20 to 200 times MRHD on a body- weight basis (3.5 and 35 times MRHD on a surface-area basis);"
+    },
+    {
+      "sentence_id": "S59",
+      "section": "precautions",
+      "text": "in dogs at 30 times MRHD on a body-weight basis (15 times MRHD on a surface-area basis);"
+    },
+    {
+      "sentence_id": "S60",
+      "section": "precautions",
+      "text": "and in monkeys at 65 times MRHD on a body-weight basis (20 times MRHD on a surface-area basis)."
+    },
+    {
+      "sentence_id": "S61",
+      "section": "precautions",
+      "text": "Rabbits developed gastric and intestinal ulcers when given oral doses approximately 30 times MRHD on a body-weight basis (10 times MRHD on surface-area basis) for only 5 to 7 days."
+    },
+    {
+      "sentence_id": "S62",
+      "section": "precautions",
+      "text": "In the two-year rat study, irreversible and progressive variations in the caliber of retinal vessels (focal sacculations and constrictions) occurred at all dose levels (7 to 200 times MRHD) on a body-weight basis;"
+    },
+    {
+      "sentence_id": "S63",
+      "section": "precautions",
+      "text": "1 to 35 times MRHD on a surface-area basis in a dose-related fashion."
+    },
+    {
+      "sentence_id": "S64",
+      "section": "precautions",
+      "text": "The effect was first observed in the 88th week of dosing, with a progressively increased incidence thereafter, even after cessation of dosing."
+    },
+    {
+      "sentence_id": "S65",
+      "section": "warnings",
+      "text": "in some cases there was no prior history of facial angioedema and C-1 esterase levels were normal."
+    },
+    {
+      "sentence_id": "S66",
+      "section": "warnings",
+      "text": "The angioedema was diagnosed by procedures including abdominal CT scan or ultrasound, or at surgery, and symptoms resolved after stopping the ACE inhibitor."
+    },
+    {
+      "sentence_id": "S67",
+      "section": "warnings",
+      "text": "About half of the neutropenic patients developed systemic or oral cavity infections or other features of the syndrome of agranulocytosis."
+    },
+    {
+      "sentence_id": "S68",
+      "section": "warnings",
+      "text": "The risk of neutropenia is dependent on the clinical status of the patient: In clinical trials in patients with hypertension who have normal renal function (serum creatinine less than 1.6 mg/dL and no collagen vascular disease), neutropenia has been seen in one patient out of over 8,600 exposed."
+    },
+    {
+      "sentence_id": "S69",
+      "section": "warnings",
+      "text": "In patients with some degree of renal failure (serum creatinine at least 1.6 mg/dL) but no collagen vascular disease, the risk of neutropenia in clinical trials was about 1 per 500, a frequency over 15 times that for uncomplicated hypertension."
+    },
+    {
+      "sentence_id": "S70",
+      "section": "warnings",
+      "text": "Daily doses of captopril were relatively high in these patients, particularly in view of their diminished renal function."
+    },
+    {
+      "sentence_id": "S71",
+      "section": "warnings",
+      "text": "While none of the over 750 patients in formal clinical trials of heart failure developed neutropenia, it has occurred during the subsequent clinical experience."
+    },
+    {
+      "sentence_id": "S72",
+      "section": "warnings",
+      "text": "About half of the reported cases had serum creatinine ≥ 1.6 mg/dL and more than 75 percent were in patients also receiving procainamide."
+    },
+    {
+      "sentence_id": "S73",
+      "section": "warnings",
+      "text": "The neutropenia has usually been detected within three months after captopril was started."
+    },
+    {
+      "sentence_id": "S74",
+      "section": "warnings",
+      "text": "In general, neutrophils returned to normal in about two weeks after captopril was discontinued, and serious infections were limited to clinically complex patients."
+    },
+    {
+      "sentence_id": "S75",
+      "section": "warnings",
+      "text": "If captopril is used in patients with impaired renal function, white blood cell and differential counts should be evaluated prior to starting treatment and at approximately two-week intervals for about three months, then periodically."
+    },
+    {
+      "sentence_id": "S76",
+      "section": "warnings",
+      "text": "In patients with collagen vascular disease or who are exposed to other drugs known to affect the white cells or immune response, particularly when there is impaired renal function, captopril should be used only after an assessment of benefit and risk, and then with caution."
+    },
+    {
+      "sentence_id": "S77",
+      "section": "warnings",
+      "text": "Since discontinuation of captopril and other drugs has generally led to prompt return of the white count to normal, upon confirmation of neutropenia (neutrophil count < 1000/mm 3 ) the physician should withdraw captopril and closely follow the patient’s course."
+    },
+    {
+      "sentence_id": "S78",
+      "section": "warnings",
+      "text": "Proteinuria Total urinary proteins greater than 1 g per day were seen in about 0.7 percent of patients receiving captopril."
+    },
+    {
+      "sentence_id": "S79",
+      "section": "warnings",
+      "text": "About 90 percent of affected patients had evidence of prior renal disease or received relatively high doses of captopril (in excess of 150 mg/day), or both."
+    },
+    {
+      "sentence_id": "S80",
+      "section": "warnings",
+      "text": "This transient hypotension is more likely to occur after any of the first several doses and is usually well tolerated, producing either no symptoms or brief mild lightheadedness, although in rare instances it has been associated with arrhythmia or conduction defects."
+    },
+    {
+      "sentence_id": "S81",
+      "section": "warnings",
+      "text": "BECAUSE OF THE POTENTIAL FALL IN BLOOD PRESSURE IN THESE PATIENTS, THERAPY SHOULD BE STARTED UNDER VERY CLOSE MEDICAL SUPERVISION."
+    },
+    {
+      "sentence_id": "S82",
+      "section": "warnings",
+      "text": "A starting dose of 6.25 or 12.5 mg t.i.d."
+    },
+    {
+      "sentence_id": "S83",
+      "section": "warnings",
+      "text": "Most epidemiologic studies examining fetal abnormalities after exposure to antihypertensive use in the first trimester have not distinguished drugs affecting the renin-angiotensin system from other antihypertensive agents."
+    },
+    {
+      "sentence_id": "S84",
+      "section": "warnings",
+      "text": "Patients and physicians should be aware, however, that oligohydramnios may not appear until after the fetus has sustained irreversible injury."
+    },
+    {
+      "sentence_id": "S85",
+      "section": "warnings",
+      "text": "Closely observe infants with histories of in utero exposure to captopril tablets for hypotension, oliguria, and hyperkalemia (see PRECAUTIONS : Pediatric Use )."
+    },
+    {
+      "sentence_id": "S86",
+      "section": "warnings",
+      "text": "When captopril was given to rabbits at doses about 0.8 to 70 times (on a mg/kg basis) the maximum recommended human dose, low incidences of craniofacial malformations were seen."
+    },
+    {
+      "sentence_id": "S87",
+      "section": "warnings",
+      "text": "No teratogenic effects of captopril were seen in studies of pregnant rats and hamsters."
+    },
+    {
+      "sentence_id": "S88",
+      "section": "warnings",
+      "text": "On a mg/kg basis, the doses used were up to 150 times (in hamsters) and 625 times (in rats) the maximum recommended human dose."
+    },
+    {
+      "sentence_id": "S89",
+      "section": "how supplied",
+      "text": "HOW SUPPLIED Captopril Tablets, USP are available containing 12.5 mg, 25 mg, 50 mg or 100 mg of captopril, USP."
+    },
+    {
+      "sentence_id": "S90",
+      "section": "how supplied",
+      "text": "The 12.5 mg tablets are white to off-white, arc diamond shaped tablets with bisect on one side and “131” on the other side."
+    },
+    {
+      "sentence_id": "S91",
+      "section": "how supplied",
+      "text": "They are available as follows: Bottles of 100 Tablets NDC 69292-522-01 Bottles of 1000 Tablets NDC 69292-522-10 The 25 mg tablets are white to off-white, arc diamond shaped tablets with quadrisect on one side and “132” on the other side."
+    },
+    {
+      "sentence_id": "S92",
+      "section": "how supplied",
+      "text": "They are available as follows: Bottles of 100 Tablets NDC 69292-524-01 Bottles of 1000 Tablets NDC 69292-524-10 The 50 mg tablets are white to off-white, arc diamond shaped tablets with bisect on one side and “133” on the other side."
+    },
+    {
+      "sentence_id": "S93",
+      "section": "how supplied",
+      "text": "They are available as follows: Bottles of 100 Tablets NDC 69292-526-01 Bottles of 1000 Tablets NDC 69292-526-10 The 100 mg tablets are white to off-white, capsule shaped tablets with bisect on one side and “134” on the other side."
+    },
+    {
+      "sentence_id": "S94",
+      "section": "how supplied",
+      "text": "They are available as follows: Bottles of 100 Tablets NDC 69292-528-01 Bottles of 500 Tablets NDC 69292-528-50 Bottles contain a desiccant-charcoal canister."
+    },
+    {
+      "sentence_id": "S95",
+      "section": "description",
+      "text": "it is soluble in water (approx."
+    },
+    {
+      "sentence_id": "S96",
+      "section": "description",
+      "text": "160 mg/mL), methanol, and ethanol and sparingly soluble in chloroform and ethyl acetate."
+    },
+    {
+      "sentence_id": "S97",
+      "section": "description",
+      "text": "Each tablet for oral administration contains 12.5 mg, 25 mg, 50 mg or 100 mg of captopril and the following inactive ingredients: corn starch, lactose monohydrate, microcrystalline cellulose and stearic acid."
+    },
+    {
+      "sentence_id": "S98",
+      "section": "description",
+      "text": "About half of the patients had symptoms of heart failure in the past."
+    },
+    {
+      "sentence_id": "S99",
+      "section": "description",
+      "text": "Patients were given a test dose of 6.25 mg oral captopril tablets and were randomized within 3 to 16 days post-infarction to receive either captopril tablets or placebo in addition to conventional therapy."
+    },
+    {
+      "sentence_id": "S100",
+      "section": "description",
+      "text": "Captopril tablets were initiated at 6.25 mg or 12.5 mg t.i.d."
+    },
+    {
+      "sentence_id": "S101",
+      "section": "description",
+      "text": "and after two weeks titrated to a target maintenance dose of 50 mg t.i.d."
+    },
+    {
+      "sentence_id": "S102",
+      "section": "description",
+      "text": "Captopril tablets were well tolerated in the presence of other therapies such as aspirin, beta blockers, nitrates, vasodilators, calcium antagonists and diuretics."
+    },
+    {
+      "sentence_id": "S103",
+      "section": "description",
+      "text": "In a multicenter, double-blind, placebo controlled trial, 409 patients, age 18 to 49 of either gender, with or without hypertension, with type I (juvenile type, onset before age 30) insulin-dependent diabetes mellitus, retinopathy, proteinuria ≥ 500 mg per day and serum creatinine  2.5 mg/dL, were randomized to placebo or captopril tablets (25 mg t.i.d.) and followed for up to 4.8 years (median 3 years)."
+    },
+    {
+      "sentence_id": "S104",
+      "section": "description",
+      "text": "Captopril tablets were well tolerated in this patient population."
+    },
+    {
+      "sentence_id": "S105",
+      "section": "description",
+      "text": "In two multicenter, double-blind, placebo controlled studies, a total of 235 normotensive patients with insulin- dependent diabetes mellitus, retinopathy and microalbuminuria (20 to 200 mcg/min) were randomized to placebo or captopril tablets (50 mg b.i.d.) and followed for up to 2 years."
+    },
+    {
+      "sentence_id": "S106",
+      "section": "description",
+      "text": "Captopril tablets delayed the progression to overt nephropathy (proteinuria ≥ 500 mg/day) in both studies (risk reduction 67% to 76%;"
+    }
+  ],
+  "passes_run": [
+    "administration",
+    "dosing",
+    "limits"
+  ]
+}

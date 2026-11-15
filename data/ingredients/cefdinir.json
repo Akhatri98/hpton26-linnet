@@ -1,0 +1,52 @@
+{
+  "ingredient": "cefdinir",
+  "primary_spl": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+  "rules": [
+    {
+      "id": "cefdinir-iron-window",
+      "family": "separation",
+      "target": "iron",
+      "before": 2,
+      "after": 2,
+      "provenance": "quoted",
+      "note": "If iron supplements are required, take cefdinir at least 2 hours before or after the supplement. | DRAFT: proposed by a language model. | Not in the API take; the same row came from sim-haiku-a, sim-haiku-b, sim-sonnet. | approved from model draft",
+      "source": {
+        "spl_set_id": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "section": "drug interactions",
+        "sentence": "If iron supplements are required during cefdinir therapy, cefdinir should be taken at least 2 hours before or after the supplement."
+      },
+      "verified": true,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:25-05:00",
+        "note": "3 of 4 runs agreed"
+      }
+    },
+    {
+      "id": "cefdinir-antacid-separation-2h",
+      "family": "separation",
+      "target": "group:antacids",
+      "before": 2,
+      "after": 2,
+      "provenance": "quoted",
+      "note": "Cefdinir should be taken at least 2 hours before or after an antacid. | DRAFT: proposed by a language model. | approved from model draft | Reviewer (Claude): the label's heading is 'Antacids (Aluminum- or Magnesium-Containing)'; the rule is applied to every antacid in the group (strict reading).",
+      "source": {
+        "spl_set_id": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10bf69e7-5f7e-4448-9f22-777f137d9666",
+        "section": "drug interactions",
+        "sentence": "If antacids are required during cefdinir capsule therapy, cefdinir should be taken at least 2 hours before or after the antacid."
+      },
+      "verified": true,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:32-05:00",
+        "note": "4 of 4 runs agreed"
+      }
+    }
+  ]
+}

@@ -6,20 +6,40 @@
           "ingredient": "calcium_carbonate",
           "provenance": "quoted",
           "source_spl": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
-          "basis": "Phosphate Binders (e.g., calcium carbonate, ferrous sulfate, sevelamer, lanthanum)"
+          "basis": "Phosphate Binders (e.g., calcium carbonate, ferrous sulfate, sevelamer, lanthanum)",
+          "verified": true,
+          "review": {
+            "decision": "approved",
+            "by": "claude",
+            "role": "AI (Claude), not a pharmacist",
+            "at": "2026-11-14T21:51:47-05:00"
+          }
         },
         {
           "ingredient": "colestipol",
           "provenance": "quoted",
           "source_spl": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
-          "basis": "Bile Acid Sequestrants (e.g., colesevelam, cholestyramine, colestipol)"
+          "basis": "Bile Acid Sequestrants (e.g., colesevelam, cholestyramine, colestipol)",
+          "verified": true,
+          "review": {
+            "decision": "approved",
+            "by": "claude",
+            "role": "AI (Claude), not a pharmacist",
+            "at": "2026-11-14T21:51:47-05:00"
+          }
         },
         {
           "ingredient": "ferrous_sulfate",
           "provenance": "quoted",
           "source_spl": "008de8fd-150f-4022-8ccb-c8bfa94875c7",
           "basis": "Phosphate Binders (e.g., calcium carbonate, ferrous sulfate, sevelamer, lanthanum)",
-          "verified": false
+          "verified": true,
+          "review": {
+            "decision": "approved",
+            "by": "claude",
+            "role": "AI (Claude), not a pharmacist",
+            "at": "2026-11-14T21:51:47-05:00"
+          }
         }
       ]
     },
@@ -29,46 +49,87 @@
           "ingredient": "calcium_carbonate",
           "provenance": "quoted",
           "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
-          "basis": "or other products containing calcium, iron or zinc."
+          "basis": "or other products containing calcium, iron or zinc.",
+          "verified": true,
+          "review": {
+            "decision": "approved",
+            "by": "claude",
+            "role": "AI (Claude), not a pharmacist",
+            "at": "2026-11-14T21:51:48-05:00"
+          }
         },
         {
           "ingredient": "magnesium",
           "provenance": "quoted",
           "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
           "basis": "2.4 Important Administration Instructions With Multivalent Cations Administer ciprofloxacin tablets at least 2 hours before or 6 hours after magnesium/aluminum antacids;",
-          "verified": false,
-          "matched": "element member: covers every salt of it in the library"
+          "verified": true,
+          "matched": "element member: covers every salt of it in the library",
+          "review": {
+            "decision": "approved",
+            "by": "claude",
+            "role": "AI (Claude), not a pharmacist",
+            "at": "2026-11-14T21:52:05-05:00",
+            "note": "3 of 4 runs agreed"
+          }
         },
         {
           "ingredient": "aluminum",
           "provenance": "quoted",
           "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
           "basis": "2.4 Important Administration Instructions With Multivalent Cations Administer ciprofloxacin tablets at least 2 hours before or 6 hours after magnesium/aluminum antacids;",
-          "verified": false,
-          "matched": "element member: covers every salt of it in the library"
+          "verified": true,
+          "matched": "element member: covers every salt of it in the library",
+          "review": {
+            "decision": "approved",
+            "by": "claude",
+            "role": "AI (Claude), not a pharmacist",
+            "at": "2026-11-14T21:51:55-05:00",
+            "note": "3 of 4 runs agreed"
+          }
         },
         {
           "ingredient": "iron",
           "provenance": "quoted",
           "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
           "basis": "or products containing calcium, iron, or zinc and dairy products) Ciprofloxacin should be taken at least two hours before or six hours after Multivalent cation-containing products administration [see Dosage and Administration (2.4)] Decrease ciprofloxacin absorption, resulting in lower serum and urine levels Probenecid Use with caution (interferes with renal tubular secretion of ciprofloxacin and increases ciprofloxacin serum levels) Potentiation of ciprofloxacin toxicity may occur.",
-          "verified": false,
-          "matched": "element member: covers every salt of it in the library"
+          "verified": true,
+          "matched": "element member: covers every salt of it in the library",
+          "review": {
+            "decision": "approved",
+            "by": "claude",
+            "role": "AI (Claude), not a pharmacist",
+            "at": "2026-11-14T21:52:05-05:00",
+            "note": "3 of 4 runs agreed"
+          }
         },
         {
           "ingredient": "zinc",
           "provenance": "quoted",
           "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
           "basis": "or products containing calcium, iron, or zinc and dairy products) Ciprofloxacin should be taken at least two hours before or six hours after Multivalent cation-containing products administration [see Dosage and Administration (2.4)] Decrease ciprofloxacin absorption, resulting in lower serum and urine levels Probenecid Use with caution (interferes with renal tubular secretion of ciprofloxacin and increases ciprofloxacin serum levels) Potentiation of ciprofloxacin toxicity may occur.",
-          "verified": false,
-          "matched": "element member: covers every salt of it in the library"
+          "verified": true,
+          "matched": "element member: covers every salt of it in the library",
+          "review": {
+            "decision": "approved",
+            "by": "claude",
+            "role": "AI (Claude), not a pharmacist",
+            "at": "2026-11-14T21:52:06-05:00",
+            "note": "3 of 4 runs agreed"
+          }
         },
         {
           "ingredient": "sucralfate",
           "provenance": "quoted",
           "source_spl": "0c355077-7361-41d0-9e82-eb31beaf5daa",
           "basis": "Administer ciprofloxacin tablets at least 2 hours before or 6 hours after magnesium/aluminum antacids; polymeric phosphate binders (for example, sevelamer, lanthanum carbonate) or sucralfate;",
-          "verified": false
+          "verified": true,
+          "review": {
+            "decision": "approved",
+            "by": "claude",
+            "role": "AI (Claude), not a pharmacist",
+            "at": "2026-11-14T21:51:48-05:00"
+          }
         }
       ]
     },
@@ -79,8 +140,14 @@
           "provenance": "interpreted",
           "source_spl": "036ef1ed-32ef-46b8-8817-b3f63a014280",
           "basis": "Antacids may interact with certain prescription drugs.",
-          "verified": false,
-          "note": "Tums' own label warns 'Antacids may interact...', i.e. calls itself an antacid; it never says 'calcium carbonate is an antacid' in one sentence, so this is interpreted."
+          "verified": true,
+          "note": "Tums' own label warns 'Antacids may interact...', i.e. calls itself an antacid; it never says 'calcium carbonate is an antacid' in one sentence, so this is interpreted.",
+          "review": {
+            "decision": "approved",
+            "by": "claude",
+            "role": "AI (Claude), not a pharmacist",
+            "at": "2026-11-14T21:51:48-05:00"
+          }
         }
       ]
     }

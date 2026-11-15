@@ -1,0 +1,18 @@
+{
+  "model": "claude-haiku-5-5",
+  "accepted_rules": 4,
+  "accepted_memberships": [],
+  "rejected": [
+    {
+      "item": {
+        "id": "tramadol-hepatic-interval-12h",
+        "family": "min_interval",
+        "hours": 12,
+        "sentence": "S21",
+        "provenance": "quoted",
+        "note": "Applies only to adult patients with severe hepatic impairment: recommended dose 50 mg every 12 hours."
+      },
+      "reason": "S21 gives 'every 12 hours' as a regimen, not a minimum gap or an as-needed limit; the prescription sets the regimen"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "ingredient": "risedronate",
+  "primary_spl": "81702f21-3117-49ce-8e9b-2aa2648ba7c3",
+  "rules": [
+    {
+      "id": "risedronate-separation-all-drugs",
+      "family": "separation",
+      "target": "*",
+      "before": 0.5,
+      "after": 0.5,
+      "provenance": "quoted",
+      "note": "Take at least 30 minutes before any other oral medication, supplement, or food/drink (S4); no food, drink, or other medications for at least 30 minutes after (S6). | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "81702f21-3117-49ce-8e9b-2aa2648ba7c3",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=81702f21-3117-49ce-8e9b-2aa2648ba7c3",
+        "section": "dosage and administration",
+        "sentence": "2.6 Important Administration Instructions Instruct patients to do the following: • Take risedronate sodium tablets at least 30 minutes before the first food or drink of the day other than water, and before taking any oral medication or supplementation, including calcium, antacids, or vitamins to maximize absorption and clinical benefit, [ see Drug Interactions ( 7.1 ) ]."
+      },
+      "verified": false
+    },
+    {
+      "id": "risedronate-empty-stomach-meal",
+      "family": "food",
+      "mode": "empty_stomach",
+      "before_meal": 0.5,
+      "after_meal": 0.5,
+      "provenance": "quoted",
+      "note": "Take at least 30 minutes before the first food or drink of the day other than plain water; nothing except plain water for at least 30 minutes after dosing. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "81702f21-3117-49ce-8e9b-2aa2648ba7c3",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=81702f21-3117-49ce-8e9b-2aa2648ba7c3",
+        "section": "dosage and administration",
+        "sentence": "• Do not eat or drink anything except plain water, or take other medications for at least 30 minutes after taking risedronate sodium tablets."
+      },
+      "verified": false
+    }
+  ]
+}

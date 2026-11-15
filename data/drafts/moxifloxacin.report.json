@@ -1,0 +1,68 @@
+{
+  "model": "claude-haiku-5-5",
+  "accepted_rules": 1,
+  "accepted_memberships": [
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "aluminum",
+      "provenance": "quoted",
+      "basis": "2.2 Important Administration Instructions With Multivalent Cations Administer moxifloxacin tablets at least 4 hours before or 8 hours after products containing magnesium, aluminum, iron or zinc, including antacids, sucralfate, multivitamins and didanosine buffered tablets for oral suspension or the pediatric powder for oral solution [see Drug Interactions (7.1) and Clinical Pharmacology (12.3) ].",
+      "source_spl": "02c29e8e-8346-4e28-b7fc-2f4cb61ad37d",
+      "verified": false
+    },
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "magnesium",
+      "provenance": "quoted",
+      "basis": "2.2 Important Administration Instructions With Multivalent Cations Administer moxifloxacin tablets at least 4 hours before or 8 hours after products containing magnesium, aluminum, iron or zinc, including antacids, sucralfate, multivitamins and didanosine buffered tablets for oral suspension or the pediatric powder for oral solution [see Drug Interactions (7.1) and Clinical Pharmacology (12.3) ].",
+      "source_spl": "02c29e8e-8346-4e28-b7fc-2f4cb61ad37d",
+      "verified": false
+    },
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "iron",
+      "provenance": "quoted",
+      "basis": "2.2 Important Administration Instructions With Multivalent Cations Administer moxifloxacin tablets at least 4 hours before or 8 hours after products containing magnesium, aluminum, iron or zinc, including antacids, sucralfate, multivitamins and didanosine buffered tablets for oral suspension or the pediatric powder for oral solution [see Drug Interactions (7.1) and Clinical Pharmacology (12.3) ].",
+      "source_spl": "02c29e8e-8346-4e28-b7fc-2f4cb61ad37d",
+      "verified": false
+    },
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "zinc",
+      "provenance": "quoted",
+      "basis": "2.2 Important Administration Instructions With Multivalent Cations Administer moxifloxacin tablets at least 4 hours before or 8 hours after products containing magnesium, aluminum, iron or zinc, including antacids, sucralfate, multivitamins and didanosine buffered tablets for oral suspension or the pediatric powder for oral solution [see Drug Interactions (7.1) and Clinical Pharmacology (12.3) ].",
+      "source_spl": "02c29e8e-8346-4e28-b7fc-2f4cb61ad37d",
+      "verified": false
+    },
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "sucralfate",
+      "provenance": "quoted",
+      "basis": "2.2 Important Administration Instructions With Multivalent Cations Administer moxifloxacin tablets at least 4 hours before or 8 hours after products containing magnesium, aluminum, iron or zinc, including antacids, sucralfate, multivitamins and didanosine buffered tablets for oral suspension or the pediatric powder for oral solution [see Drug Interactions (7.1) and Clinical Pharmacology (12.3) ].",
+      "source_spl": "02c29e8e-8346-4e28-b7fc-2f4cb61ad37d",
+      "verified": false
+    }
+  ],
+  "rejected": [
+    {
+      "item": {
+        "id": "moxifloxacin-min-interval-24h",
+        "family": "min_interval",
+        "hours": 24,
+        "sentence": "S2",
+        "provenance": "quoted",
+        "note": "Dose is 400 mg once every 24 hours."
+      },
+      "reason": "S2 gives 'every 24 hours' as a regimen, not a minimum gap or an as-needed limit; the prescription sets the regimen"
+    },
+    {
+      "item": {
+        "group": "polyvalent_cations",
+        "ingredient": "calcium_carbonate",
+        "sentence": "S5",
+        "provenance": "interpreted"
+      },
+      "reason": "ingredient 'calcium_carbonate' not named in S5"
+    }
+  ]
+}

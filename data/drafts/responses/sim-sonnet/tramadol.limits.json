@@ -1,0 +1,5 @@
+{"limits":[
+{"kind":"per_day","amount":400,"unit":"mg","ingredient":"tramadol hydrochloride","strength":null,"population":"adults","condition":null,"sentence":"S11","provenance":"quoted"},
+{"kind":"per_day","amount":200,"unit":"mg","ingredient":"tramadol hydrochloride","strength":null,"population":"renal impairment","condition":"creatinine clearance less than 30 mL/min","sentence":"S22","provenance":"quoted"},
+{"kind":"per_day","amount":300,"unit":"mg","ingredient":"tramadol hydrochloride","strength":null,"population":"patients over 75 years old","condition":null,"sentence":"S24","provenance":"quoted"}
+]}

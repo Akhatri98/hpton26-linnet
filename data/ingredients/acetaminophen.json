@@ -17,7 +17,14 @@
         "sentence": "take 2 caplets every 6 hours while symptoms last"
       },
       "note": "OTC directions. Applied across all acetaminophen products (ingredient-level spacing). DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
-      "verified": true
+      "verified": true,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:52:06-05:00",
+        "note": "4 of 4 runs agreed"
+      }
     },
     {
       "id": "apap-q4h-rx",
@@ -31,7 +38,14 @@
         "sentence": "Take 1 to 2 tablet every 4 hours as needed for pain."
       },
       "note": "Rx combination label disagrees with the OTC 6 h: strict tiers use 6, tier 2 uses 4. DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
-      "verified": true
+      "verified": true,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:52:06-05:00",
+        "note": "4 of 4 runs agreed"
+      }
     },
     {
       "id": "apap-max-otc",
@@ -46,7 +60,14 @@
         "sentence": "more than 4,000 mg of acetaminophen in 24 hours"
       },
       "note": "Liver warning. The same label says 'Do not use with any other drug containing acetaminophen'; that duplicate-therapy rule is not a timing rule and is surfaced, not solved. DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
-      "verified": true
+      "verified": true,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:52:06-05:00",
+        "note": "4 of 4 runs agreed"
+      }
     },
     {
       "id": "apap-max-rx",
@@ -61,7 +82,14 @@
         "sentence": "Most of the cases of liver injury are associated with the use of acetaminophen at doses that exceed 4,000 milligrams per day"
       },
       "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
-      "verified": true
+      "verified": true,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:54-05:00",
+        "note": "3 of 4 runs agreed"
+      }
     }
   ]
 }

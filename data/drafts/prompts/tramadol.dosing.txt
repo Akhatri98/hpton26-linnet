@@ -1,0 +1,80 @@
+You are extracting DOSING directions from an FDA drug label for a pharmacist's tool.
+
+Ingredient: tramadol
+Label set id: 007bf37f-0e46-426a-ac8c-be63d4b7414c
+Active ingredients on this label: tramadol hydrochloride
+Strengths this label comes in (read from the label by code): (none found)
+
+Numbered sentences from the label:
+S1 [dosage and administration] ( 2.1 , 5 ) Initiate the dosing regimen for each patient individually, taking into account the patient's severity of pain, patient response, prior analgesic treatment experience, and risk factors for addiction, abuse, and misuse ( 2.1 , 5.1 ).
+S2 [dosage and administration] Many acute pain conditions (e.g., the pain that occurs with a number of surgical procedures or acute musculoskeletal injuries) require no more than a few days of an opioid analgesic.
+S3 [dosage and administration] ( 2.1 ) Initiate the dosing regimen for each patient individually, taking into account the patient's underlying cause and severity of pain, prior analgesic treatment and response, and risk factors for addiction, abuse, and misuse.
+S4 [dosage and administration] Consider this risk when selecting an initial dose and when making dose adjustments.
+S5 [dosage and administration] ( 2.1 , 5.2 ) Start at 25 mg/day and titrate in 25 mg increments as separate doses every 3 days to reach 100 mg/day (25 mg four times a day).
+S6 [dosage and administration] Thereafter the total daily dose may be increased by 50 mg as tolerated every 3 days to reach 200 mg/day (50 mg four times a day).
+S7 [dosage and administration] After titration, tramadol hydrochloride, tablets 50 mg to 100 mg can be administered as needed for pain relief every 4 to 6 hours not to exceed 400 mg/day ( 2.3 , 2.4 ).
+S8 [dosage and administration] Severe Renal Impairment: increase the tramadol hydrochloride tablets, dosing interval to 12 hours, and limit maximum daily dose to 200 mg ( 2.3 ).
+S9 [dosage and administration] Severe hepatic impairment : Recommended dose is 50 mg every 12 hours.
+S10 [dosage and administration] 2.1 Important Dosage and Administration Instructions Do not use tramadol hydrochloride tablets concomitantly with other tramadol-containing products.
+S11 [dosage and administration] Do not administer tramadol hydrochloride tablets at a dose exceeding 400 mg per day.
+S12 [dosage and administration] Initiate the dosing regimen for each patient individually, taking into account the patient's underlying cause and severity of pain, prior analgesic treatment and response, and risk factors for addiction, abuse, and misuse [see Warnings and Precautions ( 5.1 )] .
+S13 [dosage and administration] Discuss the importance of having access to an opioid overdose reversal agent, especially if the patient has risk factors for overdose (e.g., concomitant use of CNS depressants, a history of opioid use disorder, or prior opioid overdose) or if there are household members (including children) or other close contacts at risk for accidental ingestion or opioid overdose.
+S14 [dosage and administration] Be familiar with these differences, as outlined in the approved labeling for those products, prior to recommending or prescribing such an agent.
+S15 [dosage and administration] 2.3 Initial Dosage Initiating Treatment with tramadol hydrochloride tablets Initiate treatment with tramadol hydrochloride tablets in a dosing range of 50 mg to 100 mg every 4 to 6 hours as needed for pain, and at the lowest dose necessary to achieve adequate analgesia.
+S16 [dosage and administration] Titrate the dose based upon the individual patient's response to their initial dose of tramadol hydrochloride tablets.
+S17 [dosage and administration] For patients not requiring rapid onset of analgesic effect, the tolerability of tramadol hydrochloride tablets can be improved by initiating therapy with the following titration regimen: Start tramadol hydrochloride tablets at 25 mg/day and titrated in 25 mg increments as separate doses every 3 days to reach 100 mg/day (25 mg four times a day).
+S18 [dosage and administration] After titration, tramadol hydrochloride tablets 50 to 100 mg can be administered as needed for pain relief every 4 to 6 hours not to exceed 400 mg/day.
+S19 [dosage and administration] For the subset of patients for whom rapid onset of analgesic effect is required and for whom the benefits outweigh the risk of discontinuation due to adverse events associated with higher initial doses, tramadol hydrochloride tablets 50 mg to 100 mg can be administered as needed for pain relief every four to six hours, not to exceed 400 mg per day.
+S20 [dosage and administration] Conversion from Tramadol to Extended-Release Tramadol The relative bioavailability of tramadol compared to extended-release tramadol is unknown, so conversion to extended-release formulations may lead to increased risk of excessive sedation and respiratory depression.
+S21 [dosage and administration] Dosage Modification in Patients with Hepatic Impairment The recommended dose for adult patients with severe hepatic impairment is 50 mg every 12 hours.
+S22 [dosage and administration] Dosage Modification in Patients with Renal Impairment In all patients with creatinine clearance less than 30 mL/min, it is recommended that the dosing interval of tramadol hydrochloride tablets be increased to 12 hours, with a maximum daily dose of 200 mg.
+S23 [dosage and administration] Since only 7% of an administered dose is removed by hemodialysis, dialysis patients can receive their regular dose on the day of dialysis.
+S24 [dosage and administration] Dosage Modification in Geriatric Patients Do not exceed a total dose of 300 mg/day in patients over 75 years old.
+S25 [dosage and administration] If the level of pain increases after dosage stabilization, attempt to identify the source of increased pain before increasing the tramadol hydrochloride tablets dosage.
+S26 [dosage and administration] If after increasing the dosage, unacceptable opioid-related adverse reactions are observed (including an increase in pain after dosage increase), consider reducing the dosage [see Warnings and Precautions (5) ] .
+S27 [dosage and administration] When a decision has been made to decrease the dose or discontinue therapy in an opioid-dependent patient taking tramadol hydrochloride tablets, there are a variety of factors that should be considered, including the total daily dose of opioid (including tramadol hydrochloride tablets) the patient has been taking, the duration of treatment, the type of pain being treated, and the physical and psychological attributes of the patient.
+S28 [dosage and administration] For patients on tramadol hydrochloride tablets who are physically opioid-dependent, initiate the taper by a small enough increment, (e.g., no greater than 10% to 25% of the total daily dose) to avoid withdrawal symptoms, and proceed with dose-lowering at an interval of every 2 to 4 weeks.
+S29 [dosage and administration] When managing patients taking opioid analgesics, particularly those who have been treated for an extended period of time, and/or with high doses for chronic pain, ensure that a multimodal approach to pain management, including mental health support (if needed), is in place prior to initiating an opioid analgesic taper.
+S30 [drug interactions] 7 DRUG INTERACTIONS Table 2: Clinically Significant Drug Interactions with tramadol hydrochloride tablets Inhibitors of CYP2D6 Clinical Impact: The concomitant use of tramadol hydrochloride tablets and CYP2D6 inhibitors may result in an increase in the plasma concentration of tramadol and a decrease in the plasma concentration of M1, particularly when an inhibitor is added after a stable dose of tramadol hydrochloride tablets are achieved.
+S31 [drug interactions] After stopping a CYP2D6 inhibitor, as the effects of the inhibitor decline, the tramadol plasma concentration will decrease and the M1 plasma concentration will increase.
+S32 [drug interactions] Follow patients closely for increased risk of serious adverse events including seizures and serotonin syndrome, and adverse reactions related to opioid toxicity including potentially fatal respiratory depression, particularly when an inhibitor is added after a stable dose of tramadol hydrochloride tablets are achieved.
+S33 [drug interactions] After stopping a CYP3A4 inhibitor, as the effects of the inhibitor decline, the tramadol plasma concentration will decrease [see Clinical Pharmacology (12.3) ] , resulting in decreased opioid efficacy or a withdrawal syndrome in patients who had developed physical dependence to tramadol.
+S34 [drug interactions] After stopping a CYP3A4 inducer, as the effects of the inducer decline, the tramadol plasma concentration will increase [see Clinical Pharmacology (12.3) ] , which could increase or prolong both the therapeutic effects and adverse reactions, and may cause seizures, serotonin syndrome, and/or potentially fatal respiratory depression.
+S35 [drug interactions] Warfarin Clinical Impact: Post-marketing surveillance of tramadol has revealed rare reports of alteration of warfarin effect, including elevation of prothrombin times Intervention: Frequently re-evaluate the prothrombin time of patients on warfarin for signs of an interaction and adjust the dosage of warfarin as needed Mixed Agonist/Antagonist and Partial Agonist Opioid Analgesics : Avoid use with tramadol hydrochloride tablets because they may reduce analgesic effect of tramadol hydrochloride or precipitate withdrawal symptoms.
+S36 [warnings and cautions] Assess each patient's risk for opioid addiction, abuse, or misuse prior to prescribing tramadol hydrochloride tablets, and reassess all patients receiving tramadol hydrochloride tablets for the development of these behaviors and conditions.
+S37 [warnings and cautions] 5.5 Opioid Analgesic Risk Evaluation and Mitigation Strategy (REMS) To ensure that the benefits of opioid analgesics outweigh the risks of addiction, abuse, and misuse, the Food and Drug Administration (FDA) has required a Risk Evaluation and Mitigation Strategy (REMS) for these products.
+S38 [warnings and cautions] Discuss the safe use, serious risks, and proper storage and disposal of opioid analgesics with patients and/or their caregivers every time these medicines are prescribed.
+S39 [warnings and cautions] Emphasize to patients and their caregivers the importance of reading the Medication Guide that they will receive from their pharmacist every time an opioid analgesic is dispensed to them.
+S40 [warnings and cautions] The onset of symptoms generally occurs within several hours to a few days of concomitant use, but may occur later than that.
+S41 [warnings and cautions] Inform patients not to exceed the recommended dose and to limit their intake of alcohol [ see Dosage and Administration ( 2 ), Warnings and Precautions ( 5.7 ) ].
+S42 [warnings and cautions] Regularly evaluate these patients for signs of hypotension after initiating or titrating the dosage of tramadol hydrochloride tablets.
+S43 [boxed warning] WARNING: SERIOUS AND LIFE-THREATENING RISKS FROM USE OF TRAMADOL HYDROCHLORIDE TABLETS ADDICTION, ABUSE AND MISUSE Because the use of tramadol hydrochloride tablets exposes patients and other users to the risks of opioid addiction, abuse, and misuse, which can lead to overdose and death, assess each patient's risk prior to prescribing and reassess all patients regularly for the development of these behaviors and conditions [see Warnings and Precautions ( 5.1 )] .
+S44 [boxed warning] Assess each patient's risk prior to prescribing tramadol hydrochloride tablets, and monitor regularly for these behaviors or conditions.
+S45 [boxed warning] ( 5.4 ) To ensure that the benefits of opioid analgesics outweigh the risks of addiction, abuse, and misuse, the Food and Drug Administration (FDA) has required a Risk Evaluation and Mitigation Strategy (REMS) for these products.
+S46 [dosage forms and strengths] 3 DOSAGE FORMS AND STRENGTHS Tramadol Hydrochloride Tablets USP, 50 mg are pale yellow colored, capsule shaped biconvex, film coated tablet debossed with "355" on one side of break line and "U" on the other side of breakline on one side and plain on other side.
+S47 [dosage forms and strengths] Tablets: tramadol hydrochloride 50 mg ( 3 ).
+S48 [how supplied] 16 HOW SUPPLIED/STORAGE AND HANDLING Tramadol hydrochloride tablets USP, 50 mg are Pale yellow colored, capsule shaped biconvex, film coated tablet debossed with "355" on one side of break line and "U" on the other side of breakline on one side and plain on other side.
+S49 [description] The n-octanol/water log partition coefficient (logP) is 1.35 at pH 7.
+S50 [description] Tramadol hydrochloride tablets, USP contain 50 mg of tramadol hydrochloride, USP and are pale yellow in color.
+
+Return ONLY a JSON object {"dosing": [ ... ]}. One row per distinct regimen the label gives: per condition,
+per population, and PER STRENGTH when the label gives different directions for different strengths.
+Each row:
+  {"strength": "the strength this row is for, written like the list above, e.g. '300 mg/30 mg'", or null if the
+              dose is given as an amount (mg, mcg, g) that does not depend on the strength,
+   "dose_type": "usual" | "starting" | "maintenance" | "adjusted" (for a population such as renal or hepatic impairment),
+   "condition": "what it is for, or 'general'", "population": "adults" | "children" | "renal impairment" | ...,
+   "dose": N, "dose_max": N or null,
+   "unit": "mg" | "g" | "mcg" | "mg/kg" | "mcg/kg" | "tablets" | "caplets" | "capsules" | "mL",
+   "every_hours": H or null, "times_per_day": T or null, "duration_days": D or null,
+   "as_needed": true | false, "sentence": "Sk", "provenance": "quoted" | "interpreted"}
+Rules:
+- If the dose is a count of tablets, caplets or capsules and the label comes in more than one strength, "strength" is REQUIRED.
+- Weight-based doses use "mg/kg" or "mcg/kg" (e.g. "15 mg/kg" -> dose 15, unit "mg/kg").
+- A range like "500-750 mg" is dose=500, dose_max=750. "1 to 2 tablets" is dose=1, dose_max=2.
+- "twice daily" is times_per_day=2; "every 12 hours" is every_hours=12.
+- Not doses: maximums ("do not take more than 6 tablets") belong to limits; increases ("increase by 12.5 to 25 mcg")
+  are titration steps, not doses; "do not use for more than 10 days" is a limit, not a course length.
+- Read the sentence before a dose: it often says who the dose is for (e.g. patients with liver cirrhosis).
+- Use only numbers stated in the cited sentence. Cite exactly one sentence id per row; do not copy text.
+Include every regimen you find, even if there are many. If unsure, leave it out.

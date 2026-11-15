@@ -1,0 +1,16 @@
+{
+  "model": "claude-haiku-5-5",
+  "accepted_rules": 2,
+  "accepted_memberships": [
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "calcium_carbonate",
+      "provenance": "interpreted",
+      "basis": "Avoid the use of calcium supplements within 60 minutes of ibandronate sodium tablets administration because co-administration of ibandronate sodium tablets and calcium may interfere with the absorption of ibandronate sodium (see DRUG INTERACTIONS [7.1] ) .",
+      "source_spl": "86c0b4ae-5e38-4efe-88af-50ac560e294f",
+      "verified": false,
+      "matched": "label names 'calcium'; calcium_carbonate is a salt of it"
+    }
+  ],
+  "rejected": []
+}

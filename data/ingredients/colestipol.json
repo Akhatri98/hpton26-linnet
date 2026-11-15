@@ -16,7 +16,14 @@
         "sentence": "Patients should take other drugs at least one hour before or four hours after colestipol hydrochloride tablets to minimize possible interference with their absorption."
       },
       "note": "Written from colestipol's side: other drug >= 1 h before colestipol and >= 4 h after it <=> colestipol >= 4 h before and >= 1 h after the other drug, so before=4, after=1. Neighbouring Drug Interactions sentence 'The interval ... should be as long as possible' read by A (14 Nov) as asking for more, not softening the minimum. DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
-      "verified": true
+      "verified": true,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:52:07-05:00",
+        "note": "4 of 4 runs agreed"
+      }
     }
   ]
 }

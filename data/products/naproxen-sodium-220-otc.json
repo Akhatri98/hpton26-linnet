@@ -1,0 +1,42 @@
+{
+  "name": "naproxen-sodium-220-otc",
+  "display_name": "Naproxen sodium 220 mg caplets (Aleve, OTC)",
+  "spl_set_id": "02941928-128a-2c88-e063-6294a90ac6ba",
+  "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02941928-128a-2c88-e063-6294a90ac6ba",
+  "ingredients": {
+    "naproxen_sodium": {
+      "amount": 220,
+      "unit": "mg"
+    }
+  },
+  "dose_note": "One dose = 1 caplet ('take 1 caplet every 8 to 12 hours while symptoms last'; 'Naproxen sodium 220 mg (naproxen 200 mg)').",
+  "otc_max_doses": {
+    "count": 3,
+    "provenance": "quoted",
+    "source": {
+      "spl_set_id": "02941928-128a-2c88-e063-6294a90ac6ba",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02941928-128a-2c88-e063-6294a90ac6ba",
+      "section": "dosage and administration",
+      "sentence": "do not exceed 3 caplets in a 24-hour period"
+    },
+    "note": "3 caplets at 1 caplet per dose = 3 doses. DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+    "verified": true,
+    "review": {
+      "decision": "approved",
+      "by": "claude",
+      "role": "AI (Claude), not a pharmacist",
+      "at": "2026-11-14T22:16:01-05:00"
+    }
+  },
+  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+  "unit_name": "caplet",
+  "units_per_dose": 1,
+  "label_max_units_per_dose": 2,
+  "verified": true,
+  "review": {
+    "decision": "approved",
+    "by": "claude",
+    "role": "AI (Claude), not a pharmacist",
+    "at": "2026-11-14T22:16:01-05:00"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ingredient": "moxifloxacin",
+  "primary_spl": "02c29e8e-8346-4e28-b7fc-2f4cb61ad37d",
+  "rules": [
+    {
+      "id": "moxifloxacin-separation-polyvalent-cations",
+      "family": "separation",
+      "target": "group:polyvalent_cations",
+      "before": 4,
+      "after": 8,
+      "provenance": "quoted",
+      "note": "Moxifloxacin tablets are taken at least 4 hours before or 8 hours after magnesium, aluminum, iron or zinc products, including antacids, sucralfate, multivitamins and didanosine buffered products. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "02c29e8e-8346-4e28-b7fc-2f4cb61ad37d",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02c29e8e-8346-4e28-b7fc-2f4cb61ad37d",
+        "section": "dosage and administration",
+        "sentence": "2.2 Important Administration Instructions With Multivalent Cations Administer moxifloxacin tablets at least 4 hours before or 8 hours after products containing magnesium, aluminum, iron or zinc, including antacids, sucralfate, multivitamins and didanosine buffered tablets for oral suspension or the pediatric powder for oral solution [see Drug Interactions (7.1) and Clinical Pharmacology (12.3) ]."
+      },
+      "verified": false
+    }
+  ]
+}

@@ -30,7 +30,7 @@ FDA label (public)                                   Patient (stays in memory)
 [MODEL] propose rules, citing sentence ids                    |
 [CODE]  check: sentence exists, every number                  v
         is on the label, schema, scope             [CODE]  Z3 solver: tiers 0 / 1 / 2
-[HUMAN] pharmacist signs off each rule  -------->  [CODE]  exact re-check of every schedule
+[AI]    Claude signed off each rule  ----------->  [CODE]  exact re-check of every schedule
                                                    [CODE]  shrink conflicts to minimal
 ```
 
@@ -43,7 +43,7 @@ FDA label (public)                                   Patient (stays in memory)
 | Checking proposals | deterministic | sentence exists; every number appears in that sentence; schema; "every other drug" only if the sentence says so; group members must be named (or be a salt of a named element); a strength must be one the label lists and a maximum must name one of its ingredients; rejects a per-kg dose read as flat, a maximum or titration step read as a dose, "every N hours" read as a spacing rule (the prescription sets the regimen), and duplicates |
 | Strengths and ingredients on a label | deterministic | read by code from How Supplied, Description and openFDA; the review card shows any strength with no regimen in red |
 | Review queue | deterministic | label sentences with numbers that no accepted row uses, sorted so likely misses come first |
-| Sign-off | human | nothing reaches the solver as verified without it; unverified rules are flagged on the card |
+| Sign-off | designed for a human; done by Claude (AI) in this submission | nothing reaches the solver as verified without it; unverified rules are flagged on the card. All 124 cards were decided by Claude, recorded as reviewer `claude`: curated rules and products approved, extracted rows approved only when 3+ of 4 runs agreed, the rest rejected (60 cards for the first ten products, 64 for the twelve labels tried later) |
 | Ingredients of a product | deterministic | RxNorm (NLM); model fallback only behind a flag, only when RxNorm has no data |
 | Scheduling, tiers, conflicts | deterministic | Z3 (linear real arithmetic over a circular 24-hour day), encoded in C++ against Z3's native API |
 | Checking every schedule shown | deterministic | an independent verifier in exact rational arithmetic |
@@ -79,8 +79,21 @@ Every rule cites one of these DailyMed labels (SPL set IDs), copied from openFDA
 | Alendronate sodium 70 mg tablets | FOSAMAX (Organon) | [14e931fd-2c5f-4d90-b7db-5980706f4a56](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14e931fd-2c5f-4d90-b7db-5980706f4a56) |
 | Sucralfate 1 g tablets | Sucralfate (AvKARE) | [0909acc5-c746-17fb-e063-6394a90a677f](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0909acc5-c746-17fb-e063-6394a90a677f) |
 | Ferrous sulfate 325 mg tablets (OTC) | Ferrous sulfate (Richmond) | [5514d582-19b5-4f1e-b794-f790afb8211c](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5514d582-19b5-4f1e-b794-f790afb8211c) |
+| Levofloxacin 750 mg tablets | Levofloxacin (Preferred Pharmaceuticals) | [067e260c-dc47-4957-a9ff-5a79f17b4ca0](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0) |
+| Moxifloxacin 400 mg tablets | Moxifloxacin hydrochloride (A-S Medication Solutions) | [02c29e8e-8346-4e28-b7fc-2f4cb61ad37d](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02c29e8e-8346-4e28-b7fc-2f4cb61ad37d) |
+| Dolutegravir 50 mg tablets | Tivicay (ViiV Healthcare) | [63df5af3-b8ac-4e76-9830-2dbb340af922](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=63df5af3-b8ac-4e76-9830-2dbb340af922) |
+| Cefdinir 300 mg capsules | Cefdinir (A-S Medication Solutions) | [10bf69e7-5f7e-4448-9f22-777f137d9666](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10bf69e7-5f7e-4448-9f22-777f137d9666) |
+| Rifampin 300 mg capsules | Rifampin (Epic Pharma) | [0391f1e1-70d4-4b15-8b58-055bb6a385b8](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0391f1e1-70d4-4b15-8b58-055bb6a385b8) |
+| Tramadol hydrochloride 50 mg tablets | Tramadol hydrochloride (Unichem) | [007bf37f-0e46-426a-ac8c-be63d4b7414c](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=007bf37f-0e46-426a-ac8c-be63d4b7414c) |
+| Naproxen sodium 220 mg caplets (OTC) | Aleve Caplets (Bayer) | [02941928-128a-2c88-e063-6294a90ac6ba](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02941928-128a-2c88-e063-6294a90ac6ba) |
 
-Curation: a model proposes rules citing sentence ids, code checks them, and a person signs each one off in the Review screen (see the table above). Groups ("drugs that interfere with levothyroxine", "multivalent cations") list their members with the label wording that names each one.
+Curation: a model proposes rules citing sentence ids, code checks them, and a reviewer signs each one off in the Review screen (in this submission the reviewer was Claude, not a person) (see the table above). Groups ("drugs that interfere with levothyroxine", "multivalent cations") list their members with the label wording that names each one. A rule that names an element ("iron supplements") applies to every product that is a salt of it.
+
+The last seven products came from a second round with no hand-written rules. Twelve labels were each read in four takes (Haiku 5.5 through the API, plus three Claude Code subagent stand-ins: two Haiku, one Sonnet), and a rule entered the library only when 3 or 4 takes produced the same checked row.
+- Seven labels passed and are in the table above.
+- Five did not and are not in the library: risedronate, ibandronate, cholestyramine, captopril and glipizide. The takes split on their main timing rule (4 against 6 hours after cholestyramine; which way round the 30 minutes after risedronate runs; how to write "one hour before meals"). A product whose timing rule failed sign-off would be scheduled as if it had none, so it was left out. Their records and rejections are kept in `data/extracted/`.
+- Two rules had 3 of 4 takes but were missing from the API take, and were added from the stand-ins: cefdinir and iron supplements, rifampin and antacids.
+- One rule with 3 of 4 takes was still rejected on reading the label: rifampin "not to exceed 600 mg/day" is the tuberculosis dose, and the same label gives 600 mg twice daily for meningococcal carriers.
 
 ## Evaluation
 
@@ -101,7 +114,7 @@ Both sweeps ran at the same time on one laptop, so the times are pessimistic. Ev
 
 Two real NHANES participants, unmodified (#102924 and #98848, both on colestipol and levothyroxine), are false alarms for the greedy heuristic on their recorded day; LINNET schedules both.
 
-Across NHANES 2017–March 2020, 362 adults with a usable routine take a library product. 41 of them (11%) cannot follow their labels on their recorded day as they live (tier 1), with nothing added:
+Across NHANES 2017–March 2020, 362 adults with a usable routine take one of the seven library products the NHANES builder maps (the seven added in the second round are not mapped). 41 of them (11%) cannot follow their labels on their recorded day as they live (tier 1), with nothing added:
 - 36 levothyroxine users ate breakfast less than 30 minutes after their usual wake time; the label asks for it 30–60 minutes before breakfast.
 - 4 alendronate users did the same; its label asks for it at least 30 minutes before the first food of the day.
 - One takes nimodipine every 4 hours, which needs 20 waking hours.
@@ -130,7 +143,7 @@ All four runs miss the same two rules:
 Other results:
 - On the codeine label, every run tied each maximum to its ingredient (codeine phosphate 360 mg, acetaminophen 4000 mg) and found all three strength-specific regimens (300/15 and 300/30 mg: 1–2 tablets; 300/60 mg: 1 tablet).
 - Repeatability: Haiku runs gave a label the same set of timing rules and maxima in 81% of pairwise comparisons.
-- The full extraction of all 7 labels (21 calls) on Haiku 5.5 cost about **$0.02**.
+- The full extraction of all 7 labels (21 calls) on Haiku 5.5 cost about **$0.02**. The API take of the second round (12 labels, 68 calls with retries) cost about **$0.07**.
 - An earlier prompt version (archived in `data/drafts/responses-v1/`) scored on 10 gold rules without ingredient matching, so its numbers are not comparable.
 
 The extraction numbers are a pilot: 7 labels, and the gold rules are partly signed off. Treat them as indicative.
@@ -148,11 +161,11 @@ LINNET differs in being complete (if a schedule exists at the stated rules, it f
 - A rule missing from the library is not evidence that it is missing from the label: the library is small and curated, and extraction can miss rules (the review queue shows unused label sentences for that reason).
 - The output is a draft for a pharmacist to check, not an instruction to a patient.
 - Deliberately makes no drug recommendations. It shows that a conflict exists and which label sentences cause it; whether to hold, replace or re-time a drug is the prescriber's decision.
-- Small library (10 products). Adding a product means extracting and signing off its label.
+- Small library (17 products). Adding a product means extracting and signing off its label.
 - Weight-based (mg/kg) doses are extracted and shown for review, but the solver does not use them.
 - Tier-1 weights (how bad is moving a meal vs waking earlier) are judgement calls the pharmacist sets; defaults are placeholders.
 - The demo patients are constructed. NHANES patients use real routines and medication lists, but doses per day are each label's usual regimen (NHANES does not record frequency), and variants marked hypothetical add a drug.
-- No pharmacist has reviewed the premise or the card yet.
+- No human or pharmacist has reviewed the rules, the premise or the card. Every review decision in `data/` is recorded as by `claude` (AI); a pharmacist should redo the review before any real use.
 - Novelty is not established: we found heuristic schedulers and manual tools (see Prior art) but did not search exhaustively.
 - Not for clinical use.
 

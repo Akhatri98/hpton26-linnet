@@ -1,0 +1,1 @@
+{"limits":[{"kind":"per_day","amount":600,"unit":"mg","ingredient":null,"strength":null,"population":"adults","condition":null,"sentence":"S2","provenance":"quoted"},{"kind":"per_dose","amount":300,"unit":"mg","ingredient":null,"strength":null,"population":"children","condition":"renal impairment","sentence":"S9","provenance":"quoted"}]}

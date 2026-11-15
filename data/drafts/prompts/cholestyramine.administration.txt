@@ -1,0 +1,49 @@
+You are extracting medication TIMING rules from an FDA drug label, for a scheduling tool used by pharmacists.
+
+Ingredient: cholestyramine
+Label set id: 06261db5-1435-4b91-8b54-71bfcfb1368c
+
+Numbered sentences from the label:
+S1 [dosage and administration] DOSAGE AND ADMINISTRATION The recommended starting adult dose for Cholestyramine for Oral Suspension, USP is 1 pouch or 1 level scoopful (8.3 grams of Cholestyramine for Oral Suspension, USP contains 4 grams of anhydrous cholestyramine resin) once or twice a day.
+S2 [dosage and administration] The recommended maintenance dose for Cholestyramine for Oral Suspension, USP is 2 to 4 pouches or scoopfuls daily (8 to 16 grams anhydrous cholestyramine resin) divided into two doses.
+S4 [dosage and administration] The maximum recommended daily dose is 6 pouches or scoopfuls of Cholestyramine for Oral Suspension, USP (24 grams of anhydrous cholestyramine resin).
+S5 [dosage and administration] Although the recommended dosing schedule is twice daily, Cholestyramine for Oral Suspension, USP may be administered in 1 to 6 doses per day.
+S6 [dosage and administration] Always mix the dry powder with water or other fluids before ingesting.
+S7 [drug interactions] SINCE CHOLESTYRAMINE RESIN MAY BIND OTHER DRUGS GIVEN CONCURRENTLY, IT IS RECOMMENDED THAT PATIENTS TAKE OTHER DRUGS AT LEAST 1 HOUR BEFORE OR 4 TO 6 HOURS AFTER CHOLESTYRAMINE RESIN (OR AT AS GREAT AN INTERVAL AS POSSIBLE) TO AVOID IMPEDING THEIR ABSORPTION.
+S8 [precautions] In patients with preexisting constipation, the starting dose should be 1 pouch or 1 scoop once daily for 5 to 7 days, increasing to twice daily with monitoring of constipation and of serum lipoproteins, at least twice, 4 to 6 weeks apart.
+S10 [precautions] Drink plenty of fluids and mix each 8.3 gram dose of Cholestyramine for Oral Suspension, USP in at least 2 to 6 ounces of fluid before taking.
+S12 [precautions] Pediatric Use Although an optimal dosage schedule has not been established, standard texts (6,7) list a usual pediatric dose of 240 mg/kg/day of anhydrous cholestyramine resin in two to three divided doses, normally not to exceed 8 g/day with dose titration based on response and tolerance.
+
+Known ingredient groups (you may propose members for these, or a new group):
+- levothyroxine_binders: ['calcium_carbonate', 'colestipol', 'ferrous_sulfate']
+- polyvalent_cations: ['aluminum', 'calcium_carbonate', 'iron', 'magnesium', 'sucralfate', 'zinc']
+- antacids: ['calcium_carbonate']
+
+Return ONLY a JSON object:
+{
+  "rules": [ ... ],
+  "memberships": [ ... ]
+}
+
+Each rule is one of these shapes. Times are in HOURS (30 minutes = 0.5). Use only numbers stated in the cited sentence.
+  {"id": "...", "family": "min_interval", "hours": H, "sentence": "Sk", "provenance": "quoted"|"interpreted", "loosest": {"hours": X}?, "note": "..."}
+      any two doses of this ingredient at least H hours apart ("every 6 hours")
+  {"id": "...", "family": "separation", "target": "<ingredient>" | "group:<name>" | "*", "before": B, "after": A, "sentence": "Sk", ...}
+      THIS ingredient is taken at least B hours BEFORE and at least A hours AFTER any dose of the target.
+      "*" means every other drug. Careful with direction: if the label says "take OTHER drugs 1 hour before
+      or 4 hours after THIS drug", then THIS drug is 4 hours before and 1 hour after the other: before=4, after=1.
+  {"id": "...", "family": "daily_max", "amount": N, "unit": "mg"|"g"|"mcg", "sentence": "Sk", ...}
+  {"id": "...", "family": "food", "mode": "empty_stomach", "before_meal": B, "after_meal": A, "meal": null|"breakfast", "sentence": "Sk", ...}
+      no dose from B hours before to A hours after a meal
+  {"id": "...", "family": "food", "mode": "before_meal_window", "meal": "breakfast", "earliest": E, "latest": L, "sentence": "Sk", ...}
+      dose between E and L hours before the meal (E >= L)
+
+provenance: "quoted" if the number is stated plainly and firmly; "interpreted" if you had to judge
+(soft words like "preferably", "if possible", "consider", a range, or a derived number). Every
+"interpreted" rule MUST give "loosest": the most permissive defensible value of each number you judged.
+
+Each membership: {"group": "<name>", "ingredient": "<lowercase_underscore_name>", "sentence": "Sk", "provenance": "quoted"|"interpreted"}
+  Propose a membership when the label names an ingredient as one of the things to separate from.
+
+Ids: lowercase letters, digits, dashes, starting with the ingredient name. Cite exactly one sentence id per item.
+Do not copy sentence text; cite its id. Only include rules the label actually states. If unsure, leave it out.

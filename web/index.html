@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LINNET</title>
+<link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
 <style>
 @font-face { font-family: "JuliaMono"; src: url("/static/fonts/JuliaMono-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
 @font-face { font-family: "JuliaMono"; src: url("/static/fonts/JuliaMono-Medium.woff2") format("woff2"); font-weight: 500 600; font-display: swap; }
@@ -127,6 +128,41 @@ mark { background: var(--honey); color: var(--ink); padding: 0 3px; border-radiu
 .btn u { text-decoration-thickness: 2px; }
 .btn.flag { background: var(--honey); border-color: var(--honey); color: var(--ink); font-weight: 600; }
 tr.done td { opacity: .45; }
+
+/* retro: halftone dots, palette colours only. Each pattern fades out (a gradient of the surface colour
+   laid over it), so the dots read as print texture at the edges, never behind text. */
+body {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(245,239,218,0) 0, var(--bg) 380px),
+    radial-gradient(circle, rgba(89,56,42,.16) 1px, transparent 1.5px) 0 0 / 8px 8px,
+    var(--bg);
+  background-attachment: fixed;
+}
+nav { position: relative; }
+nav > * { position: relative; z-index: 1; }
+nav::before {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 260px; z-index: 0; pointer-events: none;
+  background: radial-gradient(circle, rgba(227,175,74,.32) 1.1px, transparent 1.7px) 0 0 / 7px 7px;
+  -webkit-mask-image: linear-gradient(to top, #000, transparent); mask-image: linear-gradient(to top, #000, transparent);
+}
+header.top {
+  background:
+    linear-gradient(90deg, var(--panel) 55%, rgba(255,252,244,0)),
+    radial-gradient(circle, rgba(41,144,134,.24) .9px, transparent 1.3px) 0 0 / 5px 5px,
+    var(--panel);
+}
+.panel > h2 {
+  background:
+    linear-gradient(90deg, var(--card-head) 45%, rgba(239,227,198,0)),
+    radial-gradient(circle, rgba(89,56,42,.24) .9px, transparent 1.3px) 0 0 / 5px 5px,
+    var(--card-head);
+}
+.tier0 { background: linear-gradient(90deg, var(--t0-soft) 50%, rgba(221,240,236,0)),
+                     radial-gradient(circle, rgba(31,122,112,.30) 1.1px, transparent 1.6px) 0 0 / 6px 6px, var(--t0-soft); }
+.tier1 { background: linear-gradient(90deg, var(--t1-soft) 50%, rgba(250,235,203,0)),
+                     radial-gradient(circle, rgba(156,107,18,.30) 1.1px, transparent 1.6px) 0 0 / 6px 6px, var(--t1-soft); }
+.tier2 { background: linear-gradient(90deg, var(--t2-soft) 50%, rgba(251,225,213,0)),
+                     radial-gradient(circle, rgba(184,68,26,.30) 1.1px, transparent 1.6px) 0 0 / 6px 6px, var(--t2-soft); }
 </style>
 </head>
 <body>
@@ -352,7 +388,9 @@ function timeline(opt) {
   let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="24-hour schedule" style="font: 11px system-ui">`;
   const bed = opt.sleep.bed.min, wake = opt.sleep.wake.min;
   const spans = bed > wake ? [[bed, 1440], [0, wake]] : [[bed, wake]];
-  spans.forEach(([a, b]) => s += `<rect x="${X(a)}" y="${top - 4}" width="${X(b) - X(a)}" height="${H - top}" fill="#EADFC8"/>`);
+  s += `<defs><pattern id="ht-night" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#EADFC8"/>` +
+       `<circle cx="3" cy="3" r="1.15" fill="#59382A" fill-opacity=".22"/></pattern></defs>`;  // sleep hours as halftone
+  spans.forEach(([a, b]) => s += `<rect x="${X(a)}" y="${top - 4}" width="${X(b) - X(a)}" height="${H - top}" fill="url(#ht-night)"/>`);
   for (let h = 0; h <= 24; h += 3) {
     s += `<line x1="${X(h * 60)}" x2="${X(h * 60)}" y1="${top - 4}" y2="${H - 4}" stroke="#E6DBC2"/>`;
     s += `<text x="${X(h * 60)}" y="14" text-anchor="middle" fill="#7A6455">${String(h % 24).padStart(2, "0")}:00</text>`;
@@ -368,10 +406,7 @@ function timeline(opt) {
     s += `<text x="8" y="${y + 4}" fill="#2E1E16">${esc(label[p].length > 22 ? label[p].slice(0, 21) + "…" : label[p])}<title>${esc(label[p])}</title></text>`;
     s += `<line x1="${L}" x2="${W - 10}" y1="${y}" y2="${y}" stroke="#F1E8D2"/>`;
     doses.filter(d => d.product === p).forEach(d => {
-      s += `<circle cx="${X(d.min)}" cy="${y}" r="7" fill="${color[p]}"><title>${esc(d.label)} dose ${d.dose}/${d.of} at ${d.hhmm}${(d.pinned_by || []).length ? "
-pinned by:
-" + esc(d.pinned_by.map(x => x.text).join("
-")) : ""}</title></circle>`;
+      s += `<circle cx="${X(d.min)}" cy="${y}" r="7" fill="${color[p]}"><title>${esc(d.label)} dose ${d.dose}/${d.of} at ${d.hhmm}${(d.pinned_by || []).length ? "\npinned by:\n" + esc(d.pinned_by.map(x => x.text).join("\n")) : ""}</title></circle>`;
       s += `<text x="${X(d.min)}" y="${y - 11}" text-anchor="middle" fill="${color[p]}" class="mono">${d.hhmm}</text>`;
     });
   });
@@ -387,8 +422,7 @@ function perDose(name) {
 }
 function card(opt) {
   return `<table><thead><tr><th style="width:70px">Time</th><th>What</th></tr></thead><tbody>` + opt.events.map(e =>
-    e.kind === "dose" ? `<tr><td class="mono"><b>${e.hhmm}</b></td><td><b>${esc(e.label)}</b> ${perDose(e.product)}${e.of > 1 ? ` <span class="muted">dose ${e.dose} of ${e.of}</span>` : ""}${(e.pinned_by || []).length ? `<div class="small muted" title="${esc(e.pinned_by.map(x => x.text).join("
-"))}">pinned by ${e.pinned_by.map(x => esc(x.id)).join(", ")}</div>` : ""}</td></tr>`
+    e.kind === "dose" ? `<tr><td class="mono"><b>${e.hhmm}</b></td><td><b>${esc(e.label)}</b> ${perDose(e.product)}${e.of > 1 ? ` <span class="muted">dose ${e.dose} of ${e.of}</span>` : ""}${(e.pinned_by || []).length ? `<div class="small muted" title="${esc(e.pinned_by.map(x => x.text).join("\n"))}">pinned by ${e.pinned_by.map(x => esc(x.id)).join(", ")}</div>` : ""}</td></tr>`
                       : `<tr><td class="mono muted">${e.hhmm}</td><td class="muted">${esc(e.label)}</td></tr>`).join("") + "</tbody></table>";
 }
 

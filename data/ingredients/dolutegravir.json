@@ -1,0 +1,29 @@
+{
+  "ingredient": "dolutegravir",
+  "primary_spl": "63df5af3-b8ac-4e76-9830-2dbb340af922",
+  "rules": [
+    {
+      "id": "dolutegravir-polyvalent-cations-sep",
+      "family": "separation",
+      "target": "group:polyvalent_cations",
+      "before": 2,
+      "after": 6,
+      "provenance": "quoted",
+      "note": "Administer dolutegravir 2 hours before or 6 hours after medications containing polyvalent cations. | DRAFT: proposed by a language model. | approved from model draft | Reviewer (Claude): the label also says 'When taken with food, TIVICAY and supplements or multivitamins containing calcium or iron can be taken at the same time'; this rule applies the fasting separation to every member of the group (strict reading).",
+      "source": {
+        "spl_set_id": "63df5af3-b8ac-4e76-9830-2dbb340af922",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=63df5af3-b8ac-4e76-9830-2dbb340af922",
+        "section": "drug interactions",
+        "sentence": "Medications containing polyvalent cations (e.g., Mg or Al): Cation-containing antacids a or laxatives Sucralfate Buffered medications ↓Dolutegravir Administer TIVICAY or TIVICAY PD 2 hours before or 6 hours after taking medications containing polyvalent cations."
+      },
+      "verified": true,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:34-05:00",
+        "note": "4 of 4 runs agreed"
+      }
+    }
+  ]
+}

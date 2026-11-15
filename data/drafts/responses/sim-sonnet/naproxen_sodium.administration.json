@@ -1,0 +1,1 @@
+{"rules":[{"id":"naproxen-sodium-interval","family":"min_interval","hours":8,"sentence":"S1","provenance":"interpreted","loosest":{"hours":8},"note":"every 8 to 12 hours"},{"id":"naproxen-sodium-daily-max","family":"daily_max","amount":660,"unit":"mg","sentence":"S1","provenance":"interpreted","loosest":{"amount":660},"note":"3 caplets of 220 mg in 24 hours"}],"memberships":[]}

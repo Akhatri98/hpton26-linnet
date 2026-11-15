@@ -37,7 +37,14 @@
         "sentence": "Administer levothyroxine sodium tablets as a single daily dose, on an empty stomach, one-half to one hour before breakfast with a full glass of water to avoid choking or gagging"
       },
       "note": "Section 2.1 states it firmly; the highlights say 'preferably'. Tagged interpreted for that reason. DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
-      "verified": true
+      "verified": true,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:52:07-05:00",
+        "note": "4 of 4 runs agreed"
+      }
     }
   ]
 }

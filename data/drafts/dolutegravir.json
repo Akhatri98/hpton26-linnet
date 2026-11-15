@@ -1,0 +1,38 @@
+{
+  "ingredient": "dolutegravir",
+  "primary_spl": "63df5af3-b8ac-4e76-9830-2dbb340af922",
+  "rules": [
+    {
+      "id": "dolutegravir-polyvalent-cations-sep",
+      "family": "separation",
+      "target": "group:polyvalent_cations",
+      "before": 2,
+      "after": 6,
+      "provenance": "quoted",
+      "note": "Administer dolutegravir 2 hours before or 6 hours after medications containing polyvalent cations. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "63df5af3-b8ac-4e76-9830-2dbb340af922",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=63df5af3-b8ac-4e76-9830-2dbb340af922",
+        "section": "drug interactions",
+        "sentence": "Medications containing polyvalent cations (e.g., Mg or Al): Cation-containing antacids a or laxatives Sucralfate Buffered medications ↓Dolutegravir Administer TIVICAY or TIVICAY PD 2 hours before or 6 hours after taking medications containing polyvalent cations."
+      },
+      "verified": false
+    },
+    {
+      "id": "dolutegravir-fasting-calcium-iron-sep",
+      "family": "separation",
+      "target": "group:polyvalent_cations",
+      "before": 2,
+      "after": 6,
+      "provenance": "quoted",
+      "note": "Under fasting conditions, dolutegravir should be taken 2 hours before or 6 hours after calcium or iron supplements. With food, calcium or iron supplements may be taken at the same time (S31). | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "63df5af3-b8ac-4e76-9830-2dbb340af922",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=63df5af3-b8ac-4e76-9830-2dbb340af922",
+        "section": "drug interactions",
+        "sentence": "Under fasting conditions, TIVICAY or TIVICAY PD should be taken 2 hours before or 6 hours after taking supplements containing calcium or iron."
+      },
+      "verified": false
+    }
+  ]
+}

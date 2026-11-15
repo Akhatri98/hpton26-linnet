@@ -30,7 +30,15 @@
         "sentence": "DOSAGE & ADMINISTRATION For adults, colestipol hydrochloride tablets are recommended in doses of 2 to 16 grams/day given once or in divided doses.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03ca5800-4211-4383-a332-be88bd9b5304"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:53-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -52,7 +60,15 @@
         "sentence": "The starting dose should be 2 grams once or twice daily.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03ca5800-4211-4383-a332-be88bd9b5304"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:53-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -74,7 +90,15 @@
         "sentence": "The starting dose should be 2 grams once or twice daily.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03ca5800-4211-4383-a332-be88bd9b5304"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:53-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -96,7 +120,15 @@
         "sentence": "In patients with pre-existing constipation, the starting dose should be 2 grams once or twice a day.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03ca5800-4211-4383-a332-be88bd9b5304"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:53-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     }
   ],
   "limits": [
@@ -116,7 +148,15 @@
         "sentence": "DOSAGE & ADMINISTRATION For adults, colestipol hydrochloride tablets are recommended in doses of 2 to 16 grams/day given once or in divided doses.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03ca5800-4211-4383-a332-be88bd9b5304"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:53-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     }
   ],
   "administration": [
@@ -134,7 +174,15 @@
         "section": "drug interactions",
         "sentence": "Patients should take other drugs at least one hour before or four hours after colestipol hydrochloride tablets to avoid impeding their absorption."
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:52:07-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "verified existing library rule colestipol-other-drugs"
+      }
     }
   ],
   "memberships": [],

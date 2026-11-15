@@ -1,0 +1,23 @@
+{
+  "ingredient": "naproxen_sodium",
+  "primary_spl": "02941928-128a-2c88-e063-6294a90ac6ba",
+  "rules": [
+    {
+      "id": "naproxen_sodium-min-interval-8h",
+      "family": "min_interval",
+      "hours": 8,
+      "provenance": "interpreted",
+      "loosest": {
+        "hours": 12
+      },
+      "note": "Label says take 1 caplet every 8 to 12 hours; the 8-hour lower bound is used as the minimum interval. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "02941928-128a-2c88-e063-6294a90ac6ba",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02941928-128a-2c88-e063-6294a90ac6ba",
+        "section": "dosage and administration",
+        "sentence": "Directions do not take more than directed the smallest effective dose should be used drink a full glass of water with each dose Adults and children 12 years and older take 1 caplet every 8 to 12 hours while symptoms last for the first dose you may take 2 caplets within the first hour do not exceed 2 caplets in any 8- to 12-hour period do not exceed 3 caplets in a 24-hour period Children under 12 years ask a doctor"
+      },
+      "verified": false
+    }
+  ]
+}

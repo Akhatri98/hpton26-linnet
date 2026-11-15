@@ -1,0 +1,131 @@
+You are extracting LIMITS from an FDA drug label for a pharmacist's tool.
+
+Ingredient: captopril
+Label set id: 1395ba5b-2fc9-41ff-9c43-e0740d781dee
+Active ingredients on this label: captopril
+Strengths this label comes in (read from the label by code): 12.5 mg, 25 mg, 50 mg, 100 mg
+
+Numbered sentences from the label:
+S1 [dosage and administration] DOSAGE AND ADMINISTRATION Captopril tablets should be taken one hour before meals.
+S2 [dosage and administration] If possible, discontinue the patient’s previous antihypertensive drug regimen for one week before starting captopril tablets.
+S3 [dosage and administration] The initial dose of captopril tablets is 25 mg b.i.d.
+S4 [dosage and administration] If satisfactory reduction of blood pressure has not been achieved after one or two weeks, the dose may be increased to 50 mg b.i.d.
+S5 [dosage and administration] Concomitant sodium restriction may be beneficial when captopril tablets are used alone.
+S6 [dosage and administration] The dose of captopril tablets in hypertension usually does not exceed 50 mg t.i.d.
+S7 [dosage and administration] Therefore, if the blood pressure has not been satisfactorily controlled after one to two weeks at this dose, (and the patient is not already receiving a diuretic), a modest dose of a thiazide-type diuretic (e.g., hydrochlorothiazide, 25 mg daily), should be added.
+S8 [dosage and administration] If captopril tablets are being started in a patient already receiving a diuretic, captopril tablets therapy should be initiated under close medical supervision (see WARNINGS and PRECAUTIONS: Drug Interactions regarding hypotension), with dosage and titration of captopril tablets as noted above.
+S9 [dosage and administration] If further blood pressure reduction is required, the dose of captopril tablets may be increased to 100 mg b.i.d.
+S10 [dosage and administration] and then, if necessary, to 150 mg b.i.d.
+S11 [dosage and administration] (while continuing the diuretic).
+S12 [dosage and administration] The usual dose range is 25 to 150 mg b.i.d.
+S13 [dosage and administration] A maximum daily dose of 450 mg captopril tablets should not be exceeded.
+S14 [dosage and administration] For patients with severe hypertension (e.g., accelerated or malignant hypertension), when temporary discontinuation of current antihypertensive therapy is not practical or desirable, or when prompt titration to more normotensive blood pressure levels is indicated, diuretic should be continued but other current antihypertensive medication stopped and captopril tablets dosage promptly initiated at 25 mg b.i.d.
+S15 [dosage and administration] When necessitated by the patient’s clinical condition, the daily dose of captopril tablets may be increased every 24 hours or less under continuous medical supervision until a satisfactory blood pressure response is obtained or the maximum dose of captopril tablets is reached.
+S16 [dosage and administration] Heart Failure Initiation of therapy requires consideration of recent diuretic therapy and the possibility of severe salt/volume depletion.
+S17 [dosage and administration] In patients with either normal or low blood pressure, who have been vigorously treated with diuretics and who may be hyponatremic and/or hypovolemic, a starting dose of 6.25 or 12.5 mg t.i.d.
+S18 [dosage and administration] for these patients, titration to the usual daily dosage can then occur within the next several days.
+S19 [dosage and administration] For most patients the usual initial daily dosage is 25 mg t.i.d.
+S20 [dosage and administration] After a dose of 50 mg t.i.d.
+S21 [dosage and administration] is reached, further increases in dosage should be delayed, where possible, for at least two weeks to determine if a satisfactory response occurs.
+S22 [dosage and administration] Most patients studied have had a satisfactory clinical improvement at 50 or 100 mg t.i.d.
+S23 [dosage and administration] A maximum daily dose of 450 mg of captopril tablets should not be exceeded.
+S24 [dosage and administration] Captopril tablets therapy must be initiated under very close medical supervision.
+S25 [dosage and administration] Left Ventricular Dysfunction After Myocardial Infarction The recommended dose for long-term use in patients following a myocardial infarction is a target maintenance dose of 50 mg t.i.d.
+S26 [dosage and administration] Therapy may be initiated as early as three days following a myocardial infarction.
+S27 [dosage and administration] After a single dose of 6.25 mg, captopril tablets therapy should be initiated at 12.5 mg t.i.d.
+S28 [dosage and administration] Captopril tablets should then be increased to 25 mg t.i.d.
+S29 [dosage and administration] during the next several days and to a target dose of 50 mg t.i.d.
+S30 [dosage and administration] Captopril tablets may be used in patients treated with other post-myocardial infarction therapies, e.g., thrombolytics, aspirin, beta blockers.
+S31 [dosage and administration] Diabetic Nephropathy The recommended dose of captopril tablets for long term use to treat diabetic nephropathy is 25 mg t.i.d.
+S32 [dosage and administration] These patients will take longer to reach steady-state captopril levels and will reach higher steady-state levels for a given daily dose than patients with normal renal function.
+S33 [dosage and administration] Accordingly, for patients with significant renal impairment, initial daily dosage of captopril tablets should be reduced, and smaller increments utilized for titration, which should be quite slow (one- to two-week intervals).
+S34 [dosage and administration] After the desired therapeutic effect has been achieved, the dose should be slowly back-titrated to determine the minimal effective dose.
+S35 [drug interactions] Do not coadminister aliskiren with captopril tablets in patients with diabetes.
+S36 [drug interactions] Avoid use of aliskiren with captopril tablets in patients with renal impairment (GFR < 60 ml/min).
+S37 [drug interactions] Hypotension–Patients on Diuretic Therapy Patients on diuretics and especially those in whom diuretic therapy was recently instituted, as well as those on severe dietary salt restriction or dialysis, may occasionally experience a precipitous reduction of blood pressure usually within the first hour after receiving the initial dose of captopril.
+S38 [drug interactions] The possibility of hypotensive effects with captopril can be minimized by either discontinuing the diuretic or increasing the salt intake approximately one week prior to initiation of treatment with captopril tablets or initiating therapy with small doses (6.25 or 12.5 mg).
+S39 [drug interactions] Alternatively, provide medical supervision for at least one hour after the initial dose.
+S40 [drug interactions] This transient hypotensive response is not a contraindication to further doses which can be given without difficulty once the blood pressure has increased after volume expansion.
+S41 [drug interactions] therefore, nitroglycerin or other nitrates (as used for management of angina) or other drugs having vasodilator activity should, if possible, be discontinued before starting captopril tablets.
+S42 [precautions] PRECAUTIONS General Impaired Renal Function Hypertension Some patients with renal disease, particularly those with severe renal artery stenosis, have developed increases in BUN and serum creatinine after reduction of blood pressure with captopril.
+S43 [precautions] Cough Presumably due to the inhibition of the degradation of endogenous bradykinin, persistent nonproductive cough has been reported with all ACE inhibitors, always resolving after discontinuation of therapy.
+S44 [precautions] Patients should be informed that captopril tablets should be taken one hour before meals (see DOSAGE AND ADMINISTRATION ).
+S45 [precautions] Drug/Laboratory Test Interaction Captopril may cause a false-positive urine test for acetone.
+S46 [precautions] Carcinogenesis, Mutagenesis and Impairment of Fertility Two-year studies with doses of 50 to 1350 mg/kg/day in mice and rats failed to show any evidence of carcinogenic potential.
+S47 [precautions] The high dose in these studies is 150 times the maximum recommended human dose of 450 mg, assuming a 50 kg subject.
+S48 [precautions] On a body-surface-area basis, the high doses for mice and rats are 13 and 26 times the maximum recommended human dose, respectively.
+S49 [precautions] Significant drug-related toxicity included effects on hematopoiesis, renal toxicity, erosion/ ulceration of the stomach, and variation of retinal blood vessels.
+S50 [precautions] Reductions in hemoglobin and/or hematocrit values were seen in mice, rats, and monkeys at doses 50 to 150 times the maximum recommended human dose (MRHD) of 450 mg, assuming a 50 kg subject.
+S51 [precautions] On a body- surface-area basis, these doses are 5 to 25 times maximum recommended dose (MRHD).
+S52 [precautions] Anemia, leukopenia, thrombocytopenia, and bone marrow suppression occurred in dogs at doses 8 to 30 times MRHD on a body- weight basis (4 to 15 times MRHD on a surface-area basis).
+S53 [precautions] Marked anemia was seen at all dose levels (8 to 30 times MRHD) in dogs, whereas moderate to marked leukopenia was noted only at 15 and 30 times MRHD and thrombocytopenia at 30 times MRHD.
+S54 [precautions] However, in the 47 week study at a dose 30 times MRHD, bone marrow suppression was found to be reversible upon continued drug administration.
+S55 [precautions] Captopril caused hyperplasia of the juxtaglomerular apparatus of the kidneys in mice and rats at doses 7 to 200 times MRHD on a body-weight basis (0.6 to 35 times MRHD on a surface-area basis);
+S56 [precautions] in monkeys at 20 to 60 times MRHD on a body-weight basis (7 to 20 times MRHD on a surface-area basis);
+S57 [precautions] and in dogs at 30 times MRHD on a body-weight basis (15 times MRHD on a surface-area basis).
+S58 [precautions] Gastric erosions/ulcerations were increased in incidence in male rats at 20 to 200 times MRHD on a body- weight basis (3.5 and 35 times MRHD on a surface-area basis);
+S59 [precautions] in dogs at 30 times MRHD on a body-weight basis (15 times MRHD on a surface-area basis);
+S60 [precautions] and in monkeys at 65 times MRHD on a body-weight basis (20 times MRHD on a surface-area basis).
+S61 [precautions] Rabbits developed gastric and intestinal ulcers when given oral doses approximately 30 times MRHD on a body-weight basis (10 times MRHD on surface-area basis) for only 5 to 7 days.
+S62 [precautions] In the two-year rat study, irreversible and progressive variations in the caliber of retinal vessels (focal sacculations and constrictions) occurred at all dose levels (7 to 200 times MRHD) on a body-weight basis;
+S63 [precautions] 1 to 35 times MRHD on a surface-area basis in a dose-related fashion.
+S64 [precautions] The effect was first observed in the 88th week of dosing, with a progressively increased incidence thereafter, even after cessation of dosing.
+S65 [warnings] in some cases there was no prior history of facial angioedema and C-1 esterase levels were normal.
+S66 [warnings] The angioedema was diagnosed by procedures including abdominal CT scan or ultrasound, or at surgery, and symptoms resolved after stopping the ACE inhibitor.
+S67 [warnings] About half of the neutropenic patients developed systemic or oral cavity infections or other features of the syndrome of agranulocytosis.
+S68 [warnings] The risk of neutropenia is dependent on the clinical status of the patient: In clinical trials in patients with hypertension who have normal renal function (serum creatinine less than 1.6 mg/dL and no collagen vascular disease), neutropenia has been seen in one patient out of over 8,600 exposed.
+S69 [warnings] In patients with some degree of renal failure (serum creatinine at least 1.6 mg/dL) but no collagen vascular disease, the risk of neutropenia in clinical trials was about 1 per 500, a frequency over 15 times that for uncomplicated hypertension.
+S70 [warnings] Daily doses of captopril were relatively high in these patients, particularly in view of their diminished renal function.
+S71 [warnings] While none of the over 750 patients in formal clinical trials of heart failure developed neutropenia, it has occurred during the subsequent clinical experience.
+S72 [warnings] About half of the reported cases had serum creatinine ≥ 1.6 mg/dL and more than 75 percent were in patients also receiving procainamide.
+S73 [warnings] The neutropenia has usually been detected within three months after captopril was started.
+S74 [warnings] In general, neutrophils returned to normal in about two weeks after captopril was discontinued, and serious infections were limited to clinically complex patients.
+S75 [warnings] If captopril is used in patients with impaired renal function, white blood cell and differential counts should be evaluated prior to starting treatment and at approximately two-week intervals for about three months, then periodically.
+S76 [warnings] In patients with collagen vascular disease or who are exposed to other drugs known to affect the white cells or immune response, particularly when there is impaired renal function, captopril should be used only after an assessment of benefit and risk, and then with caution.
+S77 [warnings] Since discontinuation of captopril and other drugs has generally led to prompt return of the white count to normal, upon confirmation of neutropenia (neutrophil count < 1000/mm 3 ) the physician should withdraw captopril and closely follow the patient’s course.
+S78 [warnings] Proteinuria Total urinary proteins greater than 1 g per day were seen in about 0.7 percent of patients receiving captopril.
+S79 [warnings] About 90 percent of affected patients had evidence of prior renal disease or received relatively high doses of captopril (in excess of 150 mg/day), or both.
+S80 [warnings] This transient hypotension is more likely to occur after any of the first several doses and is usually well tolerated, producing either no symptoms or brief mild lightheadedness, although in rare instances it has been associated with arrhythmia or conduction defects.
+S81 [warnings] BECAUSE OF THE POTENTIAL FALL IN BLOOD PRESSURE IN THESE PATIENTS, THERAPY SHOULD BE STARTED UNDER VERY CLOSE MEDICAL SUPERVISION.
+S82 [warnings] A starting dose of 6.25 or 12.5 mg t.i.d.
+S83 [warnings] Most epidemiologic studies examining fetal abnormalities after exposure to antihypertensive use in the first trimester have not distinguished drugs affecting the renin-angiotensin system from other antihypertensive agents.
+S84 [warnings] Patients and physicians should be aware, however, that oligohydramnios may not appear until after the fetus has sustained irreversible injury.
+S85 [warnings] Closely observe infants with histories of in utero exposure to captopril tablets for hypotension, oliguria, and hyperkalemia (see PRECAUTIONS : Pediatric Use ).
+S86 [warnings] When captopril was given to rabbits at doses about 0.8 to 70 times (on a mg/kg basis) the maximum recommended human dose, low incidences of craniofacial malformations were seen.
+S87 [warnings] No teratogenic effects of captopril were seen in studies of pregnant rats and hamsters.
+S88 [warnings] On a mg/kg basis, the doses used were up to 150 times (in hamsters) and 625 times (in rats) the maximum recommended human dose.
+S89 [how supplied] HOW SUPPLIED Captopril Tablets, USP are available containing 12.5 mg, 25 mg, 50 mg or 100 mg of captopril, USP.
+S90 [how supplied] The 12.5 mg tablets are white to off-white, arc diamond shaped tablets with bisect on one side and “131” on the other side.
+S91 [how supplied] They are available as follows: Bottles of 100 Tablets NDC 69292-522-01 Bottles of 1000 Tablets NDC 69292-522-10 The 25 mg tablets are white to off-white, arc diamond shaped tablets with quadrisect on one side and “132” on the other side.
+S92 [how supplied] They are available as follows: Bottles of 100 Tablets NDC 69292-524-01 Bottles of 1000 Tablets NDC 69292-524-10 The 50 mg tablets are white to off-white, arc diamond shaped tablets with bisect on one side and “133” on the other side.
+S93 [how supplied] They are available as follows: Bottles of 100 Tablets NDC 69292-526-01 Bottles of 1000 Tablets NDC 69292-526-10 The 100 mg tablets are white to off-white, capsule shaped tablets with bisect on one side and “134” on the other side.
+S94 [how supplied] They are available as follows: Bottles of 100 Tablets NDC 69292-528-01 Bottles of 500 Tablets NDC 69292-528-50 Bottles contain a desiccant-charcoal canister.
+S95 [description] it is soluble in water (approx.
+S96 [description] 160 mg/mL), methanol, and ethanol and sparingly soluble in chloroform and ethyl acetate.
+S97 [description] Each tablet for oral administration contains 12.5 mg, 25 mg, 50 mg or 100 mg of captopril and the following inactive ingredients: corn starch, lactose monohydrate, microcrystalline cellulose and stearic acid.
+S98 [description] About half of the patients had symptoms of heart failure in the past.
+S99 [description] Patients were given a test dose of 6.25 mg oral captopril tablets and were randomized within 3 to 16 days post-infarction to receive either captopril tablets or placebo in addition to conventional therapy.
+S100 [description] Captopril tablets were initiated at 6.25 mg or 12.5 mg t.i.d.
+S101 [description] and after two weeks titrated to a target maintenance dose of 50 mg t.i.d.
+S102 [description] Captopril tablets were well tolerated in the presence of other therapies such as aspirin, beta blockers, nitrates, vasodilators, calcium antagonists and diuretics.
+S103 [description] In a multicenter, double-blind, placebo controlled trial, 409 patients, age 18 to 49 of either gender, with or without hypertension, with type I (juvenile type, onset before age 30) insulin-dependent diabetes mellitus, retinopathy, proteinuria ≥ 500 mg per day and serum creatinine  2.5 mg/dL, were randomized to placebo or captopril tablets (25 mg t.i.d.) and followed for up to 4.8 years (median 3 years).
+S104 [description] Captopril tablets were well tolerated in this patient population.
+S105 [description] In two multicenter, double-blind, placebo controlled studies, a total of 235 normotensive patients with insulin- dependent diabetes mellitus, retinopathy and microalbuminuria (20 to 200 mcg/min) were randomized to placebo or captopril tablets (50 mg b.i.d.) and followed for up to 2 years.
+S106 [description] Captopril tablets delayed the progression to overt nephropathy (proteinuria ≥ 500 mg/day) in both studies (risk reduction 67% to 76%;
+
+Return ONLY a JSON object {"limits": [ ... ]}. One row per limit the label states. Each row:
+  {"kind": "per_dose" | "per_day" | "duration_days",
+   "amount": N, "unit": "mg" | "g" | "mcg" | "tablets" | "caplets" | "capsules" | "doses" | "days",
+   "ingredient": "which active ingredient the amount is of (one of the list above)", or null when there is only one,
+   "strength": "the strength the limit is for, e.g. '300 mg/60 mg'", or null if it applies to all strengths,
+   "population": "adults" | "children" | "pregnant" | "general" | ...,
+   "condition": "what it is for, if the limit depends on it (e.g. 'complicated UTI')", or null,
+   "sentence": "Sk", "provenance": "quoted" | "interpreted"}
+Rules:
+- Starting doses, titration steps and per-kg doses are not limits.
+- On a label with more than one active ingredient, every limit in mg, mcg or g MUST name its "ingredient".
+- A limit counted in tablets, caplets or capsules on a label with more than one strength MUST name its "strength".
+Examples: "do not take more than 6 caplets in 24 hours" -> per_day, 6, caplets.
+"more than 4,000 mg of acetaminophen in 24 hours" -> per_day, 4000, mg, ingredient "acetaminophen".
+"do not use for more than 10 days" -> duration_days, 10, days.
+Use only numbers stated in the cited sentence. Cite exactly one sentence id per row; do not copy text.

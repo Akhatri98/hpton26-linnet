@@ -1,0 +1,76 @@
+{
+ "set_id": "06261db5-1435-4b91-8b54-71bfcfb1368c",
+ "id": "94d7bc24-2f81-463b-b646-92fbf6641f71",
+ "version": "4",
+ "effective_time": "20250417",
+ "openfda": {
+  "application_number": [
+   "ANDA209597"
+  ],
+  "brand_name": [
+   "Cholestyramine"
+  ],
+  "generic_name": [
+   "CHOLESTYRAMINE"
+  ],
+  "manufacturer_name": [
+   "TAGI Pharma, Inc."
+  ],
+  "product_ndc": [
+   "51224-011"
+  ],
+  "product_type": [
+   "HUMAN PRESCRIPTION DRUG"
+  ],
+  "route": [
+   "ORAL"
+  ],
+  "substance_name": [
+   "CHOLESTYRAMINE"
+  ],
+  "rxcui": [
+   "848943"
+  ],
+  "spl_id": [
+   "94d7bc24-2f81-463b-b646-92fbf6641f71"
+  ],
+  "spl_set_id": [
+   "06261db5-1435-4b91-8b54-71bfcfb1368c"
+  ],
+  "package_ndc": [
+   "51224-011-20",
+   "51224-011-10"
+  ],
+  "is_original_packager": [
+   true
+  ],
+  "nui": [
+   "N0000180292",
+   "N0000175365"
+  ],
+  "pharm_class_epc": [
+   "Bile Acid Sequestrant [EPC]"
+  ],
+  "pharm_class_moa": [
+   "Bile-acid Binding Activity [MoA]"
+  ],
+  "unii": [
+   "4B33BGI082"
+  ]
+ },
+ "dosage_and_administration": [
+  "DOSAGE AND ADMINISTRATION The recommended starting adult dose for Cholestyramine for Oral Suspension, USP is 1 pouch or 1 level scoopful (8.3 grams of Cholestyramine for Oral Suspension, USP contains 4 grams of anhydrous cholestyramine resin) once or twice a day. The recommended maintenance dose for Cholestyramine for Oral Suspension, USP is 2 to 4 pouches or scoopfuls daily (8 to 16 grams anhydrous cholestyramine resin) divided into two doses. It is recommended that increases in dose be gradual with periodic assessment of lipid/lipoprotein levels at intervals of not less than 4 weeks. The maximum recommended daily dose is 6 pouches or scoopfuls of Cholestyramine for Oral Suspension, USP (24 grams of anhydrous cholestyramine resin). The suggested time of administration is at mealtime but may be modified to avoid interference with absorption of other medications. Although the recommended dosing schedule is twice daily, Cholestyramine for Oral Suspension, USP may be administered in 1 to 6 doses per day. Cholestyramine for Oral Suspension, USP should not be taken in its dry form. Always mix the dry powder with water or other fluids before ingesting. See Preparation Instructions . Concomitant Therapy Preliminary evidence suggests that the lipid-lowering effects of cholestyramine on total and LDL-cholesterol are enhanced when combined with a HMG-CoA reductase inhibitor, e.g., pravastatin, lovastatin, simvastatin and fluvastatin. Additive effects on LDL-cholesterol are also seen with combined nicotinic acid/cholestyramine therapy. See PRECAUTIONS, Drug Interactions for recommendations on administering concomitant therapy. Preparation The color of Cholestyramine for Oral Suspension, USP may vary somewhat from batch to batch but this variation does not affect the performance of the product. Place the contents of one single-dose pouch or one level scoopful of Cholestyramine for Oral Suspension, USP in a glass or cup. Add at least 2 to 6 ounces of water or the non-carbonated beverage of your choice. Stir to a uniform consistency and drink. Cholestyramine for Oral Suspension, USP may also be mixed with highly fluid soups or pulpy fruits with a high moisture content such as applesauce or crushed pineapple."
+ ],
+ "drug_interactions": [
+  "Drug Interactions Cholestyramine resin may delay or reduce the absorption of concomitant oral medication such as phenylbutazone, warfarin, thiazide diuretics (acidic) or propranolol (basic), as well as tetracycline, penicillin G, phenobarbital, thyroid and thyroxine preparations, estrogens and progestins and digitalis. Interference with the absorption of oral phosphate supplements has been observed with another positively-charged bile acid sequestrant. Cholestyramine resin may interfere with the pharmacokinetics of drugs that undergo enterohepatic circulation. The discontinuance of cholestyramine resin could pose a hazard to health if a potentially toxic drug such as digitalis has been titrated to a maintenance level while the patient was taking cholestyramine resin. Because cholestyramine binds bile acids, cholestyramine resin may interfere with normal fat digestion and absorption and thus may prevent absorption of fat-soluble vitamins such as A, D, E and K. When cholestyramine resin is given for long periods of time, concomitant supplementation with water-miscible (or parenteral) forms of fat-soluble vitamins should be considered. SINCE CHOLESTYRAMINE RESIN MAY BIND OTHER DRUGS GIVEN CONCURRENTLY, IT IS RECOMMENDED THAT PATIENTS TAKE OTHER DRUGS AT LEAST 1 HOUR BEFORE OR 4 TO 6 HOURS AFTER CHOLESTYRAMINE RESIN (OR AT AS GREAT AN INTERVAL AS POSSIBLE) TO AVOID IMPEDING THEIR ABSORPTION."
+ ],
+ "precautions": [
+  "PRECAUTIONS General Chronic use of cholestyramine resin may be associated with increased bleeding tendency due to hypoprothrombinemia associated with Vitamin K deficiency. This will usually respond promptly to parenteral Vitamin K 1 and recurrences can be prevented by oral administration of Vitamin K 1 . Reduction of serum or red cell folate has been reported over long term administration of cholestyramine resin. Supplementation with folic acid should be considered in these cases. There is a possibility that prolonged use of cholestyramine resin, since it is a chloride form of anion exchange resin, may produce hyperchloremic acidosis. This would especially be true in younger and smaller patients where the relative dosage may be higher. Caution should also be exercised in patients with renal insufficiency or volume depletion and in patients receiving concomitant spironolactone. Cholestyramine resin may produce or worsen preexisting constipation. The dosage should be increased gradually in patients to minimize the risk of developing fecal impaction. In patients with preexisting constipation, the starting dose should be 1 pouch or 1 scoop once daily for 5 to 7 days, increasing to twice daily with monitoring of constipation and of serum lipoproteins, at least twice, 4 to 6 weeks apart. Increased fluid intake and fiber intake should be encouraged to alleviate constipation and a stool softener may occasionally be indicated. If the initial dose is well tolerated, the dose may be increased as needed by one dose/day (at monthly intervals) with periodic monitoring of serum lipoproteins. If constipation worsens or the desired therapeutic response is not achieved at one to six doses/day, combination therapy or alternate therapy should be considered. Particular effort should be made to avoid constipation in patients with symptomatic coronary artery disease. Constipation associated with cholestyramine resin may aggravate hemorrhoids. Information for Patients Inform your physician if you are pregnant or plan to become pregnant or are breast-feeding. Drink plenty of fluids and mix each 8.3 gram dose of Cholestyramine for Oral Suspension, USP in at least 2 to 6 ounces of fluid before taking. Sipping or holding the resin suspension in the mouth for prolonged periods may lead to changes in the surface of the teeth resulting in discoloration, erosion of enamel or decay, good oral hygiene should be maintained. Laboratory Tests Serum cholesterol levels should be determined frequently during the first few months of therapy and periodically thereafter. Serum triglyceride levels should be measured periodically to detect whether significant changes have occurred. The LRC-CPPT showed a dose-related increase in serum triglycerides of 10.7% to 17.1% in the cholestyramine-treated group, compared with an increase of 7.9% to 11.7% in the placebo group. Based on the mean values and adjusting for the placebo group, the cholestyramine-treated group showed an increase of 5% over pre-entry levels the first year of the study and an increase of 4.3% the seventh year. Drug Interactions Cholestyramine resin may delay or reduce the absorption of concomitant oral medication such as phenylbutazone, warfarin, thiazide diuretics (acidic) or propranolol (basic), as well as tetracycline, penicillin G, phenobarbital, thyroid and thyroxine preparations, estrogens and progestins and digitalis. Interference with the absorption of oral phosphate supplements has been observed with another positively-charged bile acid sequestrant. Cholestyramine resin may interfere with the pharmacokinetics of drugs that undergo enterohepatic circulation. The discontinuance of cholestyramine resin could pose a hazard to health if a potentially toxic drug such as digitalis has been titrated to a maintenance level while the patient was taking cholestyramine resin. Because cholestyramine binds bile acids, cholestyramine resin may interfere with normal fat digestion and absorption and thus may prevent absorption of fat-soluble vitamins such as A, D, E and K. When cholestyramine resin is given for long periods of time, concomitant supplementation with water-miscible (or parenteral) forms of fat-soluble vitamins should be considered. SINCE CHOLESTYRAMINE RESIN MAY BIND OTHER DRUGS GIVEN CONCURRENTLY, IT IS RECOMMENDED THAT PATIENTS TAKE OTHER DRUGS AT LEAST 1 HOUR BEFORE OR 4 TO 6 HOURS AFTER CHOLESTYRAMINE RESIN (OR AT AS GREAT AN INTERVAL AS POSSIBLE) TO AVOID IMPEDING THEIR ABSORPTION. Carcinogenesis, Mutagenesis, Impairment of Fertility In studies conducted in rats in which cholestyramine resin was used as a tool to investigate the role of various intestinal factors, such as fat, bile salts and microbial ﬂora, in the development of intestinal tumors induced by potent carcinogens, the incidence of such tumors was observed to be greater in cholestyramine resin-treated rats than in control rats. The relevance of this laboratory observation from studies in rats to the clinical use of cholestyramine resin is not known. In the LRC-CPPT study referred to above, the total incidence of fatal and nonfatal neoplasms was similar in both treatment groups. When the many different categories of tumors are examined, various alimentary system cancers were somewhat more prevalent in the cholestyramine group. The small numbers and the multiple categories prevent conclusions from being drawn. However, in view of the fact that cholestyramine resin is conﬁned to the GI tract and not absorbed and in light of the animal experiments referred to above, a six-year post-trial follow-up of the LRC-CPPT 5 patient population has been completed (a total of 13.4 years of in-trial plus post-trial follow-up) and revealed no signiﬁcant difference in the incidence of cause-speciﬁc mortality or cancer morbidity between cholestyramine and placebo treated patients. Pregnancy Pregnancy Category C There are no adequate and well controlled studies in pregnant women. The use of cholestyramine in pregnancy or lactation or by women of childbearing age requires that the potential beneﬁts of drug therapy be weighed against the possible hazards to the mother and child. Cholestyramine is not absorbed systemically, however, it is known to interfere with absorption of fat-soluble vitamins; accordingly, regular prenatal supplementation may not be adequate (see PRECAUTIONS, Drug Interactions ). Nursing Mothers Caution should be exercised when cholestyramine resin is administered to a nursing mother. The possible lack of proper vitamin absorption described in the \"Pregnancy\" section may have an effect on nursing infants. Pediatric Use Although an optimal dosage schedule has not been established, standard texts (6,7) list a usual pediatric dose of 240 mg/kg/day of anhydrous cholestyramine resin in two to three divided doses, normally not to exceed 8 g/day with dose titration based on response and tolerance. In calculating pediatric dosages, 48.2 mg of anhydrous cholestyramine resin are contained in 100 mg of Cholestyramine for Oral Suspension, USP. The effects of long-term drug administration, as well as its effect in maintaining lowered cholesterol levels in pediatric patients, are unknown. Also, see ADVERSE REACTIONS ."
+ ],
+ "how_supplied": [
+  "HOW SUPPLIED Cholestyramine for Oral Suspension, USP orange flavor is available in cartons of sixty 8.3 gram pouches and in a can containing 348.6 grams. 8.3 grams of Cholestyramine for Oral Suspension, USP contain 4 grams of anhydrous cholestyramine resin. NDC 51224-011-20 Carton of 60 single-dose pouches NDC 51224-011-10 Can, 348.6 g (containing a scoop that is not interchangeable with scoops from other products) Storage Store at 20°C to 25°C (68° to 77°F) [see USP Controlled Room Temperature]. Always replace plastic lid after using. KEEP OUT OF THE REACH OF CHILDREN."
+ ],
+ "description": [
+  "DESCRIPTION Cholestyramine for Oral Suspension, USP, the chloride salt of a basic anion exchange resin, a cholesterol lowering agent, is intended for oral administration. Cholestyramine resin is quite hydrophilic, but insoluble in water. Cholestyramine resin is not absorbed from the digestive tract. 8.3 grams of Cholestyramine for Oral Suspension, USP contain 4 grams of cholestyramine resin. It is represented by the following structural formula: Representation of structure of main polymeric groups Inactive ingredients: sucrose (429.5 mg/g), propylene glycol alginate, natural orange flavor, anhydrous citric acid, D&C Yellow No. 10 aluminum lake and FD&C Yellow No. 6 aluminum lake. Chemical Structure"
+ ]
+}

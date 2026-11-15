@@ -1,0 +1,91 @@
+You are extracting DOSING directions from an FDA drug label for a pharmacist's tool.
+
+Ingredient: dolutegravir
+Label set id: 63df5af3-b8ac-4e76-9830-2dbb340af922
+Active ingredients on this label: dolutegravir sodium
+Strengths this label comes in (read from the label by code): 5 mg, 10 mg, 25 mg, 50 mg
+
+Numbered sentences from the label:
+S1 [dosage and administration] 2 DOSAGE AND ADMINISTRATION • May be taken without regard to food.
+S2 [dosage and administration] CYP = cytochrome P450.
+S3 [dosage and administration] a Rilpivirine dose is 25 mg once daily for those switching to dolutegravir plus rilpivirine.
+S4 [dosage and administration] b Alternative combinations that do not include metabolic inducers should be considered where possible.
+S5 [dosage and administration] Adult Population Recommended Dose Treatment-naïve or treatment-experienced INSTI-naïve or virologically suppressed (HIV-1 RNA <50 copies per mL) adults switching to dolutegravir plus rilpivirine a ( 2.1 ) 50 mg once daily Treatment-naïve or treatment-experienced INSTI-naïve when coadministered with certain UGT1A or CYP3A inducers ( 2.1 , 7.2 , 7.3 ) 50 mg twice daily INSTI-experienced with certain INSTI-associated resistance substitutions or clinically suspected INSTI resistance b ( 2.1 , 12.4 ) 50 mg twice daily Pediatric Patients: Treatment-naïve or treatment-experienced INSTI-naïve patients weighing at least 2 kg.
+S6 [dosage and administration] • Pediatric Patients ≥4 weeks of age: if certain UGT1A or CYP3A inducers are coadministered, then adjust the weight-based dose of TIVICAY or TIVICAY PD to twice daily.
+S7 [dosage and administration] ( 2.3 , 7.2 , 7.3 ) TIVICAY PD Tablets for Oral Suspension ( Table 2 and Table 3 ): Term Neonates ≥2 kg (from birth to <4 weeks of age): • Birth to 14 Days: 1 tablet every other day • 15 Days to <4 Weeks: 1 tablet once daily Pediatric Population (≥4 Weeks of Age) Body Weight Recommended Dose TIVICAY PD Tablets for Oral Suspension 3 kg to less than 6 kg 1 tablet once daily 6 kg to less than 10 kg 3 tablets once daily 10 kg to less than 14 kg 4 tablets once daily 14 kg to less than 20 kg 5 tablets once daily 20 kg and greater 6 tablets once daily TIVICAY Tablets ( Table 4 ): Alternative dosing recommendations for TIVICAY tablets for patients weighing at least 14 kg: • 14 kg to less than 20 kg: 4 x 10 mg tablets once daily.
+S8 [dosage and administration] • 20 kg and greater: 1 x 50 mg tablet once daily.
+S9 [dosage and administration] 2.1 Overview of Different Dosage Forms and Important Dosage Considerations TIVICAY is available in two dosage forms: • TIVICAY o Available as 10 mg, 25 mg, and 50 mg tablets.
+S10 [dosage and administration] • TIVICAY PD o See Instructions for Use for details on preparation and administration of TIVICAY PD [see Dosage and Administration ( 2.4 )] .
+S11 [dosage and administration] o Available as 5 mg tablets for oral suspension.
+S12 [dosage and administration] Take TIVICAY and TIVICAY PD with or without food in combination with other antiretrovirals [see Dosage and Administration ( 2.2 , 2.3 ), Clinical Pharmacology ( 12.3 )] .
+S13 [dosage and administration] 2.2 Recommended Dosage in Adults TIVICAY tablets may be taken with or without food in combination with other antiretrovirals [see Clinical Pharmacology ( 12.3 )].
+S14 [dosage and administration] b Alternative combinations that do not include metabolic inducers should be considered where possible [see Drug Interactions ( 7.3 )] .
+S15 [dosage and administration] Population Recommended Dosage Treatment-naïve or treatment-experienced INSTI-naïve or virologically suppressed (HIV‑1 RNA <50 copies/mL) adults switching to dolutegravir plus rilpivirine a 50 mg once daily Treatment-naïve or treatment-experienced INSTI-naïve when coadministered with certain uridine diphosphate (UDP)-glucuronosyl transferase 1A1 (UGT1A) or cytochrome P450 (CYP)3A inducers [see Drug Interactions ( 7.2 , 7.3 )] 50 mg twice daily INSTI-experienced with certain INSTI-associated resistance substitutions or clinically suspected INSTI resistance b [see Microbiology ( 12.4 )] 50 mg twice daily 2.3 Recommended Dosage in Pediatric Patients The recommended dosages of TIVICAY PD tablets for oral suspension and TIVICAY tablets in pediatric patients (in treatment-naïve, or treatment-experienced but naïve to INSTI treatment) are displayed in Tables 2 , 3 , and 4 .
+S16 [dosage and administration] TIVICAY PD Tablets for Oral Suspension Table 2.
+S17 [dosage and administration] Recommended Dosage of TIVICAY PD in Pediatric Patients Including Term Neonatesa (at Least 37 Weeks of Gestation) Less Than 4 Weeks of Age and Weighing at Least 2 kg Pediatric Patient Population TIVICAY PD Tablets for Oral Suspension Total Daily Dosage Birth to 14 days 1 tablet every other day 5 mg every other day 15 days to less than 4 weeks 1 tablet once daily 5 mg once daily a No data are available in preterm neonates Table 3.
+S18 [dosage and administration] Recommended Dosage of TIVICAY PD in Pediatric Patients at Least 4 Weeks of Age and Weighing at Least 3 kg Body Weight TIVICAY PD Tablets for Oral Suspension Total Daily Dosage 3 kg to less than 6 kg 1 tablet once daily 5 mg once daily 6 kg to less than 10 kg 3 tablets once daily 15 mg once daily 10 kg to less than 14 kg 4 tablets once daily 20 mg once daily 14 kg to less than 20 kg 5 tablets once daily 25 mg once daily 20 kg or greater 6 tablets once daily 30 mg once daily TIVICAY Tablets Table 4.
+S19 [dosage and administration] Recommended Dosage of TIVICAY in Pediatric Patients Weighing at Least 14 kg Body Weight TIVICAY Tablets Total Daily Dosage 14 kg to less than 20 kg 4 x 10 mg tablets once daily 40 mg once daily 20 kg and greater 1 x 50 mg tablet once daily 50 mg once daily Dosage Modifications for Co-administration with Certain UGT1A or CYP3A Inducers in Pediatric Patients at Least 4 Weeks of Age If certain uridine diphosphate glucuronosyltransferase (UGT)1A or cytochrome P450 (CYP)3A inducers are co ‑ administered, then administer the corresponding dose of TIVICAY PD (see Table 3 ) or TIVICAY (see Table 4 ) twice daily instead of once daily (i.e., double the total daily dosage) [see Drug Interactions ( 7.2 , 7.3 )] .
+S20 [dosage and administration] 2.4 Preparation and Administration Instructions for TIVICAY PD Take TIVICAY PD daily with or without food in combination with other antiretrovirals [see Clinical Pharmacology ( 12.3 )] .
+S21 [dosage and administration] Do not chew, cut, or crush TIVICAY PD [see Instructions for Use] .
+S22 [dosage and administration] Instruct patients (or instruct caregivers) to either: • Swallow the tablets for oral suspension whole (if more than one tablet is required, swallow one tablet at a time to reduce the risk of choking), or • Fully disperse the tablets for oral suspension in 5 mL of drinking water (if using 1 or 3 tablets for oral suspension) or 10 mL (if using 4, 5, or 6 tablets for oral suspension) in the supplied cup;
+S23 [dosage and administration] After full dispersion, administer the oral suspension within 30 minutes of mixing [see Instructions for Use] .
+S24 [drug interactions] ( 7.2 , 7.3 ) • TIVICAY or TIVICAY PD should be taken 2 hours before or 6 hours after taking cation-containing antacids or laxatives, sucralfate, oral supplements containing iron or calcium, or buffered medications.
+S25 [drug interactions] When taken with food, TIVICAY and supplements containing calcium or iron can be taken at the same time.
+S26 [drug interactions] Non-nucleoside reverse transcriptase inhibitor: Efavirenz a ↓Dolutegravir Adjust dose of TIVICAY to twice daily for treatment-naïve and treatment-experienced, INSTI-naïve adult patients.
+S27 [drug interactions] In pediatric patients (at least 4 weeks of age), increase the weight-based dose of TIVICAY or TIVICAY PD to twice daily (Tables 3 and 4 ).
+S28 [drug interactions] Protease inhibitors: Fosamprenavir/ritonavir a Tipranavir/ritonavir a ↓Dolutegravir Adjust dose of TIVICAY to twice daily for treatment-naïve and treatment-experienced, INSTI-naïve adult patients.
+S29 [drug interactions] Carbamazepine a ↓Dolutegravir Adjust dose of TIVICAY to twice daily in treatment-naïve or treatment-experienced, INSTI-naïve adult patients.
+S30 [drug interactions] Medications containing polyvalent cations (e.g., Mg or Al): Cation-containing antacids a or laxatives Sucralfate Buffered medications ↓Dolutegravir Administer TIVICAY or TIVICAY PD 2 hours before or 6 hours after taking medications containing polyvalent cations.
+S31 [drug interactions] Oral calcium or iron supplements, including multivitamins containing calcium or iron a ↓Dolutegravir When taken with food, TIVICAY and supplements or multivitamins containing calcium or iron can be taken at the same time.
+S32 [drug interactions] Under fasting conditions, TIVICAY or TIVICAY PD should be taken 2 hours before or 6 hours after taking supplements containing calcium or iron.
+S33 [drug interactions] Rifampin a ↓Dolutegravir Adjust dose of TIVICAY to twice daily for treatment-naïve and treatment-experienced, INSTI-naïve adult patients.
+S34 [warnings and cautions] Delay in stopping treatment with TIVICAY or TIVICAY PD or other suspect agents after the onset of hypersensitivity may result in a life-threatening reaction.
+S35 [warnings and cautions] Consider the potential for drug interactions prior to and during therapy with TIVICAY or TIVICAY PD;
+S36 [warnings and cautions] however, the time to onset is more variable and can occur many months after initiation of treatment.
+S37 [dosage forms and strengths] 3 DOSAGE FORMS AND STRENGTHS TIVICAY Tablets: 10 mg: Each tablet contains 10 mg of dolutegravir (as dolutegravir sodium).
+S38 [dosage forms and strengths] Tablets are white, round, film-coated, biconvex tablets debossed with “SV 572” on one side and “10” on the other side.
+S39 [dosage forms and strengths] 25 mg: Each tablet contains 25 mg of dolutegravir (as dolutegravir sodium).
+S40 [dosage forms and strengths] Tablets are pale yellow, round, film-coated, biconvex tablets debossed with “SV 572” on one side and “25” on the other side.
+S41 [dosage forms and strengths] 50 mg: Each tablet contains 50 mg of dolutegravir (as dolutegravir sodium).
+S42 [dosage forms and strengths] Tablets are yellow, round, film-coated, biconvex tablets debossed with “SV 572” on one side and “50” on the other side.
+S43 [dosage forms and strengths] TIVICAY PD Tablets for Oral Suspension: Each tablet contains 5 mg of dolutegravir (as dolutegravir sodium).
+S44 [dosage forms and strengths] Tablets are white, round, strawberry cream flavored, film-coated, biconvex tablets debossed with “SV H7S” on one side and “5” on the other side.
+S45 [dosage forms and strengths] • TIVICAY tablets: 10 mg, 25 mg, and 50 mg ( 3 ) • TIVICAY PD tablets for oral suspension: 5 mg ( 3 )
+S46 [how supplied] 16 HOW SUPPLIED/STORAGE AND HANDLING TIVICAY tablets, 10 mg, are white, round, film-coated, biconvex tablets debossed with “SV 572” on one side and “10” on the other side.
+S47 [how supplied] Bottle of 30 tablets with child-resistant closure and containing a desiccant.
+S48 [how supplied] Do not remove desiccant.
+S49 [how supplied] TIVICAY tablets, 25 mg, are pale yellow, round, film-coated, biconvex tablets debossed with “SV 572” on one side and “25” on the other side.
+S50 [how supplied] Bottle of 30 tablets with child-resistant closure.
+S51 [how supplied] NDC 49702-227-13.
+S52 [how supplied] TIVICAY tablets, 50 mg, are yellow, round, film-coated, biconvex tablets debossed with “SV 572” on one side and “50” on the other side.
+S53 [how supplied] excursions permitted 15° to 30°C (59° to 86°F) [See USP Controlled Room Temperature].
+S54 [how supplied] TIVICAY PD tablets for oral suspension, 5 mg, are white, round, strawberry cream flavored, film-coated, biconvex tablets debossed with “SV H7S” on one side and “5” on the other side.
+S55 [how supplied] Bottle of 60 tablets with child-resistant closure containing a desiccant.
+S56 [description] The chemical name of dolutegravir sodium is sodium (4 R ,12a S )-9-{[(2,4-difluorophenyl)methyl]carbamoyl}-4-methyl-6,8-dioxo-3,4,6,8,12,12a-hexahydro-2 H -pyrido[1',2':4,5]pyrazino[2,1- b ][1,3]oxazin-7-olate.
+S57 [description] The empirical formula is C 20 H 18 F 2 N 3 NaO 5, and the molecular weight is 441.36 g/mol.
+S58 [description] It has the following structural formula: Dolutegravir sodium is a white to light yellow powder and is slightly soluble in water.
+S59 [description] Each film-coated tablet of TIVICAY for oral administration contains 10.5, 26.3, or 52.6 mg of dolutegravir sodium, which is equivalent to 10, 25, or 50 mg dolutegravir free acid, respectively, and the following inactive ingredients: D-mannitol, microcrystalline cellulose, povidone K29/32, sodium starch glycolate, and sodium stearyl fumarate.
+S60 [description] The tablet film‑coating contains the inactive ingredients iron oxide yellow (25-mg and 50-mg tablets only), macrogol/PEG, polyvinyl alcohol-part hydrolyzed, talc, and titanium dioxide.
+S61 [description] Each TIVICAY PD tablet for oral suspension contains 5.26 mg of dolutegravir sodium, which is equivalent to 5 mg dolutegravir free acid, and the following inactive ingredients: calcium sulfate dihydrate, crospovidone, mannitol, microcrystalline cellulose, povidone K29/32, silicified microcrystalline cellulose, sodium starch glycolate, strawberry cream flavor, sucralose, and sodium stearyl fumarate.
+
+Return ONLY a JSON object {"dosing": [ ... ]}. One row per distinct regimen the label gives: per condition,
+per population, and PER STRENGTH when the label gives different directions for different strengths.
+Each row:
+  {"strength": "the strength this row is for, written like the list above, e.g. '300 mg/30 mg'", or null if the
+              dose is given as an amount (mg, mcg, g) that does not depend on the strength,
+   "dose_type": "usual" | "starting" | "maintenance" | "adjusted" (for a population such as renal or hepatic impairment),
+   "condition": "what it is for, or 'general'", "population": "adults" | "children" | "renal impairment" | ...,
+   "dose": N, "dose_max": N or null,
+   "unit": "mg" | "g" | "mcg" | "mg/kg" | "mcg/kg" | "tablets" | "caplets" | "capsules" | "mL",
+   "every_hours": H or null, "times_per_day": T or null, "duration_days": D or null,
+   "as_needed": true | false, "sentence": "Sk", "provenance": "quoted" | "interpreted"}
+Rules:
+- If the dose is a count of tablets, caplets or capsules and the label comes in more than one strength, "strength" is REQUIRED.
+- Weight-based doses use "mg/kg" or "mcg/kg" (e.g. "15 mg/kg" -> dose 15, unit "mg/kg").
+- A range like "500-750 mg" is dose=500, dose_max=750. "1 to 2 tablets" is dose=1, dose_max=2.
+- "twice daily" is times_per_day=2; "every 12 hours" is every_hours=12.
+- Not doses: maximums ("do not take more than 6 tablets") belong to limits; increases ("increase by 12.5 to 25 mcg")
+  are titration steps, not doses; "do not use for more than 10 days" is a limit, not a course length.
+- Read the sentence before a dose: it often says who the dose is for (e.g. patients with liver cirrhosis).
+- Use only numbers stated in the cited sentence. Cite exactly one sentence id per row; do not copy text.
+Include every regimen you find, even if there are many. If unsure, leave it out.

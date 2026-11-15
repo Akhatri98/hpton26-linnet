@@ -1,0 +1,1 @@
+{"rules":[{"id":"tramadol-min-interval-4h","family":"min_interval","hours":4,"sentence":"S7","provenance":"interpreted","loosest":{"hours":4},"note":"as needed every 4 to 6 hours"},{"id":"tramadol-daily-max-400mg","family":"daily_max","amount":400,"unit":"mg","sentence":"S11","provenance":"quoted"}],"memberships":[]}

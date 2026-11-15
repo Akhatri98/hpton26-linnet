@@ -1,0 +1,24 @@
+{
+  "name": "cefdinir-300mg-cap",
+  "display_name": "Cefdinir 300 mg capsules",
+  "spl_set_id": "10bf69e7-5f7e-4448-9f22-777f137d9666",
+  "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10bf69e7-5f7e-4448-9f22-777f137d9666",
+  "ingredients": {
+    "cefdinir": {
+      "amount": 300,
+      "unit": "mg"
+    }
+  },
+  "dose_note": "One 300 mg capsule per dose ('300 mg q12h or 600 mg q24h'); the prescription sets capsules per dose.",
+  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+  "unit_name": "capsule",
+  "units_per_dose": 1,
+  "label_max_units_per_dose": 2,
+  "verified": true,
+  "review": {
+    "decision": "approved",
+    "by": "claude",
+    "role": "AI (Claude), not a pharmacist",
+    "at": "2026-11-14T22:16:01-05:00"
+  }
+}

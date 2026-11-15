@@ -1,0 +1,1001 @@
+{
+  "ingredient": "levofloxacin",
+  "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+  "model": "claude-haiku-5-5",
+  "label_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+  "strengths": [
+    "250 mg",
+    "500 mg",
+    "750 mg"
+  ],
+  "substances": [
+    "levofloxacin"
+  ],
+  "dosing": [
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "Nosocomial pneumonia",
+      "population": "adults",
+      "dose": 750,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 24,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+        "section": "dosage and administration",
+        "sentence_id": "S2",
+        "sentence": "Dosage in Adult and Pediatric Patients with Creatinine Clearance greater than or equal to 50 mL/minute ( 2.1 , 2.2 ) Type of Infection Dose Every 24 hours Duration (days) Nosocomial Pneumonia ( 1.1 ) 750 mg 7 to 14 Community Acquired Pneumonia ( 1.2 ) 500 mg 7 to 14 Community Acquired Pneumonia ( 1.3 ) 750 mg 5 Complicated SSSI ( 1.4 ) 750 mg 7 to 14 Uncomplicated SSSI ( 1.5 ) 500 mg 7 to 10 Chronic Bacterial Prostatitis ( 1.6 ) 500 mg 28 Inhalational Anthrax (Post-Exposure) ( 1.7 ) Adults and Pediatric Patients 50 kg or greater 500 mg 60 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 60 Plague ( 1.8 ) Adults and Pediatric Patients 50 kg or greater 500 mg 10 to 14 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 10 to 14 Complicated UTI ( 1.9 ) or Acute Pyelonephritis ( 1.11 ) 750 mg 5 Complicated UTI ( 1.10 ) or Acute Pyelonephritis ( 1.11 ) 250 mg 10 Uncomplicated UTI ( 1.12 ) 250 mg 3 Acute Bacterial Exacerbation of Chronic Bronchitis ( 1.13 ) 500 mg 7 Acute Bacterial Sinusitis ( 1.14 ) 750 mg 5 500 mg 10 to 14 • Adjust dose for creatinine clearance less than 50 mL/minute ( 2.3 , 8.6 , 12.3 ) 2.1 Dosage of Levofloxacin Tablets in Adult Patients with Creatinine Clearance ≥ 50 mL/minute The usual dose of levofloxacin tablets is 250 mg, 500 mg, or 750 mg administered orally every 24 hours, as indicated by infection and described in Table 1.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:16-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "Community acquired pneumonia",
+      "population": "adults",
+      "dose": 500,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 24,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+        "section": "dosage and administration",
+        "sentence_id": "S2",
+        "sentence": "Dosage in Adult and Pediatric Patients with Creatinine Clearance greater than or equal to 50 mL/minute ( 2.1 , 2.2 ) Type of Infection Dose Every 24 hours Duration (days) Nosocomial Pneumonia ( 1.1 ) 750 mg 7 to 14 Community Acquired Pneumonia ( 1.2 ) 500 mg 7 to 14 Community Acquired Pneumonia ( 1.3 ) 750 mg 5 Complicated SSSI ( 1.4 ) 750 mg 7 to 14 Uncomplicated SSSI ( 1.5 ) 500 mg 7 to 10 Chronic Bacterial Prostatitis ( 1.6 ) 500 mg 28 Inhalational Anthrax (Post-Exposure) ( 1.7 ) Adults and Pediatric Patients 50 kg or greater 500 mg 60 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 60 Plague ( 1.8 ) Adults and Pediatric Patients 50 kg or greater 500 mg 10 to 14 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 10 to 14 Complicated UTI ( 1.9 ) or Acute Pyelonephritis ( 1.11 ) 750 mg 5 Complicated UTI ( 1.10 ) or Acute Pyelonephritis ( 1.11 ) 250 mg 10 Uncomplicated UTI ( 1.12 ) 250 mg 3 Acute Bacterial Exacerbation of Chronic Bronchitis ( 1.13 ) 500 mg 7 Acute Bacterial Sinusitis ( 1.14 ) 750 mg 5 500 mg 10 to 14 • Adjust dose for creatinine clearance less than 50 mL/minute ( 2.3 , 8.6 , 12.3 ) 2.1 Dosage of Levofloxacin Tablets in Adult Patients with Creatinine Clearance ≥ 50 mL/minute The usual dose of levofloxacin tablets is 250 mg, 500 mg, or 750 mg administered orally every 24 hours, as indicated by infection and described in Table 1.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:16-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "Community acquired pneumonia (5-day regimen)",
+      "population": "adults",
+      "dose": 750,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 24,
+      "times_per_day": null,
+      "duration_days": 5,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+        "section": "dosage and administration",
+        "sentence_id": "S2",
+        "sentence": "Dosage in Adult and Pediatric Patients with Creatinine Clearance greater than or equal to 50 mL/minute ( 2.1 , 2.2 ) Type of Infection Dose Every 24 hours Duration (days) Nosocomial Pneumonia ( 1.1 ) 750 mg 7 to 14 Community Acquired Pneumonia ( 1.2 ) 500 mg 7 to 14 Community Acquired Pneumonia ( 1.3 ) 750 mg 5 Complicated SSSI ( 1.4 ) 750 mg 7 to 14 Uncomplicated SSSI ( 1.5 ) 500 mg 7 to 10 Chronic Bacterial Prostatitis ( 1.6 ) 500 mg 28 Inhalational Anthrax (Post-Exposure) ( 1.7 ) Adults and Pediatric Patients 50 kg or greater 500 mg 60 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 60 Plague ( 1.8 ) Adults and Pediatric Patients 50 kg or greater 500 mg 10 to 14 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 10 to 14 Complicated UTI ( 1.9 ) or Acute Pyelonephritis ( 1.11 ) 750 mg 5 Complicated UTI ( 1.10 ) or Acute Pyelonephritis ( 1.11 ) 250 mg 10 Uncomplicated UTI ( 1.12 ) 250 mg 3 Acute Bacterial Exacerbation of Chronic Bronchitis ( 1.13 ) 500 mg 7 Acute Bacterial Sinusitis ( 1.14 ) 750 mg 5 500 mg 10 to 14 • Adjust dose for creatinine clearance less than 50 mL/minute ( 2.3 , 8.6 , 12.3 ) 2.1 Dosage of Levofloxacin Tablets in Adult Patients with Creatinine Clearance ≥ 50 mL/minute The usual dose of levofloxacin tablets is 250 mg, 500 mg, or 750 mg administered orally every 24 hours, as indicated by infection and described in Table 1.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:16-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "Complicated skin and skin structure infections",
+      "population": "adults",
+      "dose": 750,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 24,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+        "section": "dosage and administration",
+        "sentence_id": "S2",
+        "sentence": "Dosage in Adult and Pediatric Patients with Creatinine Clearance greater than or equal to 50 mL/minute ( 2.1 , 2.2 ) Type of Infection Dose Every 24 hours Duration (days) Nosocomial Pneumonia ( 1.1 ) 750 mg 7 to 14 Community Acquired Pneumonia ( 1.2 ) 500 mg 7 to 14 Community Acquired Pneumonia ( 1.3 ) 750 mg 5 Complicated SSSI ( 1.4 ) 750 mg 7 to 14 Uncomplicated SSSI ( 1.5 ) 500 mg 7 to 10 Chronic Bacterial Prostatitis ( 1.6 ) 500 mg 28 Inhalational Anthrax (Post-Exposure) ( 1.7 ) Adults and Pediatric Patients 50 kg or greater 500 mg 60 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 60 Plague ( 1.8 ) Adults and Pediatric Patients 50 kg or greater 500 mg 10 to 14 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 10 to 14 Complicated UTI ( 1.9 ) or Acute Pyelonephritis ( 1.11 ) 750 mg 5 Complicated UTI ( 1.10 ) or Acute Pyelonephritis ( 1.11 ) 250 mg 10 Uncomplicated UTI ( 1.12 ) 250 mg 3 Acute Bacterial Exacerbation of Chronic Bronchitis ( 1.13 ) 500 mg 7 Acute Bacterial Sinusitis ( 1.14 ) 750 mg 5 500 mg 10 to 14 • Adjust dose for creatinine clearance less than 50 mL/minute ( 2.3 , 8.6 , 12.3 ) 2.1 Dosage of Levofloxacin Tablets in Adult Patients with Creatinine Clearance ≥ 50 mL/minute The usual dose of levofloxacin tablets is 250 mg, 500 mg, or 750 mg administered orally every 24 hours, as indicated by infection and described in Table 1.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:16-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "Uncomplicated skin and skin structure infections",
+      "population": "adults",
+      "dose": 500,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 24,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+        "section": "dosage and administration",
+        "sentence_id": "S2",
+        "sentence": "Dosage in Adult and Pediatric Patients with Creatinine Clearance greater than or equal to 50 mL/minute ( 2.1 , 2.2 ) Type of Infection Dose Every 24 hours Duration (days) Nosocomial Pneumonia ( 1.1 ) 750 mg 7 to 14 Community Acquired Pneumonia ( 1.2 ) 500 mg 7 to 14 Community Acquired Pneumonia ( 1.3 ) 750 mg 5 Complicated SSSI ( 1.4 ) 750 mg 7 to 14 Uncomplicated SSSI ( 1.5 ) 500 mg 7 to 10 Chronic Bacterial Prostatitis ( 1.6 ) 500 mg 28 Inhalational Anthrax (Post-Exposure) ( 1.7 ) Adults and Pediatric Patients 50 kg or greater 500 mg 60 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 60 Plague ( 1.8 ) Adults and Pediatric Patients 50 kg or greater 500 mg 10 to 14 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 10 to 14 Complicated UTI ( 1.9 ) or Acute Pyelonephritis ( 1.11 ) 750 mg 5 Complicated UTI ( 1.10 ) or Acute Pyelonephritis ( 1.11 ) 250 mg 10 Uncomplicated UTI ( 1.12 ) 250 mg 3 Acute Bacterial Exacerbation of Chronic Bronchitis ( 1.13 ) 500 mg 7 Acute Bacterial Sinusitis ( 1.14 ) 750 mg 5 500 mg 10 to 14 • Adjust dose for creatinine clearance less than 50 mL/minute ( 2.3 , 8.6 , 12.3 ) 2.1 Dosage of Levofloxacin Tablets in Adult Patients with Creatinine Clearance ≥ 50 mL/minute The usual dose of levofloxacin tablets is 250 mg, 500 mg, or 750 mg administered orally every 24 hours, as indicated by infection and described in Table 1.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:16-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "Chronic bacterial prostatitis",
+      "population": "adults",
+      "dose": 500,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 24,
+      "times_per_day": null,
+      "duration_days": 28,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+        "section": "dosage and administration",
+        "sentence_id": "S2",
+        "sentence": "Dosage in Adult and Pediatric Patients with Creatinine Clearance greater than or equal to 50 mL/minute ( 2.1 , 2.2 ) Type of Infection Dose Every 24 hours Duration (days) Nosocomial Pneumonia ( 1.1 ) 750 mg 7 to 14 Community Acquired Pneumonia ( 1.2 ) 500 mg 7 to 14 Community Acquired Pneumonia ( 1.3 ) 750 mg 5 Complicated SSSI ( 1.4 ) 750 mg 7 to 14 Uncomplicated SSSI ( 1.5 ) 500 mg 7 to 10 Chronic Bacterial Prostatitis ( 1.6 ) 500 mg 28 Inhalational Anthrax (Post-Exposure) ( 1.7 ) Adults and Pediatric Patients 50 kg or greater 500 mg 60 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 60 Plague ( 1.8 ) Adults and Pediatric Patients 50 kg or greater 500 mg 10 to 14 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 10 to 14 Complicated UTI ( 1.9 ) or Acute Pyelonephritis ( 1.11 ) 750 mg 5 Complicated UTI ( 1.10 ) or Acute Pyelonephritis ( 1.11 ) 250 mg 10 Uncomplicated UTI ( 1.12 ) 250 mg 3 Acute Bacterial Exacerbation of Chronic Bronchitis ( 1.13 ) 500 mg 7 Acute Bacterial Sinusitis ( 1.14 ) 750 mg 5 500 mg 10 to 14 • Adjust dose for creatinine clearance less than 50 mL/minute ( 2.3 , 8.6 , 12.3 ) 2.1 Dosage of Levofloxacin Tablets in Adult Patients with Creatinine Clearance ≥ 50 mL/minute The usual dose of levofloxacin tablets is 250 mg, 500 mg, or 750 mg administered orally every 24 hours, as indicated by infection and described in Table 1.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:16-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "Complicated UTI or acute pyelonephritis (5-day regimen)",
+      "population": "adults",
+      "dose": 750,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 24,
+      "times_per_day": null,
+      "duration_days": 5,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+        "section": "dosage and administration",
+        "sentence_id": "S2",
+        "sentence": "Dosage in Adult and Pediatric Patients with Creatinine Clearance greater than or equal to 50 mL/minute ( 2.1 , 2.2 ) Type of Infection Dose Every 24 hours Duration (days) Nosocomial Pneumonia ( 1.1 ) 750 mg 7 to 14 Community Acquired Pneumonia ( 1.2 ) 500 mg 7 to 14 Community Acquired Pneumonia ( 1.3 ) 750 mg 5 Complicated SSSI ( 1.4 ) 750 mg 7 to 14 Uncomplicated SSSI ( 1.5 ) 500 mg 7 to 10 Chronic Bacterial Prostatitis ( 1.6 ) 500 mg 28 Inhalational Anthrax (Post-Exposure) ( 1.7 ) Adults and Pediatric Patients 50 kg or greater 500 mg 60 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 60 Plague ( 1.8 ) Adults and Pediatric Patients 50 kg or greater 500 mg 10 to 14 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 10 to 14 Complicated UTI ( 1.9 ) or Acute Pyelonephritis ( 1.11 ) 750 mg 5 Complicated UTI ( 1.10 ) or Acute Pyelonephritis ( 1.11 ) 250 mg 10 Uncomplicated UTI ( 1.12 ) 250 mg 3 Acute Bacterial Exacerbation of Chronic Bronchitis ( 1.13 ) 500 mg 7 Acute Bacterial Sinusitis ( 1.14 ) 750 mg 5 500 mg 10 to 14 • Adjust dose for creatinine clearance less than 50 mL/minute ( 2.3 , 8.6 , 12.3 ) 2.1 Dosage of Levofloxacin Tablets in Adult Patients with Creatinine Clearance ≥ 50 mL/minute The usual dose of levofloxacin tablets is 250 mg, 500 mg, or 750 mg administered orally every 24 hours, as indicated by infection and described in Table 1.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:16-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "Complicated UTI or acute pyelonephritis (10-day regimen)",
+      "population": "adults",
+      "dose": 250,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 24,
+      "times_per_day": null,
+      "duration_days": 10,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+        "section": "dosage and administration",
+        "sentence_id": "S2",
+        "sentence": "Dosage in Adult and Pediatric Patients with Creatinine Clearance greater than or equal to 50 mL/minute ( 2.1 , 2.2 ) Type of Infection Dose Every 24 hours Duration (days) Nosocomial Pneumonia ( 1.1 ) 750 mg 7 to 14 Community Acquired Pneumonia ( 1.2 ) 500 mg 7 to 14 Community Acquired Pneumonia ( 1.3 ) 750 mg 5 Complicated SSSI ( 1.4 ) 750 mg 7 to 14 Uncomplicated SSSI ( 1.5 ) 500 mg 7 to 10 Chronic Bacterial Prostatitis ( 1.6 ) 500 mg 28 Inhalational Anthrax (Post-Exposure) ( 1.7 ) Adults and Pediatric Patients 50 kg or greater 500 mg 60 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 60 Plague ( 1.8 ) Adults and Pediatric Patients 50 kg or greater 500 mg 10 to 14 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 10 to 14 Complicated UTI ( 1.9 ) or Acute Pyelonephritis ( 1.11 ) 750 mg 5 Complicated UTI ( 1.10 ) or Acute Pyelonephritis ( 1.11 ) 250 mg 10 Uncomplicated UTI ( 1.12 ) 250 mg 3 Acute Bacterial Exacerbation of Chronic Bronchitis ( 1.13 ) 500 mg 7 Acute Bacterial Sinusitis ( 1.14 ) 750 mg 5 500 mg 10 to 14 • Adjust dose for creatinine clearance less than 50 mL/minute ( 2.3 , 8.6 , 12.3 ) 2.1 Dosage of Levofloxacin Tablets in Adult Patients with Creatinine Clearance ≥ 50 mL/minute The usual dose of levofloxacin tablets is 250 mg, 500 mg, or 750 mg administered orally every 24 hours, as indicated by infection and described in Table 1.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:16-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "Uncomplicated UTI",
+      "population": "adults",
+      "dose": 250,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 24,
+      "times_per_day": null,
+      "duration_days": 3,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+        "section": "dosage and administration",
+        "sentence_id": "S2",
+        "sentence": "Dosage in Adult and Pediatric Patients with Creatinine Clearance greater than or equal to 50 mL/minute ( 2.1 , 2.2 ) Type of Infection Dose Every 24 hours Duration (days) Nosocomial Pneumonia ( 1.1 ) 750 mg 7 to 14 Community Acquired Pneumonia ( 1.2 ) 500 mg 7 to 14 Community Acquired Pneumonia ( 1.3 ) 750 mg 5 Complicated SSSI ( 1.4 ) 750 mg 7 to 14 Uncomplicated SSSI ( 1.5 ) 500 mg 7 to 10 Chronic Bacterial Prostatitis ( 1.6 ) 500 mg 28 Inhalational Anthrax (Post-Exposure) ( 1.7 ) Adults and Pediatric Patients 50 kg or greater 500 mg 60 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 60 Plague ( 1.8 ) Adults and Pediatric Patients 50 kg or greater 500 mg 10 to 14 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 10 to 14 Complicated UTI ( 1.9 ) or Acute Pyelonephritis ( 1.11 ) 750 mg 5 Complicated UTI ( 1.10 ) or Acute Pyelonephritis ( 1.11 ) 250 mg 10 Uncomplicated UTI ( 1.12 ) 250 mg 3 Acute Bacterial Exacerbation of Chronic Bronchitis ( 1.13 ) 500 mg 7 Acute Bacterial Sinusitis ( 1.14 ) 750 mg 5 500 mg 10 to 14 • Adjust dose for creatinine clearance less than 50 mL/minute ( 2.3 , 8.6 , 12.3 ) 2.1 Dosage of Levofloxacin Tablets in Adult Patients with Creatinine Clearance ≥ 50 mL/minute The usual dose of levofloxacin tablets is 250 mg, 500 mg, or 750 mg administered orally every 24 hours, as indicated by infection and described in Table 1.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:16-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "Acute bacterial exacerbation of chronic bronchitis",
+      "population": "adults",
+      "dose": 500,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 24,
+      "times_per_day": null,
+      "duration_days": 7,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+        "section": "dosage and administration",
+        "sentence_id": "S2",
+        "sentence": "Dosage in Adult and Pediatric Patients with Creatinine Clearance greater than or equal to 50 mL/minute ( 2.1 , 2.2 ) Type of Infection Dose Every 24 hours Duration (days) Nosocomial Pneumonia ( 1.1 ) 750 mg 7 to 14 Community Acquired Pneumonia ( 1.2 ) 500 mg 7 to 14 Community Acquired Pneumonia ( 1.3 ) 750 mg 5 Complicated SSSI ( 1.4 ) 750 mg 7 to 14 Uncomplicated SSSI ( 1.5 ) 500 mg 7 to 10 Chronic Bacterial Prostatitis ( 1.6 ) 500 mg 28 Inhalational Anthrax (Post-Exposure) ( 1.7 ) Adults and Pediatric Patients 50 kg or greater 500 mg 60 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 60 Plague ( 1.8 ) Adults and Pediatric Patients 50 kg or greater 500 mg 10 to 14 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 10 to 14 Complicated UTI ( 1.9 ) or Acute Pyelonephritis ( 1.11 ) 750 mg 5 Complicated UTI ( 1.10 ) or Acute Pyelonephritis ( 1.11 ) 250 mg 10 Uncomplicated UTI ( 1.12 ) 250 mg 3 Acute Bacterial Exacerbation of Chronic Bronchitis ( 1.13 ) 500 mg 7 Acute Bacterial Sinusitis ( 1.14 ) 750 mg 5 500 mg 10 to 14 • Adjust dose for creatinine clearance less than 50 mL/minute ( 2.3 , 8.6 , 12.3 ) 2.1 Dosage of Levofloxacin Tablets in Adult Patients with Creatinine Clearance ≥ 50 mL/minute The usual dose of levofloxacin tablets is 250 mg, 500 mg, or 750 mg administered orally every 24 hours, as indicated by infection and described in Table 1.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:16-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "Acute bacterial sinusitis (5-day regimen)",
+      "population": "adults",
+      "dose": 750,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 24,
+      "times_per_day": null,
+      "duration_days": 5,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+        "section": "dosage and administration",
+        "sentence_id": "S2",
+        "sentence": "Dosage in Adult and Pediatric Patients with Creatinine Clearance greater than or equal to 50 mL/minute ( 2.1 , 2.2 ) Type of Infection Dose Every 24 hours Duration (days) Nosocomial Pneumonia ( 1.1 ) 750 mg 7 to 14 Community Acquired Pneumonia ( 1.2 ) 500 mg 7 to 14 Community Acquired Pneumonia ( 1.3 ) 750 mg 5 Complicated SSSI ( 1.4 ) 750 mg 7 to 14 Uncomplicated SSSI ( 1.5 ) 500 mg 7 to 10 Chronic Bacterial Prostatitis ( 1.6 ) 500 mg 28 Inhalational Anthrax (Post-Exposure) ( 1.7 ) Adults and Pediatric Patients 50 kg or greater 500 mg 60 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 60 Plague ( 1.8 ) Adults and Pediatric Patients 50 kg or greater 500 mg 10 to 14 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 10 to 14 Complicated UTI ( 1.9 ) or Acute Pyelonephritis ( 1.11 ) 750 mg 5 Complicated UTI ( 1.10 ) or Acute Pyelonephritis ( 1.11 ) 250 mg 10 Uncomplicated UTI ( 1.12 ) 250 mg 3 Acute Bacterial Exacerbation of Chronic Bronchitis ( 1.13 ) 500 mg 7 Acute Bacterial Sinusitis ( 1.14 ) 750 mg 5 500 mg 10 to 14 • Adjust dose for creatinine clearance less than 50 mL/minute ( 2.3 , 8.6 , 12.3 ) 2.1 Dosage of Levofloxacin Tablets in Adult Patients with Creatinine Clearance ≥ 50 mL/minute The usual dose of levofloxacin tablets is 250 mg, 500 mg, or 750 mg administered orally every 24 hours, as indicated by infection and described in Table 1.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:16-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "Acute bacterial sinusitis (10-14 day regimen)",
+      "population": "adults",
+      "dose": 500,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 24,
+      "times_per_day": null,
+      "duration_days": 10,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+        "section": "dosage and administration",
+        "sentence_id": "S2",
+        "sentence": "Dosage in Adult and Pediatric Patients with Creatinine Clearance greater than or equal to 50 mL/minute ( 2.1 , 2.2 ) Type of Infection Dose Every 24 hours Duration (days) Nosocomial Pneumonia ( 1.1 ) 750 mg 7 to 14 Community Acquired Pneumonia ( 1.2 ) 500 mg 7 to 14 Community Acquired Pneumonia ( 1.3 ) 750 mg 5 Complicated SSSI ( 1.4 ) 750 mg 7 to 14 Uncomplicated SSSI ( 1.5 ) 500 mg 7 to 10 Chronic Bacterial Prostatitis ( 1.6 ) 500 mg 28 Inhalational Anthrax (Post-Exposure) ( 1.7 ) Adults and Pediatric Patients 50 kg or greater 500 mg 60 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 60 Plague ( 1.8 ) Adults and Pediatric Patients 50 kg or greater 500 mg 10 to 14 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 10 to 14 Complicated UTI ( 1.9 ) or Acute Pyelonephritis ( 1.11 ) 750 mg 5 Complicated UTI ( 1.10 ) or Acute Pyelonephritis ( 1.11 ) 250 mg 10 Uncomplicated UTI ( 1.12 ) 250 mg 3 Acute Bacterial Exacerbation of Chronic Bronchitis ( 1.13 ) 500 mg 7 Acute Bacterial Sinusitis ( 1.14 ) 750 mg 5 500 mg 10 to 14 • Adjust dose for creatinine clearance less than 50 mL/minute ( 2.3 , 8.6 , 12.3 ) 2.1 Dosage of Levofloxacin Tablets in Adult Patients with Creatinine Clearance ≥ 50 mL/minute The usual dose of levofloxacin tablets is 250 mg, 500 mg, or 750 mg administered orally every 24 hours, as indicated by infection and described in Table 1.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:16-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "Inhalational anthrax (post-exposure)",
+      "population": "adults and children weighing 50 kg or greater",
+      "dose": 500,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 24,
+      "times_per_day": null,
+      "duration_days": 60,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+        "section": "dosage and administration",
+        "sentence_id": "S12",
+        "sentence": "Type of Infection * Dose Frequency Duration † Inhalational Anthrax (post-exposure) ‡,§ Pediatric patients weighing 50 kg or greater 500 mg every 24 hours 60 days § Pediatric patients weighing 30 kg to less than 50 kg 250 mg every 12 hours 60 days § Plague ¶ Pediatric patients weighing 50 kg or greater 500 mg every 24 hours 10 to 14 days Pediatric patients weighing 30 kg to less than 50 kg 250 mg every 12 hours 10 to 14 days 2.3 Dosage Adjustment in Adults with Renal Impairment Administer levofloxacin tablets with caution in patients with renal impairment.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:16-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "Inhalational anthrax (post-exposure)",
+      "population": "children weighing 30 kg to less than 50 kg",
+      "dose": 250,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 12,
+      "times_per_day": null,
+      "duration_days": 60,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+        "section": "dosage and administration",
+        "sentence_id": "S12",
+        "sentence": "Type of Infection * Dose Frequency Duration † Inhalational Anthrax (post-exposure) ‡,§ Pediatric patients weighing 50 kg or greater 500 mg every 24 hours 60 days § Pediatric patients weighing 30 kg to less than 50 kg 250 mg every 12 hours 60 days § Plague ¶ Pediatric patients weighing 50 kg or greater 500 mg every 24 hours 10 to 14 days Pediatric patients weighing 30 kg to less than 50 kg 250 mg every 12 hours 10 to 14 days 2.3 Dosage Adjustment in Adults with Renal Impairment Administer levofloxacin tablets with caution in patients with renal impairment.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:16-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "Plague",
+      "population": "adults and children weighing 50 kg or greater",
+      "dose": 500,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 24,
+      "times_per_day": null,
+      "duration_days": 10,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+        "section": "dosage and administration",
+        "sentence_id": "S12",
+        "sentence": "Type of Infection * Dose Frequency Duration † Inhalational Anthrax (post-exposure) ‡,§ Pediatric patients weighing 50 kg or greater 500 mg every 24 hours 60 days § Pediatric patients weighing 30 kg to less than 50 kg 250 mg every 12 hours 60 days § Plague ¶ Pediatric patients weighing 50 kg or greater 500 mg every 24 hours 10 to 14 days Pediatric patients weighing 30 kg to less than 50 kg 250 mg every 12 hours 10 to 14 days 2.3 Dosage Adjustment in Adults with Renal Impairment Administer levofloxacin tablets with caution in patients with renal impairment.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:16-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "Plague",
+      "population": "children weighing 30 kg to less than 50 kg",
+      "dose": 250,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 12,
+      "times_per_day": null,
+      "duration_days": 10,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+        "section": "dosage and administration",
+        "sentence_id": "S12",
+        "sentence": "Type of Infection * Dose Frequency Duration † Inhalational Anthrax (post-exposure) ‡,§ Pediatric patients weighing 50 kg or greater 500 mg every 24 hours 60 days § Pediatric patients weighing 30 kg to less than 50 kg 250 mg every 12 hours 60 days § Plague ¶ Pediatric patients weighing 50 kg or greater 500 mg every 24 hours 10 to 14 days Pediatric patients weighing 30 kg to less than 50 kg 250 mg every 12 hours 10 to 14 days 2.3 Dosage Adjustment in Adults with Renal Impairment Administer levofloxacin tablets with caution in patients with renal impairment.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:16-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "adjusted",
+      "condition": "General (creatinine clearance 20 to 49 mL/minute, 750 mg regimen)",
+      "population": "renal impairment",
+      "dose": 750,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": 48,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "interpreted",
+      "source": {
+        "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+        "section": "dosage and administration",
+        "sentence_id": "S17",
+        "sentence": "Table 3 Dosage Adjustment in Adult Patients with Renal Impairment (Creatinine Clearance less than 50 mL/minute) Creatinine Clearance greater than or equal to 50 mL/minute Creatinine Clearance 20 to 49 mL/minute Creatinine Clearance 10 to 19 mL/minute Hemodialysis or Chronic Ambulatory Peritoneal Dialysis (CAPD) 750 mg every 24 hours 750 mg every 48 hours 750 mg initial dose, then 500 mg every 48 hours 750 mg initial dose, then 500 mg every 48 hours 500 mg every 24 hours 500 mg initial dose, then 250 mg every 24 hours 500 mg initial dose, then 250 mg every 48 hours 500 mg initial dose, then 250 mg every 48 hours 250 mg every 24 hours No dosage adjustment required 250 mg every 48 hours.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:16-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    }
+  ],
+  "limits": [],
+  "administration": [
+    {
+      "id": "levofloxacin-chelation-separation",
+      "family": "separation",
+      "target": "group:polyvalent_cations",
+      "before": 2,
+      "after": 2,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+        "section": "dosage and administration",
+        "sentence": "If treating uncomplicated UTI, then no dosage adjustment is required No information on dosing adjustment is available 2.4 Drug Interaction with Chelation Agents: Antacids, Sucralfate, Metal Cations, Multivitamins Levofloxacin tablets should be administered at least two hours before or two hours after antacids containing magnesium, aluminum, as well as sucralfate, metal cations such as iron, and multivitamin preparations with zinc or didanosine chewable/buffered tablets or the pediatric powder for oral solution [see Drug Interactions ( 7.1 ) and Patient Counseling Information ( 17 )] ."
+      },
+      "verified": false,
+      "note": "DRAFT: proposed by a language model.",
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:37-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "added to library as levofloxacin-chelation-separation"
+      }
+    }
+  ],
+  "memberships": [
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "aluminum",
+      "provenance": "quoted",
+      "basis": "If treating uncomplicated UTI, then no dosage adjustment is required No information on dosing adjustment is available 2.4 Drug Interaction with Chelation Agents: Antacids, Sucralfate, Metal Cations, Multivitamins Levofloxacin tablets should be administered at least two hours before or two hours after antacids containing magnesium, aluminum, as well as sucralfate, metal cations such as iron, and multivitamin preparations with zinc or didanosine chewable/buffered tablets or the pediatric powder for oral solution [see Drug Interactions ( 7.1 ) and Patient Counseling Information ( 17 )] .",
+      "source_spl": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:46-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "already a verified member of polyvalent_cations; groups.json unchanged"
+      }
+    },
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "magnesium",
+      "provenance": "quoted",
+      "basis": "If treating uncomplicated UTI, then no dosage adjustment is required No information on dosing adjustment is available 2.4 Drug Interaction with Chelation Agents: Antacids, Sucralfate, Metal Cations, Multivitamins Levofloxacin tablets should be administered at least two hours before or two hours after antacids containing magnesium, aluminum, as well as sucralfate, metal cations such as iron, and multivitamin preparations with zinc or didanosine chewable/buffered tablets or the pediatric powder for oral solution [see Drug Interactions ( 7.1 ) and Patient Counseling Information ( 17 )] .",
+      "source_spl": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:47-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "already a verified member of polyvalent_cations; groups.json unchanged"
+      }
+    },
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "sucralfate",
+      "provenance": "quoted",
+      "basis": "If treating uncomplicated UTI, then no dosage adjustment is required No information on dosing adjustment is available 2.4 Drug Interaction with Chelation Agents: Antacids, Sucralfate, Metal Cations, Multivitamins Levofloxacin tablets should be administered at least two hours before or two hours after antacids containing magnesium, aluminum, as well as sucralfate, metal cations such as iron, and multivitamin preparations with zinc or didanosine chewable/buffered tablets or the pediatric powder for oral solution [see Drug Interactions ( 7.1 ) and Patient Counseling Information ( 17 )] .",
+      "source_spl": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:48-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "already a verified member of polyvalent_cations; groups.json unchanged"
+      }
+    },
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "iron",
+      "provenance": "quoted",
+      "basis": "If treating uncomplicated UTI, then no dosage adjustment is required No information on dosing adjustment is available 2.4 Drug Interaction with Chelation Agents: Antacids, Sucralfate, Metal Cations, Multivitamins Levofloxacin tablets should be administered at least two hours before or two hours after antacids containing magnesium, aluminum, as well as sucralfate, metal cations such as iron, and multivitamin preparations with zinc or didanosine chewable/buffered tablets or the pediatric powder for oral solution [see Drug Interactions ( 7.1 ) and Patient Counseling Information ( 17 )] .",
+      "source_spl": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:49-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "already a verified member of polyvalent_cations; groups.json unchanged"
+      }
+    },
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "zinc",
+      "provenance": "quoted",
+      "basis": "If treating uncomplicated UTI, then no dosage adjustment is required No information on dosing adjustment is available 2.4 Drug Interaction with Chelation Agents: Antacids, Sucralfate, Metal Cations, Multivitamins Levofloxacin tablets should be administered at least two hours before or two hours after antacids containing magnesium, aluminum, as well as sucralfate, metal cations such as iron, and multivitamin preparations with zinc or didanosine chewable/buffered tablets or the pediatric powder for oral solution [see Drug Interactions ( 7.1 ) and Patient Counseling Information ( 17 )] .",
+      "source_spl": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:50-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "already a verified member of polyvalent_cations; groups.json unchanged"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "item": {
+        "id": "levofloxacin-q24h-min-interval",
+        "family": "min_interval",
+        "hours": 24,
+        "sentence": "S2",
+        "provenance": "quoted"
+      },
+      "reason": "S2 gives 'every 24 hours' as a regimen, not a minimum gap or an as-needed limit; the prescription sets the regimen"
+    },
+    {
+      "item": {
+        "group": "antacids",
+        "ingredient": "calcium_carbonate",
+        "sentence": "S18",
+        "provenance": "interpreted"
+      },
+      "reason": "ingredient 'calcium_carbonate' not named in S18"
+    },
+    {
+      "item": {
+        "group": "polyvalent_cations",
+        "ingredient": "calcium_carbonate",
+        "sentence": "S18",
+        "provenance": "interpreted"
+      },
+      "reason": "ingredient 'calcium_carbonate' not named in S18"
+    }
+  ],
+  "unaccounted_for": [
+    {
+      "priority": 1,
+      "kind": "possible_timing_rule",
+      "note": "",
+      "sentence_id": "S20",
+      "section": "dosage and administration",
+      "sentence": "If patients miss a dose, they should take it as soon as possible anytime up to 8 hours prior to their next scheduled dose."
+    },
+    {
+      "priority": 1,
+      "kind": "possible_timing_rule",
+      "note": "",
+      "sentence_id": "S21",
+      "section": "dosage and administration",
+      "sentence": "If less than 8 hours remain before the next dose, wait until their next scheduled dose."
+    },
+    {
+      "priority": 1,
+      "kind": "possible_timing_rule",
+      "note": "",
+      "sentence_id": "S23",
+      "section": "drug interactions",
+      "sentence": "These agents should be taken at least two hours before or two hours after oral levofloxacin administration."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S3",
+      "section": "dosage and administration",
+      "sentence": "These recommendations apply to patients with creatinine clearance ≥ 50 mL/minute."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S5",
+      "section": "dosage and administration",
+      "sentence": "Table 1 Dosage of Levofloxacin Tablets in Adult Patients with Creatinine Clearance greater than or equal to 50 mL/minute * Due to the designated pathogens [see Indications and Usage ( 1 )] ."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S15",
+      "section": "dosage and administration",
+      "sentence": "No adjustment is necessary for patients with a creatinine clearance greater than or equal to 50 mL/minute."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S19",
+      "section": "dosage and administration",
+      "sentence": "2.5 Important Administration Instructions Levofloxacin tablets can be administered without regard to food."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S29",
+      "section": "warnings and cautions",
+      "sentence": "Symptoms may occur soon after initiation of levofloxacin and may be irreversible in some patients [see Warnings and Precautions ( 5.1 ) and Adverse Reactions ( , 6.2 )] ."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S30",
+      "section": "warnings and cautions",
+      "sentence": "Careful medical history is necessary since CDAD has been reported to occur over two months after the administration of antibacterial agents."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S40",
+      "section": "description",
+      "sentence": "Above pH 5.8, the solubility increases rapidly to its maximum at pH 6.7 (272 mg/mL) and is considered freely soluble in this range."
+    },
+    {
+      "priority": 4,
+      "kind": "population",
+      "note": "",
+      "sentence_id": "S24",
+      "section": "warnings and cautions",
+      "sentence": "5 WARNINGS AND PRECAUTIONS • Anaphylactic reactions and allergic skin reactions, serious, occasionally fatal, may occur after first dose ( 4 , 5.7 ) • Hematologic (including agranulocytosis, thrombocytopenia), and renal toxicities may occur after multiple doses ( 5.6 ) • Hepatotoxicity: Severe, and sometimes fatal, hepatotoxicity has been reported."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S9",
+      "section": "dosage and administration",
+      "sentence": "Type of Infection * Dosed Every 24 hours Duration (days) † Nosocomial Pneumonia 750 mg 7 to 14 Community Acquired Pneumonia ‡ 500 mg 7 to 14 Community Acquired Pneumonia § 750 mg 5 Complicated Skin and Skin Structure Infections (SSSI) 750 mg 7 to 14 Uncomplicated SSSI 500 mg 7 to 10 Chronic Bacterial Prostatitis 500 mg 28 Inhalational Anthrax (Post-Exposure), adult and pediatric patients weighing 50 kg Þ, ß or greater Pediatric patients weighing 30 kg to less than 50 kg Þ, ß 500 mg see Table 2 below (2.2) 60 ß 60 ß Plague, adult and pediatric patients weighing 50 kg à or greater Pediatric patients weighing 30 kg to less than 50 kg à 500 mg see Table 2 below (2.2) 10 to 14 10 to 14 Complicated Urinary Tract Infection (cUTI) or Acute Pyelonephritis (AP) ¶ 750 mg 5 Complicated Urinary Tract Infection (cUTI) or Acute Pyelonephritis (AP) # 250 mg 10 # Uncomplicated Urinary Tract Infection 250 mg 3 Acute Bacterial Exacerbation of Chronic Bronchitis (ABECB) 500 mg 7 Acute Bacterial Sinusitis (ABS) 750 mg 5 500 mg 10 to 14 2.2 Dosage of Levofloxacin Tablets in Pediatric Patients with Inhalational Anthrax or Plague The dosage of levofloxacin tablets for inhalational anthrax (post-exposure) and plague in pediatric patients who weigh 30 kg or greater is described below in Table 2."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S22",
+      "section": "drug interactions",
+      "sentence": "7 DRUG INTERACTIONS Interacting Drug Interaction Multivalent cation-containing products including antacids, metal cations or didanosine Absorption of levofloxacin is decreased when the tablets are taken within 2 hours of these products."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S34",
+      "section": "warnings and cautions",
+      "sentence": "5.14 Photosensitivity/Phototoxicity Moderate to severe photosensitivity/phototoxicity reactions, the latter of which may manifest as exaggerated sunburn reactions (e.g., burning, erythema, exudation, vesicles, blistering, edema) involving areas exposed to light (typically the face, \"V\" area of the neck, extensor surfaces of the forearms, dorsa of the hands), can be associated with the use of fluoroquinolones after sun or UV light exposure."
+    }
+  ],
+  "sentences": [
+    {
+      "sentence_id": "S1",
+      "section": "dosage and administration",
+      "text": "Alternative formulations of levofloxacin may be considered for pediatric patients who weigh less than 30 kg ( 2.2 )."
+    },
+    {
+      "sentence_id": "S2",
+      "section": "dosage and administration",
+      "text": "Dosage in Adult and Pediatric Patients with Creatinine Clearance greater than or equal to 50 mL/minute ( 2.1 , 2.2 ) Type of Infection Dose Every 24 hours Duration (days) Nosocomial Pneumonia ( 1.1 ) 750 mg 7 to 14 Community Acquired Pneumonia ( 1.2 ) 500 mg 7 to 14 Community Acquired Pneumonia ( 1.3 ) 750 mg 5 Complicated SSSI ( 1.4 ) 750 mg 7 to 14 Uncomplicated SSSI ( 1.5 ) 500 mg 7 to 10 Chronic Bacterial Prostatitis ( 1.6 ) 500 mg 28 Inhalational Anthrax (Post-Exposure) ( 1.7 ) Adults and Pediatric Patients 50 kg or greater 500 mg 60 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 60 Plague ( 1.8 ) Adults and Pediatric Patients 50 kg or greater 500 mg 10 to 14 Pediatric Patients 30 kg to less than 50 kg (2.2) 250 mg every 12 hours 10 to 14 Complicated UTI ( 1.9 ) or Acute Pyelonephritis ( 1.11 ) 750 mg 5 Complicated UTI ( 1.10 ) or Acute Pyelonephritis ( 1.11 ) 250 mg 10 Uncomplicated UTI ( 1.12 ) 250 mg 3 Acute Bacterial Exacerbation of Chronic Bronchitis ( 1.13 ) 500 mg 7 Acute Bacterial Sinusitis ( 1.14 ) 750 mg 5 500 mg 10 to 14 • Adjust dose for creatinine clearance less than 50 mL/minute ( 2.3 , 8.6 , 12.3 ) 2.1 Dosage of Levofloxacin Tablets in Adult Patients with Creatinine Clearance ≥ 50 mL/minute The usual dose of levofloxacin tablets is 250 mg, 500 mg, or 750 mg administered orally every 24 hours, as indicated by infection and described in Table 1."
+    },
+    {
+      "sentence_id": "S3",
+      "section": "dosage and administration",
+      "text": "These recommendations apply to patients with creatinine clearance ≥ 50 mL/minute."
+    },
+    {
+      "sentence_id": "S4",
+      "section": "dosage and administration",
+      "text": "For patients with creatinine clearance less than 50 mL/min, adjustments to the dosing regimen are required [see Dosage and Administration ( 2.3 )] ."
+    },
+    {
+      "sentence_id": "S5",
+      "section": "dosage and administration",
+      "text": "Table 1 Dosage of Levofloxacin Tablets in Adult Patients with Creatinine Clearance greater than or equal to 50 mL/minute * Due to the designated pathogens [see Indications and Usage ( 1 )] ."
+    },
+    {
+      "sentence_id": "S6",
+      "section": "dosage and administration",
+      "text": "Þ Drug administration should begin as soon as possible after suspected or confirmed exposure to aerosolized B."
+    },
+    {
+      "sentence_id": "S7",
+      "section": "dosage and administration",
+      "text": "à Drug administration should begin as soon as possible after suspected or confirmed exposure to Yersinia pestis ."
+    },
+    {
+      "sentence_id": "S8",
+      "section": "dosage and administration",
+      "text": "Higher doses of levofloxacin tablet typically used for treatment of pneumonia can be used for treatment of plague, if clinically indicated."
+    },
+    {
+      "sentence_id": "S9",
+      "section": "dosage and administration",
+      "text": "Type of Infection * Dosed Every 24 hours Duration (days) † Nosocomial Pneumonia 750 mg 7 to 14 Community Acquired Pneumonia ‡ 500 mg 7 to 14 Community Acquired Pneumonia § 750 mg 5 Complicated Skin and Skin Structure Infections (SSSI) 750 mg 7 to 14 Uncomplicated SSSI 500 mg 7 to 10 Chronic Bacterial Prostatitis 500 mg 28 Inhalational Anthrax (Post-Exposure), adult and pediatric patients weighing 50 kg Þ, ß or greater Pediatric patients weighing 30 kg to less than 50 kg Þ, ß 500 mg see Table 2 below (2.2) 60 ß 60 ß Plague, adult and pediatric patients weighing 50 kg à or greater Pediatric patients weighing 30 kg to less than 50 kg à 500 mg see Table 2 below (2.2) 10 to 14 10 to 14 Complicated Urinary Tract Infection (cUTI) or Acute Pyelonephritis (AP) ¶ 750 mg 5 Complicated Urinary Tract Infection (cUTI) or Acute Pyelonephritis (AP) # 250 mg 10 # Uncomplicated Urinary Tract Infection 250 mg 3 Acute Bacterial Exacerbation of Chronic Bronchitis (ABECB) 500 mg 7 Acute Bacterial Sinusitis (ABS) 750 mg 5 500 mg 10 to 14 2.2 Dosage of Levofloxacin Tablets in Pediatric Patients with Inhalational Anthrax or Plague The dosage of levofloxacin tablets for inhalational anthrax (post-exposure) and plague in pediatric patients who weigh 30 kg or greater is described below in Table 2."
+    },
+    {
+      "sentence_id": "S10",
+      "section": "dosage and administration",
+      "text": "‡ Begin levofloxacin tablets as soon as possible after suspected or confirmed exposure to aerosolized B."
+    },
+    {
+      "sentence_id": "S11",
+      "section": "dosage and administration",
+      "text": "Begin levofloxacin tablets as soon as possible after suspected or confirmed exposure to Yersinia pestis ."
+    },
+    {
+      "sentence_id": "S12",
+      "section": "dosage and administration",
+      "text": "Type of Infection * Dose Frequency Duration † Inhalational Anthrax (post-exposure) ‡,§ Pediatric patients weighing 50 kg or greater 500 mg every 24 hours 60 days § Pediatric patients weighing 30 kg to less than 50 kg 250 mg every 12 hours 60 days § Plague ¶ Pediatric patients weighing 50 kg or greater 500 mg every 24 hours 10 to 14 days Pediatric patients weighing 30 kg to less than 50 kg 250 mg every 12 hours 10 to 14 days 2.3 Dosage Adjustment in Adults with Renal Impairment Administer levofloxacin tablets with caution in patients with renal impairment."
+    },
+    {
+      "sentence_id": "S13",
+      "section": "dosage and administration",
+      "text": "Careful clinical observation and appropriate laboratory studies should be performed prior to and during therapy since elimination of levofloxacin may be reduced in these patients."
+    },
+    {
+      "sentence_id": "S14",
+      "section": "dosage and administration",
+      "text": "In patients with renal impairment (creatinine clearance less than 50 mL/min), adjustment of the dosage regimen is necessary to avoid the accumulation of levofloxacin due to decreased clearance [see Use in Specific Populations ( 8.6 )] ."
+    },
+    {
+      "sentence_id": "S15",
+      "section": "dosage and administration",
+      "text": "No adjustment is necessary for patients with a creatinine clearance greater than or equal to 50 mL/minute."
+    },
+    {
+      "sentence_id": "S16",
+      "section": "dosage and administration",
+      "text": "Table 3 shows how to adjust dose based on creatinine clearance."
+    },
+    {
+      "sentence_id": "S17",
+      "section": "dosage and administration",
+      "text": "Table 3 Dosage Adjustment in Adult Patients with Renal Impairment (Creatinine Clearance less than 50 mL/minute) Creatinine Clearance greater than or equal to 50 mL/minute Creatinine Clearance 20 to 49 mL/minute Creatinine Clearance 10 to 19 mL/minute Hemodialysis or Chronic Ambulatory Peritoneal Dialysis (CAPD) 750 mg every 24 hours 750 mg every 48 hours 750 mg initial dose, then 500 mg every 48 hours 750 mg initial dose, then 500 mg every 48 hours 500 mg every 24 hours 500 mg initial dose, then 250 mg every 24 hours 500 mg initial dose, then 250 mg every 48 hours 500 mg initial dose, then 250 mg every 48 hours 250 mg every 24 hours No dosage adjustment required 250 mg every 48 hours."
+    },
+    {
+      "sentence_id": "S18",
+      "section": "dosage and administration",
+      "text": "If treating uncomplicated UTI, then no dosage adjustment is required No information on dosing adjustment is available 2.4 Drug Interaction with Chelation Agents: Antacids, Sucralfate, Metal Cations, Multivitamins Levofloxacin tablets should be administered at least two hours before or two hours after antacids containing magnesium, aluminum, as well as sucralfate, metal cations such as iron, and multivitamin preparations with zinc or didanosine chewable/buffered tablets or the pediatric powder for oral solution [see Drug Interactions ( 7.1 ) and Patient Counseling Information ( 17 )] ."
+    },
+    {
+      "sentence_id": "S19",
+      "section": "dosage and administration",
+      "text": "2.5 Important Administration Instructions Levofloxacin tablets can be administered without regard to food."
+    },
+    {
+      "sentence_id": "S20",
+      "section": "dosage and administration",
+      "text": "If patients miss a dose, they should take it as soon as possible anytime up to 8 hours prior to their next scheduled dose."
+    },
+    {
+      "sentence_id": "S21",
+      "section": "dosage and administration",
+      "text": "If less than 8 hours remain before the next dose, wait until their next scheduled dose."
+    },
+    {
+      "sentence_id": "S22",
+      "section": "drug interactions",
+      "text": "7 DRUG INTERACTIONS Interacting Drug Interaction Multivalent cation-containing products including antacids, metal cations or didanosine Absorption of levofloxacin is decreased when the tablets are taken within 2 hours of these products."
+    },
+    {
+      "sentence_id": "S23",
+      "section": "drug interactions",
+      "text": "These agents should be taken at least two hours before or two hours after oral levofloxacin administration."
+    },
+    {
+      "sentence_id": "S24",
+      "section": "warnings and cautions",
+      "text": "5 WARNINGS AND PRECAUTIONS • Anaphylactic reactions and allergic skin reactions, serious, occasionally fatal, may occur after first dose ( 4 , 5.7 ) • Hematologic (including agranulocytosis, thrombocytopenia), and renal toxicities may occur after multiple doses ( 5.6 ) • Hepatotoxicity: Severe, and sometimes fatal, hepatotoxicity has been reported."
+    },
+    {
+      "sentence_id": "S25",
+      "section": "warnings and cautions",
+      "text": "Discontinue immediately if signs and symptoms of hepatitis occur ( 5.8 ) • Clostridium difficile -associated colitis: evaluate if diarrhea occurs ( 5.10 ) • Prolongation of the QT interval and isolated cases of torsade de pointes have been reported."
+    },
+    {
+      "sentence_id": "S26",
+      "section": "warnings and cautions",
+      "text": "Avoid use in patients with known prolongation, those with hypokalemia, and with other drugs that prolong the QT interval ( 5.11 , 8.5 ) 5.1 Disabling and Potentially Irreversible Serious Adverse Reactions Including Tendinitis and Tendon Rupture, Peripheral Neuropathy, and Central Nervous System Effects Fluoroquinolones, including levofloxacin, have been associated with disabling and potentially irreversible serious adverse reactions from different body systems that can occur together in the same patient."
+    },
+    {
+      "sentence_id": "S27",
+      "section": "warnings and cautions",
+      "text": "These reactions can occur within hours to weeks after starting levofloxacin."
+    },
+    {
+      "sentence_id": "S28",
+      "section": "warnings and cautions",
+      "text": "Tendinitis or tendon rupture can occur within hours or days of starting levofloxacin or as long as several months after completion of fluoroquinolone therapy."
+    },
+    {
+      "sentence_id": "S29",
+      "section": "warnings and cautions",
+      "text": "Symptoms may occur soon after initiation of levofloxacin and may be irreversible in some patients [see Warnings and Precautions ( 5.1 ) and Adverse Reactions ( , 6.2 )] ."
+    },
+    {
+      "sentence_id": "S30",
+      "section": "warnings and cautions",
+      "text": "Careful medical history is necessary since CDAD has been reported to occur over two months after the administration of antibacterial agents."
+    },
+    {
+      "sentence_id": "S31",
+      "section": "warnings and cautions",
+      "text": "5.11 Prolongation of the QT Interval Some fluoroquinolones, including levofloxacin, have been associated with prolongation of the QT interval on the electrocardiogram and infrequent cases of arrhythmia."
+    },
+    {
+      "sentence_id": "S32",
+      "section": "warnings and cautions",
+      "text": "Levofloxacin should be avoided in patients with known prolongation of the QT interval, patients with uncorrected hypokalemia, and patients receiving Class IA (quinidine, procainamide), or Class III (amiodarone, sotalol) antiarrhythmic agents."
+    },
+    {
+      "sentence_id": "S33",
+      "section": "warnings and cautions",
+      "text": "Elderly patients may be more susceptible to drug-associated effects on the QT interval [see Adverse Reactions ( 6.3 ), Use in Specific Populations ( 8.5 ) and Patient Counseling Information ( 17 )]."
+    },
+    {
+      "sentence_id": "S34",
+      "section": "warnings and cautions",
+      "text": "5.14 Photosensitivity/Phototoxicity Moderate to severe photosensitivity/phototoxicity reactions, the latter of which may manifest as exaggerated sunburn reactions (e.g., burning, erythema, exudation, vesicles, blistering, edema) involving areas exposed to light (typically the face, \"V\" area of the neck, extensor surfaces of the forearms, dorsa of the hands), can be associated with the use of fluoroquinolones after sun or UV light exposure."
+    },
+    {
+      "sentence_id": "S35",
+      "section": "dosage forms and strengths",
+      "text": "3 DOSAGE FORMS AND STRENGTHS Formulation ( 3 ) Strength Tablets 250 mg, 500 mg, and 750 mg Levofloxacin tablets, USP are white to off white, modified capsule-shaped, biconvex and film-coated • 250 mg tablets, debossed with logo of ‘ZC55’ on one side and plain on other side • 500 mg tablets, debossed with logo of ‘ZC56’ on one side and plain on other side • 750 mg tablets, debossed with logo of ‘ZC57’ on one side and plain on other side"
+    },
+    {
+      "sentence_id": "S36",
+      "section": "how supplied",
+      "text": "16 HOW SUPPLIED/STORAGE AND HANDLING Levofloxacin Tablets USP, 750 mg are white to off white, modified capsule-shaped, biconvex, film-coated tablets debossed with logo of 'ZC57' on one side and plain on other side and are supplied as follows: NDC 68788-8809-7 Bottles of 70 Tablets NDC 68788-8809-1 Bottles of 10 Tablets NDC 68788-8809-4 Bottles of 14 Tablets NDC 68788-8809-2 Bottles of 20 Tablets Store at 20°C to 25° C (68°F to 77° F) [see USP Controlled Room Temperature]."
+    },
+    {
+      "sentence_id": "S37",
+      "section": "description",
+      "text": "The molecule exists as a zwitterion at the pH conditions in the small intestine."
+    },
+    {
+      "sentence_id": "S38",
+      "section": "description",
+      "text": "The data demonstrate that from pH 0.6 to 5.8, the solubility of levofloxacin is essentially constant (approximately 100 mg/mL)."
+    },
+    {
+      "sentence_id": "S39",
+      "section": "description",
+      "text": "Levofloxacin is considered soluble to freely soluble in this pH range, as defined by USP nomenclature."
+    },
+    {
+      "sentence_id": "S40",
+      "section": "description",
+      "text": "Above pH 5.8, the solubility increases rapidly to its maximum at pH 6.7 (272 mg/mL) and is considered freely soluble in this range."
+    },
+    {
+      "sentence_id": "S41",
+      "section": "description",
+      "text": "Above pH 6.7, the solubility decreases and reaches a minimum value (about 50 mg/mL) at a pH of approximately 6.9."
+    },
+    {
+      "sentence_id": "S42",
+      "section": "description",
+      "text": "This in vitro chelation potential has the following formation order: Al +3 > Cu +2 > Zn +2 > Mg +2 > Ca +2 ."
+    },
+    {
+      "sentence_id": "S43",
+      "section": "description",
+      "text": "Each levofloxacin tablet, USP intended for oral administration contains levofloxacin hemihydrate equivalent to 250 mg or 500 mg or 750 mg of levofloxacin."
+    }
+  ],
+  "passes_run": [
+    "administration",
+    "dosing",
+    "limits"
+  ]
+}

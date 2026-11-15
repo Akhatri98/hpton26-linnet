@@ -1,0 +1,256 @@
+{
+  "ingredient": "naproxen_sodium",
+  "spl_set_id": "02941928-128a-2c88-e063-6294a90ac6ba",
+  "model": "claude-haiku-5-5",
+  "label_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02941928-128a-2c88-e063-6294a90ac6ba",
+  "strengths": [
+    "220 mg"
+  ],
+  "substances": [
+    "naproxen sodium"
+  ],
+  "dosing": [
+    {
+      "strength": null,
+      "dose_type": "usual",
+      "condition": "general",
+      "population": "adults",
+      "dose": 1,
+      "dose_max": 2,
+      "unit": "caplets",
+      "every_hours": 8,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": true,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "02941928-128a-2c88-e063-6294a90ac6ba",
+        "section": "dosage and administration",
+        "sentence_id": "S1",
+        "sentence": "Directions do not take more than directed the smallest effective dose should be used drink a full glass of water with each dose Adults and children 12 years and older take 1 caplet every 8 to 12 hours while symptoms last for the first dose you may take 2 caplets within the first hour do not exceed 2 caplets in any 8- to 12-hour period do not exceed 3 caplets in a 24-hour period Children under 12 years ask a doctor",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02941928-128a-2c88-e063-6294a90ac6ba"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:18-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "starting",
+      "condition": "general",
+      "population": "adults",
+      "dose": 2,
+      "dose_max": null,
+      "unit": "caplets",
+      "every_hours": null,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": true,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "02941928-128a-2c88-e063-6294a90ac6ba",
+        "section": "dosage and administration",
+        "sentence_id": "S1",
+        "sentence": "Directions do not take more than directed the smallest effective dose should be used drink a full glass of water with each dose Adults and children 12 years and older take 1 caplet every 8 to 12 hours while symptoms last for the first dose you may take 2 caplets within the first hour do not exceed 2 caplets in any 8- to 12-hour period do not exceed 3 caplets in a 24-hour period Children under 12 years ask a doctor",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02941928-128a-2c88-e063-6294a90ac6ba"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:18-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    }
+  ],
+  "limits": [
+    {
+      "kind": "per_dose",
+      "amount": 2,
+      "unit": "caplets",
+      "ingredient": null,
+      "strength": null,
+      "population": "adults",
+      "condition": null,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "02941928-128a-2c88-e063-6294a90ac6ba",
+        "section": "dosage and administration",
+        "sentence_id": "S1",
+        "sentence": "Directions do not take more than directed the smallest effective dose should be used drink a full glass of water with each dose Adults and children 12 years and older take 1 caplet every 8 to 12 hours while symptoms last for the first dose you may take 2 caplets within the first hour do not exceed 2 caplets in any 8- to 12-hour period do not exceed 3 caplets in a 24-hour period Children under 12 years ask a doctor",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02941928-128a-2c88-e063-6294a90ac6ba"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:18-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "kind": "per_day",
+      "amount": 3,
+      "unit": "caplets",
+      "ingredient": null,
+      "strength": null,
+      "population": "adults",
+      "condition": null,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "02941928-128a-2c88-e063-6294a90ac6ba",
+        "section": "dosage and administration",
+        "sentence_id": "S1",
+        "sentence": "Directions do not take more than directed the smallest effective dose should be used drink a full glass of water with each dose Adults and children 12 years and older take 1 caplet every 8 to 12 hours while symptoms last for the first dose you may take 2 caplets within the first hour do not exceed 2 caplets in any 8- to 12-hour period do not exceed 3 caplets in a 24-hour period Children under 12 years ask a doctor",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02941928-128a-2c88-e063-6294a90ac6ba"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:18-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "kind": "duration_days",
+      "amount": 10,
+      "unit": "days",
+      "ingredient": null,
+      "strength": null,
+      "population": "general",
+      "condition": "pain",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "02941928-128a-2c88-e063-6294a90ac6ba",
+        "section": "warnings",
+        "sentence_id": "S4",
+        "sentence": "Do not use if you have ever had an allergic reaction to any other pain reliever/fever reducer right before or after heart surgery Ask a doctor before use if the stomach bleeding warning applies to you you have a history of stomach problems, such as heartburn you have high blood pressure, heart disease, liver cirrhosis, kidney disease, asthma, or had a stroke you are taking a diuretic you have problems or serious side effects from taking pain relievers or fever reducers Ask a doctor or pharmacist before use if you are under a doctor's care for any serious conidtion taking aspirin for heart attack or stroke, because naproxen may decrease this benefit of aspirin taking any other drug When using this product take with food or milk if stomach upset occurs Stop use and ask a doctor if you experience any of the following signs of stomach bleeding: feel faint vomit blood have bloody or black stools have stomach pain that does not get better you have symptoms of heart problems or stroke: chest pain trouble breathing weakness in one part or side of body slurred speech leg swelling pain gets worse or lasts more than 10 days fever gets worse or lasts more than 3 days you have difficulty swallowing it feels like the pill is stuck in your throat redness or swelling is present in the painful area any new symptoms appear If pregnant or breast-feeding , ask a healthcare professional before use.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02941928-128a-2c88-e063-6294a90ac6ba"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:18-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "kind": "duration_days",
+      "amount": 3,
+      "unit": "days",
+      "ingredient": null,
+      "strength": null,
+      "population": "general",
+      "condition": "fever",
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "02941928-128a-2c88-e063-6294a90ac6ba",
+        "section": "warnings",
+        "sentence_id": "S4",
+        "sentence": "Do not use if you have ever had an allergic reaction to any other pain reliever/fever reducer right before or after heart surgery Ask a doctor before use if the stomach bleeding warning applies to you you have a history of stomach problems, such as heartburn you have high blood pressure, heart disease, liver cirrhosis, kidney disease, asthma, or had a stroke you are taking a diuretic you have problems or serious side effects from taking pain relievers or fever reducers Ask a doctor or pharmacist before use if you are under a doctor's care for any serious conidtion taking aspirin for heart attack or stroke, because naproxen may decrease this benefit of aspirin taking any other drug When using this product take with food or milk if stomach upset occurs Stop use and ask a doctor if you experience any of the following signs of stomach bleeding: feel faint vomit blood have bloody or black stools have stomach pain that does not get better you have symptoms of heart problems or stroke: chest pain trouble breathing weakness in one part or side of body slurred speech leg swelling pain gets worse or lasts more than 10 days fever gets worse or lasts more than 3 days you have difficulty swallowing it feels like the pill is stuck in your throat redness or swelling is present in the painful area any new symptoms appear If pregnant or breast-feeding , ask a healthcare professional before use.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02941928-128a-2c88-e063-6294a90ac6ba"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:18-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    }
+  ],
+  "administration": [
+    {
+      "id": "naproxen_sodium-min-interval-8h",
+      "family": "min_interval",
+      "hours": 8,
+      "provenance": "interpreted",
+      "loosest": {
+        "hours": 12
+      },
+      "note": "Label says take 1 caplet every 8 to 12 hours; the 8-hour lower bound is used as the minimum interval. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "02941928-128a-2c88-e063-6294a90ac6ba",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02941928-128a-2c88-e063-6294a90ac6ba",
+        "section": "dosage and administration",
+        "sentence": "Directions do not take more than directed the smallest effective dose should be used drink a full glass of water with each dose Adults and children 12 years and older take 1 caplet every 8 to 12 hours while symptoms last for the first dose you may take 2 caplets within the first hour do not exceed 2 caplets in any 8- to 12-hour period do not exceed 3 caplets in a 24-hour period Children under 12 years ask a doctor"
+      },
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:27-05:00",
+        "note": "3 of 4 runs agreed",
+        "result": "added to library as naproxen_sodium-min-interval-8h"
+      }
+    }
+  ],
+  "memberships": [],
+  "rejected": [],
+  "unaccounted_for": [
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S2",
+      "section": "warnings",
+      "sentence": "The chance is higher if you: are age 60 or older have had stomach ulcers or bleeding problems take a blood thinning (anticoagulant) or steroid drug take other drugs containing prescription or nonprescription NSAIDs (aspirin, ibuprofen, naproxen, or others) have 3 or more alcoholic drinks every day while using this product take more or for a longer time than directed Heart attack and stroke warning: NSAIDs, except aspirin, increase the risk of heart attack, heart failure, and stroke."
+    }
+  ],
+  "sentences": [
+    {
+      "sentence_id": "S1",
+      "section": "dosage and administration",
+      "text": "Directions do not take more than directed the smallest effective dose should be used drink a full glass of water with each dose Adults and children 12 years and older take 1 caplet every 8 to 12 hours while symptoms last for the first dose you may take 2 caplets within the first hour do not exceed 2 caplets in any 8- to 12-hour period do not exceed 3 caplets in a 24-hour period Children under 12 years ask a doctor"
+    },
+    {
+      "sentence_id": "S2",
+      "section": "warnings",
+      "text": "The chance is higher if you: are age 60 or older have had stomach ulcers or bleeding problems take a blood thinning (anticoagulant) or steroid drug take other drugs containing prescription or nonprescription NSAIDs (aspirin, ibuprofen, naproxen, or others) have 3 or more alcoholic drinks every day while using this product take more or for a longer time than directed Heart attack and stroke warning: NSAIDs, except aspirin, increase the risk of heart attack, heart failure, and stroke."
+    },
+    {
+      "sentence_id": "S3",
+      "section": "warnings",
+      "text": "The risk is higher if you use more than directed or for longer than directed."
+    },
+    {
+      "sentence_id": "S4",
+      "section": "warnings",
+      "text": "Do not use if you have ever had an allergic reaction to any other pain reliever/fever reducer right before or after heart surgery Ask a doctor before use if the stomach bleeding warning applies to you you have a history of stomach problems, such as heartburn you have high blood pressure, heart disease, liver cirrhosis, kidney disease, asthma, or had a stroke you are taking a diuretic you have problems or serious side effects from taking pain relievers or fever reducers Ask a doctor or pharmacist before use if you are under a doctor's care for any serious conidtion taking aspirin for heart attack or stroke, because naproxen may decrease this benefit of aspirin taking any other drug When using this product take with food or milk if stomach upset occurs Stop use and ask a doctor if you experience any of the following signs of stomach bleeding: feel faint vomit blood have bloody or black stools have stomach pain that does not get better you have symptoms of heart problems or stroke: chest pain trouble breathing weakness in one part or side of body slurred speech leg swelling pain gets worse or lasts more than 10 days fever gets worse or lasts more than 3 days you have difficulty swallowing it feels like the pill is stuck in your throat redness or swelling is present in the painful area any new symptoms appear If pregnant or breast-feeding , ask a healthcare professional before use."
+    },
+    {
+      "sentence_id": "S5",
+      "section": "do not use",
+      "text": "Do not use if you have ever had an allergic reaction to any other pain reliever/fever reducer right before or after heart surgery"
+    },
+    {
+      "sentence_id": "S6",
+      "section": "active ingredient",
+      "text": "Active ingredient (in each caplet) Naproxen sodium 220 mg (naproxen 200 mg) (NSAID) *nonsteroidal anti-inflammatory drug"
+    }
+  ],
+  "passes_run": [
+    "administration",
+    "dosing",
+    "limits"
+  ]
+}

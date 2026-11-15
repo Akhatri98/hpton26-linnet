@@ -17,5 +17,12 @@
   "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
   "unit_name": "capsule",
   "units_per_dose": 2,
-  "label_max_units_per_dose": 2
+  "label_max_units_per_dose": 2,
+  "verified": true,
+  "review": {
+    "decision": "approved",
+    "by": "claude",
+    "role": "AI (Claude), not a pharmacist",
+    "at": "2026-11-14T21:51:47-05:00"
+  }
 }

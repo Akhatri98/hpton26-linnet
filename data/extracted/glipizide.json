@@ -1,0 +1,609 @@
+{
+  "ingredient": "glipizide",
+  "spl_set_id": "00729e82-150a-464a-abe7-a3319721fbdb",
+  "model": "claude-haiku-5-5",
+  "label_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00729e82-150a-464a-abe7-a3319721fbdb",
+  "strengths": [],
+  "substances": [
+    "glipizide"
+  ],
+  "dosing": [
+    {
+      "strength": null,
+      "dose_type": "starting",
+      "condition": "general",
+      "population": "adults",
+      "dose": 5,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": null,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "00729e82-150a-464a-abe7-a3319721fbdb",
+        "section": "dosage and administration",
+        "sentence_id": "S4",
+        "sentence": "Initial Dose The recommended starting dose is 5 mg, given before breakfast.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00729e82-150a-464a-abe7-a3319721fbdb"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:14-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "starting",
+      "condition": "general",
+      "population": "geriatric patients or patients with liver disease",
+      "dose": 2.5,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": null,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "00729e82-150a-464a-abe7-a3319721fbdb",
+        "section": "dosage and administration",
+        "sentence_id": "S5",
+        "sentence": "Geriatric patients or those with liver disease may be started on 2.5 mg.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00729e82-150a-464a-abe7-a3319721fbdb"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:14-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "maintenance",
+      "condition": "general",
+      "population": "adults",
+      "dose": 15,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": null,
+      "times_per_day": 1,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "00729e82-150a-464a-abe7-a3319721fbdb",
+        "section": "dosage and administration",
+        "sentence_id": "S8",
+        "sentence": "The maximum recommended once daily dose is 15 mg.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00729e82-150a-464a-abe7-a3319721fbdb"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:14-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": null,
+      "dose_type": "maintenance",
+      "condition": "general",
+      "population": "adults",
+      "dose": 40,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": null,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "00729e82-150a-464a-abe7-a3319721fbdb",
+        "section": "dosage and administration",
+        "sentence_id": "S10",
+        "sentence": "The maximum recommended total daily dose is 40 mg.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00729e82-150a-464a-abe7-a3319721fbdb"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:14-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    }
+  ],
+  "limits": [
+    {
+      "kind": "per_day",
+      "amount": 15,
+      "unit": "mg",
+      "ingredient": null,
+      "strength": null,
+      "population": "general",
+      "condition": null,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "00729e82-150a-464a-abe7-a3319721fbdb",
+        "section": "dosage and administration",
+        "sentence_id": "S8",
+        "sentence": "The maximum recommended once daily dose is 15 mg.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00729e82-150a-464a-abe7-a3319721fbdb"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:14-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "kind": "per_day",
+      "amount": 40,
+      "unit": "mg",
+      "ingredient": null,
+      "strength": null,
+      "population": "general",
+      "condition": null,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "00729e82-150a-464a-abe7-a3319721fbdb",
+        "section": "dosage and administration",
+        "sentence_id": "S10",
+        "sentence": "The maximum recommended total daily dose is 40 mg.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00729e82-150a-464a-abe7-a3319721fbdb"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:14-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    }
+  ],
+  "administration": [
+    {
+      "id": "glipizide-before-meal-30min",
+      "family": "food",
+      "mode": "before_meal_window",
+      "meal": "any_meal",
+      "earliest": 0.5,
+      "latest": 0.5,
+      "provenance": "interpreted",
+      "loosest": {
+        "earliest": 0.75,
+        "latest": 0.25
+      },
+      "note": "Label says glipizide should generally be given approximately 30 minutes before a meal; 'approximately' makes the window soft. Meal is not specified as breakfast. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "00729e82-150a-464a-abe7-a3319721fbdb",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00729e82-150a-464a-abe7-a3319721fbdb",
+        "section": "dosage and administration",
+        "sentence": "In general, glipizide should be given approximately 30 minutes before a meal to achieve the greatest reduction in postprandial hyperglycemia."
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:03-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/glipizide.json)"
+      }
+    },
+    {
+      "id": "glipizide-once-daily-max-15mg",
+      "family": "daily_max",
+      "amount": 15,
+      "unit": "mg",
+      "provenance": "quoted",
+      "note": "Maximum recommended once daily dose is 15 mg. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "00729e82-150a-464a-abe7-a3319721fbdb",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00729e82-150a-464a-abe7-a3319721fbdb",
+        "section": "dosage and administration",
+        "sentence": "The maximum recommended once daily dose is 15 mg."
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:04-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/glipizide.json)"
+      }
+    },
+    {
+      "id": "glipizide-total-daily-max-40mg",
+      "family": "daily_max",
+      "amount": 40,
+      "unit": "mg",
+      "provenance": "quoted",
+      "note": "Maximum recommended total daily dose is 40 mg. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "00729e82-150a-464a-abe7-a3319721fbdb",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00729e82-150a-464a-abe7-a3319721fbdb",
+        "section": "dosage and administration",
+        "sentence": "The maximum recommended total daily dose is 40 mg."
+      },
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:35-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "approved; not added (no library file for this ingredient)"
+      }
+    },
+    {
+      "id": "glipizide-colesevelam-separation",
+      "family": "separation",
+      "target": "colesevelam",
+      "before": 4,
+      "after": 0,
+      "provenance": "interpreted",
+      "loosest": {
+        "after": 0
+      },
+      "note": "Glipizide should be administered at least 4 hours prior to colesevelam; no interval after colesevelam is stated. | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "00729e82-150a-464a-abe7-a3319721fbdb",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00729e82-150a-464a-abe7-a3319721fbdb",
+        "section": "drug interactions",
+        "sentence": "Therefore, glipizide should be administered at least 4 hours prior to colesevelam to ensure that colesevelam does not reduce the absorption of glipizide."
+      },
+      "verified": false,
+      "review": {
+        "decision": "approved",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:36-05:00",
+        "note": "4 of 4 runs agreed",
+        "result": "approved; not added (no library file for this ingredient)"
+      }
+    }
+  ],
+  "memberships": [],
+  "rejected": [],
+  "unaccounted_for": [
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S9",
+      "section": "dosage and administration",
+      "sentence": "Doses above 15 mg should ordinarily be divided and given before meals of adequate caloric content."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S12",
+      "section": "dosage and administration",
+      "sentence": "Total daily doses above 15 mg should ordinarily be divided."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S13",
+      "section": "dosage and administration",
+      "sentence": "Total daily doses above 30 mg have been safely given on a b.i.d."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S14",
+      "section": "dosage and administration",
+      "sentence": "When transferring patients from insulin to glipizide, the following general guidelines should be considered: For patients whose daily insulin requirement is 20 units or less, insulin may be discontinued and glipizide therapy may begin at usual dosages."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S15",
+      "section": "dosage and administration",
+      "sentence": "For patients whose daily insulin requirement is greater than 20 units, the insulin dose should be reduced by 50% and glipizide therapy may begin at usual dosages."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S16",
+      "section": "dosage and administration",
+      "sentence": "During the insulin withdrawal period, the patient should test urine samples for sugar and ketone bodies at least three times daily."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S17",
+      "section": "dosage and administration",
+      "sentence": "In some cases, especially when patient has been receiving greater than 40 units of insulin daily, it may be advisable to consider hospitalization during the transition period."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S21",
+      "section": "drug interactions",
+      "sentence": "All subjects received glipizide alone and following treatment with 100 mg of DIFLUCAN as a single daily oral dose for 7 days."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S25",
+      "section": "precautions",
+      "sentence": "Hypoglycemia is more likely to occur when caloric intake is deficient, after severe or prolonged exercise, when alcohol is ingested, or when more than one glucose-lowering drug is used."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S32",
+      "section": "warnings",
+      "sentence": "UGDP reported that patients treated for 5 to 8 years with diet plus a fixed dose of tolbutamide (1.5 grams per day) had a rate of cardiovascular mortality approximately 2½ times that of patients treated with diet alone."
+    },
+    {
+      "priority": 4,
+      "kind": "population",
+      "note": "",
+      "sentence_id": "S30",
+      "section": "precautions",
+      "sentence": "If glipizide is used during pregnancy, it should be discontinued at least one month before the expected delivery date."
+    },
+    {
+      "priority": 6,
+      "kind": "restates",
+      "note": "repeats S24",
+      "sentence_id": "S19",
+      "section": "dosage and administration",
+      "sentence": "Therefore, glipizide tablets should be administered at least 4 hours prior to colesevelam."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S22",
+      "section": "drug interactions",
+      "sentence": "The mean percentage increase in the glipizide AUC after fluconazole administration was 56.9% (range: 35 to 81)."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S23",
+      "section": "drug interactions",
+      "sentence": "When glipizide ER was administered 4 hours prior to colesevelam, there was no significant change in glipizide AUC 0-∞ or C max , -4% and 0%, respectively."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S27",
+      "section": "precautions",
+      "sentence": "Carcinogenesis, Mutagenesis, Impairment of Fertility A twenty month study in rats and an eighteen month study in mice at doses up to 75 times the maximum human dose revealed no evidence of drug-related carcinogenicity."
+    },
+    {
+      "priority": 7,
+      "kind": "background",
+      "note": "",
+      "sentence_id": "S28",
+      "section": "precautions",
+      "sentence": "Studies in rats of both sexes at doses up to 75 times the human dose showed no effects on fertility."
+    }
+  ],
+  "sentences": [
+    {
+      "sentence_id": "S1",
+      "section": "dosage and administration",
+      "text": "to detect primary failure, i.e., inadequate lowering of blood glucose at the maximum recommended dose of medication;"
+    },
+    {
+      "sentence_id": "S2",
+      "section": "dosage and administration",
+      "text": "and to detect secondary failure, i.e., loss of an adequate blood-glucose-lowering response after an initial period of effectiveness."
+    },
+    {
+      "sentence_id": "S3",
+      "section": "dosage and administration",
+      "text": "In general, glipizide should be given approximately 30 minutes before a meal to achieve the greatest reduction in postprandial hyperglycemia."
+    },
+    {
+      "sentence_id": "S4",
+      "section": "dosage and administration",
+      "text": "Initial Dose The recommended starting dose is 5 mg, given before breakfast."
+    },
+    {
+      "sentence_id": "S5",
+      "section": "dosage and administration",
+      "text": "Geriatric patients or those with liver disease may be started on 2.5 mg."
+    },
+    {
+      "sentence_id": "S6",
+      "section": "dosage and administration",
+      "text": "Titration Dosage adjustments should ordinarily be in increments of 2.5 to 5 mg, as determined by blood glucose response."
+    },
+    {
+      "sentence_id": "S7",
+      "section": "dosage and administration",
+      "text": "If response to a single dose is not satisfactory, dividing that dose may prove effective."
+    },
+    {
+      "sentence_id": "S8",
+      "section": "dosage and administration",
+      "text": "The maximum recommended once daily dose is 15 mg."
+    },
+    {
+      "sentence_id": "S9",
+      "section": "dosage and administration",
+      "text": "Doses above 15 mg should ordinarily be divided and given before meals of adequate caloric content."
+    },
+    {
+      "sentence_id": "S10",
+      "section": "dosage and administration",
+      "text": "The maximum recommended total daily dose is 40 mg."
+    },
+    {
+      "sentence_id": "S11",
+      "section": "dosage and administration",
+      "text": "Maintenance Some patients may be effectively controlled on a once-a-day regimen, while others show better response with divided dosing."
+    },
+    {
+      "sentence_id": "S12",
+      "section": "dosage and administration",
+      "text": "Total daily doses above 15 mg should ordinarily be divided."
+    },
+    {
+      "sentence_id": "S13",
+      "section": "dosage and administration",
+      "text": "Total daily doses above 30 mg have been safely given on a b.i.d."
+    },
+    {
+      "sentence_id": "S14",
+      "section": "dosage and administration",
+      "text": "When transferring patients from insulin to glipizide, the following general guidelines should be considered: For patients whose daily insulin requirement is 20 units or less, insulin may be discontinued and glipizide therapy may begin at usual dosages."
+    },
+    {
+      "sentence_id": "S15",
+      "section": "dosage and administration",
+      "text": "For patients whose daily insulin requirement is greater than 20 units, the insulin dose should be reduced by 50% and glipizide therapy may begin at usual dosages."
+    },
+    {
+      "sentence_id": "S16",
+      "section": "dosage and administration",
+      "text": "During the insulin withdrawal period, the patient should test urine samples for sugar and ketone bodies at least three times daily."
+    },
+    {
+      "sentence_id": "S17",
+      "section": "dosage and administration",
+      "text": "In some cases, especially when patient has been receiving greater than 40 units of insulin daily, it may be advisable to consider hospitalization during the transition period."
+    },
+    {
+      "sentence_id": "S18",
+      "section": "dosage and administration",
+      "text": "When colesevelam is co-administered with glipizide ER, maximum plasma concentration and total exposure to glipizide is reduced."
+    },
+    {
+      "sentence_id": "S19",
+      "section": "dosage and administration",
+      "text": "Therefore, glipizide tablets should be administered at least 4 hours prior to colesevelam."
+    },
+    {
+      "sentence_id": "S20",
+      "section": "drug interactions",
+      "text": "The effect of concomitant administration of DIFLUCAN ® (fluconazole) and glipizide has been demonstrated in a placebo-controlled crossover study in normal volunteers."
+    },
+    {
+      "sentence_id": "S21",
+      "section": "drug interactions",
+      "text": "All subjects received glipizide alone and following treatment with 100 mg of DIFLUCAN as a single daily oral dose for 7 days."
+    },
+    {
+      "sentence_id": "S22",
+      "section": "drug interactions",
+      "text": "The mean percentage increase in the glipizide AUC after fluconazole administration was 56.9% (range: 35 to 81)."
+    },
+    {
+      "sentence_id": "S23",
+      "section": "drug interactions",
+      "text": "When glipizide ER was administered 4 hours prior to colesevelam, there was no significant change in glipizide AUC 0-∞ or C max , -4% and 0%, respectively."
+    },
+    {
+      "sentence_id": "S24",
+      "section": "drug interactions",
+      "text": "Therefore, glipizide should be administered at least 4 hours prior to colesevelam to ensure that colesevelam does not reduce the absorption of glipizide."
+    },
+    {
+      "sentence_id": "S25",
+      "section": "precautions",
+      "text": "Hypoglycemia is more likely to occur when caloric intake is deficient, after severe or prolonged exercise, when alcohol is ingested, or when more than one glucose-lowering drug is used."
+    },
+    {
+      "sentence_id": "S26",
+      "section": "precautions",
+      "text": "At such times, it may be necessary to discontinue glipizide and administer insulin."
+    },
+    {
+      "sentence_id": "S27",
+      "section": "precautions",
+      "text": "Carcinogenesis, Mutagenesis, Impairment of Fertility A twenty month study in rats and an eighteen month study in mice at doses up to 75 times the maximum human dose revealed no evidence of drug-related carcinogenicity."
+    },
+    {
+      "sentence_id": "S28",
+      "section": "precautions",
+      "text": "Studies in rats of both sexes at doses up to 75 times the human dose showed no effects on fertility."
+    },
+    {
+      "sentence_id": "S29",
+      "section": "precautions",
+      "text": "Pregnancy Glipizide was found to be mildly fetotoxic in rat reproductive studies at all dose levels (5 to 50 mg/kg)."
+    },
+    {
+      "sentence_id": "S30",
+      "section": "precautions",
+      "text": "If glipizide is used during pregnancy, it should be discontinued at least one month before the expected delivery date."
+    },
+    {
+      "sentence_id": "S31",
+      "section": "warnings",
+      "text": "2:747-830, 1970)."
+    },
+    {
+      "sentence_id": "S32",
+      "section": "warnings",
+      "text": "UGDP reported that patients treated for 5 to 8 years with diet plus a fixed dose of tolbutamide (1.5 grams per day) had a rate of cardiovascular mortality approximately 2½ times that of patients treated with diet alone."
+    },
+    {
+      "sentence_id": "S33",
+      "section": "how supplied",
+      "text": "HOW SUPPLIED Glipizide Tablets USP, 10 mg are available as white to off-white, round, flat-faced, beveled edge tablets, bisected and debossed on one side with “316” above bisect and debossed with “ANI” on the other side, containing 10 mg of glipizide."
+    },
+    {
+      "sentence_id": "S34",
+      "section": "how supplied",
+      "text": "NDC: 72162-2215-00: 1000 Tablets in a BOTTLE Store at 20° to 25°C (68° to 77°F) [see USP Controlled Room Temperature]."
+    },
+    {
+      "sentence_id": "S35",
+      "section": "description",
+      "text": "it is freely soluble in dimethylformamide."
+    },
+    {
+      "sentence_id": "S36",
+      "section": "description",
+      "text": "Glipizide Tablets USP for oral use are available in 5 and 10 mg strengths."
+    }
+  ],
+  "passes_run": [
+    "administration",
+    "dosing",
+    "limits"
+  ]
+}

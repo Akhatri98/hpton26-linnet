@@ -1,0 +1,1 @@
+{"rules":[{"id":"captopril-before-meals","family":"food","mode":"empty_stomach","before_meal":1,"after_meal":0,"meal":null,"sentence":"S1","provenance":"interpreted","loosest":{"before_meal":1,"after_meal":0},"note":"taken one hour before meals"},{"id":"captopril-daily-max","family":"daily_max","amount":450,"unit":"mg","sentence":"S13","provenance":"quoted"}],"memberships":[]}

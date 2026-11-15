@@ -12,5 +12,12 @@
   "dose_note": "One tablet once daily (strength chosen for the demo patient).",
   "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
   "unit_name": "tablet",
-  "units_per_dose": 1
+  "units_per_dose": 1,
+  "verified": true,
+  "review": {
+    "decision": "approved",
+    "by": "claude",
+    "role": "AI (Claude), not a pharmacist",
+    "at": "2026-11-14T21:51:47-05:00"
+  }
 }

@@ -1,0 +1,65 @@
+You are extracting medication TIMING rules from an FDA drug label, for a scheduling tool used by pharmacists.
+
+Ingredient: glipizide
+Label set id: 00729e82-150a-464a-abe7-a3319721fbdb
+
+Numbered sentences from the label:
+S1 [dosage and administration] to detect primary failure, i.e., inadequate lowering of blood glucose at the maximum recommended dose of medication;
+S2 [dosage and administration] and to detect secondary failure, i.e., loss of an adequate blood-glucose-lowering response after an initial period of effectiveness.
+S3 [dosage and administration] In general, glipizide should be given approximately 30 minutes before a meal to achieve the greatest reduction in postprandial hyperglycemia.
+S4 [dosage and administration] Initial Dose The recommended starting dose is 5 mg, given before breakfast.
+S8 [dosage and administration] The maximum recommended once daily dose is 15 mg.
+S9 [dosage and administration] Doses above 15 mg should ordinarily be divided and given before meals of adequate caloric content.
+S10 [dosage and administration] The maximum recommended total daily dose is 40 mg.
+S12 [dosage and administration] Total daily doses above 15 mg should ordinarily be divided.
+S13 [dosage and administration] Total daily doses above 30 mg have been safely given on a b.i.d.
+S14 [dosage and administration] When transferring patients from insulin to glipizide, the following general guidelines should be considered: For patients whose daily insulin requirement is 20 units or less, insulin may be discontinued and glipizide therapy may begin at usual dosages.
+S15 [dosage and administration] For patients whose daily insulin requirement is greater than 20 units, the insulin dose should be reduced by 50% and glipizide therapy may begin at usual dosages.
+S16 [dosage and administration] During the insulin withdrawal period, the patient should test urine samples for sugar and ketone bodies at least three times daily.
+S17 [dosage and administration] In some cases, especially when patient has been receiving greater than 40 units of insulin daily, it may be advisable to consider hospitalization during the transition period.
+S18 [dosage and administration] When colesevelam is co-administered with glipizide ER, maximum plasma concentration and total exposure to glipizide is reduced.
+S19 [dosage and administration] Therefore, glipizide tablets should be administered at least 4 hours prior to colesevelam.
+S21 [drug interactions] All subjects received glipizide alone and following treatment with 100 mg of DIFLUCAN as a single daily oral dose for 7 days.
+S22 [drug interactions] The mean percentage increase in the glipizide AUC after fluconazole administration was 56.9% (range: 35 to 81).
+S23 [drug interactions] When glipizide ER was administered 4 hours prior to colesevelam, there was no significant change in glipizide AUC 0-∞ or C max , -4% and 0%, respectively.
+S24 [drug interactions] Therefore, glipizide should be administered at least 4 hours prior to colesevelam to ensure that colesevelam does not reduce the absorption of glipizide.
+S25 [precautions] Hypoglycemia is more likely to occur when caloric intake is deficient, after severe or prolonged exercise, when alcohol is ingested, or when more than one glucose-lowering drug is used.
+S26 [precautions] At such times, it may be necessary to discontinue glipizide and administer insulin.
+S27 [precautions] Carcinogenesis, Mutagenesis, Impairment of Fertility A twenty month study in rats and an eighteen month study in mice at doses up to 75 times the maximum human dose revealed no evidence of drug-related carcinogenicity.
+S28 [precautions] Studies in rats of both sexes at doses up to 75 times the human dose showed no effects on fertility.
+S30 [precautions] If glipizide is used during pregnancy, it should be discontinued at least one month before the expected delivery date.
+S32 [warnings] UGDP reported that patients treated for 5 to 8 years with diet plus a fixed dose of tolbutamide (1.5 grams per day) had a rate of cardiovascular mortality approximately 2½ times that of patients treated with diet alone.
+
+Known ingredient groups (you may propose members for these, or a new group):
+- levothyroxine_binders: ['calcium_carbonate', 'colestipol', 'ferrous_sulfate']
+- polyvalent_cations: ['aluminum', 'calcium_carbonate', 'iron', 'magnesium', 'sucralfate', 'zinc']
+- antacids: ['calcium_carbonate']
+
+Return ONLY a JSON object:
+{
+  "rules": [ ... ],
+  "memberships": [ ... ]
+}
+
+Each rule is one of these shapes. Times are in HOURS (30 minutes = 0.5). Use only numbers stated in the cited sentence.
+  {"id": "...", "family": "min_interval", "hours": H, "sentence": "Sk", "provenance": "quoted"|"interpreted", "loosest": {"hours": X}?, "note": "..."}
+      any two doses of this ingredient at least H hours apart ("every 6 hours")
+  {"id": "...", "family": "separation", "target": "<ingredient>" | "group:<name>" | "*", "before": B, "after": A, "sentence": "Sk", ...}
+      THIS ingredient is taken at least B hours BEFORE and at least A hours AFTER any dose of the target.
+      "*" means every other drug. Careful with direction: if the label says "take OTHER drugs 1 hour before
+      or 4 hours after THIS drug", then THIS drug is 4 hours before and 1 hour after the other: before=4, after=1.
+  {"id": "...", "family": "daily_max", "amount": N, "unit": "mg"|"g"|"mcg", "sentence": "Sk", ...}
+  {"id": "...", "family": "food", "mode": "empty_stomach", "before_meal": B, "after_meal": A, "meal": null|"breakfast", "sentence": "Sk", ...}
+      no dose from B hours before to A hours after a meal
+  {"id": "...", "family": "food", "mode": "before_meal_window", "meal": "breakfast", "earliest": E, "latest": L, "sentence": "Sk", ...}
+      dose between E and L hours before the meal (E >= L)
+
+provenance: "quoted" if the number is stated plainly and firmly; "interpreted" if you had to judge
+(soft words like "preferably", "if possible", "consider", a range, or a derived number). Every
+"interpreted" rule MUST give "loosest": the most permissive defensible value of each number you judged.
+
+Each membership: {"group": "<name>", "ingredient": "<lowercase_underscore_name>", "sentence": "Sk", "provenance": "quoted"|"interpreted"}
+  Propose a membership when the label names an ingredient as one of the things to separate from.
+
+Ids: lowercase letters, digits, dashes, starting with the ingredient name. Cite exactly one sentence id per item.
+Do not copy sentence text; cite its id. Only include rules the label actually states. If unsure, leave it out.

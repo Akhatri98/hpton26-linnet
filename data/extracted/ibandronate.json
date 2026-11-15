@@ -1,0 +1,387 @@
+{
+  "ingredient": "ibandronate",
+  "spl_set_id": "86c0b4ae-5e38-4efe-88af-50ac560e294f",
+  "model": "claude-haiku-5-5",
+  "label_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86c0b4ae-5e38-4efe-88af-50ac560e294f",
+  "strengths": [
+    "150 mg"
+  ],
+  "substances": [
+    "ibandronate sodium"
+  ],
+  "dosing": [
+    {
+      "strength": "150 mg",
+      "dose_type": "usual",
+      "condition": "general",
+      "population": "adults",
+      "dose": 150,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": null,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "86c0b4ae-5e38-4efe-88af-50ac560e294f",
+        "section": "dosage and administration",
+        "sentence_id": "S1",
+        "sentence": "2 DOSAGE AND ADMINISTRATION Take one 150 mg tablet once monthly on the same day each month ( 2.1 ) Instruct patient to: ( 2.2 ) Swallow whole tablet with 6 to 8 oz of plain water only, at least 60 minutes before the first food, beverage, or medication of day.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86c0b4ae-5e38-4efe-88af-50ac560e294f"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:15-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    },
+    {
+      "strength": "150 mg",
+      "dose_type": "usual",
+      "condition": "missed dose, next scheduled day more than 7 days away",
+      "population": "adults",
+      "dose": 150,
+      "dose_max": null,
+      "unit": "mg",
+      "every_hours": null,
+      "times_per_day": null,
+      "duration_days": null,
+      "as_needed": false,
+      "provenance": "quoted",
+      "source": {
+        "spl_set_id": "86c0b4ae-5e38-4efe-88af-50ac560e294f",
+        "section": "dosage and administration",
+        "sentence_id": "S9",
+        "sentence": "2.4 Administration Instructions for Missed Once-Monthly Doses If the once-monthly dose is missed, instruct patients to do the following: If the next scheduled ibandronate sodium tablets day is more than 7 days away, take one ibandronate sodium tablet 150 mg (ibandronate) in the morning following the date that it is remembered.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86c0b4ae-5e38-4efe-88af-50ac560e294f"
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:15-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
+    }
+  ],
+  "limits": [],
+  "administration": [
+    {
+      "id": "ibandronate-separation-other-meds",
+      "family": "separation",
+      "target": "*",
+      "before": 1,
+      "after": 0,
+      "provenance": "quoted",
+      "note": "Take ibandronate at least 60 minutes before the first food or drink (other than water) or any oral medication. Other drugs are not to be taken within 60 minutes after ibandronate (S3, S14). | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "86c0b4ae-5e38-4efe-88af-50ac560e294f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86c0b4ae-5e38-4efe-88af-50ac560e294f",
+        "section": "dosage and administration",
+        "sentence": "2.2 Important Administration Instructions Instruct Patients to do the following: Take ibandronate sodium tablets at least 60 minutes before the first food or drink (other than water) of the day or before taking any oral medication or supplementation, including calcium, antacids, or vitamins to maximize absorption and clinical benefit, (see DRUG INTERACTIONS [7.1] ) ."
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:23-05:00",
+        "note": "only 2 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/ibandronate.json)"
+      }
+    },
+    {
+      "id": "ibandronate-separation-calcium-cations",
+      "family": "separation",
+      "target": "group:polyvalent_cations",
+      "before": 1,
+      "after": 1,
+      "provenance": "quoted",
+      "note": "Avoid calcium supplements within 60 minutes of ibandronate because calcium may interfere with absorption. Taken at least 60 minutes before multivalent cations (S13). | DRAFT: proposed by a language model.",
+      "source": {
+        "spl_set_id": "86c0b4ae-5e38-4efe-88af-50ac560e294f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86c0b4ae-5e38-4efe-88af-50ac560e294f",
+        "section": "dosage and administration",
+        "sentence": "Avoid the use of calcium supplements within 60 minutes of ibandronate sodium tablets administration because co-administration of ibandronate sodium tablets and calcium may interfere with the absorption of ibandronate sodium (see DRUG INTERACTIONS [7.1] ) ."
+      },
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:05-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/ibandronate.json)"
+      }
+    }
+  ],
+  "memberships": [
+    {
+      "group": "polyvalent_cations",
+      "ingredient": "calcium_carbonate",
+      "provenance": "interpreted",
+      "basis": "Avoid the use of calcium supplements within 60 minutes of ibandronate sodium tablets administration because co-administration of ibandronate sodium tablets and calcium may interfere with the absorption of ibandronate sodium (see DRUG INTERACTIONS [7.1] ) .",
+      "source_spl": "86c0b4ae-5e38-4efe-88af-50ac560e294f",
+      "verified": false,
+      "matched": "label names 'calcium'; calcium_carbonate is a salt of it",
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T22:16:24-05:00",
+        "note": "only 2 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/ibandronate.json)"
+      }
+    }
+  ],
+  "rejected": [],
+  "unaccounted_for": [
+    {
+      "priority": 1,
+      "kind": "possible_timing_rule",
+      "note": "",
+      "sentence_id": "S2",
+      "section": "dosage and administration",
+      "sentence": "Avoid lying down for at least 60 minutes after taking ibandronate sodium tablets."
+    },
+    {
+      "priority": 1,
+      "kind": "possible_timing_rule",
+      "note": "",
+      "sentence_id": "S3",
+      "section": "dosage and administration",
+      "sentence": "Do not eat, drink (except for water), or take other medication for 60 minutes after taking ibandronate sodium tablets."
+    },
+    {
+      "priority": 1,
+      "kind": "possible_timing_rule",
+      "note": "",
+      "sentence_id": "S6",
+      "section": "dosage and administration",
+      "sentence": "Avoid lying down for 60 minutes after taking ibandronate sodium tablets (see WARNINGS AND PRECAUTIONS [5.1] ) ."
+    },
+    {
+      "priority": 1,
+      "kind": "possible_timing_rule",
+      "note": "",
+      "sentence_id": "S7",
+      "section": "dosage and administration",
+      "sentence": "Do not eat, drink anything except plain water, or take other medications for at least 60 minutes after taking ibandronate sodium tablets."
+    },
+    {
+      "priority": 1,
+      "kind": "possible_timing_rule",
+      "note": "",
+      "sentence_id": "S12",
+      "section": "drug interactions",
+      "sentence": "Do not take within 60 minutes of dosing."
+    },
+    {
+      "priority": 1,
+      "kind": "possible_timing_rule",
+      "note": "",
+      "sentence_id": "S13",
+      "section": "drug interactions",
+      "sentence": "Therefore, instruct patients to take ibandronate sodium at least 60 minutes before any oral medications, including medications containing multivalent cations (such as antacids, supplements or vitamins)."
+    },
+    {
+      "priority": 1,
+      "kind": "possible_timing_rule",
+      "note": "",
+      "sentence_id": "S14",
+      "section": "drug interactions",
+      "sentence": "Also, patients should wait at least 60 minutes after dosing before taking any other oral medications (see Dosage and Administration [2.3] ) ."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S10",
+      "section": "dosage and administration",
+      "sentence": "If the next scheduled ibandronate sodium tablets day is only 1 to 7 days away, wait until the subsequent month’s scheduled ibandronate sodium tablets day to take their tablet."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S11",
+      "section": "dosage and administration",
+      "sentence": "For subsequent monthly doses for both of the above scenarios, instruct patients to return to their original schedule by taking one ibandronate sodium tablet 150 mg (ibandronate) every month on their previous chosen day."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S16",
+      "section": "warnings and cautions",
+      "sentence": "The risk of severe esophageal adverse experiences appears to be greater in patients who lie down after taking oral bisphosphonates and/or who fail to swallow it with the recommended full glass (6 to 8 oz) of water, and/or who continue to take oral bisphosphonates after developing symptoms suggestive of esophageal irritation."
+    },
+    {
+      "priority": 2,
+      "kind": "review",
+      "note": "",
+      "sentence_id": "S18",
+      "section": "warnings and cautions",
+      "sentence": "The time to onset of symptoms varied from one day to several months after starting the drug."
+    }
+  ],
+  "sentences": [
+    {
+      "sentence_id": "S1",
+      "section": "dosage and administration",
+      "text": "2 DOSAGE AND ADMINISTRATION Take one 150 mg tablet once monthly on the same day each month ( 2.1 ) Instruct patient to: ( 2.2 ) Swallow whole tablet with 6 to 8 oz of plain water only, at least 60 minutes before the first food, beverage, or medication of day."
+    },
+    {
+      "sentence_id": "S2",
+      "section": "dosage and administration",
+      "text": "Avoid lying down for at least 60 minutes after taking ibandronate sodium tablets."
+    },
+    {
+      "sentence_id": "S3",
+      "section": "dosage and administration",
+      "text": "Do not eat, drink (except for water), or take other medication for 60 minutes after taking ibandronate sodium tablets."
+    },
+    {
+      "sentence_id": "S4",
+      "section": "dosage and administration",
+      "text": "Take supplemental calcium and vitamin D if dietary intake inadequate ( 2.3 ) 2.1 Dosage Information The dose of ibandronate sodium is one 150 mg tablet taken once monthly on the same date each month."
+    },
+    {
+      "sentence_id": "S5",
+      "section": "dosage and administration",
+      "text": "2.2 Important Administration Instructions Instruct Patients to do the following: Take ibandronate sodium tablets at least 60 minutes before the first food or drink (other than water) of the day or before taking any oral medication or supplementation, including calcium, antacids, or vitamins to maximize absorption and clinical benefit, (see DRUG INTERACTIONS [7.1] ) ."
+    },
+    {
+      "sentence_id": "S6",
+      "section": "dosage and administration",
+      "text": "Avoid lying down for 60 minutes after taking ibandronate sodium tablets (see WARNINGS AND PRECAUTIONS [5.1] ) ."
+    },
+    {
+      "sentence_id": "S7",
+      "section": "dosage and administration",
+      "text": "Do not eat, drink anything except plain water, or take other medications for at least 60 minutes after taking ibandronate sodium tablets."
+    },
+    {
+      "sentence_id": "S8",
+      "section": "dosage and administration",
+      "text": "Avoid the use of calcium supplements within 60 minutes of ibandronate sodium tablets administration because co-administration of ibandronate sodium tablets and calcium may interfere with the absorption of ibandronate sodium (see DRUG INTERACTIONS [7.1] ) ."
+    },
+    {
+      "sentence_id": "S9",
+      "section": "dosage and administration",
+      "text": "2.4 Administration Instructions for Missed Once-Monthly Doses If the once-monthly dose is missed, instruct patients to do the following: If the next scheduled ibandronate sodium tablets day is more than 7 days away, take one ibandronate sodium tablet 150 mg (ibandronate) in the morning following the date that it is remembered."
+    },
+    {
+      "sentence_id": "S10",
+      "section": "dosage and administration",
+      "text": "If the next scheduled ibandronate sodium tablets day is only 1 to 7 days away, wait until the subsequent month’s scheduled ibandronate sodium tablets day to take their tablet."
+    },
+    {
+      "sentence_id": "S11",
+      "section": "dosage and administration",
+      "text": "For subsequent monthly doses for both of the above scenarios, instruct patients to return to their original schedule by taking one ibandronate sodium tablet 150 mg (ibandronate) every month on their previous chosen day."
+    },
+    {
+      "sentence_id": "S12",
+      "section": "drug interactions",
+      "text": "Do not take within 60 minutes of dosing."
+    },
+    {
+      "sentence_id": "S13",
+      "section": "drug interactions",
+      "text": "Therefore, instruct patients to take ibandronate sodium at least 60 minutes before any oral medications, including medications containing multivalent cations (such as antacids, supplements or vitamins)."
+    },
+    {
+      "sentence_id": "S14",
+      "section": "drug interactions",
+      "text": "Also, patients should wait at least 60 minutes after dosing before taking any other oral medications (see Dosage and Administration [2.3] ) ."
+    },
+    {
+      "sentence_id": "S15",
+      "section": "warnings and cautions",
+      "text": "Correct hypocalcemia before use."
+    },
+    {
+      "sentence_id": "S16",
+      "section": "warnings and cautions",
+      "text": "The risk of severe esophageal adverse experiences appears to be greater in patients who lie down after taking oral bisphosphonates and/or who fail to swallow it with the recommended full glass (6 to 8 oz) of water, and/or who continue to take oral bisphosphonates after developing symptoms suggestive of esophageal irritation."
+    },
+    {
+      "sentence_id": "S17",
+      "section": "warnings and cautions",
+      "text": "Treat hypocalcemia and other disturbances of bone and mineral metabolism before starting ibandronate sodium therapy."
+    },
+    {
+      "sentence_id": "S18",
+      "section": "warnings and cautions",
+      "text": "The time to onset of symptoms varied from one day to several months after starting the drug."
+    },
+    {
+      "sentence_id": "S19",
+      "section": "warnings and cautions",
+      "text": "Most patients had relief of symptoms after stopping."
+    },
+    {
+      "sentence_id": "S20",
+      "section": "warnings and cautions",
+      "text": "Prodromal pain in the affected area, usually presenting as dull, aching thigh pain, weeks to months before a complete fracture occurs was reported by patients."
+    },
+    {
+      "sentence_id": "S21",
+      "section": "warnings and cautions",
+      "text": "Risk/benefit of continuing bisphosphonate therapy should be re-evaluated in these patients and interruption of bisphosphonate therapy should be considered."
+    },
+    {
+      "sentence_id": "S22",
+      "section": "warnings and cautions",
+      "text": "5.6 Severe Renal Impairment Ibandronate sodium is not recommended for use in patients with severe renal impairment (creatinine clearance of less than 30 mL/min)."
+    },
+    {
+      "sentence_id": "S23",
+      "section": "dosage forms and strengths",
+      "text": "3 DOSAGE FORMS AND STRENGTHS Ibandronate sodium tablets, 150 mg: white to off-white, film-coated, caplet shaped, biconvex tablets debossed with ‘X’ on one side and ‘78’ on the other side."
+    },
+    {
+      "sentence_id": "S24",
+      "section": "dosage forms and strengths",
+      "text": "Tablets: 150 mg (3)"
+    },
+    {
+      "sentence_id": "S25",
+      "section": "how supplied",
+      "text": "16 HOW SUPPLIED/STORAGE AND HANDLING 16.1 How Supplied Ibandronate Sodium Tablets, 150 mg ( ibandronate) are white to off-white, film-coated, caplet shaped, biconvex tablets debossed with ‘X’ on one side and ‘78’ on the other side."
+    },
+    {
+      "sentence_id": "S26",
+      "section": "how supplied",
+      "text": "Carton of 1 Blister Pack Containing 3 Tablets NDC 65862-237-03 16.2 Storage and Handling Store at 20° to 25°C (68° to 77°F) [see USP Controlled Room Temperature]."
+    },
+    {
+      "sentence_id": "S27",
+      "section": "description",
+      "text": "It is freely soluble in water and practically insoluble in organic solvents."
+    },
+    {
+      "sentence_id": "S28",
+      "section": "description",
+      "text": "Ibandronate sodium has the following structural formula: Ibandronate sodium is available as a white to off-white, caplet shaped, 150 mg film-coated tablet for once-monthly oral administration."
+    },
+    {
+      "sentence_id": "S29",
+      "section": "description",
+      "text": "One 150 mg film-coated tablet contains 168.795 mg ibandronate sodium monohydrate, equivalent to 150 mg free acid."
+    }
+  ],
+  "passes_run": [
+    "administration",
+    "dosing",
+    "limits"
+  ]
+}

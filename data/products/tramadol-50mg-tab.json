@@ -1,0 +1,24 @@
+{
+  "name": "tramadol-50mg-tab",
+  "display_name": "Tramadol hydrochloride 50 mg tablets (Rx)",
+  "spl_set_id": "007bf37f-0e46-426a-ac8c-be63d4b7414c",
+  "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=007bf37f-0e46-426a-ac8c-be63d4b7414c",
+  "ingredients": {
+    "tramadol": {
+      "amount": 50,
+      "unit": "mg"
+    }
+  },
+  "dose_note": "One 50 mg tablet per dose by default; the prescription sets tablets per dose (label: '50 mg to 100 mg every 4 to 6 hours as needed for pain').",
+  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+  "unit_name": "tablet",
+  "units_per_dose": 1,
+  "label_max_units_per_dose": 2,
+  "verified": true,
+  "review": {
+    "decision": "approved",
+    "by": "claude",
+    "role": "AI (Claude), not a pharmacist",
+    "at": "2026-11-14T22:16:01-05:00"
+  }
+}

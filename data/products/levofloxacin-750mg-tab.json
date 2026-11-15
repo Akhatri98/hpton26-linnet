@@ -1,0 +1,23 @@
+{
+  "name": "levofloxacin-750mg-tab",
+  "display_name": "Levofloxacin 750 mg tablets",
+  "spl_set_id": "067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+  "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=067e260c-dc47-4957-a9ff-5a79f17b4ca0",
+  "ingredients": {
+    "levofloxacin": {
+      "amount": 750,
+      "unit": "mg"
+    }
+  },
+  "dose_note": "One 750 mg tablet per dose, every 24 hours ('Levofloxacin Tablets USP, 750 mg'; the label's doses are 250 mg, 500 mg or 750 mg every 24 hours).",
+  "note": "DRAFT (Claude, 14 Nov): not yet checked against the label by a human.",
+  "unit_name": "tablet",
+  "units_per_dose": 1,
+  "verified": true,
+  "review": {
+    "decision": "approved",
+    "by": "claude",
+    "role": "AI (Claude), not a pharmacist",
+    "at": "2026-11-14T22:16:01-05:00"
+  }
+}

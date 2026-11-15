@@ -1,0 +1,1 @@
+{"rules":[{"id":"naproxen_sodium-min-interval-8h","family":"min_interval","hours":8,"sentence":"S1","provenance":"interpreted","loosest":{"hours":12},"note":"Label says take 1 caplet every 8 to 12 hours; the 8-hour lower bound is used as the minimum interval."}],"memberships":[]}

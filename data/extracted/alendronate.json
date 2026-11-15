@@ -30,7 +30,15 @@
         "sentence": "2.1 Treatment of Osteoporosis in Postmenopausal Women The recommended dosage is: one 70 mg tablet once weekly or one bottle of 70 mg oral solution once weekly or one 10 mg tablet once daily 2.2 Prevention of Osteoporosis in Postmenopausal Women The recommended dosage is: one 35 mg tablet once weekly or one 5 mg tablet once daily 2.3 Treatment to Increase Bone Mass in Men with Osteoporosis The recommended dosage is: one 70 mg tablet once weekly or one bottle of 70 mg oral solution once weekly or one 10 mg tablet once daily 2.4 Treatment of Glucocorticoid-Induced Osteoporosis The recommended dosage is one 5 mg tablet once daily, except for postmenopausal women not receiving estrogen, for whom the recommended dosage is one 10 mg tablet once daily.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14e931fd-2c5f-4d90-b7db-5980706f4a56"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -52,7 +60,15 @@
         "sentence": "2.1 Treatment of Osteoporosis in Postmenopausal Women The recommended dosage is: one 70 mg tablet once weekly or one bottle of 70 mg oral solution once weekly or one 10 mg tablet once daily 2.2 Prevention of Osteoporosis in Postmenopausal Women The recommended dosage is: one 35 mg tablet once weekly or one 5 mg tablet once daily 2.3 Treatment to Increase Bone Mass in Men with Osteoporosis The recommended dosage is: one 70 mg tablet once weekly or one bottle of 70 mg oral solution once weekly or one 10 mg tablet once daily 2.4 Treatment of Glucocorticoid-Induced Osteoporosis The recommended dosage is one 5 mg tablet once daily, except for postmenopausal women not receiving estrogen, for whom the recommended dosage is one 10 mg tablet once daily.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14e931fd-2c5f-4d90-b7db-5980706f4a56"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -74,7 +90,15 @@
         "sentence": "2.1 Treatment of Osteoporosis in Postmenopausal Women The recommended dosage is: one 70 mg tablet once weekly or one bottle of 70 mg oral solution once weekly or one 10 mg tablet once daily 2.2 Prevention of Osteoporosis in Postmenopausal Women The recommended dosage is: one 35 mg tablet once weekly or one 5 mg tablet once daily 2.3 Treatment to Increase Bone Mass in Men with Osteoporosis The recommended dosage is: one 70 mg tablet once weekly or one bottle of 70 mg oral solution once weekly or one 10 mg tablet once daily 2.4 Treatment of Glucocorticoid-Induced Osteoporosis The recommended dosage is one 5 mg tablet once daily, except for postmenopausal women not receiving estrogen, for whom the recommended dosage is one 10 mg tablet once daily.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14e931fd-2c5f-4d90-b7db-5980706f4a56"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -96,7 +120,15 @@
         "sentence": "2.1 Treatment of Osteoporosis in Postmenopausal Women The recommended dosage is: one 70 mg tablet once weekly or one bottle of 70 mg oral solution once weekly or one 10 mg tablet once daily 2.2 Prevention of Osteoporosis in Postmenopausal Women The recommended dosage is: one 35 mg tablet once weekly or one 5 mg tablet once daily 2.3 Treatment to Increase Bone Mass in Men with Osteoporosis The recommended dosage is: one 70 mg tablet once weekly or one bottle of 70 mg oral solution once weekly or one 10 mg tablet once daily 2.4 Treatment of Glucocorticoid-Induced Osteoporosis The recommended dosage is one 5 mg tablet once daily, except for postmenopausal women not receiving estrogen, for whom the recommended dosage is one 10 mg tablet once daily.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14e931fd-2c5f-4d90-b7db-5980706f4a56"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -118,7 +150,15 @@
         "sentence": "2.1 Treatment of Osteoporosis in Postmenopausal Women The recommended dosage is: one 70 mg tablet once weekly or one bottle of 70 mg oral solution once weekly or one 10 mg tablet once daily 2.2 Prevention of Osteoporosis in Postmenopausal Women The recommended dosage is: one 35 mg tablet once weekly or one 5 mg tablet once daily 2.3 Treatment to Increase Bone Mass in Men with Osteoporosis The recommended dosage is: one 70 mg tablet once weekly or one bottle of 70 mg oral solution once weekly or one 10 mg tablet once daily 2.4 Treatment of Glucocorticoid-Induced Osteoporosis The recommended dosage is one 5 mg tablet once daily, except for postmenopausal women not receiving estrogen, for whom the recommended dosage is one 10 mg tablet once daily.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14e931fd-2c5f-4d90-b7db-5980706f4a56"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -140,7 +180,15 @@
         "sentence": "2.1 Treatment of Osteoporosis in Postmenopausal Women The recommended dosage is: one 70 mg tablet once weekly or one bottle of 70 mg oral solution once weekly or one 10 mg tablet once daily 2.2 Prevention of Osteoporosis in Postmenopausal Women The recommended dosage is: one 35 mg tablet once weekly or one 5 mg tablet once daily 2.3 Treatment to Increase Bone Mass in Men with Osteoporosis The recommended dosage is: one 70 mg tablet once weekly or one bottle of 70 mg oral solution once weekly or one 10 mg tablet once daily 2.4 Treatment of Glucocorticoid-Induced Osteoporosis The recommended dosage is one 5 mg tablet once daily, except for postmenopausal women not receiving estrogen, for whom the recommended dosage is one 10 mg tablet once daily.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14e931fd-2c5f-4d90-b7db-5980706f4a56"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -162,7 +210,15 @@
         "sentence": "2.1 Treatment of Osteoporosis in Postmenopausal Women The recommended dosage is: one 70 mg tablet once weekly or one bottle of 70 mg oral solution once weekly or one 10 mg tablet once daily 2.2 Prevention of Osteoporosis in Postmenopausal Women The recommended dosage is: one 35 mg tablet once weekly or one 5 mg tablet once daily 2.3 Treatment to Increase Bone Mass in Men with Osteoporosis The recommended dosage is: one 70 mg tablet once weekly or one bottle of 70 mg oral solution once weekly or one 10 mg tablet once daily 2.4 Treatment of Glucocorticoid-Induced Osteoporosis The recommended dosage is one 5 mg tablet once daily, except for postmenopausal women not receiving estrogen, for whom the recommended dosage is one 10 mg tablet once daily.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14e931fd-2c5f-4d90-b7db-5980706f4a56"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     },
     {
       "strength": null,
@@ -184,7 +240,15 @@
         "sentence": "2.5 Treatment of Paget's Disease of Bone The recommended treatment regimen is 40 mg once a day for six months.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14e931fd-2c5f-4d90-b7db-5980706f4a56"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     }
   ],
   "limits": [
@@ -204,7 +268,15 @@
         "sentence": "Treatment of osteoporosis in postmenopausal women and in men: 10 mg daily or 70 mg (tablet or oral solution) once weekly.",
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14e931fd-2c5f-4d90-b7db-5980706f4a56"
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:52-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected with the whole dosing and limits set"
+      }
     }
   ],
   "administration": [
@@ -222,7 +294,15 @@
         "section": "drug interactions",
         "sentence": "Therefore, instruct patients to wait at least one-half hour after taking FOSAMAX before taking any other oral medications."
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:48-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/alendronate.json)"
+      }
     },
     {
       "id": "alendronate-empty-stomach-before-first-food-0.5h",
@@ -242,7 +322,15 @@
         "section": "dosage and administration",
         "sentence": "2.6 Important Administration Instructions Instruct patients to do the following: Take FOSAMAX at least one-half hour before the first food, beverage, or medication of the day with plain water only [see Patient Counseling Information (17) ]."
       },
-      "verified": false
+      "verified": false,
+      "review": {
+        "decision": "rejected",
+        "by": "claude",
+        "role": "AI (Claude), not a pharmacist",
+        "at": "2026-11-14T21:51:48-05:00",
+        "note": "only 1 of 4 extraction runs agreed",
+        "result": "rejected (recorded in extracted/alendronate.json)"
+      }
     }
   ],
   "memberships": [],
