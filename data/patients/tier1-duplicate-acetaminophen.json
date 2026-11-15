@@ -1,7 +1,7 @@
 {
   "name": "Prescribed acetaminophen/codeine, also taking OTC acetaminophen",
   "constructed": true,
-  "note": "Constructed to exercise tier 1 and the shared-ingredient family. PLACEHOLDER painkiller choice, pending A.",
+  "note": "Constructed to exercise tier 1 and the shared-ingredient family: acetaminophen in a prescription combination and in an over-the-counter product.",
   "items": [
     {"product": "apap-codeine-300-30", "prescribed_count": 3},
     {"product": "acetaminophen-500-otc", "reported_count": 2},
